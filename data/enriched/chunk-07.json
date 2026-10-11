@@ -6,7 +6,7 @@
     "gloss": "father",
     "hint": "formal",
     "pos": "noun",
-    "note": "Formal or written; in conversation say 爸爸 or 爸. Mainland speech often says fù qin.",
+    "note": "Formal or written; in conversation say 爸爸 bà ba or 爸 bà. Mainland speech often says fù qin.",
     "example": {
       "trad": "他父親是醫生。",
       "pinyin": "Tā fùqīn shì yīshēng.",
@@ -20,7 +20,7 @@
     "gloss": "only (have); only if",
     "hint": "there is only",
     "pos": "phrase",
-    "note": "'Only have / there is only': 我只有一個. With 才 it means 'only if / only … can': 只有你才能幫我 'only you can help me'.",
+    "note": "'Only have / there is only': 我只有一個 wǒ zhǐ yǒu yī ge. With 才 cái it means 'only if / only … can': 只有你才能幫我 zhǐ yǒu nǐ cái néng bāng wǒ 'only you can help me'.",
     "example": {
       "trad": "我身上只有一百塊。",
       "pinyin": "Wǒ shēnshàng zhǐyǒu yībǎi kuài.",
@@ -34,7 +34,7 @@
     "gloss": "before; in the past",
     "hint": "used to, formerly",
     "pos": "noun",
-    "note": "On its own means 'in the past / used to': 我以前住這裡. After a time or event it means 'before': 吃飯以前. 之前 is similar but points to a specific moment.",
+    "note": "On its own means 'in the past / used to': 我以前住這裡 wǒ yǐ qián zhù zhè lǐ. After a time or event it means 'before': 吃飯以前 chī fàn yǐ qián. 之前 zhī qián is similar but points to a specific moment.",
     "example": {
       "trad": "我以前很喜歡打球。",
       "pinyin": "Wǒ yǐqián hěn xǐhuān dǎ qiú.",
@@ -48,7 +48,7 @@
     "gloss": "really; truly; real",
     "hint": "two syllables; 'for real?'",
     "pos": "adv",
-    "note": "真的嗎？ 'Really?'; 真的假的？ is the classic Taiwan 'Seriously?!'. Also an adjective 'real, true': 這是真的.",
+    "note": "真的嗎 zhēn de ma? 'Really?'; 真的假的 zhēn de jiǎ de? is the classic Taiwan 'Seriously?!'. Also an adjective 'real, true': 這是真的 zhè shì zhēn de.",
     "example": {
       "trad": "我今天真的很累。",
       "pinyin": "Wǒ jīntiān zhēnde hěn lèi.",
@@ -62,7 +62,7 @@
     "gloss": "competition; match; game",
     "hint": "sports or contest",
     "pos": "noun",
-    "note": "A sports match or contest, not a game you play for fun (that's 遊戲). Also a verb: 我們來比賽 'let's race / compete'.",
+    "note": "A sports match or contest, not a game you play for fun (that's 遊戲 yóu xì). Also a verb: 我們來比賽 wǒ men lái bǐ sài 'let's race / compete'.",
     "example": {
       "trad": "你昨天有看比賽嗎？",
       "pinyin": "Nǐ zuótiān yǒu kàn bǐsài ma?",
@@ -76,7 +76,7 @@
     "gloss": "but; however",
     "hint": "two syllables, most common spoken 'but'; not dàn shì",
     "pos": "conj",
-    "note": "The everyday spoken 'but', a little softer than 但是; 不過 is milder still. Also emphatic 'really': 這可是我的 'this is mine, you know'.",
+    "note": "The everyday spoken 'but', a little softer than 但是 dàn shì; 不過 bù guò is milder still. Also emphatic 'really': 這可是我的 zhè kě shì wǒ de 'this is mine, you know'.",
     "example": {
       "trad": "我很想去，可是我沒時間。",
       "pinyin": "Wǒ hěn xiǎng qù, kěshì wǒ méi shíjiān.",
@@ -90,7 +90,7 @@
     "gloss": "unable to",
     "hint": "formal",
     "pos": "aux",
-    "note": "Formal or written; in conversation Taiwanese say 沒辦法 or 不能.",
+    "note": "Formal or written; in conversation Taiwanese say 沒辦法 méi bàn fǎ or 不能 bù néng.",
     "example": {
       "trad": "這個問題我無法回答。",
       "pinyin": "Zhège wèntí wǒ wúfǎ huídá.",
@@ -104,7 +104,7 @@
     "gloss": "help; to help",
     "hint": "formal; also 'be helpful'",
     "pos": "verb",
-    "note": "More formal than 幫 / 幫忙 and also works as a noun: 謝謝你的幫助 'thanks for your help'. 很有幫助 'very helpful' is the most common everyday use. Casually you'd say 幫我一下.",
+    "note": "More formal than 幫 bāng / 幫忙 bāng máng and also works as a noun: 謝謝你的幫助 xiè xie nǐ de bāng zhù 'thanks for your help'. 很有幫助 hěn yǒu bāng zhù 'very helpful' is the most common everyday use. Casually you'd say 幫我一下 bāng wǒ yī xià.",
     "example": {
       "trad": "這本書對我很有幫助。",
       "pinyin": "Zhè běn shū duì wǒ hěn yǒu bāngzhù.",
@@ -118,7 +118,7 @@
     "gloss": "(not) at all; simply",
     "hint": "with a negative",
     "pos": "adv",
-    "note": "Mostly used with a negative for emphasis: 我根本不知道 'I had no idea at all'. As an adjective it means 'fundamental' (根本的問題).",
+    "note": "Mostly used with a negative for emphasis: 我根本不知道 wǒ gēn běn bù zhī dào 'I had no idea at all'. As an adjective it means 'fundamental' (根本的問題 gēn běn de wèn tí).",
     "example": {
       "trad": "我根本不認識他。",
       "pinyin": "Wǒ gēnběn bù rènshi tā.",
@@ -131,7 +131,7 @@
     "pinyin": "tè bié",
     "gloss": "especially; special",
     "pos": "adv",
-    "note": "As an adverb 'especially / extra': 特別好. As an adjective 'special, unusual': 很特別.",
+    "note": "As an adverb 'especially / extra': 特別好 tè bié hǎo. As an adjective 'special, unusual': 很特別 hěn tè bié.",
     "example": {
       "trad": "今天天氣特別好。",
       "pinyin": "Jīntiān tiānqì tèbié hǎo.",
@@ -159,7 +159,7 @@
     "gloss": "angry; to get angry",
     "hint": "mad at someone",
     "pos": "adj",
-    "note": "跟…生氣 gēn … shēng qì 'be angry with…'; 不要生氣 bù yào shēng qì 'don't be mad'. 氣 qì alone means 'to make someone angry' (氣死我了 qì sǐ wǒ le 'it drives me crazy').",
+    "note": "跟 gēn … 生氣 shēng qì 'be angry with…'; 不要生氣 bù yào shēng qì 'don't be mad'. 氣 qì alone means 'to make someone angry' (氣死我了 qì sǐ wǒ le 'it drives me crazy').",
     "example": {
       "trad": "你還在生氣嗎？",
       "pinyin": "Nǐ hái zài shēngqì ma?",
@@ -186,7 +186,7 @@
     "gloss": "to choose; choice",
     "hint": "two syllables, a bit formal; also 'a choice'",
     "pos": "verb",
-    "note": "In casual speech 選 alone is common: 你選哪個？",
+    "note": "In casual speech 選 xuǎn alone is common: 你選哪個 nǐ xuǎn nǎ ge?",
     "example": {
       "trad": "你可以自己選擇。",
       "pinyin": "Nǐ kěyǐ zìjǐ xuǎnzé.",
@@ -199,7 +199,7 @@
     "pinyin": "zhǐ yào",
     "gloss": "as long as; provided that",
     "pos": "conj",
-    "note": "Usually paired with 就 jiù: 只要…就… 'as long as…, then…'. Compare 只有…才… 'only if…'.",
+    "note": "Usually paired with 就 jiù: 只要 zhǐ yào…就 jiù… 'as long as…, then…'. Compare 只有 zhǐ yǒu…才 cái… 'only if…'.",
     "example": {
       "trad": "只要你喜歡就好。",
       "pinyin": "Zhǐyào nǐ xǐhuān jiù hǎo.",
@@ -213,7 +213,7 @@
     "gloss": "to end; to finish",
     "hint": "an event or period ends",
     "pos": "verb",
-    "note": "For an event coming to an end. For finishing an action, put 完 wán after the verb (吃完 'finish eating').",
+    "note": "For an event coming to an end. For finishing an action, put 完 wán after the verb (吃完 chī wán 'finish eating').",
     "example": {
       "trad": "電影幾點結束？",
       "pinyin": "Diànyǐng jǐ diǎn jiéshù?",
@@ -252,7 +252,7 @@
     "pinyin": "zhào piàn",
     "gloss": "photo; picture",
     "pos": "noun",
-    "note": "Counted with 張 zhāng: 一張照片. 相片 xiàng piàn means the same.",
+    "note": "Counted with 張 zhāng: 一張照片 yī zhāng zhào piàn. 相片 xiàng piàn means the same.",
     "example": {
       "trad": "這張照片很好看。",
       "pinyin": "Zhè zhāng zhàopiàn hěn hǎokàn.",
@@ -266,7 +266,7 @@
     "gloss": "to come over (here)",
     "hint": "toward the speaker",
     "pos": "verb",
-    "note": "MOE reads guò lai (neutral 來), like 回來 huí lai; many Taiwanese say a full guò lái when it is the main verb. After a verb it means toward the speaker: 拿過來 'bring it over'.",
+    "note": "MOE reads guò lai (neutral lai), like 回來 huí lai; many Taiwanese say a full guò lái when it is the main verb. After a verb it means toward the speaker: 拿過來 ná guò lai 'bring it over'.",
     "example": {
       "trad": "你過來一下。",
       "pinyin": "Nǐ guòlai yīxià.",
@@ -280,7 +280,7 @@
     "gloss": "some; somewhat",
     "hint": "some, not all; also 'rather'",
     "pos": "pron",
-    "note": "Often starts a sentence: 有些人… 'some people…'. Before an adjective it means 'a bit': 有些累 'a bit tired'.",
+    "note": "Often starts a sentence: 有些人 yǒu xiē rén… 'some people…'. Before an adjective it means 'a bit': 有些累 yǒu xiē lèi 'a bit tired'.",
     "example": {
       "trad": "有些人不喜歡吃辣。",
       "pinyin": "Yǒuxiē rén bù xǐhuān chī là.",
@@ -305,7 +305,7 @@
     "pinyin": "zuò wéi",
     "gloss": "as (in the role of); to act as",
     "pos": "prep",
-    "note": "Somewhat formal. 為 is wéi here, not wèi 'for'. 作為朋友 'as a friend'.",
+    "note": "Somewhat formal. The second syllable is wéi, not wèi 'for'. 作為朋友 zuò wéi péng yǒu 'as a friend'.",
     "example": {
       "trad": "作為朋友，我應該幫你。",
       "pinyin": "Zuòwéi péngyǒu, wǒ yīnggāi bāng nǐ.",
@@ -318,7 +318,7 @@
     "pinyin": "wàn",
     "gloss": "ten thousand",
     "pos": "num",
-    "note": "Big numbers are counted in 萬: 十萬 = 100,000, 一百萬 = one million. 一萬 is spoken yí wàn (tone change of 一).",
+    "note": "Big numbers are counted in 萬 wàn: 十萬 shí wàn = 100,000, 一百萬 yī bǎi wàn = one million. 一萬 yī wàn is spoken yí wàn (tone change of 一 yī).",
     "example": {
       "trad": "這支手機要三萬塊。",
       "pinyin": "Zhè zhī shǒujī yào sānwàn kuài.",
@@ -331,7 +331,7 @@
     "pinyin": "bǎi",
     "gloss": "hundred",
     "pos": "num",
-    "note": "One hundred is 一百. MOE also lists a literary reading bó, not used in speech.",
+    "note": "One hundred is 一百 yī bǎi. MOE also lists a literary reading bó, not used in speech.",
     "example": {
       "trad": "這本書三百塊。",
       "pinyin": "Zhè běn shū sānbǎi kuài.",
@@ -344,7 +344,7 @@
     "pinyin": "qiān",
     "gloss": "thousand",
     "pos": "num",
-    "note": "Two thousand is 兩千 liǎng qiān. Prices in Taiwan are often in the thousands: 三千塊.",
+    "note": "Two thousand is 兩千 liǎng qiān. Prices in Taiwan are often in the thousands: 三千塊 sān qiān kuài.",
     "example": {
       "trad": "這件衣服兩千塊。",
       "pinyin": "Zhè jiàn yīfu liǎngqiān kuài.",
@@ -358,7 +358,7 @@
     "gloss": "after; in the future",
     "hint": "after X; also 'in the future'",
     "pos": "noun",
-    "note": "X以後 = 'after X'; on its own it means 'later on, in the future'. 之後 is very similar; for 'afterwards' about past events, use 後來 hòu lái.",
+    "note": "X 以後 yǐ hòu = 'after X'; on its own it means 'later on, in the future'. 之後 zhī hòu is very similar; for 'afterwards' about past events, use 後來 hòu lái.",
     "example": {
       "trad": "下班以後我去找你。",
       "pinyin": "Xiàbān yǐhòu wǒ qù zhǎo nǐ.",
@@ -371,7 +371,7 @@
     "pinyin": "pǎo",
     "gloss": "to run; to run away",
     "pos": "verb",
-    "note": "Colloquially also 'to go (somewhere)': 你跑去哪裡了？ The rare reading páo means 'to paw the ground'.",
+    "note": "Colloquially also 'to go (somewhere)': 你跑去哪裡了 nǐ pǎo qù nǎ lǐ le? The rare reading páo means 'to paw the ground'.",
     "example": {
       "trad": "他跑得很快。",
       "pinyin": "Tā pǎo de hěn kuài.",
@@ -385,7 +385,7 @@
     "gloss": "female; woman",
     "hint": "the adjective / prefix",
     "pos": "adj",
-    "note": "Mostly a prefix (女生, 女朋友, 女兒). 女的 is a casual 'a woman'. Classical readings nǜ / rǔ are not used in speech.",
+    "note": "Mostly a prefix (女生 nǚ shēng, 女朋友 nǚ péng yǒu, 女兒 nǚ ér). 女的 nǚ de is a casual 'a woman'. Classical readings nǜ / rǔ are not used in speech.",
     "example": {
       "trad": "我們老闆是女的。",
       "pinyin": "Wǒmen lǎobǎn shì nǚ de.",
@@ -399,7 +399,7 @@
     "gloss": "how; how about it",
     "hint": "two syllables; also a defiant 'so what?'",
     "pos": "pron",
-    "note": "Very common in Taiwan: 你覺得怎樣？ 'What do you think?'; 不怎樣 'not great'; 你想怎樣？ 'What do you want?' (can sound confrontational). Compare 怎麼 'how (to do)'.",
+    "note": "Very common in Taiwan: 你覺得怎樣 nǐ jué de zěn yàng? 'What do you think?'; 不怎樣 bù zěn yàng 'not great'; 你想怎樣 nǐ xiǎng zěn yàng? 'What do you want?' (can sound confrontational). Compare 怎麼 zěn me 'how (to do)'.",
     "example": {
       "trad": "你覺得這個怎樣？",
       "pinyin": "Nǐ juéde zhège zěnyàng?",
@@ -412,7 +412,7 @@
     "pinyin": "yī shēng",
     "gloss": "doctor",
     "pos": "noun",
-    "note": "看醫生 = 'to see a doctor'. Mainland 大夫 dài fu is not used in Taiwan.",
+    "note": "看醫生 kàn yī shēng = 'to see a doctor'. Mainland 大夫 dài fu is not used in Taiwan.",
     "example": {
       "trad": "你應該去看醫生。",
       "pinyin": "Nǐ yīnggāi qù kàn yīshēng.",
@@ -426,7 +426,7 @@
     "gloss": "girl",
     "hint": "a young girl; a bit written",
     "pos": "noun",
-    "note": "Often 小女孩 'little girl' or 女孩子. In Taiwan, 女生 is the everyday word for a girl or young woman.",
+    "note": "Often 小女孩 xiǎo nǚ hái 'little girl' or 女孩子 nǚ hái zi. In Taiwan, 女生 nǚ shēng is the everyday word for a girl or young woman.",
     "example": {
       "trad": "那個小女孩好可愛。",
       "pinyin": "Nàge xiǎo nǚhái hǎo kě'ài.",
@@ -453,7 +453,7 @@
     "gloss": "you're welcome",
     "hint": "polite reply to thanks",
     "pos": "phrase",
-    "note": "The textbook reply to 謝謝. In everyday Taiwan speech 不會 bú huì 'no problem' is even more common, and 不客氣 can sound a little formal. 不 is spoken bú before kè. MOE gives a full tone on 氣; many speakers say a light qi.",
+    "note": "The textbook reply to 謝謝 xiè xie. In everyday Taiwan speech 不會 bú huì 'no problem' is even more common, and 不客氣 bù kè qì can sound a little formal. 不 bù is spoken bú before kè. MOE gives a full tone on 氣 qì; many speakers say a light qi.",
     "example": {
       "trad": "不客氣，這是我應該做的。",
       "pinyin": "Bùkèqì, zhè shì wǒ yīnggāi zuò de.",
@@ -467,7 +467,7 @@
     "gloss": "to change; to become",
     "hint": "one syllable; become different by itself",
     "pos": "verb",
-    "note": "Often 變 + adjective + 了: 變胖了 'got fatter'. 變成 = 'to turn into'. To change something on purpose is 改變 or 改.",
+    "note": "Often 變 biàn + adjective + 了 le: 變胖了 biàn pàng le 'got fatter'. 變成 biàn chéng = 'to turn into'. To change something on purpose is 改變 gǎi biàn or 改 gǎi.",
     "example": {
       "trad": "你變瘦了！",
       "pinyin": "Nǐ biàn shòu le!",
@@ -505,7 +505,7 @@
     "gloss": "at that time; back then",
     "hint": "a specific past moment",
     "pos": "noun",
-    "note": "Same idea as 那時候. Read as dàng shí, it means 'right away, on the spot' (rare).",
+    "note": "Same idea as 那時候 nà shí hòu. Read as dàng shí, it means 'right away, on the spot' (rare).",
     "example": {
       "trad": "當時我才十歲。",
       "pinyin": "Dāngshí wǒ cái shí suì.",
@@ -519,7 +519,7 @@
     "gloss": "to come down",
     "hint": "toward the speaker, downward",
     "pos": "verb",
-    "note": "MOE lists both xià lái and xià lai. After verbs it shows going down or settling: 坐下來 'sit down', 停下來 'stop', 寫下來 'write it down'.",
+    "note": "MOE lists both xià lái and xià lai. After verbs it shows going down or settling: 坐下來 zuò xià lái 'sit down', 停下來 tíng xià lái 'stop', 寫下來 xiě xià lái 'write it down'.",
     "example": {
       "trad": "你快下來，吃飯了！",
       "pinyin": "Nǐ kuài xiàlái, chīfàn le!",
@@ -533,7 +533,7 @@
     "gloss": "to calculate; to count as",
     "hint": "figure out; reckon",
     "pos": "verb",
-    "note": "Very common in set phrases: 算了 'forget it', 不算 'doesn't count', 還算 'fairly', 打算 'to plan'.",
+    "note": "Very common in set phrases: 算了 suàn le 'forget it', 不算 bù suàn 'doesn't count', 還算 hái suàn 'fairly', 打算 dǎ suàn 'to plan'.",
     "example": {
       "trad": "你幫我算一下多少錢。",
       "pinyin": "Nǐ bāng wǒ suàn yīxià duōshǎo qián.",
@@ -547,7 +547,7 @@
     "gloss": "happy; glad",
     "hint": "glad; as in 'nice to meet you'",
     "pos": "adj",
-    "note": "興 is xìng here; its other reading xīng is in 興奮 xīng fèn 'excited'. 開心 is the more casual everyday word.",
+    "note": "The second syllable is xìng; the same character is xīng in 興奮 xīng fèn 'excited'. 開心 kāi xīn is the more casual everyday word.",
     "example": {
       "trad": "很高興認識你。",
       "pinyin": "Hěn gāoxìng rènshi nǐ.",
@@ -561,7 +561,7 @@
     "gloss": "to bear; to suffer; to undergo",
     "hint": "endure; as in 'can't stand it'",
     "pos": "verb",
-    "note": "Mostly in compounds: 受不了 'can't stand it', 受傷 'get hurt', 接受 'to accept'. 受到 is a formal 'to receive'; getting mail or gifts is 收到 shōu dào.",
+    "note": "Mostly in compounds: 受不了 shòu bu liǎo 'can't stand it', 受傷 shòu shāng 'get hurt', 接受 jiē shòu 'to accept'. 受到 shòu dào is a formal 'to receive'; getting mail or gifts is 收到 shōu dào.",
     "example": {
       "trad": "我真的受不了了。",
       "pinyin": "Wǒ zhēnde shòubuliǎo le.",
@@ -574,7 +574,7 @@
     "pinyin": "cháng",
     "gloss": "(measure word for events, games, shows)",
     "pos": "measure",
-    "note": "Counts movies, games, rains, illnesses: 一場電影, 一場雨. Taiwan (MOE) reads it cháng, also in 市場, 機場, 現場; chǎng is the mainland standard and is also common in Taiwan speech.",
+    "note": "Counts movies, games, rains, illnesses: 一場電影 yī cháng diàn yǐng, 一場雨 yī cháng yǔ. Taiwan (MOE) reads it cháng, also in 市場 shì cháng, 機場 jī cháng, 現場 xiàn cháng; chǎng is the mainland standard and is also common in Taiwan speech.",
     "example": {
       "trad": "我們去看一場電影吧。",
       "pinyin": "Wǒmen qù kàn yī cháng diànyǐng ba.",
@@ -587,7 +587,7 @@
     "pinyin": "yóu xì",
     "gloss": "game",
     "pos": "noun",
-    "note": "玩遊戲 = 'to play games'. Video games are also called 電動 diàn dòng in Taiwan (打電動).",
+    "note": "玩遊戲 wán yóu xì = 'to play games'. Video games are also called 電動 diàn dòng in Taiwan (打電動 dǎ diàn dòng).",
     "example": {
       "trad": "他每天都在玩遊戲。",
       "pinyin": "Tā měi tiān dōu zài wán yóuxì.",
@@ -601,7 +601,7 @@
     "gloss": "to demand; to ask of; requirement",
     "hint": "ask firmly; standards",
     "pos": "verb",
-    "note": "要 is read yāo here, not yào.",
+    "note": "The first syllable is yāo here, not the yào of 'to want'.",
     "example": {
       "trad": "他對自己要求很高。",
       "pinyin": "Tā duì zìjǐ yāoqiú hěn gāo.",
@@ -615,7 +615,7 @@
     "gloss": "minute",
     "hint": "a length of time",
     "pos": "noun",
-    "note": "Used for durations: 五分鐘 'five minutes'. Clock times use 分 alone: 三點十分 '3:10'.",
+    "note": "Used for durations: 五分鐘 wǔ fēn zhōng 'five minutes'. Clock times use 分 fēn alone: 三點十分 sān diǎn shí fēn '3:10'.",
     "example": {
       "trad": "再等我五分鐘。",
       "pinyin": "Zài děng wǒ wǔ fēnzhōng.",
@@ -629,7 +629,7 @@
     "gloss": "to be sure; to confirm",
     "hint": "sure of a fact; confirm",
     "pos": "verb",
-    "note": "Compare 一定 'certainly, must' and 肯定 'definitely'.",
+    "note": "Compare 一定 yī dìng 'certainly, must' and 肯定 kěn dìng 'definitely'.",
     "example": {
       "trad": "你確定嗎？",
       "pinyin": "Nǐ quèdìng ma?",
@@ -655,7 +655,7 @@
     "pinyin": "tóu",
     "gloss": "head",
     "pos": "noun",
-    "note": "As a noun suffix it is neutral tou: 石頭 'stone', 裡頭 'inside'. Also counts cattle: 一頭牛.",
+    "note": "As a noun suffix it is neutral tou: 石頭 shí tou 'stone', 裡頭 lǐ tou 'inside'. Also counts cattle: 一頭牛 yī tóu niú.",
     "example": {
       "trad": "我頭好痛。",
       "pinyin": "Wǒ tóu hǎo tòng.",
@@ -668,7 +668,7 @@
     "pinyin": "zǎo",
     "gloss": "early; (good) morning",
     "pos": "adj",
-    "note": "On its own, 早！ is a casual 'Morning!' (also 早安).",
+    "note": "On its own, 早 zǎo! is a casual 'Morning!' (also 早安 zǎo ān).",
     "example": {
       "trad": "你今天怎麼這麼早？",
       "pinyin": "Nǐ jīntiān zěnme zhème zǎo?",

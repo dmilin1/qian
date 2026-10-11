@@ -6,7 +6,7 @@
     "gloss": "other; anything else",
     "hint": "something else (casual)",
     "pos": "pron",
-    "note": "Used before a noun (別的東西 bié de dōng xi 'other things') or on its own (還要別的嗎？ 'anything else?'). 'Other people' is usually 別人 bié rén; 其他 qí tā is a bit more formal.",
+    "note": "Used before a noun (別的東西 bié de dōng xi 'other things') or on its own (還要別的嗎 hái yào bié de ma? 'anything else?'). 'Other people' is usually 別人 bié rén; 其他 qí tā is a bit more formal.",
     "example": {
       "trad": "你還要別的嗎？",
       "pinyin": "Nǐ hái yào biéde ma?",
@@ -47,7 +47,7 @@
     "gloss": "room; bedroom",
     "hint": "a room in a home",
     "pos": "noun",
-    "note": "In everyday Taiwan speech 房間 usually means a bedroom: 回房間 'go to my room'.",
+    "note": "In everyday Taiwan speech 房間 fáng jiān usually means a bedroom: 回房間 huí fáng jiān 'go to my room'.",
     "example": {
       "trad": "我的房間很小。",
       "pinyin": "Wǒ de fángjiān hěn xiǎo.",
@@ -61,7 +61,7 @@
     "gloss": "on top; above",
     "hint": "position, on the top side",
     "pos": "noun",
-    "note": "A location word, used after a noun: 桌子上面 'on the table'. MOE lists shàng mian with a neutral tone, but Taiwanese usually say shàng miàn.",
+    "note": "A location word, used after a noun: 桌子上面 zhuō zi shàng miàn 'on the table'. MOE lists shàng mian with a neutral tone, but Taiwanese usually say shàng miàn.",
     "example": {
       "trad": "手機在桌子上面。",
       "pinyin": "Shǒujī zài zhuōzi shàngmiàn.",
@@ -103,7 +103,7 @@
     "gloss": "that's all; just",
     "hint": "at the end of a sentence",
     "pos": "particle",
-    "note": "Goes at the end of a sentence to play something down, often together with 只是 or 只有: 只是開玩笑而已 'just joking, that's all'.",
+    "note": "Goes at the end of a sentence to play something down, often together with 只是 zhǐ shì or 只有 zhǐ yǒu: 只是開玩笑而已 zhǐ shì kāi wán xiào ér yǐ 'just joking, that's all'.",
     "example": {
       "trad": "我只是問問而已。",
       "pinyin": "Wǒ zhǐshì wènwen éryǐ.",
@@ -117,7 +117,7 @@
     "gloss": "to borrow; to lend",
     "hint": "both directions, depending on word order",
     "pos": "verb",
-    "note": "跟…借 gēn … jiè 'borrow from…': 我跟他借錢 'I borrowed money from him'. 借…給 or 借 + person means 'lend': 借我 'lend me'. To give it back is 還 huán.",
+    "note": "跟 gēn … 借 jiè 'borrow from…': 我跟他借錢 wǒ gēn tā jiè qián 'I borrowed money from him'. 借 jiè…給 gěi or 借 jiè + person means 'lend': 借我 jiè wǒ 'lend me'. To give it back is 還 huán.",
     "example": {
       "trad": "可以借我一枝筆嗎？",
       "pinyin": "Kěyǐ jiè wǒ yī zhī bǐ ma?",
@@ -171,7 +171,7 @@
     "gloss": "some (of them)",
     "hint": "contrasting 'some …, others …'",
     "pos": "pron",
-    "note": "Picks out part of a group, often in pairs: 有的人…，有的人… 'some people ..., others ...'.",
+    "note": "Picks out part of a group, often in pairs: 有的人 yǒu de rén…, 有的人 yǒu de rén… 'some people ..., others ...'.",
     "example": {
       "trad": "有的人喜歡，有的人不喜歡。",
       "pinyin": "Yǒude rén xǐhuān, yǒude rén bù xǐhuān.",
@@ -198,7 +198,7 @@
     "gloss": "side; surface",
     "hint": "a flat side or surface",
     "pos": "noun",
-    "note": "Mostly heard inside words: 前面 qián miàn, 見面 jiàn miàn 'to meet'; a person's face is 臉 liǎn. Also a measure word for flat things (一面鏡子 yī miàn jìng zi 'a mirror'). 'Noodles' (麵) sounds the same.",
+    "note": "Mostly heard inside words: 前面 qián miàn, 見面 jiàn miàn 'to meet'; a person's face is 臉 liǎn. Also a measure word for flat things (一面鏡子 yī miàn jìng zi 'a mirror'). 'Noodles' (麵 miàn) sounds the same.",
     "example": {
       "trad": "這一面比較乾淨。",
       "pinyin": "Zhè yī miàn bǐjiào gānjìng.",
@@ -211,7 +211,7 @@
     "pinyin": "miàn",
     "gloss": "noodles",
     "pos": "noun",
-    "note": "Sounds the same as 面 'side / surface'. Common in Taiwan food: 牛肉麵 niú ròu miàn 'beef noodle soup', 炒麵 chǎo miàn 'fried noodles'.",
+    "note": "Sounds the same as 面 miàn 'side / surface'. Common in Taiwan food: 牛肉麵 niú ròu miàn 'beef noodle soup', 炒麵 chǎo miàn 'fried noodles'.",
     "example": {
       "trad": "我想吃牛肉麵。",
       "pinyin": "Wǒ xiǎng chī niúròumiàn.",
@@ -225,7 +225,7 @@
     "gloss": "originally; at first",
     "hint": "before things changed",
     "pos": "adv",
-    "note": "Implies that the plan or situation later changed: 我本來要去，可是… 'I was going to go, but ...'.",
+    "note": "Implies that the plan or situation later changed: 我本來要去 wǒ běn lái yào qù, 可是 kě shì… 'I was going to go, but ...'.",
     "example": {
       "trad": "我本來想去，後來太累了。",
       "pinyin": "Wǒ běnlái xiǎng qù, hòulái tài lèi le.",
@@ -277,7 +277,7 @@
     "gloss": "to express; to indicate",
     "hint": "show a view, or signify",
     "pos": "verb",
-    "note": "Used both for people stating something and for things that indicate or mean something: 這表示… 'this means ...'.",
+    "note": "Used both for people stating something and for things that indicate or mean something: 這表示 zhè biǎo shì… 'this means ...'.",
     "example": {
       "trad": "他沒回答，表示他不同意。",
       "pinyin": "Tā méi huídá, biǎoshì tā bù tóngyì.",
@@ -318,7 +318,7 @@
     "pinyin": "gē",
     "gloss": "song",
     "pos": "noun",
-    "note": "Counted with 首 shǒu: 一首歌. 'To sing' is 唱歌 chàng gē.",
+    "note": "Counted with 首 shǒu: 一首歌 yī shǒu gē. 'To sing' is 唱歌 chàng gē.",
     "example": {
       "trad": "這首歌很好聽。",
       "pinyin": "Zhè shǒu gē hěn hǎotīng.",
@@ -344,7 +344,7 @@
     "gloss": "cup; glass (of)",
     "hint": "measure word for drinks",
     "pos": "measure",
-    "note": "Measure word for drinks: 一杯水 yī bēi shuǐ 'a glass of water', 兩杯咖啡. The cup itself is 杯子 bēi zi.",
+    "note": "Measure word for drinks: 一杯水 yī bēi shuǐ 'a glass of water', 兩杯咖啡 liǎng bēi kā fēi. The cup itself is 杯子 bēi zi.",
     "example": {
       "trad": "我要一杯熱茶。",
       "pinyin": "Wǒ yào yī bēi rè chá.",
@@ -384,7 +384,7 @@
     "gloss": "to hurt; to ache; painful",
     "hint": "physical pain, one syllable",
     "pos": "adj",
-    "note": "Body part + 痛: 頭痛 tóu tòng 'headache', 肚子痛 dù zi tòng 'stomachache'. 好痛！ hǎo tòng 'ouch!'. 痛苦 tòng kǔ is deeper, longer suffering.",
+    "note": "Body part + 痛 tòng: 頭痛 tóu tòng 'headache', 肚子痛 dù zi tòng 'stomachache'. 好痛 hǎo tòng! 'ouch!'. 痛苦 tòng kǔ is deeper, longer suffering.",
     "example": {
       "trad": "你哪裡痛？",
       "pinyin": "Nǐ nǎlǐ tòng?",
@@ -398,7 +398,7 @@
     "gloss": "at home; in the family",
     "hint": "inside the home",
     "pos": "noun",
-    "note": "Also means 'my family': 家裡有四個人. MOE lists jiā li with a neutral tone, but Taiwanese usually say jiā lǐ.",
+    "note": "Also means 'my family': 家裡有四個人 jiā lǐ yǒu sì ge rén. MOE lists jiā li with a neutral tone, but Taiwanese usually say jiā lǐ.",
     "example": {
       "trad": "我今天在家裡休息。",
       "pinyin": "Wǒ jīntiān zài jiālǐ xiūxí.",
@@ -412,7 +412,7 @@
     "gloss": "the same; equally",
     "hint": "more formal than yī yàng",
     "pos": "adj",
-    "note": "Often before a noun with 的: 同樣的問題 'the same problem'. In casual speech 一樣 yī yàng is more common.",
+    "note": "Often before a noun with 的 de: 同樣的問題 tóng yàng de wèn tí 'the same problem'. In casual speech 一樣 yī yàng is more common.",
     "example": {
       "trad": "我也有同樣的問題。",
       "pinyin": "Wǒ yě yǒu tóngyàng de wèntí.",
@@ -426,7 +426,7 @@
     "gloss": "god; deity",
     "hint": "a divine being",
     "pos": "noun",
-    "note": "The Christian God is usually 上帝 shàng dì. Also used in slang: 好神 hǎo shén or 太神了 'amazing / uncanny'.",
+    "note": "The Christian God is usually 上帝 shàng dì. Also used in slang: 好神 hǎo shén or 太神了 tài shén le 'amazing / uncanny'.",
     "example": {
       "trad": "你相信有神嗎？",
       "pinyin": "Nǐ xiāngxìn yǒu shén ma?",
@@ -454,7 +454,7 @@
     "gloss": "even if",
     "hint": "more formal than jiù suàn",
     "pos": "conj",
-    "note": "Usually paired with 也 yě in the second clause: 即使下雨，我也要去 'even if it rains, I'll still go'. 就算 jiù suàn is the more casual equivalent.",
+    "note": "Usually paired with 也 yě in the second clause: 即使下雨 jí shǐ xià yǔ, 我也要去 wǒ yě yào qù 'even if it rains, I'll still go'. 就算 jiù suàn is the more casual equivalent.",
     "example": {
       "trad": "即使很累，他也去上班。",
       "pinyin": "Jíshǐ hěn lèi, tā yě qù shàngbān.",
@@ -482,7 +482,7 @@
     "gloss": "to answer; answer",
     "hint": "reply to a question",
     "pos": "verb",
-    "note": "For answering a question. Replying to a message is usually 回 huí (回訊息 'reply to a message').",
+    "note": "For answering a question. Replying to a message is usually 回 huí (回訊息 huí xùn xí 'reply to a message').",
     "example": {
       "trad": "他沒有回答我的問題。",
       "pinyin": "Tā méiyǒu huídá wǒ de wèntí.",
@@ -496,7 +496,7 @@
     "gloss": "opinion; suggestion",
     "hint": "your view; also a complaint",
     "pos": "noun",
-    "note": "有意見 yǒu yì jiàn can also mean 'to have an objection or complaint', so 你有什麼意見？ can sound like 'Got a problem with that?'",
+    "note": "有意見 yǒu yì jiàn can also mean 'to have an objection or complaint', so 你有什麼意見 nǐ yǒu shén me yì jiàn? can sound like 'Got a problem with that?'",
     "example": {
       "trad": "我想聽聽你的意見。",
       "pinyin": "Wǒ xiǎng tīngting nǐ de yìjiàn.",
@@ -523,7 +523,7 @@
     "gloss": "to leave behind; to stay behind",
     "hint": "remain, or leave something there",
     "pos": "verb",
-    "note": "MOE lists liú xia with a light 下, but the full tone is common in Taiwan speech. 留下來 liú xià lái means 'to stay (on)'.",
+    "note": "MOE lists liú xia with a light second syllable, but the full tone (liú xià) is common in Taiwan speech. 留下來 liú xià lái means 'to stay (on)'.",
     "example": {
       "trad": "他留下一封信就走了。",
       "pinyin": "Tā liúxià yī fēng xìn jiù zǒu le.",
@@ -565,7 +565,7 @@
     "gloss": "no need to; don't have to",
     "hint": "no need, not a command",
     "pos": "adv",
-    "note": "Spoken bú yòng (不 becomes bú before a 4th tone). Also a polite reply: 不用了 'no thanks', 不用謝 bù yòng xiè 'no need to thank me'.",
+    "note": "Spoken bú yòng (不 bù becomes bú before a 4th tone). Also a polite reply: 不用了 bù yòng le 'no thanks', 不用謝 bù yòng xiè 'no need to thank me'.",
     "example": {
       "trad": "你不用等我。",
       "pinyin": "Nǐ bùyòng děng wǒ.",
@@ -579,7 +579,7 @@
     "gloss": "not good; bad",
     "hint": "mild, just not good",
     "pos": "adj",
-    "note": "Before a verb it can mean 'hard to': 不好找 'hard to find'. 不好意思 bù hǎo yì si means 'sorry / excuse me'.",
+    "note": "Before a verb it can mean 'hard to': 不好找 bù hǎo zhǎo 'hard to find'. 不好意思 bù hǎo yì si means 'sorry / excuse me'.",
     "example": {
       "trad": "今天天氣不好。",
       "pinyin": "Jīntiān tiānqì bù hǎo.",
@@ -593,7 +593,7 @@
     "gloss": "to pretend; to pack in; to install",
     "hint": "fake it, or put something in",
     "pos": "verb",
-    "note": "Covers 'pretend' (別裝了 bié zhuāng le 'stop pretending'), 'put into a container' (裝水) and 'install' (裝冷氣 'install an air conditioner').",
+    "note": "Covers 'pretend' (別裝了 bié zhuāng le 'stop pretending'), 'put into a container' (裝水 zhuāng shuǐ) and 'install' (裝冷氣 zhuāng lěng qì 'install an air conditioner').",
     "example": {
       "trad": "別裝了，我知道是你。",
       "pinyin": "Bié zhuāng le, wǒ zhīdào shì nǐ.",
@@ -607,7 +607,7 @@
     "gloss": "first of all; firstly",
     "hint": "to open a list of points",
     "pos": "adv",
-    "note": "Starts a sequence of points, often followed by 然後 or 再來. Compare 先 xiān 'do first, beforehand'.",
+    "note": "Starts a sequence of points, often followed by 然後 rán hòu or 再來 zài lái. Compare 先 xiān 'do first, beforehand'.",
     "example": {
       "trad": "首先，你要有耐心。",
       "pinyin": "Shǒuxiān, nǐ yào yǒu nàixīn.",
@@ -635,7 +635,7 @@
     "gloss": "so (it turns out); originally",
     "hint": "suddenly realizing something",
     "pos": "adv",
-    "note": "Most often used when you realize something: 原來如此 yuán lái rú cǐ 'I see'. Also 'original, former': 原來的地方 'the original place'.",
+    "note": "Most often used when you realize something: 原來如此 yuán lái rú cǐ 'I see'. Also 'original, former': 原來的地方 yuán lái de dì fāng 'the original place'.",
     "example": {
       "trad": "原來是你！",
       "pinyin": "Yuánlái shì nǐ!",
@@ -661,7 +661,7 @@
     "gloss": "no way; not OK; not allowed",
     "hint": "refusing permission",
     "pos": "phrase",
-    "note": "The opposite of 行 xíng 'OK'. Also 'no good at' (我數學不行 'I'm bad at math') and, after an adjective, 'extremely' (累得不行 'exhausted').",
+    "note": "The opposite of 行 xíng 'OK'. Also 'no good at' (我數學不行 wǒ shù xué bù xíng 'I'm bad at math') and, after an adjective, 'extremely' (累得不行 lèi de bù xíng 'exhausted').",
     "example": {
       "trad": "不行，太晚了。",
       "pinyin": "Bùxíng, tài wǎn le.",
@@ -674,7 +674,7 @@
     "pinyin": "gān jìng",
     "gloss": "clean",
     "pos": "adj",
-    "note": "The opposite is 髒 zāng 'dirty'. 乾 here is gān 'dry', not qián. MOE gives full tones (gān jìng); the mainland says gān jing.",
+    "note": "The opposite is 髒 zāng 'dirty'. The first syllable is gān 'dry', not qián. MOE gives full tones (gān jìng); the mainland says gān jing.",
     "example": {
       "trad": "我把房間打掃乾淨了。",
       "pinyin": "Wǒ bǎ fángjiān dǎsǎo gānjìng le.",

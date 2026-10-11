@@ -19,7 +19,7 @@
     "gloss": "to go out",
     "hint": "away from the speaker",
     "pos": "verb",
-    "note": "Movement out and away from the speaker; 出來 chū lái is out toward the speaker. Also follows verbs: 走出去 (walk out).",
+    "note": "Movement out and away from the speaker; 出來 chū lái is out toward the speaker. Also follows verbs: 走出去 zǒu chū qù (walk out).",
     "example": {
       "trad": "我們出去吃飯吧！",
       "pinyin": "Wǒmen chūqù chīfàn ba!",
@@ -45,7 +45,7 @@
     "gloss": "same; together",
     "hint": "the same (one), as in same day",
     "pos": "adj",
-    "note": "Mostly in set forms: 同一個 (the same one), 不同 (different), 同學 (classmate). Other reading tòng, only in 胡同 (alley).",
+    "note": "Mostly in set forms: 同一個 tóng yī ge (the same one), 不同 bù tóng (different), 同學 tóng xué (classmate). Other reading tòng, only in 胡同 hú tòng (alley).",
     "example": {
       "trad": "我們是同一天生日。",
       "pinyin": "Wǒmen shì tóng yī tiān shēngrì.",
@@ -71,7 +71,7 @@
     "gloss": "to do; to make; to mess with",
     "hint": "vague: handle, fiddle with",
     "pos": "verb",
-    "note": "A catch-all verb: 弄壞 (to break), 弄好 (to get it done), 弄丟 (to lose). MOE's other reading is lòng (lane), as in 巷弄 and addresses, but most Taiwanese say nòng when reading an address.",
+    "note": "A catch-all verb: 弄壞 nòng huài (to break), 弄好 nòng hǎo (to get it done), 弄丟 nòng diū (to lose). MOE's other reading is lòng (lane), as in 巷弄 xiàng lòng and addresses, but most Taiwanese say nòng when reading an address.",
     "example": {
       "trad": "你把我的手機弄壞了！",
       "pinyin": "Nǐ bǎ wǒ de shǒujī nònghuài le!",
@@ -85,7 +85,7 @@
     "gloss": "mother",
     "hint": "formal",
     "pos": "noun",
-    "note": "Formal or written; in everyday speech people say 媽媽 mā ma. 母親節 = Mother's Day.",
+    "note": "Formal or written; in everyday speech people say 媽媽 mā ma. 母親節 mǔ qīn jié = Mother's Day.",
     "example": {
       "trad": "母親節快到了。",
       "pinyin": "Mǔqīnjié kuài dào le.",
@@ -99,7 +99,7 @@
     "gloss": "enough",
     "hint": "everyday 'enough'; 'that's enough!'",
     "pos": "adj",
-    "note": "夠了！ (That's enough!) 不夠 (not enough). Before an adjective it can mean really: 夠辣 (plenty spicy).",
+    "note": "夠了 gòu le! (That's enough!) 不夠 bù gòu (not enough). Before an adjective it can mean really: 夠辣 gòu là (plenty spicy).",
     "example": {
       "trad": "我們的錢夠不夠？",
       "pinyin": "Wǒmen de qián gòu bù gòu?",
@@ -113,7 +113,7 @@
     "gloss": "to pick up (a person); to answer",
     "hint": "meet a person; take a call",
     "pos": "verb",
-    "note": "接電話 (answer the phone), 接人 (pick someone up), 接球 (catch a ball).",
+    "note": "接電話 jiē diàn huà (answer the phone), 接人 jiē rén (pick someone up), 接球 jiē qiú (catch a ball).",
     "example": {
       "trad": "我下班去接你。",
       "pinyin": "Wǒ xiàbān qù jiē nǐ.",
@@ -141,7 +141,7 @@
     "gloss": "to take (a photo); to pat; to clap",
     "hint": "photo; tap with the palm",
     "pos": "verb",
-    "note": "拍照 (take photos), 拍手 (clap), 拍電影 (shoot a film). MOE lists rare other readings (pā, bó, pò) not used in speech.",
+    "note": "拍照 pāi zhào (take photos), 拍手 pāi shǒu (clap), 拍電影 pāi diàn yǐng (shoot a film). MOE lists rare other readings (pā, bó, pò) not used in speech.",
     "example": {
       "trad": "可以幫我們拍一張照嗎？",
       "pinyin": "Kěyǐ bāng wǒmen pāi yī zhāng zhào ma?",
@@ -179,7 +179,7 @@
     "pinyin": "mài",
     "gloss": "to sell",
     "pos": "verb",
-    "note": "Listen for the tone: 賣 mài (4th, sell) vs 買 mǎi (3rd, buy). Taiwan says 有賣 for 'sells/has': 有賣咖啡嗎？",
+    "note": "Listen for the tone: 賣 mài (4th, sell) vs 買 mǎi (3rd, buy). Taiwan says 有賣 yǒu mài for 'sells/has': 有賣咖啡嗎 yǒu mài kā fēi ma?",
     "example": {
       "trad": "這家店有賣咖啡嗎？",
       "pinyin": "Zhè jiā diàn yǒu mài kāfēi ma?",
@@ -192,7 +192,7 @@
     "pinyin": "yǒu guān",
     "gloss": "related to; to have to do with",
     "pos": "verb",
-    "note": "Pattern: A 跟 B 有關 (A has to do with B). In casual speech 有關係 is common.",
+    "note": "Pattern: A 跟 gēn B 有關 yǒu guān (A has to do with B). In casual speech 有關係 yǒu guān xì is common.",
     "example": {
       "trad": "這件事跟他有關。",
       "pinyin": "Zhè jiàn shì gēn tā yǒuguān.",
@@ -218,7 +218,7 @@
     "pinyin": "shū fu",
     "gloss": "comfortable; feeling well",
     "pos": "adj",
-    "note": "不舒服 means 'feeling unwell'. MOE gives a light second syllable; many Taiwanese say shū fú.",
+    "note": "不舒服 bù shū fu means 'feeling unwell'. MOE gives a light second syllable; many Taiwanese say shū fú.",
     "example": {
       "trad": "這張床好舒服。",
       "pinyin": "Zhè zhāng chuáng hǎo shūfu.",
@@ -231,7 +231,7 @@
     "pinyin": "xiōng dì",
     "gloss": "brothers; bro",
     "pos": "noun",
-    "note": "Also used between male friends (bro). MOE also has xiōng di, meaning younger brother. Siblings in general: 兄弟姊妹 (also written 兄弟姐妹).",
+    "note": "Also used between male friends (bro). MOE also has xiōng di, meaning younger brother. Siblings in general: 兄弟姊妹 xiōng dì jiě mèi (also written 兄弟姐妹 xiōng dì jiě mèi).",
     "example": {
       "trad": "他們兩個是兄弟。",
       "pinyin": "Tāmen liǎng ge shì xiōngdì.",
@@ -283,7 +283,7 @@
     "gloss": "to point at; to mean; finger",
     "hint": "refer to",
     "pos": "verb",
-    "note": "你是指… nǐ shì zhǐ… means 'do you mean…?'. As a noun it means finger, usually 手指 shǒu zhǐ.",
+    "note": "你是指 nǐ shì zhǐ… means 'do you mean…?'. As a noun it means finger, usually 手指 shǒu zhǐ.",
     "example": {
       "trad": "你是指這個嗎？",
       "pinyin": "Nǐ shì zhǐ zhège ma?",
@@ -297,7 +297,7 @@
     "gloss": "freedom; free",
     "hint": "liberty, not free of charge",
     "pos": "noun",
-    "note": "Free of charge is 免費 miǎn fèi, not 自由.",
+    "note": "Free of charge is 免費 miǎn fèi, not 自由 zì yóu.",
     "example": {
       "trad": "你可以自由選擇。",
       "pinyin": "Nǐ kěyǐ zìyóu xuǎnzé.",
@@ -376,7 +376,7 @@
     "gloss": "letter (mail); to believe",
     "hint": "mail; believe (short form)",
     "pos": "noun",
-    "note": "Letters are counted with 封 fēng. As a verb it is short for 相信: 我不信 wǒ bù xìn 'I don't believe it'. MOE also lists a literary reading shēn, not used in speech.",
+    "note": "Letters are counted with 封 fēng. As a verb it is short for 相信 xiāng xìn: 我不信 wǒ bù xìn 'I don't believe it'. MOE also lists a literary reading shēn, not used in speech.",
     "example": {
       "trad": "我收到你的信了。",
       "pinyin": "Wǒ shōudào nǐ de xìn le.",
@@ -390,7 +390,7 @@
     "gloss": "to send (someone); to assign",
     "hint": "dispatch a person",
     "pos": "verb",
-    "note": "送 sòng sends things; 派 sends people on a task. Also a noun: faction, school of thought, and 'pie' (蘋果派 píng guǒ pài).",
+    "note": "送 sòng sends things; 派 pài sends people on a task. Also a noun: faction, school of thought, and 'pie' (蘋果派 píng guǒ pài).",
     "example": {
       "trad": "公司派他去日本。",
       "pinyin": "Gōngsī pài tā qù Rìběn.",
@@ -404,7 +404,7 @@
     "gloss": "to give birth; raw",
     "hint": "have a baby; uncooked",
     "pos": "verb",
-    "note": "Many uses: 生小孩 have a baby, 生病 get sick, 生氣 get angry, 生的 raw/uncooked.",
+    "note": "Many uses: 生小孩 shēng xiǎo hái have a baby, 生病 shēng bìng get sick, 生氣 shēng qì get angry, 生的 shēng de raw/uncooked.",
     "example": {
       "trad": "她下個月要生了。",
       "pinyin": "Tā xià ge yuè yào shēng le.",
@@ -430,7 +430,7 @@
     "pinyin": "fèn",
     "gloss": "(measure: portion, copy, job)",
     "pos": "measure",
-    "note": "Counts portions of food (一份早餐), copies of documents or newspapers, jobs (一份工作) and gifts (一份禮物). The archaic reading bīn is not used.",
+    "note": "Counts portions of food (一份早餐 yī fèn zǎo cān), copies of documents or newspapers, jobs (一份工作 yī fèn gōng zuò) and gifts (一份禮物 yī fèn lǐ wù). The archaic reading bīn is not used.",
     "example": {
       "trad": "這份工作很累。",
       "pinyin": "Zhè fèn gōngzuò hěn lèi.",
@@ -469,7 +469,7 @@
     "gloss": "center; hub",
     "hint": "central place or facility",
     "pos": "noun",
-    "note": "Used for places: 市中心 downtown, 購物中心 shopping mall. The plain middle of something is 中間 zhōng jiān.",
+    "note": "Used for places: 市中心 shì zhōng xīn downtown, 購物中心 gòu wù zhōng xīn shopping mall. The plain middle of something is 中間 zhōng jiān.",
     "example": {
       "trad": "我住在市中心。",
       "pinyin": "Wǒ zhù zài shìzhōngxīn.",
@@ -495,7 +495,7 @@
     "gloss": "it seems; looks like",
     "hint": "judging from what you see",
     "pos": "adv",
-    "note": "Often starts a sentence to draw a conclusion: 看來… 'it looks like…'. Similar to 好像 hǎo xiàng.",
+    "note": "Often starts a sentence to draw a conclusion: 看來 kàn lái… 'it looks like…'. Similar to 好像 hǎo xiàng.",
     "example": {
       "trad": "看來要下雨了。",
       "pinyin": "Kànlái yào xiàyǔ le.",
@@ -508,7 +508,7 @@
     "pinyin": "xué shēng",
     "gloss": "student",
     "pos": "noun",
-    "note": "Taiwan keeps the full tone on 生 (xué shēng); the mainland says xué sheng.",
+    "note": "Taiwan keeps the full tone on 生 shēng (xué shēng); the mainland says xué sheng.",
     "example": {
       "trad": "他還是學生。",
       "pinyin": "Tā hái shì xuéshēng.",
@@ -521,7 +521,7 @@
     "pinyin": "dào",
     "gloss": "(measure: dishes, questions); way",
     "pos": "measure",
-    "note": "Counts dishes of food (一道菜), questions (一道題), doors and walls. Also 'road; way' in compounds like 道路 and 味道 wèi dào (flavor).",
+    "note": "Counts dishes of food (一道菜 yī dào cài), questions (一道題 yī dào tí), doors and walls. Also 'road; way' in compounds like 道路 dào lù and 味道 wèi dào (flavor).",
     "example": {
       "trad": "這道菜很好吃。",
       "pinyin": "Zhè dào cài hěn hǎochī.",
@@ -535,7 +535,7 @@
     "gloss": "to choose; to pick; to elect",
     "hint": "choose among options; also elections",
     "pos": "verb",
-    "note": "Everyday short form of 選擇 xuǎn zé. Also 'to elect': 選總統 elect a president. 挑 tiāo is similar but means picking out carefully.",
+    "note": "Everyday short form of 選擇 xuǎn zé. Also 'to elect': 選總統 xuǎn zǒng tǒng elect a president. 挑 tiāo is similar but means picking out carefully.",
     "example": {
       "trad": "你要選哪一個？",
       "pinyin": "Nǐ yào xuǎn nǎ yī ge?",
@@ -563,7 +563,7 @@
     "gloss": "information; IT",
     "hint": "info, esp. online or media",
     "pos": "noun",
-    "note": "Taiwan word; the mainland says 信息 xìn xī. Also means IT, as in 資訊業 the IT industry. 資料 zī liào is data or materials (documents, files).",
+    "note": "Taiwan word; the mainland says 信息 xìn xī. Also means IT, as in 資訊業 zī xùn yè the IT industry. 資料 zī liào is data or materials (documents, files).",
     "example": {
       "trad": "網路上有很多資訊。",
       "pinyin": "Wǎnglù shàng yǒu hěn duō zīxùn.",
@@ -577,7 +577,7 @@
     "gloss": "two",
     "hint": "the number, in counting",
     "pos": "num",
-    "note": "Used in counting, phone numbers, floors and ordinals (第二, 二十). Before a measure word use 兩 liǎng instead: 兩個人.",
+    "note": "Used in counting, phone numbers, floors and ordinals (第二 dì èr, 二十 èr shí). Before a measure word use 兩 liǎng instead: 兩個人 liǎng ge rén.",
     "example": {
       "trad": "我住在二樓。",
       "pinyin": "Wǒ zhù zài èr lóu.",
@@ -617,7 +617,7 @@
     "pinyin": "chú le",
     "gloss": "except; besides",
     "pos": "prep",
-    "note": "Often 除了…以外. With 都 it excludes (除了我，大家都去了 everyone but me); with 也/還 it adds (除了中文，他還會日文 besides Chinese he also speaks Japanese).",
+    "note": "Often 除了 chú le…以外 yǐ wài. With 都 dōu it excludes (除了我 chú le wǒ, 大家都去了 dà jiā dōu qù le everyone but me); with 也 yě/還 hái it adds (除了中文 chú le zhōng wén, 他還會日文 tā hái huì rì wén besides Chinese he also speaks Japanese).",
     "example": {
       "trad": "除了我，大家都去了。",
       "pinyin": "Chúle wǒ, dàjiā dōu qù le.",
@@ -643,7 +643,7 @@
     "gloss": "to feel",
     "hint": "an emotion, a bit formal",
     "pos": "verb",
-    "note": "More formal than 覺得 jué de; usually followed by a feeling, e.g. 感到很高興.",
+    "note": "More formal than 覺得 jué de; usually followed by a feeling, e.g. 感到很高興 gǎn dào hěn gāo xìng.",
     "example": {
       "trad": "大家都感到很意外。",
       "pinyin": "Dàjiā dōu gǎndào hěn yìwài.",
@@ -657,7 +657,7 @@
     "gloss": "dollar (spoken); (measure: pieces)",
     "hint": "spoken money unit; chunk",
     "pos": "measure",
-    "note": "In speech, 塊 is the word for dollars (一百塊 = NT$100; 元 yuán is the written form). Also counts pieces and chunks: 一塊蛋糕 a piece of cake.",
+    "note": "In speech, 塊 kuài is the word for dollars (一百塊 yī bǎi kuài = NT$100; 元 yuán is the written form). Also counts pieces and chunks: 一塊蛋糕 yī kuài dàn gāo a piece of cake.",
     "example": {
       "trad": "一杯咖啡五十塊。",
       "pinyin": "Yī bēi kāfēi wǔshí kuài.",

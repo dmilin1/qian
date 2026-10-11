@@ -46,7 +46,7 @@ Every significant call made while building qian, in one place. Each section is s
   - Potential-complement 不 is neutral (tīngbudǒng, shuìbuzháo).
   - Capitals only at sentence start and on proper nouns.
   - Details: [`data/NOTES.md`](data/NOTES.md), "Polish".
-- **Notes get pinyin when shown.** Most notes quote characters without pinyin, and `words.json` is frozen, so the app adds the pinyin of known words at render time (`components/noteAnnotate.ts`).
+- **Every Chinese run in a note is followed by its pinyin** in the data itself (`scripts/data/notes_pinyin.py`, checked by `build_words.py`, then reviewed by two agents). With *Show characters* off, notes show only the pinyin. The render-time annotator (`components/noteAnnotate.ts`) remains as a safety net and currently adds nothing. 姊姊 / 兄弟姊妹 use jiě (everyday Taiwan speech), whereas MOE's 姊妹 entry gives zǐ mèi.
 
 ## 3. Audio
 
@@ -140,10 +140,6 @@ Full rationale: [`docs/app-notes.md`](docs/app-notes.md), "Judgment calls" (firs
 
 - **For the learner's wife**: [NATIVE-CHECK.md](NATIVE-CHECK.md). It covers the 12 audio clips to listen to; the 喔 reading, where the data says ō but the clip says ò; 和 hé vs hàn; neutral tones; and naturalness questions.
 - **Licensing**: the glosses draw on CC-CEDICT, so `src/data/words.json` is published under **CC BY-SA 4.0**. SUBTLEX-CH is research-use only and cited. Only reading fields are taken from MOE. Please confirm this is acceptable for a public site.
-- **Data nits left as they are** (`words.json` is frozen):
-  - 一旦's example writes tíngbùxiàlái with a full-tone bù (the convention is tíngbuxiàlái);
-  - about 200 note fragments have no pinyin, because their characters are not among the 1000 words.
 - **Not verified on a real iPhone**: the audio unlock, Range requests from the cache, and IndexedDB reconnects. All of them pass in Playwright's WebKit.
-- **UI wording**: "learning" in the study header means the working set (for example 27/30), while the Words "Learning" filter means cards in short learning steps.
 - **Short desktop windows**: the sticky grade bar can cover the end of a long answer until you scroll.
 - **Pace**: the defaults 30 / 5 come from an idealised simulation. Real intake will likely be lower, and both values are settings.

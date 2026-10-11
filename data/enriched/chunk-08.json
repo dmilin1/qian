@@ -6,7 +6,7 @@
     "gloss": "heart; mind",
     "hint": "feelings, not the organ",
     "pos": "noun",
-    "note": "Part of many feeling words: 小心, 開心, 放心, 擔心, 心情. The physical organ is 心臟 xīn zàng.",
+    "note": "Part of many feeling words: 小心 xiǎo xīn, 開心 kāi xīn, 放心 fàng xīn, 擔心 dān xīn, 心情 xīn qíng. The physical organ is 心臟 xīn zàng.",
     "example": {
       "trad": "我的心好痛。",
       "pinyin": "Wǒ de xīn hǎo tòng.",
@@ -20,7 +20,7 @@
     "gloss": "even; so much so that",
     "hint": "going as far as",
     "pos": "adv",
-    "note": "Introduces an extreme case, often with 連…都: 他甚至連飯都沒吃 'he didn't even eat'.",
+    "note": "Introduces an extreme case, often with 連 lián…都 dōu: 他甚至連飯都沒吃 tā shèn zhì lián fàn dōu méi chī 'he didn't even eat'.",
     "example": {
       "trad": "他很忙，甚至沒時間吃飯。",
       "pinyin": "Tā hěn máng, shènzhì méi shíjiān chīfàn.",
@@ -33,7 +33,7 @@
     "pinyin": "tái wān",
     "gloss": "Taiwan",
     "pos": "noun",
-    "note": "The official spelling is 臺灣; 台灣 is the everyday form. 台 alone is short for Taiwan: 台北, 台語 (Taiwanese Hokkien).",
+    "note": "Official documents write it another way, but it sounds the same. 台 tái alone is short for Taiwan: 台北 tái běi, 台語 tái yǔ (Taiwanese Hokkien).",
     "example": {
       "trad": "我老婆是台灣人。",
       "pinyin": "Wǒ lǎopo shì Táiwānrén.",
@@ -59,7 +59,7 @@
     "gloss": "to remember",
     "hint": "still have in memory",
     "pos": "verb",
-    "note": "記得 + verb = 'remember to…': 記得帶傘 'remember to bring an umbrella'. 得 is neutral de here (other readings dé, děi).",
+    "note": "記得 jì de + verb = 'remember to…': 記得帶傘 jì de dài sǎn 'remember to bring an umbrella'. The second syllable is a neutral de (the same character is also dé and děi).",
     "example": {
       "trad": "你還記得我嗎？",
       "pinyin": "Nǐ hái jìde wǒ ma?",
@@ -73,7 +73,7 @@
     "gloss": "wait a moment; in a bit; etc.",
     "hint": "doubled form; also etc",
     "pos": "phrase",
-    "note": "Said alone it means 'Wait!'. In Taiwan it also means 'in a bit, later': 我等等再打給你. After a list it means 'etc.'.",
+    "note": "Said alone it means 'Wait!'. In Taiwan it also means 'in a bit, later': 我等等再打給你 wǒ děng děng zài dǎ gěi nǐ. After a list it means 'etc.'.",
     "example": {
       "trad": "等等，我馬上來！",
       "pinyin": "Děngděng, wǒ mǎshàng lái!",
@@ -87,7 +87,7 @@
     "gloss": "to talk; to discuss",
     "hint": "have a serious talk",
     "pos": "verb",
-    "note": "Often 談一談 / 談談 'have a talk'; 談戀愛 'to date, be in a relationship'. Casual chatting is 聊 liáo.",
+    "note": "Often 談一談 tán yī tán or 談談 tán tán 'have a talk' (in tán yī tán the middle yī is said lightly); 談戀愛 tán liàn ài 'to date, be in a relationship'. Casual chatting is 聊 liáo.",
     "example": {
       "trad": "我們需要談一談。",
       "pinyin": "Wǒmen xūyào tán yī tán.",
@@ -100,7 +100,7 @@
     "pinyin": "gǒu",
     "gloss": "dog",
     "pos": "noun",
-    "note": "Counted with 隻 zhī: 一隻狗. 狗狗 is a cute way to say it.",
+    "note": "Counted with 隻 zhī: 一隻狗 yī zhī gǒu. 狗狗 gǒu gǒu is a cute way to say it.",
     "example": {
       "trad": "我家有一隻狗。",
       "pinyin": "Wǒ jiā yǒu yī zhī gǒu.",
@@ -114,7 +114,7 @@
     "gloss": "each; every",
     "hint": "two syllables; each one (each person)",
     "pos": "pron",
-    "note": "每 + measure word + noun; 個 is the default: 每個人 'everyone', 每個月 'every month'. 個 is light (ge), sometimes full gè.",
+    "note": "每 měi + measure word + noun; 個 gè is the default: 每個人 měi ge rén 'everyone', 每個月 měi ge yuè 'every month'. The second syllable is light (ge), sometimes full gè.",
     "example": {
       "trad": "每個人都很喜歡她。",
       "pinyin": "Měi ge rén dōu hěn xǐhuān tā.",
@@ -141,7 +141,7 @@
     "gloss": "to change; a change",
     "hint": "alter something",
     "pos": "verb",
-    "note": "Can take an object (改變計畫 'change the plan'). Compare 變 'to become different'.",
+    "note": "Can take an object (改變計畫 gǎi biàn jì huà 'change the plan'). Compare 變 biàn 'to become different'.",
     "example": {
       "trad": "你不能改變他。",
       "pinyin": "Nǐ bù néng gǎibiàn tā.",
@@ -155,7 +155,7 @@
     "gloss": "to finish; to be over",
     "hint": "done doing (after a verb)",
     "pos": "verb",
-    "note": "Mostly after a verb: 吃完 'finish eating', 做完 'finish doing', 用完 'used up'.",
+    "note": "Mostly after a verb: 吃完 chī wán 'finish eating', 做完 zuò wán 'finish doing', 用完 yòng wán 'used up'.",
     "example": {
       "trad": "你吃完了嗎？",
       "pinyin": "Nǐ chīwán le ma?",
@@ -169,7 +169,7 @@
     "gloss": "different",
     "hint": "slightly formal",
     "pos": "adj",
-    "note": "Everyday speech more often says 不一樣. 不同的 + noun = 'different (kinds of)…'.",
+    "note": "Everyday speech more often says 不一樣 bù yī yàng. 不同的 bù tóng de + noun = 'different (kinds of)…'.",
     "example": {
       "trad": "我們的想法不同。",
       "pinyin": "Wǒmen de xiǎngfǎ bùtóng.",
@@ -183,7 +183,7 @@
     "gloss": "even; to connect",
     "hint": "even (as in even he knows)",
     "pos": "prep",
-    "note": "連 X 都/也… = 'even X…': 連他都知道 'even he knows'. As a verb it means 'to connect': 連網路 'connect to the internet'.",
+    "note": "連 lián X 都 dōu/也 yě… = 'even X…': 連他都知道 lián tā dōu zhī dào 'even he knows'. As a verb it means 'to connect': 連網路 lián wǎng lù 'connect to the internet'.",
     "example": {
       "trad": "他連一句話都沒說。",
       "pinyin": "Tā lián yī jù huà dōu méi shuō.",
@@ -197,7 +197,7 @@
     "gloss": "so; such; like this",
     "hint": "formal 'like this / so much'",
     "pos": "adv",
-    "note": "Formal. In speech, people usually say 這樣 or 這麼, but 原來如此 'I see!' is very common.",
+    "note": "Formal. In speech, people usually say 這樣 zhè yàng or 這麼 zhè me, but 原來如此 yuán lái rú cǐ 'I see!' is very common.",
     "example": {
       "trad": "原來如此，我懂了。",
       "pinyin": "Yuánlái rúcǐ, wǒ dǒng le.",
@@ -211,7 +211,7 @@
     "gloss": "to see; to catch sight of",
     "hint": "catch sight of (not kàn dào)",
     "pos": "verb",
-    "note": "Means the same as 看到 kàn dào, which is more common in everyday speech. MOE gives a neutral-tone 見 (kàn jian); kàn jiàn is also commonly heard.",
+    "note": "Means the same as 看到 kàn dào, which is more common in everyday speech. MOE gives a neutral second syllable (kàn jian); kàn jiàn is also commonly heard.",
     "example": {
       "trad": "你有沒有看見我的手機？",
       "pinyin": "Nǐ yǒu méiyǒu kànjian wǒ de shǒujī?",
@@ -225,7 +225,7 @@
     "gloss": "really; truly",
     "hint": "exclamatory, often annoyed",
     "pos": "adv",
-    "note": "Adds emphasis, often with mild annoyance: 真是的！ zhēn shì de 'honestly!'. Taiwan keeps the full tone on 是 (mainland often zhēn shi).",
+    "note": "Adds emphasis, often with mild annoyance: 真是的 zhēn shì de! 'honestly!'. Taiwan keeps the full tone on 是 shì (mainland often zhēn shi).",
     "example": {
       "trad": "今天真是太熱了！",
       "pinyin": "Jīntiān zhēnshì tài rè le!",
@@ -265,7 +265,7 @@
     "gloss": "inside; interior",
     "hint": "the inside of something",
     "pos": "noun",
-    "note": "Taiwan keeps the full tone on 面 (mainland often lǐ mian). Goes after a noun: 冰箱裡面 'inside the fridge'.",
+    "note": "Taiwan keeps the full tone on 面 miàn (mainland often lǐ mian). Goes after a noun: 冰箱裡面 bīng xiāng lǐ miàn 'inside the fridge'.",
     "example": {
       "trad": "冰箱裡面有水果。",
       "pinyin": "Bīngxiāng lǐmiàn yǒu shuǐguǒ.",
@@ -347,7 +347,7 @@
     "pinyin": "suī rán",
     "gloss": "although; even though",
     "pos": "conj",
-    "note": "Usually paired with 但是 dàn shì or 可是 kě shì in the next clause: 雖然很貴，但是很好吃 'it's pricey, but tasty'.",
+    "note": "Usually paired with 但是 dàn shì or 可是 kě shì in the next clause: 雖然很貴 suī rán hěn guì, 但是很好吃 dàn shì hěn hǎo chī 'it's pricey, but tasty'.",
     "example": {
       "trad": "雖然很累，但是很開心。",
       "pinyin": "Suīrán hěn lèi, dànshì hěn kāixīn.",
@@ -361,7 +361,7 @@
     "gloss": "seems; as if",
     "hint": "seems, everyday word",
     "pos": "adv",
-    "note": "A very common hedge: 好像是 'I think it's…'. Also 'to look just like' in 好像…一樣.",
+    "note": "A very common hedge: 好像是 hǎo xiàng shì 'I think it's…'. Also 'to look just like' in 好像 hǎo xiàng…一樣 yī yàng.",
     "example": {
       "trad": "他好像生氣了。",
       "pinyin": "Tā hǎoxiàng shēngqì le.",
@@ -375,7 +375,7 @@
     "gloss": "to send out; to issue",
     "hint": "send a message; emit",
     "pos": "verb",
-    "note": "Combines widely: 發訊息 fā xùn xí 'send a message', 發燒 fā shāo 'have a fever', 發脾氣 fā pí qì 'lose one's temper'. 髮 fǎ (hair, as in 頭髮) is a different character.",
+    "note": "Combines widely: 發訊息 fā xùn xí 'send a message', 發燒 fā shāo 'have a fever', 發脾氣 fā pí qì 'lose one's temper'. Don't confuse it with fǎ 'hair' (頭髮 tóu fǎ), a different word with a third tone.",
     "example": {
       "trad": "我等一下發訊息給你。",
       "pinyin": "Wǒ děng yīxià fā xùnxí gěi nǐ.",
@@ -416,7 +416,7 @@
     "gloss": "beautiful",
     "hint": "one syllable; often scenery",
     "pos": "adj",
-    "note": "Common as 好美 hǎo měi 'so beautiful'. Also short for America (美國), as in 美金 měi jīn 'US dollars'.",
+    "note": "Common as 好美 hǎo měi 'so beautiful'. Also short for America (美國 měi guó), as in 美金 měi jīn 'US dollars'.",
     "example": {
       "trad": "這裡的風景好美！",
       "pinyin": "Zhèlǐ de fēngjǐng hǎo měi!",
@@ -444,7 +444,7 @@
     "gloss": "(in the middle of) doing",
     "hint": "action in progress",
     "pos": "adv",
-    "note": "Marks an action happening right now: 我正在吃飯 'I'm eating right now'. Often shortened to just 在 zài.",
+    "note": "Marks an action happening right now: 我正在吃飯 wǒ zhèng zài chī fàn 'I'm eating right now'. Often shortened to just 在 zài.",
     "example": {
       "trad": "我正在開車，等一下打給你。",
       "pinyin": "Wǒ zhèngzài kāichē, děng yīxià dǎ gěi nǐ.",
@@ -524,7 +524,7 @@
     "pinyin": "gù shi",
     "gloss": "story",
     "pos": "noun",
-    "note": "MOE gives a neutral-tone 事 (gù shi) for 'story'; gù shì is also commonly heard in Taiwan.",
+    "note": "MOE gives a neutral second syllable (gù shi) for 'story'; gù shì is also commonly heard in Taiwan.",
     "example": {
       "trad": "講個故事給我聽好不好？",
       "pinyin": "Jiǎng ge gùshi gěi wǒ tīng hǎo bù hǎo?",
@@ -550,7 +550,7 @@
     "gloss": "part; portion",
     "hint": "part of a whole",
     "pos": "noun",
-    "note": "Taiwan says bù fèn (also written 部份); MOE's headword gives bù fen for this sense, as does mainland speech. 大部分 dà bù fèn 'most'.",
+    "note": "Taiwan says bù fèn (also written 部份 bù fèn); MOE's headword gives bù fen for this sense, as does mainland speech. 大部分 dà bù fèn 'most'.",
     "example": {
       "trad": "大部分的人都同意。",
       "pinyin": "Dàbùfèn de rén dōu tóngyì.",
@@ -577,7 +577,7 @@
     "pinyin": "è",
     "gloss": "hungry",
     "pos": "adj",
-    "note": "餓死了 'starving' is very common. The opposite is 飽 bǎo 'full'.",
+    "note": "餓死了 è sǐ le 'starving' is very common. The opposite is 飽 bǎo 'full'.",
     "example": {
       "trad": "我肚子好餓。",
       "pinyin": "Wǒ dùzi hǎo è.",
@@ -605,7 +605,7 @@
     "gloss": "between; among",
     "hint": "placed after the nouns",
     "pos": "other",
-    "note": "Goes after the nouns it relates: 我們之間 'between us', 你跟他之間 'between you and him'.",
+    "note": "Goes after the nouns it relates: 我們之間 wǒ men zhī jiān 'between us', 你跟他之間 nǐ gēn tā zhī jiān 'between you and him'.",
     "example": {
       "trad": "我們之間沒有秘密。",
       "pinyin": "Wǒmen zhījiān méiyǒu mìmì.",
@@ -645,7 +645,7 @@
     "gloss": "(what) on earth; after all",
     "hint": "impatient questions",
     "pos": "adv",
-    "note": "In questions it adds impatience: 你到底要不要？ 'Do you want it or not?' Also 'to the end', as in 堅持到底 'stick it out to the end'.",
+    "note": "In questions it adds impatience: 你到底要不要 nǐ dào dǐ yào bù yào? 'Do you want it or not?' Also 'to the end', as in 堅持到底 jiān chí dào dǐ 'stick it out to the end'.",
     "example": {
       "trad": "你到底要不要去？",
       "pinyin": "Nǐ dàodǐ yào bù yào qù?",

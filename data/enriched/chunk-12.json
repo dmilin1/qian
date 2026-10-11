@@ -31,7 +31,7 @@
     "gloss": "currently; at present",
     "hint": "for the time being",
     "pos": "adv",
-    "note": "A time word, a bit more formal than 現在 'now'.",
+    "note": "A time word, a bit more formal than 現在 xiàn zài 'now'.",
     "example": {
       "trad": "目前還沒有消息。",
       "pinyin": "Mùqián hái méiyǒu xiāoxí.",
@@ -45,7 +45,7 @@
     "gloss": "wife",
     "hint": "formal",
     "pos": "noun",
-    "note": "Everyday Taiwan speech uses 老婆 or 太太. The literary reading qī zǐ means 'wife and children'.",
+    "note": "Everyday Taiwan speech uses 老婆 lǎo po or 太太 tài tai. The literary reading qī zǐ means 'wife and children'.",
     "example": {
       "trad": "他的妻子是老師。",
       "pinyin": "Tā de qīzi shì lǎoshī.",
@@ -59,7 +59,7 @@
     "gloss": "to record; a record",
     "hint": "keep a written record",
     "pos": "verb",
-    "note": "Taiwan usually writes the noun as 紀錄, which sounds the same: 破紀錄 'break a record'.",
+    "note": "Taiwan usually writes the noun as 紀錄 jì lù, which sounds the same: 破紀錄 pò jì lù 'break a record'.",
     "example": {
       "trad": "我每天記錄自己吃了什麼。",
       "pinyin": "Wǒ měi tiān jìlù zìjǐ chī le shénme.",
@@ -85,7 +85,7 @@
     "gloss": "a bit; somewhat",
     "hint": "before an adjective",
     "pos": "adv",
-    "note": "Goes before adjectives, usually for unwelcome things: 有點累 'a bit tired'. Taiwanese often say 有一點. Compare 一點 after the adjective: 好一點 'a bit better'.",
+    "note": "Goes before adjectives, usually for unwelcome things: 有點累 yǒu diǎn lèi 'a bit tired'. Taiwanese often say 有一點 yǒu yī diǎn. Compare 一點 yī diǎn after the adjective: 好一點 hǎo yī diǎn 'a bit better'.",
     "example": {
       "trad": "我今天有點累。",
       "pinyin": "Wǒ jīntiān yǒudiǎn lèi.",
@@ -98,7 +98,7 @@
     "pinyin": "zěn me bàn",
     "gloss": "what to do?; what now?",
     "pos": "phrase",
-    "note": "Said when stuck: 怎麼辦？ 'What do I do?'. 該怎麼辦 'what should we do'.",
+    "note": "Said when stuck: 怎麼辦 zěn me bàn? 'What do I do?'. 該怎麼辦 gāi zěn me bàn 'what should we do'.",
     "example": {
       "trad": "錢包不見了，怎麼辦？",
       "pinyin": "Qiánbāo bùjiàn le, zěnme bàn?",
@@ -111,7 +111,7 @@
     "pinyin": "jiā",
     "gloss": "to add; plus",
     "pos": "verb",
-    "note": "加糖 'add sugar', 加油 'go for it!', and in math 二加三 'two plus three'.",
+    "note": "加糖 jiā táng 'add sugar', 加油 jiā yóu 'go for it!', and in math 二加三 èr jiā sān 'two plus three'.",
     "example": {
       "trad": "要不要加糖？",
       "pinyin": "Yào bù yào jiā táng?",
@@ -138,7 +138,7 @@
     "gloss": "to obtain; to receive (an award)",
     "hint": "formal",
     "pos": "verb",
-    "note": "More formal than 得到 'to get'; used for prizes, results and support.",
+    "note": "More formal than 得到 dé dào 'to get'; used for prizes, results and support.",
     "example": {
       "trad": "他獲得了第一名。",
       "pinyin": "Tā huòdé le dì-yī míng.",
@@ -152,7 +152,7 @@
     "gloss": "to pour; to dump out",
     "hint": "liquid or trash",
     "pos": "verb",
-    "note": "倒水 'pour water', 倒垃圾 'take out the trash'. dào is also an adverb 'actually, on the contrary'. Polyphone: dǎo means 'to fall over' (跌倒 dié dǎo, Taiwan reading).",
+    "note": "倒水 dào shuǐ 'pour water', 倒垃圾 dào lè sè 'take out the trash'. dào is also an adverb 'actually, on the contrary'. Polyphone: dǎo means 'to fall over' (跌倒 dié dǎo, Taiwan reading).",
     "example": {
       "trad": "我去倒垃圾。",
       "pinyin": "Wǒ qù dào lèsè.",
@@ -166,7 +166,7 @@
     "gloss": "relatively; more; to compare",
     "hint": "rather, comparatively",
     "pos": "adv",
-    "note": "Most often before adjectives or 喜歡: 這個比較便宜 'this one is cheaper'. Taiwan says jiào; mainland speech often has bǐ jiǎo.",
+    "note": "Most often before adjectives or 喜歡 xǐ huān: 這個比較便宜 zhè ge bǐ jiào pián yi 'this one is cheaper'. Taiwan says jiào; mainland speech often has bǐ jiǎo.",
     "example": {
       "trad": "我比較喜歡這個。",
       "pinyin": "Wǒ bǐjiào xǐhuān zhège.",
@@ -192,7 +192,7 @@
     "gloss": "it's nothing; no big deal",
     "hint": "brushing something off",
     "pos": "phrase",
-    "note": "A reply to thanks or worry, or 'nothing much': 沒什麼特別的 'nothing special'. After an apology people say 沒關係 'it's okay'.",
+    "note": "A reply to thanks or worry, or 'nothing much': 沒什麼特別的 méi shén me tè bié de 'nothing special'. After an apology people say 沒關係 méi guān xi 'it's okay'.",
     "example": {
       "trad": "沒什麼，別擔心。",
       "pinyin": "Méi shénme, bié dānxīn.",
@@ -206,7 +206,7 @@
     "gloss": "to hear (that); I heard",
     "hint": "secondhand news",
     "pos": "verb",
-    "note": "Introduces something you heard from others: 聽說他要搬家 'I heard he's moving'.",
+    "note": "Introduces something you heard from others: 聽說他要搬家 tīng shuō tā yào bān jiā 'I heard he's moving'.",
     "example": {
       "trad": "聽說他要結婚了。",
       "pinyin": "Tīngshuō tā yào jiéhūn le.",
@@ -220,7 +220,7 @@
     "gloss": "bad; broken",
     "hint": "broken or evil",
     "pos": "adj",
-    "note": "壞了 'broken', 壞人 'bad guy'. After a verb or adjective it can mean 'terribly': 累壞了 'exhausted', 嚇壞了 'scared to death'. (MOE also lists a classical reading guài 'to destroy', not used in speech.)",
+    "note": "壞了 huài le 'broken', 壞人 huài rén 'bad guy'. After a verb or adjective it can mean 'terribly': 累壞了 lèi huài le 'exhausted', 嚇壞了 xià huài le 'scared to death'. (MOE also lists a classical reading guài 'to destroy', not used in speech.)",
     "example": {
       "trad": "這台電腦壞了。",
       "pinyin": "Zhè tái diànnǎo huài le.",
@@ -247,7 +247,7 @@
     "pinyin": "yī fu",
     "gloss": "clothes",
     "pos": "noun",
-    "note": "Counted with 件: 一件衣服 'a piece of clothing'. MOE marks fu as neutral; full-tone yī fú is also heard in Taiwan.",
+    "note": "Counted with 件 jiàn: 一件衣服 yī jiàn yī fu 'a piece of clothing'. MOE marks fu as neutral; full-tone yī fú is also heard in Taiwan.",
     "example": {
       "trad": "這件衣服很好看。",
       "pinyin": "Zhè jiàn yīfu hěn hǎokàn.",
@@ -261,7 +261,7 @@
     "gloss": "(measure for movies, series); part",
     "hint": "films and TV series",
     "pos": "measure",
-    "note": "Counts movies and TV series: 一部電影 'a movie', 一部連續劇 'a TV series'. Also heard for cars and phones, but Taiwan more often says 一台車, 一支手機. Also 'part' or 'ministry' in 部分, 外交部.",
+    "note": "Counts movies and TV series: 一部電影 yī bù diàn yǐng 'a movie', 一部連續劇 yī bù lián xù jù 'a TV series'. Also heard for cars and phones, but Taiwan more often says 一台車 yī tái chē, 一支手機 yī zhī shǒu jī. Also 'part' or 'ministry' in 部分 bù fèn, 外交部 wài jiāo bù.",
     "example": {
       "trad": "我昨天看了一部電影。",
       "pinyin": "Wǒ zuótiān kàn le yī bù diànyǐng.",
@@ -274,7 +274,7 @@
     "pinyin": "cài",
     "gloss": "dish (of food); vegetables",
     "pos": "noun",
-    "note": "Means a dish or vegetables (青菜). Counted with 道 or 盤. Taiwan slang: 很菜 means 'a total beginner', and 菜 can mean 'my type'.",
+    "note": "Means a dish or vegetables (青菜 qīng cài). Counted with 道 dào or 盤 pán. Taiwan slang: 很菜 hěn cài means 'a total beginner', and 菜 cài can mean 'my type'.",
     "example": {
       "trad": "這道菜很好吃。",
       "pinyin": "Zhè dào cài hěn hǎochī.",
@@ -300,7 +300,7 @@
     "pinyin": "dǎ diàn huà",
     "gloss": "to make a phone call",
     "pos": "verb",
-    "note": "The person you call comes with 給: 打電話給媽媽 'call Mom'.",
+    "note": "The person you call comes with 給 gěi: 打電話給媽媽 dǎ diàn huà gěi mā ma 'call Mom'.",
     "example": {
       "trad": "我晚一點打電話給你。",
       "pinyin": "Wǒ wǎn yīdiǎn dǎ diànhuà gěi nǐ.",
@@ -314,7 +314,7 @@
     "gloss": "to hear",
     "hint": "actually catch a sound (result)",
     "pos": "verb",
-    "note": "聽 is 'to listen'; 聽到 means actually hearing something. 聽得到 'can hear', 聽不到 'can't hear'.",
+    "note": "聽 tīng is 'to listen'; 聽到 tīng dào means actually hearing something. 聽得到 tīng de dào 'can hear', 聽不到 tīng bu dào 'can't hear'.",
     "example": {
       "trad": "你聽到了嗎？",
       "pinyin": "Nǐ tīngdào le ma?",
@@ -328,7 +328,7 @@
     "gloss": "to change; to exchange",
     "hint": "swap for another",
     "pos": "verb",
-    "note": "換衣服 'change clothes', 換錢 'exchange money', 換你了 'your turn'.",
+    "note": "換衣服 huàn yī fu 'change clothes', 換錢 huàn qián 'exchange money', 換你了 huàn nǐ le 'your turn'.",
     "example": {
       "trad": "等我一下，我去換衣服。",
       "pinyin": "Děng wǒ yīxià, wǒ qù huàn yīfu.",
@@ -341,7 +341,7 @@
     "pinyin": "máng",
     "gloss": "busy",
     "pos": "adj",
-    "note": "Also a verb, 'to be busy with': 你在忙什麼？ (nǐ zài máng shén me?) 'What are you busy with?'",
+    "note": "Also a verb, 'to be busy with': 你在忙什麼 nǐ zài máng shén me? 'What are you busy with?'",
     "example": {
       "trad": "你最近在忙什麼？",
       "pinyin": "Nǐ zuìjìn zài máng shénme?",
@@ -355,7 +355,7 @@
     "gloss": "to keep; to save (for someone); to stay",
     "hint": "one syllable; save for later, or stay on",
     "pos": "verb",
-    "note": "Not 'to leave' as in going away (that is 離開 lí kāi). Common: 留給你 'save it for you', 留下來 'stay behind' (see 留下).",
+    "note": "Not 'to leave' as in going away (that is 離開 lí kāi). Common: 留給你 liú gěi nǐ 'save it for you', 留下來 liú xià lái 'stay behind' (see 留下 liú xià).",
     "example": {
       "trad": "幫我留一個位子。",
       "pinyin": "Bāng wǒ liú yī ge wèizi.",
@@ -369,7 +369,7 @@
     "gloss": "properly; really well",
     "hint": "do something with care, before a verb",
     "pos": "adv",
-    "note": "Used before a verb: 好好休息 'get a good rest', 好好想一想 'think it over carefully'. Taiwan says hǎo hǎo, without the mainland erhua hǎo hāor.",
+    "note": "Used before a verb: 好好休息 hǎo hǎo xiū xí 'get a good rest', 好好想一想 hǎo hǎo xiǎng yī xiǎng 'think it over carefully' (the middle yī is said lightly). Taiwan says hǎo hǎo, without the mainland erhua hǎo hāor.",
     "example": {
       "trad": "你要好好休息。",
       "pinyin": "Nǐ yào hǎohǎo xiūxí.",
@@ -382,7 +382,7 @@
     "pinyin": "měi jīn",
     "gloss": "US dollar",
     "pos": "noun",
-    "note": "Taiwan says 美金 in speech; 美元 (měi yuán) is the written or mainland term.",
+    "note": "Taiwan says 美金 měi jīn in speech; 美元 měi yuán is the written or mainland term.",
     "example": {
       "trad": "我要去銀行換美金。",
       "pinyin": "Wǒ yào qù yínháng huàn měijīn.",
@@ -395,7 +395,7 @@
     "pinyin": "xiàn cháng",
     "gloss": "the scene; on site; live",
     "pos": "noun",
-    "note": "MOE (Taiwan standard) reads 場 here as cháng; the mainland says xiàn chǎng, and many Taiwanese say chǎng too. 現場 also means 'live' (a live show).",
+    "note": "MOE (Taiwan standard) reads the second syllable as cháng; the mainland says xiàn chǎng, and many Taiwanese say chǎng too. 現場 xiàn cháng also means 'live' (a live show).",
     "example": {
       "trad": "警察已經到現場了。",
       "pinyin": "Jǐngchá yǐjīng dào xiàncháng le.",
@@ -408,7 +408,7 @@
     "pinyin": "gǎn",
     "gloss": "to dare",
     "pos": "aux",
-    "note": "Goes before a verb: 不敢去 'don't dare to go'. 我不敢相信 means 'I can't believe it'.",
+    "note": "Goes before a verb: 不敢去 bù gǎn qù 'don't dare to go'. 我不敢相信 wǒ bù gǎn xiāng xìn means 'I can't believe it'.",
     "example": {
       "trad": "我晚上不敢一個人出去。",
       "pinyin": "Wǒ wǎnshang bù gǎn yī ge rén chūqù.",
@@ -447,7 +447,7 @@
     "gloss": "to do (about it); to hold (an event)",
     "hint": "as in 'what do we do?', or throw a party",
     "pos": "verb",
-    "note": "Very common in 怎麼辦 (zěn me bàn) 'what do we do?', 辦事 'run errands', and 辦派對 'throw a party'.",
+    "note": "Very common in 怎麼辦 zěn me bàn 'what do we do?', 辦事 bàn shì 'run errands', and 辦派對 bàn pài duì 'throw a party'.",
     "example": {
       "trad": "現在怎麼辦？",
       "pinyin": "Xiànzài zěnme bàn?",
@@ -461,7 +461,7 @@
     "gloss": "to understand; to comprehend",
     "hint": "grasp someone's reasons or feelings",
     "pos": "verb",
-    "note": "More about empathy and comprehension than 懂 (dǒng). 我可以理解 'I can understand (why)'.",
+    "note": "More about empathy and comprehension than 懂 dǒng. 我可以理解 wǒ kě yǐ lǐ jiě 'I can understand (why)'.",
     "example": {
       "trad": "我可以理解你的感覺。",
       "pinyin": "Wǒ kěyǐ lǐjiě nǐ de gǎnjué.",
@@ -475,7 +475,7 @@
     "gloss": "long (time)",
     "hint": "of time, not length",
     "pos": "adj",
-    "note": "Only for time; physical length is 長 (cháng). 多久 'how long', 好久不見 'long time no see'.",
+    "note": "Only for time; physical length is 長 cháng. 多久 duō jiǔ 'how long', 好久不見 hǎo jiǔ bù jiàn 'long time no see'.",
     "example": {
       "trad": "好久不見，你最近好嗎？",
       "pinyin": "Hǎo jiǔ bù jiàn, nǐ zuìjìn hǎo ma?",
@@ -489,7 +489,7 @@
     "gloss": "(measure word for machines, cars)",
     "hint": "machines; Taiwan's everyday word for cars too",
     "pos": "measure",
-    "note": "Counts machines, appliances and vehicles: 一台電腦, 一台車. As a noun it means stage or platform, and it is short for Taiwan (台灣). Formally written 臺.",
+    "note": "Counts machines, appliances and vehicles: 一台電腦 yī tái diàn nǎo, 一台車 yī tái chē. As a noun it means stage or platform, and it is short for Taiwan (台灣 tái wān). Formally written 臺 tái.",
     "example": {
       "trad": "我想買一台新電腦。",
       "pinyin": "Wǒ xiǎng mǎi yī tái xīn diànnǎo.",
@@ -540,7 +540,7 @@
     "pinyin": "tiào",
     "gloss": "to jump",
     "pos": "verb",
-    "note": "Also in 跳舞 (tiào wǔ) 'to dance'.",
+    "note": "Also in 跳舞 tiào wǔ 'to dance'.",
     "example": {
       "trad": "他跳得好高喔！",
       "pinyin": "Tā tiào de hǎo gāo o!",
@@ -553,7 +553,7 @@
     "pinyin": "nán dào",
     "gloss": "(rhetorical) don't tell me…; surely not",
     "pos": "adv",
-    "note": "Starts a rhetorical question showing surprise or disbelief, usually ending in 嗎: 難道你不知道嗎？ 'Don't tell me you didn't know?'",
+    "note": "Starts a rhetorical question showing surprise or disbelief, usually ending in 嗎 ma: 難道你不知道嗎 nán dào nǐ bù zhī dào ma? 'Don't tell me you didn't know?'",
     "example": {
       "trad": "難道你忘了嗎？",
       "pinyin": "Nándào nǐ wàng le ma?",
@@ -566,7 +566,7 @@
     "pinyin": "shì shí",
     "gloss": "fact; the truth",
     "pos": "noun",
-    "note": "事實上 (shì shí shàng) means 'in fact; actually'.",
+    "note": "事實上 shì shí shàng means 'in fact; actually'.",
     "example": {
       "trad": "我說的都是事實。",
       "pinyin": "Wǒ shuō de dōu shì shìshí.",
@@ -579,7 +579,7 @@
     "pinyin": "jiě jie",
     "gloss": "older sister",
     "pos": "noun",
-    "note": "The second syllable is light. Often written 姊姊 in Taiwan, with the same pronunciation. Also a friendly way to address a young woman.",
+    "note": "The second syllable is light. Often written 姊姊 jiě jie in Taiwan, with the same pronunciation. Also a friendly way to address a young woman.",
     "example": {
       "trad": "我姐姐比我大三歲。",
       "pinyin": "Wǒ jiějie bǐ wǒ dà sān suì.",
@@ -604,7 +604,7 @@
     "pinyin": "xíng wéi",
     "gloss": "behavior; conduct",
     "pos": "noun",
-    "note": "Both characters are polyphones: 行 is xíng here (háng in 銀行), and 為 is wéi here (wèi means 'for').",
+    "note": "Both characters have other readings: the first is háng in 銀行 yín háng 'bank', and the second is wèi 'for' in 為什麼 wèi shén me 'why'.",
     "example": {
       "trad": "他的行為很奇怪。",
       "pinyin": "Tā de xíngwéi hěn qíguài.",
@@ -657,7 +657,7 @@
     "gloss": "lady; Ms.; madam",
     "hint": "formal, as in 'ladies first'",
     "pos": "noun",
-    "note": "Formal; heard mostly in set phrases like 女士優先 and 各位女士先生 'ladies and gentlemen'. To address a woman Taiwanese say 小姐; in casual talk a woman is 女生 (nǚ shēng).",
+    "note": "Formal; heard mostly in set phrases like 女士優先 nǚ shì yōu xiān and 各位女士先生 gè wèi nǚ shì xiān shēng 'ladies and gentlemen'. To address a woman Taiwanese say 小姐 xiǎo jiě; in casual talk a woman is 女生 nǚ shēng.",
     "example": {
       "trad": "女士優先，你先請。",
       "pinyin": "Nǚshì yōuxiān, nǐ xiān qǐng.",

@@ -5,8 +5,11 @@ import type { Word } from '../data/types'
 
 export type NoteSegment =
   | { kind: 'text'; text: string }
-  /** A run of characters. `pinyin` is set when it was annotated here; null when it already has pinyin next to it or could not be looked up. */
-  | { kind: 'han'; text: string; pinyin: string | null }
+  /**
+   * A run of characters. `pinyin` is set when it was annotated here; null when it already has pinyin next to it or
+   * could not be looked up. `followedByPinyin` is true when the note itself already gives its pinyin right after it.
+   */
+  | { kind: 'han'; text: string; pinyin: string | null; followedByPinyin: boolean }
 
 export interface NoteDictionary {
   /** Traditional characters -> tone-marked pinyin (syllables separated by spaces). */
@@ -74,7 +77,12 @@ export function annotateNote(note: string, dict: NoteDictionary): NoteSegment[] 
       !!next && (TONE_MARK.test(next) || (pinyin !== null && toneless(next) === toneless(pinyin.split(' ')[0])))
     const prev = PINYIN_BEFORE_PAREN.exec(before)?.[1]
     const readingBefore = !!prev && TONE_MARK.test(prev) && /^\s*\)/.test(after)
-    out.push({ kind: 'han', text: run, pinyin: hasPinyinAfter || readingBefore ? null : pinyin })
+    out.push({
+      kind: 'han',
+      text: run,
+      pinyin: hasPinyinAfter || readingBefore ? null : pinyin,
+      followedByPinyin: hasPinyinAfter,
+    })
   }
   if (last < note.length) out.push({ kind: 'text', text: note.slice(last) })
   return out

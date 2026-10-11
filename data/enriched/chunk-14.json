@@ -19,7 +19,7 @@
     "gloss": "to forget",
     "hint": "one syllable; as in 'I forgot!'",
     "pos": "verb",
-    "note": "Usually said with 了: 我忘了 'I forgot'. Means the same as 忘記 wàng jì. The literary reading wáng is not used in speech.",
+    "note": "Usually said with 了 le: 我忘了 wǒ wàng le 'I forgot'. Means the same as 忘記 wàng jì. The literary reading wáng is not used in speech.",
     "example": {
       "trad": "我忘了帶鑰匙。",
       "pinyin": "Wǒ wàng le dài yàoshi.",
@@ -45,7 +45,7 @@
     "pinyin": "měi tiān",
     "gloss": "every day",
     "pos": "adv",
-    "note": "Usually followed by 都 dōu: 每天都… 'every day (without fail)…'.",
+    "note": "Usually followed by 都 dōu: 每天都 měi tiān dōu… 'every day (without fail)…'.",
     "example": {
       "trad": "我每天都喝咖啡。",
       "pinyin": "Wǒ měi tiān dōu hē kāfēi.",
@@ -59,7 +59,7 @@
     "gloss": "boxed meal; bento",
     "hint": "rice and dishes in a box",
     "pos": "noun",
-    "note": "A Taiwan staple: rice with a main dish and sides, bought for lunch or dinner (排骨便當 pái gǔ biàn dāng 'pork chop bento'). The word comes from Japanese bentō. MOE also lists biàn dang with a light second syllable. 便 is biàn here, not pián as in 便宜.",
+    "note": "A Taiwan staple: rice with a main dish and sides, bought for lunch or dinner (排骨便當 pái gǔ biàn dāng 'pork chop bento'). The word comes from Japanese bentō. MOE also lists biàn dang with a light second syllable. The first syllable is biàn, not the pián of 便宜 pián yi 'cheap'.",
     "example": {
       "trad": "我中午吃便當。",
       "pinyin": "Wǒ zhōngwǔ chī biàndāng.",
@@ -73,7 +73,7 @@
     "gloss": "(measure: pair, set); vice-",
     "hint": "glasses, gloves; deputy",
     "pos": "measure",
-    "note": "Counts sets such as glasses (一副眼鏡), gloves and decks of cards, and facial expressions (一副很累的樣子 'looking all tired'). As a prefix it means 'vice- / deputy': 副總統 'vice president'. A rare literary reading is pì.",
+    "note": "Counts sets such as glasses (一副眼鏡 yī fù yǎn jìng), gloves and decks of cards, and facial expressions (一副很累的樣子 yī fù hěn lèi de yàng zi 'looking all tired'). As a prefix it means 'vice- / deputy': 副總統 fù zǒng tǒng 'vice president'. A rare literary reading is pì.",
     "example": {
       "trad": "我需要一副新眼鏡。",
       "pinyin": "Wǒ xūyào yī fù xīn yǎnjìng.",
@@ -87,7 +87,7 @@
     "gloss": "to make use of; to exploit",
     "hint": "take advantage of",
     "pos": "verb",
-    "note": "It can be neutral ('make good use of time') or negative ('use / exploit a person'). For plain 'to use' a tool, say 用.",
+    "note": "It can be neutral ('make good use of time') or negative ('use / exploit a person'). For plain 'to use' a tool, say 用 yòng.",
     "example": {
       "trad": "你要好好利用時間。",
       "pinyin": "Nǐ yào hǎohǎo lìyòng shíjiān.",
@@ -101,7 +101,7 @@
     "gloss": "guy; fellow",
     "hint": "informal, often teasing",
     "pos": "noun",
-    "note": "A casual and slightly cheeky way to refer to a person: 這傢伙 'this guy'. It can sound rude about a stranger.",
+    "note": "A casual and slightly cheeky way to refer to a person: 這傢伙 zhè jiā huo 'this guy'. It can sound rude about a stranger.",
     "example": {
       "trad": "這傢伙真聰明。",
       "pinyin": "Zhè jiāhuo zhēn cōngmíng.",
@@ -128,7 +128,7 @@
     "gloss": "to insist; to persist",
     "hint": "stick with it",
     "pos": "verb",
-    "note": "Insist on something (堅持要… 'insist on…') or keep going without giving up (再堅持一下 'hang in there a bit longer').",
+    "note": "Insist on something (堅持要 jiān chí yào… 'insist on…') or keep going without giving up (再堅持一下 zài jiān chí yī xià 'hang in there a bit longer').",
     "example": {
       "trad": "他堅持要自己付錢。",
       "pinyin": "Tā jiānchí yào zìjǐ fùqián.",
@@ -142,7 +142,7 @@
     "gloss": "to press",
     "hint": "with a finger, like a button",
     "pos": "verb",
-    "note": "Press with a finger: buttons, doorbells, keys. Pushing a door or person is 推 tuī. In formal speech 按照 means 'according to'.",
+    "note": "Press with a finger: buttons, doorbells, keys. Pushing a door or person is 推 tuī. In formal speech 按照 àn zhào means 'according to'.",
     "example": {
       "trad": "你按一下門鈴。",
       "pinyin": "Nǐ àn yīxià ménlíng.",
@@ -156,7 +156,7 @@
     "gloss": "to stay",
     "hint": "spend time somewhere",
     "pos": "verb",
-    "note": "Polyphone: dāi 'to stay (somewhere)'; dài in 等待 'to wait', 對待 'to treat (someone)' and 待遇 'pay, treatment'. Compare 住 zhù 'to live somewhere'.",
+    "note": "Polyphone: dāi 'to stay (somewhere)'; dài in 等待 děng dài 'to wait', 對待 duì dài 'to treat (someone)' and 待遇 dài yù 'pay, treatment'. Compare 住 zhù 'to live somewhere'.",
     "example": {
       "trad": "週末我想待在家裡。",
       "pinyin": "Zhōumò wǒ xiǎng dāi zài jiālǐ.",
@@ -170,7 +170,7 @@
     "gloss": "to be affected by; to receive",
     "hint": "undergo; before abstract nouns (influence)",
     "pos": "verb",
-    "note": "Means you undergo or experience something, usually followed by an abstract noun: 受到影響 'be affected', 受到歡迎 'be welcomed', 受到批評 'be criticized'. Don't confuse it with 收到 shōu dào 'to receive (a package or message)'.",
+    "note": "Means you undergo or experience something, usually followed by an abstract noun: 受到影響 shòu dào yǐng xiǎng 'be affected', 受到歡迎 shòu dào huān yíng 'be welcomed', 受到批評 shòu dào pī píng 'be criticized'. Don't confuse it with 收到 shōu dào 'to receive (a package or message)'.",
     "example": {
       "trad": "大家都受到影響了。",
       "pinyin": "Dàjiā dōu shòudào yǐngxiǎng le.",
@@ -195,7 +195,7 @@
     "pinyin": "zǎo cān",
     "gloss": "breakfast",
     "pos": "noun",
-    "note": "Taiwan usually says 早餐 (the mainland often says 早飯). The 早餐店 zǎo cān diàn 'breakfast shop' is a Taiwan institution. Lunch is 午餐 wǔ cān or 午飯 wǔ fàn.",
+    "note": "Taiwan usually says 早餐 zǎo cān (the mainland often says 早飯 zǎo fàn). The 早餐店 zǎo cān diàn 'breakfast shop' is a Taiwan institution. Lunch is 午餐 wǔ cān or 午飯 wǔ fàn.",
     "example": {
       "trad": "你吃早餐了嗎？",
       "pinyin": "Nǐ chī zǎocān le ma?",
@@ -209,7 +209,7 @@
     "gloss": "late; evening",
     "hint": "not early",
     "pos": "adj",
-    "note": "'Late' in time (太晚了 'it's too late', 晚一點 'a bit later'), and 'evening' in words like 今晚 and 晚安 'good night'. The usual word for 'evening' is 晚上.",
+    "note": "'Late' in time (太晚了 tài wǎn le 'it's too late', 晚一點 wǎn yī diǎn 'a bit later'), and 'evening' in words like 今晚 jīn wǎn and 晚安 wǎn ān 'good night'. The usual word for 'evening' is 晚上 wǎn shang.",
     "example": {
       "trad": "太晚了，快去睡覺。",
       "pinyin": "Tài wǎn le, kuài qù shuìjiào.",
@@ -223,7 +223,7 @@
     "gloss": "troublesome; to bother",
     "hint": "a hassle; please (polite)",
     "pos": "adj",
-    "note": "好麻煩 'what a hassle'. 麻煩你… 'could you please…' is a very common polite request. MOE gives a neutral tone, má fan, but many Taiwanese say má fán.",
+    "note": "好麻煩 hǎo má fan 'what a hassle'. 麻煩你 má fan nǐ… 'could you please…' is a very common polite request. MOE gives a neutral tone, má fan, but many Taiwanese say má fán.",
     "example": {
       "trad": "麻煩你幫我開門。",
       "pinyin": "Máfan nǐ bāng wǒ kāimén.",
@@ -237,7 +237,7 @@
     "gloss": "until",
     "hint": "all the way until (a time)",
     "pos": "prep",
-    "note": "Often paired with 才 cái: 直到昨天才… 'not until yesterday did…'. Don't confuse it with 知道 zhī dào 'to know', which differs only in the first tone.",
+    "note": "Often paired with 才 cái: 直到昨天才 zhí dào zuó tiān cái… 'not until yesterday did…'. Don't confuse it with 知道 zhī dào 'to know', which differs only in the first tone.",
     "example": {
       "trad": "他直到昨天才告訴我。",
       "pinyin": "Tā zhídào zuótiān cái gàosu wǒ.",
@@ -290,7 +290,7 @@
     "gloss": "mouth",
     "hint": "the body part",
     "pos": "noun",
-    "note": "In everyday Taiwan speech it is often 嘴巴 zuǐ ba. 嘴很甜 'sweet-talking', 閉嘴 bì zuǐ 'shut up'. 口 kǒu is 'mouth' mainly in compounds and as 'opening, entrance'.",
+    "note": "In everyday Taiwan speech it is often 嘴巴 zuǐ ba. 嘴很甜 zuǐ hěn tián 'sweet-talking', 閉嘴 bì zuǐ 'shut up'. 口 kǒu is 'mouth' mainly in compounds and as 'opening, entrance'.",
     "example": {
       "trad": "他的嘴很甜。",
       "pinyin": "Tā de zuǐ hěn tián.",
@@ -331,7 +331,7 @@
     "gloss": "to go back",
     "hint": "away from here",
     "pos": "verb",
-    "note": "Go back somewhere else, away from the speaker; 回來 means 'come back here'. MOE gives a neutral tone, but Taiwanese often say huí qù, especially when it ends the sentence.",
+    "note": "Go back somewhere else, away from the speaker; 回來 huí lai means 'come back here'. MOE gives a neutral tone, but Taiwanese often say huí qù, especially when it ends the sentence.",
     "example": {
       "trad": "我們該回去了。",
       "pinyin": "Wǒmen gāi huíqu le.",
@@ -358,7 +358,7 @@
     "gloss": "mistake; error",
     "hint": "formal noun",
     "pos": "noun",
-    "note": "The somewhat formal noun. In casual talk people say 錯 cuò: 是我的錯 'it's my fault'.",
+    "note": "The somewhat formal noun. In casual talk people say 錯 cuò: 是我的錯 shì wǒ de cuò 'it's my fault'.",
     "example": {
       "trad": "這份報告有很多錯誤。",
       "pinyin": "Zhè fèn bàogào yǒu hěn duō cuòwù.",
@@ -371,7 +371,7 @@
     "pinyin": "mì mì",
     "gloss": "secret",
     "pos": "noun",
-    "note": "The MOE standard form is written 祕密, but 秘密 is very common in Taiwan. The pronunciation is the same.",
+    "note": "保守秘密 bǎo shǒu mì mì 'keep a secret'. Also an adjective: 秘密任務 mì mì rèn wù 'a secret mission'. (The dictionary spells it a little differently; the sound is the same.)",
     "example": {
       "trad": "這是我們的秘密。",
       "pinyin": "Zhè shì wǒmen de mìmì.",
@@ -384,7 +384,7 @@
     "pinyin": "bàn",
     "gloss": "half",
     "pos": "num",
-    "note": "After a time or number it means 'and a half': 三點半 'half past three', 一個半 'one and a half'. 一半 yī bàn means 'half (of it)'.",
+    "note": "After a time or number it means 'and a half': 三點半 sān diǎn bàn 'half past three', 一個半 yī ge bàn 'one and a half'. 一半 yī bàn means 'half (of it)'.",
     "example": {
       "trad": "現在三點半。",
       "pinyin": "Xiànzài sān diǎn bàn.",
@@ -397,7 +397,7 @@
     "pinyin": "bù zài",
     "gloss": "no longer; not anymore",
     "pos": "adv",
-    "note": "不 'not' + 再 'again'; it often ends with 了. Spoken bú zài (不 changes to a 2nd tone before a 4th tone).",
+    "note": "不 bù 'not' + 再 zài 'again'; it often ends with 了 le. Spoken bú zài (不 bù changes to a 2nd tone before a 4th tone).",
     "example": {
       "trad": "他不再是小孩子了。",
       "pinyin": "Tā bù zài shì xiǎoháizi le.",
@@ -411,7 +411,7 @@
     "gloss": "meaning; significance",
     "hint": "significance, not a word's meaning",
     "pos": "noun",
-    "note": "Deeper meaning or value: 很有意義 'meaningful'. The meaning of a word or what someone means is 意思 yì si.",
+    "note": "Deeper meaning or value: 很有意義 hěn yǒu yì yì 'meaningful'. The meaning of a word or what someone means is 意思 yì si.",
     "example": {
       "trad": "這件事對我很有意義。",
       "pinyin": "Zhè jiàn shì duì wǒ hěn yǒu yìyì.",
@@ -425,7 +425,7 @@
     "gloss": "to come in",
     "hint": "toward the speaker",
     "pos": "verb",
-    "note": "Come in toward where the speaker is; 進去 jìn qù means 'go in'. After another verb it means 'in (toward here)': 走進來 'walk in'.",
+    "note": "Come in toward where the speaker is; 進去 jìn qù means 'go in'. After another verb it means 'in (toward here)': 走進來 zǒu jìn lái 'walk in'.",
     "example": {
       "trad": "門沒鎖，請進來吧。",
       "pinyin": "Mén méi suǒ, qǐng jìnlái ba.",
@@ -452,7 +452,7 @@
     "pinyin": "yín háng",
     "gloss": "bank",
     "pos": "noun",
-    "note": "行 is read háng here (a business or trade). As 'to walk / OK' it is xíng.",
+    "note": "The second syllable is háng (a business or trade); as 'to walk / OK' the same character is xíng.",
     "example": {
       "trad": "我要去銀行領錢。",
       "pinyin": "Wǒ yào qù yínháng lǐng qián.",
@@ -494,7 +494,7 @@
     "gloss": "to study; to read aloud",
     "hint": "at school, or out loud",
     "pos": "verb",
-    "note": "In Taiwan, 讀書 dú shū and 讀大學 mean 'to study / attend school'; 念 niàn (念書, 念大學) is an equally common synonym. For reading a book silently, people usually say 看書 kàn shū. The rare reading dòu means a pause in a sentence.",
+    "note": "In Taiwan, 讀書 dú shū and 讀大學 dú dà xué mean 'to study / attend school'; 念 niàn (念書 niàn shū, 念大學 niàn dà xué) is an equally common synonym. For reading a book silently, people usually say 看書 kàn shū. The rare reading dòu means a pause in a sentence.",
     "example": {
       "trad": "他在台北讀大學。",
       "pinyin": "Tā zài Táiběi dú dàxué.",
@@ -536,7 +536,7 @@
     "gloss": "to learn; to study",
     "hint": "more formal; studying as an activity",
     "pos": "verb",
-    "note": "A bit more formal or general than plain 學 xué. In casual speech people say 學中文 xué zhōng wén more than 學習中文. MOE also lists xué xi, but Taiwan speech uses xué xí.",
+    "note": "A bit more formal or general than plain 學 xué. In casual speech people say 學中文 xué zhōng wén more than 學習中文 xué xí zhōng wén. MOE also lists xué xi, but Taiwan speech uses xué xí.",
     "example": {
       "trad": "我還在學習。",
       "pinyin": "Wǒ hái zài xuéxí.",
@@ -564,7 +564,7 @@
     "gloss": "scooter; motorcycle; (slang) annoying",
     "hint": "Taiwan's two-wheeler; also 'a pain'",
     "pos": "noun",
-    "note": "In Taiwan this is the motor scooter, the most common way to get around: 騎機車 qí jī chē 'ride a scooter'. As slang, 很機車 hěn jī chē describes an annoying, difficult person. On the mainland 機車 means a locomotive.",
+    "note": "In Taiwan this is the motor scooter, the most common way to get around: 騎機車 qí jī chē 'ride a scooter'. As slang, 很機車 hěn jī chē describes an annoying, difficult person. On the mainland 機車 jī chē means a locomotive.",
     "example": {
       "trad": "我騎機車去上班。",
       "pinyin": "Wǒ qí jīchē qù shàngbān.",
@@ -590,7 +590,7 @@
     "gloss": "uncooked rice",
     "hint": "the raw grain",
     "pos": "noun",
-    "note": "Cooked rice is 飯 fàn. On the mainland 米 also means 'meter'; Taiwan usually says 公尺 gōng chǐ.",
+    "note": "Cooked rice is 飯 fàn. On the mainland 米 mǐ also means 'meter'; Taiwan usually says 公尺 gōng chǐ.",
     "example": {
       "trad": "家裡沒有米了。",
       "pinyin": "Jiālǐ méiyǒu mǐ le.",
@@ -658,7 +658,7 @@
     "pinyin": "zhī yī",
     "gloss": "one of (the ...)",
     "pos": "phrase",
-    "note": "Goes at the end of a noun phrase: 我最好的朋友之一 'one of my best friends'.",
+    "note": "Goes at the end of a noun phrase: 我最好的朋友之一 wǒ zuì hǎo de péng yǒu zhī yī 'one of my best friends'.",
     "example": {
       "trad": "這是我最喜歡的歌之一。",
       "pinyin": "Zhè shì wǒ zuì xǐhuān de gē zhīyī.",

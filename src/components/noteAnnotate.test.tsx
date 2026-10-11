@@ -13,9 +13,10 @@ const noteOf = (trad: string) => words.list.find((w) => w.trad === trad)!.note!
 const runs = (segs: NoteSegment[]) => segs.flatMap((s) => (s.kind === 'han' ? [[s.text, s.pinyin]] : []))
 
 describe('annotateNote (real word list)', () => {
-  it('adds pinyin to the bare characters in the 有 note', () => {
-    // "Negated with 沒 (沒有 'don't have'), never 不有. Taiwan Mandarin also uses 有 before a verb for 'did': 我有去 'I did go'."
-    const segs = annotateNote(noteOf('有'), dict)
+  it('adds pinyin to bare characters, looked up in the word list', () => {
+    // A note as the data used to have it, before every run got its pinyin in data/enriched.
+    const note = "Negated with 沒 (沒有 'don't have'), never 不有. Taiwan Mandarin also uses 有 before a verb for 'did': 我有去 'I did go'."
+    const segs = annotateNote(note, dict)
     expect(runs(segs)).toEqual([
       ['沒', 'méi'],
       ['沒有', 'méi yǒu'],
@@ -24,14 +25,21 @@ describe('annotateNote (real word list)', () => {
       ['我有去', 'wǒ yǒu qù'],
     ])
     // Nothing of the note is lost.
-    expect(segs.map((s) => s.text).join('')).toBe(noteOf('有'))
+    expect(segs.map((s) => s.text).join('')).toBe(note)
   })
 
-  it('leaves runs alone that already have their reading next to them (和: hè (附和), huó (和麵))', () => {
-    const r = runs(annotateNote(noteOf('和'), dict))
+  it('leaves runs alone that already have their reading next to them (hè (附和), huó (和麵))', () => {
+    const r = runs(annotateNote('Other readings: hè (附和), huó (和麵); casual speech uses 跟.', dict))
     expect(r).toContainEqual(['附和', null])
     expect(r).toContainEqual(['和麵', null])
     expect(r).toContainEqual(['跟', 'gēn'])
+  })
+
+  it('finds pinyin already in every real note, so it adds nothing to them', () => {
+    const added = words.list.flatMap((w) =>
+      w.note ? runs(annotateNote(w.note, dict)).filter(([, py]) => py !== null).map(([run]) => `${w.trad}: ${run}`) : [],
+    )
+    expect(added).toEqual([])
   })
 
   it('does not repeat pinyin that follows the characters, including a neutral tone', () => {
@@ -62,6 +70,14 @@ describe('<NoteText>', () => {
   it('shows only the pinyin when characters are off, and keeps characters it cannot read', async () => {
     const { container } = renderWithApp(<NoteText note="Use 沒有, not 不有." dictionary={small} />, { settings: { showCharacters: false } })
     await waitFor(() => expect(container).toHaveTextContent('Use méi yǒu, not 不有.'))
+    expect(screen.queryByText('沒有')).toBeNull()
+  })
+
+  it('drops characters the note already follows with pinyin when characters are off', async () => {
+    const { container } = renderWithApp(<NoteText note="Negated with 沒 méi (沒有 méi yǒu 'don't have')." dictionary={small} />, {
+      settings: { showCharacters: false },
+    })
+    await waitFor(() => expect(container).toHaveTextContent("Negated with méi (méi yǒu 'don't have')."))
     expect(screen.queryByText('沒有')).toBeNull()
   })
 

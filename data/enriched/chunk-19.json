@@ -34,7 +34,7 @@
     "gloss": "to lie to; to cheat; to trick",
     "hint": "deceive someone",
     "pos": "verb",
-    "note": "騙人！ piàn rén on its own means 'You're lying! / No way!'. 騙子 piàn zi is a liar or con artist.",
+    "note": "騙人 piàn rén! on its own means 'You're lying! / No way!'. 騙子 piàn zi is a liar or con artist.",
     "example": {
       "trad": "我沒有騙你啦。",
       "pinyin": "Wǒ méiyǒu piàn nǐ la.",
@@ -48,7 +48,7 @@
     "gloss": "wife; Mrs.",
     "hint": "polite everyday word; also a title",
     "pos": "noun",
-    "note": "我太太 wǒ tài tai 'my wife' is the polite everyday word in Taiwan; 老婆 lǎo po is more intimate and casual. After a surname it means 'Mrs.': 王太太 'Mrs. Wang'.",
+    "note": "我太太 wǒ tài tai 'my wife' is the polite everyday word in Taiwan; 老婆 lǎo po is more intimate and casual. After a surname it means 'Mrs.': 王太太 wáng tài tai 'Mrs. Wang'.",
     "example": {
       "trad": "王太太是我們的鄰居。",
       "pinyin": "Wáng tàitai shì wǒmen de línjū.",
@@ -62,7 +62,7 @@
     "gloss": "but rather",
     "hint": "not this, but that",
     "pos": "conj",
-    "note": "Used in the pattern 不是 A，而是 B (bù shì A, ér shì B) 'not A, but (rather) B'. It corrects the first part instead of contrasting like 但是 dàn shì.",
+    "note": "Used in the pattern 不是 bù shì A, 而是 ér shì B 'not A, but (rather) B'. It corrects the first part instead of contrasting like 但是 dàn shì.",
     "example": {
       "trad": "不是我不想去，而是沒時間。",
       "pinyin": "Bù shì wǒ bù xiǎng qù, érshì méi shíjiān.",
@@ -130,7 +130,7 @@
     "gloss": "which (one)",
     "hint": "which one, on its own",
     "pos": "pron",
-    "note": "In speech it is often něi ge, and 哪一個 nǎ yī ge is also common. 個 is light here, like 這個 zhè ge.",
+    "note": "In speech it is often něi ge, and 哪一個 nǎ yī ge is also common. The second syllable is light (ge), like 這個 zhè ge.",
     "example": {
       "trad": "你比較喜歡哪個？",
       "pinyin": "Nǐ bǐjiào xǐhuān nǎge?",
@@ -143,7 +143,7 @@
     "pinyin": "shì cháng",
     "gloss": "market",
     "pos": "noun",
-    "note": "MOE reads 場 as cháng here; many Taiwanese say shì chǎng, as the mainland does. 菜市場 cài shì cháng is the traditional wet market.",
+    "note": "MOE reads the second syllable as cháng; many Taiwanese say shì chǎng, as the mainland does. 菜市場 cài shì cháng is the traditional wet market.",
     "example": {
       "trad": "我媽每天去市場買菜。",
       "pinyin": "Wǒ mā měi tiān qù shìcháng mǎi cài.",
@@ -184,7 +184,7 @@
     "gloss": "to enjoy",
     "hint": "savor an experience",
     "pos": "verb",
-    "note": "Stronger than 喜歡 'to like': it means really savoring something. Also a noun, 'enjoyment'.",
+    "note": "Stronger than 喜歡 xǐ huān 'to like': it means really savoring something. Also a noun, 'enjoyment'.",
     "example": {
       "trad": "我很享受現在的生活。",
       "pinyin": "Wǒ hěn xiǎngshòu xiànzài de shēnghuó.",
@@ -254,7 +254,7 @@
     "gloss": "to move (house); to carry (something heavy)",
     "hint": "relocate, or lift and move",
     "pos": "verb",
-    "note": "搬家 bān jiā 'to move house'. 搬東西 bān dōng xi 'to carry things'. 搬到台北 'move to Taipei'.",
+    "note": "搬家 bān jiā 'to move house'. 搬東西 bān dōng xi 'to carry things'. 搬到台北 bān dào tái běi 'move to Taipei'.",
     "example": {
       "trad": "我們下個月要搬家。",
       "pinyin": "Wǒmen xià ge yuè yào bānjiā.",
@@ -282,7 +282,7 @@
     "gloss": "picture; diagram; map",
     "hint": "an image or chart",
     "pos": "noun",
-    "note": "Counted with 張: 一張圖. 地圖 dì tú is a map. Online, 圖 is any image.",
+    "note": "Counted with 張 zhāng: 一張圖 yī zhāng tú. 地圖 dì tú is a map. Online, 圖 tú is any image.",
     "example": {
       "trad": "你看這張圖。",
       "pinyin": "Nǐ kàn zhè zhāng tú.",
@@ -336,7 +336,7 @@
     "gloss": "to drive (a car)",
     "hint": "behind the wheel",
     "pos": "verb",
-    "note": "開 kāi alone also covers driving: 開快一點 'drive faster'. Riding a scooter or bike is 騎 qí.",
+    "note": "開 kāi alone also covers driving: 開快一點 kāi kuài yī diǎn 'drive faster'. Riding a scooter or bike is 騎 qí.",
     "example": {
       "trad": "開車要小心。",
       "pinyin": "Kāichē yào xiǎoxīn.",
@@ -392,7 +392,7 @@
     "gloss": "please (I beg you); to ask a favor",
     "hint": "begging a favor",
     "pos": "verb",
-    "note": "Very common in Taiwan. On its own, 拜託！ bài tuō can also mean 'Oh, come on!' (disbelief or annoyance).",
+    "note": "Very common in Taiwan. On its own, 拜託 bài tuō! can also mean 'Oh, come on!' (disbelief or annoyance).",
     "example": {
       "trad": "拜託你幫我一下。",
       "pinyin": "Bàituō nǐ bāng wǒ yīxià.",
@@ -458,7 +458,7 @@
     "gloss": "to sleep; to go to bed",
     "hint": "go to bed",
     "pos": "verb",
-    "note": "覺 is jiào here ('a sleep'); in 覺得 jué de it is jué. It splits apart: 睡午覺 shuì wǔ jiào 'take a nap'.",
+    "note": "The second syllable is jiào ('a sleep'); the same character is jué in 覺得 jué de 'to feel'. It splits apart: 睡午覺 shuì wǔ jiào 'take a nap'.",
     "example": {
       "trad": "我要去睡覺了。",
       "pinyin": "Wǒ yào qù shuìjiào le.",
@@ -472,7 +472,7 @@
     "gloss": "to hide; to keep hidden",
     "hint": "put something out of sight",
     "pos": "verb",
-    "note": "Polyphone: read zàng for a storehouse or Tibet (西藏 Xī zàng). To hide yourself, people usually say 躲 duǒ.",
+    "note": "Polyphone: read zàng for a storehouse or Tibet (西藏 xī zàng). To hide yourself, people usually say 躲 duǒ.",
     "example": {
       "trad": "你把錢藏在哪裡？",
       "pinyin": "Nǐ bǎ qián cáng zài nǎlǐ?",
@@ -486,7 +486,7 @@
     "gloss": "not right; wrong",
     "hint": "not correct; also 'wait, no'",
     "pos": "adj",
-    "note": "Literally 'not right' (bù + duì). Also used to correct yourself mid-sentence: 不對，是明天 'no wait, it's tomorrow'. Spoken bú duì (tone sandhi).",
+    "note": "Literally 'not right' (bù + duì). Also used to correct yourself mid-sentence: 不對 bù duì, 是明天 shì míng tiān 'no wait, it's tomorrow'. Spoken bú duì (tone sandhi).",
     "example": {
       "trad": "你說得不對。",
       "pinyin": "Nǐ shuō de bùduì.",
@@ -499,7 +499,7 @@
     "pinyin": "hóng",
     "gloss": "red; popular",
     "pos": "adj",
-    "note": "Also means 'popular, famous': 他現在很紅 'he's really popular now'. MOE also lists a rare literary reading gōng (needlework).",
+    "note": "Also means 'popular, famous': 他現在很紅 tā xiàn zài hěn hóng 'he's really popular now'. MOE also lists a rare literary reading gōng (needlework).",
     "example": {
       "trad": "她的臉紅了。",
       "pinyin": "Tā de liǎn hóng le.",
@@ -513,7 +513,7 @@
     "gloss": "floor (level); building",
     "hint": "a storey of a building",
     "pos": "noun",
-    "note": "三樓 sān lóu is 'third floor'; 樓上 'upstairs', 樓下 'downstairs', 大樓 'building'. 一樓 is the ground floor (US-style counting).",
+    "note": "三樓 sān lóu is 'third floor'; 樓上 lóu shàng 'upstairs', 樓下 lóu xià 'downstairs', 大樓 dà lóu 'building'. 一樓 yī lóu is the ground floor (US-style counting).",
     "example": {
       "trad": "我住在五樓。",
       "pinyin": "Wǒ zhù zài wǔ lóu.",
@@ -540,7 +540,7 @@
     "gloss": "very; extremely",
     "hint": "formal; literally 'ten parts'",
     "pos": "adv",
-    "note": "Literally 'ten parts out of ten'. Sounds more formal than 很 hěn or 非常 fēi cháng. Don't confuse with 十分鐘 'ten minutes'.",
+    "note": "Literally 'ten parts out of ten'. Sounds more formal than 很 hěn or 非常 fēi cháng. Don't confuse with 十分鐘 shí fēn zhōng 'ten minutes'.",
     "example": {
       "trad": "這件事十分重要。",
       "pinyin": "Zhè jiàn shì shífēn zhòngyào.",
@@ -553,7 +553,7 @@
     "pinyin": "xīng qí",
     "gloss": "week",
     "pos": "noun",
-    "note": "Taiwan says xīng qí; the mainland says xīng qī. Days: 星期一 'Monday' ... 星期天/星期日 'Sunday'. 禮拜 lǐ bài is a common casual alternative in Taiwan.",
+    "note": "Taiwan says xīng qí; the mainland says xīng qī. Days: 星期一 xīng qí yī 'Monday' ... 星期天 xīng qí tiān/星期日 xīng qí rì 'Sunday'. 禮拜 lǐ bài is a common casual alternative in Taiwan.",
     "example": {
       "trad": "我下星期要去台北。",
       "pinyin": "Wǒ xià xīngqí yào qù Táiběi.",
@@ -567,7 +567,7 @@
     "gloss": "to receive; to collect; to put away",
     "hint": "one syllable; take in, or put away",
     "pos": "verb",
-    "note": "Common uses: 收錢 'take payment', 收好 'put away safely', 收衣服 'bring in the laundry'. 收到 shōu dào means 'to have received' (mail, a message).",
+    "note": "Common uses: 收錢 shōu qián 'take payment', 收好 shōu hǎo 'put away safely', 收衣服 shōu yī fu 'bring in the laundry'. 收到 shōu dào means 'to have received' (mail, a message).",
     "example": {
       "trad": "老闆不收我的錢。",
       "pinyin": "Lǎobǎn bù shōu wǒ de qián.",
@@ -593,7 +593,7 @@
     "pinyin": "luàn",
     "gloss": "messy; chaotic; randomly",
     "pos": "adj",
-    "note": "Before a verb it means 'carelessly, at random': 不要亂說 'don't talk nonsense', 亂丟 'throw anywhere'.",
+    "note": "Before a verb it means 'carelessly, at random': 不要亂說 bù yào luàn shuō 'don't talk nonsense', 亂丟 luàn diū 'throw anywhere'.",
     "example": {
       "trad": "你的房間好亂！",
       "pinyin": "Nǐ de fángjiān hǎo luàn!",
@@ -620,7 +620,7 @@
     "gloss": "category; class; kind",
     "hint": "a category; more formal than zhǒng",
     "pos": "noun",
-    "note": "Often used like a measure word: 這類電影 'this kind of movie'. In compounds: 人類 'humankind', 分類 'to sort'. 種 zhǒng is the everyday 'kind'.",
+    "note": "Often used like a measure word: 這類電影 zhè lèi diàn yǐng 'this kind of movie'. In compounds: 人類 rén lèi 'humankind', 分類 fēn lèi 'to sort'. 種 zhǒng is the everyday 'kind'.",
     "example": {
       "trad": "我不喜歡這類電影。",
       "pinyin": "Wǒ bù xǐhuān zhè lèi diànyǐng.",
@@ -633,7 +633,7 @@
     "pinyin": "tōu",
     "gloss": "to steal",
     "pos": "verb",
-    "note": "Also 'secretly': 偷看 'to peek', 偷偷 tōu tōu 'sneakily'. 小偷 xiǎo tōu is 'thief'.",
+    "note": "Also 'secretly': 偷看 tōu kàn 'to peek', 偷偷 tōu tōu 'sneakily'. 小偷 xiǎo tōu is 'thief'.",
     "example": {
       "trad": "我的腳踏車被偷了。",
       "pinyin": "Wǒ de jiǎotàchē bèi tōu le.",
@@ -661,7 +661,7 @@
     "gloss": "(one's) feelings; to experience",
     "hint": "inner feelings about something; not gǎn jué",
     "pos": "noun",
-    "note": "As a noun: one's feelings about something. As a verb: to feel or experience (感受一下 'get a feel for it'). 感覺 gǎn jué is the more everyday 'feeling'.",
+    "note": "As a noun: one's feelings about something. As a verb: to feel or experience (感受一下 gǎn shòu yī xià 'get a feel for it'). 感覺 gǎn jué is the more everyday 'feeling'.",
     "example": {
       "trad": "我懂你的感受。",
       "pinyin": "Wǒ dǒng nǐ de gǎnshòu.",
@@ -675,7 +675,7 @@
     "gloss": "days; life; date",
     "hint": "days of one's life; a set date",
     "pos": "noun",
-    "note": "過日子 guò rì zi 'to get by, live one's life'; 好日子 'a lucky day (for an event)'. MOE also lists rì zǐ with a full tone.",
+    "note": "過日子 guò rì zi 'to get by, live one's life'; 好日子 hǎo rì zi 'a lucky day (for an event)'. MOE also lists rì zǐ with a full tone.",
     "example": {
       "trad": "最近日子不好過。",
       "pinyin": "Zuìjìn rìzi bù hǎo guò.",

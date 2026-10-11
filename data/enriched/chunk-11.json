@@ -19,7 +19,7 @@
     "gloss": "method; way",
     "hint": "a technique for doing it",
     "pos": "noun",
-    "note": "辦法 bàn fǎ is a way out or solution (沒辦法 'no way'); 方法 is a method or technique.",
+    "note": "辦法 bàn fǎ is a way out or solution (沒辦法 méi bàn fǎ 'no way'); 方法 fāng fǎ is a method or technique.",
     "example": {
       "trad": "這個方法很好用。",
       "pinyin": "Zhège fāngfǎ hěn hǎoyòng.",
@@ -45,7 +45,7 @@
     "gloss": "district; area; zone",
     "hint": "an administrative district",
     "pos": "noun",
-    "note": "Taiwan cities are divided into 區 (e.g. Taipei's 大安區). As a surname it is read ōu.",
+    "note": "Taiwan cities are divided into 區 qū (e.g. Taipei's 大安區 dà ān qū). As a surname it is read ōu.",
     "example": {
       "trad": "這一區很安靜。",
       "pinyin": "Zhè yī qū hěn ānjìng.",
@@ -83,7 +83,7 @@
     "pinyin": "shēn shàng",
     "gloss": "on (one's) body; on hand",
     "pos": "noun",
-    "note": "Also means 'on you' (carried): 身上有錢嗎? Taiwan (MOE) says shēn shàng; the mainland often uses a neutral shang.",
+    "note": "Also means 'on you' (carried): 身上有錢嗎 shēn shàng yǒu qián ma? Taiwan (MOE) says shēn shàng; the mainland often uses a neutral shang.",
     "example": {
       "trad": "我身上沒有錢。",
       "pinyin": "Wǒ shēnshàng méiyǒu qián.",
@@ -111,7 +111,7 @@
     "gloss": "to own; to possess",
     "hint": "formal 'have'",
     "pos": "verb",
-    "note": "Taiwan (MOE) reads 擁 as yǒng; the mainland says yōng yǒu. More formal than plain 有.",
+    "note": "Taiwan (MOE) reads the first syllable as yǒng; the mainland says yōng yǒu. More formal than plain 有 yǒu.",
     "example": {
       "trad": "他擁有兩間房子。",
       "pinyin": "Tā yǒngyǒu liǎng jiān fángzi.",
@@ -124,7 +124,7 @@
     "pinyin": "kào",
     "gloss": "to lean on; to rely on",
     "pos": "verb",
-    "note": "Also 'next to': 靠窗 by the window. 靠！ alone is a common mild swear in Taiwan, like 'damn!'.",
+    "note": "Also 'next to': 靠窗 kào chuāng by the window. 靠 kào! alone is a common mild swear in Taiwan, like 'damn!'.",
     "example": {
       "trad": "我們只能靠自己。",
       "pinyin": "Wǒmen zhǐ néng kào zìjǐ.",
@@ -138,7 +138,7 @@
     "gloss": "news",
     "hint": "media news",
     "pos": "noun",
-    "note": "新聞 is media news; 消息 xiāo xí is a piece of news or word from someone.",
+    "note": "新聞 xīn wén is media news; 消息 xiāo xí is a piece of news or word from someone.",
     "example": {
       "trad": "你看到今天的新聞了嗎？",
       "pinyin": "Nǐ kàndào jīntiān de xīnwén le ma?",
@@ -204,7 +204,7 @@
     "gloss": "male",
     "hint": "in compounds",
     "pos": "adj",
-    "note": "Rarely alone: 男生 boy/guy, 男朋友 boyfriend, 男的 the man, 男人 man. Opposite of 女 nǚ.",
+    "note": "Rarely alone: 男生 nán shēng boy/guy, 男朋友 nán péng yǒu boyfriend, 男的 nán de the man, 男人 nán rén man. Opposite of 女 nǚ.",
     "example": {
       "trad": "他是我男朋友。",
       "pinyin": "Tā shì wǒ nánpéngyǒu.",
@@ -218,7 +218,7 @@
     "gloss": "to lose",
     "hint": "something precious, e.g. a chance",
     "pos": "verb",
-    "note": "Losing an object is 丟 diū or 不見; losing a game is 輸 shū.",
+    "note": "Losing an object is 丟 diū or 不見 bù jiàn; losing a game is 輸 shū.",
     "example": {
       "trad": "我不想失去這個機會。",
       "pinyin": "Wǒ bù xiǎng shīqù zhège jīhuì.",
@@ -231,7 +231,7 @@
     "pinyin": "bào gào",
     "gloss": "report; to report",
     "pos": "noun",
-    "note": "In Taiwan schools a 報告 is a report or presentation (做報告, 交報告).",
+    "note": "In Taiwan schools a 報告 bào gào is a report or presentation (做報告 zuò bào gào, 交報告 jiāo bào gào).",
     "example": {
       "trad": "我明天要交報告。",
       "pinyin": "Wǒ míngtiān yào jiāo bàogào.",
@@ -270,7 +270,7 @@
     "gloss": "outside; foreign",
     "hint": "short form, in compounds",
     "pos": "noun",
-    "note": "Alone, speech usually uses 外面 wài miàn. 外 appears in 國外 abroad, 門外 outside the door, 另外 besides, 以外 apart from.",
+    "note": "Alone, speech usually uses 外面 wài miàn. 外 wài appears in 國外 guó wài abroad, 門外 mén wài outside the door, 另外 lìng wài besides, 以外 yǐ wài apart from.",
     "example": {
       "trad": "他在國外工作。",
       "pinyin": "Tā zài guówài gōngzuò.",
@@ -283,7 +283,7 @@
     "pinyin": "duàn",
     "gloss": "(measure: period, section)",
     "pos": "measure",
-    "note": "Counts stretches of time (一段時間), parts of a story or text, and sections of road; Taiwan addresses use it (忠孝東路四段).",
+    "note": "Counts stretches of time (一段時間 yī duàn shí jiān), parts of a story or text, and sections of road; Taiwan addresses use it (忠孝東路四段 zhōng xiào dōng lù sì duàn).",
     "example": {
       "trad": "這段時間我很忙。",
       "pinyin": "Zhè duàn shíjiān wǒ hěn máng.",
@@ -308,7 +308,7 @@
     "pinyin": "guì",
     "gloss": "expensive",
     "pos": "adj",
-    "note": "Also polite 'your' in set phrases: 您貴姓？ 'may I ask your surname?'.",
+    "note": "Also polite 'your' in set phrases: 您貴姓 nín guì xìng? 'may I ask your surname?'.",
     "example": {
       "trad": "台北的房子好貴。",
       "pinyin": "Táiběi de fángzi hǎo guì.",
@@ -322,7 +322,7 @@
     "gloss": "no matter (what/who/how)",
     "hint": "casual",
     "pos": "conj",
-    "note": "Pattern 不管…都…: 不管你去不去，我都去 'whether or not you go, I'm going'. Alone it means 'not care about': 我不管了 'I don't care anymore'. More casual than 無論.",
+    "note": "Pattern 不管 bù guǎn…都 dōu…: 不管你去不去 bù guǎn nǐ qù bù qù, 我都去 wǒ dōu qù 'whether or not you go, I'm going'. Alone it means 'not care about': 我不管了 wǒ bù guǎn le 'I don't care anymore'. More casual than 無論 wú lùn.",
     "example": {
       "trad": "不管怎樣，我都會幫你。",
       "pinyin": "Bùguǎn zěnyàng, wǒ dōu huì bāng nǐ.",
@@ -335,7 +335,7 @@
     "pinyin": "lái zì",
     "gloss": "to come from",
     "pos": "verb",
-    "note": "A bit formal. In conversation people more often say 我是從日本來的 'I'm from Japan'.",
+    "note": "A bit formal. In conversation people more often say 我是從日本來的 wǒ shì cóng rì běn lái de 'I'm from Japan'.",
     "example": {
       "trad": "這位老師來自日本。",
       "pinyin": "Zhè wèi lǎoshī láizì Rìběn.",
@@ -348,7 +348,7 @@
     "pinyin": "gēn jù",
     "gloss": "according to; based on",
     "pos": "prep",
-    "note": "Also a noun 'basis, grounds': 你有什麼根據？ 'What's your basis for that?'",
+    "note": "Also a noun 'basis, grounds': 你有什麼根據 nǐ yǒu shén me gēn jù? 'What's your basis for that?'",
     "example": {
       "trad": "根據氣象預報，明天會下雨。",
       "pinyin": "Gēnjù qìxiàng yùbào, míngtiān huì xiàyǔ.",
@@ -375,7 +375,7 @@
     "gloss": "once; at one time; ever",
     "hint": "in the past",
     "pos": "adv",
-    "note": "Marks a past experience, often with 過: 我曾經去過. A little formal; in speech 過 alone is common. 曾 is read zēng in 曾祖父 'great-grandfather'.",
+    "note": "Marks a past experience, often with 過 guò: 我曾經去過 wǒ céng jīng qù guò. A little formal; in speech 過 guò alone is common. The character for céng is read zēng in 曾祖父 zēng zǔ fù 'great-grandfather'.",
     "example": {
       "trad": "我曾經在台北住過。",
       "pinyin": "Wǒ céngjīng zài Táiběi zhùguò.",
@@ -401,7 +401,7 @@
     "pinyin": "yuǎn",
     "gloss": "far",
     "pos": "adj",
-    "note": "離…很遠 'far from…'. The rare literary reading yuàn means 'to keep away from'.",
+    "note": "離 lí…很遠 hěn yuǎn 'far from…'. The rare literary reading yuàn means 'to keep away from'.",
     "example": {
       "trad": "你家離這裡遠不遠？",
       "pinyin": "Nǐ jiā lí zhèlǐ yuǎn bù yuǎn?",
@@ -415,7 +415,7 @@
     "gloss": "to go down; to keep going",
     "hint": "down and away; or continue",
     "pos": "verb",
-    "note": "After a verb it shows going down (跳下去 'jump down') or continuing (說下去 'keep talking'). MOE marks qu as neutral; Taiwanese often say full-tone xià qù, especially for 'go down'.",
+    "note": "After a verb it shows going down (跳下去 tiào xià qu 'jump down') or continuing (說下去 shuō xià qu 'keep talking'). MOE marks qu as neutral; Taiwanese often say full-tone xià qù, especially for 'go down'.",
     "example": {
       "trad": "這樣下去不行。",
       "pinyin": "Zhèyàng xiàqu bùxíng.",
@@ -442,7 +442,7 @@
     "gloss": "therefore; so",
     "hint": "formal 'therefore', not suǒ yǐ",
     "pos": "conj",
-    "note": "A more formal 所以 'so'; common in news and writing.",
+    "note": "A more formal 所以 suǒ yǐ 'so'; common in news and writing.",
     "example": {
       "trad": "他生病了，因此沒來上班。",
       "pinyin": "Tā shēngbìng le, yīncǐ méi lái shàngbān.",
@@ -468,7 +468,7 @@
     "gloss": "to make plans (to meet)",
     "hint": "arrange to meet someone",
     "pos": "verb",
-    "note": "約朋友 'make plans with a friend', 約好了 'it's arranged', 約會 'date'. In formal speech also 'approximately': 約十分鐘. CEDICT also lists a rare reading yāo 'to weigh', not used in Taiwan.",
+    "note": "約朋友 yuē péng yǒu 'make plans with a friend', 約好了 yuē hǎo le 'it's arranged', 約會 yuē huì 'date'. In formal speech also 'approximately': 約十分鐘 yuē shí fēn zhōng. CEDICT also lists a rare reading yāo 'to weigh', not used in Taiwan.",
     "example": {
       "trad": "我們約明天吃飯吧。",
       "pinyin": "Wǒmen yuē míngtiān chīfàn ba.",
@@ -482,7 +482,7 @@
     "gloss": "to save; to rescue",
     "hint": "from danger",
     "pos": "verb",
-    "note": "救命！ jiù mìng 'Help!' (literally 'save life').",
+    "note": "救命 jiù mìng! 'Help!' (literally 'save life').",
     "example": {
       "trad": "醫生救了他的命。",
       "pinyin": "Yīshēng jiù le tā de mìng.",
@@ -496,7 +496,7 @@
     "gloss": "sorry",
     "hint": "polite, a bit formal",
     "pos": "adj",
-    "note": "More formal than 對不起; common in shops, at work and in messages: 很抱歉讓你久等了 'sorry to keep you waiting'.",
+    "note": "More formal than 對不起 duì bu qǐ; common in shops, at work and in messages: 很抱歉讓你久等了 hěn bào qiàn ràng nǐ jiǔ děng le 'sorry to keep you waiting'.",
     "example": {
       "trad": "抱歉，我來晚了。",
       "pinyin": "Bàoqiàn, wǒ lái wǎn le.",
@@ -522,7 +522,7 @@
     "gloss": "easy; likely to",
     "hint": "not difficult",
     "pos": "adj",
-    "note": "Also 'prone to': 他很容易生病 'he gets sick easily'.",
+    "note": "Also 'prone to': 他很容易生病 tā hěn róng yì shēng bìng 'he gets sick easily'.",
     "example": {
       "trad": "學中文不容易。",
       "pinyin": "Xué Zhōngwén bù róngyì.",
@@ -550,7 +550,7 @@
     "gloss": "to sleep",
     "hint": "be asleep; 'sleep well'",
     "pos": "verb",
-    "note": "睡覺 is the full 'to sleep / go to bed'. 睡 alone combines with other words: 睡得好 'sleep well', 睡著 shuì zháo 'fall asleep', 睡午覺 'take a nap'.",
+    "note": "睡覺 shuì jiào is the full 'to sleep / go to bed'. 睡 shuì alone combines with other words: 睡得好 shuì de hǎo 'sleep well', 睡著 shuì zháo 'fall asleep', 睡午覺 shuì wǔ jiào 'take a nap'.",
     "example": {
       "trad": "你昨晚睡得好嗎？",
       "pinyin": "Nǐ zuówǎn shuì de hǎo ma?",
@@ -588,7 +588,7 @@
     "gloss": "to be in charge of; responsible",
     "hint": "be in charge",
     "pos": "verb",
-    "note": "負責 + task: 他負責這個案子 'he's in charge of this project'. The noun 'responsibility' is 責任.",
+    "note": "負責 fù zé + task: 他負責這個案子 tā fù zé zhè ge àn zi 'he's in charge of this project'. The noun 'responsibility' is 責任 zé rèn.",
     "example": {
       "trad": "這件事誰負責？",
       "pinyin": "Zhè jiàn shì shéi fùzé?",
@@ -602,7 +602,7 @@
     "gloss": "to understand",
     "hint": "one syllable; grasp what's said or read",
     "pos": "verb",
-    "note": "聽得懂 'understand (what you hear)', 看不懂 'can't understand (what you see or read)'. 我不懂 'I don't get it'.",
+    "note": "聽得懂 tīng de dǒng 'understand (what you hear)', 看不懂 kàn bu dǒng 'can't understand (what you see or read)'. 我不懂 wǒ bù dǒng 'I don't get it'.",
     "example": {
       "trad": "你懂我的意思嗎？",
       "pinyin": "Nǐ dǒng wǒ de yìsi ma?",
@@ -616,7 +616,7 @@
     "gloss": "few; little; less",
     "hint": "not many, not much",
     "pos": "adj",
-    "note": "Opposite of 多. Polyphone: shào means 'young', as in 少年 shào nián 'youth'.",
+    "note": "Opposite of 多 duō. Polyphone: shào means 'young', as in 少年 shào nián 'youth'.",
     "example": {
       "trad": "今天人很少。",
       "pinyin": "Jīntiān rén hěn shǎo.",
@@ -629,7 +629,7 @@
     "pinyin": "guān",
     "gloss": "to close; to turn off",
     "pos": "verb",
-    "note": "Opposite of 開: 關門 'close the door', 關燈 'turn off the light'. Also 'to lock up'.",
+    "note": "Opposite of 開 kāi: 關門 guān mén 'close the door', 關燈 guān dēng 'turn off the light'. Also 'to lock up'.",
     "example": {
       "trad": "出門記得關燈。",
       "pinyin": "Chūmén jìde guān dēng.",
@@ -643,7 +643,7 @@
     "gloss": "cooked rice; meal",
     "hint": "cooked, or a whole meal",
     "pos": "noun",
-    "note": "Cooked rice, or a meal in general: 午飯 'lunch', 晚飯 'dinner'. Breakfast is 早餐 zǎo cān in Taiwan. Uncooked rice is 米 mǐ.",
+    "note": "Cooked rice, or a meal in general: 午飯 wǔ fàn 'lunch', 晚飯 wǎn fàn 'dinner'. Breakfast is 早餐 zǎo cān in Taiwan. Uncooked rice is 米 mǐ.",
     "example": {
       "trad": "我要一碗白飯。",
       "pinyin": "Wǒ yào yī wǎn báifàn.",
@@ -657,7 +657,7 @@
     "gloss": "never (with 不/沒)",
     "hint": "never once, up to now",
     "pos": "adv",
-    "note": "Almost always with 不/沒: 我從來沒去過 'I've never been', 他從來不喝酒 'he never drinks'. The affirmative 'always, all along' sense exists but is bookish.",
+    "note": "Almost always with 不 bù/沒 méi: 我從來沒去過 wǒ cóng lái méi qù guò 'I've never been', 他從來不喝酒 tā cóng lái bù hē jiǔ 'he never drinks'. The affirmative 'always, all along' sense exists but is bookish.",
     "example": {
       "trad": "我從來沒看過雪。",
       "pinyin": "Wǒ cónglái méi kànguò xuě.",

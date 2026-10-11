@@ -6,7 +6,7 @@
     "gloss": "to make angry; anger; air",
     "hint": "make someone angry; one syllable",
     "pos": "verb",
-    "note": "氣死了 'so angry', 生氣 shēng qì 'to be angry'. Also means air or gas, as in 空氣 kōng qì 'air' and 天氣 tiān qì 'weather'.",
+    "note": "氣死了 qì sǐ le 'so angry', 生氣 shēng qì 'to be angry'. Also means air or gas, as in 空氣 kōng qì 'air' and 天氣 tiān qì 'weather'.",
     "example": {
       "trad": "他把我氣死了。",
       "pinyin": "Tā bǎ wǒ qìsǐ le.",
@@ -33,7 +33,7 @@
     "gloss": "to get hurt; injured",
     "hint": "get injured",
     "pos": "verb",
-    "note": "Physical injury, but also hurt feelings: 我很受傷 'I'm hurt'.",
+    "note": "Physical injury, but also hurt feelings: 我很受傷 wǒ hěn shòu shāng 'I'm hurt'.",
     "example": {
       "trad": "你有沒有受傷？",
       "pinyin": "Nǐ yǒu méiyǒu shòushāng?",
@@ -47,7 +47,7 @@
     "gloss": "rule; regulation; to stipulate",
     "hint": "an official rule",
     "pos": "noun",
-    "note": "Also a verb: 公司規定… 'company rules say…'.",
+    "note": "Also a verb: 公司規定 gōng sī guī dìng… 'company rules say…'.",
     "example": {
       "trad": "這是公司的規定。",
       "pinyin": "Zhè shì gōngsī de guīdìng.",
@@ -73,7 +73,7 @@
     "pinyin": "jiā yóu",
     "gloss": "go for it!; to refuel",
     "pos": "phrase",
-    "note": "Literally 'add fuel'. Shouted to encourage or cheer someone on. Also literal: 去加油 'go get gas'.",
+    "note": "Literally 'add fuel'. Shouted to encourage or cheer someone on. Also literal: 去加油 qù jiā yóu 'go get gas'.",
     "example": {
       "trad": "明天要考試，加油！",
       "pinyin": "Míngtiān yào kǎoshì, jiāyóu!",
@@ -86,7 +86,7 @@
     "pinyin": "fàn",
     "gloss": "to commit (a mistake, crime)",
     "pos": "verb",
-    "note": "Common pairs: 犯錯 'make a mistake', 犯法 'break the law', 犯人 'prisoner'.",
+    "note": "Common pairs: 犯錯 fàn cuò 'make a mistake', 犯法 fàn fǎ 'break the law', 犯人 fàn rén 'prisoner'.",
     "example": {
       "trad": "每個人都會犯錯。",
       "pinyin": "Měi ge rén dōu huì fàncuò.",
@@ -100,7 +100,7 @@
     "gloss": "to wear (hat, glasses, watch)",
     "hint": "accessories, not clothes",
     "pos": "verb",
-    "note": "Used for things on the head, face or hands: 戴眼鏡 'wear glasses', 戴口罩 'wear a mask'. Clothes and shoes take 穿 chuān. Sounds the same as 帶 dài 'to bring'.",
+    "note": "Used for things on the head, face or hands: 戴眼鏡 dài yǎn jìng 'wear glasses', 戴口罩 dài kǒu zhào 'wear a mask'. Clothes and shoes take 穿 chuān. Sounds the same as 帶 dài 'to bring'.",
     "example": {
       "trad": "外面很冷，戴帽子吧。",
       "pinyin": "Wàimiàn hěn lěng, dài màozi ba.",
@@ -139,7 +139,7 @@
     "pinyin": "piào",
     "gloss": "ticket; vote",
     "pos": "noun",
-    "note": "車票 'train/bus ticket', 電影票 'movie ticket', 投票 tóu piào 'to vote'. Counted with 張 zhāng. MOE's other reading piāo is literary and rare.",
+    "note": "車票 chē piào 'train/bus ticket', 電影票 diàn yǐng piào 'movie ticket', 投票 tóu piào 'to vote'. Counted with 張 zhāng. MOE's other reading piāo is literary and rare.",
     "example": {
       "trad": "我買了兩張票。",
       "pinyin": "Wǒ mǎi le liǎng zhāng piào.",
@@ -153,7 +153,7 @@
     "gloss": "purpose",
     "hint": "what you intend to achieve",
     "pos": "noun",
-    "note": "的 is read dì here (as in 目的地 'destination'), not the particle de.",
+    "note": "The second syllable is dì (as in 目的地 mù dì dì 'destination'), not the particle de.",
     "example": {
       "trad": "你來這裡的目的是什麼？",
       "pinyin": "Nǐ lái zhèlǐ de mùdì shì shénme?",
@@ -167,7 +167,7 @@
     "gloss": "second (of time)",
     "hint": "unit of time",
     "pos": "noun",
-    "note": "Often 秒鐘 miǎo zhōng. Slang 秒殺 'sold out in seconds'.",
+    "note": "Often 秒鐘 miǎo zhōng. Slang 秒殺 miǎo shā 'sold out in seconds'.",
     "example": {
       "trad": "再等我十秒。",
       "pinyin": "Zài děng wǒ shí miǎo.",
@@ -180,7 +180,7 @@
     "pinyin": "huái yí",
     "gloss": "to suspect; to doubt",
     "pos": "verb",
-    "note": "With a clause it usually means 'suspect that…' (我懷疑他在說謊); with a thing it can mean 'doubt' (懷疑自己 'doubt yourself').",
+    "note": "With a clause it usually means 'suspect that…' (我懷疑他在說謊 wǒ huái yí tā zài shuō huǎng); with a thing it can mean 'doubt' (懷疑自己 huái yí zì jǐ 'doubt yourself').",
     "example": {
       "trad": "我懷疑他在說謊。",
       "pinyin": "Wǒ huáiyí tā zài shuōhuǎng.",
@@ -193,7 +193,7 @@
     "pinyin": "dī",
     "gloss": "low",
     "pos": "adj",
-    "note": "For a short person, use 矮 ǎi, not 低. As a verb: 低頭 'lower one's head'.",
+    "note": "For a short person, use 矮 ǎi, not 低 dī. As a verb: 低頭 dī tóu 'lower one's head'.",
     "example": {
       "trad": "今天溫度很低。",
       "pinyin": "Jīntiān wēndù hěn dī.",
@@ -207,10 +207,10 @@
     "gloss": "once (something happens)",
     "hint": "if/once it ever happens",
     "pos": "conj",
-    "note": "Pattern 一旦…就… 'once X happens, then Y'. Spoken yí dàn (tone sandhi of 一).",
+    "note": "Pattern 一旦 yī dàn…就 jiù… 'once X happens, then Y'. Spoken yí dàn (tone sandhi of 一 yī).",
     "example": {
       "trad": "一旦開始，就停不下來。",
-      "pinyin": "Yīdàn kāishǐ, jiù tíngbùxiàlái.",
+      "pinyin": "Yīdàn kāishǐ, jiù tíngbuxiàlái.",
       "english": "Once you start, you can't stop."
     }
   },
@@ -233,7 +233,7 @@
     "gloss": "how (very)!; what a…",
     "hint": "in exclamations",
     "pos": "adv",
-    "note": "Emphatic 'how' in exclamations, a bit literary; casual speech uses 多 or 好: 好漂亮！ MOE gives duó me, but most Taiwanese say duō me.",
+    "note": "Emphatic 'how' in exclamations, a bit literary; casual speech uses 多 duō or 好 hǎo: 好漂亮 hǎo piào liang! MOE gives duó me, but most Taiwanese say duō me.",
     "example": {
       "trad": "你不知道我多麼想你。",
       "pinyin": "Nǐ bù zhīdào wǒ duōme xiǎng nǐ.",
@@ -274,7 +274,7 @@
     "gloss": "more and more",
     "hint": "increasingly, over time",
     "pos": "adv",
-    "note": "Goes before an adjective or verb: 越來越冷 'colder and colder'. Not in MOE as a word; each syllable keeps its full tone.",
+    "note": "Goes before an adjective or verb: 越來越冷 yuè lái yuè lěng 'colder and colder'. Not in MOE as a word; each syllable keeps its full tone.",
     "example": {
       "trad": "我越來越喜歡台灣了。",
       "pinyin": "Wǒ yuèláiyuè xǐhuān Táiwān le.",
@@ -314,7 +314,7 @@
     "gloss": "girl; young woman",
     "hint": "the casual everyday word",
     "pos": "noun",
-    "note": "In Taiwan the normal word for a girl or woman of any age up to middle age, not just a schoolgirl; its pair is 男生 nán shēng 'guy'. Mainland 姑娘 is rarely heard.",
+    "note": "In Taiwan the normal word for a girl or woman of any age up to middle age, not just a schoolgirl; its pair is 男生 nán shēng 'guy'. Mainland 姑娘 gū niang is rarely heard.",
     "example": {
       "trad": "那個女生是誰？",
       "pinyin": "Nàge nǚshēng shì shéi?",
@@ -354,7 +354,7 @@
     "gloss": "leg",
     "hint": "the whole leg, not the foot",
     "pos": "noun",
-    "note": "腳 jiǎo is 'foot', though Taiwanese often say 腳 for the leg too. Counted with 條 tiáo or 雙 shuāng.",
+    "note": "腳 jiǎo is 'foot', though Taiwanese often say 腳 jiǎo for the leg too. Counted with 條 tiáo or 雙 shuāng.",
     "example": {
       "trad": "跑完步，我的腿好痛。",
       "pinyin": "Pǎowán bù, wǒ de tuǐ hǎo tòng.",
@@ -367,7 +367,7 @@
     "pinyin": "dào chù",
     "gloss": "everywhere",
     "pos": "adv",
-    "note": "處 is chù 'place' here; in 處理 'to handle' it is chǔ.",
+    "note": "The second syllable is chù 'place'; in 處理 chǔ lǐ 'to handle' it is chǔ.",
     "example": {
       "trad": "我剛剛到處找你！",
       "pinyin": "Wǒ gānggāng dàochù zhǎo nǐ!",
@@ -394,7 +394,7 @@
     "pinyin": "zhèng shì",
     "gloss": "formal; official; officially",
     "pos": "adj",
-    "note": "Also used before a verb to mean 'officially': 正式開始 'officially start'.",
+    "note": "Also used before a verb to mean 'officially': 正式開始 zhèng shì kāi shǐ 'officially start'.",
     "example": {
       "trad": "我們還沒正式開始。",
       "pinyin": "Wǒmen hái méi zhèngshì kāishǐ.",
@@ -408,7 +408,7 @@
     "gloss": "enough; sufficient",
     "hint": "sufficient; a bit formal",
     "pos": "adj",
-    "note": "A slightly more formal 'enough'. In everyday speech plain 夠 gòu is more common: 錢不夠 'not enough money'.",
+    "note": "A slightly more formal 'enough'. In everyday speech plain 夠 gòu is more common: 錢不夠 qián bù gòu 'not enough money'.",
     "example": {
       "trad": "我們有足夠的時間。",
       "pinyin": "Wǒmen yǒu zúgòu de shíjiān.",
@@ -448,7 +448,7 @@
     "gloss": "to chase; to woo",
     "hint": "run after; court someone",
     "pos": "verb",
-    "note": "Also means going after someone romantically: 追女生 'to court a girl'. Also used for following a TV series: 追劇. The rare literary reading duī means 'to carve'.",
+    "note": "Also means going after someone romantically: 追女生 zhuī nǚ shēng 'to court a girl'. Also used for following a TV series: 追劇 zhuī jù. The rare literary reading duī means 'to carve'.",
     "example": {
       "trad": "他追了她兩年。",
       "pinyin": "Tā zhuī le tā liǎng nián.",
@@ -474,7 +474,7 @@
     "pinyin": "zuò",
     "gloss": "(measure: mountains, bridges)",
     "pos": "measure",
-    "note": "Counts large, fixed things: 一座山, 一座橋, 一座廟. Buildings are usually counted with 棟 dòng in Taiwan. 'Seat' is 座位 zuò wèi.",
+    "note": "Counts large, fixed things: 一座山 yī zuò shān, 一座橋 yī zuò qiáo, 一座廟 yī zuò miào. Buildings are usually counted with 棟 dòng in Taiwan. 'Seat' is 座位 zuò wèi.",
     "example": {
       "trad": "這座山很高。",
       "pinyin": "Zhè zuò shān hěn gāo.",
@@ -488,7 +488,7 @@
     "gloss": "about to; going to (soon)",
     "hint": "can follow a time word, like tomorrow",
     "pos": "adv",
-    "note": "Usually in the pattern 就要…了 'about to happen'. Unlike 快要, it can follow a time word: 明天就要走了 'leaving tomorrow already'. Can also mean 'just want': 我就要這個.",
+    "note": "Usually in the pattern 就要 jiù yào…了 le 'about to happen'. Unlike 快要 kuài yào, it can follow a time word: 明天就要走了 míng tiān jiù yào zǒu le 'leaving tomorrow already'. Can also mean 'just want': 我就要這個 wǒ jiù yào zhè ge.",
     "example": {
       "trad": "電影就要開始了。",
       "pinyin": "Diànyǐng jiùyào kāishǐ le.",
@@ -514,7 +514,7 @@
     "gloss": "whatever; as you like; careless",
     "hint": "anything's fine with me",
     "pos": "adj",
-    "note": "As a reply it means 'whatever, anything is fine'. Said of a person it means careless or sloppy: 他做事很隨便.",
+    "note": "As a reply it means 'whatever, anything is fine'. Said of a person it means careless or sloppy: 他做事很隨便 tā zuò shì hěn suí biàn.",
     "example": {
       "trad": "隨便，你決定。",
       "pinyin": "Suíbiàn, nǐ juédìng.",
@@ -528,7 +528,7 @@
     "gloss": "won't; can't; no problem",
     "hint": "not likely, or never learned",
     "pos": "phrase",
-    "note": "不 + 會: 'will not' (他不會來 'he won't come') or 'can't, never learned' (我不會游泳). In Taiwan it is also the usual reply to 謝謝: 'no problem'. 不 is spoken bú before huì.",
+    "note": "不 bù + 會 huì: 'will not' (他不會來 tā bù huì lái 'he won't come') or 'can't, never learned' (我不會游泳 wǒ bù huì yóu yǒng). In Taiwan it is also the usual reply to 謝謝 xiè xie: 'no problem'. 不 bù is spoken bú before huì.",
     "example": {
       "trad": "放心，他不會生氣的。",
       "pinyin": "Fàngxīn, tā bù huì shēngqì de.",
@@ -542,7 +542,7 @@
     "gloss": "movement; action",
     "hint": "a physical move",
     "pos": "noun",
-    "note": "A body movement or gesture. In Taiwan 動作快一點 is a common way to say 'hurry up'.",
+    "note": "A body movement or gesture. In Taiwan 動作快一點 dòng zuò kuài yī diǎn is a common way to say 'hurry up'.",
     "example": {
       "trad": "你動作快一點！",
       "pinyin": "Nǐ dòngzuò kuài yīdiǎn!",
@@ -581,7 +581,7 @@
     "gloss": "food",
     "hint": "general word",
     "pos": "noun",
-    "note": "A general, slightly formal word. In casual speech people often say 吃的 chī de or 東西.",
+    "note": "A general, slightly formal word. In casual speech people often say 吃的 chī de or 東西 dōng xi.",
     "example": {
       "trad": "不要浪費食物。",
       "pinyin": "Bùyào làngfèi shíwù.",
@@ -594,7 +594,7 @@
     "pinyin": "māo",
     "gloss": "cat",
     "pos": "noun",
-    "note": "Counted with 隻 zhī: 一隻貓.",
+    "note": "Counted with 隻 zhī: 一隻貓 yī zhī māo.",
     "example": {
       "trad": "我家有兩隻貓。",
       "pinyin": "Wǒ jiā yǒu liǎng zhī māo.",
@@ -608,7 +608,7 @@
     "gloss": "quite a lot; quite a few",
     "hint": "literally 'not few'",
     "pos": "adj",
-    "note": "An understated 'a lot', literally 'not few'. 不 keeps its 4th tone here because 少 is a 3rd tone.",
+    "note": "An understated 'a lot', literally 'not few'. 不 bù keeps its 4th tone here because 少 shǎo is a 3rd tone.",
     "example": {
       "trad": "今天人不少。",
       "pinyin": "Jīntiān rén bù shǎo.",
@@ -621,7 +621,7 @@
     "pinyin": "zāo gāo",
     "gloss": "oh no!; terrible",
     "pos": "interj",
-    "note": "Most often an exclamation when something goes wrong. It can also describe a situation: 很糟糕 'really bad'.",
+    "note": "Most often an exclamation when something goes wrong. It can also describe a situation: 很糟糕 hěn zāo gāo 'really bad'.",
     "example": {
       "trad": "糟糕，我忘了帶鑰匙！",
       "pinyin": "Zāogāo, wǒ wàng le dài yàoshi!",
@@ -635,7 +635,7 @@
     "gloss": "scary; horrifying",
     "hint": "horror-movie scary",
     "pos": "adj",
-    "note": "恐怖片 is a horror movie. Taiwanese also use it loosely for anything awful: 好恐怖 'that's horrible'. Close to 可怕.",
+    "note": "恐怖片 kǒng bù piàn is a horror movie. Taiwanese also use it loosely for anything awful: 好恐怖 hǎo kǒng bù 'that's horrible'. Close to 可怕 kě pà.",
     "example": {
       "trad": "我不敢看恐怖片。",
       "pinyin": "Wǒ bù gǎn kàn kǒngbùpiàn.",
@@ -649,7 +649,7 @@
     "gloss": "white; in vain",
     "hint": "one syllable; also 'for nothing'",
     "pos": "adj",
-    "note": "Before a verb it means 'for nothing': 白跑一趟 'a wasted trip'. The color is usually said 白色 bái sè. MOE also lists a literary reading bó.",
+    "note": "Before a verb it means 'for nothing': 白跑一趟 bái pǎo yī tàng 'a wasted trip'. The color is usually said 白色 bái sè. MOE also lists a literary reading bó.",
     "example": {
       "trad": "他的頭髮都白了。",
       "pinyin": "Tā de tóufǎ dōu bái le.",
@@ -663,7 +663,7 @@
     "gloss": "even more",
     "hint": "a bit formal, longer form",
     "pos": "adv",
-    "note": "A slightly more formal 更 gèng. In everyday speech plain 更 is more common.",
+    "note": "A slightly more formal 更 gèng. In everyday speech plain 更 gèng is more common.",
     "example": {
       "trad": "他變得更加努力了。",
       "pinyin": "Tā biàn de gèngjiā nǔlì le.",

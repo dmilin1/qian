@@ -5,7 +5,7 @@
     "pinyin": "men",
     "gloss": "(plural suffix for people)",
     "pos": "particle",
-    "note": "Added to pronouns and people nouns: 我們 (wǒ men) 'we', 你們 'you all', 朋友們 'friends'. Not used for things. MOE gives mén as the reading form, but in speech it is always the light men.",
+    "note": "Added to pronouns and people nouns: 我們 wǒ men 'we', 你們 nǐ men 'you all', 朋友們 péng yǒu men 'friends'. Not used for things. MOE gives mén as the reading form, but in speech it is always the light men.",
     "example": {
       "trad": "你們要去哪裡？",
       "pinyin": "Nǐmen yào qù nǎlǐ?",
@@ -19,7 +19,7 @@
     "gloss": "it's time to; should; (one's) turn",
     "hint": "'time to go'; 'your turn'",
     "pos": "aux",
-    "note": "Short, everyday form of 應該 'should'. Very common in 該走了 (gāi zǒu le) 'time to go' and 該你了 'your turn'.",
+    "note": "Short, everyday form of 應該 yīng gāi 'should'. Very common in 該走了 gāi zǒu le 'time to go' and 該你了 gāi nǐ le 'your turn'.",
     "example": {
       "trad": "我們該走了。",
       "pinyin": "Wǒmen gāi zǒu le.",
@@ -32,7 +32,7 @@
     "pinyin": "xiàng",
     "gloss": "to resemble; to be like",
     "pos": "verb",
-    "note": "Often in 像…一樣 'just like…'. 好像 (hǎo xiàng) means 'it seems'.",
+    "note": "Often in 像 xiàng…一樣 yī yàng 'just like…'. 好像 hǎo xiàng means 'it seems'.",
     "example": {
       "trad": "他長得很像他爸爸。",
       "pinyin": "Tā zhǎng de hěn xiàng tā bàba.",
@@ -46,7 +46,7 @@
     "gloss": "exactly; that's it; it's just that",
     "hint": "two syllables; 'exactly!'",
     "pos": "phrase",
-    "note": "就 adds emphasis to 是: 'is exactly'. Alone, 就是！ means 'Exactly!'. 就是說 'that is to say'; 就是…而已 'it's just…'.",
+    "note": "就 jiù adds emphasis to 是 shì: 'is exactly'. Alone, 就是 jiù shì! means 'Exactly!'. 就是說 jiù shì shuō 'that is to say'; 就是 jiù shì…而已 ér yǐ 'it's just…'.",
     "example": {
       "trad": "對，就是這個！",
       "pinyin": "Duì, jiùshì zhège!",
@@ -60,7 +60,7 @@
     "gloss": "so; this (much)",
     "hint": "this much, before an adjective",
     "pos": "adv",
-    "note": "Before an adjective it means 'so': 這麼貴 (zhè me guì) 'so expensive'. Before a verb, 'like this': 這麼做 'do it this way'. Compare 那麼 'that much / like that'.",
+    "note": "Before an adjective it means 'so': 這麼貴 zhè me guì 'so expensive'. Before a verb, 'like this': 這麼做 zhè me zuò 'do it this way'. Compare 那麼 nà me 'that much / like that'.",
     "example": {
       "trad": "今天怎麼這麼熱？",
       "pinyin": "Jīntiān zěnme zhème rè?",
@@ -74,7 +74,7 @@
     "gloss": "to like",
     "hint": "be fond of",
     "pos": "verb",
-    "note": "Taiwan says xǐ huān with a full first tone on 歡; mainland speech usually has a light xǐ huan. Followed by a noun or a verb: 喜歡吃辣 'like eating spicy food'.",
+    "note": "Taiwan says xǐ huān with a full first tone on 歡 huān; mainland speech usually has a light xǐ huan. Followed by a noun or a verb: 喜歡吃辣 xǐ huān chī là 'like eating spicy food'.",
     "example": {
       "trad": "你喜歡吃什麼？",
       "pinyin": "Nǐ xǐhuān chī shénme?",
@@ -88,7 +88,7 @@
     "gloss": "(not) at all; actually (not); and",
     "hint": "stresses 'actually not'",
     "pos": "adv",
-    "note": "Mostly placed before 不 or 沒 to stress 'actually not, contrary to what you think': 並不難 (bìng bù nán) 'not hard at all'. In formal speech it also means 'and also'.",
+    "note": "Mostly placed before 不 bù or 沒 méi to stress 'actually not, contrary to what you think': 並不難 bìng bù nán 'not hard at all'. In formal speech it also means 'and also'.",
     "example": {
       "trad": "我並沒有生氣。",
       "pinyin": "Wǒ bìng méiyǒu shēngqì.",
@@ -102,7 +102,7 @@
     "gloss": "only then; not until; only (so few)",
     "hint": "later or less than expected",
     "pos": "adv",
-    "note": "Means 'not until' (十點才來 'didn't come until ten'), 'just now' (我才到 'I just got here') or 'only' (才三個 'only three'). The opposite feel of 就, which means 'already, as early as'.",
+    "note": "Means 'not until' (十點才來 shí diǎn cái lái 'didn't come until ten'), 'just now' (我才到 wǒ cái dào 'I just got here') or 'only' (才三個 cái sān ge 'only three'). The opposite feel of 就 jiù, which means 'already, as early as'.",
     "example": {
       "trad": "他十點才起床。",
       "pinyin": "Tā shí diǎn cái qǐchuáng.",
@@ -116,7 +116,7 @@
     "gloss": "should; ought to; probably",
     "hint": "the usual 'should'; also 'probably'",
     "pos": "aux",
-    "note": "Also used to guess: 他應該到了 'he's probably arrived'. 該 (gāi) is the short form.",
+    "note": "Also used to guess: 他應該到了 tā yīng gāi dào le 'he's probably arrived'. 該 gāi is the short form.",
     "example": {
       "trad": "你應該早點睡。",
       "pinyin": "Nǐ yīnggāi zǎo diǎn shuì.",
@@ -129,7 +129,7 @@
     "pinyin": "gōng zuò",
     "gloss": "job; work; to work",
     "pos": "noun",
-    "note": "Both the noun 'job' (找工作 'look for a job') and the verb 'to work'. 上班 (shàng bān) is 'to go to work / be at work'.",
+    "note": "Both the noun 'job' (找工作 zhǎo gōng zuò 'look for a job') and the verb 'to work'. 上班 shàng bān is 'to go to work / be at work'.",
     "example": {
       "trad": "你在哪裡工作？",
       "pinyin": "Nǐ zài nǎlǐ gōngzuò?",
@@ -143,7 +143,7 @@
     "gloss": "small; little; young",
     "hint": "size or age",
     "pos": "adj",
-    "note": "For amounts use 少 (shǎo) 'few, little'. 小 before a surname is a friendly nickname: 小王 'Little Wang'.",
+    "note": "For amounts use 少 shǎo 'few, little'. 小 xiǎo before a surname is a friendly nickname: 小王 xiǎo wáng 'Little Wang'.",
     "example": {
       "trad": "我的房間很小。",
       "pinyin": "Wǒ de fángjiān hěn xiǎo.",
@@ -157,7 +157,7 @@
     "gloss": "time",
     "hint": "amount of time; free time",
     "pos": "noun",
-    "note": "Time as an amount or free time (有時間嗎 'do you have time?'). For 'when / the time that…', use 時候 (shí hòu).",
+    "note": "Time as an amount or free time (有時間嗎 yǒu shí jiān ma 'do you have time?'). For 'when / the time that…', use 時候 shí hòu.",
     "example": {
       "trad": "你明天有時間嗎？",
       "pinyin": "Nǐ míngtiān yǒu shíjiān ma?",
@@ -171,7 +171,7 @@
     "gloss": "that (much); so; well then",
     "hint": "that much, before an adjective",
     "pos": "adv",
-    "note": "Before an adjective it means 'that': 沒那麼難 'not that hard'. At the start of a sentence it means 'well then, in that case' (often shortened to 那 nà).",
+    "note": "Before an adjective it means 'that': 沒那麼難 méi nà me nán 'not that hard'. At the start of a sentence it means 'well then, in that case' (often shortened to 那 nà).",
     "example": {
       "trad": "沒有那麼難啦。",
       "pinyin": "Méiyǒu nàme nán la.",
@@ -185,7 +185,7 @@
     "gloss": "don't; other",
     "hint": "one syllable; telling someone not to",
     "pos": "adv",
-    "note": "別 + verb is a command, same as 不要: 別走 'don't go', 別擔心 'don't worry'. Also 'other' in 別人 'other people' and 別的 'something else'.",
+    "note": "別 bié + verb is a command, same as 不要 bù yào: 別走 bié zǒu 'don't go', 別擔心 bié dān xīn 'don't worry'. Also 'other' in 別人 bié rén 'other people' and 別的 bié de 'something else'.",
     "example": {
       "trad": "別擔心，沒事。",
       "pinyin": "Bié dānxīn, méishì.",
@@ -199,7 +199,7 @@
     "gloss": "excuse me; sorry; embarrassed",
     "hint": "polite, for small things",
     "pos": "phrase",
-    "note": "The everyday Taiwan 'excuse me / sorry' for small things: getting someone's attention, bumping into someone, asking a favor. It also means 'to feel embarrassed'. 對不起 is for real apologies.",
+    "note": "The everyday Taiwan 'excuse me / sorry' for small things: getting someone's attention, bumping into someone, asking a favor. It also means 'to feel embarrassed'. 對不起 duì bu qǐ is for real apologies.",
     "example": {
       "trad": "不好意思，請問廁所在哪裡？",
       "pinyin": "Bùhǎoyìsi, qǐngwèn cèsuǒ zài nǎlǐ?",
@@ -213,7 +213,7 @@
     "gloss": "so; therefore",
     "hint": "as a result; the everyday word",
     "pos": "conj",
-    "note": "Introduces a result, often paired with 因為: 因為…所以… 'because…, so…'. Also a conversational filler 'so…'.",
+    "note": "Introduces a result, often paired with 因為 yīn wèi: 因為 yīn wèi…所以 suǒ yǐ… 'because…, so…'. Also a conversational filler 'so…'.",
     "example": {
       "trad": "我很累，所以先睡了。",
       "pinyin": "Wǒ hěn lèi, suǒyǐ xiān shuì le.",
@@ -227,7 +227,7 @@
     "gloss": "day; sky",
     "hint": "counting days; also the sky",
     "pos": "noun",
-    "note": "Counts days with no measure word: 三天 (sān tiān) 'three days'. Also in 今天 'today', 天氣 'weather' and 天啊 'oh my god'.",
+    "note": "Counts days with no measure word: 三天 sān tiān 'three days'. Also in 今天 jīn tiān 'today', 天氣 tiān qì 'weather' and 天啊 tiān a 'oh my god'.",
     "example": {
       "trad": "我等了你一整天。",
       "pinyin": "Wǒ děng le nǐ yī zhěng tiān.",
@@ -241,7 +241,7 @@
     "gloss": "and also; there's still",
     "hint": "one more thing",
     "pos": "phrase",
-    "note": "Adds something ('also, and another thing') or says something remains: 還有時間 'there's still time'. 還 is hái here; it is huán in 還錢 'pay back money'.",
+    "note": "Adds something ('also, and another thing') or says something remains: 還有時間 hái yǒu shí jiān 'there's still time'. The first syllable is hái; the same character is huán in 還錢 huán qián 'pay back money'.",
     "example": {
       "trad": "還有別的問題嗎？",
       "pinyin": "Háiyǒu biéde wèntí ma?",
@@ -255,7 +255,7 @@
     "gloss": "to tell",
     "hint": "inform someone",
     "pos": "verb",
-    "note": "MOE gives the light gào su for 'to tell'; many Taiwanese say gào sù with a full fourth tone. Followed by the person: 告訴我 'tell me'. Compare 說 'to say'.",
+    "note": "MOE gives the light gào su for 'to tell'; many Taiwanese say gào sù with a full fourth tone. Followed by the person: 告訴我 gào su wǒ 'tell me'. Compare 說 shuō 'to say'.",
     "example": {
       "trad": "你可以告訴我嗎？",
       "pinyin": "Nǐ kěyǐ gàosu wǒ ma?",
@@ -268,7 +268,7 @@
     "pinyin": "ài",
     "gloss": "to love; to love to (do)",
     "pos": "verb",
-    "note": "Stronger than 喜歡 'to like'. Before a verb it means 'love to, tend to': 他很愛哭 'he cries a lot'.",
+    "note": "Stronger than 喜歡 xǐ huān 'to like'. Before a verb it means 'love to, tend to': 他很愛哭 tā hěn ài kū 'he cries a lot'.",
     "example": {
       "trad": "我很愛我的家人。",
       "pinyin": "Wǒ hěn ài wǒ de jiārén.",
@@ -282,7 +282,7 @@
     "gloss": "to be (a role); to work as; when",
     "hint": "take on a role or job",
     "pos": "verb",
-    "note": "當 + role means 'to be, work as': 當老師 'be a teacher'. 當…的時候 means 'when…'. Read dàng in 當作 (dàng zuò) 'treat as' and 上當 'get fooled'.",
+    "note": "當 dāng + role means 'to be, work as': 當老師 dāng lǎo shī 'be a teacher'. 當 dāng…的時候 de shí hòu means 'when…'. Read dàng in 當作 dàng zuò 'treat as' and 上當 shàng dàng 'get fooled'.",
     "example": {
       "trad": "我以後想當老師。",
       "pinyin": "Wǒ yǐhòu xiǎng dāng lǎoshī.",
@@ -296,7 +296,7 @@
     "gloss": "to get up; to rise; (after verb) up",
     "hint": "two syllables; also after verbs",
     "pos": "verb",
-    "note": "Alone: 'get up'. After a verb: upward (站起來 'stand up'), starting (笑起來 'start laughing'), or an impression (看起來 'looks', 聽起來 'sounds'). Taiwan keeps the full lái; after a verb it is often said lightly.",
+    "note": "Alone: 'get up'. After a verb: upward (站起來 zhàn qǐ lái 'stand up'), starting (笑起來 xiào qǐ lái 'start laughing'), or an impression (看起來 kàn qǐ lái 'looks', 聽起來 tīng qǐ lái 'sounds'). Taiwan keeps the full lái; after a verb it is often said lightly.",
     "example": {
       "trad": "快起來，要遲到了！",
       "pinyin": "Kuài qǐlái, yào chídào le!",
@@ -309,7 +309,7 @@
     "pinyin": "yuè",
     "gloss": "month; moon",
     "pos": "noun",
-    "note": "Month names are numbered: 一月 'January', 三月 'March'. For 'a month' as a length of time, add 個: 一個月 'one month'. The moon itself is usually 月亮.",
+    "note": "Month names are numbered: 一月 yī yuè 'January', 三月 sān yuè 'March'. For 'a month' as a length of time, add 個 gè: 一個月 yī ge yuè 'one month'. The moon itself is usually 月亮 yuè liàng.",
     "example": {
       "trad": "我這個月很忙。",
       "pinyin": "Wǒ zhège yuè hěn máng.",
@@ -322,7 +322,7 @@
     "pinyin": "sǐ",
     "gloss": "to die; dead; extremely",
     "pos": "verb",
-    "note": "After an adjective it means 'to death, extremely': 熱死了 'it's boiling', 累死了 'I'm exhausted'.",
+    "note": "After an adjective it means 'to death, extremely': 熱死了 rè sǐ le 'it's boiling', 累死了 lèi sǐ le 'I'm exhausted'.",
     "example": {
       "trad": "我的魚死了。",
       "pinyin": "Wǒ de yú sǐ le.",
@@ -336,7 +336,7 @@
     "gloss": "words; what someone says; speech",
     "hint": "spoken words",
     "pos": "noun",
-    "note": "說話 'to talk', 電話 'phone', 笑話 'joke'. At the end of a clause, 的話 means 'if': 下雨的話 'if it rains'.",
+    "note": "說話 shuō huà 'to talk', 電話 diàn huà 'phone', 笑話 xiào huà 'joke'. At the end of a clause, 的話 de huà means 'if': 下雨的話 xià yǔ de huà 'if it rains'.",
     "example": {
       "trad": "你說的話我聽不懂。",
       "pinyin": "Nǐ shuō de huà wǒ tīngbudǒng.",
@@ -350,7 +350,7 @@
     "gloss": "front; ago; before (a time)",
     "hint": "one syllable; after a time, as in 'three days ago'",
     "pos": "noun",
-    "note": "After a time it means 'ago': 三天前 'three days ago'. Also in 前面 'in front' and 以前 'before, in the past'.",
+    "note": "After a time it means 'ago': 三天前 sān tiān qián 'three days ago'. Also in 前面 qián miàn 'in front' and 以前 yǐ qián 'before, in the past'.",
     "example": {
       "trad": "他三天前就回來了。",
       "pinyin": "Tā sān tiān qián jiù huílai le.",
@@ -364,7 +364,7 @@
     "gloss": "to think; to believe",
     "hint": "a considered opinion; more formal than jué de",
     "pos": "verb",
-    "note": "For giving an opinion, a bit more serious than 覺得 (jué de). 為 is wéi here (as in 以為 'mistakenly think') but wèi in 為什麼 'why'.",
+    "note": "For giving an opinion, a bit more serious than 覺得 jué de. The second syllable is wéi (as in 以為 yǐ wéi 'mistakenly think'), not the wèi of 為什麼 wèi shén me 'why'.",
     "example": {
       "trad": "我認為這樣比較好。",
       "pinyin": "Wǒ rènwéi zhèyàng bǐjiào hǎo.",
@@ -378,7 +378,7 @@
     "gloss": "two; both",
     "hint": "two of something",
     "pos": "num",
-    "note": "Used before measure words: 兩個人 'two people', 兩天 'two days'. Use 二 (èr) when counting and in numbers (一、二、三; 十二). Also an old weight unit, the tael.",
+    "note": "Used before measure words: 兩個人 liǎng ge rén 'two people', 兩天 liǎng tiān 'two days'. Use 二 èr when counting and in numbers (yī, èr, sān; shí èr 'twelve'). Also an old weight unit, the tael.",
     "example": {
       "trad": "我要兩杯咖啡。",
       "pinyin": "Wǒ yào liǎng bēi kāfēi.",
@@ -392,7 +392,7 @@
     "gloss": "to look for; to find",
     "hint": "search",
     "pos": "verb",
-    "note": "找到 means 'to find (successfully)'. 找你 means 'to come see you'. At a shop, 找錢 means 'to give change'.",
+    "note": "找到 zhǎo dào means 'to find (successfully)'. 找你 zhǎo nǐ means 'to come see you'. At a shop, 找錢 zhǎo qián means 'to give change'.",
     "example": {
       "trad": "你在找什麼？",
       "pinyin": "Nǐ zài zhǎo shénme?",
@@ -420,7 +420,7 @@
     "gloss": "please; to invite; to treat (pay)",
     "hint": "polite request",
     "pos": "verb",
-    "note": "請坐 'please sit'. 請問 'excuse me, may I ask'. Also 'to treat': 我請你 'it's on me'. 請假 means 'to take time off'.",
+    "note": "請坐 qǐng zuò 'please sit'. 請問 qǐng wèn 'excuse me, may I ask'. Also 'to treat': 我請你 wǒ qǐng nǐ 'it's on me'. 請假 qǐng jià means 'to take time off'.",
     "example": {
       "trad": "請等一下。",
       "pinyin": "Qǐng děng yīxià.",
@@ -433,7 +433,7 @@
     "pinyin": "ō",
     "gloss": "oh (I see); (friendly sentence ending)",
     "pos": "interj",
-    "note": "As a reply it means 'oh, I see' (often ò or ó when surprised). At the end of a sentence it is light (o) and adds a friendly reminder tone: 小心喔 'be careful, OK?', 好喔 'OK!'. Very Taiwanese.",
+    "note": "As a reply it means 'oh, I see' (often ò or ó when surprised). At the end of a sentence it is light (o) and adds a friendly reminder tone: 小心喔 xiǎo xīn o 'be careful, OK?', 好喔 hǎo o 'OK!'. Very Taiwanese.",
     "example": {
       "trad": "喔，我懂了。",
       "pinyin": "Ō, wǒ dǒng le.",
@@ -447,7 +447,7 @@
     "gloss": "that; that one; um…",
     "hint": "that one; can stand alone",
     "pos": "pron",
-    "note": "Also the go-to filler while thinking: 那個… 'um…'. Often said nèi ge. MOE also lists nǎ ge, an old form of 哪個 'which one'.",
+    "note": "Also the go-to filler while thinking: 那個 nà ge… 'um…'. Often said nèi ge. MOE also lists nǎ ge, an old form of 哪個 nǎ ge 'which one'.",
     "example": {
       "trad": "我要那個，不要這個。",
       "pinyin": "Wǒ yào nàge, bùyào zhège.",
@@ -461,7 +461,7 @@
     "gloss": "it's okay; never mind",
     "hint": "reply to an apology",
     "pos": "phrase",
-    "note": "The usual reply to 對不起 or 不好意思. MOE gives a light last syllable here, though 關係 alone is guān xì; many Taiwanese say méi guān xì.",
+    "note": "The usual reply to 對不起 duì bu qǐ or 不好意思 bù hǎo yì si. MOE gives a light last syllable here (méi guān xi), though 關係 guān xì on its own has a full fourth tone; many Taiwanese say méi guān xì.",
     "example": {
       "trad": "沒關係，我等你。",
       "pinyin": "Méiguānxi, wǒ děng nǐ.",
@@ -475,7 +475,7 @@
     "gloss": "child; kid",
     "hint": "also one's own children",
     "pos": "noun",
-    "note": "In everyday Taiwan speech, 小孩 (xiǎo hái) is just as common.",
+    "note": "In everyday Taiwan speech, 小孩 xiǎo hái is just as common.",
     "example": {
       "trad": "你們有孩子嗎？",
       "pinyin": "Nǐmen yǒu háizi ma?",
@@ -488,7 +488,7 @@
     "pinyin": "dì",
     "gloss": "ground; floor; land",
     "pos": "noun",
-    "note": "地上 'on the ground/floor', 地方 'place'. As an adverb particle it is read de (慢慢地 'slowly') and sounds the same as 的.",
+    "note": "地上 dì shang 'on the ground/floor', 地方 dì fāng 'place'. As an adverb particle it is read de (慢慢地 màn màn de 'slowly') and sounds the same as 的 de.",
     "example": {
       "trad": "東西掉在地上了。",
       "pinyin": "Dōngxi diào zài dìshang le.",
@@ -502,7 +502,7 @@
     "gloss": "to do (colloquial)",
     "hint": "casual; mostly in 'what are you doing?' or 'why?'",
     "pos": "verb",
-    "note": "Safe everyday uses: 幹嘛 (gàn má) 'what are you doing / why', 能幹 'capable'. Caution: in Taiwan 幹！ on its own is a strong swear word (like 'f***').",
+    "note": "Safe everyday uses: 幹嘛 gàn má 'what are you doing / why', 能幹 néng gàn 'capable'. Caution: in Taiwan 幹 gàn! on its own is a strong swear word (like 'f***').",
     "example": {
       "trad": "你在幹嘛？",
       "pinyin": "Nǐ zài gànmá?",
@@ -527,7 +527,7 @@
     "pinyin": "yī qǐ",
     "gloss": "together",
     "pos": "adv",
-    "note": "Goes before the verb: 一起吃飯 'eat together'. 在一起 also means 'to be (a couple) together'.",
+    "note": "Goes before the verb: 一起吃飯 yī qǐ chī fàn 'eat together'. 在一起 zài yī qǐ also means 'to be (a couple) together'.",
     "example": {
       "trad": "我們一起去吧！",
       "pinyin": "Wǒmen yīqǐ qù ba!",
@@ -541,7 +541,7 @@
     "gloss": "all; every",
     "hint": "all of the (noun)",
     "pos": "adj",
-    "note": "Usually 所有的 + noun, with 都 before the verb: 所有的人都… 'everyone…'. Compare 都 'all' (adverb) and 全部 'the whole lot'.",
+    "note": "Usually 所有的 suǒ yǒu de + noun, with 都 dōu before the verb: 所有的人都 suǒ yǒu de rén dōu… 'everyone…'. Compare 都 dōu 'all' (adverb) and 全部 quán bù 'the whole lot'.",
     "example": {
       "trad": "所有的人都來了。",
       "pinyin": "Suǒyǒu de rén dōu lái le.",
@@ -555,7 +555,7 @@
     "gloss": "the same; alike",
     "hint": "everyday word, as in 'same as you'",
     "pos": "adj",
-    "note": "跟…一樣 'the same as…'; 不一樣 'different'. 像…一樣 'just like…'.",
+    "note": "跟 gēn…一樣 yī yàng 'the same as…'; 不一樣 bù yī yàng 'different'. 像 xiàng…一樣 yī yàng 'just like…'.",
     "example": {
       "trad": "我的想法跟你一樣。",
       "pinyin": "Wǒ de xiǎngfǎ gēn nǐ yīyàng.",
@@ -569,7 +569,7 @@
     "gloss": "time (occurrence)",
     "hint": "counting how many times",
     "pos": "measure",
-    "note": "Counts occurrences: 一次 'once', 兩次 'twice', 下次 'next time', 第一次 'the first time'.",
+    "note": "Counts occurrences: 一次 yī cì 'once', 兩次 liǎng cì 'twice', 下次 xià cì 'next time', 第一次 dì yī cì 'the first time'.",
     "example": {
       "trad": "我去過日本兩次。",
       "pinyin": "Wǒ qùguò Rìběn liǎng cì.",
@@ -582,7 +582,7 @@
     "pinyin": "qián",
     "gloss": "money",
     "pos": "noun",
-    "note": "多少錢？ 'How much?'. 有錢 'rich'. 找錢 'give change'.",
+    "note": "多少錢 duō shǎo qián? 'How much?'. 有錢 yǒu qián 'rich'. 找錢 zhǎo qián 'give change'.",
     "example": {
       "trad": "這個多少錢？",
       "pinyin": "Zhège duōshǎo qián?",
@@ -596,7 +596,7 @@
     "gloss": "to bring; to take along; to carry",
     "hint": "have with you",
     "pos": "verb",
-    "note": "帶你去 'take you there', 帶小孩 'look after kids'. As a noun: belt, band, area (這一帶 'around here'). The Taiwan-style 有帶 means 'did bring'.",
+    "note": "帶你去 dài nǐ qù 'take you there', 帶小孩 dài xiǎo hái 'look after kids'. As a noun: belt, band, area (這一帶 zhè yī dài 'around here'). The Taiwan-style 有帶 yǒu dài means 'did bring'.",
     "example": {
       "trad": "你有帶錢嗎？",
       "pinyin": "Nǐ yǒu dài qián ma?",
@@ -610,7 +610,7 @@
     "gloss": "to be called; to call; to tell (sb to)",
     "hint": "a name, or calling out",
     "pos": "verb",
-    "note": "你叫什麼名字？ 'What's your name?'. 叫他來 'tell him to come'. 叫車 'call a cab'. For a phone call, use 打電話.",
+    "note": "你叫什麼名字 nǐ jiào shén me míng zi? 'What's your name?'. 叫他來 jiào tā lái 'tell him to come'. 叫車 jiào chē 'call a cab'. For a phone call, use 打電話 dǎ diàn huà.",
     "example": {
       "trad": "你叫什麼名字？",
       "pinyin": "Nǐ jiào shénme míngzi?",
@@ -624,7 +624,7 @@
     "gloss": "place; part",
     "hint": "a location or spot",
     "pos": "noun",
-    "note": "Also 'part, aspect': 有些地方我不懂 'there are parts I don't get'. Taiwan and MOE use the full dì fāng for 'place / part'; MOE's light dì fang is only an old word for a village constable. Mainland speech usually says dì fang.",
+    "note": "Also 'part, aspect': 有些地方我不懂 yǒu xiē dì fāng wǒ bù dǒng 'there are parts I don't get'. Taiwan and MOE use the full dì fāng for 'place / part'; MOE's light dì fang is only an old word for a village constable. Mainland speech usually says dì fang.",
     "example": {
       "trad": "這個地方很漂亮。",
       "pinyin": "Zhège dìfāng hěn piàoliang.",
@@ -637,7 +637,7 @@
     "pinyin": "fā shēng",
     "gloss": "to happen",
     "pos": "verb",
-    "note": "The thing that happens comes after the verb: 發生什麼事？ 'what happened?'.",
+    "note": "The thing that happens comes after the verb: 發生什麼事 fā shēng shén me shì? 'what happened?'.",
     "example": {
       "trad": "發生什麼事了？",
       "pinyin": "Fāshēng shénme shì le?",
@@ -663,7 +663,7 @@
     "gloss": "to hit; to call (phone); to play",
     "hint": "very general verb",
     "pos": "verb",
-    "note": "A very general verb: 打電話 'make a call', 打球 'play ball', 打電動 'play video games' (Taiwan), 打工 'part-time job'. Read dá only for 'dozen' (一打).",
+    "note": "A very general verb: 打電話 dǎ diàn huà 'make a call', 打球 dǎ qiú 'play ball', 打電動 dǎ diàn dòng 'play video games' (Taiwan), 打工 dǎ gōng 'part-time job'. Read dá only for 'dozen' (一打 yī dá).",
     "example": {
       "trad": "我等一下打給你。",
       "pinyin": "Wǒ děng yīxià dǎ gěi nǐ.",

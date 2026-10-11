@@ -6,7 +6,7 @@
     "gloss": "clear; to know clearly",
     "hint": "clear, distinct",
     "pos": "adj",
-    "note": "Taiwan keeps the full third tone on 楚 (mainland qīng chu). 我不清楚 'I'm not sure'.",
+    "note": "Taiwan keeps the full third tone on 楚 chǔ (mainland qīng chu). 我不清楚 wǒ bù qīng chǔ 'I'm not sure'.",
     "example": {
       "trad": "你說清楚一點。",
       "pinyin": "Nǐ shuō qīngchǔ yīdiǎn.",
@@ -33,7 +33,7 @@
     "pinyin": "jiān",
     "gloss": "(measure word for rooms, shops)",
     "pos": "measure",
-    "note": "Counts rooms and buildings: 一間房間, 這間店. Also means 'between' (之間). Other reading jiàn, as in 間接 jiàn jiē 'indirect'.",
+    "note": "Counts rooms and buildings: 一間房間 yī jiān fáng jiān, 這間店 zhè jiān diàn. Also means 'between' (之間 zhī jiān). Other reading jiàn, as in 間接 jiàn jiē 'indirect'.",
     "example": {
       "trad": "這間餐廳很好吃。",
       "pinyin": "Zhè jiān cāntīng hěn hǎochī.",
@@ -61,7 +61,7 @@
     "gloss": "to perform (well/badly); performance",
     "hint": "how well someone does",
     "pos": "verb",
-    "note": "Means how someone does or behaves (表現很好 'did well'), not a stage show (表演 biǎo yǎn).",
+    "note": "Means how someone does or behaves (表現很好 biǎo xiàn hěn hǎo 'did well'), not a stage show (表演 biǎo yǎn).",
     "example": {
       "trad": "他今天表現得很好。",
       "pinyin": "Tā jīntiān biǎoxiàn de hěn hǎo.",
@@ -75,7 +75,7 @@
     "gloss": "whole; entire; all",
     "hint": "one syllable, before a noun (the whole family)",
     "pos": "adj",
-    "note": "Before nouns: 全家 quán jiā 'the whole family', 全世界 'the whole world'. As an adverb: 全都 quán dōu 'all of it'.",
+    "note": "Before nouns: 全家 quán jiā 'the whole family', 全世界 quán shì jiè 'the whole world'. As an adverb: 全都 quán dōu 'all of it'.",
     "example": {
       "trad": "全家人都來了。",
       "pinyin": "Quánjiā rén dōu lái le.",
@@ -102,7 +102,7 @@
     "gloss": "news; word (from someone)",
     "hint": "news one hears, not TV news",
     "pos": "noun",
-    "note": "Taiwan reads 息 as xí (mainland xiāo xi). 好消息 hǎo xiāo xí 'good news'.",
+    "note": "Taiwan reads the second syllable as xí (mainland xiāo xi). 好消息 hǎo xiāo xí 'good news'.",
     "example": {
       "trad": "我有一個好消息！",
       "pinyin": "Wǒ yǒu yī ge hǎo xiāoxí!",
@@ -115,7 +115,7 @@
     "pinyin": "nǚ ér",
     "gloss": "daughter",
     "pos": "noun",
-    "note": "兒 here is a full syllable ér, not erhua.",
+    "note": "The second syllable is a full ér, not an erhua -r.",
     "example": {
       "trad": "我女兒今年上小學。",
       "pinyin": "Wǒ nǚ'ér jīnnián shàng xiǎoxué.",
@@ -129,7 +129,7 @@
     "gloss": "husband",
     "hint": "casual, everyday",
     "pos": "noun",
-    "note": "The casual, affectionate word, also used to address him. 丈夫 is formal and 先生 is polite. With a light second syllable (lǎo gong) it is an old word for a eunuch.",
+    "note": "The casual, affectionate word, also used to address him. 丈夫 zhàng fū is formal and 先生 xiān shēng is polite. With a light second syllable (lǎo gong) it is an old word for a eunuch.",
     "example": {
       "trad": "我老公很會煮飯。",
       "pinyin": "Wǒ lǎogōng hěn huì zhǔfàn.",
@@ -209,7 +209,7 @@
     "gloss": "great; awesome",
     "hint": "praise, 'awesome!'",
     "pos": "adj",
-    "note": "As praise: 好棒！ hǎo bàng 'awesome!' Literally 'stick, club', as in 棒球 bàng qiú 'baseball'.",
+    "note": "As praise: 好棒 hǎo bàng! 'awesome!' Literally 'stick, club', as in 棒球 bàng qiú 'baseball'.",
     "example": {
       "trad": "你做得好棒！",
       "pinyin": "Nǐ zuò de hǎo bàng!",
@@ -222,7 +222,7 @@
     "pinyin": "diào chá",
     "gloss": "to investigate; investigation; survey",
     "pos": "verb",
-    "note": "調 here is diào; its other reading tiáo means 'to adjust', as in 調整 tiáo zhěng.",
+    "note": "The first syllable is diào; the same character read tiáo means 'to adjust', as in 調整 tiáo zhěng.",
     "example": {
       "trad": "警察正在調查這件事。",
       "pinyin": "Jǐngchá zhèngzài diàochá zhè jiàn shì.",
@@ -236,7 +236,7 @@
     "gloss": "action; to take action",
     "hint": "taking action, not a body movement",
     "pos": "noun",
-    "note": "行 here is xíng; it is háng in 銀行 yín háng (bank). In Taiwan 行動 also means mobile: 行動電源 xíng dòng diàn yuán (power bank).",
+    "note": "The first syllable is xíng; the same character is háng in 銀行 yín háng (bank). In Taiwan 行動 xíng dòng also means mobile: 行動電源 xíng dòng diàn yuán (power bank).",
     "example": {
       "trad": "我們馬上開始行動。",
       "pinyin": "Wǒmen mǎshàng kāishǐ xíngdòng.",
@@ -262,7 +262,7 @@
     "gloss": "whole; entire",
     "hint": "two syllables; the whole (day, person)",
     "pos": "adj",
-    "note": "MOE gives a neutral-tone 個 (zhěng ge); zhěng gè is also commonly heard. Also used as an adverb: 我整個傻眼 (I was totally stunned).",
+    "note": "MOE gives a neutral second syllable (zhěng ge); zhěng gè is also commonly heard. Also used as an adverb: 我整個傻眼 wǒ zhěng ge shǎ yǎn (I was totally stunned).",
     "example": {
       "trad": "我整個下午都在睡覺。",
       "pinyin": "Wǒ zhěngge xiàwǔ dōu zài shuìjiào.",
@@ -303,7 +303,7 @@
     "gloss": "to say; to speak; to tell",
     "hint": "Taiwan's casual 'say', not shuō",
     "pos": "verb",
-    "note": "Very common in Taiwan speech, often used where the mainland says 說: 講中文 (speak Chinese), 講電話 (talk on the phone).",
+    "note": "Very common in Taiwan speech, often used where the mainland says 說 shuō: 講中文 jiǎng zhōng wén (speak Chinese), 講電話 jiǎng diàn huà (talk on the phone).",
     "example": {
       "trad": "你講慢一點好不好？",
       "pinyin": "Nǐ jiǎng màn yīdiǎn hǎo bù hǎo?",
@@ -368,7 +368,7 @@
     "pinyin": "dà xué",
     "gloss": "university; college",
     "pos": "noun",
-    "note": "上大學 / 念大學 = to go to college. MOE also lists tài xué, meaning the ancient imperial academy (太學); not used in speech.",
+    "note": "上大學 shàng dà xué / 念大學 niàn dà xué = to go to college. MOE also lists tài xué, meaning the ancient imperial academy (太學 tài xué); not used in speech.",
     "example": {
       "trad": "她明年要上大學。",
       "pinyin": "Tā míngnián yào shàng dàxué.",
@@ -395,7 +395,7 @@
     "gloss": "to pull",
     "hint": "opposite of push",
     "pos": "verb",
-    "note": "Also 拉肚子 lā dù zi (to have diarrhea). Door signs in Taiwan say 推 (push) and 拉 (pull).",
+    "note": "Also 拉肚子 lā dù zi (to have diarrhea). Door signs in Taiwan say 推 tuī (push) and 拉 lā (pull).",
     "example": {
       "trad": "這個門要用拉的。",
       "pinyin": "Zhège mén yào yòng lā de.",
@@ -449,7 +449,7 @@
     "gloss": "hard-working; to try hard",
     "hint": "make an effort",
     "pos": "adj",
-    "note": "Also a verb: 我會努力 (I'll do my best). 加油 is the cheer for it.",
+    "note": "Also a verb: 我會努力 wǒ huì nǔ lì (I'll do my best). 加油 jiā yóu is the cheer for it.",
     "example": {
       "trad": "他工作很努力。",
       "pinyin": "Tā gōngzuò hěn nǔlì.",
@@ -463,7 +463,7 @@
     "gloss": "pretty; beautiful",
     "hint": "everyday compliment; also 'nicely done', not měi",
     "pos": "adj",
-    "note": "MOE gives a neutral-tone 亮 (piào liang); in Taiwan you will often hear piào liàng. Also means well done: 做得漂亮 (nicely done).",
+    "note": "MOE gives a neutral second syllable (piào liang); in Taiwan you will often hear piào liàng. Also means well done: 做得漂亮 zuò de piào liang (nicely done).",
     "example": {
       "trad": "你今天好漂亮！",
       "pinyin": "Nǐ jīntiān hǎo piàoliang!",
@@ -489,7 +489,7 @@
     "gloss": "to learn; to study",
     "hint": "everyday 'learn' (learn to drive)",
     "pos": "verb",
-    "note": "The everyday word for learning something: 學中文 (learn Chinese), 學開車 (learn to drive). For studying at school Taiwan often says 念書 niàn shū.",
+    "note": "The everyday word for learning something: 學中文 xué zhōng wén (learn Chinese), 學開車 xué kāi chē (learn to drive). For studying at school Taiwan often says 念書 niàn shū.",
     "example": {
       "trad": "我想學開車。",
       "pinyin": "Wǒ xiǎng xué kāichē.",
@@ -516,7 +516,7 @@
     "gloss": "only; sole",
     "hint": "the one and only",
     "pos": "adj",
-    "note": "Used before a noun with 的: 唯一的辦法 (the only way). Different from 只 zhǐ (only, as an adverb).",
+    "note": "Used before a noun with 的 de: 唯一的辦法 wéi yī de bàn fǎ (the only way). Different from 只 zhǐ (only, as an adverb).",
     "example": {
       "trad": "他是我唯一的朋友。",
       "pinyin": "Tā shì wǒ wéiyī de péngyǒu.",
@@ -530,7 +530,7 @@
     "gloss": "to grab; to catch; to scratch",
     "hint": "seize with the hand; arrest",
     "pos": "verb",
-    "note": "抓到 = caught; 抓癢 zhuā yǎng = scratch an itch. MOE also lists a literary reading zhāo, which is not used in speech.",
+    "note": "抓到 zhuā dào = caught; 抓癢 zhuā yǎng = scratch an itch. MOE also lists a literary reading zhāo, which is not used in speech.",
     "example": {
       "trad": "警察抓到小偷了。",
       "pinyin": "Jǐngchá zhuādào xiǎotōu le.",
@@ -557,7 +557,7 @@
     "gloss": "to talk; to speak",
     "hint": "talk (no object)",
     "pos": "verb",
-    "note": "Verb + object (說 + 話), so it takes no object: say 跟他說話 (talk to him), not 說話他.",
+    "note": "Verb + object (說 shuō + 話 huà), so it takes no object: say 跟他說話 gēn tā shuō huà (talk to him), not 說話他 shuō huà tā.",
     "example": {
       "trad": "你在跟誰說話？",
       "pinyin": "Nǐ zài gēn shéi shuōhuà?",
@@ -571,7 +571,7 @@
     "gloss": "to move",
     "hint": "change position",
     "pos": "verb",
-    "note": "Also after verbs to mean able to move something: 走不動 (too tired to walk), 拿不動 (too heavy to carry). Moving house is 搬家.",
+    "note": "Also after verbs to mean able to move something: 走不動 zǒu bu dòng (too tired to walk), 拿不動 ná bu dòng (too heavy to carry). Moving house is 搬家 bān jiā.",
     "example": {
       "trad": "你不要動，我幫你拍照。",
       "pinyin": "Nǐ bùyào dòng, wǒ bāng nǐ pāizhào.",
@@ -585,7 +585,7 @@
     "gloss": "to manage; to mind; to care about",
     "hint": "be in charge of; meddle",
     "pos": "verb",
-    "note": "別管我 (leave me alone); 不管 bù guǎn (no matter). As a noun it means tube or pipe: 水管 shuǐ guǎn.",
+    "note": "別管我 bié guǎn wǒ (leave me alone); 不管 bù guǎn (no matter). As a noun it means tube or pipe: 水管 shuǐ guǎn.",
     "example": {
       "trad": "我的事不用你管。",
       "pinyin": "Wǒ de shì bùyòng nǐ guǎn.",
@@ -599,7 +599,7 @@
     "gloss": "at the same time",
     "hint": "simultaneously",
     "pos": "adv",
-    "note": "Also links clauses: 同時 (meanwhile; also). Different from 一起 (together, in company).",
+    "note": "Also links clauses: 同時 tóng shí (meanwhile; also). Different from 一起 yī qǐ (together, in company).",
     "example": {
       "trad": "他們兩個同時笑了。",
       "pinyin": "Tāmen liǎng ge tóngshí xiào le.",
@@ -613,7 +613,7 @@
     "gloss": "indeed; truly",
     "hint": "confirming a fact; also 'reliable'",
     "pos": "adv",
-    "note": "Also an adjective: 確實的消息 (reliable news).",
+    "note": "Also an adjective: 確實的消息 què shí de xiāo xí (reliable news).",
     "example": {
       "trad": "他確實很努力。",
       "pinyin": "Tā quèshí hěn nǔlì.",
@@ -626,7 +626,7 @@
     "pinyin": "qiāng",
     "gloss": "gun",
     "pos": "noun",
-    "note": "Counted with 把 bǎ: 一把槍. MOE also lists a rare reading chēng (an old star name).",
+    "note": "Counted with 把 bǎ: 一把槍 yī bǎ qiāng. MOE also lists a rare reading chēng (an old star name).",
     "example": {
       "trad": "他手上拿著一把槍。",
       "pinyin": "Tā shǒu shàng názhe yī bǎ qiāng.",
@@ -667,7 +667,7 @@
     "gloss": "activity; event",
     "hint": "an organized event",
     "pos": "noun",
-    "note": "Also a verb: to move around, exercise (活動一下). In Taiwan shops say 有活動 for a sale or promotion.",
+    "note": "Also a verb: to move around, exercise (活動一下 huó dòng yī xià). In Taiwan shops say 有活動 yǒu huó dòng for a sale or promotion.",
     "example": {
       "trad": "這個週末有什麼活動？",
       "pinyin": "Zhège zhōumò yǒu shénme huódòng?",

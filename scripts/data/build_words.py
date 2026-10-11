@@ -21,6 +21,8 @@ What it does
     ma, ne, ba, de are separate words; dì-yī; yībǎi; capitals only at sentence starts and on proper nouns) and
     text style (single quotes, no period at the end of a hint). Lexical spacing decisions (which strings are
     one word) are audited and normalized by scripts/data/pinyin_spacing.py.
+    Notes: every run of characters must be followed by its pinyin, one syllable per character (repairs:
+    scripts/data/notes_pinyin.py), and a potential-complement 不 inside a joined example word must be neutral bu.
 Warnings (printed, non-fatal) flag things worth a human look: example syllables that pypinyin does not know
 for that character, headword readings that match neither MOE nor CEDICT.
 """
@@ -258,6 +260,10 @@ def orthography_errors(han: list[str], pinyin: str, toks: list[dict]) -> list[st
                     errs.append(f"了 le must be written as its own word: {text!r} ({w})")
                 elif ch in "的得地" and bases[j] == "de" and w not in DE_WORDS:
                     errs.append(f"{ch} de must be written as its own word: {text!r} ({w})")
+        # Potential-complement 不 inside a joined word (tīngbudǒng, zhǎobudào, tíngbuxiàlái) is neutral.
+        for j, ch in enumerate(w):
+            if ch == "不" and j > 0 and parse_syllable(t["syls"][j])[1] != 5:
+                errs.append(f"不 inside the word {text!r} ({w}) is a potential complement and must be neutral bu")
         if w == "們":
             errs.append("們 men must be joined to the word before it")
         # Joiners inside the word.
@@ -278,6 +284,78 @@ def orthography_errors(han: list[str], pinyin: str, toks: list[dict]) -> list[st
             errs.append(f"write 第 + numeral with a hyphen (dì-yī): {flat[k:k + 2]}")
         if flat[k] in NUMERALS and flat[k + 1] in BIG_NUMERALS and bnd[k] != "":
             errs.append(f"write a digit + {flat[k + 1]} as one word (yībǎi, sānwàn): {flat[k:k + 2]}")
+    return errs
+
+
+# ---------------------------------------------------------------------------------------------------------
+# Notes: every run of characters is followed by its pinyin (data/NOTES.md, "Notes pinyin"). The learner can't
+# read characters, so "say 我很累, not 我是累" must be "say 我很累 wǒ hěn lèi, not 我是累 wǒ shì lèi". The rule:
+# after the run comes one space and then one lowercase syllable per character, separated by single spaces,
+# each with a canonical tone mark (or none for neutral) and a known reading of its character (toneless:
+# pypinyin heteronyms, the readings the deck's own headwords and examples give that character, e.g. 垃圾 lè sè,
+# and NOTE_EXTRA_READINGS).
+# Tones are not checked against the dictionary, so a note may show a spoken form (不要 bú yào) on purpose.
+# Repairs are made with scripts/data/notes_pinyin.py.
+
+NOTE_HAN_RUN = re.compile(r"[㐀-䶿一-鿿豈-﫿]+")
+NOTE_SYL = re.compile(r"[^\W\d_]+")
+# (rank, run) pairs exempt from the rule. Keep this empty unless a run truly cannot carry pinyin, and say why.
+NOTE_PINYIN_EXCEPTIONS: dict[tuple[int, str], str] = {}
+# Taiwan (MOE) readings that pypinyin lacks and no headword or example supplies (toneless, ü as v).
+NOTE_EXTRA_READINGS: dict[str, set[str]] = {
+    "嗯": {"en"},  # MOE ˙ㄣ; pypinyin only has n / ng
+    "姊": {"jie"},  # MOE jiě (姊姊 = 姐姐 in Taiwan speech); pypinyin only has zǐ
+    "吃": {"ji"},  # MOE 口吃 kǒu jí 'to stutter'; pypinyin only has chī
+}
+_HEADWORD_READINGS: dict[str, set[str]] = {}
+
+
+def register_headword_readings(trad: str, bases: list[str]) -> None:
+    for ch, b in zip(trad, bases):
+        _HEADWORD_READINGS.setdefault(ch, set()).add(b)
+
+
+def char_readings(ch: str) -> set[str]:
+    from pypinyin import Style, pinyin as pp
+
+    known = set(_HEADWORD_READINGS.get(ch, ())) | NOTE_EXTRA_READINGS.get(ch, set())
+    for v in {ch, to_simp(ch)}:
+        for r in pp(v, style=Style.NORMAL, heteronym=True)[0]:
+            known.add(r.replace("ü", "v"))
+    return known
+
+
+def pinyin_after(note: str, m: re.Match) -> str | None:
+    """The pinyin right after the character run m in note ("我有去 wǒ yǒu qù" -> "wǒ yǒu qù"), or None if the run
+    is not followed by one valid, matching syllable per character."""
+    run = m.group(0)
+    pos = m.end()
+    syls: list[str] = []
+    for ch in run:
+        if note[pos:pos + 1] != " ":
+            return None
+        sm = NOTE_SYL.match(note, pos + 1)
+        if not sm:
+            return None
+        s = unicodedata.normalize("NFC", sm.group(0))
+        base, tone, marks = parse_syllable(s)
+        if s != s.lower() or marks > 1 or base not in SYLLABLES or mark(base, tone) != s:
+            return None
+        if base not in char_readings(ch):
+            return None
+        syls.append(s)
+        pos = sm.end()
+    return " ".join(syls)
+
+
+def note_pinyin_errors(rank: int, note: str) -> list[str]:
+    errs = []
+    for m in NOTE_HAN_RUN.finditer(note):
+        if (rank, m.group(0)) in NOTE_PINYIN_EXCEPTIONS:
+            continue
+        if pinyin_after(note, m) is None:
+            ctx = note[max(0, m.start() - 20):m.end() + 25]
+            errs.append(f"note: {m.group(0)} is not followed by its pinyin (one syllable per character): ...{ctx}...")
     return errs
 
 
@@ -546,6 +624,7 @@ def main() -> int:
         if not ok:
             continue
         reading = " ".join(f"{b}{t}" for b, t in zip(bases, tones))
+        register_headword_readings(trad, bases)
 
         # Soft check: headword reading against MOE / CEDICT.
         sel = selected.get(w["rank"])
@@ -583,6 +662,7 @@ def main() -> int:
         else:
             for e in orthography_errors(han, ex["pinyin"], ex_toks):
                 errors.append(f"{where}: example.pinyin {ex['pinyin']!r}: {e}")
+            register_headword_readings("".join(han), [parse_syllable(s)[0] for s in ex_syls])
             for s in ex_syls:
                 base, tone, _ = parse_syllable(s)
                 if mark(base, tone) != unicodedata.normalize("NFC", s.lower()):
@@ -659,6 +739,12 @@ def main() -> int:
         leak = joined in toks or any(toks[i:i + len(own)] == own for i in range(len(toks) - len(own) + 1))
         if leak:
             errors.append(f"rank {o['rank']} {o['trad']}: hint {hint!r} contains the word's own pinyin {o['pinyin']!r}")
+
+    # Notes: every character run carries its pinyin (after all headwords registered their readings).
+    for o in words:
+        if "note" in o:
+            for e in note_pinyin_errors(o["rank"], o["note"]):
+                errors.append(f"rank {o['rank']} {o['trad']}: {e}")
 
     # Ids
     lock: dict[str, str] = {}

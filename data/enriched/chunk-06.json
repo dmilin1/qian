@@ -6,7 +6,7 @@
     "gloss": "to play; to have fun",
     "hint": "have fun",
     "pos": "verb",
-    "note": "Also means going somewhere for fun: 去台灣玩. Taiwan says 玩, not mainland 玩兒; instruments use 彈 and ball sports 打. Other reading wàn appears in literary words like 古玩 'antiques'.",
+    "note": "Also means going somewhere for fun: 去台灣玩 qù tái wān wán. Taiwan says 玩 wán, not mainland wánr; instruments use 彈 tán and ball sports 打 dǎ. Other reading wàn appears in literary words like 古玩 gǔ wàn 'antiques'.",
     "example": {
       "trad": "週末我們去哪裡玩？",
       "pinyin": "Zhōumò wǒmen qù nǎlǐ wán?",
@@ -20,7 +20,7 @@
     "gloss": "after; afterwards",
     "hint": "after an event; not 'in the future'",
     "pos": "noun",
-    "note": "Goes after the event: 下班之後 'after work'. Close to 以後, which also means 'in the future'.",
+    "note": "Goes after the event: 下班之後 xià bān zhī hòu 'after work'. Close to 以後 yǐ hòu, which also means 'in the future'.",
     "example": {
       "trad": "下班之後你要做什麼？",
       "pinyin": "Xiàbān zhīhòu nǐ yào zuò shénme?",
@@ -34,7 +34,7 @@
     "gloss": "meaning; idea",
     "hint": "what is meant",
     "pos": "noun",
-    "note": "Common set phrases: 不好意思 'excuse me / sorry', 有意思 'interesting'. MOE gives a light second syllable; many Taiwanese say yì sī with a full first tone.",
+    "note": "Common set phrases: 不好意思 bù hǎo yì si 'excuse me / sorry', 有意思 yǒu yì si 'interesting'. MOE gives a light second syllable; many Taiwanese say yì sī with a full first tone.",
     "example": {
       "trad": "你是什麼意思？",
       "pinyin": "Nǐ shì shénme yìsi?",
@@ -48,7 +48,7 @@
     "gloss": "to eat; to have a meal",
     "hint": "have a meal",
     "pos": "verb",
-    "note": "Means eating a meal in general, not only rice. 吃飽了沒？ chī bǎo le méi 'have you eaten?' is a friendly Taiwan greeting. It splits around other words: 吃完飯 'after eating'.",
+    "note": "Means eating a meal in general, not only rice. 吃飽了沒 chī bǎo le méi? 'have you eaten?' is a friendly Taiwan greeting. It splits around other words: 吃完飯 chī wán fàn 'after eating'.",
     "example": {
       "trad": "我們一起去吃飯吧！",
       "pinyin": "Wǒmen yīqǐ qù chīfàn ba!",
@@ -62,7 +62,7 @@
     "gloss": "to know; to get to know",
     "hint": "a person",
     "pos": "verb",
-    "note": "To know or get acquainted with a person (or recognize a word or place). For knowing a fact, use 知道. Many Taiwanese say rèn shì with a full tone.",
+    "note": "To know or get acquainted with a person (or recognize a word or place). For knowing a fact, use 知道 zhī dào. Many Taiwanese say rèn shì with a full tone.",
     "example": {
       "trad": "很高興認識你。",
       "pinyin": "Hěn gāoxìng rènshi nǐ.",
@@ -75,7 +75,7 @@
     "pinyin": "jìn xíng",
     "gloss": "to carry out; to be underway",
     "pos": "verb",
-    "note": "Somewhat formal; used for ongoing processes: 會議正在進行 'the meeting is underway'.",
+    "note": "Somewhat formal; used for ongoing processes: 會議正在進行 huì yì zhèng zài jìn xíng 'the meeting is underway'.",
     "example": {
       "trad": "計畫進行得很順利。",
       "pinyin": "Jìhuà jìnxíng de hěn shùnlì.",
@@ -89,7 +89,7 @@
     "gloss": "woman",
     "hint": "adult; can sound blunt",
     "pos": "noun",
-    "note": "In Taiwan, 女生 is the everyday, polite word for women of any age; 女人 can sound blunt or emphasize womanhood.",
+    "note": "In Taiwan, 女生 nǚ shēng is the everyday, polite word for women of any age; 女人 nǚ rén can sound blunt or emphasize womanhood.",
     "example": {
       "trad": "她是個很厲害的女人。",
       "pinyin": "Tā shì ge hěn lìhài de nǚrén.",
@@ -115,7 +115,7 @@
     "gloss": "or",
     "hint": "everyday 'or' in statements",
     "pos": "conj",
-    "note": "Used in statements and suggestions; in an either-or question use 還是 instead (你要茶還是咖啡？). 或 is a shorter, more formal form.",
+    "note": "Used in statements and suggestions; in an either-or question use 還是 hái shì instead (你要茶還是咖啡 nǐ yào chá hái shì kā fēi?). 或 huò is a shorter, more formal form.",
     "example": {
       "trad": "你明天或者後天來都可以。",
       "pinyin": "Nǐ míngtiān huòzhě hòutiān lái dōu kěyǐ.",
@@ -129,7 +129,7 @@
     "gloss": "to do; to be up to; to mess up",
     "hint": "slangy, as in 'what are you up to?!'",
     "pos": "verb",
-    "note": "Casual all-purpose verb: 搞錯 gǎo cuò (get it wrong), 搞清楚 (figure out), 搞什麼 (what are you doing?!). Very common in Taiwan in set phrases (搞定 'sorted', 搞不好 'maybe'); 弄 is the gentler 'fiddle with / make'.",
+    "note": "Casual all-purpose verb: 搞錯 gǎo cuò (get it wrong), 搞清楚 gǎo qīng chǔ (figure out), 搞什麼 gǎo shén me (what are you doing?!). Very common in Taiwan in set phrases (搞定 gǎo dìng 'sorted', 搞不好 gǎo bu hǎo 'maybe'); 弄 nòng is the gentler 'fiddle with / make'.",
     "example": {
       "trad": "你到底在搞什麼？",
       "pinyin": "Nǐ dàodǐ zài gǎo shénme?",
@@ -143,7 +143,7 @@
     "gloss": "to get; to obtain",
     "hint": "gain or achieve",
     "pos": "verb",
-    "note": "For gaining something abstract or earned (a chance, an answer, help). For physically picking something up, 拿到 is more natural.",
+    "note": "For gaining something abstract or earned (a chance, an answer, help). For physically picking something up, 拿到 ná dào is more natural.",
     "example": {
       "trad": "他終於得到這個機會了。",
       "pinyin": "Tā zhōngyú dédào zhège jīhuì le.",
@@ -157,7 +157,7 @@
     "gloss": "to put; to place; to let go",
     "hint": "put somewhere",
     "pos": "verb",
-    "note": "Also 'to release / let go' (放手) and 'to have time off' (放假 fàng jià). MOE also lists a literary reading fǎng, not used in speech.",
+    "note": "Also 'to release / let go' (放手 fàng shǒu) and 'to have time off' (放假 fàng jià). MOE also lists a literary reading fǎng, not used in speech.",
     "example": {
       "trad": "東西放這裡就好。",
       "pinyin": "Dōngxi fàng zhèlǐ jiù hǎo.",
@@ -171,7 +171,7 @@
     "gloss": "about; regarding",
     "hint": "on the topic of",
     "pos": "prep",
-    "note": "Introduces a topic and goes before a noun phrase: 關於這件事… 'about this matter…'.",
+    "note": "Introduces a topic and goes before a noun phrase: 關於這件事 guān yú zhè jiàn shì… 'about this matter…'.",
     "example": {
       "trad": "我想問你關於工作的事。",
       "pinyin": "Wǒ xiǎng wèn nǐ guānyú gōngzuò de shì.",
@@ -184,7 +184,7 @@
     "pinyin": "zhàn",
     "gloss": "to stand; station",
     "pos": "verb",
-    "note": "Also a noun, 'station / stop': 車站 (station), 下一站 (next stop).",
+    "note": "Also a noun, 'station / stop': 車站 chē zhàn (station), 下一站 xià yī zhàn (next stop).",
     "example": {
       "trad": "不要站在門口。",
       "pinyin": "Bùyào zhàn zài ménkǒu.",
@@ -198,7 +198,7 @@
     "gloss": "definitely; undoubtedly",
     "hint": "confident claim, mainland-leaning",
     "pos": "adv",
-    "note": "Very common in mainland speech; Taiwanese more often say 一定 or 絕對, but 肯定 is understood. As a verb it means 'to affirm / recognize' (肯定他的努力).",
+    "note": "Very common in mainland speech; Taiwanese more often say 一定 yī dìng or 絕對 jué duì, but 肯定 kěn dìng is understood. As a verb it means 'to affirm / recognize' (肯定他的努力 kěn dìng tā de nǔ lì).",
     "example": {
       "trad": "他肯定不會來。",
       "pinyin": "Tā kěndìng bù huì lái.",
@@ -212,7 +212,7 @@
     "gloss": "how many; a few",
     "hint": "small numbers, needs a measure word",
     "pos": "num",
-    "note": "Asks about small numbers and needs a measure word: 幾個？ 幾點？ In statements it means 'a few': 幾天 (a few days). The jī reading is used in 幾乎 jī hū (almost).",
+    "note": "Asks about small numbers and needs a measure word: 幾個 jǐ ge? 幾點 jǐ diǎn? In statements it means 'a few': 幾天 jǐ tiān (a few days). The jī reading is used in 幾乎 jī hū (almost).",
     "example": {
       "trad": "你們家有幾個人？",
       "pinyin": "Nǐmen jiā yǒu jǐ ge rén?",
@@ -225,7 +225,7 @@
     "pinyin": "dì",
     "gloss": "(ordinal prefix: -th)",
     "pos": "other",
-    "note": "Goes before a number to make an ordinal: 第一 (first), 第二次 (the second time), 第三個 (the third one).",
+    "note": "Goes before a number to make an ordinal: 第一 dì yī (first), 第二次 dì èr cì (the second time), 第三個 dì sān ge (the third one).",
     "example": {
       "trad": "這是我第二次來台灣。",
       "pinyin": "Zhè shì wǒ dì-èr cì lái Táiwān.",
@@ -239,7 +239,7 @@
     "gloss": "to think (mistakenly)",
     "hint": "but it turned out wrong",
     "pos": "verb",
-    "note": "Used for a belief that turned out false: 我以為你走了 'I thought you'd left (but you hadn't)'. For a real opinion use 覺得 or 認為.",
+    "note": "Used for a belief that turned out false: 我以為你走了 wǒ yǐ wéi nǐ zǒu le 'I thought you'd left (but you hadn't)'. For a real opinion use 覺得 jué de or 認為 rèn wéi.",
     "example": {
       "trad": "我以為你今天不來。",
       "pinyin": "Wǒ yǐwéi nǐ jīntiān bù lái.",
@@ -253,7 +253,7 @@
     "gloss": "inside; within",
     "hint": "formal, e.g. within a time",
     "pos": "noun",
-    "note": "More formal than 裡 / 裡面; common in set phrases: 室內 (indoors), 國內 (domestic), 三天內 (within three days). MOE also lists an archaic reading nà.",
+    "note": "More formal than 裡 lǐ / 裡面 lǐ miàn; common in set phrases: 室內 shì nèi (indoors), 國內 guó nèi (domestic), 三天內 sān tiān nèi (within three days). MOE also lists an archaic reading nà.",
     "example": {
       "trad": "這個要在三天內做完。",
       "pinyin": "Zhège yào zài sān tiān nèi zuòwán.",
@@ -278,7 +278,7 @@
     "pinyin": "jiàn",
     "gloss": "(measure word: clothes, matters)",
     "pos": "measure",
-    "note": "Counts tops and coats (一件衣服, 一件外套), matters and events (一件事), and pieces of luggage. Pants and skirts use 條 instead.",
+    "note": "Counts tops and coats (一件衣服 yī jiàn yī fu, 一件外套 yī jiàn wài tào), matters and events (一件事 yī jiàn shì), and pieces of luggage. Pants and skirts use 條 tiáo instead.",
     "example": {
       "trad": "這件衣服很好看。",
       "pinyin": "Zhè jiàn yīfu hěn hǎokàn.",
@@ -291,7 +291,7 @@
     "pinyin": "yǒu rén",
     "gloss": "someone; somebody",
     "pos": "pron",
-    "note": "Literally 'there is a person'. In questions it means 'anyone': 有人在家嗎？ 'Is anyone home?'",
+    "note": "Literally 'there is a person'. In questions it means 'anyone': 有人在家嗎 yǒu rén zài jiā ma? 'Is anyone home?'",
     "example": {
       "trad": "剛剛有人找你。",
       "pinyin": "Gānggāng yǒu rén zhǎo nǐ.",
@@ -305,7 +305,7 @@
     "gloss": "forget it; never mind",
     "hint": "giving up on something; let it go",
     "pos": "phrase",
-    "note": "Said when dropping a plan or an argument: 算了，不用了 suàn le, bù yòng le 'forget it, no need'. 算 suàn alone means 'to calculate; to count as'.",
+    "note": "Said when dropping a plan or an argument: 算了 suàn le, 不用了 bù yòng le 'forget it, no need'. 算 suàn alone means 'to calculate; to count as'.",
     "example": {
       "trad": "算了，我們不要去了。",
       "pinyin": "Suànle, wǒmen bùyào qù le.",
@@ -330,7 +330,7 @@
     "pinyin": "gāo",
     "gloss": "tall; high",
     "pos": "adj",
-    "note": "Used for people's height (他很高), buildings, prices and levels (價錢很高).",
+    "note": "Used for people's height (他很高 tā hěn gāo), buildings, prices and levels (價錢很高 jià qian hěn gāo).",
     "example": {
       "trad": "他長得很高。",
       "pinyin": "Tā zhǎng de hěn gāo.",
@@ -343,7 +343,7 @@
     "pinyin": "běn",
     "gloss": "(measure word: books)",
     "pos": "measure",
-    "note": "Counts books, notebooks and magazines: 一本書. As a prefix it means 'this / one's own / original': 本來 (originally), 本人 (oneself).",
+    "note": "Counts books, notebooks and magazines: 一本書 yī běn shū. As a prefix it means 'this / one's own / original': 本來 běn lái (originally), 本人 běn rén (oneself).",
     "example": {
       "trad": "這本書你看完了嗎？",
       "pinyin": "Zhè běn shū nǐ kànwán le ma?",
@@ -356,7 +356,7 @@
     "pinyin": "xiǎo shí",
     "gloss": "hour",
     "pos": "noun",
-    "note": "For durations: 一個小時 (one hour). Clock time uses 點 (三點 'three o'clock'). Taiwanese also say 鐘頭 zhōng tóu.",
+    "note": "For durations: 一個小時 yī ge xiǎo shí (one hour). Clock time uses 點 diǎn (三點 sān diǎn 'three o'clock'). Taiwanese also say 鐘頭 zhōng tóu.",
     "example": {
       "trad": "我等了你一個小時。",
       "pinyin": "Wǒ děng le nǐ yī ge xiǎoshí.",
@@ -370,7 +370,7 @@
     "gloss": "always; eventually; after all",
     "hint": "one syllable; also 'sooner or later'",
     "pos": "adv",
-    "note": "Short for 總是 'always' (他總遲到), and also 'sooner or later / after all' (總會好的 'it'll get better eventually'). As a prefix it means 'total / chief': 總共, 總統.",
+    "note": "Short for 總是 zǒng shì 'always' (他總遲到 tā zǒng chí dào), and also 'sooner or later / after all' (總會好的 zǒng huì hǎo de 'it'll get better eventually'). As a prefix it means 'total / chief': 總共 zǒng gòng, 總統 zǒng tǒng.",
     "example": {
       "trad": "事情總會過去的。",
       "pinyin": "Shìqíng zǒng huì guòqù de.",
@@ -383,7 +383,7 @@
     "pinyin": "bù cuò",
     "gloss": "pretty good; not bad",
     "pos": "adj",
-    "note": "A real compliment, closer to 'pretty good' than a grudging 'not bad'. In writing it can also mean 'correct' (不錯，就是他); in speech say 對.",
+    "note": "A real compliment, closer to 'pretty good' than a grudging 'not bad'. In writing it can also mean 'correct' (不錯 bù cuò, 就是他 jiù shì tā); in speech say 對 duì.",
     "example": {
       "trad": "這家店的菜很不錯。",
       "pinyin": "Zhè jiā diàn de cài hěn bùcuò.",
@@ -397,7 +397,7 @@
     "gloss": "to give (as a gift); to deliver",
     "hint": "as a present",
     "pos": "verb",
-    "note": "Also 'to deliver' (送貨) and 'to take someone somewhere / see off': 我送你回家 'I'll take you home'.",
+    "note": "Also 'to deliver' (送貨 sòng huò) and 'to take someone somewhere / see off': 我送你回家 wǒ sòng nǐ huí jiā 'I'll take you home'.",
     "example": {
       "trad": "這是我送你的禮物。",
       "pinyin": "Zhè shì wǒ sòng nǐ de lǐwù.",
@@ -410,7 +410,7 @@
     "pinyin": "la",
     "gloss": "(particle: softens or emphasizes)",
     "pos": "particle",
-    "note": "A blend of 了 + 啊, very common in Taiwan to soften or push a point: 好啦 'okay, okay', 不要啦 'no, don't'. The first-tone lā appears in 啦啦隊 lā lā duì (cheerleaders) and in sound effects.",
+    "note": "A blend of 了 le + 啊 a, very common in Taiwan to soften or push a point: 好啦 hǎo la 'okay, okay', 不要啦 bù yào la 'no, don't'. The first-tone lā appears in 啦啦隊 lā lā duì (cheerleaders) and in sound effects.",
     "example": {
       "trad": "好啦，我知道啦！",
       "pinyin": "Hǎo la, wǒ zhīdào la!",
@@ -435,7 +435,7 @@
     "pinyin": "shǒu",
     "gloss": "hand",
     "pos": "noun",
-    "note": "In casual speech 手 can mean the whole arm. As a suffix it marks a skilled person: 歌手 (singer), 高手 (expert).",
+    "note": "In casual speech 手 shǒu can mean the whole arm. As a suffix it marks a skilled person: 歌手 gē shǒu (singer), 高手 gāo shǒu (expert).",
     "example": {
       "trad": "吃飯前要先洗手。",
       "pinyin": "Chīfàn qián yào xiān xǐshǒu.",
@@ -449,7 +449,7 @@
     "gloss": "like that; that way",
     "hint": "manner or kind",
     "pos": "pron",
-    "note": "Describes a manner or kind: 不要那樣做 'don't do it like that'; opposite of 這樣. MOE also lists nǎ yàng, an old spelling of 哪樣 'which way'.",
+    "note": "Describes a manner or kind: 不要那樣做 bù yào nà yàng zuò 'don't do it like that'; opposite of 這樣 zhè yàng. MOE also lists nǎ yàng, an old spelling of 哪樣 nǎ yàng 'which way'.",
     "example": {
       "trad": "你不要那樣說。",
       "pinyin": "Nǐ bùyào nàyàng shuō.",
@@ -463,7 +463,7 @@
     "gloss": "(place in a ranking; counter for people)",
     "hint": "rankings; formal people counter",
     "pos": "measure",
-    "note": "'Place / rank': 第一名 (first place). Also a formal measure word for people (三名學生); in conversation use 個 or the polite 位. As a noun it means 'name' or 'fame' (有名 'famous').",
+    "note": "'Place / rank': 第一名 dì yī míng (first place). Also a formal measure word for people (三名學生 sān míng xué shēng); in conversation use 個 gè or the polite 位 wèi. As a noun it means 'name' or 'fame' (有名 yǒu míng 'famous').",
     "example": {
       "trad": "他這次考了第一名。",
       "pinyin": "Tā zhè cì kǎo le dì-yī míng.",
@@ -477,7 +477,7 @@
     "gloss": "to understand; to know well",
     "hint": "know well, or look into",
     "pos": "verb",
-    "note": "Also written 了解. Means understanding someone or something thoroughly, or finding out about it: 我去瞭解一下 'I'll look into it'. Compare 明白 / 懂 (get it).",
+    "note": "Also written 了解 liǎo jiě. Means understanding someone or something thoroughly, or finding out about it: 我去瞭解一下 wǒ qù liǎo jiě yī xià 'I'll look into it'. Compare 明白 míng bai / 懂 dǒng (get it).",
     "example": {
       "trad": "你根本不瞭解我。",
       "pinyin": "Nǐ gēnběn bù liǎojiě wǒ.",
@@ -491,7 +491,7 @@
     "gloss": "people (in general)",
     "hint": "people at large, formal",
     "pos": "noun",
-    "note": "Fairly formal; in conversation Taiwanese usually just say 人 or 大家 (現在的人都很忙 'people these days are busy').",
+    "note": "Fairly formal; in conversation Taiwanese usually just say 人 rén or 大家 dà jiā (現在的人都很忙 xiàn zài de rén dōu hěn máng 'people these days are busy').",
     "example": {
       "trad": "人們常說，時間就是金錢。",
       "pinyin": "Rénmen cháng shuō, shíjiān jiù shì jīnqián.",
@@ -504,7 +504,7 @@
     "pinyin": "diàn yǐng",
     "gloss": "movie; film",
     "pos": "noun",
-    "note": "看電影 'to see a movie'; a movie theater is 電影院.",
+    "note": "看電影 kàn diàn yǐng 'to see a movie'; a movie theater is 電影院 diàn yǐng yuàn.",
     "example": {
       "trad": "週末要不要去看電影？",
       "pinyin": "Zhōumò yào bù yào qù kàn diànyǐng?",
@@ -517,7 +517,7 @@
     "pinyin": "tiáo",
     "gloss": "(measure word: long, thin things)",
     "pos": "measure",
-    "note": "Counts long, thin or flexible things: roads (路), rivers, fish (魚), pants (褲子), towels, and items of news or rules (一條新聞). For dogs Taiwan uses 隻.",
+    "note": "Counts long, thin or flexible things: roads (路 lù), rivers, fish (魚 yú), pants (褲子 kù zi), towels, and items of news or rules (一條新聞 yī tiáo xīn wén). For dogs Taiwan uses 隻 zhī.",
     "example": {
       "trad": "這條路很長。",
       "pinyin": "Zhè tiáo lù hěn cháng.",
@@ -531,7 +531,7 @@
     "gloss": "to pass (a test, a vote)",
     "hint": "get approved, not pass by a place",
     "pos": "verb",
-    "note": "Mainly 'to pass' a test, inspection or vote (考試通過了). For 'through / by means of', Taiwan says 透過 tòu guò (透過朋友認識的); 'by means of' 通過 sounds mainland.",
+    "note": "Mainly 'to pass' a test, inspection or vote (考試通過了 kǎo shì tōng guò le). For 'through / by means of', Taiwan says 透過 tòu guò (透過朋友認識的 tòu guò péng yǒu rèn shi de); 'by means of' 通過 tōng guò sounds mainland.",
     "example": {
       "trad": "他通過考試了。",
       "pinyin": "Tā tōngguò kǎoshì le.",
@@ -545,7 +545,7 @@
     "gloss": "every; each",
     "hint": "one syllable; before a measure or time word",
     "pos": "pron",
-    "note": "Needs a measure word or time word after it: 每個人, 每天, 每次. Usually paired with 都: 每天都… 'every day…'.",
+    "note": "Needs a measure word or time word after it: 每個人 měi ge rén, 每天 měi tiān, 每次 měi cì. Usually paired with 都 dōu: 每天都 měi tiān dōu… 'every day…'.",
     "example": {
       "trad": "我每天都喝咖啡。",
       "pinyin": "Wǒ měi tiān dōu hē kāfēi.",
@@ -559,7 +559,7 @@
     "gloss": "man; men",
     "hint": "adult male",
     "pos": "noun",
-    "note": "In Taiwan 男生 is the everyday word for a guy of almost any age; 男人 sounds more grown-up or emphatic. MOE's neutral-tone nán ren is a different, colloquial sense, 'husband'; for 'man' it is nán rén.",
+    "note": "In Taiwan 男生 nán shēng is the everyday word for a guy of almost any age; 男人 nán rén sounds more grown-up or emphatic. MOE's neutral-tone nán ren is a different, colloquial sense, 'husband'; for 'man' it is nán rén.",
     "example": {
       "trad": "男人也可以哭。",
       "pinyin": "Nánrén yě kěyǐ kū.",
@@ -587,7 +587,7 @@
     "gloss": "another; the other",
     "hint": "one syllable; before yī + measure word",
     "pos": "pron",
-    "note": "Usually followed by 一 + measure word: 另一個 'the other one', 另一種 'another kind'. 另外 is the standalone form ('besides').",
+    "note": "Usually followed by 一 yī + measure word: 另一個 lìng yī ge 'the other one', 另一種 lìng yī zhǒng 'another kind'. 另外 lìng wài is the standalone form ('besides').",
     "example": {
       "trad": "我們換另一家吧。",
       "pinyin": "Wǒmen huàn lìng yī jiā ba.",
@@ -614,7 +614,7 @@
     "gloss": "result; as it turned out",
     "hint": "how things turned out, often unexpectedly",
     "pos": "noun",
-    "note": "Mostly used at the start of a clause when telling a story, meaning 'and then it turned out…': 結果他沒來 'in the end he didn't come'. Also the noun 'result' (考試結果).",
+    "note": "Mostly used at the start of a clause when telling a story, meaning 'and then it turned out…': 結果他沒來 jié guǒ tā méi lái 'in the end he didn't come'. Also the noun 'result' (考試結果 kǎo shì jié guǒ).",
     "example": {
       "trad": "我等了很久，結果他沒來。",
       "pinyin": "Wǒ děng le hěn jiǔ, jiéguǒ tā méi lái.",
@@ -628,7 +628,7 @@
     "gloss": "how many; how much",
     "hint": "any amount, e.g. prices",
     "pos": "pron",
-    "note": "For any quantity, especially prices: 多少錢？ 'How much?'. Unlike 幾 it needs no measure word. Mainland speech often says duō shao; Taiwan keeps the third tone.",
+    "note": "For any quantity, especially prices: 多少錢 duō shǎo qián? 'How much?'. Unlike 幾 jǐ it needs no measure word. Mainland speech often says duō shao; Taiwan keeps the third tone.",
     "example": {
       "trad": "這個多少錢？",
       "pinyin": "Zhège duōshǎo qián?",
@@ -641,7 +641,7 @@
     "pinyin": "ma",
     "gloss": "(particle: 'obviously'; coaxing)",
     "pos": "particle",
-    "note": "Marks something as obvious, or coaxes and pleads: 本來就是嘛 'that's just how it is', 快點嘛 'come on, hurry up'. The má reading appears in 幹嘛 gàn má 'what for?'.",
+    "note": "Marks something as obvious, or coaxes and pleads: 本來就是嘛 běn lái jiù shì ma 'that's just how it is', 快點嘛 kuài diǎn ma 'come on, hurry up'. The má reading appears in 幹嘛 gàn má 'what for?'.",
     "example": {
       "trad": "你不要這樣嘛！",
       "pinyin": "Nǐ bùyào zhèyàng ma!",
@@ -667,7 +667,7 @@
     "gloss": "to take part in; to attend",
     "hint": "an event",
     "pos": "verb",
-    "note": "For events and activities (a party, a wedding, a contest). Joining a group or team is usually 加入.",
+    "note": "For events and activities (a party, a wedding, a contest). Joining a group or team is usually 加入 jiā rù.",
     "example": {
       "trad": "我下個月要參加比賽。",
       "pinyin": "Wǒ xià ge yuè yào cānjiā bǐsài.",

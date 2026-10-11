@@ -663,3 +663,14 @@ describe('card menu focus', () => {
     expect(btn).toHaveFocus()
   })
 })
+
+describe('progress line', () => {
+  it('calls the working set "in progress" (not "learning", which the Words page uses for learning steps)', async () => {
+    await setup()
+    await screen.findByRole('article', { name: 'Listen card' })
+    const line = screen.getByLabelText('Progress')
+    expect(line).toHaveTextContent(/\d+ due\s*·\s*\d+\/\d+ in progress\s*·\s*\d+(\/\d+)? words/)
+    expect(line).not.toHaveTextContent(/learning/)
+    expect(within(line).getByTitle(/working set/)).toHaveTextContent(/in progress/)
+  })
+})

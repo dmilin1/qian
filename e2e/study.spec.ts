@@ -10,6 +10,7 @@ import {
   revealAndGrade,
   review,
   sayCard,
+  seededHistory,
   startStudying,
   test,
   WORDS,
@@ -161,6 +162,36 @@ test.describe('study session', () => {
     await page.getByRole('button', { name: /Start studying/ }).click()
     // The first two words are in learning (due in minutes), so the next new word is up.
     await expect(listenCard(page)).toContainText(third.trad)
+  })
+
+  test('the header progress line says "in progress" and stays on one line on a narrow phone', async ({ page }) => {
+    await importBackup(page, backupJson(seededHistory(30)))
+    await startStudying(page)
+    const line = page.getByLabel('Progress')
+    // "in progress" = the working set; "learning" is kept for short learning steps (Words page filter).
+    await expect(line).toContainText(/\d+\/\d+ in progress/)
+    await expect(line).not.toContainText('learning')
+    await expect(line.getByTitle(/working set/)).toContainText('in progress')
+
+    for (const width of [375, 390]) {
+      await page.setViewportSize({ width, height: 800 })
+      if (!(await anyCard(page).isVisible())) {
+        await page.getByRole('button', { name: /Start studying/ }).click()
+        await expect(anyCard(page)).toBeVisible()
+      }
+      // Real numbers, then the widest the line can get: 3-digit due count, cap at its maximum, every word introduced.
+      for (const widest of [false, true]) {
+        const layout = await line.evaluate((p, widest) => {
+          const values = [...p.querySelectorAll(':scope > [title] > span:first-child')]
+          if (widest) ['999', '40/40', '1000'].forEach((v, i) => (values[i].firstChild!.textContent = v))
+          const tops = new Set([...p.children].map((el) => Math.round(el.getBoundingClientRect().top)))
+          return { lines: tops.size, overflow: document.documentElement.scrollWidth > window.innerWidth }
+        }, widest)
+        expect(layout, `width ${width}${widest ? ' (widest numbers)' : ''}`).toEqual({ lines: 1, overflow: false })
+      }
+      await page.reload() // drop the edited numbers (back on the start screen)
+      await expect(page.getByRole('button', { name: /Start studying/ })).toBeVisible()
+    }
   })
 })
 

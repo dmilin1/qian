@@ -20,7 +20,7 @@
     "gloss": "to receive; to get",
     "hint": "mail, a message or a gift",
     "pos": "verb",
-    "note": "In messages, 收到 alone means 'got it / received'.",
+    "note": "In messages, 收到 shōu dào alone means 'got it / received'.",
     "example": {
       "trad": "你收到我的訊息了嗎？",
       "pinyin": "Nǐ shōudào wǒ de xùnxí le ma?",
@@ -34,7 +34,7 @@
     "gloss": "to dislike; to hate; annoying",
     "hint": "dislike, milder than real hatred",
     "pos": "verb",
-    "note": "Also used playfully: 你好討厭喔！ 'You're so annoying!' (teasing).",
+    "note": "Also used playfully: 你好討厭喔 nǐ hǎo tǎo yàn o! 'You're so annoying!' (teasing).",
     "example": {
       "trad": "我討厭下雨天。",
       "pinyin": "Wǒ tǎoyàn xiàyǔtiān.",
@@ -74,7 +74,7 @@
     "gloss": "interesting; amusing",
     "hint": "interesting or amusing, not 'fun to do'",
     "pos": "adj",
-    "note": "Common in everyday Taiwan speech (好有趣). For activities that are fun, Taiwanese usually say 好玩 hǎo wán; 有意思 yǒu yì si sounds more mainland.",
+    "note": "Common in everyday Taiwan speech (好有趣 hǎo yǒu qù). For activities that are fun, Taiwanese usually say 好玩 hǎo wán; 有意思 yǒu yì si sounds more mainland.",
     "example": {
       "trad": "這本書很有趣。",
       "pinyin": "Zhè běn shū hěn yǒuqù.",
@@ -88,7 +88,7 @@
     "gloss": "to be afraid of; to fear",
     "hint": "short everyday word, takes an object",
     "pos": "verb",
-    "note": "Also 'to worry that': 我怕來不及 'I'm afraid we won't make it'. Compare 害怕 hài pà 'scared'.",
+    "note": "Also 'to worry that': 我怕來不及 wǒ pà lái bu jí 'I'm afraid we won't make it'. Compare 害怕 hài pà 'scared'.",
     "example": {
       "trad": "我很怕狗。",
       "pinyin": "Wǒ hěn pà gǒu.",
@@ -116,7 +116,7 @@
     "gloss": "to pass by; to go through",
     "hint": "go past a place",
     "pos": "verb",
-    "note": "As a noun it means 'what happened, the course of events': 事情的經過.",
+    "note": "As a noun it means 'what happened, the course of events': 事情的經過 shì qíng de jīng guò.",
     "example": {
       "trad": "我每天都經過這家店。",
       "pinyin": "Wǒ měi tiān dōu jīngguò zhè jiā diàn.",
@@ -130,7 +130,7 @@
     "gloss": "good-looking; nice; good (to watch or read)",
     "hint": "looks good; also a good show or book",
     "pos": "adj",
-    "note": "For people and things: 你穿這樣很好看 'you look good in that'. For movies and books: 這部電影很好看 zhè bù diàn yǐng hěn hǎo kàn 'this movie is good'. The opposite is 難看 nán kàn 'ugly'.",
+    "note": "For people and things: 你穿這樣很好看 nǐ chuān zhè yàng hěn hǎo kàn 'you look good in that'. For movies and books: 這部電影很好看 zhè bù diàn yǐng hěn hǎo kàn 'this movie is good'. The opposite is 難看 nán kàn 'ugly'.",
     "example": {
       "trad": "你穿這樣很好看。",
       "pinyin": "Nǐ chuān zhèyàng hěn hǎokàn.",
@@ -169,7 +169,7 @@
     "pinyin": "jī hū",
     "gloss": "almost; nearly",
     "pos": "adv",
-    "note": "MOE reads 幾 as jī here; in 'how many' it is jǐ. Some speakers say jǐ hū.",
+    "note": "MOE reads the first syllable as jī; in 'how many' it is jǐ. Some speakers say jǐ hū.",
     "example": {
       "trad": "我幾乎每天都喝咖啡。",
       "pinyin": "Wǒ jīhū měi tiān dōu hē kāfēi.",
@@ -183,7 +183,7 @@
     "gloss": "probably; about; roughly",
     "hint": "probably, or a rough number",
     "pos": "adv",
-    "note": "With numbers it means 'about': 大概十分鐘 'about ten minutes'. As a noun, 'the general idea'.",
+    "note": "With numbers it means 'about': 大概十分鐘 dà gài shí fēn zhōng 'about ten minutes'. As a noun, 'the general idea'.",
     "example": {
       "trad": "他大概不會來了。",
       "pinyin": "Tā dàgài bù huì lái le.",
@@ -222,7 +222,7 @@
     "gloss": "consciousness; awareness",
     "hint": "being aware; to realize (+ dào)",
     "pos": "noun",
-    "note": "Taiwan (MOE) reads 識 as shì here; the mainland says yì shí. 意識到 yì shì dào means 'to realize'.",
+    "note": "Taiwan (MOE) reads the second syllable as shì; the mainland says yì shí. 意識到 yì shì dào means 'to realize'.",
     "example": {
       "trad": "他突然意識到自己錯了。",
       "pinyin": "Tā túrán yìshì dào zìjǐ cuò le.",
@@ -261,7 +261,7 @@
     "gloss": "fun",
     "hint": "enjoyable to do or visit",
     "pos": "adj",
-    "note": "好玩嗎？ hǎo wán ma 'was it fun?'. 有趣 yǒu qù is 'interesting'. MOE also lists hào wán 'fond of play', which is rare.",
+    "note": "好玩嗎 hǎo wán ma? 'was it fun?'. 有趣 yǒu qù is 'interesting'. MOE also lists hào wán 'fond of play', which is rare.",
     "example": {
       "trad": "台北好玩嗎？",
       "pinyin": "Táiběi hǎowán ma?",
@@ -289,7 +289,7 @@
     "gloss": "interest; hobby",
     "hint": "something you like doing",
     "pos": "noun",
-    "note": "興 is xìng here (mood, interest). The other reading xīng means 'to rise, prosper', as in 興奮 xīng fèn 'excited'.",
+    "note": "The first syllable is xìng (mood, interest). The other reading xīng means 'to rise, prosper', as in 興奮 xīng fèn 'excited'.",
     "example": {
       "trad": "我對音樂很有興趣。",
       "pinyin": "Wǒ duì yīnyuè hěn yǒu xìngqù.",
@@ -393,7 +393,7 @@
     "gloss": "in front; ahead",
     "hint": "location, the front side; up ahead",
     "pos": "noun",
-    "note": "'In front (of)' and 'up ahead': 在前面 zài qián miàn. The opposite is 後面 hòu miàn 'behind'. Taiwan (MOE) keeps the full tone on 面.",
+    "note": "'In front (of)' and 'up ahead': 在前面 zài qián miàn. The opposite is 後面 hòu miàn 'behind'. Taiwan (MOE) keeps the full tone on 面 miàn.",
     "example": {
       "trad": "便利商店就在前面。",
       "pinyin": "Biànlì shāngdiàn jiù zài qiánmiàn.",
@@ -420,7 +420,7 @@
     "gloss": "indeed; really",
     "hint": "agreeing: 'it's true that…'; not què shí",
     "pos": "adv",
-    "note": "的 is dí here, not the particle de; in 目的 mù dì 'purpose' it is dì.",
+    "note": "The first syllable is dí, not the particle de; in 目的 mù dì 'purpose' it is dì.",
     "example": {
       "trad": "這家店的確很好吃。",
       "pinyin": "Zhè jiā diàn díquè hěn hǎochī.",
@@ -433,7 +433,7 @@
     "pinyin": "nà zhǒng",
     "gloss": "that kind (of)",
     "pos": "pron",
-    "note": "種 zhǒng means 'kind, type'; as 'to plant' it is zhòng. Casually 那 is often said nèi: nèi zhǒng.",
+    "note": "種 zhǒng means 'kind, type'; as 'to plant' it is zhòng. Casually 那 nà is often said nèi: nèi zhǒng.",
     "example": {
       "trad": "我不喜歡那種人。",
       "pinyin": "Wǒ bù xǐhuān nà zhǒng rén.",
@@ -447,7 +447,7 @@
     "gloss": "really; truly; honest",
     "hint": "stressing 'it's just too much'",
     "pos": "adv",
-    "note": "MOE also lists shí zai with a light tone. As an adjective it means honest, down-to-earth: 他人很實在.",
+    "note": "MOE also lists shí zai with a light tone. As an adjective it means honest, down-to-earth: 他人很實在 tā rén hěn shí zài.",
     "example": {
       "trad": "我實在太累了。",
       "pinyin": "Wǒ shízài tài lèi le.",
@@ -474,7 +474,7 @@
     "gloss": "beside; next to",
     "hint": "right by the side of something",
     "pos": "noun",
-    "note": "Goes after the thing: 我家旁邊 wǒ jiā páng biān 'next to my place'. 坐我旁邊 'sit next to me'.",
+    "note": "Goes after the thing: 我家旁邊 wǒ jiā páng biān 'next to my place'. 坐我旁邊 zuò wǒ páng biān 'sit next to me'.",
     "example": {
       "trad": "你坐我旁邊。",
       "pinyin": "Nǐ zuò wǒ pángbiān.",
@@ -488,7 +488,7 @@
     "gloss": "slice; piece; (measure: flat things)",
     "hint": "slices, leaves; thin flat pieces",
     "pos": "measure",
-    "note": "Counts thin, flat things: 一片麵包 'a slice of bread', 一片葉子 'a leaf'. Also means 'film' in 影片. MOE also lists piān, used in a few colloquial words but rare in Taiwan.",
+    "note": "Counts thin, flat things: 一片麵包 yī piàn miàn bāo 'a slice of bread', 一片葉子 yī piàn yè zi 'a leaf'. Also means 'film' in 影片 yǐng piàn. MOE also lists piān, used in a few colloquial words but rare in Taiwan.",
     "example": {
       "trad": "我吃了兩片麵包。",
       "pinyin": "Wǒ chī le liǎng piàn miànbāo.",
@@ -555,7 +555,7 @@
     "pinyin": "qī",
     "gloss": "seven",
     "pos": "num",
-    "note": "Some older speakers say qí before a 4th tone (七次), but most Taiwanese keep qī.",
+    "note": "Some older speakers say qí before a 4th tone (七次 qī cì), but most Taiwanese keep qī.",
     "example": {
       "trad": "一個星期有七天。",
       "pinyin": "Yī ge xīngqí yǒu qī tiān.",
@@ -568,7 +568,7 @@
     "pinyin": "bā",
     "gloss": "eight",
     "pos": "num",
-    "note": "A lucky number (from a Cantonese pun with 發 'to prosper'; in Mandarin bā and fā don't sound alike). In chat, 88 means 'bye-bye'.",
+    "note": "A lucky number (from a Cantonese pun with 發 fā 'to prosper'; in Mandarin bā and fā don't sound alike). In chat, 88 means 'bye-bye'.",
     "example": {
       "trad": "我每天早上八點起床。",
       "pinyin": "Wǒ měi tiān zǎoshang bā diǎn qǐchuáng.",
@@ -607,7 +607,7 @@
     "pinyin": "líng",
     "gloss": "zero",
     "pos": "num",
-    "note": "Fills gaps inside numbers: 一百零五 (105). Also means small or scattered: 零錢 líng qián 'small change'. MOE lists a rare historical reading lián.",
+    "note": "Fills gaps inside numbers: 一百零五 yī bǎi líng wǔ (105). Also means small or scattered: 零錢 líng qián 'small change'. MOE lists a rare historical reading lián.",
     "example": {
       "trad": "總共一百零五塊。",
       "pinyin": "Zǒnggòng yībǎi líng wǔ kuài.",
@@ -621,7 +621,7 @@
     "gloss": "real; true (to life)",
     "hint": "true to reality, not made up",
     "pos": "adj",
-    "note": "Describes something that actually happened or is not fake: 真實的故事 'a true story'. Compare 真的 zhēn de 'really' and 真正 zhēn zhèng 'genuine'.",
+    "note": "Describes something that actually happened or is not fake: 真實的故事 zhēn shí de gù shi 'a true story'. Compare 真的 zhēn de 'really' and 真正 zhēn zhèng 'genuine'.",
     "example": {
       "trad": "這個故事是真實的。",
       "pinyin": "Zhège gùshi shì zhēnshí de.",
@@ -635,7 +635,7 @@
     "gloss": "near; close",
     "hint": "not far",
     "pos": "adj",
-    "note": "Usually with 離 lí: 離這裡很近 'close to here'. The opposite is 遠 yuǎn. 附近 fù jìn means 'nearby / the area around'.",
+    "note": "Usually with 離 lí: 離這裡很近 lí zhè lǐ hěn jìn 'close to here'. The opposite is 遠 yuǎn. 附近 fù jìn means 'nearby / the area around'.",
     "example": {
       "trad": "我家離公司很近。",
       "pinyin": "Wǒ jiā lí gōngsī hěn jìn.",
@@ -662,7 +662,7 @@
     "pinyin": "xiǎng xiàng",
     "gloss": "to imagine; imagination",
     "pos": "verb",
-    "note": "Taiwan writes 想像; the mainland usually writes 想象. Same pronunciation.",
+    "note": "想像力 xiǎng xiàng lì is 'imagination'; 你想像一下 nǐ xiǎng xiàng yī xià 'just imagine'. (Taiwan and the mainland write it differently, but it sounds the same.)",
     "example": {
       "trad": "很難想像他會這樣。",
       "pinyin": "Hěn nán xiǎngxiàng tā huì zhèyàng.",

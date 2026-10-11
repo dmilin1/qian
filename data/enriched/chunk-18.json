@@ -5,7 +5,7 @@
     "pinyin": "jù",
     "gloss": "(measure for sentences)",
     "pos": "measure",
-    "note": "Counts sentences and things said: 一句話 'one sentence', 說兩句 'say a few words'. The rare literary reading gōu is not used in speech.",
+    "note": "Counts sentences and things said: 一句話 yī jù huà 'one sentence', 說兩句 shuō liǎng jù 'say a few words'. The rare literary reading gōu is not used in speech.",
     "example": {
       "trad": "他一句話都沒說。",
       "pinyin": "Tā yī jù huà dōu méi shuō.",
@@ -18,7 +18,7 @@
     "pinyin": "qún",
     "gloss": "group; crowd; flock",
     "pos": "measure",
-    "note": "Measure word for groups of people or animals: 一群人 'a crowd', 一群鳥 'a flock of birds'. A group chat is 群組 qún zǔ.",
+    "note": "Measure word for groups of people or animals: 一群人 yī qún rén 'a crowd', 一群鳥 yī qún niǎo 'a flock of birds'. A group chat is 群組 qún zǔ.",
     "example": {
       "trad": "外面有一群人。",
       "pinyin": "Wàimiàn yǒu yī qún rén.",
@@ -32,7 +32,7 @@
     "gloss": "pair; double",
     "hint": "things in twos: shoes, chopsticks",
     "pos": "measure",
-    "note": "Measure word for pairs: shoes, socks, chopsticks, eyes (一雙鞋, 一雙筷子). Couples and matched sets use 對 duì (一對夫妻). The rare reading shuàng is not used in speech.",
+    "note": "Measure word for pairs: shoes, socks, chopsticks, eyes (一雙鞋 yī shuāng xié, 一雙筷子 yī shuāng kuài zi). Couples and matched sets use 對 duì (一對夫妻 yī duì fū qī). The rare reading shuàng is not used in speech.",
     "example": {
       "trad": "我買了一雙新鞋。",
       "pinyin": "Wǒ mǎi le yī shuāng xīn xié.",
@@ -45,7 +45,7 @@
     "pinyin": "lǎo bǎn",
     "gloss": "boss; shop owner",
     "pos": "noun",
-    "note": "In Taiwan you call out 老闆 to any shop or stall owner; a woman owner is 老闆娘 lǎo bǎn niáng.",
+    "note": "In Taiwan you call out 老闆 lǎo bǎn to any shop or stall owner; a woman owner is 老闆娘 lǎo bǎn niáng.",
     "example": {
       "trad": "老闆，這個多少錢？",
       "pinyin": "Lǎobǎn, zhège duōshǎo qián?",
@@ -59,7 +59,7 @@
     "gloss": "a dance; dancing",
     "hint": "one syllable; the noun",
     "pos": "noun",
-    "note": "Mostly heard in 跳舞 tiào wǔ 'to dance' (lit. 'jump dance'); also 一支舞 'a dance'.",
+    "note": "Mostly heard in 跳舞 tiào wǔ 'to dance' (lit. 'jump dance'); also 一支舞 yī zhī wǔ 'a dance'.",
     "example": {
       "trad": "她很會跳舞。",
       "pinyin": "Tā hěn huì tiàowǔ.",
@@ -73,7 +73,7 @@
     "gloss": "to allow; to permit",
     "hint": "give permission, formal",
     "pos": "verb",
-    "note": "More formal than 讓 ràng or 可以 kě yǐ; common in rules: 不允許 'not allowed'.",
+    "note": "More formal than 讓 ràng or 可以 kě yǐ; common in rules: 不允許 bù yǔn xǔ 'not allowed'.",
     "example": {
       "trad": "我媽不允許我養狗。",
       "pinyin": "Wǒ mā bù yǔnxǔ wǒ yǎng gǒu.",
@@ -86,7 +86,7 @@
     "pinyin": "zhí de",
     "gloss": "worth it; to deserve",
     "pos": "verb",
-    "note": "Often 值得 + verb: 值得去 'worth going'. MOE gives a light 得 (zhí de), but many Taiwanese say zhí dé.",
+    "note": "Often 值得 zhí de + verb: 值得去 zhí de qù 'worth going'. MOE gives a light 得 de (zhí de), but many Taiwanese say zhí dé.",
     "example": {
       "trad": "這本書很值得看。",
       "pinyin": "Zhè běn shū hěn zhíde kàn.",
@@ -100,7 +100,7 @@
     "gloss": "sound; (measure for calls)",
     "hint": "a single sound or call",
     "pos": "measure",
-    "note": "Counts sounds and utterances: 叫一聲 'give a shout', 說一聲 'let someone know'. The full word for sound or voice is 聲音 shēng yīn.",
+    "note": "Counts sounds and utterances: 叫一聲 jiào yī shēng 'give a shout', 說一聲 shuō yī shēng 'let someone know'. The full word for sound or voice is 聲音 shēng yīn.",
     "example": {
       "trad": "到了跟我說一聲。",
       "pinyin": "Dào le gēn wǒ shuō yī shēng.",
@@ -113,7 +113,7 @@
     "pinyin": "dào qiàn",
     "gloss": "to apologize",
     "pos": "verb",
-    "note": "跟…道歉 gēn … dào qiàn 'apologize to…'. The apology itself is 對不起 duì bu qǐ or 不好意思 bù hǎo yì si.",
+    "note": "跟 gēn … 道歉 dào qiàn 'apologize to…'. The apology itself is 對不起 duì bu qǐ or 不好意思 bù hǎo yì si.",
     "example": {
       "trad": "你應該跟她道歉。",
       "pinyin": "Nǐ yīnggāi gēn tā dàoqiàn.",
@@ -141,7 +141,7 @@
     "gloss": "over there; that side",
     "hint": "lit. 'that side' (not nà lǐ)",
     "pos": "pron",
-    "note": "Means the same as 那裡 and is very common in Taiwan, with a full tone on biān. Mainland speech often has nà bian or 那兒. 'Over here' is 這邊 zhè biān.",
+    "note": "Means the same as 那裡 nà lǐ and is very common in Taiwan, with a full tone on biān. Mainland speech often has nà bian or nàr. 'Over here' is 這邊 zhè biān.",
     "example": {
       "trad": "你看那邊！",
       "pinyin": "Nǐ kàn nàbiān!",
@@ -167,7 +167,7 @@
     "gloss": "below; underneath; next",
     "hint": "two syllables; location word (under X)",
     "pos": "noun",
-    "note": "A location word used after a noun: 桌子下面 'under the table'. Also 'next / the following': 下面我們… 'next, we…'. You may also hear a light xià mian.",
+    "note": "A location word used after a noun: 桌子下面 zhuō zi xià miàn 'under the table'. Also 'next / the following': 下面我們 xià miàn wǒ men… 'next, we…'. You may also hear a light xià mian.",
     "example": {
       "trad": "鑰匙在桌子下面。",
       "pinyin": "Yàoshi zài zhuōzi xiàmiàn.",
@@ -193,7 +193,7 @@
     "gloss": "weird; to blame",
     "hint": "one syllable; also to blame",
     "pos": "adj",
-    "note": "怪怪的 guài guài de 'a bit off' is very common in Taiwan. As a verb, 'to blame': 不要怪我 'don't blame me'. 難怪 nán guài means 'no wonder'.",
+    "note": "怪怪的 guài guài de 'a bit off' is very common in Taiwan. As a verb, 'to blame': 不要怪我 bù yào guài wǒ 'don't blame me'. 難怪 nán guài means 'no wonder'.",
     "example": {
       "trad": "他今天怪怪的。",
       "pinyin": "Tā jīntiān guàiguài de.",
@@ -206,7 +206,7 @@
     "pinyin": "shǔ",
     "gloss": "to count",
     "pos": "verb",
-    "note": "Polyphone: shǔ is 'to count' (數到三 'count to three'). Read shù it means 'number' (數字 shù zì, 分數 fēn shù 'score').",
+    "note": "Polyphone: shǔ is 'to count' (數到三 shǔ dào sān 'count to three'). Read shù it means 'number' (數字 shù zì, 分數 fēn shù 'score').",
     "example": {
       "trad": "我數到三。",
       "pinyin": "Wǒ shǔdào sān.",
@@ -220,7 +220,7 @@
     "gloss": "once again",
     "hint": "formal",
     "pos": "adv",
-    "note": "Formal; used in speeches and announcements: 再次感謝 'thanks again'. In conversation people say 再一次 or just 再 zài.",
+    "note": "Formal; used in speeches and announcements: 再次感謝 zài cì gǎn xiè 'thanks again'. In conversation people say 再一次 zài yī cì or just 再 zài.",
     "example": {
       "trad": "再次謝謝大家！",
       "pinyin": "Zàicì xièxie dàjiā!",
@@ -248,7 +248,7 @@
     "gloss": "video; film",
     "hint": "a video clip",
     "pos": "noun",
-    "note": "The Taiwan word for an online video (mainland: 視頻). A movie at the cinema is 電影 diàn yǐng.",
+    "note": "The Taiwan word for an online video (mainland: 視頻 shì pín). A movie at the cinema is 電影 diàn yǐng.",
     "example": {
       "trad": "我在看貓的影片。",
       "pinyin": "Wǒ zài kàn māo de yǐngpiàn.",
@@ -261,7 +261,7 @@
     "pinyin": "duō jiǔ",
     "gloss": "how long (time)",
     "pos": "pron",
-    "note": "Asks only about lengths of time: 要等多久？ 'how long do we wait?'. 沒多久 means 'not long (after)'.",
+    "note": "Asks only about lengths of time: 要等多久 yào děng duō jiǔ? 'how long do we wait?'. 沒多久 méi duō jiǔ means 'not long (after)'.",
     "example": {
       "trad": "你來台灣多久了？",
       "pinyin": "Nǐ lái Táiwān duōjiǔ le?",
@@ -314,7 +314,7 @@
     "gloss": "illness; disease",
     "hint": "one syllable; the illness itself",
     "pos": "noun",
-    "note": "生病 shēng bìng 'to get sick', 看病 kàn bìng 'to see a doctor'. 他病了 'he's sick'.",
+    "note": "生病 shēng bìng 'to get sick', 看病 kàn bìng 'to see a doctor'. 他病了 tā bìng le 'he's sick'.",
     "example": {
       "trad": "他的病好了嗎？",
       "pinyin": "Tā de bìng hǎo le ma?",
@@ -327,7 +327,7 @@
     "pinyin": "yā lì",
     "gloss": "pressure; stress",
     "pos": "noun",
-    "note": "壓力很大 'very stressed (lots of pressure)'.",
+    "note": "壓力很大 yā lì hěn dà 'very stressed (lots of pressure)'.",
     "example": {
       "trad": "最近工作壓力很大。",
       "pinyin": "Zuìjìn gōngzuò yālì hěn dà.",
@@ -341,7 +341,7 @@
     "gloss": "about the same; roughly; almost",
     "hint": "close enough",
     "pos": "adj",
-    "note": "差不多了 chà bu duō le 'almost done; that'll do'. 差不多五點 'around five'. MOE reads the 不 lightly (chà bu duō); many people say chà bù duō.",
+    "note": "差不多了 chà bu duō le 'almost done; that'll do'. 差不多五點 chà bu duō wǔ diǎn 'around five'. MOE reads the middle syllable lightly (chà bu duō); many people say chà bù duō.",
     "example": {
       "trad": "我們兩個差不多高。",
       "pinyin": "Wǒmen liǎng ge chàbuduō gāo.",
@@ -355,7 +355,7 @@
     "gloss": "serious; earnest; diligent",
     "hint": "earnest, not a bad situation",
     "pos": "adj",
-    "note": "Describes a person who puts in real effort. 你認真的嗎？ 'Are you serious?' A serious problem or illness is 嚴重 yán zhòng.",
+    "note": "Describes a person who puts in real effort. 你認真的嗎 nǐ rèn zhēn de ma? 'Are you serious?' A serious problem or illness is 嚴重 yán zhòng.",
     "example": {
       "trad": "他上課很認真。",
       "pinyin": "Tā shàngkè hěn rènzhēn.",
@@ -369,7 +369,7 @@
     "gloss": "foot",
     "hint": "foot; casually the whole leg",
     "pos": "noun",
-    "note": "In everyday Taiwan speech 腳 often covers the whole leg too; strictly, the leg is 腿 tuǐ. The literary reading jué is rare.",
+    "note": "In everyday Taiwan speech 腳 jiǎo often covers the whole leg too; strictly, the leg is 腿 tuǐ. The literary reading jué is rare.",
     "example": {
       "trad": "我的腳好痛。",
       "pinyin": "Wǒ de jiǎo hǎo tòng.",
@@ -383,7 +383,7 @@
     "gloss": "word; term",
     "hint": "unit of meaning, not one character",
     "pos": "noun",
-    "note": "A word as a unit of meaning, often two characters: 朋友 is one 詞 but two 字 zì. 歌詞 gē cí means 'lyrics'.",
+    "note": "A word as a unit of meaning, often two characters: 朋友 péng yǒu is one 詞 cí but two 字 zì. 歌詞 gē cí means 'lyrics'.",
     "example": {
       "trad": "這個詞是什麼意思？",
       "pinyin": "Zhège cí shì shénme yìsi?",
@@ -397,7 +397,7 @@
     "gloss": "to stop; to cease",
     "hint": "formal, cease completely",
     "pos": "verb",
-    "note": "More formal than 停 tíng; used for activities, plans and machines. To say 'stop it!' people use 不要 or 別.",
+    "note": "More formal than 停 tíng; used for activities, plans and machines. To say 'stop it!' people use 不要 bù yào or 別 bié.",
     "example": {
       "trad": "他決定停止這個計畫。",
       "pinyin": "Tā juédìng tíngzhǐ zhège jìhuà.",
@@ -437,7 +437,7 @@
     "gloss": "document; papers",
     "hint": "official papers",
     "pos": "noun",
-    "note": "In Taiwan a computer file is 檔案 dǎng àn; 文件 means documents or paperwork (the mainland also uses it for computer files). Counted with 份 fèn.",
+    "note": "In Taiwan a computer file is 檔案 dǎng àn; 文件 wén jiàn means documents or paperwork (the mainland also uses it for computer files). Counted with 份 fèn.",
     "example": {
       "trad": "這份文件很重要。",
       "pinyin": "Zhè fèn wénjiàn hěn zhòngyào.",
@@ -451,7 +451,7 @@
     "gloss": "super; really (casual)",
     "hint": "slangy, stronger than very",
     "pos": "adv",
-    "note": "Hugely common in Taiwan: 超好吃 'super tasty', 超累 'so tired'. The original verb meaning is 'to exceed / overtake' (超車 'overtake', 超過 'exceed').",
+    "note": "Hugely common in Taiwan: 超好吃 chāo hǎo chī 'super tasty', 超累 chāo lèi 'so tired'. The original verb meaning is 'to exceed / overtake' (超車 chāo chē 'overtake', 超過 chāo guò 'exceed').",
     "example": {
       "trad": "這家的牛肉麵超好吃！",
       "pinyin": "Zhè jiā de niúròumiàn chāo hǎochī!",
@@ -493,7 +493,7 @@
     "gloss": "street",
     "hint": "street with shops, not lù",
     "pos": "noun",
-    "note": "Counted with 條: 一條街 yī tiáo jiē. 逛街 guàng jiē means to go shopping or stroll around the shops. A road or main city street is usually 路 lù.",
+    "note": "Counted with 條 tiáo: 一條街 yī tiáo jiē. 逛街 guàng jiē means to go shopping or stroll around the shops. A road or main city street is usually 路 lù.",
     "example": {
       "trad": "這條街晚上很熱鬧。",
       "pinyin": "Zhè tiáo jiē wǎnshang hěn rènao.",
@@ -547,7 +547,7 @@
     "pinyin": "shēn fèn",
     "gloss": "identity; status",
     "pos": "noun",
-    "note": "Taiwan writes 身分 (MOE); the mainland writes 身份. 身分證 shēn fèn zhèng is the national ID card.",
+    "note": "身分證 shēn fèn zhèng is the national ID card; 表明身分 biǎo míng shēn fèn 'say who you are'. (Taiwan and the mainland write it differently, but it sounds the same.)",
     "example": {
       "trad": "我忘了帶身分證。",
       "pinyin": "Wǒ wàng le dài shēnfènzhèng.",
@@ -586,7 +586,7 @@
     "gloss": "hot",
     "hint": "temperature, not spicy",
     "pos": "adj",
-    "note": "For spicy food, use 辣 là. 熱 also means 'to heat up': 熱一下 rè yī xià 'warm it up'.",
+    "note": "For spicy food, use 辣 là. 熱 rè also means 'to heat up': 熱一下 rè yī xià 'warm it up'.",
     "example": {
       "trad": "今天真的好熱。",
       "pinyin": "Jīntiān zhēnde hǎo rè.",
@@ -600,7 +600,7 @@
     "gloss": "quiet",
     "hint": "no noise; calm",
     "pos": "adj",
-    "note": "安靜一點！ ān jìng yī diǎn 'be quiet!'. The opposite is 吵 chǎo 'noisy'.",
+    "note": "安靜一點 ān jìng yī diǎn! 'be quiet!'. The opposite is 吵 chǎo 'noisy'.",
     "example": {
       "trad": "請安靜一點。",
       "pinyin": "Qǐng ānjìng yīdiǎn.",
