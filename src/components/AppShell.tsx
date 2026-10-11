@@ -5,6 +5,7 @@ import { Banner, Logo, Spinner } from './Display'
 import { useSelector } from './hooks'
 import { Icon } from './Icon'
 import { NAV_ITEMS, titleFor } from './navItems'
+import { UpdateNotice } from './UpdateNotice'
 
 /** Top bar: wider screens (sm and up). */
 function TopBar() {
@@ -141,6 +142,7 @@ export function AppShell() {
         tabIndex={-1}
         className="mx-auto flex w-full max-w-content flex-1 flex-col px-5 pt-[calc(1.5rem+env(safe-area-inset-top))] pb-[calc(var(--tabbar-h)+2rem+env(safe-area-inset-bottom))] outline-none sm:pt-8 sm:pb-12"
       >
+        <UpdateNotice className="mb-4" />
         <StoreError />
         {ready ? (
           <Suspense fallback={<PageLoading />}>

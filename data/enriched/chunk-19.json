@@ -65,7 +65,7 @@
     "note": "Used in the pattern 不是 A，而是 B (bù shì A, ér shì B) 'not A, but (rather) B'. It corrects the first part instead of contrasting like 但是 dàn shì.",
     "example": {
       "trad": "不是我不想去，而是沒時間。",
-      "pinyin": "Bùshì wǒ bù xiǎng qù, érshì méi shíjiān.",
+      "pinyin": "Bù shì wǒ bù xiǎng qù, érshì méi shíjiān.",
       "english": "It's not that I don't want to go, it's that I don't have time."
     }
   },
@@ -146,7 +146,7 @@
     "note": "MOE reads 場 as cháng here; many Taiwanese say shì chǎng, as the mainland does. 菜市場 cài shì cháng is the traditional wet market.",
     "example": {
       "trad": "我媽每天去市場買菜。",
-      "pinyin": "Wǒ mā měitiān qù shìcháng mǎi cài.",
+      "pinyin": "Wǒ mā měi tiān qù shìcháng mǎi cài.",
       "english": "My mom goes to the market every day to buy groceries."
     }
   },
@@ -313,7 +313,7 @@
     "note": "Also in 要命 yào mìng 'terribly; deadly', 算命 suàn mìng 'fortune-telling' and 拼命 pīn mìng 'with all one's might'. Compare 生命 shēng mìng (being alive) and 生活 shēng huó (daily life).",
     "example": {
       "trad": "他救了我一命。",
-      "pinyin": "Tā jiùle wǒ yī mìng.",
+      "pinyin": "Tā jiù le wǒ yī mìng.",
       "english": "He saved my life."
     }
   },
@@ -456,7 +456,7 @@
     "trad": "睡覺",
     "pinyin": "shuì jiào",
     "gloss": "to sleep; to go to bed",
-    "hint": "go to bed, two syllables",
+    "hint": "go to bed",
     "pos": "verb",
     "note": "覺 is jiào here ('a sleep'); in 覺得 jué de it is jué. It splits apart: 睡午覺 shuì wǔ jiào 'take a nap'.",
     "example": {
@@ -609,7 +609,7 @@
     "note": "Short for 昨天晚上 zuó tiān wǎn shang, which is more common in casual speech.",
     "example": {
       "trad": "我昨晚沒睡好。",
-      "pinyin": "Wǒ zuówǎn méi shuì hǎo.",
+      "pinyin": "Wǒ zuówǎn méi shuìhǎo.",
       "english": "I didn't sleep well last night."
     }
   },

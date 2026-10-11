@@ -17,6 +17,10 @@ What it does
   * Validation of the whole dataset. Exit status 1 and every failure printed if anything is wrong. This includes
     the Say-card prompt rules: no two words with an identical gloss + hint, and no hint containing the word's own
     pinyin. (Overlapping-but-not-identical prompts are reviewed with scripts/data/prompt_groups.py.)
+    It also includes the mechanical example-pinyin orthography rules (GB/T 16159 spacing: particles such as le,
+    ma, ne, ba, de are separate words; dì-yī; yībǎi; capitals only at sentence starts and on proper nouns) and
+    text style (single quotes, no period at the end of a hint). Lexical spacing decisions (which strings are
+    one word) are audited and normalized by scripts/data/pinyin_spacing.py.
 Warnings (printed, non-fatal) flag things worth a human look: example syllables that pypinyin does not know
 for that character, headword readings that match neither MOE nor CEDICT.
 """
@@ -145,24 +149,136 @@ def segment(chunk: str) -> list[list[str]]:
     return go(0)
 
 
+# A pinyin word in an example sentence: letters (tone marks included), with ' (xī'ān) or - (dì-yī) inside.
+PY_TOKEN = re.compile(r"[^\W\d_]+(?:['\-][^\W\d_]+)*")
+
+
+def example_tokens(pinyin: str) -> tuple[list[dict] | None, str | None]:
+    """Split a sentence's pinyin into its written words. Returns (tokens, error). Each token is
+    {"text", "start", "end", "syls": [syllable, ...], "joins": [joiner between consecutive syllables: "", "'" or "-"]}.
+    Anything between words must be spaces or PUNCT_PINYIN."""
+    tokens: list[dict] = []
+    pos = 0
+    for m in PY_TOKEN.finditer(pinyin):
+        gap = pinyin[pos:m.start()]
+        if any(c not in PUNCT_PINYIN and not c.isspace() for c in gap):
+            return None, f"unexpected text {gap!r} between pinyin words"
+        pos = m.end()
+        syls: list[str] = []
+        joins: list[str] = []
+        pending = ""
+        for k, piece in enumerate(re.split(r"(['\-])", m.group(0))):
+            if k % 2:
+                pending = piece
+                continue
+            segs = segment(piece)
+            if not segs:
+                return None, f"cannot split {piece!r} into valid syllables"
+            if len({len(s) for s in segs}) > 1:
+                return None, f"ambiguous syllable split of {piece!r}: {segs}"
+            for j, s in enumerate(segs[0]):
+                if syls:
+                    joins.append(pending if j == 0 else "")
+                syls.append(s)
+        tokens.append({"text": m.group(0), "start": m.start(), "end": m.end(), "syls": syls, "joins": joins})
+    gap = pinyin[pos:]
+    if any(c not in PUNCT_PINYIN and not c.isspace() for c in gap):
+        return None, f"unexpected text {gap!r} after the last pinyin word"
+    return tokens, None
+
+
 def example_syllables(pinyin: str) -> tuple[list[str] | None, str | None]:
     """Split a sentence's pinyin into syllables. Returns (syllables, error)."""
-    out: list[str] = []
-    text = pinyin
-    for p in PUNCT_PINYIN:
-        text = text.replace(p, " ")
-    for word in text.replace("-", " ").split():
-        for chunk in word.split("'"):
-            if not chunk:
-                return None, f"empty chunk around an apostrophe in {word!r}"
-            segs = segment(chunk)
-            if not segs:
-                return None, f"cannot split {chunk!r} into valid syllables"
-            counts = {len(s) for s in segs}
-            if len(counts) > 1:
-                return None, f"ambiguous syllable split of {chunk!r}: {segs}"
-            out.extend(segs[0])
-    return out, None
+    toks, err = example_tokens(pinyin)
+    if err:
+        return None, err
+    return [s for t in toks for s in t["syls"]], None
+
+
+# ---------------------------------------------------------------------------------------------------------
+# Example-pinyin orthography: word spacing per GB/T 16159 (see data/NOTES.md, "Polish"). Only the mechanical
+# rules are enforced here. Which strings count as one word (zhège, bùyào, huíjiā vs měi tiān, bù huì, dǎ qiú)
+# is a lexical decision recorded in scripts/data/pinyin_spacing.py, which audits and normalizes it.
+
+NUMERALS = set("零一二三四五六七八九十兩")
+BIG_NUMERALS = set("百千萬億")
+# Sentence particles are always their own word, except inside these lexical words.
+STANDALONE_PARTICLES = set("嗎呢吧啊啦喔耶呀嘛哦")
+PARTICLE_WORDS = {"幹嘛"}
+# 了 read le is its own word (aspect and sentence-final alike), except inside these words.
+LE_WORDS = {"為了", "除了", "算了", "罷了", "受不了", "不得了"}
+# 的 / 得 / 地 read de are their own word, except inside these words.
+DE_WORDS = {"真的", "別的", "有的", "是的", "似的", "覺得", "記得", "值得", "懂得", "曉得", "顯得", "免得", "捨得", "使得"}
+# Proper nouns: always capitalised. A name in PROPER_PREFIXES also capitalises a word it starts (台灣人 Táiwānrén).
+PROPER_NOUNS = {"母親節", "王"}
+PROPER_PREFIXES = {"台灣", "台北", "日本", "美國", "中國", "中文", "英文"}
+
+
+def is_proper(word: str) -> bool:
+    return word in PROPER_NOUNS or any(word.startswith(p) for p in PROPER_PREFIXES)
+
+
+def sentence_starts(pinyin: str, toks: list[dict]) -> list[bool]:
+    """Whether each token starts a sentence: the first one, and any after . ? ! in the gap before it."""
+    out = []
+    prev_end = 0
+    for i, t in enumerate(toks):
+        gap = pinyin[prev_end:t["start"]]
+        out.append(i == 0 or any(c in ".?!" for c in gap))
+        prev_end = t["end"]
+    return out
+
+
+def orthography_errors(han: list[str], pinyin: str, toks: list[dict]) -> list[str]:
+    """Mechanical spacing/capitalisation rules for one example. han: its Han characters (as many as syllables)."""
+    errs: list[str] = []
+    words: list[str] = []
+    i = 0
+    for t in toks:
+        words.append("".join(han[i:i + len(t["syls"])]))
+        i += len(t["syls"])
+    starts = sentence_starts(pinyin, toks)
+    for t, w, start in zip(toks, words, starts):
+        text = t["text"]
+        bases = [parse_syllable(s)[0] if parse_syllable(s)[1] == 5 else None for s in t["syls"]]  # neutral only
+        # Capitalisation: sentence starts and proper nouns, nothing else; only the first letter of a word.
+        if any(c.isupper() for c in text[1:]):
+            errs.append(f"capital letter inside the word {text!r}")
+        if start and not text[0].isupper():
+            errs.append(f"sentence must start with a capital: {text!r}")
+        if is_proper(w) and not text[0].isupper():
+            errs.append(f"proper noun {w} must be capitalised: {text!r}")
+        if text[0].isupper() and not start and not is_proper(w):
+            errs.append(f"{text!r} ({w}) is capitalised mid-sentence; add it to PROPER_NOUNS if it is a name")
+        if len(w) > 1:
+            for j, ch in enumerate(w):
+                if ch in STANDALONE_PARTICLES and w not in PARTICLE_WORDS:
+                    errs.append(f"particle {ch} must be written as its own word: {text!r} ({w})")
+                elif ch == "了" and bases[j] == "le" and w not in LE_WORDS:
+                    errs.append(f"了 le must be written as its own word: {text!r} ({w})")
+                elif ch in "的得地" and bases[j] == "de" and w not in DE_WORDS:
+                    errs.append(f"{ch} de must be written as its own word: {text!r} ({w})")
+        if w == "們":
+            errs.append("們 men must be joined to the word before it")
+        # Joiners inside the word.
+        for j, jn in enumerate(t["joins"]):
+            nxt = t["syls"][j + 1]
+            if jn == "'" and nxt[0].lower() not in "aoeāáǎàēéěèōóǒò":
+                errs.append(f"apostrophe before a syllable that does not start with a/o/e: {text!r}")
+            if jn == "-" and w[j] != "第":
+                errs.append(f"hyphen is only used after 第 (dì-yī): {text!r}")
+    # Numbers (GB/T 16159 6.1.5): 第 + numeral takes a hyphen; a digit + 百/千/萬/億 is written together.
+    flat = "".join(words)
+    bnd: list[str | None] = []  # joiner between flat[k] and flat[k+1]; None = separate words
+    for t in toks:
+        bnd.extend(t["joins"])
+        bnd.append(None)
+    for k in range(len(flat) - 1):
+        if flat[k] == "第" and flat[k + 1] in NUMERALS and bnd[k] != "-":
+            errs.append(f"write 第 + numeral with a hyphen (dì-yī): {flat[k:k + 2]}")
+        if flat[k] in NUMERALS and flat[k + 1] in BIG_NUMERALS and bnd[k] != "":
+            errs.append(f"write a digit + {flat[k + 1]} as one word (yībǎi, sānwàn): {flat[k:k + 2]}")
+    return errs
 
 
 # ---------------------------------------------------------------------------------------------------------
@@ -455,7 +571,8 @@ def main() -> int:
         if LATIN_OR_DIGIT.search(ex["trad"]):
             errors.append(f"{where}: example.trad contains Latin letters or digits: {ex['trad']!r}")
         han = HAN.findall(ex["trad"])
-        ex_syls, err = example_syllables(ex["pinyin"])
+        ex_toks, err = example_tokens(ex["pinyin"])
+        ex_syls = [s for t in ex_toks for s in t["syls"]] if ex_toks is not None else None
         if err:
             errors.append(f"{where}: example.pinyin {ex['pinyin']!r}: {err}")
         elif len(ex_syls) != len(han):
@@ -464,6 +581,8 @@ def main() -> int:
                 f"{ex['trad']!r} / {ex['pinyin']!r}"
             )
         else:
+            for e in orthography_errors(han, ex["pinyin"], ex_toks):
+                errors.append(f"{where}: example.pinyin {ex['pinyin']!r}: {e}")
             for s in ex_syls:
                 base, tone, _ = parse_syllable(s)
                 if mark(base, tone) != unicodedata.normalize("NFC", s.lower()):
@@ -483,6 +602,12 @@ def main() -> int:
             errors.append(f"{where}: gloss longer than 60 characters ({len(w['gloss'])})")
         if HAN.search(w.get("hint", "")):
             warnings.append(f"{where}: hint contains Chinese characters (the learner can't read them)")
+        # Text style (data/NOTES.md, "Polish"): quoted English uses single quotes; hints are short fragments.
+        for k in ("gloss", "hint", "note"):
+            if '"' in w.get(k, ""):
+                errors.append(f"{where}: {k} uses double quotes; quote English with single quotes ('my')")
+        if w.get("hint", "").endswith("."):
+            errors.append(f"{where}: hint ends with a period (hints are fragments: {w['hint']!r})")
 
         out = {
             "id": None,

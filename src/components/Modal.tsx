@@ -17,23 +17,33 @@ export interface ModalProps {
 }
 
 /**
- * Modal dialog on the native <dialog> element: focus is trapped and restored by the browser,
- * Escape closes it, and the backdrop is styled in index.css.
+ * Modal dialog on the native <dialog> element: focus is trapped by the browser, Escape closes it,
+ * and the backdrop is styled in index.css. On close, focus returns to the element that was focused
+ * when it opened (explicitly, not only via the browser, which some engines skip).
  */
 export function Modal({ open, onClose, title, description, children, footer, dismissible = true, className }: ModalProps) {
   const ref = useRef<HTMLDialogElement>(null)
   const titleId = useId()
   const descId = useId()
+  const returnFocus = useRef<HTMLElement | null>(null)
+  // A backdrop click must start on the backdrop too: a text selection dragged out of the box
+  // ends with a click on the <dialog> itself, which must not close it (and lose a typed note).
+  const downOnBackdrop = useRef(false)
 
   useEffect(() => {
     const d = ref.current
     if (!d) return
     if (open && !d.open) {
+      const active = document.activeElement
+      returnFocus.current = active instanceof HTMLElement && active !== document.body ? active : null
       if (typeof d.showModal === 'function') d.showModal()
       else d.setAttribute('open', '')
     } else if (!open && d.open) {
       if (typeof d.close === 'function') d.close()
       else d.removeAttribute('open')
+      const target = returnFocus.current
+      returnFocus.current = null
+      if (target?.isConnected) target.focus()
     }
   }, [open])
 
@@ -47,8 +57,13 @@ export function Modal({ open, onClose, title, description, children, footer, dis
         e.preventDefault()
         if (dismissible) onClose()
       }}
+      onPointerDown={(e) => {
+        downOnBackdrop.current = e.target === e.currentTarget
+      }}
       onClick={(e) => {
-        if (dismissible && e.target === e.currentTarget) onClose()
+        const fromBackdrop = downOnBackdrop.current
+        downOnBackdrop.current = false
+        if (dismissible && fromBackdrop && e.target === e.currentTarget) onClose()
       }}
       className={cx(
         'qian-dialog m-auto w-[min(100%-2rem,28rem)] max-h-[calc(100dvh-2rem)] rounded-2xl border border-line bg-card p-0 text-ink shadow-pop',
@@ -109,7 +124,9 @@ export function ConfirmDialog({
           <Button variant="ghost" onClick={onCancel}>
             {cancelLabel}
           </Button>
-          <Button variant={destructive ? 'danger' : 'primary'} onClick={onConfirm} autoFocus>
+          {/* No autoFocus: showModal() focuses Cancel (first in the DOM) on purpose, so a stray
+              Enter/Space can't confirm a destructive action. */}
+          <Button variant={destructive ? 'danger' : 'primary'} onClick={onConfirm}>
             {confirmLabel}
           </Button>
         </>

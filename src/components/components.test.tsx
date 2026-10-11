@@ -1,11 +1,12 @@
-import { act, render, screen } from '@testing-library/react'
+import { act, fireEvent, render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { useState } from 'react'
 import { describe, expect, it, vi } from 'vitest'
 import { AudioButton } from './AudioButton'
 import { Button } from './Button'
 import { Kbd, StatTile } from './Display'
-import { Modal } from './Modal'
+import { Hanzi } from './Hanzi'
+import { ConfirmDialog, Modal } from './Modal'
 import { SegmentedControl } from './Select'
 import { Slider } from './Slider'
 import { applyTheme, resolveTheme } from './theme'
@@ -104,6 +105,54 @@ describe('<Modal>', () => {
     })
     expect(screen.queryByText('body')).toBeNull()
   })
+
+  function Harness({ withNote }: { withNote?: boolean }) {
+    const [open, setOpen] = useState(false)
+    return (
+      <>
+        <button type="button" onClick={() => setOpen(true)}>
+          Open
+        </button>
+        <Modal open={open} onClose={() => setOpen(false)} title="Flag" footer={<Button onClick={() => setOpen(false)}>Cancel</Button>}>
+          {withNote ? <textarea aria-label="Note" /> : null}
+        </Modal>
+      </>
+    )
+  }
+
+  it('returns focus to the element focused when it opened', async () => {
+    const user = userEvent.setup()
+    render(<Harness />)
+    const opener = screen.getByRole('button', { name: 'Open' })
+    await user.click(opener)
+    await user.click(screen.getByRole('button', { name: 'Cancel' }))
+    expect(screen.queryByText('Flag')).toBeNull()
+    expect(opener).toHaveFocus()
+  })
+
+  it('closes on a backdrop click, but not when a drag that began inside ends on the backdrop', async () => {
+    const user = userEvent.setup()
+    render(<Harness withNote />)
+    await user.click(screen.getByRole('button', { name: 'Open' }))
+    const dialog = screen.getByRole('dialog', { name: 'Flag' })
+    const note = screen.getByRole('textbox', { name: 'Note' })
+    await user.type(note, 'typo in tones')
+    // Drag-select from the textarea, released outside the box: the click lands on the <dialog>.
+    fireEvent.pointerDown(note)
+    fireEvent.click(dialog)
+    expect(screen.getByRole('textbox', { name: 'Note' })).toHaveValue('typo in tones')
+    // A real backdrop click (down and up on the backdrop) still dismisses.
+    fireEvent.pointerDown(dialog)
+    fireEvent.click(dialog)
+    expect(screen.queryByRole('textbox', { name: 'Note' })).toBeNull()
+  })
+})
+
+describe('<ConfirmDialog>', () => {
+  it('does not auto-focus the destructive confirm button', () => {
+    render(<ConfirmDialog open title="Suspend?" confirmLabel="Suspend" destructive onConfirm={() => {}} onCancel={() => {}} />)
+    expect(screen.getByRole('button', { name: 'Suspend' })).not.toHaveFocus()
+  })
 })
 
 describe('<StatTile> and <Kbd>', () => {
@@ -117,6 +166,24 @@ describe('<StatTile> and <Kbd>', () => {
     expect(screen.getByText('Streak')).toBeInTheDocument()
     expect(screen.getByText('12')).toBeInTheDocument()
     expect(screen.getByText('Space')).toHaveClass('kbd-hint')
+  })
+
+  it("keeps the key out of the owning button's accessible name", () => {
+    render(
+      <Button aria-keyshortcuts="Space" trailing={<Kbd>Space</Kbd>}>
+        Show answer
+      </Button>,
+    )
+    expect(screen.getByText('Space')).toHaveAttribute('aria-hidden', 'true')
+    expect(screen.getByRole('button', { name: 'Show answer' })).toHaveAttribute('aria-keyshortcuts', 'Space')
+  })
+})
+
+describe('<Hanzi>', () => {
+  it('shows simplified characters in the muted (not faint) color', () => {
+    renderWithApp(<Hanzi word={{ trad: '認識', simp: '认识' }} showSimp force />)
+    expect(screen.getByText('认识')).toHaveClass('text-muted')
+    expect(screen.getByText('认识')).not.toHaveClass('text-faint')
   })
 })
 

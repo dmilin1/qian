@@ -1,5 +1,5 @@
 // Study screen: an endless flashcard session driven by store.current (see docs/app-notes.md).
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import type { PlayResult } from '../../lib/audio'
 import type { FlagReason, GradeName } from '../../lib/events'
 import type { StudyCard } from '../../lib/store'
@@ -11,6 +11,7 @@ import {
   Kbd,
   SealMark,
   Spinner,
+  cx,
   playClip,
   stopPlayback,
   useAudioPlayer,
@@ -21,12 +22,21 @@ import {
 import { ActionBar } from './ActionBar'
 import { CardMenu } from './CardMenu'
 import { CaughtUp } from './CaughtUp'
-import { ListenFace, SayFace } from './CardFaces'
+import { ListenFace, SayFace, type AudioIssue } from './CardFaces'
 import { predictNextWordIds } from './predictNext'
 import { ProgressLine, ProgressTiles } from './Progress'
 import { progressNumbers } from './progressNumbers'
 import { studySession } from './session'
+import { StudyNudge } from './StudyNudge'
 import { useStudyHotkeys } from './useStudyHotkeys'
+
+/** A toast. `undo` adds an inline Undo button (for "known" and "suspend", which skip the card). */
+interface Toast {
+  text: string
+  undo?: () => void
+  /** The undo is "undo the last answer", so it goes stale once another answer is logged. */
+  undoesLastAnswer?: boolean
+}
 
 const SOURCE_LABEL: Partial<Record<StudyCard['source'], string>> = {
   practice: 'Practice ahead',
@@ -43,9 +53,9 @@ export default function StudyPage() {
   const [started, setStarted] = useState(() => studySession.started || unlocked)
   const [epoch, setEpoch] = useState(0)
   const [revealedId, setRevealedId] = useState<string | null>(null)
-  const [blockedId, setBlockedId] = useState<string | null>(null)
+  const [audioIssueState, setAudioIssueState] = useState<{ id: string; kind: Exclude<AudioIssue, null> } | null>(null)
   const [overlayOpen, setOverlayOpen] = useState(false)
-  const [toast, setToast] = useState<string | null>(null)
+  const [toast, setToast] = useState<Toast | null>(null)
   const shownAtRef = useRef(0)
 
   const current = snap.current
@@ -53,7 +63,7 @@ export default function StudyPage() {
   // while unrelated snapshot changes (settings, flags) keep it, so the reveal state survives them.
   const cardId = current ? `${epoch}|${current.key}|${current.shownAt}` : null
   const revealed = cardId !== null && revealedId === cardId
-  const blocked = cardId !== null && blockedId === cardId
+  const audioIssue: AudioIssue = cardId !== null && audioIssueState?.id === cardId ? audioIssueState.kind : null
 
   const progress = progressNumbers(snap.queue, snap.settings.workingSetCap, words.list.length)
   // Caught up: would practice-ahead have anything to show? (pure query, cheap)
@@ -61,7 +71,8 @@ export default function StudyPage() {
 
   const start = useCallback(() => {
     try {
-      player.unlock?.()
+      // force: prime the audio inside this click even if an earlier event already "unlocked" it.
+      player.unlock?.({ force: true })
     } catch {
       // ignore; the player also unlocks itself on the first gesture
     }
@@ -71,8 +82,9 @@ export default function StudyPage() {
 
   const onPlayResult = useCallback(
     (r: PlayResult) => {
-      if (r === 'blocked') setBlockedId(cardId)
-      else if (r === 'clip' || r === 'tts') setBlockedId(null)
+      if (r === 'blocked' || r === 'failed') {
+        if (cardId) setAudioIssueState({ id: cardId, kind: r })
+      } else if (r === 'clip' || r === 'tts') setAudioIssueState(null)
     },
     [cardId],
   )
@@ -85,26 +97,55 @@ export default function StudyPage() {
     [current, player, onPlayResult],
   )
 
-  // New card on screen: start the clock, autoplay (Listen), preload what's likely next.
+  // New card on screen: start the clock, autoplay (Listen), preload what's likely next. A card that
+  // appears while the page is hidden (the caught-up timer, a sync) waits until the page is visible,
+  // so a word never plays out of a background tab and its clock starts when the learner sees it.
   useEffect(() => {
     if (!started || !current) return
-    shownAtRef.current = Date.now()
-    if (current.dir === 'listen' && store.getSnapshot().settings.autoplay) play('word')
-    const t = setTimeout(() => {
-      const next = predictNextWordIds(store.getSnapshot(), words)
-      player.preload([current.wordId, ...next])
-    }, 400)
-    return () => clearTimeout(t)
+    let t: ReturnType<typeof setTimeout> | undefined
+    const begin = () => {
+      shownAtRef.current = Date.now()
+      if (current.dir === 'listen' && store.getSnapshot().settings.autoplay) play('word')
+      t = setTimeout(() => {
+        const next = predictNextWordIds(store.getSnapshot(), words)
+        player.preload([current.wordId, ...next])
+      }, 400)
+    }
+    const onVisibility = () => {
+      if (document.visibilityState === 'hidden') return
+      document.removeEventListener('visibilitychange', onVisibility)
+      begin()
+    }
+    if (document.visibilityState === 'hidden') document.addEventListener('visibilitychange', onVisibility)
+    else begin()
+    return () => {
+      document.removeEventListener('visibilitychange', onVisibility)
+      clearTimeout(t)
+    }
     // Deliberately keyed on the card identity only, not on every snapshot update.
   }, [cardId, started]) // oxlint-disable-line react-hooks/exhaustive-deps
+
+  // A new card starts at the top of the page. Otherwise the scroll used to read the last card's
+  // example carries over and hides the next card's word under the top bar. Before paint, so the
+  // clipped card is never seen.
+  useLayoutEffect(() => {
+    if (!started || !cardId) return
+    if (window.scrollY > 0) window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+  }, [cardId, started])
 
   // Leaving the Study screen stops audio.
   useEffect(() => () => stopPlayback(player), [player])
 
+  // Coming back to Study while caught up: re-pick, in case a card fell due in the meantime.
+  useEffect(() => {
+    const s = store.getSnapshot()
+    if (s.ready && !s.current) store.next()
+  }, [store])
+
   // Toast auto-hide.
   useEffect(() => {
     if (!toast) return
-    const t = setTimeout(() => setToast(null), 3200)
+    const t = setTimeout(() => setToast(null), toast.undo ? 5000 : 3200)
     return () => clearTimeout(t)
   }, [toast])
 
@@ -118,13 +159,17 @@ export default function StudyPage() {
     stopPlayback(player)
     setEpoch((e) => e + 1)
     setRevealedId(null)
-    setBlockedId(null)
+    setAudioIssueState(null)
   }
+
+  // A toast's "undo the last answer" would undo something else once another answer is logged.
+  const dropUndoToast = () => setToast((t) => (t?.undoesLastAnswer ? null : t))
 
   const grade = (g: GradeName) => {
     if (!current || !revealed) return
     const elapsed = Math.max(0, Date.now() - shownAtRef.current)
     nextCard()
+    dropUndoToast()
     void store.grade(current.key, g, elapsed)
   }
 
@@ -132,19 +177,25 @@ export default function StudyPage() {
     if (!current?.canMarkKnown || revealed) return
     nextCard()
     void store.markKnown(current.wordId)
-    setToast(`Marked “${current.word.gloss}” as known. It will come back to check in about a week.`)
+    setToast({
+      text: `Marked “${current.word.gloss}” as known. It will come back to check in about a week.`,
+      undo: () => undo(),
+      undoesLastAnswer: true,
+    })
   }
 
   const undo = () => {
-    if (!snap.canUndo) return
+    // Read the store, not `snap`: the toast's Undo is a closure from the render that created it.
+    if (!store.getSnapshot().canUndo) return
     nextCard()
+    dropUndoToast()
     void store.undo()
   }
 
   const flag = (reason: FlagReason, note: string) => {
     if (!current) return
     void store.flag(current.wordId, reason, note || undefined)
-    setToast('Thanks, card flagged. Find flags in the Words tab.')
+    setToast({ text: 'Thanks, card flagged. Find flags in the Words tab.' })
   }
 
   const suspend = () => {
@@ -152,7 +203,8 @@ export default function StudyPage() {
     const w = current.word
     nextCard()
     void store.setSuspended(w.id, true)
-    setToast(`Suspended “${w.gloss}”. Unsuspend it from the Words tab.`)
+    // store.undo() only covers answers, so undoing a suspend unsuspends the word.
+    setToast({ text: `Suspended “${w.gloss}”. Unsuspend it from the Words tab.`, undo: () => void store.setSuspended(w.id, false) })
   }
 
   const practice = () => {
@@ -188,10 +240,31 @@ export default function StudyPage() {
     )
   }
 
+  // The toast sits over the progress row (and its Undo button). Only its own Undo button takes
+  // taps; everything else passes through to what is underneath.
   const toastEl = (
     <div aria-live="polite" className="pointer-events-none fixed inset-x-0 top-[calc(env(safe-area-inset-top)+0.75rem)] z-40 flex justify-center px-5 sm:top-20">
       {toast ? (
-        <p className="pointer-events-auto max-w-content rounded-xl bg-ink px-4 py-2.5 text-sm text-paper shadow-pop motion-safe:animate-rise-in">{toast}</p>
+        <div
+          className={cx(
+            'flex max-w-content items-center gap-3 rounded-xl bg-ink text-sm text-paper shadow-pop motion-safe:animate-rise-in',
+            toast.undo ? 'py-1.5 pr-1.5 pl-4' : 'px-4 py-2.5',
+          )}
+        >
+          <p>{toast.text}</p>
+          {toast.undo ? (
+            <button
+              type="button"
+              onClick={() => {
+                setToast(null)
+                toast.undo?.()
+              }}
+              className="pointer-events-auto min-h-10 shrink-0 cursor-pointer rounded-lg px-3 font-semibold text-paper underline underline-offset-2 hover:bg-paper/15"
+            >
+              Undo
+            </button>
+          ) : null}
+        </div>
       ) : null}
     </div>
   )
@@ -216,6 +289,7 @@ export default function StudyPage() {
       <div className="flex flex-1 flex-col">
         <div className="flex justify-end">{undoButton}</div>
         <CaughtUp queue={snap.queue} progress={progress} canPractice={canPractice} onPractice={practice} />
+        <StudyNudge className="mb-4" />
         {toastEl}
       </div>
     )
@@ -236,6 +310,7 @@ export default function StudyPage() {
         <Button variant="primary" size="xl" block icon="study" onClick={start} trailing={<Kbd>Space</Kbd>} className="h-16 rounded-2xl text-xl">
           Start studying
         </Button>
+        <StudyNudge className="w-full text-left" />
         {toastEl}
       </div>
     )
@@ -268,9 +343,9 @@ export default function StudyPage() {
           {sourceLabel ? <span className="ml-auto text-xs">{sourceLabel}</span> : null}
         </header>
         {current.dir === 'listen' ? (
-          <ListenFace card={current} revealed={revealed} blocked={blocked} onPlayResult={onPlayResult} />
+          <ListenFace card={current} revealed={revealed} audioIssue={audioIssue} onPlayResult={onPlayResult} />
         ) : (
-          <SayFace card={current} revealed={revealed} blocked={blocked} onPlayResult={onPlayResult} />
+          <SayFace card={current} revealed={revealed} audioIssue={audioIssue} onPlayResult={onPlayResult} />
         )}
       </Card>
 

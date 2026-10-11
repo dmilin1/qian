@@ -2,7 +2,10 @@ import { act, fireEvent, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { makeTestStore, renderWithApp } from '../../components/test-utils'
+import { FIXTURE_WORDS } from '../../lib/__fixtures__/words'
 import { parseImport } from '../../lib/exportImport'
+import { createManifest, createWordIndex } from '../../lib/words'
+import { AboutSection } from './AboutSection'
 import { __setDeferredPrompt, type BeforeInstallPromptEvent } from './install'
 import SettingsPage from './SettingsPage'
 
@@ -122,6 +125,18 @@ describe('SettingsPage', () => {
     expect(within(about).getByText('Space')).toBeInTheDocument()
   })
 
+  it('explains that known words start at about 8 days of stability', async () => {
+    await renderPage()
+    expect(screen.getByText(/start at about 8 days, so above 8 they count as in progress/)).toBeInTheDocument()
+  })
+
+  it('iOS install steps mention the ⋯ menu and More', async () => {
+    await renderPage()
+    const install = screen.getByRole('region', { name: 'Install' })
+    expect(within(install).getByText(/On newer iPhones, tap/)).toBeInTheDocument()
+    expect(within(install).getByText(/if you don't see it/)).toBeInTheDocument()
+  })
+
   it('offers the browser install prompt when available', async () => {
     const prompt = vi.fn(async () => {})
     __setDeferredPrompt({ prompt, userChoice: Promise.resolve({ outcome: 'accepted' }) } as unknown as BeforeInstallPromptEvent)
@@ -153,6 +168,35 @@ describe('Settings: export', () => {
     expect(store.getSnapshot().lastExportAt).not.toBeNull()
   })
 
+  it('cancelling the share sheet does not count as a backup', async () => {
+    const nav = navigator as unknown as { canShare?: unknown; share?: unknown }
+    const share = vi.fn<() => Promise<void>>(async () => {
+      throw new DOMException('Share canceled', 'AbortError')
+    })
+    Object.defineProperty(nav, 'canShare', { value: () => true, configurable: true, writable: true })
+    Object.defineProperty(nav, 'share', { value: share, configurable: true, writable: true })
+    try {
+      const { store } = await renderPage()
+      await act(() => store.grade(store.getSnapshot().current!.key, 'good'))
+      const user = userEvent.setup()
+      await user.click(screen.getByRole('button', { name: 'Share / Save to Files' }))
+      await waitFor(() => expect(share).toHaveBeenCalledTimes(1))
+      expect(await screen.findByText('Not saved.')).toBeInTheDocument()
+      expect(store.getSnapshot().lastExportAt).toBeNull()
+      expect(screen.getByTestId('last-export')).toHaveTextContent('Never exported')
+      expect(screen.getByText(/haven't backed up yet/)).toBeInTheDocument()
+
+      // A completed share does record it.
+      share.mockResolvedValueOnce(undefined)
+      await user.click(screen.getByRole('button', { name: 'Share / Save to Files' }))
+      await waitFor(() => expect(store.getSnapshot().lastExportAt).not.toBeNull())
+      expect(screen.queryByText(/haven't backed up yet/)).not.toBeInTheDocument()
+    } finally {
+      delete nav.canShare
+      delete nav.share
+    }
+  })
+
   it('reminds to back up when there is progress and no recent export', async () => {
     const { store } = await renderPage()
     expect(screen.queryByText(/haven't backed up yet/)).not.toBeInTheDocument()
@@ -171,7 +215,7 @@ describe('Settings: import', () => {
 
     const dialog = await screen.findByRole('dialog', { name: 'Import backup' })
     expect(within(dialog).getByRole('radio', { name: /merge/i })).toBeChecked()
-    expect(within(dialog).getByText(/1 entry/)).toBeInTheDocument()
+    expect(within(dialog).getByTestId('import-counts')).toHaveTextContent('This device: 0 entries · Backup: 1 entry')
     expect(spy).not.toHaveBeenCalled()
     await user.click(within(dialog).getByRole('button', { name: 'Merge' }))
 
@@ -189,6 +233,37 @@ describe('Settings: import', () => {
     const dialog = await screen.findByRole('dialog', { name: 'Import backup' })
     await user.click(within(dialog).getByRole('radio', { name: /replace/i }))
     await user.click(within(dialog).getByRole('button', { name: 'Replace my data' }))
+    expect(spy).toHaveBeenCalledWith(backup, 'replace')
+    expect(await screen.findByTestId('import-summary')).toHaveTextContent(/Replaced/)
+  })
+
+  it('replacing with a smaller backup warns and needs an explicit tick', async () => {
+    const backup = await makeBackup() // 1 entry
+    const { store } = await renderPage()
+    await act(() => store.grade(store.getSnapshot().current!.key, 'good'))
+    await act(() => store.grade(store.getSnapshot().current!.key, 'good'))
+    await act(() => store.grade(store.getSnapshot().current!.key, 'good'))
+    const local = store.getSnapshot().events.length
+    expect(local).toBe(3)
+    const spy = vi.spyOn(store, 'importData')
+    const user = userEvent.setup()
+    await user.upload(screen.getByTestId('import-file'), new File([backup], 'b.json', { type: 'application/json' }))
+    const dialog = await screen.findByRole('dialog', { name: 'Import backup' })
+    expect(within(dialog).getByTestId('import-counts')).toHaveTextContent('This device: 3 entries · Backup: 1 entry')
+    // Merge needs no extra step.
+    expect(within(dialog).queryByRole('checkbox')).not.toBeInTheDocument()
+
+    await user.click(within(dialog).getByRole('radio', { name: /replace/i }))
+    expect(within(dialog).getByText(/permanently lose 2 reviews/)).toBeInTheDocument()
+    expect(within(dialog).getByRole('button', { name: 'Export this device first' })).toBeInTheDocument()
+    const replace = within(dialog).getByRole('button', { name: 'Replace my data' })
+    expect(replace).toBeDisabled()
+    await user.click(replace)
+    expect(spy).not.toHaveBeenCalled()
+
+    await user.click(within(dialog).getByRole('checkbox', { name: /I understand/ }))
+    expect(replace).toBeEnabled()
+    await user.click(replace)
     expect(spy).toHaveBeenCalledWith(backup, 'replace')
     expect(await screen.findByTestId('import-summary')).toHaveTextContent(/Replaced/)
   })
@@ -242,5 +317,49 @@ describe('Settings: reset', () => {
     await user.click(within(dialog).getByRole('button', { name: 'Cancel' }))
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
     expect(reset).not.toHaveBeenCalled()
+  })
+})
+
+describe('Settings: audio test sample', () => {
+  it('follows showCharacters and tone colors like the rest of the app', async () => {
+    const r = renderWithApp(<SettingsPage />, { settings: { showCharacters: false } })
+    await waitFor(() => expect(r.store.getSnapshot().ready).toBe(true))
+    const row = screen.getByRole('button', { name: /Test playback/ }).parentElement!
+    expect(row.querySelector('[lang="zh-TW"]')).toBeNull()
+    expect(row.querySelector('[lang="zh-Latn-pinyin"].tone-colors')).not.toBeNull()
+    act(() => r.store.updateSettings({ showCharacters: true }))
+    expect(row.querySelector('[lang="zh-TW"]')).not.toBeNull()
+  })
+})
+
+describe('Settings: about', () => {
+  const words = createWordIndex(FIXTURE_WORDS)
+  const manifestOf = (entries: Record<string, { word?: string }>) =>
+    createManifest({ voiceId: 'v', model: 'eleven_test', generatedAt: '', entries })
+
+  it('does not claim studio recordings when the build has none', () => {
+    renderWithApp(<AboutSection words={words} manifest={manifestOf({})} />)
+    expect(screen.getByTestId('about-audio')).toHaveTextContent(/No studio recordings in this build yet/)
+    expect(screen.getByTestId('about-audio')).not.toHaveTextContent(/ElevenLabs/)
+  })
+
+  it('says how many words are recorded', () => {
+    const id = words.order[0]
+    renderWithApp(<AboutSection words={words} manifest={manifestOf({ [id]: { word: `audio/w/${id}.mp3` } })} />)
+    const audio = screen.getByTestId('about-audio')
+    expect(audio).toHaveTextContent(`1 of ${words.order.length} words recorded with ElevenLabs`)
+    expect(audio).toHaveTextContent(/The rest use your browser's speech voice/)
+  })
+
+  it('links each license and says MOE readings only', () => {
+    renderWithApp(<AboutSection words={words} manifest={manifestOf({})} />)
+    expect(screen.getByRole('link', { name: 'CC BY-ND 3.0 TW, © Ministry of Education, Taiwan' })).toHaveAttribute(
+      'href',
+      'https://creativecommons.org/licenses/by-nd/3.0/tw/',
+    )
+    expect(screen.getAllByRole('link', { name: /CC BY-SA 4.0/ }).length).toBeGreaterThanOrEqual(3)
+    expect(screen.getByRole('link', { name: 'Apache 2.0' })).toHaveAttribute('href', 'https://www.apache.org/licenses/LICENSE-2.0')
+    expect(screen.getByText(/reading fields only; no dictionary text is copied/)).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: 'qian repository' })).toHaveAttribute('href', 'https://github.com/dmilin1/qian')
   })
 })

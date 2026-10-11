@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from 'vitest'
 import { FIXTURE_MANIFEST, FIXTURE_WORDS } from '../../lib/__fixtures__/words'
 import { createManifest, createWordIndex } from '../../lib/words'
-import { AUDIO_CACHE, countCached, downloadClips, formatBytes, manifestClipUrls, recordedWordCount } from './audioCache'
+import { AUDIO_CACHE, countCached, downloadClips, formatBytes, manifestClipUrls, pruneAudioCache, recordedWordCount } from './audioCache'
 
 const abs = (u: string) => new URL(u, location.href).href
 
@@ -14,6 +14,7 @@ function fakeCaches() {
       match: async (u: string) => m.get(abs(u)),
       put: vi.fn(async (u: string, r: Response) => void m.set(abs(u), r)),
       keys: async () => [...m.keys()].map((url) => ({ url })),
+      delete: async (r: { url: string } | string) => m.delete(typeof r === 'string' ? abs(r) : r.url),
     } as unknown as Cache
   })
   const cs = {
@@ -103,6 +104,28 @@ describe('audioCache', () => {
     const r = await downloadClips(['/a.mp3'], { cacheStorage: null })
     expect(r.status).toBe('error')
     expect(await countCached(['/a.mp3'], null)).toBe(0)
+  })
+
+  it('prunes cached clips the manifest no longer references (regenerated clips get new URLs)', async () => {
+    const { cs, stores } = fakeCaches()
+    const old = ['/qian/audio/w/w4f60-0000aaaa.mp3', '/qian/audio/w/w4f60-1111bbbb.mp3', '/qian/audio/s/w4f60-2222cccc.mp3']
+    const current = ['/qian/audio/w/w4f60-1111bbbb.mp3', '/qian/audio/s/w4f60-3333dddd.mp3']
+    await downloadClips([...old, '/qian/other/keep.bin'], { cacheStorage: cs, fetchFn: okFetch() as unknown as typeof fetch })
+    expect(await countCached(current, cs)).toBe(1)
+
+    expect(await pruneAudioCache(current, cs)).toBe(2)
+    expect([...stores.get(AUDIO_CACHE)!.keys()].sort()).toEqual([abs('/qian/audio/w/w4f60-1111bbbb.mp3'), abs('/qian/other/keep.bin')])
+    // The changed example clip now counts as missing, so "Download the rest" fetches it.
+    const r = await downloadClips(current, { cacheStorage: cs, fetchFn: okFetch() as unknown as typeof fetch })
+    expect(r).toMatchObject({ status: 'complete', skipped: 1 })
+    expect(await countCached(current, cs)).toBe(2)
+  })
+
+  it('pruning is a no-op without Cache Storage or an audio cache', async () => {
+    expect(await pruneAudioCache([], null)).toBe(0)
+    const { cs, stores } = fakeCaches()
+    expect(await pruneAudioCache([], cs)).toBe(0)
+    expect(stores.has(AUDIO_CACHE)).toBe(false)
   })
 
   it('formats sizes', () => {

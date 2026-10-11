@@ -1,11 +1,13 @@
 import { describe, expect, it } from 'vitest'
 import { buildDerived, getCard, withEvent, type Derived } from './derive'
 import { cardKey, makeKnown, makeReview, makeSuspend, type AppEvent, type CardKey } from './events'
-import { DAY_MS, State } from './fsrs'
+import { DAY_MS, getFsrs, retrievability, State } from './fsrs'
 import {
   DEFAULT_SCHEDULER_SETTINGS,
   dueReviewCount,
+  EARLY_LEARNING_MS,
   formatInterval,
+  isDueReview,
   mulberry32,
   newCandidates,
   previewIntervals,
@@ -78,9 +80,56 @@ describe('introduction', () => {
     const s = sel(d, T0 + 1, { settings: { ...S, workingSetCap: 3 } })
     expect(s.info.gateBlockedBy).toBe('workingSet')
     expect(s.info.gateOpen).toBe(false)
-    // Nothing due yet, so a learning card is shown early instead of a new word.
-    expect(s.pick?.source).toBe('learningEarly')
+    // Nothing due and the 10-minute steps are far off: caught up (not shown early), waiting for the first step.
+    expect(s.pick).toBeNull()
+    expect(s.info.nextLearningDueAt).toBe(T0 + 1 + 10 * MIN)
+    // Within EARLY_LEARNING_MS of its step a learning card is shown a little early.
+    expect(sel(d, T0 + 1 + 10 * MIN - EARLY_LEARNING_MS, { settings: { ...S, workingSetCap: 3 } }).pick).toMatchObject({ key: 'wt1:listen', source: 'learningEarly' })
     expect(sel(d, T0 + 1, { settings: { ...S, workingSetCap: 4 } }).pick?.key).toBe('wt4:listen')
+  })
+
+  it('a full working set still lets in Say cards of words already in it (not past the backlog)', () => {
+    const evs = ['wt1', 'wt2', 'wt3'].flatMap((w, i) => graduate(w, T0 + i))
+    const d = buildDerived(evs)
+    const cap3 = { ...S, workingSetCap: 3 }
+    const now = T0 + 11 * MIN
+    expect(unstableWordCount(d, S.stableDays)).toBe(3)
+    const s = sel(d, now, { settings: cap3, recent: ['wt9:listen'] })
+    expect(s.pick).toMatchObject({ key: 'wt1:say', source: 'new', isNew: true, canMarkKnown: false })
+    expect(s.info.gateOpen).toBe(true)
+    expect(s.info.gateBlockedBy).toBeNull()
+    // Introducing it does not grow the working set, and the next word (wt4) stays locked out.
+    const d2 = withEvent(d, rev('wt1', 'say', 'good', now))
+    expect(unstableWordCount(d2, S.stableDays)).toBe(3)
+    for (let seed = 1; seed < 30; seed++) expect(sel(d2, now + 1000, { settings: cap3, seed }).pick?.key).not.toBe('wt4:listen')
+    // A review backlog still blocks it.
+    const b = sel(d, now, { settings: { ...cap3, backlogLimit: -1 }, recent: ['wt9:listen'] })
+    expect(b.info.gateBlockedBy).toBe('workingSet')
+    expect(b.pick?.isNew).not.toBe(true)
+  })
+
+  it('shows learning cards early in a weighted random order, not the introduction order', () => {
+    // 30 words introduced 8 s apart, all graded Good: every 10-minute step is still pending. Just before
+    // wt1's step is due, wt1..wt8 are within EARLY_LEARNING_MS of their step.
+    const ids = order.slice(0, 30)
+    const d = buildDerived(ids.map((w, i) => rev(w, 'listen', 'good', T0 + i * 8000)))
+    const now = T0 + 10 * MIN - 1000
+    const early = ids.slice(0, 8).map((w) => cardKey(w, 'listen'))
+    const pickAll = (recent: CardKey[]) => {
+      const counts = new Map<string, number>()
+      for (let seed = 1; seed <= 300; seed++) {
+        const s = sel(d, now, { seed, recent })
+        expect(s.pick?.source).toBe('learningEarly')
+        counts.set(s.pick!.key, (counts.get(s.pick!.key) ?? 0) + 1)
+      }
+      return counts
+    }
+    const spread = pickAll(ids.slice(-5).map((w) => cardKey(w, 'listen')))
+    expect(spread.size).toBeGreaterThan(4) // not always the earliest card
+    for (const k of spread.keys()) expect(early).toContain(k)
+    // Never one of the last few cards while another one is available.
+    const avoid = pickAll(early.slice(0, 5))
+    expect([...avoid.keys()].sort()).toEqual(early.slice(5).sort())
   })
 
   it('stable words (known) do not count toward the working set', () => {
@@ -95,12 +144,23 @@ describe('introduction', () => {
     expect(sel(d, T0 + DAY_MS).pick?.key).toBe('wt2:listen')
   })
 
+  it('suspended words that were graded still count as introduced (like the Words and Stats pages)', () => {
+    const d = buildDerived([
+      rev('wt1', 'listen', 'good', T0),
+      rev('wt2', 'listen', 'good', T0 + 1),
+      makeSuspend({ wordId: 'wt1', suspended: true, ts: T0 + 2, deviceId: dev }),
+    ])
+    const s = sel(d, T0 + DAY_MS)
+    expect(s.info.introducedWords).toBe(2)
+    expect(s.info.unstableWords).toBe(1)
+  })
+
   it('gate closes when the review backlog exceeds the limit', () => {
     const evs: AppEvent[] = []
     for (let i = 1; i <= 6; i++) evs.push(makeKnown({ wordId: `wt${i}`, ts: T0 + i, deviceId: dev }))
     const d = buildDerived(evs)
     const later = T0 + 60 * DAY_MS
-    expect(dueReviewCount(d, later, 0.9)).toBe(12)
+    expect(dueReviewCount(d, later)).toBe(12)
     const s = sel(d, later, { settings: { ...S, backlogLimit: 11 } })
     expect(s.info.gateBlockedBy).toBe('backlog')
     expect(s.pick?.source).toBe('review')
@@ -130,7 +190,8 @@ describe('selection order', () => {
     const d = buildDerived([...graduate('wt1', T0), ...graduate('wt1', T0, 'say'), ...graduate('wt2', T0)])
     const later = T0 + 30 * DAY_MS // all three due
     for (let seed = 1; seed < 50; seed++) {
-      const s = sel(d, later, { seed, recent: ['wt1:say'], settings: { ...S, workingSetCap: 0 } })
+      // newRatio 0: wt2:say (a Say card of a word still in the working set) is not in the way.
+      const s = sel(d, later, { seed, recent: ['wt1:say'], settings: { ...S, workingSetCap: 0 }, newRatio: 0 })
       expect(s.pick?.key).toBe('wt2:listen')
     }
     // Only the last card and its sibling are available -> sibling allowed, last card not.
@@ -170,7 +231,7 @@ describe('selection order', () => {
     const rng = mulberry32(11)
     const counts: Record<string, number> = {}
     for (let i = 0; i < 1000; i++) {
-      const s = selectNext({ derived: d, wordOrder: order, settings: { ...S, workingSetCap: 0 }, now, rng })
+      const s = selectNext({ derived: d, wordOrder: order, settings: { ...S, workingSetCap: 0 }, now, rng, newRatio: 0 })
       counts[s.pick!.key] = (counts[s.pick!.key] ?? 0) + 1
     }
     expect(counts['wt1:listen']).toBeGreaterThan(counts['wt2:listen'] ?? 0)
@@ -238,5 +299,63 @@ describe('interval previews', () => {
     expect(formatInterval(3 * DAY_MS)).toBe('3d')
     expect(formatInterval(65 * DAY_MS)).toBe('2mo')
     expect(formatInterval(400 * DAY_MS)).toBe('1.1y')
+  })
+})
+
+describe('review fixes (core)', () => {
+  it('a just-failed card is not graduated early: answering Good every 5 s with the gate closed takes ~10 min', () => {
+    // wt1 and wt2 are in Review, then both lapse; with cap 2 the working set is full, so nothing else is shown.
+    const lapse = T0 + 3 * DAY_MS
+    let d = buildDerived([...graduate('wt1', T0), ...graduate('wt2', T0 + 1), rev('wt1', 'listen', 'again', lapse), rev('wt2', 'listen', 'again', lapse + 1)])
+    expect(getCard(d, 'wt1', 'listen')!.card.state).toBe(State.Relearning)
+    const cap2 = { ...S, workingSetCap: 2 }
+    const recent: CardKey[] = ['wt2:listen']
+    const graduatedAt: Record<string, number> = {}
+    for (let now = lapse + 5000; now < lapse + 30 * MIN && Object.keys(graduatedAt).length < 2; now += 5000) {
+      const s = sel(d, now, { settings: cap2, recent })
+      if (!s.pick) continue
+      const target = s.pick.dir === 'listen' // a Say card of a word in the working set may still be introduced
+      d = withEvent(d, rev(s.pick.wordId, s.pick.dir, target ? 'good' : 'easy', now))
+      recent.push(s.pick.key)
+      if (target && getCard(d, s.pick.wordId, 'listen')!.card.state === State.Review) graduatedAt[s.pick.wordId] ??= now
+    }
+    // Relearning step is 10 min; showing at most EARLY_LEARNING_MS early.
+    expect(graduatedAt.wt1 - lapse).toBeGreaterThanOrEqual(10 * MIN - EARLY_LEARNING_MS)
+    expect(graduatedAt.wt2 - lapse).toBeGreaterThanOrEqual(10 * MIN - EARLY_LEARNING_MS)
+  })
+
+  it('a Review card is due exactly at card.due, and nextReviewDueAt agrees with the queue', () => {
+    // Many cards with the same history: fuzz pushes some due dates past the point where R hits 0.9.
+    const ids = order.slice(0, 40)
+    const d = buildDerived(ids.flatMap((w, i) => [...graduate(w, T0 + i * 1000), rev(w, 'listen', 'good', T0 + i * 1000 + 3 * DAY_MS)]))
+    const f = getFsrs(0.9)
+    const cards = ids.map((w) => getCard(d, w, 'listen')!)
+    const lateFuzz = cards.filter((c) => retrievability(f, c.card, c.card.due.getTime() - 1) <= 0.9)
+    expect(lateFuzz.length).toBeGreaterThan(0) // the case that used to come due early
+    for (const c of cards) {
+      expect(isDueReview(c, c.card.due.getTime() - 1)).toBe(false)
+      expect(isDueReview(c, c.card.due.getTime())).toBe(true)
+    }
+    const firstDue = Math.min(...cards.map((c) => c.card.due.getTime()))
+    const before = sel(d, firstDue - 1, { settings: { ...S, workingSetCap: 0 } })
+    expect(before.pick).toBeNull()
+    expect(before.info.dueReviews).toBe(0)
+    expect(before.info.nextReviewDueAt).toBe(firstDue)
+    expect(sel(d, firstDue, { settings: { ...S, workingSetCap: 0 } }).pick?.source).toBe('review')
+  })
+
+  it('button previews match the interval actually scheduled when graded seconds later', () => {
+    const ids = order.slice(0, 40)
+    let d = buildDerived(ids.flatMap((w, i) => graduate(w, T0 + i * 1000)))
+    for (const [i, w] of ids.entries()) {
+      const shownAt = getCard(d, w, 'listen')!.card.due.getTime() + i * 3600_000
+      const p = previewIntervals(d, cardKey(w, 'listen'), shownAt)
+      const gradedAt = shownAt + 6000
+      for (const g of ['again', 'good', 'easy'] as const) {
+        const after = withEvent(d, rev(w, 'listen', g, gradedAt))
+        expect(getCard(after, w, 'listen')!.card.due.getTime() - gradedAt, `${w} ${g}`).toBe(p[g].ms)
+      }
+      d = withEvent(d, rev(w, 'listen', 'good', gradedAt))
+    }
   })
 })

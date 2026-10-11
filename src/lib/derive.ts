@@ -42,6 +42,8 @@ export interface WordMeta {
 
 export interface Derived {
   readonly requestRetention: number
+  /** Day-boundary shift passed to FSRS (see fsrs.defaultDayOffsetMs); 0 = UTC midnight. */
+  readonly dayOffsetMs: number
   /** Only cards that have been graded at least once (introduced). Missing = New. */
   readonly cards: ReadonlyMap<CardKey, CardState>
   /** Only words that have suspend/flag events. */
@@ -60,13 +62,21 @@ interface WordReplay {
   meta: WordMeta
 }
 
-function gradeCard(f: FSRS, prev: CardState | undefined, wordId: string, dir: Dir, grade: GradeName, ts: number): CardState {
-  const card = applyGrade(f, prev ? prev.card : newCard(ts), grade, ts)
+/** FSRS instance + day-boundary offset: everything a replay needs besides the events. */
+interface Sched {
+  f: FSRS
+  off: number
+}
+
+const schedOf = (d: Pick<Derived, 'requestRetention' | 'dayOffsetMs'>): Sched => ({ f: getFsrs(d.requestRetention, d.dayOffsetMs), off: d.dayOffsetMs })
+
+function gradeCard(s: Sched, prev: CardState | undefined, wordId: string, dir: Dir, grade: GradeName, ts: number): CardState {
+  const card = applyGrade(s.f, prev ? prev.card : newCard(ts), grade, ts, s.off)
   return { key: cardKey(wordId, dir), wordId, dir, card, introducedAt: prev ? prev.introducedAt : ts, lastGrade: grade }
 }
 
 /** Pure single-step reducer for one word. */
-function step(f: FSRS, w: WordReplay, e: AppEvent): WordReplay {
+function step(f: Sched, w: WordReplay, e: AppEvent): WordReplay {
   switch (e.kind) {
     case 'review':
       return { ...w, [e.dir]: gradeCard(f, w[e.dir], e.wordId, e.dir, e.grade, e.ts) }
@@ -91,7 +101,7 @@ function step(f: FSRS, w: WordReplay, e: AppEvent): WordReplay {
   }
 }
 
-function replayWord(f: FSRS, sorted: readonly AppEvent[]): WordReplay {
+function replayWord(f: Sched, sorted: readonly AppEvent[]): WordReplay {
   let w: WordReplay = { meta: EMPTY_META }
   for (const e of sorted) w = step(f, w, e)
   return w
@@ -116,13 +126,13 @@ function writeWord(cards: Map<CardKey, CardState>, words: Map<string, WordMeta>,
   else words.delete(wordId)
 }
 
-export function emptyDerived(requestRetention = 0.9): Derived {
-  return { requestRetention, cards: new Map(), words: new Map(), eventsByWord: new Map(), eventCount: 0 }
+export function emptyDerived(requestRetention = 0.9, dayOffsetMs = 0): Derived {
+  return { requestRetention, dayOffsetMs, cards: new Map(), words: new Map(), eventsByWord: new Map(), eventCount: 0 }
 }
 
 /** Full rebuild. Deterministic: the result depends only on the set of events (not their input order). */
-export function buildDerived(events: readonly AppEvent[], requestRetention = 0.9): Derived {
-  const f = getFsrs(requestRetention)
+export function buildDerived(events: readonly AppEvent[], requestRetention = 0.9, dayOffsetMs = 0): Derived {
+  const f = schedOf({ requestRetention, dayOffsetMs })
   const byWord = new Map<string, AppEvent[]>()
   const seen = new Set<string>()
   for (const e of events) {
@@ -138,12 +148,12 @@ export function buildDerived(events: readonly AppEvent[], requestRetention = 0.9
     list.sort(compareEvents)
     writeWord(cards, words, wordId, replayWord(f, list))
   }
-  return { requestRetention, cards, words, eventsByWord: byWord, eventCount: seen.size }
+  return { requestRetention, dayOffsetMs, cards, words, eventsByWord: byWord, eventCount: seen.size }
 }
 
 /** Returns a new Derived with `e` applied (no-op if an event with the same id exists). */
 export function withEvent(d: Derived, e: AppEvent): Derived {
-  const f = getFsrs(d.requestRetention)
+  const f = schedOf(d)
   const prev = d.eventsByWord.get(e.wordId) ?? []
   if (prev.some((x) => x.id === e.id)) return d
   const last = prev[prev.length - 1]
@@ -164,7 +174,7 @@ export function withoutEvent(d: Derived, e: Pick<AppEvent, 'id' | 'wordId'>): De
   const prev = d.eventsByWord.get(e.wordId)
   if (!prev || !prev.some((x) => x.id === e.id)) return d
   const list = prev.filter((x) => x.id !== e.id)
-  return commit(d, e.wordId, list, replayWord(getFsrs(d.requestRetention), list), d.eventCount - 1)
+  return commit(d, e.wordId, list, replayWord(schedOf(d), list), d.eventCount - 1)
 }
 
 function commit(d: Derived, wordId: string, list: AppEvent[], w: WordReplay, eventCount: number): Derived {
@@ -174,7 +184,7 @@ function commit(d: Derived, wordId: string, list: AppEvent[], w: WordReplay, eve
   if (list.length) eventsByWord.set(wordId, list)
   else eventsByWord.delete(wordId)
   writeWord(cards, words, wordId, w)
-  return { requestRetention: d.requestRetention, cards, words, eventsByWord, eventCount }
+  return { requestRetention: d.requestRetention, dayOffsetMs: d.dayOffsetMs, cards, words, eventsByWord, eventCount }
 }
 
 // ---------- queries ----------

@@ -81,9 +81,12 @@ The suite runs against the production build under `/qian/` in three projects: De
 
 ## Data pipeline
 
-Build-time Python scripts in `scripts/` produce the committed app data. Use the project venv (`.venv`; packages: opencc, pypinyin, jieba, wordfreq, requests, numpy, praat-parselmouth, faster-whisper) and set `PYTHONIOENCODING=utf-8` when printing Chinese.
+Build-time Python scripts in `scripts/` produce the committed app data. Use the project venv (`.venv`, Python 3.11; pinned packages in `scripts/requirements.txt`) and set `PYTHONIOENCODING=utf-8` when printing Chinese.
 
 ```bash
+# 0. Once: create the venv and install the pinned packages
+python -m venv .venv
+./.venv/Scripts/python -m pip install -r scripts/requirements.txt --index-url https://pypi.org/simple
 # 1. Candidates: SUBTLEX-CH + wordfreq blend, OpenCC s2twp, CC-CEDICT and MOE readings -> data/candidates.json
 ./.venv/Scripts/python scripts/data/build_candidates.py
 # 2. Final 1000 (drops, Taiwan substitutions, sanity sweep) -> data/selected.json, data/selection-log.md
@@ -110,7 +113,9 @@ Each word gets a word clip and an example-sentence clip (`public/audio/w|s/<id>.
 
 ## Deployment
 
-Pushing to `main` (or running the workflow manually) runs `.github/workflows/deploy.yml`: `npm ci` → lint → Vitest → build → upload `dist/` → deploy to GitHub Pages. One-time repo setting: **Settings → Pages → Source: GitHub Actions**.
+Pushing to `main` (or running the workflow manually) runs `.github/workflows/deploy.yml`: `npm ci` → lint → Vitest → audio check → build → upload `dist/` → deploy to GitHub Pages. One-time repo setting: **Settings → Pages → Source: GitHub Actions**.
+
+- The audio check (`node scripts/check-audio.mjs`) fails the deploy when `src/data/audio-manifest.json` covers less than 99% of the word and example clips, or lists a clip that is missing from `public/audio/`. Without the clips every word would play through the browser's built-in voice. Generate the audio (above) and commit it before the first release. To deploy without recordings on purpose, set `MIN_AUDIO_COVERAGE=0` for that step.
 
 - The Vite `base` is `/qian/` for `build` and `preview`, and routing uses the hash (`/qian/#/words`), so Pages needs no 404 fallback.
 - The service worker (vite-plugin-pwa, Workbox `generateSW`) precaches the app shell and the word data. It does **not** precache audio: clips are cached on first play (CacheFirst, cache `qian-audio`), or all at once with *Settings → Audio → Download all audio*. When a new version is deployed, an open app shows a small "new version / Reload" toast.

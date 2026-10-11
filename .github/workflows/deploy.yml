@@ -32,6 +32,8 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npx vitest run
+      # Refuse to publish a build without the recorded audio (it would play browser TTS for every word).
+      - run: node scripts/check-audio.mjs
       # tsc -b + vite build; base path /qian/ comes from vite.config.ts.
       - run: npm run build
 

@@ -20,10 +20,13 @@ function IOSSteps() {
         <>
           Open qian in <strong className="font-medium">Safari</strong> and tap <span className="font-medium">Share</span>{' '}
           <ShareGlyph />
-          <span className="sr-only"> (the square with an arrow)</span>.
+          <span className="sr-only"> (the square with an arrow)</span>. On newer iPhones, tap{' '}
+          <span className="font-medium">⋯</span>
+          <span className="sr-only"> (the More button)</span> first, then Share.
         </>,
         <>
-          Scroll down and choose <strong className="font-medium">Add to Home Screen</strong>.
+          Choose <strong className="font-medium">Add to Home Screen</strong>. Scroll down or tap{' '}
+          <span className="font-medium">More</span> if you don't see it.
         </>,
         <>From now on, open qian from its home-screen icon.</>,
       ].map((step, i) => (

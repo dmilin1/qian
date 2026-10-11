@@ -234,7 +234,7 @@ export function StudySection() {
           k="stableDays"
           label="Stable after"
           format={(v) => `${v} day${v === 1 ? '' : 's'}`}
-          description="A word stops counting as in progress once you'd likely remember it this long. Lower = new words come faster, but they're less settled."
+          description="A word stops counting as in progress once you'd likely remember it this long. Lower = new words come faster, but they're less settled. Words you mark “I already know this” start at about 8 days, so above 8 they count as in progress until their first review."
         />
         <SettingSlider
           k="backlogLimit"

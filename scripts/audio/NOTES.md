@@ -12,10 +12,10 @@ PYTHONIOENCODING=utf-8 ./.venv/Scripts/python scripts/audio/generate.py
 ```
 
 The run writes:
-- `public/audio/w/<id>.mp3` and `public/audio/s/<id>.mp3`
+- `public/audio/w/<id>-<hash8>.mp3` and `public/audio/s/<id>-<hash8>.mp3`. `<hash8>` is taken from the mp3 bytes, so a regenerated clip gets a new URL and the service worker's cache-forever rule stays safe.
 - `src/data/audio-manifest.json`
 - `scripts/audio/state.json`, which should be committed. It holds the per-clip hash, seed, model, every attempt and its QC result.
-- `scripts/audio/flags.json`, the clips that never passed QC. A human should listen to these.
+- `scripts/audio/flags.json`, the clips that never passed QC. Each entry carries the `review` note from `reviews.json` while the reviewed file is still the one installed.
 - `scripts/audio/cache/`, raw FLAC and the mp3 of every attempt. It is gitignored.
 
 Useful flags:
@@ -30,10 +30,13 @@ Useful flags:
 - `--no-qc`
 - `--whisper`, `--device`
 - `--manifest-only`: rebuild the manifest and flags from the state file without calling the API.
-- `--overrides`: a JSON file of the form `{wordId: {wordText?, exampleText?}}`. It sends different TTS input text, for example an unambiguous homophone for a polyphone. QC still checks against the real word and its pinyin.
+- `--overrides` (default `scripts/audio/overrides.json`): a JSON file of the form `{wordId: {wordText?, exampleText?}}`. It sends different TTS input text, for example an unambiguous homophone for a polyphone. QC still checks against the real word and its pinyin.
+- `--extra MODEL[:SEED],...` (needs `--only`): runs one extra attempt per spec on each selected, up-to-date clip, for example `--words-only --only w4ed6 --extra eleven_flash_v2_5:11,eleven_v3:0`. Attempts are appended, the best attempt overall is installed, and the clip hash does not change, so a later plain run keeps the result.
+- `--reviews` (default `scripts/audio/reviews.json`): manual review notes for flagged clips, of the form `{clipKey: {status: "ok"|"listen", reason, path}}`. A note is copied into `flags.json` only while `path` is still the installed file.
 
 Other commands:
-- QC existing clips again: `./.venv/Scripts/python scripts/audio/qc.py --all`. For one file: `qc.py FILE --word 知道 --pinyin "zhi1 dao4"` or `qc.py FILE --sentence 你好。`
+- Re-score after changing `qc.py` (no API calls): `./.venv/Scripts/python scripts/audio/rescore.py [--all | --only s/w767e,w/w548c]`. It re-runs QC on every cached attempt, picks the best one again, reinstalls it if it changed, and rewrites state, manifest and flags. By default it covers only non-pass clips; `--all` takes about 25 min.
+- QC existing clips again (report only): `./.venv/Scripts/python scripts/audio/qc.py --all`. For one file: `qc.py FILE --word 知道 --pinyin "zhi1 dao4"` or `qc.py FILE --sentence 你好。`
 - Tests: `./.venv/Scripts/python -m pytest scripts/audio/tests -q`. To include the whisper end-to-end test, set `QC_SLOW=1`.
 - Reproduce the bake-off with `scripts/audio/bakeoff.py generate|score`. It writes to `public/audio/_bakeoff/`, which is temporary and should be deleted afterwards.
 
@@ -108,7 +111,8 @@ Other commands:
 
   `medium` and `large-v3-turbo` were not better than large-v3 on the bake-off. All four models are in the default HF cache at `~/.cache/huggingface/hub`, outside the repo.
 - **GPU setup:** CTranslate2's Windows wheel bundles cuDNN but not cuBLAS, so I installed `nvidia-cublas-cu12` into the venv. `qc.py` adds its DLL directory automatically. If CUDA fails, it prints a warning and falls back to CPU. **If the venv is ever rebuilt, `nvidia-cublas-cu12` must be reinstalled for GPU QC.**
-- **Normalization:** OpenCC t2s, NFKC, digits mapped to Chinese numerals (whisper writes 一 as "1"), and punctuation stripped. Known silence hallucinations ("字幕…", "订阅…") are dropped.
+- **Normalization:** OpenCC t2s, NFKC, and punctuation stripped. Known silence hallucinations ("字幕…", "订阅…") are dropped.
+- **Numbers:** whisper writes numbers as digits ("这本书300块"). Each digit run is tried in three spellings and the closest one wins: digit by digit ("1" → 一), as a number with 二 (300 → 三百), and as a number with 兩 before 百/千/萬 (2000 → 兩千). The first run had reported 這本書三百塊 and 總共一百零五塊 as fails because "300" became 三〇〇.
 
 ### Word clips
 
@@ -120,6 +124,7 @@ ASR comparison runs in this order:
    - Alignment is by edit distance:
      - same syllable with the same tone → match (a homophone)
      - same syllable with a different tone → `tone_mismatch`
+     - equal only after folding the Taiwan mergers zh/ch/sh → z/c/s and -ing/-eng → -in/-en, with the right tone → `accent_match`, which is treated like `primed_match`. Whisper is trained mostly on mainland speech, so it writes 進 as 靜, 金 as 晶 and 站 as 讚 for this Taiwan voice. Folding never hides a tone error.
      - different syllables → `mismatch`
      - the word heard with up to 2 extra characters → `partial`
 3. **Latin-only transcripts** ("E", "Sin", "BOOM") → `unclear`. They carry no evidence either way.
@@ -128,6 +133,7 @@ ASR comparison runs in this order:
 ### Sentence clips
 
 - The comparison uses the error rate `min(CER, toneless-pinyin error rate)`. The pinyin side is checked against the data's **Taiwan pinyin**: `example.pinyin` is split into syllables with a DP over valid syllables that respects apostrophes. pypinyin's mainland reading is used only as a fallback.
+- Each transcript character may match any of its dictionary readings, not only pypinyin's reading in context. Before this change, 他的头发很长 for 她的頭髮很長 counted 长 as zhǎng and came out suspect.
 - This catches 垃圾 read as lājī and heard as 拉機.
 - Thresholds: error rate 0 → match, ≤ 0.12 → near (pass), ≤ 0.30 → suspect, otherwise fail.
 - A sanity check flags speaking rates outside 1.2–9 characters per second.
@@ -176,7 +182,7 @@ ASR comparison runs in this order:
 | Speech recognition result | Pitch ok or unknown | Pitch weak | Pitch mismatch |
 |---|---|---|---|
 | match | pass | pass | suspect |
-| primed_match | pass | suspect | suspect |
+| primed_match, accent_match | pass | suspect | suspect |
 | tone_mismatch | suspect | fail | fail |
 | partial, empty, or unclear | suspect | suspect | fail |
 | mismatch | fail | fail | fail |
@@ -185,10 +191,10 @@ A word duration outside 0.15 s to (0.9 + 0.55 × syllables) s is always a fail. 
 
 ### Tests
 
-The suite has 59 fast tests plus 1 slow one.
+The suite has 66 fast tests plus 1 slow one.
 - **Synthetic contours:** harmonic signals with known pitch shapes, for each tone, wrong-tone rejection, two syllables with and without an unvoiced gap, and sandhi.
 - **Real clips:** 17 bake-off clips saved in `tests/fixtures/`. 14 are known good. 3 are known bad: 垃圾 read as lājī by v2 and by flash, and v4's falling 他.
-- **Other units:** transcript comparison, Taiwan-pinyin splitting, trimming, mp3 round trip, budget logic, clip hashing.
+- **Other units:** transcript comparison (including accent folding and digits), number spelling, sentence comparison with numbers and polyphones, Taiwan-pinyin splitting, trimming, mp3 round trip, budget logic, clip hashing.
 
 ## Bake-off (2026-10-11)
 
@@ -229,6 +235,106 @@ The suite has 59 fast tests plus 1 slow one.
 ## Open issues / for human review
 
 - **Isolated function words** such as 的, 了, 嗎 and 得 are spoken as single syllables. Their neutral tone carries no pitch evidence, so QC only checks the syllable. 嗎 alone comes out with a rising, question-like contour on v4. That is acceptable, but a human should listen.
-- **一 on its own:** the expected citation reading is yī. v4 tends to say it falling. The fallback model is the main hope, and the word may end up in `flags.json`.
-- **Pitch thresholds** were calibrated on one voice and about 100 syllables. If the full run flags many clips that sound fine, loosen the thresholds in `tone_scores` or raise the 0.4/0.15 cut-offs in `PitchAnalyzer.check`. Then re-score without spending credits: `qc.py --all`. For per-attempt scores, re-score the cached mp3s.
-- **`flags.json`** should be listened to by a human (ideally the user's wife) after the full run.
+- **一 on its own:** the expected citation reading is yī. v4 says it falling on every seed. The installed clip is from `eleven_flash_v2_5` seed 11, added with `--extra`, and it passes with a level tone.
+- **Pitch thresholds** were calibrated on one voice and about 100 syllables. After the full run, the pitch check over-flags two cases:
+  - short (≤ 110 ms) middle syllables
+  - a tone-2 syllable right before a voiced initial (然, 麼, 來), where the syllable boundary seems to land inside the next syllable's low start
+  
+  I left the thresholds unchanged and recorded these cases as reviews instead, because loosening them would also hide real falling tone-1s. To change them, edit `tone_scores` or `PitchAnalyzer.check`, then run `rescore.py --all` (no credits).
+- **`flags.json`** should be listened to by a human, ideally the user's wife. Start with the "listen" entries; the full run report below has a prioritized list.
+
+## Full run report (2026-10-11)
+
+### Totals
+
+- **Coverage:** 1000 words × (word clip + example clip) = **2000 clips, all installed**. Every word has both clips, and no word is missing.
+- **Manifest:** `src/data/audio-manifest.json` has 1000 entries. Every path exists on disk, and every mp3 in `public/audio/{w,s}` is referenced. Nothing else is in `public/audio`.
+- **Idempotency:** a plain `generate.py --dry-run` now reports 0 clips to generate.
+- **Size:** `public/audio` is **16.0 MB**: words average 5.2 KB and sentences 10.9 KB. That is well under the ~60 MB threshold, so I kept 48 kbps.
+- **Models of the installed clips:**
+
+  | Model | Word clips | Sentence clips |
+  |---|---|---|
+  | `eleven_v4` | 859 | 997 |
+  | `eleven_flash_v2_5` (fallback) | 122 | 3 |
+  | `eleven_v3` (added with `--extra`) | 12 | 0 |
+  | `eleven_multilingual_v2` (added with `--extra`) | 7 | 0 |
+
+### QC results (after re-scoring every attempt with the final `qc.py`)
+
+| | Pass | Suspect | Fail |
+|---|---|---|---|
+| Words | 954 | 45 | 1 |
+| Sentences | 999 | 1 | 0 |
+| **Total** | **1953** | **46** | **1** |
+
+- All 47 flagged clips have a review note in `reviews.json`, which is copied into `flags.json`:
+  - **35 `ok`:** QC is likely a false alarm.
+  - **12 `listen`:** these are plausibly wrong.
+- For comparison, the first pass had 121 flagged clips (110 suspect, 11 fail).
+
+### Credits
+
+- **Subscription endpoint:** 1240/40000 used after the run, against 105 before, so this task spent **1135 credits** in total. 38,760 remain.
+- **Breakdown:**
+  - main run: 1046 credits (2506 requests, of which 46 credits were retries; 17.8 min)
+  - re-tries and `--extra` attempts: about 87 credits, almost all for `eleven_v3`/`multilingual_v2` attempts on words
+  - a scratch model experiment: 2 credits
+- **Rates:** words on v4 and flash cost 0 credits, and sentences cost about 1 credit each. The 15,000 budget was never close.
+
+### What I changed after the first pass
+
+**QC false alarms fixed in `qc.py`.** I re-scored with `rescore.py`, which spends no credits.
+- Numbers written as digits.
+- Per-character readings in sentence pinyin (她/他, 長 in 很長).
+- Taiwan accent folding for words (`accent_match`).
+
+These fixed 8 sentence clips plus 金 and 站.
+
+**Polyphone misreads fixed with homophone TTS text** (`overrides.json`; QC still checks the real word):
+
+| Word | Problem | TTS text |
+|---|---|---|
+| 隻 zhī | v4 read it as 只 zhǐ | 知 |
+| 教 jiāo | read as jiào | 交 |
+| 待 dāi | read as dài | 呆 |
+| 數 shǔ | read as shù | 鼠 |
+| 和 hé | read as hè | 河 |
+| 字 zì | whisper heard other syllables on every seed | 自 |
+| 沒 méi | low tone 2 | 梅 (the pitch is now a clear rise) |
+
+- After the override, all except 沒 pass.
+- 腕 for 萬, 沙 for 殺, 衣 for 一, 今 for 金 and 圖然 for 突然 did not help, so I removed them.
+- Adding "。" or "！" to a word changed nothing on v4: same contour, same QC result.
+
+**`--retry-flagged`** (3 more seeds each) on all flagged words fixed 35 more.
+
+**`--extra` with other models** on words where v4 kept failing:
+- Isolated tone-1 syllables fall on v4 with every seed (他, 一, 喝, 傷, 低, 逼, 殺, 飛). Text tweaks do not change this.
+- `eleven_flash_v2_5`, `eleven_v3` or `eleven_multilingual_v2` produced passing clips for most of them. Those clips are installed, so 19 word clips use a non-v4 model (listed in `state.json`). They are the same voice, but the timbre may differ slightly from the v4 sentences.
+
+### Clips a native speaker should listen to (priority order)
+
+Each audio file is `public/<path>` from `flags.json`/the manifest.
+
+1. **w6c92 沒 méi** (rank 40): whisper hears 美 měi on every attempt, but the pitch rises from low. Check that it does not sound like měi. The TTS text is the homophone 梅.
+2. **w4ec0-9ebc 什麼 shén me** (rank 22): ASR is exact on all 19 attempts across 4 models, but 什 never rises in pitch. This is probably normal fast speech, but it is a top-25 word.
+3. **w5594 喔 ō** (rank 132): every attempt falls (ò), while the data says ō. Taiwan colloquial 喔 is often ò. Decide which reading to teach, and fix the data or the audio to match.
+4. **w7a81-7136 突然 tú rán** (rank 669): the first syllable falls on all 19 attempts across 5 models. That is probably a QC segmentation artifact, but it could be tù.
+5. **w7a2e 種 zhǒng** (rank 241): whisper hears 中. The contour starts high and only dips through creak, so it could be zhōng or zhòng.
+6. **w8b1b 講 jiǎng** (rank 423): whisper hears 醬 jiàng. The fall stops short of the usual tone-3 low, and there is 150 ms of extra voiced sound.
+7. **w624d 才 cái** (rank 108) and **w883b 蠻 mán** (rank 623): whisper hears tone 3 (彩, 滿). The rise starts very low, and the pitch check cannot tell tone 2 from tone 3.
+8. **w897f 西 xī** (rank 811): only the flash fallback gave a level tone; the v4 attempts fell.
+9. **w9060 遠 yuǎn** (rank 531): whisper hears 愿. There is an extra 150 ms voiced segment.
+10. **Spot check of the homophone-text clips:**
+    - 和 (TTS text 河)
+    - 隻 (知)
+    - 教 (交)
+    - 待 (呆)
+    - 數 (鼠)
+    - 字 (自)
+
+    Also listen to one or two non-v4 word clips to check that the timbre matches, for example 喝 (`eleven_v3`) and 傷 (`eleven_multilingual_v2`).
+11. **Low priority:** 差不多 (差 nearly flat) and 其中 (其 short and flat). Both have exact ASR.
+
+The 35 `ok` clips need no listening unless there is time. Their reasons are in `reviews.json`. Most are isolated syllables that whisper writes with the wrong tone or as English, such as "B", "C", "Go", "Ciao" and "1" for wàn ("one"), while the pitch contour fits the expected tone.

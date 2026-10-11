@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, it } from 'vitest'
+import { afterEach, describe, expect, it, vi } from 'vitest'
 import { makeWords } from './__fixtures__/words'
 import { buildDerived } from './derive'
 import { mulberry32 } from './scheduler'
@@ -215,12 +215,56 @@ describe('app store', () => {
     expect(store.getSnapshot().current?.key).toBe('wt1:listen')
     await store.grade('wt1:listen', 'good') // graduates
     s = store.getSnapshot()
-    // The say card is now eligible, but the working set (cap 1) is full.
-    expect(s.current).toBeNull()
+    // The working set (cap 1) is full, but wt1 is already in it, so its say card may start.
+    expect(s.current).toMatchObject({ key: 'wt1:say', isNew: true })
+    await store.grade('wt1:say', 'good')
+    s = store.getSnapshot()
+    expect(s.current).toBeNull() // wt1:say was just shown; nothing else is due
     store.setPracticeAhead(true)
     s = store.getSnapshot()
     expect(s.practiceAhead).toBe(true)
-    expect(s.current).toBeNull() // the only card was just shown
+    expect(s.current).toMatchObject({ key: 'wt1:listen', source: 'practice' })
+  })
+
+  it('caught up with the next card days away: re-picks on its own (hourly re-check) and on resume', async () => {
+    vi.useFakeTimers({ now: T0, toFake: ['setTimeout', 'clearTimeout', 'Date'] })
+    try {
+      const { store } = setup({ inMemory: true, now: () => Date.now() })
+      await store.init()
+      store.updateSettings({ workingSetCap: 1, stableDays: 60 })
+      await store.markKnown('wt1') // both cards due in about a week; the working set (cap 1) is full
+      let s = store.getSnapshot()
+      expect(s.current).toBeNull()
+      const dueAt = s.queue.nextReviewDueAt!
+      expect(dueAt - T0).toBeGreaterThan(24 * 60 * MIN)
+      // The timer runs every hour until the card is due, without a reload or user action.
+      vi.advanceTimersByTime(dueAt - T0 - 30 * MIN)
+      expect(store.getSnapshot().current).toBeNull()
+      vi.advanceTimersByTime(2 * 60 * MIN)
+      s = store.getSnapshot()
+      expect(s.current).toMatchObject({ wordId: 'wt1', source: 'review' })
+      expect(s.queue.dueReviews).toBeGreaterThan(0)
+      store.dispose()
+
+      // Timers do not run while a page is suspended: coming back to the page re-picks too.
+      vi.setSystemTime(T0)
+      const b = setup({ inMemory: true, now: () => Date.now() })
+      await b.store.init()
+      b.store.updateSettings({ workingSetCap: 1, stableDays: 60 })
+      await b.store.markKnown('wt1')
+      expect(b.store.getSnapshot().current).toBeNull()
+      vi.setSystemTime(dueAt + MIN) // no timers fired
+      expect(b.store.getSnapshot().current).toBeNull()
+      window.dispatchEvent(new Event('focus'))
+      const cur = b.store.getSnapshot().current
+      expect(cur).toMatchObject({ wordId: 'wt1', source: 'review' })
+      // Resuming never swaps a card that is already on screen.
+      window.dispatchEvent(new Event('pageshow'))
+      document.dispatchEvent(new Event('visibilitychange'))
+      expect(b.store.getSnapshot().current).toBe(cur)
+    } finally {
+      vi.useRealTimers()
+    }
   })
 
   it('resetAll wipes progress', async () => {

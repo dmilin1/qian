@@ -5,7 +5,7 @@
     "pinyin": "de",
     "gloss": "(possessive / describing particle)",
     "pos": "particle",
-    "note": "Links a describer to a noun, like 's or \"of\": 我的 wǒ de \"my\", 好吃的菜 \"tasty food\". Other readings: dí in 的確 dí què \"indeed\", dì in 目的 mù dì \"goal\".",
+    "note": "Links a describer to a noun, like 's or 'of': 我的 wǒ de 'my', 好吃的菜 'tasty food'. Other readings: dí in 的確 dí què 'indeed', dì in 目的 mù dì 'goal'.",
     "example": {
       "trad": "這是誰的？",
       "pinyin": "Zhè shì shéi de?",
@@ -31,7 +31,7 @@
     "gloss": "to be (am / is / are)",
     "hint": "A is B, not location",
     "pos": "verb",
-    "note": "Links two nouns (A 是 B). Not used before adjectives: say 我很累, not 我是累. A bare 是 for \"yes\" sounds formal; everyday Taiwan speech uses 對 or 嗯.",
+    "note": "Links two nouns (A 是 B). Not used before adjectives: say 我很累, not 我是累. A bare 是 for 'yes' sounds formal; everyday Taiwan speech uses 對 or 嗯.",
     "example": {
       "trad": "他是我的朋友。",
       "pinyin": "Tā shì wǒ de péngyǒu.",
@@ -44,7 +44,7 @@
     "pinyin": "le",
     "gloss": "(completed action / change of state)",
     "pos": "particle",
-    "note": "After a verb it marks a finished action (我吃了 \"I ate\"); at the end of a sentence it marks a new situation (下雨了 \"it's raining now\"). Other reading liǎo \"to finish\", as in 受不了 shòu bu liǎo \"can't stand it\".",
+    "note": "After a verb it marks a finished action (我吃了 'I ate'); at the end of a sentence it marks a new situation (下雨了 'it's raining now'). Other reading liǎo 'to finish', as in 受不了 shòu bu liǎo 'can't stand it'.",
     "example": {
       "trad": "我吃飽了。",
       "pinyin": "Wǒ chībǎo le.",
@@ -69,9 +69,9 @@
     "trad": "在",
     "pinyin": "zài",
     "gloss": "at; in; to be (located) at",
-    "hint": "location; also \"-ing\"",
+    "hint": "location; also '-ing'",
     "pos": "prep",
-    "note": "Says where someone or something is (他在家 \"he's at home\"). Before a verb it means \"in the middle of\": 我在吃飯 \"I'm eating\".",
+    "note": "Says where someone or something is (他在家 'he's at home'). Before a verb it means 'in the middle of': 我在吃飯 'I'm eating'.",
     "example": {
       "trad": "你在哪裡？",
       "pinyin": "Nǐ zài nǎlǐ?",
@@ -83,9 +83,9 @@
     "trad": "不",
     "pinyin": "bù",
     "gloss": "not; no",
-    "hint": "general \"not\"",
+    "hint": "general 'not'",
     "pos": "adv",
-    "note": "Negates habits, wishes and the present/future (我不去 \"I'm not going\"). Use 沒 for 有 and for things that didn't happen. Spoken bú before a 4th tone: 不要 bú yào.",
+    "note": "Negates habits, wishes and the present/future (我不去 'I'm not going'). Use 沒 for 有 and for things that didn't happen. Spoken bú before a 4th tone: 不要 bú yào.",
     "example": {
       "trad": "我不喜歡。",
       "pinyin": "Wǒ bù xǐhuān.",
@@ -98,7 +98,7 @@
     "pinyin": "tā",
     "gloss": "he; him; she (in speech)",
     "pos": "pron",
-    "note": "In speech tā covers he and she. In writing \"she\" is 她 and \"it\" is 它/牠, all pronounced tā; in speech \"it\" is usually left out or said with 這/那.",
+    "note": "In speech tā covers he and she. In writing 'she' is 她 and 'it' is 它/牠, all pronounced tā; in speech 'it' is usually left out or said with 這/那.",
     "example": {
       "trad": "他今天不在。",
       "pinyin": "Tā jīntiān bù zài.",
@@ -111,7 +111,7 @@
     "pinyin": "yǒu",
     "gloss": "to have; there is / are",
     "pos": "verb",
-    "note": "Negated with 沒 (沒有 \"don't have\"), never 不有. Taiwan Mandarin also uses 有 before a verb for \"did\": 我有去 \"I did go\".",
+    "note": "Negated with 沒 (沒有 'don't have'), never 不有. Taiwan Mandarin also uses 有 before a verb for 'did': 我有去 'I did go'.",
     "example": {
       "trad": "你有時間嗎？",
       "pinyin": "Nǐ yǒu shíjiān ma?",
@@ -124,7 +124,7 @@
     "pinyin": "wǒ men",
     "gloss": "we; us",
     "pos": "pron",
-    "note": "Taiwan uses 我們 for every \"we\"; the mainland 咱們 (\"we, including you\") is rarely heard.",
+    "note": "Taiwan uses 我們 for every 'we'; the mainland 咱們 ('we, including you') is rarely heard.",
     "example": {
       "trad": "我們是朋友。",
       "pinyin": "Wǒmen shì péngyǒu.",
@@ -136,9 +136,9 @@
     "trad": "這",
     "pinyin": "zhè",
     "gloss": "this",
-    "hint": "one syllable",
+    "hint": "as in 'this is…'; before a measure word",
     "pos": "pron",
-    "note": "Used alone (這是… \"this is…\") or before a number/measure word (這個, 這次). Before a measure word it is often said zhèi: 這個 zhèi ge.",
+    "note": "Used alone (這是… 'this is…') or before a number/measure word (這個, 這次). Before a measure word it is often said zhèi: 這個 zhèi ge.",
     "example": {
       "trad": "這是我的手機。",
       "pinyin": "Zhè shì wǒ de shǒujī.",
@@ -152,7 +152,7 @@
     "gloss": "then (at once); exactly",
     "hint": "as soon as; sooner than expected",
     "pos": "adv",
-    "note": "Very flexible adverb: \"then / as soon as\" (吃完就走 \"leave right after eating\"), \"exactly\" (就是他 \"it's him\"), \"only\" (就一個 \"just one\").",
+    "note": "Very flexible adverb: 'then / as soon as' (吃完就走 'leave right after eating'), 'exactly' (就是他 'it's him'), 'only' (就一個 'just one').",
     "example": {
       "trad": "我馬上就來。",
       "pinyin": "Wǒ mǎshàng jiù lái.",
@@ -177,7 +177,7 @@
     "trad": "和",
     "pinyin": "hé",
     "gloss": "and; with",
-    "hint": "slightly formal \"and\"",
+    "hint": "slightly formal 'and'",
     "pos": "conj",
     "note": "Joins nouns, not sentences. Many Taiwanese say hàn (an MOE-listed colloquial reading), and in casual speech 跟 is more common. Other readings: hè (附和), huó (和麵), huò, hú (winning in mahjong).",
     "example": {
@@ -206,7 +206,7 @@
     "gloss": "can (know how to); will",
     "hint": "learned skill; likely to",
     "pos": "aux",
-    "note": "A learned skill (我會游泳 \"I can swim\") or what is likely to happen (明天會下雨 \"it will rain tomorrow\"). Compare 能 (able) and 可以 (allowed). Other reading kuài in 會計 kuài jì \"accountant\".",
+    "note": "A learned skill (我會游泳 'I can swim') or what is likely to happen (明天會下雨 'it will rain tomorrow'). Compare 能 (able) and 可以 (allowed). Other reading kuài in 會計 kuài jì 'accountant'.",
     "example": {
       "trad": "你會說中文嗎？",
       "pinyin": "Nǐ huì shuō Zhōngwén ma?",
@@ -220,7 +220,7 @@
     "gloss": "to say; to speak",
     "hint": "the standard word",
     "pos": "verb",
-    "note": "Taiwanese often use 講 jiǎng for the same meaning in casual speech. Other reading shuì in 遊說 yóu shuì \"to lobby\".",
+    "note": "Taiwanese often use 講 jiǎng for the same meaning in casual speech. Other reading shuì in 遊說 yóu shuì 'to lobby'.",
     "example": {
       "trad": "他說他不來。",
       "pinyin": "Tā shuō tā bù lái.",
@@ -233,7 +233,7 @@
     "pinyin": "hǎo",
     "gloss": "good; well; okay",
     "pos": "adj",
-    "note": "Alone it means \"okay / sure\". Before an adjective it means \"so, really\" (好累 \"so tired\"), very common in Taiwan. Other reading hào \"to be fond of\" (愛好 ài hào).",
+    "note": "Alone it means 'okay / sure'. Before an adjective it means 'so, really' (好累 'so tired'), very common in Taiwan. Other reading hào 'to be fond of' (愛好 ài hào).",
     "example": {
       "trad": "你的中文很好！",
       "pinyin": "Nǐ de Zhōngwén hěn hǎo!",
@@ -247,7 +247,7 @@
     "gloss": "to want; to need to; will",
     "hint": "firm 'want'; also 'going to'",
     "pos": "verb",
-    "note": "More direct than 想. Also \"need to / should\" (你要小心 \"be careful\") and \"about to\" (要下雨了). Other reading yāo in 要求 yāo qiú \"to demand\".",
+    "note": "More direct than 想. Also 'need to / should' (你要小心 'be careful') and 'about to' (要下雨了). Other reading yāo in 要求 yāo qiú 'to demand'.",
     "example": {
       "trad": "你要喝什麼？",
       "pinyin": "Nǐ yào hē shénme?",
@@ -261,7 +261,7 @@
     "gloss": "all; both",
     "hint": "adverb before the verb",
     "pos": "adv",
-    "note": "Goes before the verb and sums up the people or things already mentioned: 我們都去 \"we're all going\". Other reading dū \"capital city\" (首都 shǒu dū).",
+    "note": "Goes before the verb and sums up the people or things already mentioned: 我們都去 'we're all going'. Other reading dū 'capital city' (首都 shǒu dū).",
     "example": {
       "trad": "我們都很好。",
       "pinyin": "Wǒmen dōu hěn hǎo.",
@@ -275,7 +275,7 @@
     "gloss": "also; too",
     "hint": "me too",
     "pos": "adv",
-    "note": "Goes before the verb, never at the end: 我也是 \"me too\".",
+    "note": "Goes before the verb, never at the end: 我也是 'me too'.",
     "example": {
       "trad": "我也要去。",
       "pinyin": "Wǒ yě yào qù.",
@@ -302,7 +302,7 @@
     "gloss": "to come",
     "hint": "toward the speaker",
     "pos": "verb",
-    "note": "Also \"let me / I'll do it\" before a verb (我來 \"let me\"), and after verbs for movement toward the speaker (拿來 \"bring here\").",
+    "note": "Also 'let me / I'll do it' before a verb (我來 'let me'), and after verbs for movement toward the speaker (拿來 'bring here').",
     "example": {
       "trad": "你什麼時候來？",
       "pinyin": "Nǐ shénme shíhòu lái?",
@@ -314,9 +314,9 @@
     "trad": "對",
     "pinyin": "duì",
     "gloss": "right; correct",
-    "hint": "everyday \"that's right!\"",
+    "hint": "everyday 'that's right!'",
     "pos": "adj",
-    "note": "Alone it means \"yes, right\". As a preposition it means \"to / toward\": 他對我很好 \"he's good to me\". Also counts pairs: 一對 \"a pair\".",
+    "note": "Alone it means 'yes, right'. As a preposition it means 'to / toward': 他對我很好 'he's good to me'. Also counts pairs: 一對 'a pair'.",
     "example": {
       "trad": "對，就是這個。",
       "pinyin": "Duì, jiùshì zhège.",
@@ -341,9 +341,9 @@
     "trad": "很",
     "pinyin": "hěn",
     "gloss": "very",
-    "hint": "the everyday \"very\"",
+    "hint": "the everyday 'very'",
     "pos": "adv",
-    "note": "Often just links a subject and an adjective without much \"very\": 我很好 \"I'm fine\".",
+    "note": "Often just links a subject and an adjective without much 'very': 我很好 'I'm fine'.",
     "example": {
       "trad": "今天很熱。",
       "pinyin": "Jīntiān hěn rè.",
@@ -370,7 +370,7 @@
     "gloss": "to arrive; to reach; until",
     "hint": "reach a place",
     "pos": "verb",
-    "note": "Also \"to (a place)\" (到台北 \"to Taipei\") and \"until\" (到明天). After a verb it means you succeeded: 找到 \"found\", 看到 \"saw\".",
+    "note": "Also 'to (a place)' (到台北 'to Taipei') and 'until' (到明天). After a verb it means you succeeded: 找到 'found', 看到 'saw'.",
     "example": {
       "trad": "我們到家了。",
       "pinyin": "Wǒmen dào jiā le.",
@@ -382,9 +382,9 @@
     "trad": "上",
     "pinyin": "shàng",
     "gloss": "on; up; above; previous",
-    "hint": "one syllable; also \"get on\"",
+    "hint": "one syllable; also 'get on'",
     "pos": "noun",
-    "note": "A place word: 桌上 \"on the table\". As a verb \"to go up / get on / attend\": 上車 \"get in the car\", 上班 \"go to work\". Also \"last\": 上個月 \"last month\".",
+    "note": "A place word: 桌上 'on the table'. As a verb 'to go up / get on / attend': 上車 'get in the car', 上班 'go to work'. Also 'last': 上個月 'last month'.",
     "example": {
       "trad": "手機在床上。",
       "pinyin": "Shǒujī zài chuáng shàng.",
@@ -398,7 +398,7 @@
     "gloss": "can; to be able to",
     "hint": "one syllable; able to, circumstances allow",
     "pos": "aux",
-    "note": "Ability or possibility in the situation. In Taiwan it is heard most in the negative (不能 \"can't\"); for requests people usually say 可以. Compare 會 (learned skill) and 可以 (permission).",
+    "note": "Ability or possibility in the situation. In Taiwan it is heard most in the negative (不能 'can't'); for requests people usually say 可以. Compare 會 (learned skill) and 可以 (permission).",
     "example": {
       "trad": "我明天不能來。",
       "pinyin": "Wǒ míngtiān bù néng lái.",
@@ -425,7 +425,7 @@
     "gloss": "still; yet; also",
     "hint": "still, not yet over",
     "pos": "adv",
-    "note": "\"Still\" (還在 \"still here\"), \"yet\" with 沒 (還沒 \"not yet\"), \"in addition\" (還要 \"want more\"). Other reading huán \"to give back\" (還錢 huán qián).",
+    "note": "'Still' (還在 'still here'), 'yet' with 沒 (還沒 'not yet'), 'in addition' (還要 'want more'). Other reading huán 'to give back' (還錢 huán qián).",
     "example": {
       "trad": "他還在睡。",
       "pinyin": "Tā hái zài shuì.",
@@ -439,7 +439,7 @@
     "gloss": "to want to; to think; to miss",
     "hint": "softer 'would like'; also think, miss",
     "pos": "verb",
-    "note": "Before a verb it is a softer \"want to\" than 要. Before a person it means \"to miss\": 我想你 \"I miss you\".",
+    "note": "Before a verb it is a softer 'want to' than 要. Before a person it means 'to miss': 我想你 'I miss you'.",
     "example": {
       "trad": "我想回家。",
       "pinyin": "Wǒ xiǎng huíjiā.",
@@ -464,9 +464,9 @@
     "trad": "沒有",
     "pinyin": "méi yǒu",
     "gloss": "to not have; didn't",
-    "hint": "two syllables (full form)",
+    "hint": "can stand alone: 'no, I didn't'",
     "pos": "verb",
-    "note": "Negates 有 (\"don't have, there isn't\") and past actions (我沒有去 \"I didn't go\"). Often shortened to 沒. Also a common short answer: \"No.\"",
+    "note": "Negates 有 ('don't have, there isn't') and past actions (我沒有去 'I didn't go'). Often shortened to 沒. Also a common short answer: 'No.'",
     "example": {
       "trad": "我沒有錢。",
       "pinyin": "Wǒ méiyǒu qián.",
@@ -478,9 +478,9 @@
     "trad": "那",
     "pinyin": "nà",
     "gloss": "that; then (in that case)",
-    "hint": "one syllable; also 'well then'",
+    "hint": "as in 'that is…'; also 'well then'",
     "pos": "pron",
-    "note": "Before a measure word often said nèi (那個 nèi ge). At the start of a sentence it means \"then / so\": 那我們走吧 \"then let's go\". The \"which\" question word is written 哪 nǎ.",
+    "note": "Before a measure word often said nèi (那個 nèi ge). At the start of a sentence it means 'then / so': 那我們走吧 'then let's go'. The 'which' question word is written 哪 nǎ.",
     "example": {
       "trad": "那是誰？",
       "pinyin": "Nà shì shéi?",
@@ -491,9 +491,9 @@
     "rank": 37,
     "trad": "吧",
     "pinyin": "ba",
-    "gloss": "(suggestion / \"right?\" particle)",
+    "gloss": "(suggestion / 'right?' particle)",
     "pos": "particle",
-    "note": "Makes a suggestion (走吧 \"let's go\") or asks for agreement (你是老師吧？ \"you're a teacher, right?\"). Other reading bā in 酒吧 jiǔ bā \"bar\".",
+    "note": "Makes a suggestion (走吧 'let's go') or asks for agreement (你是老師吧？ 'you're a teacher, right?'). Other reading bā in 酒吧 jiǔ bā 'bar'.",
     "example": {
       "trad": "我們吃飯吧。",
       "pinyin": "Wǒmen chīfàn ba.",
@@ -521,7 +521,7 @@
     "gloss": "to let; to make (someone)",
     "hint": "allow; cause",
     "pos": "verb",
-    "note": "讓 + person + verb: \"let/make someone do\": 讓他很生氣 \"made him angry\". Also \"to give way\" (讓位 \"give up your seat\").",
+    "note": "讓 + person + verb: 'let/make someone do': 讓他很生氣 'made him angry'. Also 'to give way' (讓位 'give up your seat').",
     "example": {
       "trad": "讓我想一下。",
       "pinyin": "Ràng wǒ xiǎng yīxià.",
@@ -533,9 +533,9 @@
     "trad": "沒",
     "pinyin": "méi",
     "gloss": "not (have); didn't",
-    "hint": "one syllable (short form)",
+    "hint": "short form, only before a verb or noun",
     "pos": "adv",
-    "note": "Short for 沒有: negates 有 and things that didn't happen; use 不 for habits and the future. Other reading mò \"to sink\" (沒收 mò shōu \"confiscate\").",
+    "note": "Short for 沒有: negates 有 and things that didn't happen; use 不 for habits and the future. Other reading mò 'to sink' (沒收 mò shōu 'confiscate').",
     "example": {
       "trad": "我還沒吃。",
       "pinyin": "Wǒ hái méi chī.",
@@ -548,7 +548,7 @@
     "pinyin": "bǎ",
     "gloss": "(puts the object before the verb)",
     "pos": "prep",
-    "note": "把 + thing + verb: \"take X and do something to it\": 把門關上 \"close the door\". Also a measure word for things with handles: 一把傘 \"an umbrella\", 一把鑰匙 \"a key\".",
+    "note": "把 + thing + verb: 'take X and do something to it': 把門關上 'close the door'. Also a measure word for things with handles: 一把傘 'an umbrella', 一把鑰匙 'a key'.",
     "example": {
       "trad": "請把門關上。",
       "pinyin": "Qǐng bǎ mén guānshàng.",
@@ -562,7 +562,7 @@
     "gloss": "to give; for; to",
     "hint": "hand over",
     "pos": "verb",
-    "note": "Also \"for / to\" before a person: 打給我 \"call me\", 給你看 \"let you see\". Other reading jǐ in 供給 gōng jǐ \"supply\". Compare 送 (to give as a gift).",
+    "note": "Also 'for / to' before a person: 打給我 'call me', 給你看 'let you see'. Other reading jǐ in 供給 gōng jǐ 'supply'. Compare 送 (to give as a gift).",
     "example": {
       "trad": "這個給你。",
       "pinyin": "Zhège gěi nǐ.",
@@ -575,7 +575,7 @@
     "pinyin": "zhe",
     "gloss": "(-ing: ongoing state)",
     "pos": "particle",
-    "note": "After a verb it marks a continuing state: 門開著 \"the door is open\", 坐著 \"sitting\". Other readings: zháo in 睡著 shuì zháo \"fall asleep\", zhù in 著名 zhù míng \"famous\", zhuó in 著陸 \"land\".",
+    "note": "After a verb it marks a continuing state: 門開著 'the door is open', 坐著 'sitting'. Other readings: zháo in 睡著 shuì zháo 'fall asleep', zhù in 著名 zhù míng 'famous', zhuó in 著陸 'land'.",
     "example": {
       "trad": "他坐著看電視。",
       "pinyin": "Tā zuòzhe kàn diànshì.",
@@ -587,9 +587,9 @@
     "trad": "這個",
     "pinyin": "zhè ge",
     "gloss": "this; this one",
-    "hint": "two syllables; this one, with a measure word",
+    "hint": "this one; can stand alone",
     "pos": "pron",
-    "note": "Very often said zhèi ge. Also used as a filler, like \"um\", while thinking.",
+    "note": "Very often said zhèi ge. Also used as a filler, like 'um', while thinking.",
     "example": {
       "trad": "這個多少錢？",
       "pinyin": "Zhège duōshǎo qián?",
@@ -603,7 +603,7 @@
     "gloss": "to do; to make",
     "hint": "general word",
     "pos": "verb",
-    "note": "Same sound as 作 zuò in 工作 \"work\".",
+    "note": "Same sound as 作 zuò in 工作 'work'.",
     "example": {
       "trad": "你今天做了什麼？",
       "pinyin": "Nǐ jīntiān zuò le shénme?",
@@ -617,7 +617,7 @@
     "gloss": "can; may; okay",
     "hint": "allowed to",
     "pos": "aux",
-    "note": "Asks or gives permission. As a reply it means \"sure / that works\" or \"not bad\". Compare 會 (learned skill) and 能 (able).",
+    "note": "Asks or gives permission. As a reply it means 'sure / that works' or 'not bad'. Compare 會 (learned skill) and 能 (able).",
     "example": {
       "trad": "我可以坐這裡嗎？",
       "pinyin": "Wǒ kěyǐ zuò zhèlǐ ma?",
@@ -631,7 +631,7 @@
     "gloss": "for (the sake of)",
     "hint": "one syllable; for someone's sake",
     "pos": "prep",
-    "note": "Mostly heard in 為什麼 \"why\" and 為了 \"in order to\". Other reading wéi \"to act as / be\", in 認為 rèn wéi \"to think\" and 成為 chéng wéi \"to become\".",
+    "note": "Mostly heard in 為什麼 'why' and 為了 'in order to'. Other reading wéi 'to act as / be', in 認為 rèn wéi 'to think' and 成為 chéng wéi 'to become'.",
     "example": {
       "trad": "我是為你好。",
       "pinyin": "Wǒ shì wèi nǐ hǎo.",
@@ -645,7 +645,7 @@
     "gloss": "to look; to watch; to read",
     "hint": "the act of looking",
     "pos": "verb",
-    "note": "Also \"to visit / see\" (看醫生 \"see a doctor\") and \"it depends\" (看你 \"up to you\"). Other reading kān \"to look after\" (看家 kān jiā).",
+    "note": "Also 'to visit / see' (看醫生 'see a doctor') and 'it depends' (看你 'up to you'). Other reading kān 'to look after' (看家 kān jiā).",
     "example": {
       "trad": "你要看電影嗎？",
       "pinyin": "Nǐ yào kàn diànyǐng ma?",
@@ -658,7 +658,7 @@
     "pinyin": "guò",
     "gloss": "(have ever done); to pass",
     "pos": "particle",
-    "note": "After a verb it means \"have ever done\": 去過 \"have been\". As a verb: \"to cross / pass / spend (time)\": 過馬路, 過年. MOE gives guò; the mainland says unstressed guo for the \"ever\" meaning.",
+    "note": "After a verb it means 'have ever done': 去過 'have been'. As a verb: 'to cross / pass / spend (time)': 過馬路, 過年. MOE gives guò; the mainland says unstressed guo for the 'ever' meaning.",
     "example": {
       "trad": "你吃過這個嗎？",
       "pinyin": "Nǐ chīguò zhège ma?",
@@ -671,7 +671,7 @@
     "pinyin": "bèi",
     "gloss": "(passive marker: by)",
     "pos": "prep",
-    "note": "Marks the passive, usually for something bad: 被罵 \"got scolded\". Also means \"quilt\" in 棉被 mián bèi. Other reading pī (literary).",
+    "note": "Marks the passive, usually for something bad: 被罵 'got scolded'. Also means 'quilt' in 棉被 mián bèi. Other reading pī (literary).",
     "example": {
       "trad": "我的手機被偷了。",
       "pinyin": "Wǒ de shǒujī bèi tōu le.",

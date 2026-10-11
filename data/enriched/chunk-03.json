@@ -17,7 +17,7 @@
     "trad": "該",
     "pinyin": "gāi",
     "gloss": "it's time to; should; (one's) turn",
-    "hint": "one syllable",
+    "hint": "'time to go'; 'your turn'",
     "pos": "aux",
     "note": "Short, everyday form of 應該 'should'. Very common in 該走了 (gāi zǒu le) 'time to go' and 該你了 'your turn'.",
     "example": {
@@ -114,7 +114,7 @@
     "trad": "應該",
     "pinyin": "yīng gāi",
     "gloss": "should; ought to; probably",
-    "hint": "two syllables",
+    "hint": "the usual 'should'; also 'probably'",
     "pos": "aux",
     "note": "Also used to guess: 他應該到了 'he's probably arrived'. 該 (gāi) is the short form.",
     "example": {
@@ -188,7 +188,7 @@
     "note": "別 + verb is a command, same as 不要: 別走 'don't go', 別擔心 'don't worry'. Also 'other' in 別人 'other people' and 別的 'something else'.",
     "example": {
       "trad": "別擔心，沒事。",
-      "pinyin": "Bié dānxīn, méi shì.",
+      "pinyin": "Bié dānxīn, méishì.",
       "english": "Don't worry, it's fine."
     }
   },
@@ -244,7 +244,7 @@
     "note": "Adds something ('also, and another thing') or says something remains: 還有時間 'there's still time'. 還 is hái here; it is huán in 還錢 'pay back money'.",
     "example": {
       "trad": "還有別的問題嗎？",
-      "pinyin": "Háiyǒu bié de wèntí ma?",
+      "pinyin": "Háiyǒu biéde wèntí ma?",
       "english": "Are there any other questions?"
     }
   },
@@ -348,7 +348,7 @@
     "trad": "前",
     "pinyin": "qián",
     "gloss": "front; ago; before (a time)",
-    "hint": "one syllable; after a time, as in \"three days ago\"",
+    "hint": "one syllable; after a time, as in 'three days ago'",
     "pos": "noun",
     "note": "After a time it means 'ago': 三天前 'three days ago'. Also in 前面 'in front' and 以前 'before, in the past'.",
     "example": {
@@ -445,7 +445,7 @@
     "trad": "那個",
     "pinyin": "nà ge",
     "gloss": "that; that one; um…",
-    "hint": "two syllables; that one",
+    "hint": "that one; can stand alone",
     "pos": "pron",
     "note": "Also the go-to filler while thinking: 那個… 'um…'. Often said nèi ge. MOE also lists nǎ ge, an old form of 哪個 'which one'.",
     "example": {
@@ -500,7 +500,7 @@
     "trad": "幹",
     "pinyin": "gàn",
     "gloss": "to do (colloquial)",
-    "hint": "casual; mostly in \"what are you doing?\" or \"why?\"",
+    "hint": "casual; mostly in 'what are you doing?' or 'why?'",
     "pos": "verb",
     "note": "Safe everyday uses: 幹嘛 (gàn má) 'what are you doing / why', 能幹 'capable'. Caution: in Taiwan 幹！ on its own is a strong swear word (like 'f***').",
     "example": {
@@ -553,7 +553,7 @@
     "trad": "一樣",
     "pinyin": "yī yàng",
     "gloss": "the same; alike",
-    "hint": "everyday word, as in \"same as you\"",
+    "hint": "everyday word, as in 'same as you'",
     "pos": "adj",
     "note": "跟…一樣 'the same as…'; 不一樣 'different'. 像…一樣 'just like…'.",
     "example": {

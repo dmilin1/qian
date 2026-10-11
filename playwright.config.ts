@@ -1,7 +1,7 @@
 import { defineConfig, devices } from '@playwright/test'
 
-/** Fixed port for the production preview (base /qian/, like GitHub Pages). */
-const PORT = 4317
+/** Port for the production preview (base /qian/, like GitHub Pages). Override with E2E_PORT. */
+const PORT = Number(process.env.E2E_PORT) || 4317
 const BASE_PATH = '/qian/'
 
 export default defineConfig({
@@ -29,7 +29,10 @@ export default defineConfig({
     // Production build served under /qian/ (vite preview uses the same base as the build).
     command: `npm run build && npx vite preview --port ${PORT} --strictPort`,
     url: `http://localhost:${PORT}${BASE_PATH}`,
-    reuseExistingServer: !process.env.CI,
+    // Always build and serve the current code. A leftover server on the port (old build, another
+    // worktree) then fails loudly via --strictPort instead of being tested silently.
+    // PW_REUSE_SERVER=1 opts back into reuse while iterating against a preview you started yourself.
+    reuseExistingServer: !!process.env.PW_REUSE_SERVER,
     timeout: 180_000,
   },
 })

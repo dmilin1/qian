@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
+import { audioRangeResponse } from './src/features/settings/audioCache.sw.ts'
 
 /** Served from https://dmilin1.github.io/qian/ in production. */
 const BASE = '/qian/'
@@ -87,6 +88,8 @@ export default defineConfig(({ command, isPreview }) => ({
                   // whole clip (200) on a miss. Later requests get sliced from the cache.
                   requestWillFetch: async ({ request }: { request: Request }) =>
                     request.headers.has('range') ? new Request(request.url, { credentials: 'same-origin' }) : request,
+                  // ...and answer that first, uncached request with a 206 slice too.
+                  handlerWillRespond: audioRangeResponse,
                 },
               ],
             },

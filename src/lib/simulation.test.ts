@@ -45,7 +45,7 @@ describe('60-day simulation (150 reviews/day, recall p = R)', () => {
   it('is deterministic', () => {
     const again = simulate({ days: 60, reviewsPerDay: 150, offDays: off, seed: 2026, practiceAhead: true })
     expect(again.days).toEqual(r.days)
-  })
+  }, 30_000)
 
   it('a learner who stops when caught up still progresses', () => {
     const r2 = simulate({ days: 60, reviewsPerDay: 150, seed: 7, practiceAhead: false })

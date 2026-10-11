@@ -1,15 +1,18 @@
 // The content of a study card: front (question) and the revealed answer, for both directions.
-import type { ReactNode } from 'react'
+import { useEffect, useRef, type ReactNode } from 'react'
 import type { Word } from '../../data/types'
 import type { PlayResult } from '../../lib/audio'
 import type { StudyCard } from '../../lib/store'
 import { AudioButton, Hanzi, Icon, Kbd, Pinyin, cx, useSettings } from '../../components'
 
+/** blocked = the browser refused autoplay (needs a tap); failed = neither a clip nor TTS could play. */
+export type AudioIssue = 'blocked' | 'failed' | null
+
 interface FaceProps {
   card: StudyCard
   revealed: boolean
-  /** Autoplay or a tap was refused by the browser: show a "tap to play" hint. */
-  blocked: boolean
+  /** Why the last play of this card's audio did not work, if it did not. */
+  audioIssue: AudioIssue
   onPlayResult: (r: PlayResult) => void
 }
 
@@ -31,11 +34,22 @@ function ReplayRow({ word, size, primary, onPlayResult }: { word: Word; size: 'l
   )
 }
 
-function BlockedHint({ show }: { show: boolean }) {
-  if (!show) return null
+function AudioHint({ issue }: { issue: AudioIssue }) {
+  if (!issue) return null
+  if (issue === 'blocked') {
+    return (
+      <p role="status" className="text-sm text-muted">
+        Your browser paused autoplay. Tap play to hear it.
+      </p>
+    )
+  }
   return (
     <p role="status" className="text-sm text-muted">
-      Your browser paused autoplay. Tap play to hear it.
+      Couldn’t play audio.{' '}
+      <a href="#/settings" className="font-medium text-ink underline underline-offset-2">
+        Check Settings → Audio
+      </a>
+      .
     </p>
   )
 }
@@ -106,6 +120,41 @@ function Section({ children, className }: { children: ReactNode; className?: str
   return <div className={cx('flex flex-col items-center gap-4 text-center', className)}>{children}</div>
 }
 
+/**
+ * Front of the card. Top-anchored (not centred), so nothing on it moves when its content changes on
+ * reveal. The min height only applies before reveal; after it, the answer moves up to save room.
+ */
+function Front({ revealed, children, className }: { revealed: boolean; children: ReactNode; className?: string }) {
+  return <Section className={cx('justify-start pt-2', !revealed && 'min-h-48', className)}>{children}</Section>
+}
+
+/**
+ * First block of the answer. On mount (reveal) it scrolls itself into view above the sticky action
+ * bar, so on short screens the meaning is not hidden behind the grade buttons. The scroll margins
+ * match the bar's height: tab bar + bar on phones (taller when the prompt row shows at 700px+).
+ */
+function AnswerLead({ children, className }: { children: ReactNode; className?: string }) {
+  const ref = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    const el = ref.current
+    if (!el || typeof el.scrollIntoView !== 'function') return
+    const reduce = typeof window.matchMedia === 'function' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    el.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: reduce ? 'auto' : 'smooth' })
+  }, [])
+  return (
+    <div
+      ref={ref}
+      className={cx(
+        'flex flex-col items-center gap-4 text-center',
+        'scroll-mt-4 scroll-mb-[calc(var(--tabbar-h)+env(safe-area-inset-bottom)+7.5rem)] [@media(min-height:700px)]:scroll-mb-[calc(var(--tabbar-h)+env(safe-area-inset-bottom)+11rem)] sm:scroll-mt-20 sm:scroll-mb-40!',
+        className,
+      )}
+    >
+      {children}
+    </div>
+  )
+}
+
 /** Divider + answer block, faded in. */
 function Answer({ children }: { children: ReactNode }) {
   return (
@@ -116,17 +165,18 @@ function Answer({ children }: { children: ReactNode }) {
   )
 }
 
-export function ListenFace({ card, revealed, blocked, onPlayResult }: FaceProps) {
+export function ListenFace({ card, revealed, audioIssue, onPlayResult }: FaceProps) {
   const { listenFront } = useSettings()
   const audioOnly = listenFront === 'audioOnly'
   const w = card.word
   return (
     <>
-      <Section className="min-h-[12rem] justify-center">
+      <Front revealed={revealed}>
         {audioOnly ? (
           <>
             <ReplayRow word={w} size="hero" primary onPlayResult={onPlayResult} />
-            {revealed ? <WordForm word={w} /> : <p className="text-lg text-muted">What does this mean?</p>}
+            {/* If audio cannot play at all, fall back to showing the word so the card still works. */}
+            {revealed || audioIssue === 'failed' ? <WordForm word={w} /> : <p className="text-lg text-muted">What does this mean?</p>}
           </>
         ) : (
           <>
@@ -134,15 +184,15 @@ export function ListenFace({ card, revealed, blocked, onPlayResult }: FaceProps)
             <ReplayRow word={w} size="lg" onPlayResult={onPlayResult} />
           </>
         )}
-        <BlockedHint show={blocked} />
-      </Section>
+        <AudioHint issue={audioIssue} />
+      </Front>
       {revealed ? (
         <Answer>
-          <Section className="gap-3">
+          <AnswerLead className="gap-3">
             <Gloss word={w} size="lg" />
             <PosChip pos={w.pos} />
             <SpokenAs word={w} />
-          </Section>
+          </AnswerLead>
           <Note word={w} />
           <Example word={w} />
         </Answer>
@@ -151,11 +201,11 @@ export function ListenFace({ card, revealed, blocked, onPlayResult }: FaceProps)
   )
 }
 
-export function SayFace({ card, revealed, blocked, onPlayResult }: FaceProps) {
+export function SayFace({ card, revealed, audioIssue, onPlayResult }: FaceProps) {
   const w = card.word
   return (
     <>
-      <Section className="min-h-[12rem] justify-center gap-3">
+      <Front revealed={revealed} className="gap-3">
         <Gloss word={w} size="xl" />
         <PosChip pos={w.pos} />
         {revealed ? null : (
@@ -164,15 +214,15 @@ export function SayFace({ card, revealed, blocked, onPlayResult }: FaceProps) {
             Say it out loud
           </p>
         )}
-      </Section>
+      </Front>
       {revealed ? (
         <Answer>
-          <Section>
+          <AnswerLead>
             <WordForm word={w} />
             <ReplayRow word={w} size="lg" onPlayResult={onPlayResult} />
-            <BlockedHint show={blocked} />
+            <AudioHint issue={audioIssue} />
             <SpokenAs word={w} />
-          </Section>
+          </AnswerLead>
           <Note word={w} />
           <Example word={w} />
         </Answer>

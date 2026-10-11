@@ -21,15 +21,19 @@ export interface AudioPlayerOptions {
   gestureTarget?: EventTarget | null
   /** Safety timeout for TTS utterances whose `end` event never fires. */
   ttsTimeoutMs?: number
+  /** Used by preload() to warm the cache (default: the global fetch). */
+  fetch?: (url: string, init?: RequestInit) => Promise<unknown>
 }
 
 const TTS_RATE = 0.9
-const GESTURES = ['pointerdown', 'keydown', 'touchend'] as const
+// Activation-triggering events only: a touch pointerdown does not count as a user gesture on iOS,
+// so priming audio there would "unlock" nothing.
+const GESTURES = ['click', 'touchend', 'keydown'] as const
 const PRELOAD_MAX = 8
 const PREFERRED_VOICE = /taiwan|hsiaochen|hsiaoyu|meijia|mei-jia|hanhan|yating|zhiwei/i
-// 0.1 s of silence, used to unlock the shared <audio> element inside the first user gesture.
-const SILENT_WAV =
-  'data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA='
+// 0.05 s of silence (8 kHz, 8-bit mono, 400 samples of 0x80), used to unlock the shared <audio>
+// element inside a user gesture. A clip with an empty data chunk is rejected by WebKit.
+const SILENT_WAV = 'data:audio/wav;base64,UklGRrQBAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YZABAACA' + 'gICA'.repeat(133)
 
 /** Best voice for Taiwan Mandarin: known Taiwan voices, then any zh-TW, then any zh-*. */
 export function pickZhVoice(voices: readonly SpeechSynthesisVoice[]): SpeechSynthesisVoice | null {
@@ -59,7 +63,9 @@ export class AudioPlayer {
   private el: HTMLAudioElement | null = null
   private token = 0
   private finishCurrent: ((r: PlayResult) => void) | null = null
-  private preloaded = new Map<string, HTMLAudioElement>()
+  private preloaded = new Set<string>()
+  private fetchFn: ((url: string, init?: RequestInit) => Promise<unknown>) | null
+  private priming = false
   private listeners = new Set<() => void>()
   private gestureTarget: EventTarget | null
   private _unlocked = false
@@ -74,6 +80,7 @@ export class AudioPlayer {
     this.speech = opts.speech !== undefined ? opts.speech : (globalThis.speechSynthesis ?? null)
     this.ttsTimeoutMs = opts.ttsTimeoutMs ?? 15_000
     this.gestureTarget = opts.gestureTarget !== undefined ? opts.gestureTarget : typeof window !== 'undefined' ? window : null
+    this.fetchFn = opts.fetch ?? (typeof fetch === 'function' ? (url, init) => fetch(url, init) : null)
     this.listenForGesture(true)
   }
 
@@ -104,25 +111,51 @@ export class AudioPlayer {
     this.unlock()
   }
 
-  /** Call from inside a user gesture (also done automatically on the first pointer/key event). */
-  unlock(): void {
-    if (this._unlocked) return
-    this.setUnlocked(true)
-    this.listenForGesture(false)
-    // Prime the shared element and speech engine within the gesture (needed on iOS Safari).
-    const el = this.element()
-    if (!this.finishCurrent) {
+  /**
+   * Call from inside a user gesture (also done automatically on the first click/tap/key). With
+   * `force`, primes again even if already unlocked, so a Start button always primes inside its own
+   * click rather than relying on an earlier event that may not have counted as a gesture.
+   */
+  unlock(opts: { force?: boolean } = {}): void {
+    if (this._unlocked && !opts.force) return
+    if (this.priming && !opts.force) return
+    this.prime()
+  }
+
+  /** Prime the shared element and speech engine within the gesture (needed on iOS Safari). */
+  private prime() {
+    const done = () => {
+      this.priming = false
+      this.setUnlocked(true)
+      this.listenForGesture(false)
+    }
+    if (this.finishCurrent) {
+      // Something is already playing on the element: it is evidently allowed; do not interrupt it.
+      done()
+    } else {
+      this.priming = true
       try {
+        const el = this.element()
         el.src = SILENT_WAV
         const p = el.play()
-        if (p && typeof p.catch === 'function') p.catch(() => {})
+        if (p && typeof p.then === 'function') {
+          p.then(done, (err: unknown) => {
+            // Not a valid gesture (e.g. a touch pointerdown on iOS): keep listening for the next one.
+            // Any other error (a later play() aborting this one, a decode error) still means the
+            // gesture went through.
+            if ((err as { name?: string })?.name === 'NotAllowedError') this.priming = false
+            else done()
+          })
+        } else done()
       } catch {
-        // ignore
+        done()
       }
     }
     try {
       if (this.speech && !this.speech.speaking && typeof SpeechSynthesisUtterance !== 'undefined') {
-        const u = new SpeechSynthesisUtterance('')
+        // Non-empty text: some engines ignore an empty utterance, which then primes nothing.
+        const u = new SpeechSynthesisUtterance(' ')
+        u.lang = 'zh-TW'
         u.volume = 0
         this.speech.speak(u)
       }
@@ -264,22 +297,30 @@ export class AudioPlayer {
     })
   }
 
-  /** Warm the browser cache for upcoming cards (word + example clips). */
+  /**
+   * Warm the cache for upcoming cards (word + example clips). A plain fetch (no Range header) goes
+   * through the service worker's CacheFirst audio route, so the later <audio> request is a cache
+   * hit. Detached `<audio preload="auto">` elements would be ignored by iOS Safari.
+   */
   preload(wordIds: readonly string[], kinds: readonly ClipKind[] = ['word', 'example']): void {
+    const fetchFn = this.fetchFn
+    if (!fetchFn) return
+    const conn = (globalThis.navigator as { connection?: { saveData?: boolean } } | undefined)?.connection
+    if (conn?.saveData) return
     for (const id of wordIds) {
       for (const kind of kinds) {
         const url = this.urlFor(id, kind)
         if (!url || this.preloaded.has(url)) continue
+        this.preloaded.add(url)
         try {
-          const a = this.createAudio()
-          a.preload = 'auto'
-          a.src = url
-          this.preloaded.set(url, a)
+          fetchFn(url, { credentials: 'same-origin', priority: 'low' } as RequestInit).catch(() => {
+            this.preloaded.delete(url)
+          })
         } catch {
-          // ignore
+          this.preloaded.delete(url)
         }
         while (this.preloaded.size > PRELOAD_MAX) {
-          const oldest = this.preloaded.keys().next().value as string
+          const oldest = this.preloaded.values().next().value as string
           this.preloaded.delete(oldest)
         }
       }

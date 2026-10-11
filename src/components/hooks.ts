@@ -54,12 +54,22 @@ export function usePageTitle(title: string | null | undefined): void {
   }, [title, pathname])
 }
 
-/** The current time, refreshed every `intervalMs`, for relative times ("in 3 min"). */
+/**
+ * The current time, refreshed every `intervalMs` and whenever the page becomes visible again
+ * (a resumed PWA can sit on a page overnight), for relative times ("in 3 min") and "today".
+ */
 export function useNow(intervalMs = 30_000): number {
   const [now, setNow] = useState(() => Date.now())
   useEffect(() => {
     const t = setInterval(() => setNow(Date.now()), intervalMs)
-    return () => clearInterval(t)
+    const onVisible = () => {
+      if (document.visibilityState === 'visible') setNow(Date.now())
+    }
+    document.addEventListener('visibilitychange', onVisible)
+    return () => {
+      clearInterval(t)
+      document.removeEventListener('visibilitychange', onVisible)
+    }
   }, [intervalMs])
   return now
 }

@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { AudioButton, Banner, Button, Icon, useSelector, useStore } from '../../components'
+import { AudioButton, Banner, Button, Hanzi, Icon, Pinyin, useSelector, useStore } from '../../components'
 import { pickZhVoice, type PlayResult } from '../../lib/audio'
 import { getManifest, getWords, type Manifest, type WordIndex } from '../../lib/words'
 import {
@@ -259,8 +259,10 @@ export function AudioSection({ words = getWords(), manifest = getManifest() }: {
             >
               Test playback
             </AudioButton>
-            <span className="text-sm text-muted">
-              <span lang="zh-TW">{sample.trad}</span> · {sample.pinyin}
+            {/* Follows showCharacters and tone colors like every other pinyin/hanzi in the app. */}
+            <span className="inline-flex items-baseline gap-2 text-sm text-muted">
+              <Pinyin word={sample} size="sm" />
+              <Hanzi word={sample} size="sm" />
             </span>
           </div>
         ) : null}

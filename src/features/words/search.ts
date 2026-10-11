@@ -2,13 +2,18 @@
 //
 // Pinyin matching is tone-insensitive unless the query gives tones: "nihao", "ni hao", "ni3hao3",
 // "ni3 hao" and "nǐ hǎo" all find 你好, while "ni4" does not. Tones may be typed as numbers
-// (0 or 5 = neutral) or as tone marks. "v", "u:" or plain "u" all match ü. Matches must start at a
-// syllable boundary ("hao" finds 你好, "ao" does not), so short queries stay useful.
+// (0 or 5 = neutral) or as tone marks. A neutral tone on either side matches any tone, because many
+// Taiwanese say the full tone ("xie4xie4" finds 謝謝 xiè xie, "peng2you5" finds 朋友 péng yǒu); such
+// matches rank one tier below exact-tone ones. "v", "u:" or plain "u" all match ü. Matches must start
+// at a syllable boundary ("hao" finds 你好, "ao" does not), so short queries stay useful.
 import type { Tone, Word } from '../../data/types'
 import { segmentPinyin, splitSyllables } from '../../components/pinyinText'
 
-/** 0 = exact, 1 = prefix / word start, 2 = somewhere inside. Lower is better. */
-export type MatchTier = 0 | 1 | 2
+/**
+ * 0 = exact, 1 = prefix / word start (for pinyin: ending on a whole syllable), 2 = pinyin prefix that
+ * stops inside a syllable ("xian" vs 想 xiǎng), 3 = somewhere inside. Lower is better.
+ */
+export type MatchTier = 0 | 1 | 2 | 3
 
 interface PinyinKey {
   /** Toneless letters with each syllable's tone digit after it, ü as "v": "ni3hao3". */
@@ -128,18 +133,24 @@ const isDigit = (c: string | undefined) => c !== undefined && c >= '0' && c <= '
 /**
  * Match a normalised pinyin query against a key. Query letters must match consecutive key letters
  * (key tone digits that the query leaves out are skipped); a query digit must equal the key's tone
- * digit at that point. "u" in the query also matches ü ("v").
+ * digit at that point, except that a neutral tone (5) on either side matches any tone (one tier
+ * lower). Tones 1-4 never match each other. "u" in the query also matches ü ("v").
  */
 export function matchPinyinKey(q: string, pk: PinyinKey): MatchTier | null {
   let best: MatchTier | null = null
   for (const start of pk.starts) {
     let j = start
     let ok = true
+    let lenient = false
     for (let i = 0; i < q.length && ok; i++) {
       const c = q[i]
       if (isDigit(c)) {
-        if (pk.key[j] === c) j++
-        else ok = false
+        const k = pk.key[j]
+        if (k === c) j++
+        else if (isDigit(k) && (k === '5' || c === '5')) {
+          lenient = true
+          j++
+        } else ok = false
       } else {
         while (isDigit(pk.key[j])) j++
         const k = pk.key[j]
@@ -149,7 +160,10 @@ export function matchPinyinKey(q: string, pk: PinyinKey): MatchTier | null {
     }
     if (!ok) continue
     const restHasLetters = /[a-z]/.test(pk.key.slice(j))
-    const tier: MatchTier = start === 0 ? (restHasLetters ? 1 : 0) : 2
+    // Whole syllable: the query stopped at the end, before a tone digit, or right after one.
+    const atBoundary = j >= pk.key.length || isDigit(pk.key[j]) || isDigit(pk.key[j - 1])
+    const base: MatchTier = start === 0 ? (!restHasLetters ? 0 : atBoundary ? 1 : 2) : 3
+    const tier = (lenient ? Math.min(3, base + 1) : base) as MatchTier
     if (best === null || tier < best) best = tier
     if (best === 0) break
   }
@@ -240,7 +254,7 @@ export function matchEntry(e: SearchEntry, q: PreparedQuery): MatchTier | null {
     for (const h of e.hanzi) {
       if (h === q.hanzi) take(0)
       else if (h.startsWith(q.hanzi)) take(1)
-      else if (h.includes(q.hanzi)) take(2)
+      else if (h.includes(q.hanzi)) take(3)
     }
   }
   if (q.pinyin) {
@@ -250,14 +264,14 @@ export function matchEntry(e: SearchEntry, q: PreparedQuery): MatchTier | null {
     if (e.englishParts.includes(q.english)) take(0)
     else if (q.englishWordStart && e.english.some((s) => q.englishWordStart!.test(s))) take(1)
     // Plain substring only for 3+ letters; "a" or "to" would otherwise match nearly everything.
-    else if (q.english.length >= 3 && e.english.some((s) => s.includes(q.english!))) take(2)
+    else if (q.english.length >= 3 && e.english.some((s) => s.includes(q.english!))) take(3)
   }
   return best
 }
 
 /**
- * Words matching `query`, best matches first (exact, then prefix/word-start, then inside), ties in
- * frequency-rank order. An empty query returns every entry in rank order.
+ * Words matching `query`, best matches first (exact, then prefix/word-start, then partial-syllable
+ * prefix, then inside), ties in frequency-rank order. An empty query returns every entry in rank order.
  */
 export function searchWords(index: readonly SearchEntry[], query: string): Word[] {
   const q = prepareQuery(query)

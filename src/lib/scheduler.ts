@@ -1,5 +1,5 @@
 // Next-card selection and new-word introduction. Pure functions over Derived state.
-import { DAY_MS, getFsrs, GRADE_TO_RATING, isLearningState, newCard, retrievability, State, type Card } from './fsrs'
+import { applyGrade, DAY_MS, getFsrs, isLearningState, newCard, retrievability, State, type Card } from './fsrs'
 import { getCard, isSuspended, type CardState, type Derived } from './derive'
 import { cardKey, parseCardKey, siblingKey, type CardKey, type Dir, type GradeName } from './events'
 
@@ -18,11 +18,14 @@ export function mulberry32(seed: number): Rng {
 }
 
 export interface SchedulerSettings {
-  requestRetention: number // 0.9
-  workingSetCap: number // 15 unstable words
-  stableDays: number // 7
-  backlogLimit: number // 10 due reviews
+  requestRetention: number // target probability of recall
+  workingSetCap: number // max unstable words before new words pause
+  stableDays: number // stability (days) at which a card counts as stable
+  backlogLimit: number // max due reviews before new words pause
 }
+
+/** How many recently shown card keys selection looks at (callers pass at least this many). */
+export const RECENT_WINDOW = 5
 
 export const DEFAULT_SCHEDULER_SETTINGS: SchedulerSettings = {
   requestRetention: 0.9,
@@ -35,7 +38,7 @@ export type PickSource =
   | 'learning' // learning/relearning card whose step is due
   | 'review' // due review card
   | 'new' // newly introduced card
-  | 'learningEarly' // learning card shown before its step is due (nothing else available)
+  | 'learningEarly' // learning card shown up to EARLY_LEARNING_MS before its step is due (nothing else available)
   | 'practice' // practice-ahead (caught up)
 
 export interface Pick {
@@ -105,15 +108,18 @@ export function unstableWordCount(d: Derived, stableDays: number): number {
   return words.size
 }
 
-export function isDueReview(c: CardState, now: number, requestRetention: number): boolean {
-  if (c.card.state !== State.Review) return false
-  if (c.card.due.getTime() <= now) return true
-  return retrievability(getFsrs(requestRetention), c.card, now) <= requestRetention
+/**
+ * A Review card is due when card.due has passed. This one definition drives the queue, the backlog gate,
+ * QueueInfo.nextReviewDueAt (store timer, "next card in") and the stats forecast. FSRS already puts card.due
+ * where R reaches requestRetention, plus rounding and fuzz (which spreads the load).
+ */
+export function isDueReview(c: CardState, now: number): boolean {
+  return c.card.state === State.Review && c.card.due.getTime() <= now
 }
 
-export function dueReviewCount(d: Derived, now: number, requestRetention: number): number {
+export function dueReviewCount(d: Derived, now: number): number {
   let n = 0
-  for (const c of d.cards.values()) if (!isSuspended(d, c.wordId) && isDueReview(c, now, requestRetention)) n++
+  for (const c of d.cards.values()) if (!isSuspended(d, c.wordId) && isDueReview(c, now)) n++
   return n
 }
 
@@ -145,6 +151,8 @@ interface Cand {
   dir: Dir
   r: number
   due: number
+  /** Last review time (ms); for learning cards, the start of the current step. */
+  last: number
   isNew: boolean
 }
 
@@ -168,6 +176,19 @@ function weightedSample(cands: Cand[], rng: Rng, weight: (c: Cand) => number): C
 
 const atRisk = (c: Cand) => (1 - c.r) ** 2
 
+/**
+ * How early a pending learning card may be shown when nothing else is available. ts-fsrs advances learning
+ * steps by count, not by elapsed time, so showing a card much earlier would let it skip its 1m/10m steps
+ * (a just-failed word could graduate within seconds). Further out, the caught-up screen waits instead.
+ */
+export const EARLY_LEARNING_MS = 60_000
+
+/** Weight for showing a learning card early: how far its current step has elapsed, squared. */
+const stepElapsed = (now: number) => (c: Cand) => {
+  const span = c.due - c.last
+  return span > 0 ? Math.min(1, Math.max(0, (now - c.last) / span)) ** 2 : 1
+}
+
 export function selectNext(input: SelectInput): Selection {
   const { derived: d, wordOrder, settings, now, rng } = input
   const recent = input.recent ?? []
@@ -183,16 +204,18 @@ export function selectNext(input: SelectInput): Selection {
   let nextReviewDueAt: number | null = null
 
   for (const c of d.cards.values()) {
-    if (isSuspended(d, c.wordId) || (input.includeWord && !input.includeWord(c.wordId))) continue
+    if (input.includeWord && !input.includeWord(c.wordId)) continue
+    // Display-only count: suspended words still count as introduced (matches the Words and Stats pages).
     introduced.add(c.wordId)
+    if (isSuspended(d, c.wordId)) continue
     const due = c.card.due.getTime()
     const r = retrievability(f, c.card, now)
-    const cand: Cand = { key: c.key, wordId: c.wordId, dir: c.dir, r, due, isNew: false }
+    const cand: Cand = { key: c.key, wordId: c.wordId, dir: c.dir, r, due, last: c.card.last_review?.getTime() ?? due, isNew: false }
     if (isUnstableCard(c, settings.stableDays)) unstable.add(c.wordId)
     if (isLearningState(c.card.state)) {
       ;(due <= now ? learningDue : learningPending).push(cand)
     } else if (c.card.state === State.Review) {
-      if (due <= now || r <= settings.requestRetention) reviews.push(cand)
+      if (isDueReview(c, now)) reviews.push(cand)
       else if (nextReviewDueAt === null || due < nextReviewDueAt) nextReviewDueAt = due
       practice.push(cand)
     }
@@ -203,13 +226,20 @@ export function selectNext(input: SelectInput): Selection {
   reviews.sort((a, b) => (a.key < b.key ? -1 : 1))
   practice.sort((a, b) => (a.key < b.key ? -1 : 1))
 
+  // The gate limits new *words*. A Say card of a word already in the working set adds no word to it,
+  // so it may still be introduced when the set is full (but not past the review backlog).
   let gateBlockedBy: GateBlock = null
   let news: Cand[] = []
-  if (unstable.size >= settings.workingSetCap) gateBlockedBy = 'workingSet'
-  else if (reviews.length > settings.backlogLimit) gateBlockedBy = 'backlog'
+  const full = unstable.size >= settings.workingSetCap
+  if (reviews.length > settings.backlogLimit) gateBlockedBy = full ? 'workingSet' : 'backlog'
   else {
-    news = newCandidates(d, wordOrder).map((key) => ({ key, ...parseCardKey(key), r: 0, due: now, isNew: true }))
-    if (!news.length) gateBlockedBy = 'exhausted'
+    let keys = newCandidates(d, wordOrder)
+    if (full) keys = keys.filter((k) => {
+      const p = parseCardKey(k)
+      return p.dir === 'say' && unstable.has(p.wordId)
+    })
+    news = keys.map((key) => ({ key, ...parseCardKey(key), r: 0, due: now, last: now, isNew: true }))
+    if (!news.length) gateBlockedBy = full ? 'workingSet' : 'exhausted'
   }
 
   const info: QueueInfo = {
@@ -226,6 +256,7 @@ export function selectNext(input: SelectInput): Selection {
 
   const last = recent[recent.length - 1]
   const last3 = new Set(recent.slice(-3))
+  const lastFew = new Set(recent.slice(-RECENT_WINDOW))
   const notLast: Filter = (k) => k !== last
   const noSibling: Filter = (k) => k !== last && !last3.has(siblingKey(k))
   const any: Filter = () => true
@@ -245,7 +276,11 @@ export function selectNext(input: SelectInput): Selection {
     }
     if (rv.length) return [weightedSample(rv, rng, atRisk)!, 'review']
     if (nw) return [nw, 'new']
-    const lp = learningPending.find((c) => ok(c.key))
+    // Early learning cards: a weighted random pick (furthest through its step most likely), avoiding
+    // the last few cards, so a run of introductions is not replayed in the same order.
+    const pending = learningPending.filter((c) => ok(c.key) && c.due - now <= EARLY_LEARNING_MS)
+    const fresh = pending.filter((c) => !lastFew.has(c.key))
+    const lp = weightedSample(fresh.length ? fresh : pending, rng, stepElapsed(now))
     if (lp) return [lp, 'learningEarly']
     if (input.practiceAhead) {
       const s = weightedSample(practice.filter((c) => ok(c.key)), rng, atRisk)
@@ -286,12 +321,12 @@ export function previewIntervals(
   key: CardKey,
   now: number,
 ): Record<GradeName, IntervalPreview> {
-  const f = getFsrs(d.requestRetention)
+  const f = getFsrs(d.requestRetention, d.dayOffsetMs)
   const card: Card = d.cards.get(key)?.card ?? newCard(now)
-  const preview = f.repeat(card, new Date(now))
   const out = {} as Record<GradeName, IntervalPreview>
   for (const g of ['again', 'good', 'easy'] as const) {
-    const due = preview[GRADE_TO_RATING[g]].card.due.getTime()
+    // Same path as grading in derive.ts (day offset, fuzz seed), so the label matches what gets scheduled.
+    const due = applyGrade(f, card, g, now, d.dayOffsetMs).due.getTime()
     out[g] = { due, ms: due - now, label: formatInterval(due - now) }
   }
   return out

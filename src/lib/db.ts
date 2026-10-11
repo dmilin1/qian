@@ -12,6 +12,8 @@ export interface MetaValues {
   deviceId: string
   lastExportAt: number
   schemaVersion: number
+  /** FSRS day-boundary shift captured on first run (fsrs.defaultDayOffsetMs). Kept by clearAll. */
+  dayOffsetMs: number
 }
 export type MetaKey = keyof MetaValues
 

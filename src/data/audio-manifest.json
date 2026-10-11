@@ -1,6 +1,4007 @@
 {
  "voiceId": "9lHjugDhwqoxA5MhX0az",
- "model": "",
- "generatedAt": "",
- "entries": {}
+ "model": "eleven_v4",
+ "generatedAt": "2026-10-11T11:42:34+00:00",
+ "entries": {
+  "w7684": {
+   "word": "audio/w/w7684-334d9d57.mp3",
+   "example": "audio/s/w7684-9c0a449b.mp3"
+  },
+  "w6211": {
+   "word": "audio/w/w6211-ee55c4ed.mp3",
+   "example": "audio/s/w6211-b6d93e44.mp3"
+  },
+  "w662f": {
+   "word": "audio/w/w662f-8024d493.mp3",
+   "example": "audio/s/w662f-0aef20af.mp3"
+  },
+  "w4e86": {
+   "word": "audio/w/w4e86-98a58238.mp3",
+   "example": "audio/s/w4e86-c0aa07b6.mp3"
+  },
+  "w4f60": {
+   "word": "audio/w/w4f60-6dee0ba6.mp3",
+   "example": "audio/s/w4f60-09456a12.mp3"
+  },
+  "w5728": {
+   "word": "audio/w/w5728-30c44c09.mp3",
+   "example": "audio/s/w5728-0a843d59.mp3"
+  },
+  "w4e0d": {
+   "word": "audio/w/w4e0d-6bc8ae81.mp3",
+   "example": "audio/s/w4e0d-4c43dc07.mp3"
+  },
+  "w4ed6": {
+   "word": "audio/w/w4ed6-674a2b7c.mp3",
+   "example": "audio/s/w4ed6-bcbb60ad.mp3"
+  },
+  "w6709": {
+   "word": "audio/w/w6709-d113afd2.mp3",
+   "example": "audio/s/w6709-bb885cee.mp3"
+  },
+  "w6211-5011": {
+   "word": "audio/w/w6211-5011-3800c704.mp3",
+   "example": "audio/s/w6211-5011-cf531e6d.mp3"
+  },
+  "w9019": {
+   "word": "audio/w/w9019-2de79494.mp3",
+   "example": "audio/s/w9019-ac5c370f.mp3"
+  },
+  "w5c31": {
+   "word": "audio/w/w5c31-a98915a5.mp3",
+   "example": "audio/s/w5c31-512682b7.mp3"
+  },
+  "w4eba": {
+   "word": "audio/w/w4eba-389147ba.mp3",
+   "example": "audio/s/w4eba-bebdfdf8.mp3"
+  },
+  "w548c": {
+   "word": "audio/w/w548c-aef4077f.mp3",
+   "example": "audio/s/w548c-0b8ac285.mp3"
+  },
+  "w55ce": {
+   "word": "audio/w/w55ce-3e8269fc.mp3",
+   "example": "audio/s/w55ce-437eafa6.mp3"
+  },
+  "w6703": {
+   "word": "audio/w/w6703-a3f7071b.mp3",
+   "example": "audio/s/w6703-0e354254.mp3"
+  },
+  "w8aaa": {
+   "word": "audio/w/w8aaa-51fcf25c.mp3",
+   "example": "audio/s/w8aaa-96fd2311.mp3"
+  },
+  "w597d": {
+   "word": "audio/w/w597d-4c5fc98e.mp3",
+   "example": "audio/s/w597d-b6df3b16.mp3"
+  },
+  "w8981": {
+   "word": "audio/w/w8981-e6c45ce8.mp3",
+   "example": "audio/s/w8981-4a5b7152.mp3"
+  },
+  "w90fd": {
+   "word": "audio/w/w90fd-cf60482a.mp3",
+   "example": "audio/s/w90fd-dd39cca2.mp3"
+  },
+  "w4e5f": {
+   "word": "audio/w/w4e5f-f2ca3d4a.mp3",
+   "example": "audio/s/w4e5f-d1572071.mp3"
+  },
+  "w4ec0-9ebc": {
+   "word": "audio/w/w4ec0-9ebc-8fb38bb6.mp3",
+   "example": "audio/s/w4ec0-9ebc-345e026f.mp3"
+  },
+  "w4f86": {
+   "word": "audio/w/w4f86-5f8558b5.mp3",
+   "example": "audio/s/w4f86-638f2164.mp3"
+  },
+  "w5c0d": {
+   "word": "audio/w/w5c0d-630d193b.mp3",
+   "example": "audio/s/w5c0d-0f081220.mp3"
+  },
+  "w4e00": {
+   "word": "audio/w/w4e00-f42e2d02.mp3",
+   "example": "audio/s/w4e00-2eaeb3dd.mp3"
+  },
+  "w5f88": {
+   "word": "audio/w/w5f88-54e4921c.mp3",
+   "example": "audio/s/w5f88-48f0ee42.mp3"
+  },
+  "w500b": {
+   "word": "audio/w/w500b-c6ef439b.mp3",
+   "example": "audio/s/w500b-8d2c6c5a.mp3"
+  },
+  "w5230": {
+   "word": "audio/w/w5230-f1d36d6b.mp3",
+   "example": "audio/s/w5230-1d91a7a7.mp3"
+  },
+  "w4e0a": {
+   "word": "audio/w/w4e0a-65575011.mp3",
+   "example": "audio/s/w4e0a-a4196e33.mp3"
+  },
+  "w80fd": {
+   "word": "audio/w/w80fd-9ac58ee6.mp3",
+   "example": "audio/s/w80fd-884f4fde.mp3"
+  },
+  "w4ed6-5011": {
+   "word": "audio/w/w4ed6-5011-827f0da7.mp3",
+   "example": "audio/s/w4ed6-5011-ba960919.mp3"
+  },
+  "w9084": {
+   "word": "audio/w/w9084-0e2e5cae.mp3",
+   "example": "audio/s/w9084-237932fa.mp3"
+  },
+  "w60f3": {
+   "word": "audio/w/w60f3-50efcd20.mp3",
+   "example": "audio/s/w60f3-c77d6f55.mp3"
+  },
+  "w53bb": {
+   "word": "audio/w/w53bb-10861aa1.mp3",
+   "example": "audio/s/w53bb-e1aa4b55.mp3"
+  },
+  "w6c92-6709": {
+   "word": "audio/w/w6c92-6709-2d5f0a11.mp3",
+   "example": "audio/s/w6c92-6709-2b4f6e6b.mp3"
+  },
+  "w90a3": {
+   "word": "audio/w/w90a3-3fea9fbf.mp3",
+   "example": "audio/s/w90a3-835289e7.mp3"
+  },
+  "w5427": {
+   "word": "audio/w/w5427-7a5a7314.mp3",
+   "example": "audio/s/w5427-b8ffb48a.mp3"
+  },
+  "w77e5-9053": {
+   "word": "audio/w/w77e5-9053-d099fd5a.mp3",
+   "example": "audio/s/w77e5-9053-b9f0984d.mp3"
+  },
+  "w8b93": {
+   "word": "audio/w/w8b93-79415b76.mp3",
+   "example": "audio/s/w8b93-4d2c84ad.mp3"
+  },
+  "w6c92": {
+   "word": "audio/w/w6c92-8948b5f5.mp3",
+   "example": "audio/s/w6c92-4ce79f67.mp3"
+  },
+  "w628a": {
+   "word": "audio/w/w628a-f03d6e8f.mp3",
+   "example": "audio/s/w628a-5153b079.mp3"
+  },
+  "w7d66": {
+   "word": "audio/w/w7d66-fe9c2b4f.mp3",
+   "example": "audio/s/w7d66-bf632b27.mp3"
+  },
+  "w8457": {
+   "word": "audio/w/w8457-dac95f3f.mp3",
+   "example": "audio/s/w8457-87419f51.mp3"
+  },
+  "w9019-500b": {
+   "word": "audio/w/w9019-500b-53ed6521.mp3",
+   "example": "audio/s/w9019-500b-06ca4056.mp3"
+  },
+  "w505a": {
+   "word": "audio/w/w505a-f80ef823.mp3",
+   "example": "audio/s/w505a-c88a2529.mp3"
+  },
+  "w53ef-4ee5": {
+   "word": "audio/w/w53ef-4ee5-41f01ecf.mp3",
+   "example": "audio/s/w53ef-4ee5-4201dda9.mp3"
+  },
+  "w70ba": {
+   "word": "audio/w/w70ba-9edeb8ed.mp3",
+   "example": "audio/s/w70ba-c4b0f88b.mp3"
+  },
+  "w770b": {
+   "word": "audio/w/w770b-5e90f511.mp3",
+   "example": "audio/s/w770b-6dc073ec.mp3"
+  },
+  "w904e": {
+   "word": "audio/w/w904e-4499d152.mp3",
+   "example": "audio/s/w904e-7ae33a77.mp3"
+  },
+  "w88ab": {
+   "word": "audio/w/w88ab-ebbbfc18.mp3",
+   "example": "audio/s/w88ab-c6fa5044.mp3"
+  },
+  "w554a": {
+   "word": "audio/w/w554a-c40449dd.mp3",
+   "example": "audio/s/w554a-1f9c9aa4.mp3"
+  },
+  "w5f97": {
+   "word": "audio/w/w5f97-a337dbbd.mp3",
+   "example": "audio/s/w5f97-aa29fa9b.mp3"
+  },
+  "w4f46": {
+   "word": "audio/w/w4f46-9eabcc58.mp3",
+   "example": "audio/s/w4f46-1a5e6da8.mp3"
+  },
+  "w73fe-5728": {
+   "word": "audio/w/w73fe-5728-e525e008.mp3",
+   "example": "audio/s/w73fe-5728-af11387c.mp3"
+  },
+  "w600e-9ebc": {
+   "word": "audio/w/w600e-9ebc-5ac291c7.mp3",
+   "example": "audio/s/w600e-9ebc-06282446.mp3"
+  },
+  "w4e2d": {
+   "word": "audio/w/w4e2d-fd0d7353.mp3",
+   "example": "audio/s/w4e2d-d8b7531a.mp3"
+  },
+  "w4f60-5011": {
+   "word": "audio/w/w4f60-5011-b770f834.mp3",
+   "example": "audio/s/w4f60-5011-956f8737.mp3"
+  },
+  "w5e74": {
+   "word": "audio/w/w5e74-f634bc15.mp3",
+   "example": "audio/s/w5e74-31274e8d.mp3"
+  },
+  "w81ea-5df1": {
+   "word": "audio/w/w81ea-5df1-1b96d85c.mp3",
+   "example": "audio/s/w81ea-5df1-fb4223b6.mp3"
+  },
+  "w4e8b": {
+   "word": "audio/w/w4e8b-581fc057.mp3",
+   "example": "audio/s/w4e8b-7291426c.mp3"
+  },
+  "w5982-679c": {
+   "word": "audio/w/w5982-679c-7b78404a.mp3",
+   "example": "audio/s/w5982-679c-f5d067a9.mp3"
+  },
+  "w88e1": {
+   "word": "audio/w/w88e1-fdc8e4c6.mp3",
+   "example": "audio/s/w88e1-335cc93b.mp3"
+  },
+  "w591a": {
+   "word": "audio/w/w591a-72e4e25b.mp3",
+   "example": "audio/s/w591a-37e89702.mp3"
+  },
+  "w56e0-70ba": {
+   "word": "audio/w/w56e0-70ba-63c66d78.mp3",
+   "example": "audio/s/w56e0-70ba-091e423d.mp3"
+  },
+  "w5f9e": {
+   "word": "audio/w/w5f9e-3e442c27.mp3",
+   "example": "audio/s/w5f9e-564afb96.mp3"
+  },
+  "w800c": {
+   "word": "audio/w/w800c-4cc702a9.mp3",
+   "example": "audio/s/w800c-526e9d7e.mp3"
+  },
+  "w9019-6a23": {
+   "word": "audio/w/w9019-6a23-7678da0e.mp3",
+   "example": "audio/s/w9019-6a23-ece2d658.mp3"
+  },
+  "w53ea": {
+   "word": "audio/w/w53ea-d616e4fb.mp3",
+   "example": "audio/s/w53ea-05d82d0f.mp3"
+  },
+  "w96bb": {
+   "word": "audio/w/w96bb-cedcd875.mp3",
+   "example": "audio/s/w96bb-22087609.mp3"
+  },
+  "w5927": {
+   "word": "audio/w/w5927-c0210e4b.mp3",
+   "example": "audio/s/w5927-e69cc8f6.mp3"
+  },
+  "w4e0b": {
+   "word": "audio/w/w4e0b-3970d5dd.mp3",
+   "example": "audio/s/w4e0b-0bac889c.mp3"
+  },
+  "w7528": {
+   "word": "audio/w/w7528-c1633de9.mp3",
+   "example": "audio/s/w7528-5acdb706.mp3"
+  },
+  "w5df2-7d93": {
+   "word": "audio/w/w5df2-7d93-f2693843.mp3",
+   "example": "audio/s/w5df2-7d93-476e001d.mp3"
+  },
+  "w7b49": {
+   "word": "audio/w/w7b49-50a0996e.mp3",
+   "example": "audio/s/w7b49-2e297a5b.mp3"
+  },
+  "w5462": {
+   "word": "audio/w/w5462-c781da93.mp3",
+   "example": "audio/s/w5462-bc4c79a6.mp3"
+  },
+  "w9ede": {
+   "word": "audio/w/w9ede-4b4bfa94.mp3",
+   "example": "audio/s/w9ede-432b8d33.mp3"
+  },
+  "w9019-88e1": {
+   "word": "audio/w/w9019-88e1-30cde88f.mp3",
+   "example": "audio/s/w9019-88e1-a23e4294.mp3"
+  },
+  "w6700": {
+   "word": "audio/w/w6700-51e4b318.mp3",
+   "example": "audio/s/w6700-a71f90bc.mp3"
+  },
+  "w518d": {
+   "word": "audio/w/w518d-e4cc932d.mp3",
+   "example": "audio/s/w518d-92b1432c.mp3"
+  },
+  "w771f": {
+   "word": "audio/w/w771f-7c04204f.mp3",
+   "example": "audio/s/w771f-a31cc40b.mp3"
+  },
+  "w53ef-80fd": {
+   "word": "audio/w/w53ef-80fd-3655dd90.mp3",
+   "example": "audio/s/w53ef-80fd-1ae5c346.mp3"
+  },
+  "w8ddf": {
+   "word": "audio/w/w8ddf-b7ec576d.mp3",
+   "example": "audio/s/w8ddf-565f40f8.mp3"
+  },
+  "w53ef": {
+   "word": "audio/w/w53ef-6b039447.mp3",
+   "example": "audio/s/w53ef-c2de18e2.mp3"
+  },
+  "w554f-984c": {
+   "word": "audio/w/w554f-984c-c0a01169.mp3",
+   "example": "audio/s/w554f-984c-ef5e374f.mp3"
+  },
+  "w53c8": {
+   "word": "audio/w/w53c8-bc6b6a04.mp3",
+   "example": "audio/s/w53c8-59fe845e.mp3"
+  },
+  "w6642-5019": {
+   "word": "audio/w/w6642-5019-9f9fdbae.mp3",
+   "example": "audio/s/w6642-5019-3f4a66d3.mp3"
+  },
+  "w8ab0": {
+   "word": "audio/w/w8ab0-36a374d4.mp3",
+   "example": "audio/s/w8ab0-8b213154.mp3"
+  },
+  "w4f46-662f": {
+   "word": "audio/w/w4f46-662f-53a72140.mp3",
+   "example": "audio/s/w4f46-662f-8f23fdae.mp3"
+  },
+  "w9700-8981": {
+   "word": "audio/w/w9700-8981-c357b6ad.mp3",
+   "example": "audio/s/w9700-8981-0c9a3c39.mp3"
+  },
+  "w9019-4e9b": {
+   "word": "audio/w/w9019-4e9b-2bb752f2.mp3",
+   "example": "audio/s/w9019-4e9b-d547b223.mp3"
+  },
+  "w5feb": {
+   "word": "audio/w/w5feb-684ee96a.mp3",
+   "example": "audio/s/w5feb-1b1a5f58.mp3"
+  },
+  "w8d70": {
+   "word": "audio/w/w8d70-5fec57e9.mp3",
+   "example": "audio/s/w8d70-9d7d12ca.mp3"
+  },
+  "w51fa": {
+   "word": "audio/w/w51fa-330bfdef.mp3",
+   "example": "audio/s/w51fa-20c6ca33.mp3"
+  },
+  "w5f8c": {
+   "word": "audio/w/w5f8c-986c8fdf.mp3",
+   "example": "audio/s/w5f8c-daafad74.mp3"
+  },
+  "w592a": {
+   "word": "audio/w/w592a-43f3961d.mp3",
+   "example": "audio/s/w592a-9f202423.mp3"
+  },
+  "w66f4": {
+   "word": "audio/w/w66f4-48023421.mp3",
+   "example": "audio/s/w66f4-a8b9259a.mp3"
+  },
+  "w70ba-4ec0-9ebc": {
+   "word": "audio/w/w70ba-4ec0-9ebc-e2e6bcbd.mp3",
+   "example": "audio/s/w70ba-4ec0-9ebc-3cec6f99.mp3"
+  },
+  "w89ba-5f97": {
+   "word": "audio/w/w89ba-5f97-d393b7ba.mp3",
+   "example": "audio/s/w89ba-5f97-30ee4529.mp3"
+  },
+  "w807d": {
+   "word": "audio/w/w807d-fd898a9d.mp3",
+   "example": "audio/s/w807d-6aadb1ea.mp3"
+  },
+  "w958b-59cb": {
+   "word": "audio/w/w958b-59cb-d1608597.mp3",
+   "example": "audio/s/w958b-59cb-f4190e7d.mp3"
+  },
+  "w5011": {
+   "word": "audio/w/w5011-7af1ee93.mp3",
+   "example": "audio/s/w5011-ab9f4902.mp3"
+  },
+  "w8a72": {
+   "word": "audio/w/w8a72-8c68d0a4.mp3",
+   "example": "audio/s/w8a72-bbccec80.mp3"
+  },
+  "w50cf": {
+   "word": "audio/w/w50cf-05841e4b.mp3",
+   "example": "audio/s/w50cf-430ab765.mp3"
+  },
+  "w5c31-662f": {
+   "word": "audio/w/w5c31-662f-725d0632.mp3",
+   "example": "audio/s/w5c31-662f-29402b0d.mp3"
+  },
+  "w9019-9ebc": {
+   "word": "audio/w/w9019-9ebc-22946210.mp3",
+   "example": "audio/s/w9019-9ebc-f6b0979c.mp3"
+  },
+  "w559c-6b61": {
+   "word": "audio/w/w559c-6b61-d07cf093.mp3",
+   "example": "audio/s/w559c-6b61-fd76da68.mp3"
+  },
+  "w4e26": {
+   "word": "audio/w/w4e26-92b7d488.mp3",
+   "example": "audio/s/w4e26-95bb00bd.mp3"
+  },
+  "w624d": {
+   "word": "audio/w/w624d-8470b5de.mp3",
+   "example": "audio/s/w624d-630967e6.mp3"
+  },
+  "w61c9-8a72": {
+   "word": "audio/w/w61c9-8a72-172028dd.mp3",
+   "example": "audio/s/w61c9-8a72-651f266c.mp3"
+  },
+  "w5de5-4f5c": {
+   "word": "audio/w/w5de5-4f5c-149dbd8c.mp3",
+   "example": "audio/s/w5de5-4f5c-c1dcb8d5.mp3"
+  },
+  "w5c0f": {
+   "word": "audio/w/w5c0f-4d72a035.mp3",
+   "example": "audio/s/w5c0f-1e9203f6.mp3"
+  },
+  "w6642-9593": {
+   "word": "audio/w/w6642-9593-cb392717.mp3",
+   "example": "audio/s/w6642-9593-f06bf7e3.mp3"
+  },
+  "w90a3-9ebc": {
+   "word": "audio/w/w90a3-9ebc-28981905.mp3",
+   "example": "audio/s/w90a3-9ebc-da7f987e.mp3"
+  },
+  "w5225": {
+   "word": "audio/w/w5225-c59bffbd.mp3",
+   "example": "audio/s/w5225-a3215a85.mp3"
+  },
+  "w4e0d-597d-610f-601d": {
+   "word": "audio/w/w4e0d-597d-610f-601d-71501b06.mp3",
+   "example": "audio/s/w4e0d-597d-610f-601d-7feefe1d.mp3"
+  },
+  "w6240-4ee5": {
+   "word": "audio/w/w6240-4ee5-52b9a47f.mp3",
+   "example": "audio/s/w6240-4ee5-e74357a9.mp3"
+  },
+  "w5929": {
+   "word": "audio/w/w5929-1b65c9a3.mp3",
+   "example": "audio/s/w5929-48d51e59.mp3"
+  },
+  "w9084-6709": {
+   "word": "audio/w/w9084-6709-9a52f15d.mp3",
+   "example": "audio/s/w9084-6709-81f58b6d.mp3"
+  },
+  "w544a-8a34": {
+   "word": "audio/w/w544a-8a34-db0872b6.mp3",
+   "example": "audio/s/w544a-8a34-b446969c.mp3"
+  },
+  "w611b": {
+   "word": "audio/w/w611b-ca3e569f.mp3",
+   "example": "audio/s/w611b-efeeb577.mp3"
+  },
+  "w7576": {
+   "word": "audio/w/w7576-839a7853.mp3",
+   "example": "audio/s/w7576-d85ac0f6.mp3"
+  },
+  "w8d77-4f86": {
+   "word": "audio/w/w8d77-4f86-2e495c44.mp3",
+   "example": "audio/s/w8d77-4f86-dbe30d84.mp3"
+  },
+  "w6708": {
+   "word": "audio/w/w6708-cc2a86fb.mp3",
+   "example": "audio/s/w6708-612dd31d.mp3"
+  },
+  "w6b7b": {
+   "word": "audio/w/w6b7b-59212f50.mp3",
+   "example": "audio/s/w6b7b-cc68fd76.mp3"
+  },
+  "w8a71": {
+   "word": "audio/w/w8a71-4e14fb9f.mp3",
+   "example": "audio/s/w8a71-f4188340.mp3"
+  },
+  "w524d": {
+   "word": "audio/w/w524d-eba23416.mp3",
+   "example": "audio/s/w524d-e6db54cc.mp3"
+  },
+  "w8a8d-70ba": {
+   "word": "audio/w/w8a8d-70ba-8adcf6fd.mp3",
+   "example": "audio/s/w8a8d-70ba-b2aefaf0.mp3"
+  },
+  "w5169": {
+   "word": "audio/w/w5169-39fccaa7.mp3",
+   "example": "audio/s/w5169-25fd2f52.mp3"
+  },
+  "w627e": {
+   "word": "audio/w/w627e-e82ea033.mp3",
+   "example": "audio/s/w627e-d82c857f.mp3"
+  },
+  "w6771-897f": {
+   "word": "audio/w/w6771-897f-c1a30e34.mp3",
+   "example": "audio/s/w6771-897f-1fbfb171.mp3"
+  },
+  "w8acb": {
+   "word": "audio/w/w8acb-9a1a4550.mp3",
+   "example": "audio/s/w8acb-dc597183.mp3"
+  },
+  "w5594": {
+   "word": "audio/w/w5594-681acd44.mp3",
+   "example": "audio/s/w5594-49467215.mp3"
+  },
+  "w90a3-500b": {
+   "word": "audio/w/w90a3-500b-b6a95db4.mp3",
+   "example": "audio/s/w90a3-500b-faec2abd.mp3"
+  },
+  "w6c92-95dc-4fc2": {
+   "word": "audio/w/w6c92-95dc-4fc2-21a54e1d.mp3",
+   "example": "audio/s/w6c92-95dc-4fc2-6e236c83.mp3"
+  },
+  "w5b69-5b50": {
+   "word": "audio/w/w5b69-5b50-c674b42f.mp3",
+   "example": "audio/s/w5b69-5b50-0d6eece4.mp3"
+  },
+  "w5730": {
+   "word": "audio/w/w5730-c86577a4.mp3",
+   "example": "audio/s/w5730-ea4b371e.mp3"
+  },
+  "w5e79": {
+   "word": "audio/w/w5e79-11e2291d.mp3",
+   "example": "audio/s/w5e79-4f26ad72.mp3"
+  },
+  "w65b0": {
+   "word": "audio/w/w65b0-6e436b4b.mp3",
+   "example": "audio/s/w65b0-827849f3.mp3"
+  },
+  "w4e00-8d77": {
+   "word": "audio/w/w4e00-8d77-98c520ae.mp3",
+   "example": "audio/s/w4e00-8d77-c1d74c0e.mp3"
+  },
+  "w6240-6709": {
+   "word": "audio/w/w6240-6709-72018920.mp3",
+   "example": "audio/s/w6240-6709-d2b07ef7.mp3"
+  },
+  "w4e00-6a23": {
+   "word": "audio/w/w4e00-6a23-77e4513b.mp3",
+   "example": "audio/s/w4e00-6a23-feac2872.mp3"
+  },
+  "w6b21": {
+   "word": "audio/w/w6b21-4b84b688.mp3",
+   "example": "audio/s/w6b21-f5d35fbb.mp3"
+  },
+  "w9322": {
+   "word": "audio/w/w9322-d2dcf7a0.mp3",
+   "example": "audio/s/w9322-f609b9e7.mp3"
+  },
+  "w5e36": {
+   "word": "audio/w/w5e36-81a5f258.mp3",
+   "example": "audio/s/w5e36-515f2838.mp3"
+  },
+  "w53eb": {
+   "word": "audio/w/w53eb-2275b50f.mp3",
+   "example": "audio/s/w53eb-0ec76add.mp3"
+  },
+  "w5730-65b9": {
+   "word": "audio/w/w5730-65b9-4e79ee76.mp3",
+   "example": "audio/s/w5730-65b9-68915248.mp3"
+  },
+  "w767c-751f": {
+   "word": "audio/w/w767c-751f-05ce0e56.mp3",
+   "example": "audio/s/w767c-751f-66918777.mp3"
+  },
+  "w5e0c-671b": {
+   "word": "audio/w/w5e0c-671b-76623257.mp3",
+   "example": "audio/s/w5e0c-671b-d15bd048.mp3"
+  },
+  "w6253": {
+   "word": "audio/w/w6253-b7c49c1c.mp3",
+   "example": "audio/s/w6253-1818a8ef.mp3"
+  },
+  "w4e09": {
+   "word": "audio/w/w4e09-0df278b3.mp3",
+   "example": "audio/s/w4e09-b513c696.mp3"
+  },
+  "w5403": {
+   "word": "audio/w/w5403-be3ba293.mp3",
+   "example": "audio/s/w5403-a70e7a39.mp3"
+  },
+  "w770b-5230": {
+   "word": "audio/w/w770b-5230-b7efb700.mp3",
+   "example": "audio/s/w770b-5230-b48a034f.mp3"
+  },
+  "w9019-908a": {
+   "word": "audio/w/w9019-908a-8d1523f5.mp3",
+   "example": "audio/s/w9019-908a-30762ad2.mp3"
+  },
+  "w5148-751f": {
+   "word": "audio/w/w5148-751f-4e77f94c.mp3",
+   "example": "audio/s/w5148-751f-b048f5b2.mp3"
+  },
+  "w5411": {
+   "word": "audio/w/w5411-46a68e9e.mp3",
+   "example": "audio/s/w5411-020cd0c8.mp3"
+  },
+  "w898b": {
+   "word": "audio/w/w898b-87be3420.mp3",
+   "example": "audio/s/w898b-c104985f.mp3"
+  },
+  "w5bb6": {
+   "word": "audio/w/w5bb6-a3ec3ca1.mp3",
+   "example": "audio/s/w5bb6-d24de952.mp3"
+  },
+  "w958b": {
+   "word": "audio/w/w958b-815ad8ae.mp3",
+   "example": "audio/s/w958b-c604b682.mp3"
+  },
+  "w6bd4": {
+   "word": "audio/w/w6bd4-9b6b2e14.mp3",
+   "example": "audio/s/w6bd4-b800eb15.mp3"
+  },
+  "w4e0d-904e": {
+   "word": "audio/w/w4e0d-904e-767a5a9f.mp3",
+   "example": "audio/s/w4e0d-904e-9b14cbda.mp3"
+  },
+  "w7f8e-570b": {
+   "word": "audio/w/w7f8e-570b-713d50a4.mp3",
+   "example": "audio/s/w7f8e-570b-ec9ceb88.mp3"
+  },
+  "w7136-5f8c": {
+   "word": "audio/w/w7136-5f8c-4df0d6b1.mp3",
+   "example": "audio/s/w7136-5f8c-263f7f7c.mp3"
+  },
+  "w670b-53cb": {
+   "word": "audio/w/w670b-53cb-498e12e2.mp3",
+   "example": "audio/s/w670b-53cb-382e7ca3.mp3"
+  },
+  "w4eca-5929": {
+   "word": "audio/w/w4eca-5929-a53f54eb.mp3",
+   "example": "audio/s/w4eca-5929-b10d46ed.mp3"
+  },
+  "w975e-5e38": {
+   "word": "audio/w/w975e-5e38-dc1d852c.mp3",
+   "example": "audio/s/w975e-5e38-a74a9f7d.mp3"
+  },
+  "w8b1d-8b1d": {
+   "word": "audio/w/w8b1d-8b1d-c483880b.mp3",
+   "example": "audio/s/w8b1d-8b1d-d8c7d3ab.mp3"
+  },
+  "w4e00-76f4": {
+   "word": "audio/w/w4e00-76f4-d88ded2b.mp3",
+   "example": "audio/s/w4e00-76f4-07ab0379.mp3"
+  },
+  "w5fc5-9808": {
+   "word": "audio/w/w5fc5-9808-2e3b0cf1.mp3",
+   "example": "audio/s/w5fc5-9808-820763ef.mp3"
+  },
+  "w767c-73fe": {
+   "word": "audio/w/w767c-73fe-255fd22c.mp3",
+   "example": "audio/s/w767c-73fe-85b12a96.mp3"
+  },
+  "w9084-662f": {
+   "word": "audio/w/w9084-662f-80638efd.mp3",
+   "example": "audio/s/w9084-662f-a2f00bd8.mp3"
+  },
+  "w54ea-88e1": {
+   "word": "audio/w/w54ea-88e1-e3da4518.mp3",
+   "example": "audio/s/w54ea-88e1-69d941d3.mp3"
+  },
+  "w90a3-4e9b": {
+   "word": "audio/w/w90a3-4e9b-d35daffd.mp3",
+   "example": "audio/s/w90a3-4e9b-edee3694.mp3"
+  },
+  "w7b49-4e00-4e0b": {
+   "word": "audio/w/w7b49-4e00-4e0b-3013908d.mp3",
+   "example": "audio/s/w7b49-4e00-4e0b-87b82a3f.mp3"
+  },
+  "w62ff": {
+   "word": "audio/w/w62ff-fc6f522e.mp3",
+   "example": "audio/s/w62ff-6e6f06ff.mp3"
+  },
+  "w70ba-4e86": {
+   "word": "audio/w/w70ba-4e86-d0c80783.mp3",
+   "example": "audio/s/w70ba-4e86-0c58bf09.mp3"
+  },
+  "w53ea-662f": {
+   "word": "audio/w/w53ea-662f-dc9d65f8.mp3",
+   "example": "audio/s/w53ea-662f-da244deb.mp3"
+  },
+  "w4e0d-8981": {
+   "word": "audio/w/w4e0d-8981-3c9b7bcd.mp3",
+   "example": "audio/s/w4e0d-8981-b830051d.mp3"
+  },
+  "w4e00-5b9a": {
+   "word": "audio/w/w4e00-5b9a-65b88137.mp3",
+   "example": "audio/s/w4e00-5b9a-62e84314.mp3"
+  },
+  "w51fa-4f86": {
+   "word": "audio/w/w51fa-4f86-44de4c01.mp3",
+   "example": "audio/s/w51fa-4f86-72dc277f.mp3"
+  },
+  "w4e8b-60c5": {
+   "word": "audio/w/w4e8b-60c5-1e8e497c.mp3",
+   "example": "audio/s/w4e8b-60c5-8fd40bc3.mp3"
+  },
+  "w8d77": {
+   "word": "audio/w/w8d77-85005391.mp3",
+   "example": "audio/s/w8d77-d21b974d.mp3"
+  },
+  "w7576-7136": {
+   "word": "audio/w/w7576-7136-d143b610.mp3",
+   "example": "audio/s/w7576-7136-597c43ec.mp3"
+  },
+  "w751f-6d3b": {
+   "word": "audio/w/w751f-6d3b-e617dc2f.mp3",
+   "example": "audio/s/w751f-6d3b-846e44ea.mp3"
+  },
+  "w4e00-4e0b": {
+   "word": "audio/w/w4e00-4e0b-91688fc2.mp3",
+   "example": "audio/s/w4e00-4e0b-18d5c4c9.mp3"
+  },
+  "w4e00-4e9b": {
+   "word": "audio/w/w4e00-4e9b-7200e0d5.mp3",
+   "example": "audio/s/w4e00-4e9b-b6fe0fa5.mp3"
+  },
+  "w56de": {
+   "word": "audio/w/w56de-cc3fb3de.mp3",
+   "example": "audio/s/w56de-0f5f3ee9.mp3"
+  },
+  "w554f": {
+   "word": "audio/w/w554f-f4b751a6.mp3",
+   "example": "audio/s/w554f-0a6ddb26.mp3"
+  },
+  "w800c-4e14": {
+   "word": "audio/w/w800c-4e14-427c57a8.mp3",
+   "example": "audio/s/w800c-4e14-de6aad34.mp3"
+  },
+  "w537b": {
+   "word": "audio/w/w537b-db6fb4b0.mp3",
+   "example": "audio/s/w537b-32c003cc.mp3"
+  },
+  "w4e16-754c": {
+   "word": "audio/w/w4e16-754c-43dd02dd.mp3",
+   "example": "audio/s/w4e16-754c-f0b9e4e0.mp3"
+  },
+  "w9019-7a2e": {
+   "word": "audio/w/w9019-7a2e-44c94372.mp3",
+   "example": "audio/s/w9019-7a2e-3725d5c7.mp3"
+  },
+  "w5176-4ed6": {
+   "word": "audio/w/w5176-4ed6-01d625a0.mp3",
+   "example": "audio/s/w5176-4ed6-4cb8cca4.mp3"
+  },
+  "w884c": {
+   "word": "audio/w/w884c-b6f209fb.mp3",
+   "example": "audio/s/w884c-1b6f5acf.mp3"
+  },
+  "w597d-5403": {
+   "word": "audio/w/w597d-5403-c84d8b9a.mp3",
+   "example": "audio/s/w597d-5403-2b38c91e.mp3"
+  },
+  "w4e00-5207": {
+   "word": "audio/w/w4e00-5207-9be1b503.mp3",
+   "example": "audio/s/w4e00-5207-dfa1ef04.mp3"
+  },
+  "w54ea": {
+   "word": "audio/w/w54ea-948a58e9.mp3",
+   "example": "audio/s/w54ea-1d6f801a.mp3"
+  },
+  "w516c-53f8": {
+   "word": "audio/w/w516c-53f8-dd8481e2.mp3",
+   "example": "audio/s/w516c-53f8-2f63016e.mp3"
+  },
+  "w76f8-4fe1": {
+   "word": "audio/w/w76f8-4fe1-90026960.mp3",
+   "example": "audio/s/w76f8-4fe1-14d29f98.mp3"
+  },
+  "w4e00-9ede": {
+   "word": "audio/w/w4e00-9ede-2558f827.mp3",
+   "example": "audio/s/w4e00-9ede-337161bd.mp3"
+  },
+  "w6e96-5099": {
+   "word": "audio/w/w6e96-5099-29f82f14.mp3",
+   "example": "audio/s/w6e96-5099-d1f7b80f.mp3"
+  },
+  "w6b63": {
+   "word": "audio/w/w6b63-12b605ec.mp3",
+   "example": "audio/s/w6b63-ebbe18dc.mp3"
+  },
+  "w90a3-88e1": {
+   "word": "audio/w/w90a3-88e1-e31da95b.mp3",
+   "example": "audio/s/w90a3-88e1-370cbe74.mp3"
+  },
+  "w932f": {
+   "word": "audio/w/w932f-b78935a8.mp3",
+   "example": "audio/s/w932f-85e57e12.mp3"
+  },
+  "w5927-5bb6": {
+   "word": "audio/w/w5927-5bb6-55d897c0.mp3",
+   "example": "audio/s/w5927-5bb6-483f5255.mp3"
+  },
+  "w6bba": {
+   "word": "audio/w/w6bba-15f4d878.mp3",
+   "example": "audio/s/w6bba-3a2a9e6a.mp3"
+  },
+  "w611f-89ba": {
+   "word": "audio/w/w611f-89ba-320fd486.mp3",
+   "example": "audio/s/w611f-89ba-f53ee728.mp3"
+  },
+  "w6210-70ba": {
+   "word": "audio/w/w6210-70ba-e03d23c7.mp3",
+   "example": "audio/s/w6210-70ba-92486e6d.mp3"
+  },
+  "w865f": {
+   "word": "audio/w/w865f-27c499b6.mp3",
+   "example": "audio/s/w865f-55fa47ae.mp3"
+  },
+  "w4efb-4f55": {
+   "word": "audio/w/w4efb-4f55-f0f88e1f.mp3",
+   "example": "audio/s/w4efb-4f55-4c199a40.mp3"
+  },
+  "w5e6b": {
+   "word": "audio/w/w5e6b-d240ece5.mp3",
+   "example": "audio/s/w5e6b-7bc19523.mp3"
+  },
+  "w6700-5f8c": {
+   "word": "audio/w/w6700-5f8c-553a1378.mp3",
+   "example": "audio/s/w6700-5f8c-42ba79a7.mp3"
+  },
+  "w9577": {
+   "word": "audio/w/w9577-650a4d6b.mp3",
+   "example": "audio/s/w9577-304cda93.mp3"
+  },
+  "w8a08-756b": {
+   "word": "audio/w/w8a08-756b-7cc71086.mp3",
+   "example": "audio/s/w8a08-756b-d414699c.mp3"
+  },
+  "w60c5-6cc1": {
+   "word": "audio/w/w60c5-6cc1-7e7558b0.mp3",
+   "example": "audio/s/w60c5-6cc1-bd209cd9.mp3"
+  },
+  "w7d2f": {
+   "word": "audio/w/w7d2f-7513bd84.mp3",
+   "example": "audio/s/w7d2f-96eb309f.mp3"
+  },
+  "w6216": {
+   "word": "audio/w/w6216-d3b87ee6.mp3",
+   "example": "audio/s/w6216-234b8ccd.mp3"
+  },
+  "w8cb7": {
+   "word": "audio/w/w8cb7-55ed1b5e.mp3",
+   "example": "audio/s/w8cb7-a4e57ac2.mp3"
+  },
+  "w4e0d-80fd": {
+   "word": "audio/w/w4e0d-80fd-61a50690.mp3",
+   "example": "audio/s/w4e0d-80fd-5113cd46.mp3"
+  },
+  "w570b-5bb6": {
+   "word": "audio/w/w570b-5bb6-96eb1ba7.mp3",
+   "example": "audio/s/w570b-5bb6-1a24916a.mp3"
+  },
+  "w9032": {
+   "word": "audio/w/w9032-d6e1dac4.mp3",
+   "example": "audio/s/w9032-07b21230.mp3"
+  },
+  "w60a8": {
+   "word": "audio/w/w60a8-dc1e4523.mp3",
+   "example": "audio/s/w60a8-5d8667b3.mp3"
+  },
+  "w5abd-5abd": {
+   "word": "audio/w/w5abd-5abd-43771486.mp3",
+   "example": "audio/s/w5abd-5abd-8b03bb3e.mp3"
+  },
+  "w91cd-8981": {
+   "word": "audio/w/w91cd-8981-db8f16b0.mp3",
+   "example": "audio/s/w91cd-8981-7d97d4f5.mp3"
+  },
+  "w5f88-591a": {
+   "word": "audio/w/w5f88-591a-505581b4.mp3",
+   "example": "audio/s/w5f88-591a-81ceeef6.mp3"
+  },
+  "w8eca": {
+   "word": "audio/w/w8eca-4fc39cd9.mp3",
+   "example": "audio/s/w8eca-683937d9.mp3"
+  },
+  "w96fb-8a71": {
+   "word": "audio/w/w96fb-8a71-14d25c89.mp3",
+   "example": "audio/s/w96fb-8a71-acdafed2.mp3"
+  },
+  "w660e-767d": {
+   "word": "audio/w/w660e-767d-6b3bce22.mp3",
+   "example": "audio/s/w660e-767d-6eb96306.mp3"
+  },
+  "w4f4f": {
+   "word": "audio/w/w4f4f-ede5b5d5.mp3",
+   "example": "audio/s/w4f4f-c36660f9.mp3"
+  },
+  "w7e7c-7e8c": {
+   "word": "audio/w/w7e7c-7e8c-e16d653f.mp3",
+   "example": "audio/s/w7e7c-7e8c-418609ed.mp3"
+  },
+  "w5982-4f55": {
+   "word": "audio/w/w5982-4f55-b2e0fc6d.mp3",
+   "example": "audio/s/w5982-4f55-9fa7df73.mp3"
+  },
+  "w4e5f-8a31": {
+   "word": "audio/w/w4e5f-8a31-04753b3e.mp3",
+   "example": "audio/s/w4e5f-8a31-618e1b4e.mp3"
+  },
+  "w96e2-958b": {
+   "word": "audio/w/w96e2-958b-fc3c1bc3.mp3",
+   "example": "audio/s/w96e2-958b-d1d3834d.mp3"
+  },
+  "w5beb": {
+   "word": "audio/w/w5beb-b02792fe.mp3",
+   "example": "audio/s/w5beb-c45e4faf.mp3"
+  },
+  "w600e-9ebc-6a23": {
+   "word": "audio/w/w600e-9ebc-6a23-f9b44526.mp3",
+   "example": "audio/s/w600e-9ebc-6a23-bf0fc3fd.mp3"
+  },
+  "w9084-597d": {
+   "word": "audio/w/w9084-597d-66dba7b8.mp3",
+   "example": "audio/s/w9084-597d-aa361955.mp3"
+  },
+  "w7b2c-4e00": {
+   "word": "audio/w/w7b2c-4e00-255fb6d1.mp3",
+   "example": "audio/s/w7b2c-4e00-0aa3eb87.mp3"
+  },
+  "w627e-5230": {
+   "word": "audio/w/w627e-5230-a74378c3.mp3",
+   "example": "audio/s/w627e-5230-e78e3ae7.mp3"
+  },
+  "w8001": {
+   "word": "audio/w/w8001-b8b6fb41.mp3",
+   "example": "audio/s/w8001-df59df00.mp3"
+  },
+  "w4f4d": {
+   "word": "audio/w/w4f4d-43165bbd.mp3",
+   "example": "audio/s/w4f4d-c24b3e2b.mp3"
+  },
+  "w6c7a-5b9a": {
+   "word": "audio/w/w6c7a-5b9a-0653e3dc.mp3",
+   "example": "audio/s/w6c7a-5b9a-4c157236.mp3"
+  },
+  "w7a2e": {
+   "word": "audio/w/w7a2e-801f8e29.mp3",
+   "example": "audio/s/w7a2e-11937d69.mp3"
+  },
+  "w904e-53bb": {
+   "word": "audio/w/w904e-53bb-b4193326.mp3",
+   "example": "audio/s/w904e-53bb-6d3333b4.mp3"
+  },
+  "w6210": {
+   "word": "audio/w/w6210-80a007ed.mp3",
+   "example": "audio/s/w6210-26faf260.mp3"
+  },
+  "w56de-4f86": {
+   "word": "audio/w/w56de-4f86-e9ff10e4.mp3",
+   "example": "audio/s/w56de-4f86-6231ca52.mp3"
+  },
+  "w6b72": {
+   "word": "audio/w/w6b72-9356101f.mp3",
+   "example": "audio/s/w6b72-b7566fcd.mp3"
+  },
+  "w4e9b": {
+   "word": "audio/w/w4e9b-0074b05c.mp3",
+   "example": "audio/s/w4e9b-f7492408.mp3"
+  },
+  "w95dc-4fc2": {
+   "word": "audio/w/w95dc-4fc2-b894c920.mp3",
+   "example": "audio/s/w95dc-4fc2-f0e1b776.mp3"
+  },
+  "w7531": {
+   "word": "audio/w/w7531-fd27e059.mp3",
+   "example": "audio/s/w7531-8204b631.mp3"
+  },
+  "w4e4b-524d": {
+   "word": "audio/w/w4e4b-524d-48f3c571.mp3",
+   "example": "audio/s/w4e4b-524d-8c466c00.mp3"
+  },
+  "w5148": {
+   "word": "audio/w/w5148-6d9ccc9b.mp3",
+   "example": "audio/s/w5148-708e8eea.mp3"
+  },
+  "w73a9": {
+   "word": "audio/w/w73a9-c300b4ca.mp3",
+   "example": "audio/s/w73a9-af8dd813.mp3"
+  },
+  "w4e4b-5f8c": {
+   "word": "audio/w/w4e4b-5f8c-803b687a.mp3",
+   "example": "audio/s/w4e4b-5f8c-a19798cd.mp3"
+  },
+  "w610f-601d": {
+   "word": "audio/w/w610f-601d-3328ad4d.mp3",
+   "example": "audio/s/w610f-601d-e04659a7.mp3"
+  },
+  "w5403-98ef": {
+   "word": "audio/w/w5403-98ef-43d4943d.mp3",
+   "example": "audio/s/w5403-98ef-2fabc19e.mp3"
+  },
+  "w8a8d-8b58": {
+   "word": "audio/w/w8a8d-8b58-1314ed51.mp3",
+   "example": "audio/s/w8a8d-8b58-3e85a501.mp3"
+  },
+  "w9032-884c": {
+   "word": "audio/w/w9032-884c-93229270.mp3",
+   "example": "audio/s/w9032-884c-e85a9c71.mp3"
+  },
+  "w5973-4eba": {
+   "word": "audio/w/w5973-4eba-c47693eb.mp3",
+   "example": "audio/s/w5973-4eba-dcb7734a.mp3"
+  },
+  "w5b8c-5168": {
+   "word": "audio/w/w5b8c-5168-7bc181c3.mp3",
+   "example": "audio/s/w5b8c-5168-f8ae6f95.mp3"
+  },
+  "w6216-8005": {
+   "word": "audio/w/w6216-8005-7a0b7eb4.mp3",
+   "example": "audio/s/w6216-8005-2535f5dd.mp3"
+  },
+  "w641e": {
+   "word": "audio/w/w641e-d04e9daf.mp3",
+   "example": "audio/s/w641e-054f0dd0.mp3"
+  },
+  "w5f97-5230": {
+   "word": "audio/w/w5f97-5230-6f5e8345.mp3",
+   "example": "audio/s/w5f97-5230-acc5bec5.mp3"
+  },
+  "w653e": {
+   "word": "audio/w/w653e-60260962.mp3",
+   "example": "audio/s/w653e-df3e938a.mp3"
+  },
+  "w95dc-65bc": {
+   "word": "audio/w/w95dc-65bc-771b492b.mp3",
+   "example": "audio/s/w95dc-65bc-d96f1b82.mp3"
+  },
+  "w7ad9": {
+   "word": "audio/w/w7ad9-2c468429.mp3",
+   "example": "audio/s/w7ad9-61932de4.mp3"
+  },
+  "w80af-5b9a": {
+   "word": "audio/w/w80af-5b9a-094e733d.mp3",
+   "example": "audio/s/w80af-5b9a-8352b58a.mp3"
+  },
+  "w5e7e": {
+   "word": "audio/w/w5e7e-a77fb561.mp3",
+   "example": "audio/s/w5e7e-3f99cb41.mp3"
+  },
+  "w7b2c": {
+   "word": "audio/w/w7b2c-39b0dbe5.mp3",
+   "example": "audio/s/w7b2c-4e5f06b1.mp3"
+  },
+  "w4ee5-70ba": {
+   "word": "audio/w/w4ee5-70ba-5c7544b5.mp3",
+   "example": "audio/s/w4ee5-70ba-b46e41a0.mp3"
+  },
+  "w5167": {
+   "word": "audio/w/w5167-792c921c.mp3",
+   "example": "audio/s/w5167-99bb2031.mp3"
+  },
+  "w5b89-5168": {
+   "word": "audio/w/w5b89-5168-33100504.mp3",
+   "example": "audio/s/w5b89-5168-3e54a824.mp3"
+  },
+  "w4ef6": {
+   "word": "audio/w/w4ef6-528fce06.mp3",
+   "example": "audio/s/w4ef6-275e3689.mp3"
+  },
+  "w6709-4eba": {
+   "word": "audio/w/w6709-4eba-21bc5c5b.mp3",
+   "example": "audio/s/w6709-4eba-3f915449.mp3"
+  },
+  "w7b97-4e86": {
+   "word": "audio/w/w7b97-4e86-eb812c34.mp3",
+   "example": "audio/s/w7b97-4e86-156b9f84.mp3"
+  },
+  "w51fa-73fe": {
+   "word": "audio/w/w51fa-73fe-c5b51901.mp3",
+   "example": "audio/s/w51fa-73fe-7b794d94.mp3"
+  },
+  "w9ad8": {
+   "word": "audio/w/w9ad8-c5758d68.mp3",
+   "example": "audio/s/w9ad8-6b4482b3.mp3"
+  },
+  "w672c": {
+   "word": "audio/w/w672c-8840911b.mp3",
+   "example": "audio/s/w672c-4e3208bd.mp3"
+  },
+  "w5c0f-6642": {
+   "word": "audio/w/w5c0f-6642-625f5e38.mp3",
+   "example": "audio/s/w5c0f-6642-f4b69d1b.mp3"
+  },
+  "w7e3d": {
+   "word": "audio/w/w7e3d-e32dacb6.mp3",
+   "example": "audio/s/w7e3d-23180be8.mp3"
+  },
+  "w4e0d-932f": {
+   "word": "audio/w/w4e0d-932f-8c5cd262.mp3",
+   "example": "audio/s/w4e0d-932f-e44f9414.mp3"
+  },
+  "w9001": {
+   "word": "audio/w/w9001-fffa3f45.mp3",
+   "example": "audio/s/w9001-fc38b72a.mp3"
+  },
+  "w5566": {
+   "word": "audio/w/w5566-60cb8345.mp3",
+   "example": "audio/s/w5566-aa69fc51.mp3"
+  },
+  "w6a5f-6703": {
+   "word": "audio/w/w6a5f-6703-b5abf64f.mp3",
+   "example": "audio/s/w6a5f-6703-800ff669.mp3"
+  },
+  "w624b": {
+   "word": "audio/w/w624b-b25fda25.mp3",
+   "example": "audio/s/w624b-0f0db618.mp3"
+  },
+  "w90a3-6a23": {
+   "word": "audio/w/w90a3-6a23-e79fedc5.mp3",
+   "example": "audio/s/w90a3-6a23-91cd52b1.mp3"
+  },
+  "w540d": {
+   "word": "audio/w/w540d-62eb9b87.mp3",
+   "example": "audio/s/w540d-2b9406de.mp3"
+  },
+  "w77ad-89e3": {
+   "word": "audio/w/w77ad-89e3-4b6e2470.mp3",
+   "example": "audio/s/w77ad-89e3-fae58eb4.mp3"
+  },
+  "w4eba-5011": {
+   "word": "audio/w/w4eba-5011-b48673ba.mp3",
+   "example": "audio/s/w4eba-5011-ddd2777d.mp3"
+  },
+  "w96fb-5f71": {
+   "word": "audio/w/w96fb-5f71-e1502fb8.mp3",
+   "example": "audio/s/w96fb-5f71-91b54af6.mp3"
+  },
+  "w689d": {
+   "word": "audio/w/w689d-43d961be.mp3",
+   "example": "audio/s/w689d-4b04afaf.mp3"
+  },
+  "w901a-904e": {
+   "word": "audio/w/w901a-904e-ec4ed9dc.mp3",
+   "example": "audio/s/w901a-904e-90be750e.mp3"
+  },
+  "w6bcf": {
+   "word": "audio/w/w6bcf-42d713d0.mp3",
+   "example": "audio/s/w6bcf-e1e71a36.mp3"
+  },
+  "w7537-4eba": {
+   "word": "audio/w/w7537-4eba-96762e86.mp3",
+   "example": "audio/s/w7537-4eba-77ec462d.mp3"
+  },
+  "w4f60-597d": {
+   "word": "audio/w/w4f60-597d-bcfa2935.mp3",
+   "example": "audio/s/w4f60-597d-08124cdc.mp3"
+  },
+  "w53e6": {
+   "word": "audio/w/w53e6-2014d012.mp3",
+   "example": "audio/s/w53e6-a47e75db.mp3"
+  },
+  "w540d-5b57": {
+   "word": "audio/w/w540d-5b57-46cb1208.mp3",
+   "example": "audio/s/w540d-5b57-f6ebaa9a.mp3"
+  },
+  "w7d50-679c": {
+   "word": "audio/w/w7d50-679c-2ebca4ab.mp3",
+   "example": "audio/s/w7d50-679c-c8f6c284.mp3"
+  },
+  "w591a-5c11": {
+   "word": "audio/w/w591a-5c11-dc3f78a7.mp3",
+   "example": "audio/s/w591a-5c11-279f9dbf.mp3"
+  },
+  "w561b": {
+   "word": "audio/w/w561b-d53773d9.mp3",
+   "example": "audio/s/w561b-3f8b32fa.mp3"
+  },
+  "w5b78-6821": {
+   "word": "audio/w/w5b78-6821-94dddf82.mp3",
+   "example": "audio/s/w5b78-6821-8ac1ba75.mp3"
+  },
+  "w53c3-52a0": {
+   "word": "audio/w/w53c3-52a0-644a840f.mp3",
+   "example": "audio/s/w53c3-52a0-b9096cfe.mp3"
+  },
+  "w7236-89aa": {
+   "word": "audio/w/w7236-89aa-bc2b6b8f.mp3",
+   "example": "audio/s/w7236-89aa-7a30ff95.mp3"
+  },
+  "w53ea-6709": {
+   "word": "audio/w/w53ea-6709-f50575f5.mp3",
+   "example": "audio/s/w53ea-6709-5a4ba6d0.mp3"
+  },
+  "w4ee5-524d": {
+   "word": "audio/w/w4ee5-524d-0fabed3f.mp3",
+   "example": "audio/s/w4ee5-524d-474fbb18.mp3"
+  },
+  "w771f-7684": {
+   "word": "audio/w/w771f-7684-062844c1.mp3",
+   "example": "audio/s/w771f-7684-c1c3d1c4.mp3"
+  },
+  "w6bd4-8cfd": {
+   "word": "audio/w/w6bd4-8cfd-aa872cb1.mp3",
+   "example": "audio/s/w6bd4-8cfd-c8d67d4a.mp3"
+  },
+  "w53ef-662f": {
+   "word": "audio/w/w53ef-662f-f8bf244c.mp3",
+   "example": "audio/s/w53ef-662f-50703a49.mp3"
+  },
+  "w7121-6cd5": {
+   "word": "audio/w/w7121-6cd5-1825baf0.mp3",
+   "example": "audio/s/w7121-6cd5-36156266.mp3"
+  },
+  "w5e6b-52a9": {
+   "word": "audio/w/w5e6b-52a9-7965fa42.mp3",
+   "example": "audio/s/w5e6b-52a9-4a8699d3.mp3"
+  },
+  "w6839-672c": {
+   "word": "audio/w/w6839-672c-266570d3.mp3",
+   "example": "audio/s/w6839-672c-88e92074.mp3"
+  },
+  "w7279-5225": {
+   "word": "audio/w/w7279-5225-8c721fb0.mp3",
+   "example": "audio/s/w7279-5225-4f2b80e1.mp3"
+  },
+  "w7a7f": {
+   "word": "audio/w/w7a7f-addec7e8.mp3",
+   "example": "audio/s/w7a7f-a8ff46a2.mp3"
+  },
+  "w751f-6c23": {
+   "word": "audio/w/w751f-6c23-b4fb53cd.mp3",
+   "example": "audio/s/w751f-6c23-a353018e.mp3"
+  },
+  "w5225-4eba": {
+   "word": "audio/w/w5225-4eba-fb2dd91a.mp3",
+   "example": "audio/s/w5225-4eba-0fcced8e.mp3"
+  },
+  "w9078-64c7": {
+   "word": "audio/w/w9078-64c7-11af3754.mp3",
+   "example": "audio/s/w9078-64c7-6ec9965c.mp3"
+  },
+  "w53ea-8981": {
+   "word": "audio/w/w53ea-8981-2d1c036f.mp3",
+   "example": "audio/s/w53ea-8981-60c9d7fd.mp3"
+  },
+  "w7d50-675f": {
+   "word": "audio/w/w7d50-675f-3ccdb804.mp3",
+   "example": "audio/s/w7d50-675f-10e231b3.mp3"
+  },
+  "w7238-7238": {
+   "word": "audio/w/w7238-7238-88e15a2b.mp3",
+   "example": "audio/s/w7238-7238-89c349f5.mp3"
+  },
+  "w4e2d-570b": {
+   "word": "audio/w/w4e2d-570b-bcd07420.mp3",
+   "example": "audio/s/w4e2d-570b-b367fa34.mp3"
+  },
+  "w7167-7247": {
+   "word": "audio/w/w7167-7247-df1a2cd6.mp3",
+   "example": "audio/s/w7167-7247-97e689e9.mp3"
+  },
+  "w904e-4f86": {
+   "word": "audio/w/w904e-4f86-1d010993.mp3",
+   "example": "audio/s/w904e-4f86-80975ffa.mp3"
+  },
+  "w6709-4e9b": {
+   "word": "audio/w/w6709-4e9b-f9cd78a9.mp3",
+   "example": "audio/s/w6709-4e9b-3756a3eb.mp3"
+  },
+  "w8b66-5bdf": {
+   "word": "audio/w/w8b66-5bdf-c89af033.mp3",
+   "example": "audio/s/w8b66-5bdf-e3ffaa24.mp3"
+  },
+  "w4f5c-70ba": {
+   "word": "audio/w/w4f5c-70ba-0f87806b.mp3",
+   "example": "audio/s/w4f5c-70ba-f1292b11.mp3"
+  },
+  "w842c": {
+   "word": "audio/w/w842c-372a43ec.mp3",
+   "example": "audio/s/w842c-a55a961e.mp3"
+  },
+  "w767e": {
+   "word": "audio/w/w767e-aaaef2b0.mp3",
+   "example": "audio/s/w767e-7e94fed7.mp3"
+  },
+  "w5343": {
+   "word": "audio/w/w5343-11fb0509.mp3",
+   "example": "audio/s/w5343-36cc82ad.mp3"
+  },
+  "w4ee5-5f8c": {
+   "word": "audio/w/w4ee5-5f8c-50419ec9.mp3",
+   "example": "audio/s/w4ee5-5f8c-d597ff59.mp3"
+  },
+  "w8dd1": {
+   "word": "audio/w/w8dd1-7e218e0b.mp3",
+   "example": "audio/s/w8dd1-e979e756.mp3"
+  },
+  "w5973": {
+   "word": "audio/w/w5973-7db6d443.mp3",
+   "example": "audio/s/w5973-fd31e0b4.mp3"
+  },
+  "w600e-6a23": {
+   "word": "audio/w/w600e-6a23-17d6eb78.mp3",
+   "example": "audio/s/w600e-6a23-9d0c8137.mp3"
+  },
+  "w91ab-751f": {
+   "word": "audio/w/w91ab-751f-7b60d036.mp3",
+   "example": "audio/s/w91ab-751f-441ee9f4.mp3"
+  },
+  "w5973-5b69": {
+   "word": "audio/w/w5973-5b69-38361cb9.mp3",
+   "example": "audio/s/w5973-5b69-a6a8dfa3.mp3"
+  },
+  "w5152-5b50": {
+   "word": "audio/w/w5152-5b50-78951ae4.mp3",
+   "example": "audio/s/w5152-5b50-ddfcf6ad.mp3"
+  },
+  "w4e0d-5ba2-6c23": {
+   "word": "audio/w/w4e0d-5ba2-6c23-e732f5c4.mp3",
+   "example": "audio/s/w4e0d-5ba2-6c23-00f24bdb.mp3"
+  },
+  "w8b8a": {
+   "word": "audio/w/w8b8a-afa1b920.mp3",
+   "example": "audio/s/w8b8a-d15bec4c.mp3"
+  },
+  "w653f-5e9c": {
+   "word": "audio/w/w653f-5e9c-b96b7a1c.mp3",
+   "example": "audio/s/w653f-5e9c-61dbb44d.mp3"
+  },
+  "w64d4-5fc3": {
+   "word": "audio/w/w64d4-5fc3-761f8e9e.mp3",
+   "example": "audio/s/w64d4-5fc3-70099e07.mp3"
+  },
+  "w7576-6642": {
+   "word": "audio/w/w7576-6642-b6671b9c.mp3",
+   "example": "audio/s/w7576-6642-7cd4938c.mp3"
+  },
+  "w4e0b-4f86": {
+   "word": "audio/w/w4e0b-4f86-176347be.mp3",
+   "example": "audio/s/w4e0b-4f86-c2229b58.mp3"
+  },
+  "w7b97": {
+   "word": "audio/w/w7b97-ebd43edd.mp3",
+   "example": "audio/s/w7b97-c019656e.mp3"
+  },
+  "w9ad8-8208": {
+   "word": "audio/w/w9ad8-8208-0a8cc920.mp3",
+   "example": "audio/s/w9ad8-8208-73c6c494.mp3"
+  },
+  "w53d7": {
+   "word": "audio/w/w53d7-2ce45089.mp3",
+   "example": "audio/s/w53d7-1c66353a.mp3"
+  },
+  "w5834": {
+   "word": "audio/w/w5834-fe2e8c56.mp3",
+   "example": "audio/s/w5834-5d3893b6.mp3"
+  },
+  "w904a-6232": {
+   "word": "audio/w/w904a-6232-52f454bc.mp3",
+   "example": "audio/s/w904a-6232-2e582e51.mp3"
+  },
+  "w8981-6c42": {
+   "word": "audio/w/w8981-6c42-fba95a18.mp3",
+   "example": "audio/s/w8981-6c42-f92ab62d.mp3"
+  },
+  "w5206-9418": {
+   "word": "audio/w/w5206-9418-92f3a575.mp3",
+   "example": "audio/s/w5206-9418-a6d0ed9b.mp3"
+  },
+  "w78ba-5b9a": {
+   "word": "audio/w/w78ba-5b9a-b7496928.mp3",
+   "example": "audio/s/w78ba-5b9a-c860bb2b.mp3"
+  },
+  "w539f-56e0": {
+   "word": "audio/w/w539f-56e0-50270e8d.mp3",
+   "example": "audio/s/w539f-56e0-7368df68.mp3"
+  },
+  "w982d": {
+   "word": "audio/w/w982d-2e070099.mp3",
+   "example": "audio/s/w982d-3992305a.mp3"
+  },
+  "w65e9": {
+   "word": "audio/w/w65e9-e87c814a.mp3",
+   "example": "audio/s/w65e9-8d619fa4.mp3"
+  },
+  "w5fc3": {
+   "word": "audio/w/w5fc3-3b8ab51f.mp3",
+   "example": "audio/s/w5fc3-fa1fcf67.mp3"
+  },
+  "w751a-81f3": {
+   "word": "audio/w/w751a-81f3-a39e9ab3.mp3",
+   "example": "audio/s/w751a-81f3-1746cb9a.mp3"
+  },
+  "w53f0-7063": {
+   "word": "audio/w/w53f0-7063-75fd2261.mp3",
+   "example": "audio/s/w53f0-7063-92d9d35c.mp3"
+  },
+  "w4fdd-8b77": {
+   "word": "audio/w/w4fdd-8b77-bcba8dd9.mp3",
+   "example": "audio/s/w4fdd-8b77-9ca3ab65.mp3"
+  },
+  "w8a18-5f97": {
+   "word": "audio/w/w8a18-5f97-35867cc2.mp3",
+   "example": "audio/s/w8a18-5f97-e6129469.mp3"
+  },
+  "w7b49-7b49": {
+   "word": "audio/w/w7b49-7b49-e0247b9c.mp3",
+   "example": "audio/s/w7b49-7b49-59f7736f.mp3"
+  },
+  "w8ac7": {
+   "word": "audio/w/w8ac7-56e052bd.mp3",
+   "example": "audio/s/w8ac7-907c36b0.mp3"
+  },
+  "w72d7": {
+   "word": "audio/w/w72d7-5582a838.mp3",
+   "example": "audio/s/w72d7-712e9d81.mp3"
+  },
+  "w6bcf-500b": {
+   "word": "audio/w/w6bcf-500b-947304f0.mp3",
+   "example": "audio/s/w6bcf-500b-2688a86b.mp3"
+  },
+  "w63a5-53d7": {
+   "word": "audio/w/w63a5-53d7-259793ba.mp3",
+   "example": "audio/s/w63a5-53d7-8a0a0782.mp3"
+  },
+  "w6539-8b8a": {
+   "word": "audio/w/w6539-8b8a-5b2c7af3.mp3",
+   "example": "audio/s/w6539-8b8a-c9877562.mp3"
+  },
+  "w5b8c": {
+   "word": "audio/w/w5b8c-041c0124.mp3",
+   "example": "audio/s/w5b8c-37fdbff7.mp3"
+  },
+  "w4e0d-540c": {
+   "word": "audio/w/w4e0d-540c-4d5b123a.mp3",
+   "example": "audio/s/w4e0d-540c-7f7a125d.mp3"
+  },
+  "w9023": {
+   "word": "audio/w/w9023-e38f32fa.mp3",
+   "example": "audio/s/w9023-c0d90203.mp3"
+  },
+  "w5982-6b64": {
+   "word": "audio/w/w5982-6b64-9d002f52.mp3",
+   "example": "audio/s/w5982-6b64-a2bfc1ad.mp3"
+  },
+  "w770b-898b": {
+   "word": "audio/w/w770b-898b-305e8a48.mp3",
+   "example": "audio/s/w770b-898b-8f8f2f89.mp3"
+  },
+  "w771f-662f": {
+   "word": "audio/w/w771f-662f-18afe385.mp3",
+   "example": "audio/s/w771f-662f-2d57f673.mp3"
+  },
+  "w6c38-9060": {
+   "word": "audio/w/w6c38-9060-974220c8.mp3",
+   "example": "audio/s/w6c38-9060-9c24709b.mp3"
+  },
+  "w5f35": {
+   "word": "audio/w/w5f35-67cda1ac.mp3",
+   "example": "audio/s/w5f35-a8e306b1.mp3"
+  },
+  "w88e1-9762": {
+   "word": "audio/w/w88e1-9762-6c7d902b.mp3",
+   "example": "audio/s/w88e1-9762-d0e77408.mp3"
+  },
+  "w5176-4e2d": {
+   "word": "audio/w/w5176-4e2d-922a0d46.mp3",
+   "example": "audio/s/w5176-4e2d-f557c4ad.mp3"
+  },
+  "w6389": {
+   "word": "audio/w/w6389-b45d6548.mp3",
+   "example": "audio/s/w6389-a8c6bf90.mp3"
+  },
+  "w5750": {
+   "word": "audio/w/w5750-05243e77.mp3",
+   "example": "audio/s/w5750-0b8fe8c0.mp3"
+  },
+  "w6c92-554f-984c": {
+   "word": "audio/w/w6c92-554f-984c-f1488cce.mp3",
+   "example": "audio/s/w6c92-554f-984c-d63dfbdd.mp3"
+  },
+  "w4f7f": {
+   "word": "audio/w/w4f7f-3f8a9e8a.mp3",
+   "example": "audio/s/w4f7f-7275282a.mp3"
+  },
+  "w96d6-7136": {
+   "word": "audio/w/w96d6-7136-7afa32aa.mp3",
+   "example": "audio/s/w96d6-7136-3319b76d.mp3"
+  },
+  "w597d-50cf": {
+   "word": "audio/w/w597d-50cf-d3a471df.mp3",
+   "example": "audio/s/w597d-50cf-c5ca7ee3.mp3"
+  },
+  "w767c": {
+   "word": "audio/w/w767c-90f36893.mp3",
+   "example": "audio/s/w767c-0fed8360.mp3"
+  },
+  "w8fa6-6cd5": {
+   "word": "audio/w/w8fa6-6cd5-82b3af71.mp3",
+   "example": "audio/s/w8fa6-6cd5-34ed5346.mp3"
+  },
+  "w559d": {
+   "word": "audio/w/w559d-8acf2016.mp3",
+   "example": "audio/s/w559d-b33a5685.mp3"
+  },
+  "w7f8e": {
+   "word": "audio/w/w7f8e-f674efee.mp3",
+   "example": "audio/s/w7f8e-0b31338c.mp3"
+  },
+  "w96e3": {
+   "word": "audio/w/w96e3-0ffaaf9b.mp3",
+   "example": "audio/s/w96e3-927b0574.mp3"
+  },
+  "w6b63-5728": {
+   "word": "audio/w/w6b63-5728-9c0e612d.mp3",
+   "example": "audio/s/w6b63-5728-51690e1c.mp3"
+  },
+  "w5176-5be6": {
+   "word": "audio/w/w5176-5be6-20be52be.mp3",
+   "example": "audio/s/w5176-5be6-1f79e114.mp3"
+  },
+  "w8def": {
+   "word": "audio/w/w8def-471fbe8d.mp3",
+   "example": "audio/s/w8def-a59ff045.mp3"
+  },
+  "w771f-6b63": {
+   "word": "audio/w/w771f-6b63-fd2e8fcc.mp3",
+   "example": "audio/s/w771f-6b63-d355d7e4.mp3"
+  },
+  "w5206": {
+   "word": "audio/w/w5206-a8fd6594.mp3",
+   "example": "audio/s/w5206-9e6f4e7d.mp3"
+  },
+  "w99ac": {
+   "word": "audio/w/w99ac-99f3bff0.mp3",
+   "example": "audio/s/w99ac-92028bf3.mp3"
+  },
+  "w6545-4e8b": {
+   "word": "audio/w/w6545-4e8b-f10b43da.mp3",
+   "example": "audio/s/w6545-4e8b-cd77347a.mp3"
+  },
+  "w6210-529f": {
+   "word": "audio/w/w6210-529f-4fc79511.mp3",
+   "example": "audio/s/w6210-529f-a446033d.mp3"
+  },
+  "w90e8-5206": {
+   "word": "audio/w/w90e8-5206-3db84d3e.mp3",
+   "example": "audio/s/w90e8-5206-0e855ac3.mp3"
+  },
+  "w525b": {
+   "word": "audio/w/w525b-b42d091d.mp3",
+   "example": "audio/s/w525b-dc143f41.mp3"
+  },
+  "w9913": {
+   "word": "audio/w/w9913-b8a06c6a.mp3",
+   "example": "audio/s/w9913-aced70bc.mp3"
+  },
+  "w6d3b": {
+   "word": "audio/w/w6d3b-8fc92d1f.mp3",
+   "example": "audio/s/w6d3b-7c7e94a2.mp3"
+  },
+  "w4e4b-9593": {
+   "word": "audio/w/w4e4b-9593-08d40b79.mp3",
+   "example": "audio/s/w4e4b-9593-32070ef1.mp3"
+  },
+  "w66f8": {
+   "word": "audio/w/w66f8-a6e6523a.mp3",
+   "example": "audio/s/w66f8-5ccfd5e7.mp3"
+  },
+  "w8655-7406": {
+   "word": "audio/w/w8655-7406-b2e5185d.mp3",
+   "example": "audio/s/w8655-7406-dc76a4bf.mp3"
+  },
+  "w5230-5e95": {
+   "word": "audio/w/w5230-5e95-6cd07241.mp3",
+   "example": "audio/s/w5230-5e95-4e87778f.mp3"
+  },
+  "w806f-7d61": {
+   "word": "audio/w/w806f-7d61-1c656327.mp3",
+   "example": "audio/s/w806f-7d61-b1f9de62.mp3"
+  },
+  "w9032-5165": {
+   "word": "audio/w/w9032-5165-79bbcba5.mp3",
+   "example": "audio/s/w9032-5165-f7d00488.mp3"
+  },
+  "w6e05-695a": {
+   "word": "audio/w/w6e05-695a-bca25e96.mp3",
+   "example": "audio/s/w6e05-695a-4839d6fd.mp3"
+  },
+  "w80fd-5920": {
+   "word": "audio/w/w80fd-5920-886bb41b.mp3",
+   "example": "audio/s/w80fd-5920-4e665748.mp3"
+  },
+  "w9593": {
+   "word": "audio/w/w9593-e97ac1f9.mp3",
+   "example": "audio/s/w9593-ff440d8c.mp3"
+  },
+  "w6c42": {
+   "word": "audio/w/w6c42-4887432e.mp3",
+   "example": "audio/s/w6c42-82b46cff.mp3"
+  },
+  "w8868-73fe": {
+   "word": "audio/w/w8868-73fe-5eb5a1ce.mp3",
+   "example": "audio/s/w8868-73fe-b594de33.mp3"
+  },
+  "w5168": {
+   "word": "audio/w/w5168-071e1340.mp3",
+   "example": "audio/s/w5168-06ad153b.mp3"
+  },
+  "w9580": {
+   "word": "audio/w/w9580-7103b81e.mp3",
+   "example": "audio/s/w9580-6469e26c.mp3"
+  },
+  "w6d88-606f": {
+   "word": "audio/w/w6d88-606f-d8935169.mp3",
+   "example": "audio/s/w6d88-606f-18a314cc.mp3"
+  },
+  "w5973-5152": {
+   "word": "audio/w/w5973-5152-b72e5031.mp3",
+   "example": "audio/s/w5973-5152-84a33564.mp3"
+  },
+  "w8001-516c": {
+   "word": "audio/w/w8001-516c-f4f95142.mp3",
+   "example": "audio/s/w8001-516c-96a58e69.mp3"
+  },
+  "w65b9-5f0f": {
+   "word": "audio/w/w65b9-5f0f-c3e00e7d.mp3",
+   "example": "audio/s/w65b9-5f0f-f596a316.mp3"
+  },
+  "w6ce8-610f": {
+   "word": "audio/w/w6ce8-610f-8e27479e.mp3",
+   "example": "audio/s/w6ce8-610f-0813aa13.mp3"
+  },
+  "w5c0d-4e0d-8d77": {
+   "word": "audio/w/w5c0d-4e0d-8d77-cb1b1601.mp3",
+   "example": "audio/s/w5c0d-4e0d-8d77-1469b8a5.mp3"
+  },
+  "w9858-610f": {
+   "word": "audio/w/w9858-610f-f5356b0b.mp3",
+   "example": "audio/s/w9858-610f-f5e85ae3.mp3"
+  },
+  "w5b8c-6210": {
+   "word": "audio/w/w5b8c-6210-10e2388c.mp3",
+   "example": "audio/s/w5b8c-6210-1744bed8.mp3"
+  },
+  "w68d2": {
+   "word": "audio/w/w68d2-4df61722.mp3",
+   "example": "audio/s/w68d2-ae9014d8.mp3"
+  },
+  "w8abf-67e5": {
+   "word": "audio/w/w8abf-67e5-0c0ac21a.mp3",
+   "example": "audio/s/w8abf-67e5-9ef57004.mp3"
+  },
+  "w884c-52d5": {
+   "word": "audio/w/w884c-52d5-7c900363.mp3",
+   "example": "audio/s/w884c-52d5-4396e0c8.mp3"
+  },
+  "w6c34": {
+   "word": "audio/w/w6c34-7d72b58c.mp3",
+   "example": "audio/s/w6c34-cbcfacdf.mp3"
+  },
+  "w6574-500b": {
+   "word": "audio/w/w6574-500b-31cdc6d4.mp3",
+   "example": "audio/s/w6574-500b-4ff5c42f.mp3"
+  },
+  "w665a-4e0a": {
+   "word": "audio/w/w665a-4e0a-7f1b84d2.mp3",
+   "example": "audio/s/w665a-4e0a-0c83be4f.mp3"
+  },
+  "w82b1": {
+   "word": "audio/w/w82b1-9aa8132b.mp3",
+   "example": "audio/s/w82b1-a1c4588e.mp3"
+  },
+  "w8b1b": {
+   "word": "audio/w/w8b1b-9ea57cd5.mp3",
+   "example": "audio/s/w8b1b-5351b269.mp3"
+  },
+  "w7e3d-662f": {
+   "word": "audio/w/w7e3d-662f-33debae7.mp3",
+   "example": "audio/s/w7e3d-662f-c0f61ff8.mp3"
+  },
+  "w968a": {
+   "word": "audio/w/w968a-56bc4585.mp3",
+   "example": "audio/s/w968a-007cafe8.mp3"
+  },
+  "w7e3d-7d71": {
+   "word": "audio/w/w7e3d-7d71-df21ff30.mp3",
+   "example": "audio/s/w7e3d-7d71-8b009ae1.mp3"
+  },
+  "w89e3-6c7a": {
+   "word": "audio/w/w89e3-6c7a-296c7593.mp3",
+   "example": "audio/s/w89e3-6c7a-ce9b174b.mp3"
+  },
+  "w5927-5b78": {
+   "word": "audio/w/w5927-5b78-42f667d7.mp3",
+   "example": "audio/s/w5927-5b78-e3d3e3f2.mp3"
+  },
+  "w751f-65e5": {
+   "word": "audio/w/w751f-65e5-78678cd7.mp3",
+   "example": "audio/s/w751f-65e5-7ea3ac58.mp3"
+  },
+  "w62c9": {
+   "word": "audio/w/w62c9-98059d6d.mp3",
+   "example": "audio/s/w62c9-8d85a965.mp3"
+  },
+  "w5c0d-65bc": {
+   "word": "audio/w/w5c0d-65bc-4602c845.mp3",
+   "example": "audio/s/w5c0d-65bc-65a3293c.mp3"
+  },
+  "w4f7f-7528": {
+   "word": "audio/w/w4f7f-7528-5939891c.mp3",
+   "example": "audio/s/w4f7f-7528-d445108a.mp3"
+  },
+  "w660e-5929": {
+   "word": "audio/w/w660e-5929-b216a8da.mp3",
+   "example": "audio/s/w660e-5929-6b504c33.mp3"
+  },
+  "w52aa-529b": {
+   "word": "audio/w/w52aa-529b-74fd0d70.mp3",
+   "example": "audio/s/w52aa-529b-cd425462.mp3"
+  },
+  "w6f02-4eae": {
+   "word": "audio/w/w6f02-4eae-347424fb.mp3",
+   "example": "audio/s/w6f02-4eae-63b1237d.mp3"
+  },
+  "w7cfb-7d71": {
+   "word": "audio/w/w7cfb-7d71-9652d1da.mp3",
+   "example": "audio/s/w7cfb-7d71-0d4622c2.mp3"
+  },
+  "w5b78": {
+   "word": "audio/w/w5b78-1b4391e5.mp3",
+   "example": "audio/s/w5b78-b86712c0.mp3"
+  },
+  "w6b61-8fce": {
+   "word": "audio/w/w6b61-8fce-a1893ac2.mp3",
+   "example": "audio/s/w6b61-8fce-1ffd48f9.mp3"
+  },
+  "w552f-4e00": {
+   "word": "audio/w/w552f-4e00-8341d834.mp3",
+   "example": "audio/s/w552f-4e00-e398d4eb.mp3"
+  },
+  "w6293": {
+   "word": "audio/w/w6293-24da73fd.mp3",
+   "example": "audio/s/w6293-a000fded.mp3"
+  },
+  "w4fdd-8b49": {
+   "word": "audio/w/w4fdd-8b49-3f8a78ad.mp3",
+   "example": "audio/s/w4fdd-8b49-f07728fe.mp3"
+  },
+  "w8aaa-8a71": {
+   "word": "audio/w/w8aaa-8a71-500694ee.mp3",
+   "example": "audio/s/w8aaa-8a71-22fba3a1.mp3"
+  },
+  "w52d5": {
+   "word": "audio/w/w52d5-b18fb934.mp3",
+   "example": "audio/s/w52d5-4bf4fd69.mp3"
+  },
+  "w7ba1": {
+   "word": "audio/w/w7ba1-e5a3353b.mp3",
+   "example": "audio/s/w7ba1-93abe3c8.mp3"
+  },
+  "w540c-6642": {
+   "word": "audio/w/w540c-6642-7e5d20e4.mp3",
+   "example": "audio/s/w540c-6642-099ffca3.mp3"
+  },
+  "w78ba-5be6": {
+   "word": "audio/w/w78ba-5be6-e23798c1.mp3",
+   "example": "audio/s/w78ba-5be6-70492cbd.mp3"
+  },
+  "w69cd": {
+   "word": "audio/w/w69cd-fa112c7a.mp3",
+   "example": "audio/s/w69cd-9218556c.mp3"
+  },
+  "w4e0b-96e8": {
+   "word": "audio/w/w4e0b-96e8-e75786c2.mp3",
+   "example": "audio/s/w4e0b-96e8-edbf79a7.mp3"
+  },
+  "w898b-5230": {
+   "word": "audio/w/w898b-5230-cf9eda89.mp3",
+   "example": "audio/s/w898b-5230-8785c324.mp3"
+  },
+  "w6d3b-52d5": {
+   "word": "audio/w/w6d3b-52d5-0c3497c7.mp3",
+   "example": "audio/s/w6d3b-52d5-d9047122.mp3"
+  },
+  "w652f-6301": {
+   "word": "audio/w/w652f-6301-6acd1ceb.mp3",
+   "example": "audio/s/w652f-6301-b05255bd.mp3"
+  },
+  "w51fa-53bb": {
+   "word": "audio/w/w51fa-53bb-82dac441.mp3",
+   "example": "audio/s/w51fa-53bb-3a7324b9.mp3"
+  },
+  "w56de-5bb6": {
+   "word": "audio/w/w56de-5bb6-9845b0cb.mp3",
+   "example": "audio/s/w56de-5bb6-a5cb8a10.mp3"
+  },
+  "w540c": {
+   "word": "audio/w/w540c-0c5fc159.mp3",
+   "example": "audio/s/w540c-192a4265.mp3"
+  },
+  "w63a7-5236": {
+   "word": "audio/w/w63a7-5236-daf3569e.mp3",
+   "example": "audio/s/w63a7-5236-4d61223d.mp3"
+  },
+  "w5f04": {
+   "word": "audio/w/w5f04-e33f7e81.mp3",
+   "example": "audio/s/w5f04-530df871.mp3"
+  },
+  "w6bcd-89aa": {
+   "word": "audio/w/w6bcd-89aa-ca85f234.mp3",
+   "example": "audio/s/w6bcd-89aa-db75543e.mp3"
+  },
+  "w5920": {
+   "word": "audio/w/w5920-95383762.mp3",
+   "example": "audio/s/w5920-b0d11e21.mp3"
+  },
+  "w63a5": {
+   "word": "audio/w/w63a5-2190734a.mp3",
+   "example": "audio/s/w63a5-b381c07b.mp3"
+  },
+  "w4efb-52d9": {
+   "word": "audio/w/w4efb-52d9-32200858.mp3",
+   "example": "audio/s/w4efb-52d9-07379062.mp3"
+  },
+  "w62cd": {
+   "word": "audio/w/w62cd-391b4252.mp3",
+   "example": "audio/s/w62cd-15e921e3.mp3"
+  },
+  "w4ee3-8868": {
+   "word": "audio/w/w4ee3-8868-9c0a5ea4.mp3",
+   "example": "audio/s/w4ee3-8868-25c3f1a7.mp3"
+  },
+  "w611f-8b1d": {
+   "word": "audio/w/w611f-8b1d-a750b028.mp3",
+   "example": "audio/s/w611f-8b1d-2fd13f7b.mp3"
+  },
+  "w8ce3": {
+   "word": "audio/w/w8ce3-fb3ef2a1.mp3",
+   "example": "audio/s/w8ce3-fff6f1a0.mp3"
+  },
+  "w6709-95dc": {
+   "word": "audio/w/w6709-95dc-fb84a569.mp3",
+   "example": "audio/s/w6709-95dc-5d70de0f.mp3"
+  },
+  "w89e3-91cb": {
+   "word": "audio/w/w89e3-91cb-1aa09441.mp3",
+   "example": "audio/s/w89e3-91cb-2a9eb109.mp3"
+  },
+  "w8212-670d": {
+   "word": "audio/w/w8212-670d-cd6a2d3b.mp3",
+   "example": "audio/s/w8212-670d-e7de33a7.mp3"
+  },
+  "w5144-5f1f": {
+   "word": "audio/w/w5144-5f1f-5f39218e.mp3",
+   "example": "audio/s/w5144-5f1f-144c51a6.mp3"
+  },
+  "w5f71-97ff": {
+   "word": "audio/w/w5f71-97ff-22cb3833.mp3",
+   "example": "audio/s/w5f71-97ff-6b7c4bb3.mp3"
+  },
+  "w7814-7a76": {
+   "word": "audio/w/w7814-7a76-09b33220.mp3",
+   "example": "audio/s/w7814-7a76-eb9380e9.mp3"
+  },
+  "w63d0-4f9b": {
+   "word": "audio/w/w63d0-4f9b-5cb7cbfb.mp3",
+   "example": "audio/s/w63d0-4f9b-b8b6ba4d.mp3"
+  },
+  "w6307": {
+   "word": "audio/w/w6307-46ab3028.mp3",
+   "example": "audio/s/w6307-5bbd4d56.mp3"
+  },
+  "w81ea-7531": {
+   "word": "audio/w/w81ea-7531-02458081.mp3",
+   "example": "audio/s/w81ea-7531-664fcfd0.mp3"
+  },
+  "w4eca-665a": {
+   "word": "audio/w/w4eca-665a-6ef02847.mp3",
+   "example": "audio/s/w4eca-665a-1b088cfe.mp3"
+  },
+  "w8b49-660e": {
+   "word": "audio/w/w8b49-660e-d38b3535.mp3",
+   "example": "audio/s/w8b49-660e-1f2b1750.mp3"
+  },
+  "w76f4-63a5": {
+   "word": "audio/w/w76f4-63a5-60ab0a35.mp3",
+   "example": "audio/s/w76f4-63a5-ace6ed44.mp3"
+  },
+  "w5bb6-5ead": {
+   "word": "audio/w/w5bb6-5ead-a6895978.mp3",
+   "example": "audio/s/w5bb6-5ead-c00a8974.mp3"
+  },
+  "w8003-616e": {
+   "word": "audio/w/w8003-616e-43ab1893.mp3",
+   "example": "audio/s/w8003-616e-83dbbb75.mp3"
+  },
+  "w4fe1": {
+   "word": "audio/w/w4fe1-6056eea9.mp3",
+   "example": "audio/s/w4fe1-aec4a2d2.mp3"
+  },
+  "w6d3e": {
+   "word": "audio/w/w6d3e-f82244c5.mp3",
+   "example": "audio/s/w6d3e-76acfdb6.mp3"
+  },
+  "w751f": {
+   "word": "audio/w/w751f-d2b8f3e5.mp3",
+   "example": "audio/s/w751f-6188c64e.mp3"
+  },
+  "w56db": {
+   "word": "audio/w/w56db-276d2ba6.mp3",
+   "example": "audio/s/w56db-1809b2ef.mp3"
+  },
+  "w4efd": {
+   "word": "audio/w/w4efd-f9cde226.mp3",
+   "example": "audio/s/w4efd-c13e97ff.mp3"
+  },
+  "w7b11": {
+   "word": "audio/w/w7b11-0561ad2a.mp3",
+   "example": "audio/s/w7b11-321d99d1.mp3"
+  },
+  "w665a-5b89": {
+   "word": "audio/w/w665a-5b89-af5670d0.mp3",
+   "example": "audio/s/w665a-5b89-b7b2f7e2.mp3"
+  },
+  "w4e2d-5fc3": {
+   "word": "audio/w/w4e2d-5fc3-1eb1faf3.mp3",
+   "example": "audio/s/w4e2d-5fc3-c454a645.mp3"
+  },
+  "w57ce-5e02": {
+   "word": "audio/w/w57ce-5e02-228b1635.mp3",
+   "example": "audio/s/w57ce-5e02-d4e65a91.mp3"
+  },
+  "w770b-4f86": {
+   "word": "audio/w/w770b-4f86-9afd64c8.mp3",
+   "example": "audio/s/w770b-4f86-4ef8d77a.mp3"
+  },
+  "w5b78-751f": {
+   "word": "audio/w/w5b78-751f-7bb7447c.mp3",
+   "example": "audio/s/w5b78-751f-64e07ddf.mp3"
+  },
+  "w9053": {
+   "word": "audio/w/w9053-70087a94.mp3",
+   "example": "audio/s/w9053-4895d3d9.mp3"
+  },
+  "w9078": {
+   "word": "audio/w/w9078-6da9f5c2.mp3",
+   "example": "audio/s/w9078-c9bb6db4.mp3"
+  },
+  "w6216-8a31": {
+   "word": "audio/w/w6216-8a31-034f9877.mp3",
+   "example": "audio/s/w6216-8a31-afb3b14e.mp3"
+  },
+  "w8cc7-8a0a": {
+   "word": "audio/w/w8cc7-8a0a-ddb489d5.mp3",
+   "example": "audio/s/w8cc7-8a0a-269cb006.mp3"
+  },
+  "w4e8c": {
+   "word": "audio/w/w4e8c-ccd70e4d.mp3",
+   "example": "audio/s/w4e8c-1ef40933.mp3"
+  },
+  "w8b8a-6210": {
+   "word": "audio/w/w8b8a-6210-ab9c1e4c.mp3",
+   "example": "audio/s/w8b8a-6210-aec6c6d2.mp3"
+  },
+  "w91ab-9662": {
+   "word": "audio/w/w91ab-9662-e58f6568.mp3",
+   "example": "audio/s/w91ab-9662-146d67d6.mp3"
+  },
+  "w9664-4e86": {
+   "word": "audio/w/w9664-4e86-ebf17802.mp3",
+   "example": "audio/s/w9664-4e86-6180ef93.mp3"
+  },
+  "w81f3-5c11": {
+   "word": "audio/w/w81f3-5c11-51eb57f7.mp3",
+   "example": "audio/s/w81f3-5c11-4928c0f4.mp3"
+  },
+  "w611f-5230": {
+   "word": "audio/w/w611f-5230-a92dc06f.mp3",
+   "example": "audio/s/w611f-5230-1ddae729.mp3"
+  },
+  "w584a": {
+   "word": "audio/w/w584a-e94d372c.mp3",
+   "example": "audio/s/w584a-716b28a1.mp3"
+  },
+  "w7d55-5c0d": {
+   "word": "audio/w/w7d55-5c0d-97d5d74c.mp3",
+   "example": "audio/s/w7d55-5c0d-e6db3bda.mp3"
+  },
+  "w65b9-6cd5": {
+   "word": "audio/w/w65b9-6cd5-cd4bd2a0.mp3",
+   "example": "audio/s/w65b9-6cd5-2acf95c2.mp3"
+  },
+  "w6b77-53f2": {
+   "word": "audio/w/w6b77-53f2-5961e7ce.mp3",
+   "example": "audio/s/w6b77-53f2-6f537a8f.mp3"
+  },
+  "w5340": {
+   "word": "audio/w/w5340-adcbb6be.mp3",
+   "example": "audio/s/w5340-2e333ea0.mp3"
+  },
+  "w6700-8fd1": {
+   "word": "audio/w/w6700-8fd1-80b2150f.mp3",
+   "example": "audio/s/w6700-8fd1-1c711c11.mp3"
+  },
+  "w4fbf-5b9c": {
+   "word": "audio/w/w4fbf-5b9c-b0ca786a.mp3",
+   "example": "audio/s/w4fbf-5b9c-0261cce3.mp3"
+  },
+  "w8eab-4e0a": {
+   "word": "audio/w/w8eab-4e0a-c7067a33.mp3",
+   "example": "audio/s/w8eab-4e0a-9946a19a.mp3"
+  },
+  "w751f-547d": {
+   "word": "audio/w/w751f-547d-be3401a9.mp3",
+   "example": "audio/s/w751f-547d-f66fa66c.mp3"
+  },
+  "w64c1-6709": {
+   "word": "audio/w/w64c1-6709-04eb9821.mp3",
+   "example": "audio/s/w64c1-6709-029ac2e4.mp3"
+  },
+  "w9760": {
+   "word": "audio/w/w9760-6c7dbb17.mp3",
+   "example": "audio/s/w9760-521b333a.mp3"
+  },
+  "w65b0-805e": {
+   "word": "audio/w/w65b0-805e-d4f73212.mp3",
+   "example": "audio/s/w65b0-805e-93bcaf53.mp3"
+  },
+  "w7bc0-76ee": {
+   "word": "audio/w/w7bc0-76ee-ab0a8b18.mp3",
+   "example": "audio/s/w7bc0-76ee-0083dbcc.mp3"
+  },
+  "w8d0f": {
+   "word": "audio/w/w8d0f-6af16868.mp3",
+   "example": "audio/s/w8d0f-4c0fc41c.mp3"
+  },
+  "w793e-6703": {
+   "word": "audio/w/w793e-6703-bb0a0c68.mp3",
+   "example": "audio/s/w793e-6703-e8b7ab7f.mp3"
+  },
+  "w4e26-4e14": {
+   "word": "audio/w/w4e26-4e14-28b15f7f.mp3",
+   "example": "audio/s/w4e26-4e14-73338b7b.mp3"
+  },
+  "w7537": {
+   "word": "audio/w/w7537-52d45bad.mp3",
+   "example": "audio/s/w7537-ce2ad93a.mp3"
+  },
+  "w5931-53bb": {
+   "word": "audio/w/w5931-53bb-463358c3.mp3",
+   "example": "audio/s/w5931-53bb-7ed0efd0.mp3"
+  },
+  "w5831-544a": {
+   "word": "audio/w/w5831-544a-4fe80f2e.mp3",
+   "example": "audio/s/w5831-544a-bb76d2dc.mp3"
+  },
+  "w80fd-529b": {
+   "word": "audio/w/w80fd-529b-2017038b.mp3",
+   "example": "audio/s/w80fd-529b-2a25fdc2.mp3"
+  },
+  "w500b-4eba": {
+   "word": "audio/w/w500b-4eba-071fe4dc.mp3",
+   "example": "audio/s/w500b-4eba-216b4da6.mp3"
+  },
+  "w5916": {
+   "word": "audio/w/w5916-6bad6878.mp3",
+   "example": "audio/s/w5916-06106564.mp3"
+  },
+  "w6bb5": {
+   "word": "audio/w/w6bb5-5862fe5a.mp3",
+   "example": "audio/s/w6bb5-9ce708be.mp3"
+  },
+  "w97f3-6a02": {
+   "word": "audio/w/w97f3-6a02-07551775.mp3",
+   "example": "audio/s/w97f3-6a02-b6ee90e9.mp3"
+  },
+  "w8cb4": {
+   "word": "audio/w/w8cb4-de27cbf1.mp3",
+   "example": "audio/s/w8cb4-0d50dfc9.mp3"
+  },
+  "w4e0d-7ba1": {
+   "word": "audio/w/w4e0d-7ba1-709da855.mp3",
+   "example": "audio/s/w4e0d-7ba1-5e04abe5.mp3"
+  },
+  "w4f86-81ea": {
+   "word": "audio/w/w4f86-81ea-ffcbf3d3.mp3",
+   "example": "audio/s/w4f86-81ea-78028b0a.mp3"
+  },
+  "w6839-64da": {
+   "word": "audio/w/w6839-64da-55b8dc29.mp3",
+   "example": "audio/s/w6839-64da-d8e3843d.mp3"
+  },
+  "w8072-97f3": {
+   "word": "audio/w/w8072-97f3-7fe66c7a.mp3",
+   "example": "audio/s/w8072-97f3-c1d0bc4f.mp3"
+  },
+  "w66fe-7d93": {
+   "word": "audio/w/w66fe-7d93-6cbc8847.mp3",
+   "example": "audio/s/w66fe-7d93-c2f975d4.mp3"
+  },
+  "w7c21-55ae": {
+   "word": "audio/w/w7c21-55ae-12183031.mp3",
+   "example": "audio/s/w7c21-55ae-62ef5008.mp3"
+  },
+  "w9060": {
+   "word": "audio/w/w9060-c1b68a94.mp3",
+   "example": "audio/s/w9060-b9a4a5db.mp3"
+  },
+  "w4e0b-53bb": {
+   "word": "audio/w/w4e0b-53bb-ecaf99c9.mp3",
+   "example": "audio/s/w4e0b-53bb-674a9c9c.mp3"
+  },
+  "w76ee-6a19": {
+   "word": "audio/w/w76ee-6a19-8c52dfee.mp3",
+   "example": "audio/s/w76ee-6a19-89f1373c.mp3"
+  },
+  "w56e0-6b64": {
+   "word": "audio/w/w56e0-6b64-960fd3e4.mp3",
+   "example": "audio/s/w56e0-6b64-c02f990a.mp3"
+  },
+  "w99ac-4e0a": {
+   "word": "audio/w/w99ac-4e0a-a3dcaa3a.mp3",
+   "example": "audio/s/w99ac-4e0a-3647b760.mp3"
+  },
+  "w7d04": {
+   "word": "audio/w/w7d04-9ec6144c.mp3",
+   "example": "audio/s/w7d04-3fe07bb3.mp3"
+  },
+  "w6551": {
+   "word": "audio/w/w6551-fe76fc89.mp3",
+   "example": "audio/s/w6551-2a398309.mp3"
+  },
+  "w62b1-6b49": {
+   "word": "audio/w/w62b1-6b49-242d18e7.mp3",
+   "example": "audio/s/w62b1-6b49-2ec4894a.mp3"
+  },
+  "w5b58-5728": {
+   "word": "audio/w/w5b58-5728-bc4fd7f3.mp3",
+   "example": "audio/s/w5b58-5728-12d3e389.mp3"
+  },
+  "w5bb9-6613": {
+   "word": "audio/w/w5bb9-6613-e2021308.mp3",
+   "example": "audio/s/w5bb9-6613-fff477ec.mp3"
+  },
+  "w51b7": {
+   "word": "audio/w/w51b7-3b1d912f.mp3",
+   "example": "audio/s/w51b7-75df08a3.mp3"
+  },
+  "w7761": {
+   "word": "audio/w/w7761-b6f1cf9c.mp3",
+   "example": "audio/s/w7761-418951d1.mp3"
+  },
+  "w65e5-672c": {
+   "word": "audio/w/w65e5-672c-f4290cbb.mp3",
+   "example": "audio/s/w65e5-672c-d389fb00.mp3"
+  },
+  "w5f8b-5e2b": {
+   "word": "audio/w/w5f8b-5e2b-a82aa35d.mp3",
+   "example": "audio/s/w5f8b-5e2b-83f08d40.mp3"
+  },
+  "w8ca0-8cac": {
+   "word": "audio/w/w8ca0-8cac-0a3ce5d4.mp3",
+   "example": "audio/s/w8ca0-8cac-8ba97dde.mp3"
+  },
+  "w61c2": {
+   "word": "audio/w/w61c2-eb714aba.mp3",
+   "example": "audio/s/w61c2-18b42a88.mp3"
+  },
+  "w5c11": {
+   "word": "audio/w/w5c11-c103c93c.mp3",
+   "example": "audio/s/w5c11-8e4dcfb9.mp3"
+  },
+  "w95dc": {
+   "word": "audio/w/w95dc-062c9aab.mp3",
+   "example": "audio/s/w95dc-b911fcfe.mp3"
+  },
+  "w98ef": {
+   "word": "audio/w/w98ef-3dbc457a.mp3",
+   "example": "audio/s/w98ef-f6d8cdba.mp3"
+  },
+  "w5f9e-4f86": {
+   "word": "audio/w/w5f9e-4f86-84b87a86.mp3",
+   "example": "audio/s/w5f9e-4f86-95aa1d9f.mp3"
+  },
+  "w4eba-985e": {
+   "word": "audio/w/w4eba-985e-d1bdb40f.mp3",
+   "example": "audio/s/w4eba-985e-69e28b75.mp3"
+  },
+  "w540c-610f": {
+   "word": "audio/w/w540c-610f-4de581db.mp3",
+   "example": "audio/s/w540c-610f-f4d7f1e5.mp3"
+  },
+  "w76ee-524d": {
+   "word": "audio/w/w76ee-524d-2f872f82.mp3",
+   "example": "audio/s/w76ee-524d-7beb9518.mp3"
+  },
+  "w59bb-5b50": {
+   "word": "audio/w/w59bb-5b50-b200b460.mp3",
+   "example": "audio/s/w59bb-5b50-df6d1b7a.mp3"
+  },
+  "w8a18-9304": {
+   "word": "audio/w/w8a18-9304-7b90a8f1.mp3",
+   "example": "audio/s/w8a18-9304-6eaee4a5.mp3"
+  },
+  "w4e94": {
+   "word": "audio/w/w4e94-bc1beb9c.mp3",
+   "example": "audio/s/w4e94-0a29b77c.mp3"
+  },
+  "w6709-9ede": {
+   "word": "audio/w/w6709-9ede-14705d1c.mp3",
+   "example": "audio/s/w6709-9ede-465a9e1c.mp3"
+  },
+  "w600e-9ebc-8fa6": {
+   "word": "audio/w/w600e-9ebc-8fa6-3ec11011.mp3",
+   "example": "audio/s/w600e-9ebc-8fa6-e3e477db.mp3"
+  },
+  "w52a0": {
+   "word": "audio/w/w52a0-c99340a0.mp3",
+   "example": "audio/s/w52a0-6e0b3e0e.mp3"
+  },
+  "w5929-6c23": {
+   "word": "audio/w/w5929-6c23-0dcc9710.mp3",
+   "example": "audio/s/w5929-6c23-997a66b9.mp3"
+  },
+  "w7372-5f97": {
+   "word": "audio/w/w7372-5f97-43205c03.mp3",
+   "example": "audio/s/w7372-5f97-3a1d8ad3.mp3"
+  },
+  "w5012": {
+   "word": "audio/w/w5012-c2a0a0a2.mp3",
+   "example": "audio/s/w5012-2cb54fcc.mp3"
+  },
+  "w6bd4-8f03": {
+   "word": "audio/w/w6bd4-8f03-19298998.mp3",
+   "example": "audio/s/w6bd4-8f03-1931505b.mp3"
+  },
+  "w96fb-8996": {
+   "word": "audio/w/w96fb-8996-23a4b2b5.mp3",
+   "example": "audio/s/w96fb-8996-b817cb20.mp3"
+  },
+  "w6c92-4ec0-9ebc": {
+   "word": "audio/w/w6c92-4ec0-9ebc-0d161e79.mp3",
+   "example": "audio/s/w6c92-4ec0-9ebc-786a70fe.mp3"
+  },
+  "w807d-8aaa": {
+   "word": "audio/w/w807d-8aaa-7b3d38c0.mp3",
+   "example": "audio/s/w807d-8aaa-31fdb008.mp3"
+  },
+  "w58de": {
+   "word": "audio/w/w58de-fbef30fc.mp3",
+   "example": "audio/s/w58de-07f5cf7c.mp3"
+  },
+  "w5c0f-59d0": {
+   "word": "audio/w/w5c0f-59d0-dc55c32f.mp3",
+   "example": "audio/s/w5c0f-59d0-117fc7b2.mp3"
+  },
+  "w8863-670d": {
+   "word": "audio/w/w8863-670d-b67aac96.mp3",
+   "example": "audio/s/w8863-670d-7bc8c07e.mp3"
+  },
+  "w90e8": {
+   "word": "audio/w/w90e8-5cd8dbd3.mp3",
+   "example": "audio/s/w90e8-314e5b83.mp3"
+  },
+  "w83dc": {
+   "word": "audio/w/w83dc-e6bfa204.mp3",
+   "example": "audio/s/w83dc-c8b23a0a.mp3"
+  },
+  "w624b-6a5f": {
+   "word": "audio/w/w624b-6a5f-6c317ca9.mp3",
+   "example": "audio/s/w624b-6a5f-6a450ce6.mp3"
+  },
+  "w6253-96fb-8a71": {
+   "word": "audio/w/w6253-96fb-8a71-82f8fa78.mp3",
+   "example": "audio/s/w6253-96fb-8a71-c91b7e02.mp3"
+  },
+  "w807d-5230": {
+   "word": "audio/w/w807d-5230-a878ed61.mp3",
+   "example": "audio/s/w807d-5230-517bd6a2.mp3"
+  },
+  "w63db": {
+   "word": "audio/w/w63db-1f1cc3fd.mp3",
+   "example": "audio/s/w63db-14b13d21.mp3"
+  },
+  "w5fd9": {
+   "word": "audio/w/w5fd9-9c824d37.mp3",
+   "example": "audio/s/w5fd9-3f93f451.mp3"
+  },
+  "w7559": {
+   "word": "audio/w/w7559-bcaf868b.mp3",
+   "example": "audio/s/w7559-05e7ce45.mp3"
+  },
+  "w597d-597d": {
+   "word": "audio/w/w597d-597d-af37fbb9.mp3",
+   "example": "audio/s/w597d-597d-0b1da0f1.mp3"
+  },
+  "w7f8e-91d1": {
+   "word": "audio/w/w7f8e-91d1-b8c1bfae.mp3",
+   "example": "audio/s/w7f8e-91d1-590e076d.mp3"
+  },
+  "w73fe-5834": {
+   "word": "audio/w/w73fe-5834-db67f48d.mp3",
+   "example": "audio/s/w73fe-5834-464b3d72.mp3"
+  },
+  "w6562": {
+   "word": "audio/w/w6562-a36027d4.mp3",
+   "example": "audio/s/w6562-4cc80e77.mp3"
+  },
+  "w5408-4f5c": {
+   "word": "audio/w/w5408-4f5c-4cc2f34c.mp3",
+   "example": "audio/s/w5408-4f5c-02254eed.mp3"
+  },
+  "w5ec1-6240": {
+   "word": "audio/w/w5ec1-6240-648e6ae0.mp3",
+   "example": "audio/s/w5ec1-6240-dd55e24c.mp3"
+  },
+  "w8fa6": {
+   "word": "audio/w/w8fa6-3c7a6d06.mp3",
+   "example": "audio/s/w8fa6-466edf02.mp3"
+  },
+  "w7406-89e3": {
+   "word": "audio/w/w7406-89e3-00bc7635.mp3",
+   "example": "audio/s/w7406-89e3-a353b9a8.mp3"
+  },
+  "w4e45": {
+   "word": "audio/w/w4e45-3333622c.mp3",
+   "example": "audio/s/w4e45-6e869b6c.mp3"
+  },
+  "w53f0": {
+   "word": "audio/w/w53f0-be32bb5d.mp3",
+   "example": "audio/s/w53f0-9b3d0087.mp3"
+  },
+  "w4fdd-6301": {
+   "word": "audio/w/w4fdd-6301-212940a3.mp3",
+   "example": "audio/s/w4fdd-6301-a0381de8.mp3"
+  },
+  "w670d-52d9": {
+   "word": "audio/w/w670d-52d9-cf55b147.mp3",
+   "example": "audio/s/w670d-52d9-8df3a84d.mp3"
+  },
+  "w8868-6f14": {
+   "word": "audio/w/w8868-6f14-b83a24e2.mp3",
+   "example": "audio/s/w8868-6f14-ddbc9e66.mp3"
+  },
+  "w8df3": {
+   "word": "audio/w/w8df3-a9a8b7c6.mp3",
+   "example": "audio/s/w8df3-27327f08.mp3"
+  },
+  "w96e3-9053": {
+   "word": "audio/w/w96e3-9053-39746654.mp3",
+   "example": "audio/s/w96e3-9053-3cadabd6.mp3"
+  },
+  "w4e8b-5be6": {
+   "word": "audio/w/w4e8b-5be6-7f7a4799.mp3",
+   "example": "audio/s/w4e8b-5be6-46698236.mp3"
+  },
+  "w59d0-59d0": {
+   "word": "audio/w/w59d0-59d0-14872c19.mp3",
+   "example": "audio/s/w59d0-59d0-6c25dfe0.mp3"
+  },
+  "w98db-6a5f": {
+   "word": "audio/w/w98db-6a5f-29ac447c.mp3",
+   "example": "audio/s/w98db-6a5f-530203c8.mp3"
+  },
+  "w884c-70ba": {
+   "word": "audio/w/w884c-70ba-a80d48ea.mp3",
+   "example": "audio/s/w884c-70ba-a76b1dfd.mp3"
+  },
+  "w6253-7b97": {
+   "word": "audio/w/w6253-7b97-8decef6d.mp3",
+   "example": "audio/s/w6253-7b97-7ff247e5.mp3"
+  },
+  "w6cd5-5f8b": {
+   "word": "audio/w/w6cd5-5f8b-bf1c490c.mp3",
+   "example": "audio/s/w6cd5-5f8b-8f95f79b.mp3"
+  },
+  "w5371-96aa": {
+   "word": "audio/w/w5371-96aa-125ca449.mp3",
+   "example": "audio/s/w5371-96aa-ca5bb10e.mp3"
+  },
+  "w5973-58eb": {
+   "word": "audio/w/w5973-58eb-94b0bba3.mp3",
+   "example": "audio/s/w5973-58eb-cad6a5e4.mp3"
+  },
+  "w63d0": {
+   "word": "audio/w/w63d0-768bdfab.mp3",
+   "example": "audio/s/w63d0-ae17558a.mp3"
+  },
+  "w8fa6-516c-5ba4": {
+   "word": "audio/w/w8fa6-516c-5ba4-b47d089c.mp3",
+   "example": "audio/s/w8fa6-516c-5ba4-e24f3c87.mp3"
+  },
+  "w7d50-5a5a": {
+   "word": "audio/w/w7d50-5a5a-2a37ada8.mp3",
+   "example": "audio/s/w7d50-5a5a-ff3c8a7a.mp3"
+  },
+  "w5feb-6a02": {
+   "word": "audio/w/w5feb-6a02-7162b00e.mp3",
+   "example": "audio/s/w5feb-6a02-25208581.mp3"
+  },
+  "w4e0a-73ed": {
+   "word": "audio/w/w4e0a-73ed-f5937273.mp3",
+   "example": "audio/s/w4e0a-73ed-133a38f0.mp3"
+  },
+  "w6230-722d": {
+   "word": "audio/w/w6230-722d-9fe56a9d.mp3",
+   "example": "audio/s/w6230-722d-8cd43e53.mp3"
+  },
+  "w5f37": {
+   "word": "audio/w/w5f37-d0acab00.mp3",
+   "example": "audio/s/w5f37-1b3914a2.mp3"
+  },
+  "w8f49": {
+   "word": "audio/w/w8f49-584c3545.mp3",
+   "example": "audio/s/w8f49-7bd192f9.mp3"
+  },
+  "w91cd-65b0": {
+   "word": "audio/w/w91cd-65b0-25e85b60.mp3",
+   "example": "audio/s/w91cd-65b0-63b5f375.mp3"
+  },
+  "w67e5": {
+   "word": "audio/w/w67e5-fbd83b83.mp3",
+   "example": "audio/s/w67e5-82f9b966.mp3"
+  },
+  "w96e2": {
+   "word": "audio/w/w96e2-664ee4d0.mp3",
+   "example": "audio/s/w96e2-80a71b2f.mp3"
+  },
+  "w5f80": {
+   "word": "audio/w/w5f80-a2ceb06a.mp3",
+   "example": "audio/s/w5f80-1225a108.mp3"
+  },
+  "w5efa-8b70": {
+   "word": "audio/w/w5efa-8b70-0afb5408.mp3",
+   "example": "audio/s/w5efa-8b70-6bd68177.mp3"
+  },
+  "w623f-5b50": {
+   "word": "audio/w/w623f-5b50-4a4d1526.mp3",
+   "example": "audio/s/w623f-5b50-bbe06702.mp3"
+  },
+  "w6d17-6fa1": {
+   "word": "audio/w/w6d17-6fa1-dd0a1856.mp3",
+   "example": "audio/s/w6d17-6fa1-1303c1f3.mp3"
+  },
+  "w525b-525b": {
+   "word": "audio/w/w525b-525b-556c1ca2.mp3",
+   "example": "audio/s/w525b-525b-18579901.mp3"
+  },
+  "w7d42-65bc": {
+   "word": "audio/w/w7d42-65bc-0188e63a.mp3",
+   "example": "audio/s/w7d42-65bc-292537e4.mp3"
+  },
+  "w65b9-9762": {
+   "word": "audio/w/w65b9-9762-d9aec7ab.mp3",
+   "example": "audio/s/w65b9-9762-474fa28d.mp3"
+  },
+  "w8eab-9ad4": {
+   "word": "audio/w/w8eab-9ad4-a07d4cdd.mp3",
+   "example": "audio/s/w8eab-9ad4-89148349.mp3"
+  },
+  "w5bf6-8c9d": {
+   "word": "audio/w/w5bf6-8c9d-aca8776f.mp3",
+   "example": "audio/s/w5bf6-8c9d-2594b6cc.mp3"
+  },
+  "w5bb3-6015": {
+   "word": "audio/w/w5bb3-6015-3c5898cd.mp3",
+   "example": "audio/s/w5bb3-6015-2bd2be8f.mp3"
+  },
+  "w8001-5e2b": {
+   "word": "audio/w/w8001-5e2b-cfe0a6c1.mp3",
+   "example": "audio/s/w8001-5e2b-adee1c9c.mp3"
+  },
+  "w883b": {
+   "word": "audio/w/w883b-a837cea5.mp3",
+   "example": "audio/s/w883b-f0493092.mp3"
+  },
+  "w7cbe-795e": {
+   "word": "audio/w/w7cbe-795e-74cd5c96.mp3",
+   "example": "audio/s/w7cbe-795e-546618b5.mp3"
+  },
+  "w91cd": {
+   "word": "audio/w/w91cd-e6f0bdd2.mp3",
+   "example": "audio/s/w91cd-0ec66dc0.mp3"
+  },
+  "w5f1f-5f1f": {
+   "word": "audio/w/w5f1f-5f1f-81ec8043.mp3",
+   "example": "audio/s/w5f1f-5f1f-1956c279.mp3"
+  },
+  "w5e36-4f86": {
+   "word": "audio/w/w5e36-4f86-921bf6f4.mp3",
+   "example": "audio/s/w5e36-4f86-cad45068.mp3"
+  },
+  "w672a-4f86": {
+   "word": "audio/w/w672a-4f86-11ed21be.mp3",
+   "example": "audio/s/w672a-4f86-18997a76.mp3"
+  },
+  "w4e8b-4ef6": {
+   "word": "audio/w/w4e8b-4ef6-9d119508.mp3",
+   "example": "audio/s/w4e8b-4ef6-2e9758ce.mp3"
+  },
+  "w8d8a": {
+   "word": "audio/w/w8d8a-9f90ff56.mp3",
+   "example": "audio/s/w8d8a-8c867614.mp3"
+  },
+  "w9ed1": {
+   "word": "audio/w/w9ed1-b0377234.mp3",
+   "example": "audio/s/w9ed1-1601b948.mp3"
+  },
+  "w53e6-5916": {
+   "word": "audio/w/w53e6-5916-4d4805af.mp3",
+   "example": "audio/s/w53e6-5916-2875d143.mp3"
+  },
+  "w56b4-91cd": {
+   "word": "audio/w/w56b4-91cd-1ea6df41.mp3",
+   "example": "audio/s/w56b4-91cd-2ef492de.mp3"
+  },
+  "w958b-5fc3": {
+   "word": "audio/w/w958b-5fc3-c28f29ea.mp3",
+   "example": "audio/s/w958b-5fc3-840fbad4.mp3"
+  },
+  "w59b9-59b9": {
+   "word": "audio/w/w59b9-59b9-b26b60ef.mp3",
+   "example": "audio/s/w59b9-59b9-c17df44d.mp3"
+  },
+  "w4eba-54e1": {
+   "word": "audio/w/w4eba-54e1-db9c4cee.mp3",
+   "example": "audio/s/w4eba-54e1-370c0c72.mp3"
+  },
+  "w6b7b-4ea1": {
+   "word": "audio/w/w6b7b-4ea1-b155d006.mp3",
+   "example": "audio/s/w6b7b-4ea1-fd561eba.mp3"
+  },
+  "w9019-6b21": {
+   "word": "audio/w/w9019-6b21-8ce66a0c.mp3",
+   "example": "audio/s/w9019-6b21-7e0bc35c.mp3"
+  },
+  "w6aa2-67e5": {
+   "word": "audio/w/w6aa2-67e5-ca0ff516.mp3",
+   "example": "audio/s/w6aa2-67e5-3a74976a.mp3"
+  },
+  "w52a0-5165": {
+   "word": "audio/w/w52a0-5165-4692e5fc.mp3",
+   "example": "audio/s/w52a0-5165-bd249e80.mp3"
+  },
+  "w4e00-822c": {
+   "word": "audio/w/w4e00-822c-0514ca06.mp3",
+   "example": "audio/s/w4e00-822c-8a821a0d.mp3"
+  },
+  "w6559": {
+   "word": "audio/w/w6559-0a3c283f.mp3",
+   "example": "audio/s/w6559-e9e56f64.mp3"
+  },
+  "w505c": {
+   "word": "audio/w/w505c-cd1f40cd.mp3",
+   "example": "audio/s/w505c-17b39fc3.mp3"
+  },
+  "w8cc7-6599": {
+   "word": "audio/w/w8cc7-6599-db6e5eab.mp3",
+   "example": "audio/s/w8cc7-6599-c33e692e.mp3"
+  },
+  "w56de-5230": {
+   "word": "audio/w/w56de-5230-153975b2.mp3",
+   "example": "audio/s/w56de-5230-12e0fd5b.mp3"
+  },
+  "w8036": {
+   "word": "audio/w/w8036-81ef61c3.mp3",
+   "example": "audio/s/w8036-ebbf75a6.mp3"
+  },
+  "w7236-6bcd": {
+   "word": "audio/w/w7236-6bcd-d3171d88.mp3",
+   "example": "audio/s/w7236-6bcd-8e38e62b.mp3"
+  },
+  "w5168-90e8": {
+   "word": "audio/w/w5168-90e8-bd1ad5e3.mp3",
+   "example": "audio/s/w5168-90e8-6767c519.mp3"
+  },
+  "w6a23-5b50": {
+   "word": "audio/w/w6a23-5b50-71dc5430.mp3",
+   "example": "audio/s/w6a23-5b50-7e6fb8d2.mp3"
+  },
+  "w81c9": {
+   "word": "audio/w/w81c9-c4ce098d.mp3",
+   "example": "audio/s/w81c9-76594401.mp3"
+  },
+  "w7403": {
+   "word": "audio/w/w7403-a65f73ed.mp3",
+   "example": "audio/s/w7403-4d832adc.mp3"
+  },
+  "w5fd8": {
+   "word": "audio/w/w5fd8-12f550b0.mp3",
+   "example": "audio/s/w5fd8-7b0eab27.mp3"
+  },
+  "w7dda": {
+   "word": "audio/w/w7dda-cf25d40e.mp3",
+   "example": "audio/s/w7dda-766c3cf0.mp3"
+  },
+  "w6bcf-5929": {
+   "word": "audio/w/w6bcf-5929-13ad2940.mp3",
+   "example": "audio/s/w6bcf-5929-1716176f.mp3"
+  },
+  "w4fbf-7576": {
+   "word": "audio/w/w4fbf-7576-2c614b41.mp3",
+   "example": "audio/s/w4fbf-7576-7807d29b.mp3"
+  },
+  "w526f": {
+   "word": "audio/w/w526f-d7722fbd.mp3",
+   "example": "audio/s/w526f-4c9099c1.mp3"
+  },
+  "w5229-7528": {
+   "word": "audio/w/w5229-7528-75a41bbb.mp3",
+   "example": "audio/s/w5229-7528-32e4ccdb.mp3"
+  },
+  "w50a2-4f19": {
+   "word": "audio/w/w50a2-4f19-4ca9c865.mp3",
+   "example": "audio/s/w50a2-4f19-c7272003.mp3"
+  },
+  "w8a2d-8a08": {
+   "word": "audio/w/w8a2d-8a08-7305ff91.mp3",
+   "example": "audio/s/w8a2d-8a08-3f404aad.mp3"
+  },
+  "w5805-6301": {
+   "word": "audio/w/w5805-6301-55a206c0.mp3",
+   "example": "audio/s/w5805-6301-537daadc.mp3"
+  },
+  "w6309": {
+   "word": "audio/w/w6309-727a3747.mp3",
+   "example": "audio/s/w6309-da15dc51.mp3"
+  },
+  "w5f85": {
+   "word": "audio/w/w5f85-89df7e5d.mp3",
+   "example": "audio/s/w5f85-9f5df4b5.mp3"
+  },
+  "w53d7-5230": {
+   "word": "audio/w/w53d7-5230-916c79fe.mp3",
+   "example": "audio/s/w53d7-5230-1e584fb8.mp3"
+  },
+  "w653e-68c4": {
+   "word": "audio/w/w653e-68c4-8873bf62.mp3",
+   "example": "audio/s/w653e-68c4-48a8781b.mp3"
+  },
+  "w65e9-9910": {
+   "word": "audio/w/w65e9-9910-309b2d8b.mp3",
+   "example": "audio/s/w65e9-9910-f6f0e5b1.mp3"
+  },
+  "w665a": {
+   "word": "audio/w/w665a-f91096d1.mp3",
+   "example": "audio/s/w665a-68e5c42b.mp3"
+  },
+  "w9ebb-7169": {
+   "word": "audio/w/w9ebb-7169-44470f3b.mp3",
+   "example": "audio/s/w9ebb-7169-0fcc671d.mp3"
+  },
+  "w76f4-5230": {
+   "word": "audio/w/w76f4-5230-149b2817.mp3",
+   "example": "audio/s/w76f4-5230-56a2ffb7.mp3"
+  },
+  "w7a81-7136": {
+   "word": "audio/w/w7a81-7136-f6f526c0.mp3",
+   "example": "audio/s/w7a81-7136-7046ab7b.mp3"
+  },
+  "w6b63-5e38": {
+   "word": "audio/w/w6b63-5e38-afee9075.mp3",
+   "example": "audio/s/w6b63-5e38-5d1cfba7.mp3"
+  },
+  "w8a31-591a": {
+   "word": "audio/w/w8a31-591a-9da10321.mp3",
+   "example": "audio/s/w8a31-591a-a4733d4c.mp3"
+  },
+  "w5634": {
+   "word": "audio/w/w5634-be9e5ff0.mp3",
+   "example": "audio/s/w5634-b4634051.mp3"
+  },
+  "w50b7-5bb3": {
+   "word": "audio/w/w50b7-5bb3-0384d457.mp3",
+   "example": "audio/s/w50b7-5bb3-a48a9c2c.mp3"
+  },
+  "w773c-775b": {
+   "word": "audio/w/w773c-775b-e8cbaf44.mp3",
+   "example": "audio/s/w773c-775b-df91fcce.mp3"
+  },
+  "w56de-53bb": {
+   "word": "audio/w/w56de-53bb-a1f7c499.mp3",
+   "example": "audio/s/w56de-53bb-fdaf1bb7.mp3"
+  },
+  "w665a-9910": {
+   "word": "audio/w/w665a-9910-c2e8c8a7.mp3",
+   "example": "audio/s/w665a-9910-0a99fcc2.mp3"
+  },
+  "w932f-8aa4": {
+   "word": "audio/w/w932f-8aa4-bc09ce68.mp3",
+   "example": "audio/s/w932f-8aa4-1bba03df.mp3"
+  },
+  "w79d8-5bc6": {
+   "word": "audio/w/w79d8-5bc6-fee0911d.mp3",
+   "example": "audio/s/w79d8-5bc6-250a2670.mp3"
+  },
+  "w534a": {
+   "word": "audio/w/w534a-d175fc44.mp3",
+   "example": "audio/s/w534a-821ce527.mp3"
+  },
+  "w4e0d-518d": {
+   "word": "audio/w/w4e0d-518d-631fc2c0.mp3",
+   "example": "audio/s/w4e0d-518d-d80fc882.mp3"
+  },
+  "w610f-7fa9": {
+   "word": "audio/w/w610f-7fa9-d850eae1.mp3",
+   "example": "audio/s/w610f-7fa9-5b006ecf.mp3"
+  },
+  "w9032-4f86": {
+   "word": "audio/w/w9032-4f86-1718fdbe.mp3",
+   "example": "audio/s/w9032-4f86-313d6234.mp3"
+  },
+  "w7d93-6b77": {
+   "word": "audio/w/w7d93-6b77-96fba7a7.mp3",
+   "example": "audio/s/w7d93-6b77-60d3bc40.mp3"
+  },
+  "w9280-884c": {
+   "word": "audio/w/w9280-884c-329f841a.mp3",
+   "example": "audio/s/w9280-884c-7b37e5a7.mp3"
+  },
+  "w9470-5319": {
+   "word": "audio/w/w9470-5319-f1693dad.mp3",
+   "example": "audio/s/w9470-5319-a1148f81.mp3"
+  },
+  "w9032-53bb": {
+   "word": "audio/w/w9032-53bb-b9651ce3.mp3",
+   "example": "audio/s/w9032-53bb-89da5a76.mp3"
+  },
+  "w8b80": {
+   "word": "audio/w/w8b80-e60f36a2.mp3",
+   "example": "audio/s/w8b80-5f839cb1.mp3"
+  },
+  "w6253-958b": {
+   "word": "audio/w/w6253-958b-d5ad40ef.mp3",
+   "example": "audio/s/w6253-958b-c05b399d.mp3"
+  },
+  "w525b-624d": {
+   "word": "audio/w/w525b-624d-17516df5.mp3",
+   "example": "audio/s/w525b-624d-93d7b968.mp3"
+  },
+  "w5b78-7fd2": {
+   "word": "audio/w/w5b78-7fd2-51a88ad0.mp3",
+   "example": "audio/s/w5b78-7fd2-89249822.mp3"
+  },
+  "w5143": {
+   "word": "audio/w/w5143-d04dbcc2.mp3",
+   "example": "audio/s/w5143-e438f0fd.mp3"
+  },
+  "w6a5f-8eca": {
+   "word": "audio/w/w6a5f-8eca-4e7cc018.mp3",
+   "example": "audio/s/w6a5f-8eca-55f6a429.mp3"
+  },
+  "w4e3b-8981": {
+   "word": "audio/w/w4e3b-8981-0e30b4f3.mp3",
+   "example": "audio/s/w4e3b-8981-9e70ff3f.mp3"
+  },
+  "w7c73": {
+   "word": "audio/w/w7c73-8eb648eb.mp3",
+   "example": "audio/s/w7c73-84469cc7.mp3"
+  },
+  "w518d-898b": {
+   "word": "audio/w/w518d-898b-ed37e8ae.mp3",
+   "example": "audio/s/w518d-898b-ef28a014.mp3"
+  },
+  "w904b-52d5": {
+   "word": "audio/w/w904b-52d5-455f4d9c.mp3",
+   "example": "audio/s/w904b-52d5-da430d5f.mp3"
+  },
+  "w8aaa-660e": {
+   "word": "audio/w/w8aaa-660e-1b58cba1.mp3",
+   "example": "audio/s/w8aaa-660e-fbe96b60.mp3"
+  },
+  "w6d17": {
+   "word": "audio/w/w6d17-dd1bb26c.mp3",
+   "example": "audio/s/w6d17-ba1f055a.mp3"
+  },
+  "w4e4b-4e00": {
+   "word": "audio/w/w4e4b-4e00-33bd74a2.mp3",
+   "example": "audio/s/w4e4b-4e00-5ebccdc0.mp3"
+  },
+  "w8b49-64da": {
+   "word": "audio/w/w8b49-64da-d0cb17ad.mp3",
+   "example": "audio/s/w8b49-64da-7afd9e2d.mp3"
+  },
+  "w5225-7684": {
+   "word": "audio/w/w5225-7684-322635ee.mp3",
+   "example": "audio/s/w5225-7684-197f107d.mp3"
+  },
+  "w8a66": {
+   "word": "audio/w/w8a66-dee52438.mp3",
+   "example": "audio/s/w8a66-b39e1057.mp3"
+  },
+  "w5c6c-65bc": {
+   "word": "audio/w/w5c6c-65bc-006157a8.mp3",
+   "example": "audio/s/w5c6c-65bc-6ab2941f.mp3"
+  },
+  "w623f-9593": {
+   "word": "audio/w/w623f-9593-125e34bc.mp3",
+   "example": "audio/s/w623f-9593-90dea457.mp3"
+  },
+  "w4e0a-9762": {
+   "word": "audio/w/w4e0a-9762-f50bda44.mp3",
+   "example": "audio/s/w4e0a-9762-3092e83b.mp3"
+  },
+  "w4e08-592b": {
+   "word": "audio/w/w4e08-592b-9b718180.mp3",
+   "example": "audio/s/w4e08-592b-c7c31de7.mp3"
+  },
+  "w529b-91cf": {
+   "word": "audio/w/w529b-91cf-0714581e.mp3",
+   "example": "audio/s/w529b-91cf-10738c3f.mp3"
+  },
+  "w800c-5df2": {
+   "word": "audio/w/w800c-5df2-3d7d4b4a.mp3",
+   "example": "audio/s/w800c-5df2-5ce2fa66.mp3"
+  },
+  "w501f": {
+   "word": "audio/w/w501f-8a2fc533.mp3",
+   "example": "audio/s/w501f-3fd2d158.mp3"
+  },
+  "w731c": {
+   "word": "audio/w/w731c-169b5405.mp3",
+   "example": "audio/s/w731c-a9d3ce46.mp3"
+  },
+  "w96c6": {
+   "word": "audio/w/w96c6-d4405d1a.mp3",
+   "example": "audio/s/w96c6-869841a0.mp3"
+  },
+  "w5582": {
+   "word": "audio/w/w5582-00a73b7e.mp3",
+   "example": "audio/s/w5582-73a4993d.mp3"
+  },
+  "w6709-7684": {
+   "word": "audio/w/w6709-7684-acef0860.mp3",
+   "example": "audio/s/w6709-7684-667ed832.mp3"
+  },
+  "w8a0e-8ad6": {
+   "word": "audio/w/w8a0e-8ad6-8bafa1bd.mp3",
+   "example": "audio/s/w8a0e-8ad6-691b9550.mp3"
+  },
+  "w9762": {
+   "word": "audio/w/w9762-272b07af.mp3",
+   "example": "audio/s/w9762-2943004a.mp3"
+  },
+  "w9eb5": {
+   "word": "audio/w/w9eb5-4131b7ea.mp3",
+   "example": "audio/s/w9eb5-951dfa25.mp3"
+  },
+  "w672c-4f86": {
+   "word": "audio/w/w672c-4f86-76f85478.mp3",
+   "example": "audio/s/w672c-4f86-6abc27f2.mp3"
+  },
+  "w627f-8a8d": {
+   "word": "audio/w/w627f-8a8d-fdd6add4.mp3",
+   "example": "audio/s/w627f-8a8d-81eb2ce6.mp3"
+  },
+  "w660e-986f": {
+   "word": "audio/w/w660e-986f-133d214c.mp3",
+   "example": "audio/s/w660e-986f-e940748d.mp3"
+  },
+  "w6162": {
+   "word": "audio/w/w6162-6e94fb9a.mp3",
+   "example": "audio/s/w6162-d9630e82.mp3"
+  },
+  "w8868-793a": {
+   "word": "audio/w/w8868-793a-a7057423.mp3",
+   "example": "audio/s/w8868-793a-75d9e2ba.mp3"
+  },
+  "w60f3-5230": {
+   "word": "audio/w/w60f3-5230-430ed23b.mp3",
+   "example": "audio/s/w60f3-5230-bf0dd6e8.mp3"
+  },
+  "w6703-8b70": {
+   "word": "audio/w/w6703-8b70-cd8b2816.mp3",
+   "example": "audio/s/w6703-8b70-b2bd2831.mp3"
+  },
+  "w6b4c": {
+   "word": "audio/w/w6b4c-621f7359.mp3",
+   "example": "audio/s/w6b4c-0b778ae7.mp3"
+  },
+  "w5c0f-5fc3": {
+   "word": "audio/w/w5c0f-5fc3-834f1c28.mp3",
+   "example": "audio/s/w5c0f-5fc3-7effbdab.mp3"
+  },
+  "w676f": {
+   "word": "audio/w/w676f-2839af80.mp3",
+   "example": "audio/s/w676f-a9958d47.mp3"
+  },
+  "w9152": {
+   "word": "audio/w/w9152-a3d66886.mp3",
+   "example": "audio/s/w9152-28b2dfaf.mp3"
+  },
+  "w7dca-5f35": {
+   "word": "audio/w/w7dca-5f35-5bd4fd2d.mp3",
+   "example": "audio/s/w7dca-5f35-f25864f3.mp3"
+  },
+  "w75db": {
+   "word": "audio/w/w75db-227761cc.mp3",
+   "example": "audio/s/w75db-bfb39005.mp3"
+  },
+  "w5bb6-88e1": {
+   "word": "audio/w/w5bb6-88e1-bfe32fef.mp3",
+   "example": "audio/s/w5bb6-88e1-a4961a16.mp3"
+  },
+  "w540c-6a23": {
+   "word": "audio/w/w540c-6a23-b5e663fc.mp3",
+   "example": "audio/s/w540c-6a23-97c13901.mp3"
+  },
+  "w795e": {
+   "word": "audio/w/w795e-ab4c4902.mp3",
+   "example": "audio/s/w795e-5f3d3020.mp3"
+  },
+  "w65e9-4e0a": {
+   "word": "audio/w/w65e9-4e0a-9da25213.mp3",
+   "example": "audio/s/w65e9-4e0a-e0f1d81f.mp3"
+  },
+  "w5373-4f7f": {
+   "word": "audio/w/w5373-4f7f-cda84a01.mp3",
+   "example": "audio/s/w5373-4f7f-c902c358.mp3"
+  },
+  "w5f8c-4f86": {
+   "word": "audio/w/w5f8c-4f86-74277a31.mp3",
+   "example": "audio/s/w5f8c-4f86-67e54ab4.mp3"
+  },
+  "w56de-7b54": {
+   "word": "audio/w/w56de-7b54-09cf31d9.mp3",
+   "example": "audio/s/w56de-7b54-d299aec9.mp3"
+  },
+  "w610f-898b": {
+   "word": "audio/w/w610f-898b-075cf0e1.mp3",
+   "example": "audio/s/w610f-898b-1d9e7ccb.mp3"
+  },
+  "w95dc-5fc3": {
+   "word": "audio/w/w95dc-5fc3-4edb4b59.mp3",
+   "example": "audio/s/w95dc-5fc3-e082df1a.mp3"
+  },
+  "w7559-4e0b": {
+   "word": "audio/w/w7559-4e0b-f2ddb60e.mp3",
+   "example": "audio/s/w7559-4e0b-7c18ff77.mp3"
+  },
+  "w53b2-5bb3": {
+   "word": "audio/w/w53b2-5bb3-44375da6.mp3",
+   "example": "audio/s/w53b2-5bb3-9f466b34.mp3"
+  },
+  "w7d93-5e38": {
+   "word": "audio/w/w7d93-5e38-73e53723.mp3",
+   "example": "audio/s/w7d93-5e38-d2cf5b6b.mp3"
+  },
+  "w4e0d-7528": {
+   "word": "audio/w/w4e0d-7528-9a0bc73e.mp3",
+   "example": "audio/s/w4e0d-7528-0becf715.mp3"
+  },
+  "w4e0d-597d": {
+   "word": "audio/w/w4e0d-597d-c814efb2.mp3",
+   "example": "audio/s/w4e0d-597d-676d8c5d.mp3"
+  },
+  "w88dd": {
+   "word": "audio/w/w88dd-8b11ad71.mp3",
+   "example": "audio/s/w88dd-2aeb45aa.mp3"
+  },
+  "w9996-5148": {
+   "word": "audio/w/w9996-5148-ce8b5430.mp3",
+   "example": "audio/s/w9996-5148-f8911f35.mp3"
+  },
+  "w5e74-8f15": {
+   "word": "audio/w/w5e74-8f15-2ed365ae.mp3",
+   "example": "audio/s/w5e74-8f15-0b2ea546.mp3"
+  },
+  "w539f-4f86": {
+   "word": "audio/w/w539f-4f86-4d8cd64d.mp3",
+   "example": "audio/s/w539f-4f86-55f3ec47.mp3"
+  },
+  "w53cd-5c0d": {
+   "word": "audio/w/w53cd-5c0d-d66bd7d9.mp3",
+   "example": "audio/s/w53cd-5c0d-fecadb64.mp3"
+  },
+  "w4e0d-884c": {
+   "word": "audio/w/w4e0d-884c-af3a315c.mp3",
+   "example": "audio/s/w4e0d-884c-3ca8542c.mp3"
+  },
+  "w4e7e-6de8": {
+   "word": "audio/w/w4e7e-6de8-020426dc.mp3",
+   "example": "audio/s/w4e7e-6de8-034c0d60.mp3"
+  },
+  "w4e8b-5be6-4e0a": {
+   "word": "audio/w/w4e8b-5be6-4e0a-add3136d.mp3",
+   "example": "audio/s/w4e8b-5be6-4e0a-31408ba2.mp3"
+  },
+  "w6536-5230": {
+   "word": "audio/w/w6536-5230-7b35f0df.mp3",
+   "example": "audio/s/w6536-5230-48c3093a.mp3"
+  },
+  "w8a0e-53ad": {
+   "word": "audio/w/w8a0e-53ad-191d5da5.mp3",
+   "example": "audio/s/w8a0e-53ad-1480c618.mp3"
+  },
+  "w5922": {
+   "word": "audio/w/w5922-f6ae2597.mp3",
+   "example": "audio/s/w5922-3f8115f9.mp3"
+  },
+  "w5947-602a": {
+   "word": "audio/w/w5947-602a-3c2136bc.mp3",
+   "example": "audio/s/w5947-602a-61069841.mp3"
+  },
+  "w6709-8da3": {
+   "word": "audio/w/w6709-8da3-dac54f95.mp3",
+   "example": "audio/s/w6709-8da3-475c7f68.mp3"
+  },
+  "w6015": {
+   "word": "audio/w/w6015-b77383a1.mp3",
+   "example": "audio/s/w6015-d6fabf87.mp3"
+  },
+  "w7d44": {
+   "word": "audio/w/w7d44-5f5a1017.mp3",
+   "example": "audio/s/w7d44-91bacca5.mp3"
+  },
+  "w7d93-904e": {
+   "word": "audio/w/w7d93-904e-99de4eac.mp3",
+   "example": "audio/s/w7d93-904e-e01f869d.mp3"
+  },
+  "w597d-770b": {
+   "word": "audio/w/w597d-770b-3921121e.mp3",
+   "example": "audio/s/w597d-770b-e0edd136.mp3"
+  },
+  "w6700-7d42": {
+   "word": "audio/w/w6700-7d42-beef7354.mp3",
+   "example": "audio/s/w6700-7d42-a94a11b9.mp3"
+  },
+  "w6628-5929": {
+   "word": "audio/w/w6628-5929-b3c28843.mp3",
+   "example": "audio/s/w6628-5929-7c324547.mp3"
+  },
+  "w5e7e-4e4e": {
+   "word": "audio/w/w5e7e-4e4e-b79d70e2.mp3",
+   "example": "audio/s/w5e7e-4e4e-65d17605.mp3"
+  },
+  "w5927-6982": {
+   "word": "audio/w/w5927-6982-bc70734c.mp3",
+   "example": "audio/s/w5927-6982-b1f9f3bb.mp3"
+  },
+  "w60f3-6cd5": {
+   "word": "audio/w/w60f3-6cd5-8afbccbb.mp3",
+   "example": "audio/s/w60f3-6cd5-f9c51baf.mp3"
+  },
+  "w53ef-611b": {
+   "word": "audio/w/w53ef-611b-2bf02604.mp3",
+   "example": "audio/s/w53ef-611b-60667ff9.mp3"
+  },
+  "w610f-8b58": {
+   "word": "audio/w/w610f-8b58-97032db6.mp3",
+   "example": "audio/s/w610f-8b58-70952a8f.mp3"
+  },
+  "w9644-8fd1": {
+   "word": "audio/w/w9644-8fd1-8eb0f733.mp3",
+   "example": "audio/s/w9644-8fd1-473f1c2e.mp3"
+  },
+  "w5b89-6392": {
+   "word": "audio/w/w5b89-6392-3cf0e47d.mp3",
+   "example": "audio/s/w5b89-6392-81bb4618.mp3"
+  },
+  "w597d-73a9": {
+   "word": "audio/w/w597d-73a9-5c629013.mp3",
+   "example": "audio/s/w597d-73a9-dfe13107.mp3"
+  },
+  "w5fc5-8981": {
+   "word": "audio/w/w5fc5-8981-b3e4112c.mp3",
+   "example": "audio/s/w5fc5-8981-7ad8e28e.mp3"
+  },
+  "w8208-8da3": {
+   "word": "audio/w/w8208-8da3-ce7fea69.mp3",
+   "example": "audio/s/w8208-8da3-bc6c9176.mp3"
+  },
+  "w96fb-8166": {
+   "word": "audio/w/w96fb-8166-33278d54.mp3",
+   "example": "audio/s/w96fb-8166-f00763bd.mp3"
+  },
+  "w6b63-78ba": {
+   "word": "audio/w/w6b63-78ba-0f4215f3.mp3",
+   "example": "audio/s/w6b63-78ba-e1eb9ecf.mp3"
+  },
+  "w5531": {
+   "word": "audio/w/w5531-c02fdc88.mp3",
+   "example": "audio/s/w5531-c5bcad79.mp3"
+  },
+  "w4ecb-7d39": {
+   "word": "audio/w/w4ecb-7d39-6d0aa922.mp3",
+   "example": "audio/s/w4ecb-7d39-7e9d6922.mp3"
+  },
+  "w6cbb-7642": {
+   "word": "audio/w/w6cbb-7642-c88824a1.mp3",
+   "example": "audio/s/w6cbb-7642-5fd92a95.mp3"
+  },
+  "w5be6-969b-4e0a": {
+   "word": "audio/w/w5be6-969b-4e0a-8cc6a30f.mp3",
+   "example": "audio/s/w5be6-969b-4e0a-08280fd0.mp3"
+  },
+  "w8a18-8005": {
+   "word": "audio/w/w8a18-8005-28a19e11.mp3",
+   "example": "audio/s/w8a18-8005-ee63f57e.mp3"
+  },
+  "w524d-9762": {
+   "word": "audio/w/w524d-9762-cb6cfaae.mp3",
+   "example": "audio/s/w524d-9762-71e3916a.mp3"
+  },
+  "w76e3-7344": {
+   "word": "audio/w/w76e3-7344-deba775f.mp3",
+   "example": "audio/s/w76e3-7344-b3d5deeb.mp3"
+  },
+  "w7684-78ba": {
+   "word": "audio/w/w7684-78ba-8f589e70.mp3",
+   "example": "audio/s/w7684-78ba-bfe76827.mp3"
+  },
+  "w90a3-7a2e": {
+   "word": "audio/w/w90a3-7a2e-df2eef33.mp3",
+   "example": "audio/s/w90a3-7a2e-a4d2a84c.mp3"
+  },
+  "w5be6-5728": {
+   "word": "audio/w/w5be6-5728-fafab49a.mp3",
+   "example": "audio/s/w5be6-5728-343d588f.mp3"
+  },
+  "w760b-72c2": {
+   "word": "audio/w/w760b-72c2-fa9b175f.mp3",
+   "example": "audio/s/w760b-72c2-30510f42.mp3"
+  },
+  "w65c1-908a": {
+   "word": "audio/w/w65c1-908a-109a3b99.mp3",
+   "example": "audio/s/w65c1-908a-b3b2a09d.mp3"
+  },
+  "w7247": {
+   "word": "audio/w/w7247-ad40b806.mp3",
+   "example": "audio/s/w7247-55d242d0.mp3"
+  },
+  "w9996": {
+   "word": "audio/w/w9996-56ffef46.mp3",
+   "example": "audio/s/w9996-38baadae.mp3"
+  },
+  "w5426-5247": {
+   "word": "audio/w/w5426-5247-63122147.mp3",
+   "example": "audio/s/w5426-5247-925644da.mp3"
+  },
+  "w4ecd-7136": {
+   "word": "audio/w/w4ecd-7136-e3d62262.mp3",
+   "example": "audio/s/w4ecd-7136-3e08aa65.mp3"
+  },
+  "w516d": {
+   "word": "audio/w/w516d-9ac14fa4.mp3",
+   "example": "audio/s/w516d-e0fca8bf.mp3"
+  },
+  "w4e03": {
+   "word": "audio/w/w4e03-a326b80d.mp3",
+   "example": "audio/s/w4e03-a880550e.mp3"
+  },
+  "w516b": {
+   "word": "audio/w/w516b-5fabf239.mp3",
+   "example": "audio/s/w516b-255e325a.mp3"
+  },
+  "w4e5d": {
+   "word": "audio/w/w4e5d-2a422a8d.mp3",
+   "example": "audio/s/w4e5d-4cd55fec.mp3"
+  },
+  "w5341": {
+   "word": "audio/w/w5341-7da807b4.mp3",
+   "example": "audio/s/w5341-87166ad1.mp3"
+  },
+  "w96f6": {
+   "word": "audio/w/w96f6-eeb0c5ff.mp3",
+   "example": "audio/s/w96f6-be44c273.mp3"
+  },
+  "w771f-5be6": {
+   "word": "audio/w/w771f-5be6-f66d093a.mp3",
+   "example": "audio/s/w771f-5be6-47a5d334.mp3"
+  },
+  "w8fd1": {
+   "word": "audio/w/w8fd1-5e3e0f4b.mp3",
+   "example": "audio/s/w8fd1-8427872e.mp3"
+  },
+  "w5f8c-9762": {
+   "word": "audio/w/w5f8c-9762-364c1fe9.mp3",
+   "example": "audio/s/w5f8c-9762-545e2775.mp3"
+  },
+  "w60f3-50cf": {
+   "word": "audio/w/w60f3-50cf-4c4d5cc9.mp3",
+   "example": "audio/s/w60f3-50cf-83702ff9.mp3"
+  },
+  "w7537-670b-53cb": {
+   "word": "audio/w/w7537-670b-53cb-951ba2ff.mp3",
+   "example": "audio/s/w7537-670b-53cb-75003ab6.mp3"
+  },
+  "w8f1b": {
+   "word": "audio/w/w8f1b-f5c565e9.mp3",
+   "example": "audio/s/w8f1b-9b0d5492.mp3"
+  },
+  "w8d85-904e": {
+   "word": "audio/w/w8d85-904e-8cdf4f41.mp3",
+   "example": "audio/s/w8d85-904e-f501f05e.mp3"
+  },
+  "w8a13-7df4": {
+   "word": "audio/w/w8a13-7df4-b5696f9d.mp3",
+   "example": "audio/s/w8a13-7df4-e913ba30.mp3"
+  },
+  "w53e3": {
+   "word": "audio/w/w53e3-198e2148.mp3",
+   "example": "audio/s/w53e3-c538a42c.mp3"
+  },
+  "w5149": {
+   "word": "audio/w/w5149-3877d39e.mp3",
+   "example": "audio/s/w5149-01a9f99c.mp3"
+  },
+  "w5b8c-7f8e": {
+   "word": "audio/w/w5b8c-7f8e-ee4f5660.mp3",
+   "example": "audio/s/w5b8c-7f8e-43599dd1.mp3"
+  },
+  "w5973-670b-53cb": {
+   "word": "audio/w/w5973-670b-53cb-eb29c04f.mp3",
+   "example": "audio/s/w5973-670b-53cb-193bfd91.mp3"
+  },
+  "w81ea-7136": {
+   "word": "audio/w/w81ea-7136-709c50eb.mp3",
+   "example": "audio/s/w81ea-7136-d08ffc2b.mp3"
+  },
+  "w7406-7531": {
+   "word": "audio/w/w7406-7531-6fc49cdd.mp3",
+   "example": "audio/s/w7406-7531-44a9baee.mp3"
+  },
+  "w897f": {
+   "word": "audio/w/w897f-70188696.mp3",
+   "example": "audio/s/w897f-e4395414.mp3"
+  },
+  "w5305": {
+   "word": "audio/w/w5305-c64091a4.mp3",
+   "example": "audio/s/w5305-64eee123.mp3"
+  },
+  "w5047": {
+   "word": "audio/w/w5047-29f20c91.mp3",
+   "example": "audio/s/w5047-1a11ecea.mp3"
+  },
+  "w4f3c-4e4e": {
+   "word": "audio/w/w4f3c-4e4e-feae7562.mp3",
+   "example": "audio/s/w4f3c-4e4e-94c80427.mp3"
+  },
+  "w7c21-76f4": {
+   "word": "audio/w/w7c21-76f4-80cfb392.mp3",
+   "example": "audio/s/w7c21-76f4-48759963.mp3"
+  },
+  "w9b5a": {
+   "word": "audio/w/w9b5a-69b3f02a.mp3",
+   "example": "audio/s/w9b5a-bc09e0a3.mp3"
+  },
+  "w5361": {
+   "word": "audio/w/w5361-9af6682e.mp3",
+   "example": "audio/s/w5361-c672a677.mp3"
+  },
+  "w760b": {
+   "word": "audio/w/w760b-e42d140f.mp3",
+   "example": "audio/s/w760b-bd48d03d.mp3"
+  },
+  "w7167-9867": {
+   "word": "audio/w/w7167-9867-ab9cac66.mp3",
+   "example": "audio/s/w7167-9867-2caf83b7.mp3"
+  },
+  "w8eab-908a": {
+   "word": "audio/w/w8eab-908a-bde27760.mp3",
+   "example": "audio/s/w8eab-908a-4678e9f2.mp3"
+  },
+  "w8a18": {
+   "word": "audio/w/w8a18-a83cd9e0.mp3",
+   "example": "audio/s/w8a18-e1363c8f.mp3"
+  },
+  "w5404-4f4d": {
+   "word": "audio/w/w5404-4f4d-96539d5f.mp3",
+   "example": "audio/s/w5404-4f4d-17d9a2e5.mp3"
+  },
+  "w8089": {
+   "word": "audio/w/w8089-b6f9cda2.mp3",
+   "example": "audio/s/w8089-97886cf8.mp3"
+  },
+  "w4f4d-7f6e": {
+   "word": "audio/w/w4f4d-7f6e-804e82f1.mp3",
+   "example": "audio/s/w4f4d-7f6e-4b8dead1.mp3"
+  },
+  "w986f-7136": {
+   "word": "audio/w/w986f-7136-cd875716.mp3",
+   "example": "audio/s/w986f-7136-b123ac1d.mp3"
+  },
+  "w53ea-80fd": {
+   "word": "audio/w/w53ea-80fd-0776062f.mp3",
+   "example": "audio/s/w53ea-80fd-7bd7fc14.mp3"
+  },
+  "w6c7d-8eca": {
+   "word": "audio/w/w6c7d-8eca-ec3908a2.mp3",
+   "example": "audio/s/w6c7d-8eca-65310461.mp3"
+  },
+  "w7121-8ad6": {
+   "word": "audio/w/w7121-8ad6-279b9e89.mp3",
+   "example": "audio/s/w7121-8ad6-5a7fccf0.mp3"
+  },
+  "w756b": {
+   "word": "audio/w/w756b-cb1902b3.mp3",
+   "example": "audio/s/w756b-7533147d.mp3"
+  },
+  "w8cac-4efb": {
+   "word": "audio/w/w8cac-4efb-eac5147c.mp3",
+   "example": "audio/s/w8cac-4efb-968a3503.mp3"
+  },
+  "w76f8-7576": {
+   "word": "audio/w/w76f8-7576-43cf814c.mp3",
+   "example": "audio/s/w76f8-7576-38f72128.mp3"
+  },
+  "w8336": {
+   "word": "audio/w/w8336-00c5e639.mp3",
+   "example": "audio/s/w8336-d73d061f.mp3"
+  },
+  "w52d5-7269": {
+   "word": "audio/w/w52d5-7269-307c572f.mp3",
+   "example": "audio/s/w52d5-7269-714e134b.mp3"
+  },
+  "w5e8a": {
+   "word": "audio/w/w5e8a-e3351c5e.mp3",
+   "example": "audio/s/w5e8a-013f5825.mp3"
+  },
+  "w4e00-6703": {
+   "word": "audio/w/w4e00-6703-b1f57fa8.mp3",
+   "example": "audio/s/w4e00-6703-4016eed1.mp3"
+  },
+  "w5118-7ba1": {
+   "word": "audio/w/w5118-7ba1-84f7f6f1.mp3",
+   "example": "audio/s/w5118-7ba1-51a5ad41.mp3"
+  },
+  "w4f86-5230": {
+   "word": "audio/w/w4f86-5230-25519e0b.mp3",
+   "example": "audio/s/w4f86-5230-0bad873b.mp3"
+  },
+  "w53cd-61c9": {
+   "word": "audio/w/w53cd-61c9-da812b9c.mp3",
+   "example": "audio/s/w53cd-61c9-9d271c4a.mp3"
+  },
+  "w5b57": {
+   "word": "audio/w/w5b57-d3c67666.mp3",
+   "example": "audio/s/w5b57-d9284a99.mp3"
+  },
+  "w6c34-679c": {
+   "word": "audio/w/w6c34-679c-25de0b1e.mp3",
+   "example": "audio/s/w6c34-679c-22a450c0.mp3"
+  },
+  "w8840": {
+   "word": "audio/w/w8840-a06f83f3.mp3",
+   "example": "audio/s/w8840-fececeea.mp3"
+  },
+  "w91d1": {
+   "word": "audio/w/w91d1-ea13644c.mp3",
+   "example": "audio/s/w91d1-fc9c7754.mp3"
+  },
+  "w9047-5230": {
+   "word": "audio/w/w9047-5230-35c84547.mp3",
+   "example": "audio/s/w9047-5230-bbdb0999.mp3"
+  },
+  "w54e5-54e5": {
+   "word": "audio/w/w54e5-54e5-e176ba62.mp3",
+   "example": "audio/s/w54e5-54e5-04729f58.mp3"
+  },
+  "w963b-6b62": {
+   "word": "audio/w/w963b-6b62-945e4250.mp3",
+   "example": "audio/s/w963b-6b62-3925d234.mp3"
+  },
+  "w9762-5c0d": {
+   "word": "audio/w/w9762-5c0d-361077c4.mp3",
+   "example": "audio/s/w9762-5c0d-630a6079.mp3"
+  },
+  "w5e97": {
+   "word": "audio/w/w5e97-a51a52fb.mp3",
+   "example": "audio/s/w5e97-d0e1b110.mp3"
+  },
+  "w62d2-7d55": {
+   "word": "audio/w/w62d2-7d55-5473d8d3.mp3",
+   "example": "audio/s/w62d2-7d55-5f1bcad4.mp3"
+  },
+  "w5e6b-5fd9": {
+   "word": "audio/w/w5e6b-5fd9-8c02712f.mp3",
+   "example": "audio/s/w5e6b-5fd9-4a4de919.mp3"
+  },
+  "w606d-559c": {
+   "word": "audio/w/w606d-559c-91872f68.mp3",
+   "example": "audio/s/w606d-559c-3855d2ce.mp3"
+  },
+  "w53e5": {
+   "word": "audio/w/w53e5-ce11cf24.mp3",
+   "example": "audio/s/w53e5-de9d23a4.mp3"
+  },
+  "w7fa4": {
+   "word": "audio/w/w7fa4-7396dc76.mp3",
+   "example": "audio/s/w7fa4-635c7248.mp3"
+  },
+  "w96d9": {
+   "word": "audio/w/w96d9-a556c039.mp3",
+   "example": "audio/s/w96d9-709b02b2.mp3"
+  },
+  "w8001-95c6": {
+   "word": "audio/w/w8001-95c6-e50192e9.mp3",
+   "example": "audio/s/w8001-95c6-4ea75910.mp3"
+  },
+  "w821e": {
+   "word": "audio/w/w821e-749d5698.mp3",
+   "example": "audio/s/w821e-10758056.mp3"
+  },
+  "w5141-8a31": {
+   "word": "audio/w/w5141-8a31-14c7e499.mp3",
+   "example": "audio/s/w5141-8a31-1c865ede.mp3"
+  },
+  "w503c-5f97": {
+   "word": "audio/w/w503c-5f97-ff23cb1f.mp3",
+   "example": "audio/s/w503c-5f97-ccd58dd7.mp3"
+  },
+  "w8072": {
+   "word": "audio/w/w8072-3f59d54a.mp3",
+   "example": "audio/s/w8072-9ffaed54.mp3"
+  },
+  "w9053-6b49": {
+   "word": "audio/w/w9053-6b49-ed19407d.mp3",
+   "example": "audio/s/w9053-6b49-81f72744.mp3"
+  },
+  "w8001-5a46": {
+   "word": "audio/w/w8001-5a46-c2dff4a2.mp3",
+   "example": "audio/s/w8001-5a46-6296f91b.mp3"
+  },
+  "w90a3-908a": {
+   "word": "audio/w/w90a3-908a-719219c2.mp3",
+   "example": "audio/s/w90a3-908a-15dcca86.mp3"
+  },
+  "w98db": {
+   "word": "audio/w/w98db-07fbedf7.mp3",
+   "example": "audio/s/w98db-29c3df69.mp3"
+  },
+  "w4e0b-9762": {
+   "word": "audio/w/w4e0b-9762-fbae9741.mp3",
+   "example": "audio/s/w4e0b-9762-81bc376d.mp3"
+  },
+  "w5065-5eb7": {
+   "word": "audio/w/w5065-5eb7-5b346e6e.mp3",
+   "example": "audio/s/w5065-5eb7-beb5af4a.mp3"
+  },
+  "w602a": {
+   "word": "audio/w/w602a-65c1b36f.mp3",
+   "example": "audio/s/w602a-b3701b61.mp3"
+  },
+  "w6578": {
+   "word": "audio/w/w6578-4323271c.mp3",
+   "example": "audio/s/w6578-fba15009.mp3"
+  },
+  "w518d-6b21": {
+   "word": "audio/w/w518d-6b21-22c6907f.mp3",
+   "example": "audio/s/w518d-6b21-57609114.mp3"
+  },
+  "w898b-9762": {
+   "word": "audio/w/w898b-9762-70d9d348.mp3",
+   "example": "audio/s/w898b-9762-1624eeca.mp3"
+  },
+  "w5f71-7247": {
+   "word": "audio/w/w5f71-7247-3aa6248f.mp3",
+   "example": "audio/s/w5f71-7247-f4cba53f.mp3"
+  },
+  "w591a-4e45": {
+   "word": "audio/w/w591a-4e45-41c93999.mp3",
+   "example": "audio/s/w591a-4e45-60de513c.mp3"
+  },
+  "w6295-7968": {
+   "word": "audio/w/w6295-7968-0b90e61b.mp3",
+   "example": "audio/s/w6295-7968-155336f7.mp3"
+  },
+  "w6bd4-5982": {
+   "word": "audio/w/w6bd4-5982-01006bac.mp3",
+   "example": "audio/s/w6bd4-5982-2f0e265d.mp3"
+  },
+  "w85e5": {
+   "word": "audio/w/w85e5-00aec382.mp3",
+   "example": "audio/s/w85e5-1d3c385d.mp3"
+  },
+  "w75c5": {
+   "word": "audio/w/w75c5-ee967ed5.mp3",
+   "example": "audio/s/w75c5-9c2110b4.mp3"
+  },
+  "w58d3-529b": {
+   "word": "audio/w/w58d3-529b-ab34c717.mp3",
+   "example": "audio/s/w58d3-529b-fdba7d8e.mp3"
+  },
+  "w5dee-4e0d-591a": {
+   "word": "audio/w/w5dee-4e0d-591a-b0f1b264.mp3",
+   "example": "audio/s/w5dee-4e0d-591a-4945fbe9.mp3"
+  },
+  "w8a8d-771f": {
+   "word": "audio/w/w8a8d-771f-afda6ecb.mp3",
+   "example": "audio/s/w8a8d-771f-23300706.mp3"
+  },
+  "w8173": {
+   "word": "audio/w/w8173-614ba7f0.mp3",
+   "example": "audio/s/w8173-1e6050b7.mp3"
+  },
+  "w8a5e": {
+   "word": "audio/w/w8a5e-558bc776.mp3",
+   "example": "audio/s/w8a5e-4ad8b5b4.mp3"
+  },
+  "w505c-6b62": {
+   "word": "audio/w/w505c-6b62-eaefb50b.mp3",
+   "example": "audio/s/w505c-6b62-4be2152b.mp3"
+  },
+  "w5fd8-8a18": {
+   "word": "audio/w/w5fd8-8a18-cf3d23ae.mp3",
+   "example": "audio/s/w5fd8-8a18-7e86ecbc.mp3"
+  },
+  "w5931-6557": {
+   "word": "audio/w/w5931-6557-134a0526.mp3",
+   "example": "audio/s/w5931-6557-e328f339.mp3"
+  },
+  "w6587-4ef6": {
+   "word": "audio/w/w6587-4ef6-f6f1f8e7.mp3",
+   "example": "audio/s/w6587-4ef6-b9156789.mp3"
+  },
+  "w8d85": {
+   "word": "audio/w/w8d85-b7f833e9.mp3",
+   "example": "audio/s/w8d85-c7f2b7f8.mp3"
+  },
+  "w966a": {
+   "word": "audio/w/w966a-ef645521.mp3",
+   "example": "audio/s/w966a-63c921c9.mp3"
+  },
+  "w5916-9762": {
+   "word": "audio/w/w5916-9762-8fd11187.mp3",
+   "example": "audio/s/w5916-9762-4e6547b4.mp3"
+  },
+  "w8857": {
+   "word": "audio/w/w8857-4b6703d1.mp3",
+   "example": "audio/s/w8857-5f7cab69.mp3"
+  },
+  "w8239": {
+   "word": "audio/w/w8239-334acb4d.mp3",
+   "example": "audio/s/w8239-24ba3440.mp3"
+  },
+  "w5c0f-5b69": {
+   "word": "audio/w/w5c0f-5b69-303d76b3.mp3",
+   "example": "audio/s/w5c0f-5b69-f0e62e5d.mp3"
+  },
+  "w885d": {
+   "word": "audio/w/w885d-3b457ac2.mp3",
+   "example": "audio/s/w885d-dcc5c7d4.mp3"
+  },
+  "w8eab-5206": {
+   "word": "audio/w/w8eab-5206-bfa5605c.mp3",
+   "example": "audio/s/w8eab-5206-888f7f22.mp3"
+  },
+  "w9b3c": {
+   "word": "audio/w/w9b3c-6646fcbd.mp3",
+   "example": "audio/s/w9b3c-9f2bedc6.mp3"
+  },
+  "w54ed": {
+   "word": "audio/w/w54ed-725577cc.mp3",
+   "example": "audio/s/w54ed-cc6ab063.mp3"
+  },
+  "w71b1": {
+   "word": "audio/w/w71b1-5767b5f5.mp3",
+   "example": "audio/s/w71b1-be36a45b.mp3"
+  },
+  "w5b89-975c": {
+   "word": "audio/w/w5b89-975c-1795df61.mp3",
+   "example": "audio/s/w5b89-975c-b27e33db.mp3"
+  },
+  "w9762-524d": {
+   "word": "audio/w/w9762-524d-63866f59.mp3",
+   "example": "audio/s/w9762-524d-66e8eda0.mp3"
+  },
+  "w4e0b-5348": {
+   "word": "audio/w/w4e0b-5348-107dad77.mp3",
+   "example": "audio/s/w4e0b-5348-ad59f034.mp3"
+  },
+  "w639b": {
+   "word": "audio/w/w639b-d39e94ed.mp3",
+   "example": "audio/s/w639b-4c92bf69.mp3"
+  },
+  "w903c": {
+   "word": "audio/w/w903c-6a7312a4.mp3",
+   "example": "audio/s/w903c-9329da2a.mp3"
+  },
+  "w53cd": {
+   "word": "audio/w/w53cd-bbb69eea.mp3",
+   "example": "audio/s/w53cd-b1b1af41.mp3"
+  },
+  "w75db-82e6": {
+   "word": "audio/w/w75db-82e6-88c069e4.mp3",
+   "example": "audio/s/w75db-82e6-30c717f9.mp3"
+  },
+  "w505a-5230": {
+   "word": "audio/w/w505a-5230-01b04d16.mp3",
+   "example": "audio/s/w505a-5230-3b557a6d.mp3"
+  },
+  "w9a19": {
+   "word": "audio/w/w9a19-3467924e.mp3",
+   "example": "audio/s/w9a19-35f73c9c.mp3"
+  },
+  "w592a-592a": {
+   "word": "audio/w/w592a-592a-e7fc1164.mp3",
+   "example": "audio/s/w592a-592a-4ca01e07.mp3"
+  },
+  "w800c-662f": {
+   "word": "audio/w/w800c-662f-16c3f3c2.mp3",
+   "example": "audio/s/w800c-662f-5a6c51ef.mp3"
+  },
+  "w50b7": {
+   "word": "audio/w/w50b7-5b344e1c.mp3",
+   "example": "audio/s/w50b7-11f216fe.mp3"
+  },
+  "w5c0b-627e": {
+   "word": "audio/w/w5c0b-627e-c001dc55.mp3",
+   "example": "audio/s/w5c0b-627e-991440f4.mp3"
+  },
+  "w7db2-7ad9": {
+   "word": "audio/w/w7db2-7ad9-858b672c.mp3",
+   "example": "audio/s/w7db2-7ad9-6a1042d5.mp3"
+  },
+  "w9192": {
+   "word": "audio/w/w9192-a4d0eb5e.mp3",
+   "example": "audio/s/w9192-1b82e83a.mp3"
+  },
+  "w54ea-500b": {
+   "word": "audio/w/w54ea-500b-e9539c24.mp3",
+   "example": "audio/s/w54ea-500b-3361f4ed.mp3"
+  },
+  "w5e02-5834": {
+   "word": "audio/w/w5e02-5834-0b9419b6.mp3",
+   "example": "audio/s/w5e02-5834-7201e512.mp3"
+  },
+  "w4e1f": {
+   "word": "audio/w/w4e1f-d341d8c9.mp3",
+   "example": "audio/s/w4e1f-61b6fd9f.mp3"
+  },
+  "w4ea4": {
+   "word": "audio/w/w4ea4-70b3db10.mp3",
+   "example": "audio/s/w4ea4-ddc8454b.mp3"
+  },
+  "w4eab-53d7": {
+   "word": "audio/w/w4eab-53d7-8ef76427.mp3",
+   "example": "audio/s/w4eab-53d7-39c910b4.mp3"
+  },
+  "w5404": {
+   "word": "audio/w/w5404-3db77350.mp3",
+   "example": "audio/s/w5404-42375ee4.mp3"
+  },
+  "w76e1": {
+   "word": "audio/w/w76e1-a5a2dd5f.mp3",
+   "example": "audio/s/w76e1-b2d7cbdf.mp3"
+  },
+  "w7701": {
+   "word": "audio/w/w7701-0db7b120.mp3",
+   "example": "audio/s/w7701-98220b8d.mp3"
+  },
+  "w7537-5b69": {
+   "word": "audio/w/w7537-5b69-04758ea7.mp3",
+   "example": "audio/s/w7537-5b69-16429c2e.mp3"
+  },
+  "w642c": {
+   "word": "audio/w/w642c-c59003b8.mp3",
+   "example": "audio/s/w642c-cab07f36.mp3"
+  },
+  "w66ff": {
+   "word": "audio/w/w66ff-8aa5a791.mp3",
+   "example": "audio/s/w66ff-90a803da.mp3"
+  },
+  "w5716": {
+   "word": "audio/w/w5716-9efa9c16.mp3",
+   "example": "audio/s/w5716-2f86897c.mp3"
+  },
+  "w9069-5408": {
+   "word": "audio/w/w9069-5408-f9a47494.mp3",
+   "example": "audio/s/w9069-5408-4226aa7e.mp3"
+  },
+  "w547d": {
+   "word": "audio/w/w547d-a23833b8.mp3",
+   "example": "audio/s/w547d-8f53bab1.mp3"
+  },
+  "w6d88-5931": {
+   "word": "audio/w/w6d88-5931-d047326f.mp3",
+   "example": "audio/s/w6d88-5931-8818ab20.mp3"
+  },
+  "w958b-8eca": {
+   "word": "audio/w/w958b-8eca-46f91f5f.mp3",
+   "example": "audio/s/w958b-8eca-95e32302.mp3"
+  },
+  "w901a-77e5": {
+   "word": "audio/w/w901a-77e5-554b5b1b.mp3",
+   "example": "audio/s/w901a-77e5-514849f8.mp3"
+  },
+  "w7167": {
+   "word": "audio/w/w7167-b774b47e.mp3",
+   "example": "audio/s/w7167-3344b81e.mp3"
+  },
+  "w4eba-751f": {
+   "word": "audio/w/w4eba-751f-92f69b3b.mp3",
+   "example": "audio/s/w4eba-751f-5067c6d1.mp3"
+  },
+  "w62dc-8a17": {
+   "word": "audio/w/w62dc-8a17-9cce6d06.mp3",
+   "example": "audio/s/w62dc-8a17-9442f3b6.mp3"
+  },
+  "w5dee": {
+   "word": "audio/w/w5dee-d97f970f.mp3",
+   "example": "audio/s/w5dee-bc42af18.mp3"
+  },
+  "w597d-559d": {
+   "word": "audio/w/w597d-559d-cb22bb55.mp3",
+   "example": "audio/s/w597d-559d-6f4a8d71.mp3"
+  },
+  "w5ee3-544a": {
+   "word": "audio/w/w5ee3-544a-d9cee40a.mp3",
+   "example": "audio/s/w5ee3-544a-90453a8f.mp3"
+  },
+  "w4eca-5e74": {
+   "word": "audio/w/w4eca-5e74-378e7bea.mp3",
+   "example": "audio/s/w4eca-5e74-fd1d1cea.mp3"
+  },
+  "w7761-89ba": {
+   "word": "audio/w/w7761-89ba-a8a92919.mp3",
+   "example": "audio/s/w7761-89ba-1cc58562.mp3"
+  },
+  "w85cf": {
+   "word": "audio/w/w85cf-dc93b41d.mp3",
+   "example": "audio/s/w85cf-9b017c97.mp3"
+  },
+  "w4e0d-5c0d": {
+   "word": "audio/w/w4e0d-5c0d-8fe19bfe.mp3",
+   "example": "audio/s/w4e0d-5c0d-1d7d62e5.mp3"
+  },
+  "w7d05": {
+   "word": "audio/w/w7d05-287caf51.mp3",
+   "example": "audio/s/w7d05-138fc412.mp3"
+  },
+  "w6a13": {
+   "word": "audio/w/w6a13-5cde49bf.mp3",
+   "example": "audio/s/w6a13-0df8aebe.mp3"
+  },
+  "w6709-6642": {
+   "word": "audio/w/w6709-6642-03fc57bf.mp3",
+   "example": "audio/s/w6709-6642-c3a09130.mp3"
+  },
+  "w5341-5206": {
+   "word": "audio/w/w5341-5206-c76b9c71.mp3",
+   "example": "audio/s/w5341-5206-876cc64a.mp3"
+  },
+  "w661f-671f": {
+   "word": "audio/w/w661f-671f-f200d672.mp3",
+   "example": "audio/s/w661f-671f-cf8bfaf3.mp3"
+  },
+  "w6536": {
+   "word": "audio/w/w6536-30f14893.mp3",
+   "example": "audio/s/w6536-eb9059ef.mp3"
+  },
+  "w4f11-606f": {
+   "word": "audio/w/w4f11-606f-587b4e46.mp3",
+   "example": "audio/s/w4f11-606f-fde70aa1.mp3"
+  },
+  "w4e82": {
+   "word": "audio/w/w4e82-e5f0ba8b.mp3",
+   "example": "audio/s/w4e82-4d376dba.mp3"
+  },
+  "w6628-665a": {
+   "word": "audio/w/w6628-665a-7b082499.mp3",
+   "example": "audio/s/w6628-665a-cdeefb6f.mp3"
+  },
+  "w985e": {
+   "word": "audio/w/w985e-3614ecab.mp3",
+   "example": "audio/s/w985e-493ba940.mp3"
+  },
+  "w5077": {
+   "word": "audio/w/w5077-9a8de39b.mp3",
+   "example": "audio/s/w5077-58930370.mp3"
+  },
+  "w9080-8acb": {
+   "word": "audio/w/w9080-8acb-8c23adc2.mp3",
+   "example": "audio/s/w9080-8acb-fc9ab329.mp3"
+  },
+  "w611f-53d7": {
+   "word": "audio/w/w611f-53d7-9b7d0baf.mp3",
+   "example": "audio/s/w611f-53d7-ff62d121.mp3"
+  },
+  "w65e5-5b50": {
+   "word": "audio/w/w65e5-5b50-d1cd9309.mp3",
+   "example": "audio/s/w65e5-5b50-a47b8805.mp3"
+  },
+  "w6c23": {
+   "word": "audio/w/w6c23-286ae4d5.mp3",
+   "example": "audio/s/w6c23-dd826f78.mp3"
+  },
+  "w65b9-5411": {
+   "word": "audio/w/w65b9-5411-4904a246.mp3",
+   "example": "audio/s/w65b9-5411-c644f8f3.mp3"
+  },
+  "w53d7-50b7": {
+   "word": "audio/w/w53d7-50b7-fb227668.mp3",
+   "example": "audio/s/w53d7-50b7-b7f95037.mp3"
+  },
+  "w898f-5b9a": {
+   "word": "audio/w/w898f-5b9a-292a8b6f.mp3",
+   "example": "audio/s/w898f-5b9a-f22f6baa.mp3"
+  },
+  "w901a-5e38": {
+   "word": "audio/w/w901a-5e38-990a7cbd.mp3",
+   "example": "audio/s/w901a-5e38-1dee0006.mp3"
+  },
+  "w52a0-6cb9": {
+   "word": "audio/w/w52a0-6cb9-0112b6f4.mp3",
+   "example": "audio/s/w52a0-6cb9-ff4338cc.mp3"
+  },
+  "w72af": {
+   "word": "audio/w/w72af-c4d05e88.mp3",
+   "example": "audio/s/w72af-be3df7ec.mp3"
+  },
+  "w6234": {
+   "word": "audio/w/w6234-b3484a4a.mp3",
+   "example": "audio/s/w6234-fa9d4b85.mp3"
+  },
+  "w5bb6-4eba": {
+   "word": "audio/w/w5bb6-4eba-4c73789b.mp3",
+   "example": "audio/s/w5bb6-4eba-267809f7.mp3"
+  },
+  "w8070-660e": {
+   "word": "audio/w/w8070-660e-39c4baee.mp3",
+   "example": "audio/s/w8070-660e-b5b78f34.mp3"
+  },
+  "w7968": {
+   "word": "audio/w/w7968-ac488df1.mp3",
+   "example": "audio/s/w7968-6e5a1504.mp3"
+  },
+  "w76ee-7684": {
+   "word": "audio/w/w76ee-7684-1f0292e0.mp3",
+   "example": "audio/s/w76ee-7684-3841ba90.mp3"
+  },
+  "w79d2": {
+   "word": "audio/w/w79d2-7d7666e5.mp3",
+   "example": "audio/s/w79d2-f3e13896.mp3"
+  },
+  "w61f7-7591": {
+   "word": "audio/w/w61f7-7591-29626196.mp3",
+   "example": "audio/s/w61f7-7591-b941789d.mp3"
+  },
+  "w4f4e": {
+   "word": "audio/w/w4f4e-bfa8ef6d.mp3",
+   "example": "audio/s/w4f4e-bc72dce9.mp3"
+  },
+  "w4e00-65e6": {
+   "word": "audio/w/w4e00-65e6-a2566c51.mp3",
+   "example": "audio/s/w4e00-65e6-42971390.mp3"
+  },
+  "w5496-5561": {
+   "word": "audio/w/w5496-5561-c031c84d.mp3",
+   "example": "audio/s/w5496-5561-a6b03934.mp3"
+  },
+  "w591a-9ebc": {
+   "word": "audio/w/w591a-9ebc-35104683.mp3",
+   "example": "audio/s/w591a-9ebc-33b74390.mp3"
+  },
+  "w56f0-96e3": {
+   "word": "audio/w/w56f0-96e3-2ad56ec5.mp3",
+   "example": "audio/s/w56f0-96e3-a1e9a505.mp3"
+  },
+  "w514d-8cbb": {
+   "word": "audio/w/w514d-8cbb-d4a1962d.mp3",
+   "example": "audio/s/w514d-8cbb-4943ad94.mp3"
+  },
+  "w8d8a-4f86-8d8a": {
+   "word": "audio/w/w8d8a-4f86-8d8a-c462e9bf.mp3",
+   "example": "audio/s/w8d8a-4f86-8d8a-76ac6bce.mp3"
+  },
+  "w7f8e-9e97": {
+   "word": "audio/w/w7f8e-9e97-0c8c8710.mp3",
+   "example": "audio/s/w7f8e-9e97-d0c18918.mp3"
+  },
+  "w5e78-904b": {
+   "word": "audio/w/w5e78-904b-2d1242b5.mp3",
+   "example": "audio/s/w5e78-904b-8101200b.mp3"
+  },
+  "w5973-751f": {
+   "word": "audio/w/w5973-751f-a6d1f20a.mp3",
+   "example": "audio/s/w5973-751f-70b675b9.mp3"
+  },
+  "w7db2-8def": {
+   "word": "audio/w/w7db2-8def-de8c8fc1.mp3",
+   "example": "audio/s/w7db2-8def-aae2c027.mp3"
+  },
+  "w53ef-6015": {
+   "word": "audio/w/w53ef-6015-a1ee3e72.mp3",
+   "example": "audio/s/w53ef-6015-9bf19957.mp3"
+  },
+  "w817f": {
+   "word": "audio/w/w817f-a7585e58.mp3",
+   "example": "audio/s/w817f-dc2219f1.mp3"
+  },
+  "w5230-8655": {
+   "word": "audio/w/w5230-8655-0884160f.mp3",
+   "example": "audio/s/w5230-8655-c71bbc74.mp3"
+  },
+  "w7d93-9a57": {
+   "word": "audio/w/w7d93-9a57-4b5bb9b8.mp3",
+   "example": "audio/s/w7d93-9a57-e0036c81.mp3"
+  },
+  "w6b63-5f0f": {
+   "word": "audio/w/w6b63-5f0f-ed49d9ff.mp3",
+   "example": "audio/s/w6b63-5f0f-eebd365a.mp3"
+  },
+  "w8db3-5920": {
+   "word": "audio/w/w8db3-5920-b15b6c62.mp3",
+   "example": "audio/s/w8db3-5920-85888064.mp3"
+  },
+  "w624b-8853": {
+   "word": "audio/w/w624b-8853-f925a34b.mp3",
+   "example": "audio/s/w624b-8853-3eafd3e7.mp3"
+  },
+  "w79ae-7269": {
+   "word": "audio/w/w79ae-7269-c057f00a.mp3",
+   "example": "audio/s/w79ae-7269-fe5466fd.mp3"
+  },
+  "w8ffd": {
+   "word": "audio/w/w8ffd-453f4293.mp3",
+   "example": "audio/s/w8ffd-230bb4c2.mp3"
+  },
+  "w982d-9aee": {
+   "word": "audio/w/w982d-9aee-53e2d262.mp3",
+   "example": "audio/s/w982d-9aee-aac4c454.mp3"
+  },
+  "w5ea7": {
+   "word": "audio/w/w5ea7-1f5c7ce5.mp3",
+   "example": "audio/s/w5ea7-62c88bd0.mp3"
+  },
+  "w5c31-8981": {
+   "word": "audio/w/w5c31-8981-25fbe7de.mp3",
+   "example": "audio/s/w5c31-8981-88e46551.mp3"
+  },
+  "w96dc-8a8c": {
+   "word": "audio/w/w96dc-8a8c-90dab8e5.mp3",
+   "example": "audio/s/w96dc-8a8c-c50243e2.mp3"
+  },
+  "w96a8-4fbf": {
+   "word": "audio/w/w96a8-4fbf-adae629f.mp3",
+   "example": "audio/s/w96a8-4fbf-82c1122b.mp3"
+  },
+  "w4e0d-6703": {
+   "word": "audio/w/w4e0d-6703-57b105ac.mp3",
+   "example": "audio/s/w4e0d-6703-9847b8e1.mp3"
+  },
+  "w52d5-4f5c": {
+   "word": "audio/w/w52d5-4f5c-bea91ebe.mp3",
+   "example": "audio/s/w52d5-4f5c-aee050ea.mp3"
+  },
+  "w6062-5fa9": {
+   "word": "audio/w/w6062-5fa9-17155935.mp3",
+   "example": "audio/s/w6062-5fa9-6f8be60d.mp3"
+  },
+  "w5cf6": {
+   "word": "audio/w/w5cf6-1f46f61f.mp3",
+   "example": "audio/s/w5cf6-efa2addc.mp3"
+  },
+  "w98df-7269": {
+   "word": "audio/w/w98df-7269-425892ae.mp3",
+   "example": "audio/s/w98df-7269-51014524.mp3"
+  },
+  "w8c93": {
+   "word": "audio/w/w8c93-6fdd6f3d.mp3",
+   "example": "audio/s/w8c93-56910f50.mp3"
+  },
+  "w4e0d-5c11": {
+   "word": "audio/w/w4e0d-5c11-c6a20574.mp3",
+   "example": "audio/s/w4e0d-5c11-99fe6fed.mp3"
+  },
+  "w7cdf-7cd5": {
+   "word": "audio/w/w7cdf-7cd5-52fca8d5.mp3",
+   "example": "audio/s/w7cdf-7cd5-696b521c.mp3"
+  },
+  "w6050-6016": {
+   "word": "audio/w/w6050-6016-055f8d19.mp3",
+   "example": "audio/s/w6050-6016-22705956.mp3"
+  },
+  "w767d": {
+   "word": "audio/w/w767d-e643ba62.mp3",
+   "example": "audio/s/w767d-5ea4d442.mp3"
+  },
+  "w66f4-52a0": {
+   "word": "audio/w/w66f4-52a0-461d67fc.mp3",
+   "example": "audio/s/w66f4-52a0-e9b6fb33.mp3"
+  }
+ }
 }

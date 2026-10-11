@@ -21,7 +21,7 @@ function MenuItem({ icon, label, onClick, danger }: { icon: IconName; label: str
       role="menuitem"
       onClick={onClick}
       className={cx(
-        'flex h-11 w-full cursor-pointer items-center gap-3 rounded-lg px-3 text-left text-base outline-none hover:bg-sunken focus-visible:bg-sunken',
+        'flex h-11 w-full cursor-pointer items-center gap-3 rounded-lg px-3 text-left text-base hover:bg-sunken focus-visible:bg-sunken focus-visible:-outline-offset-2',
         danger ? 'text-danger' : 'text-ink',
       )}
     >
@@ -106,7 +106,8 @@ export function CardMenu({ word, onFlag, onSuspend, onOpenChange }: MenuProps) {
             icon="flag"
             label="Flag this card…"
             onClick={() => {
-              close(false)
+              // Refocus the trigger first so the dialog returns focus to it on close.
+              close()
               setDialog('flag')
             }}
           />
@@ -115,7 +116,8 @@ export function CardMenu({ word, onFlag, onSuspend, onOpenChange }: MenuProps) {
             label="Suspend word…"
             danger
             onClick={() => {
-              close(false)
+              // Refocus the trigger first so the dialog returns focus to it on close.
+              close()
               setDialog('suspend')
             }}
           />

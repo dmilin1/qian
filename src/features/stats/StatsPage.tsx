@@ -3,15 +3,19 @@
 // bundle); all numbers come from the pure model in ./statsModel.ts.
 import { useMemo } from 'react'
 import { Link } from 'react-router'
-import { buttonClasses, EmptyState, Icon, PageHeader, StatTile, useSnapshot } from '../../components'
+import { buttonClasses, EmptyState, Icon, PageHeader, StatTile, useNow, useSnapshot } from '../../components'
 import { getWords, type WordIndex } from '../../lib/words'
 import { AccuracySection } from './AccuracySection'
 import { ForecastSection } from './ForecastSection'
 import { HeatmapSection } from './HeatmapSection'
 import { ProgressSection } from './ProgressSection'
+import { exportOpenFlags } from './flagsExport'
 import { buildStatsModel, formatDuration, percent, plural } from './statsModel'
 import { FlaggedSection, HardestSection } from './WordsSections'
 import './stats.css'
+
+/** How often Stats re-reads the clock while open (it also refreshes on resume). */
+const STATS_CLOCK_MS = 5 * 60_000
 
 export interface StatsPageProps {
   /** Word list (defaults to the app's words.json); tests pass fixtures. */
@@ -24,10 +28,13 @@ export default function StatsPage({ words: wordsProp, now: nowProp }: StatsPageP
   const snap = useSnapshot()
   const words = wordsProp ?? getWords()
   const { derived, events, revision } = snap
-  // "now" is re-read whenever the log changes (each review); good enough for a stats page.
-  // oxlint-disable-next-line react-hooks/exhaustive-deps -- revision is the refresh trigger
-  const now = useMemo(() => nowProp ?? Date.now(), [nowProp, revision])
+  // "now" ticks every few minutes and on resume (useNow listens for visibilitychange), so an installed app left on
+  // Stats overnight rolls over to the new day; it is also re-read whenever the log changes (each review).
+  const tick = useNow(STATS_CLOCK_MS)
+  // oxlint-disable-next-line react-hooks/exhaustive-deps -- tick and revision are the refresh triggers
+  const now = useMemo(() => nowProp ?? Math.max(tick, Date.now()), [nowProp, tick, revision])
   const model = useMemo(() => buildStatsModel({ derived, events, words, now }), [derived, events, words, now])
+  const exportFlags = () => void exportOpenFlags(derived, words)
 
   if (model.empty) {
     return (
@@ -46,7 +53,7 @@ export default function StatsPage({ words: wordsProp, now: nowProp }: StatsPageP
           Your progress through the {model.totalWords.toLocaleString('en-US')} words, daily streak and accuracy will appear here
           after your first few cards.
         </EmptyState>
-        {model.flags.open ? <FlaggedSection open={model.flags.open} words={model.flags.words} /> : null}
+        {model.flags.open ? <FlaggedSection open={model.flags.open} words={model.flags.words} onExport={exportFlags} /> : null}
       </>
     )
   }
@@ -77,7 +84,7 @@ export default function StatsPage({ words: wordsProp, now: nowProp }: StatsPageP
       <AccuracySection series={model.accuracySeries} byDir={model.accuracyByDir} />
       <ForecastSection points={model.forecast} />
       <HardestSection words={model.hardest} />
-      <FlaggedSection open={model.flags.open} words={model.flags.words} />
+      <FlaggedSection open={model.flags.open} words={model.flags.words} onExport={exportFlags} />
     </div>
   )
 }

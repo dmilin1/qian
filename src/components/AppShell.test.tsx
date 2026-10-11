@@ -1,10 +1,11 @@
-import { render, screen, within } from '@testing-library/react'
+import { act, render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { createMemoryRouter } from 'react-router'
 import { RouterProvider } from 'react-router/dom'
 import { beforeAll, describe, expect, it, vi } from 'vitest'
 import { routes } from './routes'
 import { AppProvider } from './AppProvider'
+import { markUpdateReady, resetUpdateState } from './pwaUpdate'
 import { makeFakePlayer, makeTestStore } from './test-utils'
 
 async function renderApp(path = '/') {
@@ -65,5 +66,14 @@ describe('<AppShell>', () => {
   it('redirects unknown routes to Study', async () => {
     const { router } = await renderApp('/nope')
     expect(router.state.location.pathname).toBe('/')
+  })
+
+  it('shows the new-version notice inside the page flow, not over the study buttons', async () => {
+    await renderApp('/')
+    act(() => markUpdateReady())
+    const main = screen.getByRole('main')
+    expect(within(main).getByText('A new version of qian is ready.')).toBeInTheDocument()
+    expect(main.firstElementChild).toHaveAttribute('role', 'status')
+    act(() => resetUpdateState())
   })
 })

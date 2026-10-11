@@ -2,6 +2,7 @@
 // the derived state (src/lib/derive.ts) so they are easy to test.
 import type { Word } from '../../data/types'
 import { getCard, isSuspended, type Derived } from '../../lib/derive'
+import { getFsrs, retrievability } from '../../lib/fsrs'
 import { cardStatus, wordStatus, type CardStatus } from '../../lib/stats'
 
 export interface WordInfo {
@@ -88,6 +89,81 @@ export function filterCounts(infos: Iterable<WordInfo>): Record<WordFilter, numb
   const c: Record<WordFilter, number> = { all: 0, learning: 0, known: 0, unseen: 0, flagged: 0, suspended: 0 }
   for (const info of infos) for (const f of WORD_FILTERS) if (matchesFilter(info, f.value)) c[f.value]++
   return c
+}
+
+// ---------- sorting ----------
+
+export type WordSort = 'rank' | 'due' | 'weakest' | 'lapses' | 'recent'
+
+export const WORD_SORTS: readonly { value: WordSort; label: string }[] = [
+  { value: 'rank', label: 'Most common' },
+  { value: 'due', label: 'Due soonest' },
+  { value: 'weakest', label: 'Weakest recall' },
+  { value: 'lapses', label: 'Most forgotten' },
+  { value: 'recent', label: 'Recently seen' },
+]
+
+export function isWordSort(v: unknown): v is WordSort {
+  return WORD_SORTS.some((s) => s.value === v)
+}
+
+export interface WordSortKeys {
+  /** Soonest due time of the word's cards (null when suspended). */
+  due: number | null
+  /** Lowest current probability of recall of the word's cards. */
+  recall: number
+  /** Total lapses (forgotten after being learned) across both cards. */
+  lapses: number
+  /** Most recent review of either card. */
+  lastSeen: number
+}
+
+/** Sort keys for an introduced word; null when neither card has been graded. */
+export function wordSortKeys(d: Derived, wordId: string, now: number): WordSortKeys | null {
+  const cards = [getCard(d, wordId, 'listen'), getCard(d, wordId, 'say')].filter((c) => c !== undefined)
+  if (!cards.length) return null
+  const f = getFsrs(d.requestRetention)
+  const suspended = isSuspended(d, wordId)
+  let due = Infinity
+  let recall = 1
+  let lapses = 0
+  let lastSeen = 0
+  for (const c of cards) {
+    due = Math.min(due, c.card.due.getTime())
+    recall = Math.min(recall, retrievability(f, c.card, now))
+    lapses += c.card.lapses
+    lastSeen = Math.max(lastSeen, c.card.last_review?.getTime() ?? c.introducedAt)
+  }
+  return { due: suspended ? null : due, recall, lapses, lastSeen }
+}
+
+/**
+ * Words in the chosen order: introduced words by the sort key, then the rest; ties (and unseen words)
+ * keep the incoming order. 'rank' returns the input unchanged (rank order, or relevance while searching).
+ */
+export function sortWords(words: readonly Word[], sort: WordSort, keysOf: (wordId: string) => WordSortKeys | null): readonly Word[] {
+  if (sort === 'rank') return words
+  const value = (k: WordSortKeys): number | null => {
+    switch (sort) {
+      case 'due':
+        return k.due
+      case 'weakest':
+        return k.recall
+      case 'lapses':
+        return -k.lapses
+      case 'recent':
+        return -k.lastSeen
+    }
+  }
+  const decorated = words.map((w, i) => {
+    const k = keysOf(w.id)
+    return { w, i, v: k ? value(k) : null }
+  })
+  decorated.sort((a, b) => {
+    if (a.v === null || b.v === null) return a.v === b.v ? a.i - b.i : a.v === null ? 1 : -1
+    return a.v - b.v || a.i - b.i
+  })
+  return decorated.map((x) => x.w)
 }
 
 export interface ListSummary {

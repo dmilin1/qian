@@ -97,7 +97,7 @@
     "trad": "夠",
     "pinyin": "gòu",
     "gloss": "enough",
-    "hint": "one syllable, everyday",
+    "hint": "everyday 'enough'; 'that's enough!'",
     "pos": "adj",
     "note": "夠了！ (That's enough!) 不夠 (not enough). Before an adjective it can mean really: 夠辣 (plenty spicy).",
     "example": {
@@ -169,7 +169,7 @@
     "pos": "verb",
     "example": {
       "trad": "真的很感謝你的幫忙。",
-      "pinyin": "Zhēn de hěn gǎnxiè nǐ de bāngmáng.",
+      "pinyin": "Zhēnde hěn gǎnxiè nǐ de bāngmáng.",
       "english": "Thank you so much for your help."
     }
   },
@@ -283,7 +283,7 @@
     "gloss": "to point at; to mean; finger",
     "hint": "refer to",
     "pos": "verb",
-    "note": "你是指… nǐ shì zhǐ… means \"do you mean…?\". As a noun it means finger, usually 手指 shǒu zhǐ.",
+    "note": "你是指… nǐ shì zhǐ… means 'do you mean…?'. As a noun it means finger, usually 手指 shǒu zhǐ.",
     "example": {
       "trad": "你是指這個嗎？",
       "pinyin": "Nǐ shì zhǐ zhège ma?",
@@ -338,7 +338,7 @@
     "pos": "adv",
     "example": {
       "trad": "下班以後我直接回家。",
-      "pinyin": "Xiàbān yǐhòu wǒ zhíjiē huí jiā.",
+      "pinyin": "Xiàbān yǐhòu wǒ zhíjiē huíjiā.",
       "english": "After work I go straight home."
     }
   },
@@ -376,7 +376,7 @@
     "gloss": "letter (mail); to believe",
     "hint": "mail; believe (short form)",
     "pos": "noun",
-    "note": "Letters are counted with 封 fēng. As a verb it is short for 相信: 我不信 wǒ bù xìn \"I don't believe it\". MOE also lists a literary reading shēn, not used in speech.",
+    "note": "Letters are counted with 封 fēng. As a verb it is short for 相信: 我不信 wǒ bù xìn 'I don't believe it'. MOE also lists a literary reading shēn, not used in speech.",
     "example": {
       "trad": "我收到你的信了。",
       "pinyin": "Wǒ shōudào nǐ de xìn le.",
@@ -390,7 +390,7 @@
     "gloss": "to send (someone); to assign",
     "hint": "dispatch a person",
     "pos": "verb",
-    "note": "送 sòng sends things; 派 sends people on a task. Also a noun: faction, school of thought, and \"pie\" (蘋果派 píng guǒ pài).",
+    "note": "送 sòng sends things; 派 sends people on a task. Also a noun: faction, school of thought, and 'pie' (蘋果派 píng guǒ pài).",
     "example": {
       "trad": "公司派他去日本。",
       "pinyin": "Gōngsī pài tā qù Rìběn.",
@@ -417,7 +417,7 @@
     "pinyin": "sì",
     "gloss": "four",
     "pos": "num",
-    "note": "Sounds like 死 sǐ \"death\", so four is considered unlucky. Listen for the tone: 四 sì vs 十 shí (ten), which can sound alike in Taiwan accents.",
+    "note": "Sounds like 死 sǐ 'death', so four is considered unlucky. Listen for the tone: 四 sì vs 十 shí (ten), which can sound alike in Taiwan accents.",
     "example": {
       "trad": "我們家有四個人。",
       "pinyin": "Wǒmen jiā yǒu sì ge rén.",
@@ -495,10 +495,10 @@
     "gloss": "it seems; looks like",
     "hint": "judging from what you see",
     "pos": "adv",
-    "note": "Often starts a sentence to draw a conclusion: 看來… \"it looks like…\". Similar to 好像 hǎo xiàng.",
+    "note": "Often starts a sentence to draw a conclusion: 看來… 'it looks like…'. Similar to 好像 hǎo xiàng.",
     "example": {
       "trad": "看來要下雨了。",
-      "pinyin": "Kànlái yào xià yǔ le.",
+      "pinyin": "Kànlái yào xiàyǔ le.",
       "english": "Looks like it's going to rain."
     }
   },
@@ -521,7 +521,7 @@
     "pinyin": "dào",
     "gloss": "(measure: dishes, questions); way",
     "pos": "measure",
-    "note": "Counts dishes of food (一道菜), questions (一道題), doors and walls. Also \"road; way\" in compounds like 道路 and 味道 wèi dào (flavor).",
+    "note": "Counts dishes of food (一道菜), questions (一道題), doors and walls. Also 'road; way' in compounds like 道路 and 味道 wèi dào (flavor).",
     "example": {
       "trad": "這道菜很好吃。",
       "pinyin": "Zhè dào cài hěn hǎochī.",
@@ -535,7 +535,7 @@
     "gloss": "to choose; to pick; to elect",
     "hint": "choose among options; also elections",
     "pos": "verb",
-    "note": "Everyday short form of 選擇 xuǎn zé. Also \"to elect\": 選總統 elect a president. 挑 tiāo is similar but means picking out carefully.",
+    "note": "Everyday short form of 選擇 xuǎn zé. Also 'to elect': 選總統 elect a president. 挑 tiāo is similar but means picking out carefully.",
     "example": {
       "trad": "你要選哪一個？",
       "pinyin": "Nǐ yào xuǎn nǎ yī ge?",

@@ -82,7 +82,7 @@ export function HeatmapSection({ daily, now }: { daily: ReadonlyMap<string, numb
       </div>
       <div className="flex min-h-6 flex-wrap items-center justify-between gap-x-4 gap-y-2 text-sm">
         <span className="text-muted tabular-nums" aria-live="polite">
-          {readout ?? <span className="text-faint">Tap a day for its count</span>}
+          {readout ?? <span className="text-muted">Tap a day for its count</span>}
         </span>
         <span className="flex items-center gap-1.5 text-faint" aria-hidden>
           Less

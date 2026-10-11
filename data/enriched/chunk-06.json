@@ -113,7 +113,7 @@
     "trad": "或者",
     "pinyin": "huò zhě",
     "gloss": "or",
-    "hint": "two syllables, in statements",
+    "hint": "everyday 'or' in statements",
     "pos": "conj",
     "note": "Used in statements and suggestions; in an either-or question use 還是 instead (你要茶還是咖啡？). 或 is a shorter, more formal form.",
     "example": {
@@ -127,7 +127,7 @@
     "trad": "搞",
     "pinyin": "gǎo",
     "gloss": "to do; to be up to; to mess up",
-    "hint": "slangy, as in \"what are you up to?!\"",
+    "hint": "slangy, as in 'what are you up to?!'",
     "pos": "verb",
     "note": "Casual all-purpose verb: 搞錯 gǎo cuò (get it wrong), 搞清楚 (figure out), 搞什麼 (what are you doing?!). Very common in Taiwan in set phrases (搞定 'sorted', 搞不好 'maybe'); 弄 is the gentler 'fiddle with / make'.",
     "example": {
@@ -228,7 +228,7 @@
     "note": "Goes before a number to make an ordinal: 第一 (first), 第二次 (the second time), 第三個 (the third one).",
     "example": {
       "trad": "這是我第二次來台灣。",
-      "pinyin": "Zhè shì wǒ dì'èr cì lái Táiwān.",
+      "pinyin": "Zhè shì wǒ dì-èr cì lái Táiwān.",
       "english": "This is my second time in Taiwan."
     }
   },
@@ -438,7 +438,7 @@
     "note": "In casual speech 手 can mean the whole arm. As a suffix it marks a skilled person: 歌手 (singer), 高手 (expert).",
     "example": {
       "trad": "吃飯前要先洗手。",
-      "pinyin": "Chīfàn qián yào xiān xǐ shǒu.",
+      "pinyin": "Chīfàn qián yào xiān xǐshǒu.",
       "english": "Wash your hands before you eat."
     }
   },
@@ -466,7 +466,7 @@
     "note": "'Place / rank': 第一名 (first place). Also a formal measure word for people (三名學生); in conversation use 個 or the polite 位. As a noun it means 'name' or 'fame' (有名 'famous').",
     "example": {
       "trad": "他這次考了第一名。",
-      "pinyin": "Tā zhècì kǎo le dìyī míng.",
+      "pinyin": "Tā zhè cì kǎo le dì-yī míng.",
       "english": "He came first in the exam this time."
     }
   },
@@ -548,7 +548,7 @@
     "note": "Needs a measure word or time word after it: 每個人, 每天, 每次. Usually paired with 都: 每天都… 'every day…'.",
     "example": {
       "trad": "我每天都喝咖啡。",
-      "pinyin": "Wǒ měitiān dōu hē kāfēi.",
+      "pinyin": "Wǒ měi tiān dōu hē kāfēi.",
       "english": "I drink coffee every day."
     }
   },
@@ -656,7 +656,7 @@
     "pos": "noun",
     "example": {
       "trad": "我每天走路去學校。",
-      "pinyin": "Wǒ měitiān zǒulù qù xuéxiào.",
+      "pinyin": "Wǒ měi tiān zǒulù qù xuéxiào.",
       "english": "I walk to school every day."
     }
   },

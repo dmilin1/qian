@@ -1,18 +1,42 @@
 // Word list: all words in frequency order, searchable (English, characters, pinyin with or without
 // tones) and filterable by learning status. Rows are windowed (fixed height) so 1000 words stay
-// cheap to render. The query and filter live in the URL (?q=&f=) so "back" from a word restores them.
+// cheap to render. The query, filter and sort live in the URL (?q=&f=&s=) so "back" from a word restores them.
 import { memo, useDeferredValue, useEffect, useId, useMemo, useRef, useState, type KeyboardEvent, type ReactNode, type RefObject } from 'react'
 import { Link, useSearchParams } from 'react-router'
 import type { Word } from '../../data/types'
-import { AudioButton, Button, cx, EmptyState, Hanzi, Icon, PageHeader, Pinyin, useSelector } from '../../components'
+import { AudioButton, Button, cx, EmptyState, Hanzi, Icon, PageHeader, Pinyin, useNow, useSelector, type IconName } from '../../components'
 import { getWords, type WordIndex } from '../../lib/words'
-import { filterCounts, isWordFilter, listSummary, matchesFilter, UNSEEN_INFO, WORD_FILTERS, wordInfoMap, type WordFilter, type WordInfo } from './filters'
+import {
+  filterCounts,
+  isWordFilter,
+  isWordSort,
+  listSummary,
+  matchesFilter,
+  sortWords,
+  UNSEEN_INFO,
+  WORD_FILTERS,
+  WORD_SORTS,
+  wordInfoMap,
+  wordSortKeys,
+  type WordFilter,
+  type WordInfo,
+  type WordSort,
+} from './filters'
 import { buildSearchIndex, searchWords } from './search'
 import { DirStatusChip, SuspendedChip, UnseenChip } from './StatusChip'
 import { useWindowedRange } from './useWindowedRange'
 
 /** Fixed row height in px (rows are absolutely positioned for windowing). */
 export const ROW_HEIGHT = 96
+
+/** Empty-state copy for a filter with no words (and no search typed). */
+const EMPTY_FILTER: Record<Exclude<WordFilter, 'all'>, { icon: IconName; title: string; body: string }> = {
+  learning: { icon: 'study', title: 'Nothing in learning', body: "Words you're working on show up here once you start studying." },
+  known: { icon: 'check', title: 'No known words yet', body: 'A word moves here once both of its cards are past learning.' },
+  unseen: { icon: 'sparkle', title: 'No unseen words', body: "You've been introduced to every word." },
+  flagged: { icon: 'flag', title: 'No open flags', body: 'Flag a word from its card or word page to review it here.' },
+  suspended: { icon: 'pause', title: 'No suspended words', body: 'Words you suspend are kept out of reviews and listed here.' },
+}
 
 export interface WordsPageProps {
   /** Word list (defaults to the app's words.json; tests pass fixtures). */
@@ -25,6 +49,8 @@ export default function WordsPage({ words = getWords() }: WordsPageProps) {
   const query = params.get('q') ?? ''
   const fParam = params.get('f')
   const filter: WordFilter = isWordFilter(fParam) ? fParam : 'all'
+  const sParam = params.get('s')
+  const sort: WordSort = isWordSort(sParam) ? sParam : 'rank'
   const deferredQuery = useDeferredValue(query)
 
   const infos = useMemo(() => wordInfoMap(derived, words.list), [derived, words])
@@ -32,12 +58,18 @@ export default function WordsPage({ words = getWords() }: WordsPageProps) {
   const summary = useMemo(() => listSummary(infos.values()), [infos])
   const index = useMemo(() => buildSearchIndex(words.list), [words])
   const searched = useMemo(() => searchWords(index, deferredQuery), [index, deferredQuery])
-  const results = useMemo(
+  const filtered = useMemo(
     () => (filter === 'all' ? searched : searched.filter((w) => matchesFilter(infos.get(w.id) ?? UNSEEN_INFO, filter))),
     [searched, filter, infos],
   )
+  // Sorted after filtering; rank (or search relevance) stays the tie-breaker.
+  const now = useNow(5 * 60_000)
+  const results = useMemo(
+    () => (sort === 'rank' ? filtered : sortWords(filtered, sort, (id) => wordSortKeys(derived, id, now))),
+    [filtered, sort, derived, now],
+  )
 
-  const update = (patch: { q?: string; f?: WordFilter }) => {
+  const update = (patch: { q?: string; f?: WordFilter; s?: WordSort }) => {
     setParams(
       (prev) => {
         const next = new URLSearchParams(prev)
@@ -48,6 +80,10 @@ export default function WordsPage({ words = getWords() }: WordsPageProps) {
         if (patch.f !== undefined) {
           if (patch.f === 'all') next.delete('f')
           else next.set('f', patch.f)
+        }
+        if (patch.s !== undefined) {
+          if (patch.s === 'rank') next.delete('s')
+          else next.set('s', patch.s)
         }
         return next
       },
@@ -60,9 +96,9 @@ export default function WordsPage({ words = getWords() }: WordsPageProps) {
   const controlsRef = useRef<HTMLDivElement>(null)
   // Compare with the previous values (not a "first run" flag, which StrictMode's double effects
   // would defeat), so a remount from "back" keeps the restored scroll position.
-  const prevKey = useRef(`${deferredQuery}\u0000${filter}`)
+  const prevKey = useRef(`${deferredQuery}\u0000${filter}\u0000${sort}`)
   useEffect(() => {
-    const key = `${deferredQuery}\u0000${filter}`
+    const key = `${deferredQuery}\u0000${filter}\u0000${sort}`
     if (prevKey.current === key) return
     prevKey.current = key
     const list = listRef.current
@@ -70,7 +106,7 @@ export default function WordsPage({ words = getWords() }: WordsPageProps) {
     const stickyH = controlsRef.current?.getBoundingClientRect().height ?? 0
     const top = list.getBoundingClientRect().top
     if (top < stickyH) window.scrollTo({ top: window.scrollY + top - stickyH - 8 })
-  }, [deferredQuery, filter])
+  }, [deferredQuery, filter, sort])
 
   const known = summary.young + summary.mature
 
@@ -107,11 +143,26 @@ export default function WordsPage({ words = getWords() }: WordsPageProps) {
         <FilterChips value={filter} counts={counts} onChange={(f) => update({ f })} />
       </div>
 
-      <p role="status" aria-live="polite" className="mt-3 mb-1 px-1 text-sm text-muted">
-        {resultLabel(results.length, summary.total, deferredQuery, filter)}
-      </p>
+      <div className="mt-3 mb-1 flex items-center gap-3 px-1">
+        <p role="status" aria-live="polite" className="min-w-0 flex-1 text-sm text-muted">
+          {resultLabel(results.length, summary.total, deferredQuery, filter, sort)}
+        </p>
+        <SortSelect value={sort} onChange={(s) => update({ s })} />
+      </div>
 
-      {results.length === 0 ? (
+      {results.length === 0 && !query.trim() && filter !== 'all' ? (
+        <EmptyState
+          icon={EMPTY_FILTER[filter].icon}
+          title={EMPTY_FILTER[filter].title}
+          action={
+            <Button size="sm" variant="ghost" onClick={() => update({ f: 'all' })}>
+              Show all words
+            </Button>
+          }
+        >
+          {EMPTY_FILTER[filter].body}
+        </EmptyState>
+      ) : results.length === 0 ? (
         <EmptyState
           icon="search"
           title="No matching words"
@@ -139,10 +190,36 @@ export default function WordsPage({ words = getWords() }: WordsPageProps) {
   )
 }
 
-function resultLabel(n: number, total: number, query: string, filter: WordFilter): string {
-  if (!query.trim() && filter === 'all') return `${total.toLocaleString('en')} words, most common first`
+function resultLabel(n: number, total: number, query: string, filter: WordFilter, sort: WordSort): string {
+  if (!query.trim() && filter === 'all' && sort === 'rank') return `${total.toLocaleString('en')} words, most common first`
   const what = n === 1 ? 'word' : 'words'
   return `${n.toLocaleString('en')} ${what}`
+}
+
+// ---------- sort ----------
+
+function SortSelect({ value, onChange }: { value: WordSort; onChange: (s: WordSort) => void }) {
+  const id = useId()
+  return (
+    <div className="relative shrink-0">
+      <label htmlFor={id} className="sr-only">
+        Sort words
+      </label>
+      <select
+        id={id}
+        value={value}
+        onChange={(e) => onChange(e.target.value as WordSort)}
+        className="h-9 cursor-pointer appearance-none rounded-full border border-line bg-card pr-8 pl-3 text-sm font-medium text-ink hover:bg-sunken"
+      >
+        {WORD_SORTS.map((o) => (
+          <option key={o.value} value={o.value}>
+            {o.label}
+          </option>
+        ))}
+      </select>
+      <Icon name="chevron-down" size={16} className="pointer-events-none absolute top-1/2 right-2.5 -translate-y-1/2 text-muted" />
+    </div>
+  )
 }
 
 // ---------- header progress bar ----------

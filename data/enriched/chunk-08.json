@@ -20,7 +20,7 @@
     "gloss": "even; so much so that",
     "hint": "going as far as",
     "pos": "adv",
-    "note": "Introduces an extreme case, often with 連…都: 他甚至連飯都沒吃 \"he didn't even eat\".",
+    "note": "Introduces an extreme case, often with 連…都: 他甚至連飯都沒吃 'he didn't even eat'.",
     "example": {
       "trad": "他很忙，甚至沒時間吃飯。",
       "pinyin": "Tā hěn máng, shènzhì méi shíjiān chīfàn.",
@@ -59,7 +59,7 @@
     "gloss": "to remember",
     "hint": "still have in memory",
     "pos": "verb",
-    "note": "記得 + verb = \"remember to…\": 記得帶傘 \"remember to bring an umbrella\". 得 is neutral de here (other readings dé, děi).",
+    "note": "記得 + verb = 'remember to…': 記得帶傘 'remember to bring an umbrella'. 得 is neutral de here (other readings dé, děi).",
     "example": {
       "trad": "你還記得我嗎？",
       "pinyin": "Nǐ hái jìde wǒ ma?",
@@ -73,7 +73,7 @@
     "gloss": "wait a moment; in a bit; etc.",
     "hint": "doubled form; also etc",
     "pos": "phrase",
-    "note": "Said alone it means \"Wait!\". In Taiwan it also means \"in a bit, later\": 我等等再打給你. After a list it means \"etc.\".",
+    "note": "Said alone it means 'Wait!'. In Taiwan it also means 'in a bit, later': 我等等再打給你. After a list it means 'etc.'.",
     "example": {
       "trad": "等等，我馬上來！",
       "pinyin": "Děngděng, wǒ mǎshàng lái!",
@@ -87,7 +87,7 @@
     "gloss": "to talk; to discuss",
     "hint": "have a serious talk",
     "pos": "verb",
-    "note": "Often 談一談 / 談談 \"have a talk\"; 談戀愛 \"to date, be in a relationship\". Casual chatting is 聊 liáo.",
+    "note": "Often 談一談 / 談談 'have a talk'; 談戀愛 'to date, be in a relationship'. Casual chatting is 聊 liáo.",
     "example": {
       "trad": "我們需要談一談。",
       "pinyin": "Wǒmen xūyào tán yī tán.",
@@ -114,10 +114,10 @@
     "gloss": "each; every",
     "hint": "two syllables; each one (each person)",
     "pos": "pron",
-    "note": "每 + measure word + noun; 個 is the default: 每個人 \"everyone\", 每個月 \"every month\". 個 is light (ge), sometimes full gè.",
+    "note": "每 + measure word + noun; 個 is the default: 每個人 'everyone', 每個月 'every month'. 個 is light (ge), sometimes full gè.",
     "example": {
       "trad": "每個人都很喜歡她。",
-      "pinyin": "Měige rén dōu hěn xǐhuān tā.",
+      "pinyin": "Měi ge rén dōu hěn xǐhuān tā.",
       "english": "Everyone really likes her."
     }
   },
@@ -141,7 +141,7 @@
     "gloss": "to change; a change",
     "hint": "alter something",
     "pos": "verb",
-    "note": "Can take an object (改變計畫 \"change the plan\"). Compare 變 \"to become different\".",
+    "note": "Can take an object (改變計畫 'change the plan'). Compare 變 'to become different'.",
     "example": {
       "trad": "你不能改變他。",
       "pinyin": "Nǐ bù néng gǎibiàn tā.",
@@ -155,7 +155,7 @@
     "gloss": "to finish; to be over",
     "hint": "done doing (after a verb)",
     "pos": "verb",
-    "note": "Mostly after a verb: 吃完 \"finish eating\", 做完 \"finish doing\", 用完 \"used up\".",
+    "note": "Mostly after a verb: 吃完 'finish eating', 做完 'finish doing', 用完 'used up'.",
     "example": {
       "trad": "你吃完了嗎？",
       "pinyin": "Nǐ chīwán le ma?",
@@ -169,7 +169,7 @@
     "gloss": "different",
     "hint": "slightly formal",
     "pos": "adj",
-    "note": "Everyday speech more often says 不一樣. 不同的 + noun = \"different (kinds of)…\".",
+    "note": "Everyday speech more often says 不一樣. 不同的 + noun = 'different (kinds of)…'.",
     "example": {
       "trad": "我們的想法不同。",
       "pinyin": "Wǒmen de xiǎngfǎ bùtóng.",
@@ -183,7 +183,7 @@
     "gloss": "even; to connect",
     "hint": "even (as in even he knows)",
     "pos": "prep",
-    "note": "連 X 都/也… = \"even X…\": 連他都知道 \"even he knows\". As a verb it means \"to connect\": 連網路 \"connect to the internet\".",
+    "note": "連 X 都/也… = 'even X…': 連他都知道 'even he knows'. As a verb it means 'to connect': 連網路 'connect to the internet'.",
     "example": {
       "trad": "他連一句話都沒說。",
       "pinyin": "Tā lián yī jù huà dōu méi shuō.",
@@ -197,7 +197,7 @@
     "gloss": "so; such; like this",
     "hint": "formal 'like this / so much'",
     "pos": "adv",
-    "note": "Formal. In speech, people usually say 這樣 or 這麼, but 原來如此 \"I see!\" is very common.",
+    "note": "Formal. In speech, people usually say 這樣 or 這麼, but 原來如此 'I see!' is very common.",
     "example": {
       "trad": "原來如此，我懂了。",
       "pinyin": "Yuánlái rúcǐ, wǒ dǒng le.",
@@ -228,7 +228,7 @@
     "note": "Adds emphasis, often with mild annoyance: 真是的！ zhēn shì de 'honestly!'. Taiwan keeps the full tone on 是 (mainland often zhēn shi).",
     "example": {
       "trad": "今天真是太熱了！",
-      "pinyin": "Jīntiān zhēn shì tài rè le!",
+      "pinyin": "Jīntiān zhēnshì tài rè le!",
       "english": "It's really way too hot today!"
     }
   },
@@ -553,7 +553,7 @@
     "note": "Taiwan says bù fèn (also written 部份); MOE's headword gives bù fen for this sense, as does mainland speech. 大部分 dà bù fèn 'most'.",
     "example": {
       "trad": "大部分的人都同意。",
-      "pinyin": "Dà bùfèn de rén dōu tóngyì.",
+      "pinyin": "Dàbùfèn de rén dōu tóngyì.",
       "english": "Most people agree."
     }
   },

@@ -1,14 +1,22 @@
-import type { ReactNode } from 'react'
+import { useMemo, type ReactNode } from 'react'
 import { version } from '../../../package.json'
 import { SealMark } from '../../components'
 import manifestJson from '../../data/audio-manifest.json'
-import { getManifest, getWords } from '../../lib/words'
+import { getManifest, getWords, type Manifest, type WordIndex } from '../../lib/words'
+import { recordedWordCount } from './audioCache'
 import { Row, Section } from './Section'
 import { STUDY_SHORTCUTS } from './shortcuts'
 
 export const APP_VERSION: string = version
 /** createManifest() does not expose generatedAt, so read it from the JSON. */
 const manifestGeneratedAt: string = (manifestJson as { generatedAt?: string }).generatedAt ?? ''
+
+const LICENSES = {
+  ccBySa4: 'https://creativecommons.org/licenses/by-sa/4.0/',
+  ccByNd3Tw: 'https://creativecommons.org/licenses/by-nd/3.0/tw/',
+  apache2: 'https://www.apache.org/licenses/LICENSE-2.0',
+} as const
+const REPO_URL = 'https://github.com/dmilin1/qian'
 
 interface Source {
   name: string
@@ -17,6 +25,8 @@ interface Source {
   href: string
   what: string
   license: ReactNode
+  /** Link to the license text (attribution licenses expect one). */
+  licenseHref?: string
 }
 
 const SOURCES: Source[] = [
@@ -31,25 +41,29 @@ const SOURCES: Source[] = [
     href: 'https://github.com/rspeer/wordfreq',
     what: 'Second frequency signal, blended with SUBTLEX-CH.',
     license: 'Data CC BY-SA 4.0',
+    licenseHref: LICENSES.ccBySa4,
   },
   {
     name: 'CC-CEDICT',
     href: 'https://www.mdbg.net/chinese/dictionary?page=cc-cedict',
     what: 'English meanings and readings.',
     license: 'CC BY-SA 4.0',
+    licenseHref: LICENSES.ccBySa4,
   },
   {
     name: 'MOE Revised Mandarin Dictionary, via moedict',
     nameZh: '教育部重編國語辭典修訂本',
     href: 'https://www.moedict.tw/',
-    what: 'Taiwan standard pronunciations.',
+    what: 'Taiwan standard pronunciations (reading fields only; no dictionary text is copied).',
     license: 'CC BY-ND 3.0 TW, © Ministry of Education, Taiwan',
+    licenseHref: LICENSES.ccByNd3Tw,
   },
   {
     name: 'OpenCC',
     href: 'https://github.com/BYVoid/OpenCC',
     what: 'Conversion to Traditional characters and Taiwan vocabulary.',
     license: 'Apache 2.0',
+    licenseHref: LICENSES.apache2,
   },
 ]
 
@@ -61,10 +75,10 @@ function Key({ children }: { children: ReactNode }) {
   )
 }
 
-export function AboutSection() {
-  const manifest = getManifest()
+export function AboutSection({ words = getWords(), manifest = getManifest() }: { words?: WordIndex; manifest?: Manifest }) {
   const generated = getManifestDate()
-  const wordCount = getWords().order.length
+  const wordCount = words.order.length
+  const recorded = useMemo(() => recordedWordCount(words, manifest), [words, manifest])
   return (
     <Section id="about" title="About" icon="info">
       <Row py="loose" className="flex items-center gap-4">
@@ -82,9 +96,18 @@ export function AboutSection() {
 
       <Row py="loose" className="flex flex-col gap-2">
         <h3 className="font-medium text-ink">Audio</h3>
-        <p className="text-sm text-muted">
-          Recorded with ElevenLabs, voice “Anna Su” (Taiwan Mandarin){manifest.model ? `, model ${manifest.model}` : ''}
-          {generated ? `, generated ${generated}` : ''}. Words without a recording use your browser's speech voice.
+        <p className="text-sm text-muted" data-testid="about-audio">
+          {recorded > 0 ? (
+            <>
+              {recorded === wordCount ? 'All ' : ''}
+              {recorded.toLocaleString()} of {wordCount.toLocaleString()} words recorded with ElevenLabs, voice “Anna Su”
+              (Taiwan Mandarin){manifest.model ? `, model ${manifest.model}` : ''}
+              {generated ? `, generated ${generated}` : ''}.
+              {recorded < wordCount ? " The rest use your browser's speech voice." : ''}
+            </>
+          ) : (
+            "No studio recordings in this build yet; words use your browser's speech voice."
+          )}
         </p>
       </Row>
 
@@ -102,13 +125,27 @@ export function AboutSection() {
                 </span>
               ) : null}
               <span className="text-muted">{s.what}</span>
-              <span className="text-faint">{s.license}</span>
+              {s.licenseHref ? (
+                <a href={s.licenseHref} target="_blank" rel="noopener noreferrer" className="w-fit text-faint underline underline-offset-2 hover:text-muted">
+                  {s.license}
+                </a>
+              ) : (
+                <span className="text-faint">{s.license}</span>
+              )}
             </li>
           ))}
         </ul>
         <p className="text-sm text-muted">
           Glosses, hints and example sentences were written for qian and checked against these dictionaries. Because they draw
-          on CC-CEDICT, the word data is shared under CC BY-SA 4.0.
+          on CC-CEDICT, qian's word list (glosses, hints, examples) is shared under{' '}
+          <a href={LICENSES.ccBySa4} target="_blank" rel="noopener noreferrer" className="text-accent underline-offset-2 hover:underline">
+            CC BY-SA 4.0
+          </a>
+          ; get it from the{' '}
+          <a href={REPO_URL} target="_blank" rel="noopener noreferrer" className="text-accent underline-offset-2 hover:underline">
+            qian repository
+          </a>
+          .
         </p>
       </Row>
 

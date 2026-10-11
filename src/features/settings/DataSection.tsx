@@ -3,15 +3,8 @@ import { Banner, Button, Icon, Modal, cx, useSelector, useStore } from '../../co
 import { downloadText, ImportError, parseImport, type ImportMode } from '../../lib/exportImport'
 import type { ImportSummary } from '../../lib/store'
 import { formatBytes } from './audioCache'
+import { backupOverdue, canShareFiles, daysSince, saveBackup } from './backup'
 import { Row, RowLabel, Section } from './Section'
-
-const DAY_MS = 24 * 60 * 60 * 1000
-/** Remind to export when the last backup is older than this. */
-const EXPORT_REMINDER_DAYS = 14
-
-function daysSince(t: number, now = Date.now()): number {
-  return Math.max(0, Math.floor((now - t) / DAY_MS))
-}
 
 const fmtDate = (t: number) => {
   try {
@@ -23,17 +16,6 @@ const fmtDate = (t: number) => {
 
 const ago = (days: number) => (days === 0 ? 'today' : days === 1 ? 'yesterday' : `${days} days ago`)
 const plural = (n: number, one: string, many = `${one}s`) => `${n.toLocaleString()} ${n === 1 ? one : many}`
-
-/** Whether the Web Share API can share a file (iOS / Android "Save to Files" etc.). */
-function canShareFiles(): boolean {
-  try {
-    const nav = globalThis.navigator
-    if (typeof nav?.canShare !== 'function' || typeof File === 'undefined') return false
-    return nav.canShare({ files: [new File(['{}'], 'test.json', { type: 'application/json' })] })
-  } catch {
-    return false
-  }
-}
 
 // ----- Export -----
 
@@ -47,25 +29,16 @@ function ExportRow() {
   const run = async (via: 'download' | 'share') => {
     setStatus(null)
     try {
-      const { filename, text } = await store.exportData()
-      if (via === 'share') {
-        try {
-          await navigator.share({ files: [new File([text], filename, { type: 'application/json' })], title: filename })
-        } catch (e) {
-          if ((e as Error)?.name === 'AbortError') return
-          downloadText(filename, text)
-        }
-      } else {
-        downloadText(filename, text)
-      }
-      setStatus(`Saved ${filename}`)
+      // The share sheet can be dismissed; saveBackup records the export only once it actually succeeds.
+      const filename = await saveBackup(store, via)
+      setStatus(filename ? `Saved ${filename}` : 'Not saved.')
     } catch (e) {
       setStatus(`Export failed: ${(e as Error)?.message ?? e}`)
     }
   }
 
   const days = lastExportAt !== null ? daysSince(lastExportAt) : null
-  const overdue = eventCount > 0 && (days === null || days > EXPORT_REMINDER_DAYS)
+  const overdue = backupOverdue(eventCount, lastExportAt)
 
   return (
     <Row py="loose" className="flex flex-col gap-3">
@@ -174,7 +147,10 @@ function ImportRow() {
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [outcome, setOutcome] = useState<ImportOutcome | null>(null)
+  const [acknowledged, setAcknowledged] = useState(false)
+  const localCount = useSelector((s) => s.events.length)
   const radioName = useId()
+  const ackId = useId()
 
   const onFile = async (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
@@ -186,6 +162,7 @@ function ImportRow() {
       const text = await file.text()
       const parsed = parseImport(text)
       setMode('merge')
+      setAcknowledged(false)
       setPending({
         name: file.name,
         text,
@@ -215,6 +192,14 @@ function ImportRow() {
   }
 
   const exported = pending ? Date.parse(pending.exportedAt) : NaN
+  // Replace with a smaller backup throws away reviews: warn, and require a deliberate tick before the danger button.
+  const losing = pending && mode === 'replace' ? Math.max(0, localCount - pending.events) : 0
+  const blocked = losing > 0 && !acknowledged
+
+  const exportFirst = async () => {
+    const { filename, text } = await store.exportData()
+    downloadText(filename, text)
+  }
 
   return (
     <Row py="loose" className="flex flex-col gap-3">
@@ -258,6 +243,10 @@ function ImportRow() {
               {Number.isFinite(exported) ? `Exported ${fmtDate(exported)}, ` : ''}
               {plural(pending.events, 'entry', 'entries')}
               {pending.skipped ? ` (${pending.skipped} unreadable, will be skipped)` : ''}.
+              <br />
+              <span data-testid="import-counts">
+                This device: {plural(localCount, 'entry', 'entries')} · Backup: {plural(pending.events, 'entry', 'entries')}
+              </span>
             </>
           ) : undefined
         }
@@ -266,7 +255,7 @@ function ImportRow() {
             <Button variant="ghost" onClick={() => setPending(null)} disabled={busy}>
               Cancel
             </Button>
-            <Button variant={mode === 'replace' ? 'danger' : 'primary'} onClick={() => void confirm()} disabled={busy}>
+            <Button variant={mode === 'replace' ? 'danger' : 'primary'} onClick={() => void confirm()} disabled={busy || blocked}>
               {busy ? 'Importing…' : mode === 'replace' ? 'Replace my data' : 'Merge'}
             </Button>
           </>
@@ -283,6 +272,29 @@ function ImportRow() {
             on purpose.
           </ModeOption>
         </fieldset>
+        {losing > 0 && pending ? (
+          <div className="mt-3 flex flex-col gap-3">
+            <Banner tone="warning">
+              This backup has fewer entries than this device ({pending.events.toLocaleString()} vs {localCount.toLocaleString()}).
+              Replacing will permanently lose {plural(losing, 'review')}.
+            </Banner>
+            <div>
+              <Button variant="secondary" icon="download" onClick={() => void exportFirst()} disabled={busy}>
+                Export this device first
+              </Button>
+            </div>
+            <label htmlFor={ackId} className="flex cursor-pointer items-center gap-3 text-ink">
+              <input
+                id={ackId}
+                type="checkbox"
+                checked={acknowledged}
+                onChange={(e) => setAcknowledged(e.target.checked)}
+                className="h-4 w-4 accent-[var(--accent-solid)]"
+              />
+              I understand this deletes my progress on this device
+            </label>
+          </div>
+        ) : null}
       </Modal>
     </Row>
   )

@@ -1,6 +1,6 @@
 import { act, render, screen, waitFor, within } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
-import { beforeEach, describe, expect, it, vi } from 'vitest'
+import userEvent, { PointerEventsCheckLevel } from '@testing-library/user-event'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { AppProvider } from '../../components/AppProvider'
 import { makeFakePlayer, makeTestStore } from '../../components/test-utils'
 import type { AudioPlayer } from '../../lib/audio'
@@ -38,6 +38,12 @@ function advance(store: AppStore, until: (c: NonNullable<ReturnType<AppStore['ge
 }
 
 const grades = () => screen.queryByRole('group', { name: 'Grade' })
+
+/** Grade buttons ignore taps for a moment after reveal (double-tap guard); wait it out. */
+async function clickGrade(user: ReturnType<typeof userEvent.setup>, name: RegExp) {
+  await waitFor(() => expect(grades()).not.toHaveStyle({ pointerEvents: 'none' }))
+  await user.click(screen.getByRole('button', { name }))
+}
 
 beforeEach(() => {
   studySession.reset()
@@ -182,7 +188,7 @@ describe('grading', () => {
     const spy = vi.spyOn(store, 'grade')
     await screen.findByRole('article', { name: 'Listen card' })
     await user.click(screen.getByRole('button', { name: /Show answer/ }))
-    await user.click(screen.getByRole('button', { name: /^Good/ }))
+    await clickGrade(user, /^Good/)
     expect(spy).toHaveBeenCalledTimes(1)
     const [key, grade, elapsed] = spy.mock.calls[0]
     expect(key).toBe('w4f60:listen')
@@ -201,7 +207,7 @@ describe('grading', () => {
     const undo = screen.getByRole('button', { name: 'Undo last answer' })
     expect(undo).toBeDisabled()
     await user.click(screen.getByRole('button', { name: /Show answer/ }))
-    await user.click(screen.getByRole('button', { name: /^Again/ }))
+    await clickGrade(user, /^Again/)
     expect(store.getSnapshot().current?.wordId).not.toBe('w4f60')
     await user.click(screen.getByRole('button', { name: 'Undo last answer' }))
     await waitFor(() => expect(store.getSnapshot().current?.key).toBe('w4f60:listen'))
@@ -211,7 +217,75 @@ describe('grading', () => {
   })
 })
 
+describe('double-tap guard', () => {
+  it('a second tap right after "Show answer" does not grade; a later tap does', async () => {
+    const { store } = await setup()
+    // Skip user-event's pointer-events check, to simulate a tap landing during the guard.
+    const user = userEvent.setup({ pointerEventsCheck: PointerEventsCheckLevel.Never })
+    const spy = vi.spyOn(store, 'grade')
+    await screen.findByRole('article', { name: 'Listen card' })
+    await user.click(screen.getByRole('button', { name: /Show answer/ }))
+    expect(grades()).toHaveStyle({ pointerEvents: 'none' })
+    await user.click(screen.getByRole('button', { name: /^Good/ }))
+    expect(spy).not.toHaveBeenCalled()
+    await clickGrade(user, /^Good/)
+    expect(spy).toHaveBeenCalledOnce()
+  })
+
+  it('does not slow down keyboard grading', async () => {
+    const { user, store } = await setup()
+    const spy = vi.spyOn(store, 'grade')
+    await screen.findByRole('article', { name: 'Listen card' })
+    await user.keyboard(' ')
+    await user.keyboard('2')
+    expect(spy).toHaveBeenCalledOnce()
+  })
+})
+
 describe('keyboard shortcuts', () => {
+  it('Space after clicking Undo with the mouse reveals instead of undoing again', async () => {
+    const { user, store } = await setup()
+    await screen.findByRole('article', { name: 'Listen card' })
+    await user.keyboard(' ')
+    await user.keyboard('2')
+    await user.keyboard(' ')
+    await user.keyboard('2')
+    const undoSpy = vi.spyOn(store, 'undo')
+    const undoBtn = screen.getByRole('button', { name: 'Undo last answer' })
+    await user.click(undoBtn)
+    expect(undoSpy).toHaveBeenCalledOnce()
+    expect(undoBtn).toHaveFocus()
+    await user.keyboard(' ')
+    expect(undoSpy).toHaveBeenCalledOnce()
+    expect(grades()).not.toBeNull()
+  })
+
+  it('Space after clicking Replay reveals instead of replaying', async () => {
+    const { user, fake } = await setup()
+    const card = await screen.findByRole('article', { name: 'Listen card' })
+    await user.click(within(card).getByRole('button', { name: 'Replay word' }))
+    const plays = fake.play.mock.calls.length
+    await user.keyboard(' ')
+    expect(grades()).not.toBeNull()
+    expect(fake.play.mock.calls.length).toBe(plays)
+  })
+
+  it('Space still activates a control reached with Tab', async () => {
+    const { user, store } = await setup()
+    await screen.findByRole('article', { name: 'Listen card' })
+    await user.keyboard(' ')
+    await user.keyboard('2')
+    const undoSpy = vi.spyOn(store, 'undo')
+    const undoBtn = screen.getByRole('button', { name: 'Undo last answer' })
+    // Mouse first, then keyboard navigation: Tab switches back to keyboard modality.
+    await user.click(document.body)
+    for (let i = 0; i < 20 && document.activeElement !== undoBtn; i++) await user.tab()
+    expect(undoBtn).toHaveFocus()
+    await user.keyboard(' ')
+    expect(undoSpy).toHaveBeenCalledOnce()
+  })
+
+
   it('Space reveals; 1/2/3 grade; R/S replay; E example; Z undo', async () => {
     const { user, store, fake } = await setup()
     const gradeSpy = vi.spyOn(store, 'grade')
@@ -290,6 +364,124 @@ describe('keyboard shortcuts', () => {
     await user.type(note, '123 z')
     expect(spy).not.toHaveBeenCalled()
     expect(note).toHaveValue('123 z')
+  })
+})
+
+describe('toast', () => {
+  it('"I already know this" toast has its own Undo button', async () => {
+    const { user, store } = await setup()
+    await screen.findByRole('article', { name: 'Listen card' })
+    await user.click(screen.getByRole('button', { name: /I already know this/ }))
+    await waitFor(() => expect(store.getSnapshot().current?.wordId).not.toBe('w4f60'))
+    const undoSpy = vi.spyOn(store, 'undo')
+    await user.click(await screen.findByRole('button', { name: 'Undo' }))
+    expect(undoSpy).toHaveBeenCalledOnce()
+    await waitFor(() => expect(store.getSnapshot().current?.key).toBe('w4f60:listen'))
+    expect(screen.queryByRole('button', { name: 'Undo' })).toBeNull()
+  })
+
+  it('the known toast drops its Undo once another answer is logged', async () => {
+    const { user } = await setup()
+    await screen.findByRole('article', { name: 'Listen card' })
+    await user.click(screen.getByRole('button', { name: /I already know this/ }))
+    expect(await screen.findByRole('button', { name: 'Undo' })).toBeInTheDocument()
+    await user.keyboard(' ')
+    await user.keyboard('2')
+    expect(screen.queryByRole('button', { name: 'Undo' })).toBeNull()
+  })
+
+  it('the suspend toast Undo unsuspends the word', async () => {
+    const { user, store } = await setup()
+    const spy = vi.spyOn(store, 'setSuspended')
+    await screen.findByRole('article', { name: 'Listen card' })
+    await user.click(screen.getByRole('button', { name: 'Card options' }))
+    await user.click(screen.getByRole('menuitem', { name: /Suspend word/ }))
+    await user.click(await screen.findByRole('button', { name: 'Suspend' }))
+    await user.click(await screen.findByRole('button', { name: 'Undo' }))
+    expect(spy).toHaveBeenLastCalledWith('w4f60', false)
+  })
+
+  it('the flag toast has no Undo button', async () => {
+    const { user } = await setup()
+    await screen.findByRole('article', { name: 'Listen card' })
+    await user.click(screen.getByRole('button', { name: 'Card options' }))
+    await user.click(screen.getByRole('menuitem', { name: /Flag this card/ }))
+    await user.click(await screen.findByRole('radio', { name: 'Wrong pinyin or tones' }))
+    await user.click(screen.getByRole('button', { name: 'Flag word' }))
+    expect(await screen.findByText(/card flagged/)).toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: 'Undo' })).toBeNull()
+  })
+})
+
+describe('scrolling', () => {
+  const originalScrollTo = window.scrollTo
+  const originalScrollIntoView = Element.prototype.scrollIntoView
+  afterEach(() => {
+    window.scrollTo = originalScrollTo
+    Element.prototype.scrollIntoView = originalScrollIntoView
+    Reflect.deleteProperty(window, 'scrollY')
+  })
+
+  it('a new card starts at the top of the page', async () => {
+    const { user } = await setup()
+    await screen.findByRole('article', { name: 'Listen card' })
+    window.scrollTo = vi.fn() as unknown as typeof window.scrollTo
+    Object.defineProperty(window, 'scrollY', { value: 300, configurable: true })
+    await user.keyboard(' ')
+    expect(window.scrollTo).not.toHaveBeenCalled()
+    await user.keyboard('2')
+    expect(window.scrollTo).toHaveBeenCalledWith({ top: 0, left: 0, behavior: 'instant' })
+  })
+
+  it('revealing scrolls the start of the answer into view', async () => {
+    const { user } = await setup()
+    const spy = vi.fn()
+    Element.prototype.scrollIntoView = spy
+    await screen.findByRole('article', { name: 'Listen card' })
+    expect(spy).not.toHaveBeenCalled()
+    await user.keyboard(' ')
+    expect(spy).toHaveBeenCalledOnce()
+    expect(spy.mock.calls[0][0]).toMatchObject({ block: 'nearest' })
+    // The scrolled element is the answer's first block (the meaning), not the whole answer.
+    expect(spy.mock.contexts[0]).toContainElement(screen.getByText('you'))
+    expect(spy.mock.contexts[0]).not.toContainElement(screen.getByText('example 1'))
+  })
+})
+
+describe('audio problems', () => {
+  it('a failed play shows a hint linking to Settings, and an audio-only front falls back to the word', async () => {
+    const { fake } = await setup({ settings: { listenFront: 'audioOnly' } })
+    const card = await screen.findByRole('article', { name: 'Listen card' })
+    expect(within(card).queryByText('nǐ')).toBeNull()
+    act(() => fake.finish('failed'))
+    expect(await within(card).findByText(/Couldn.t play audio/)).toBeInTheDocument()
+    expect(within(card).getByRole('link', { name: /Check Settings/ })).toHaveAttribute('href', '#/settings')
+    expect(within(card).getByText('nǐ')).toBeInTheDocument()
+  })
+
+  it('a blocked autoplay shows the tap-to-play hint', async () => {
+    const { fake } = await setup()
+    const card = await screen.findByRole('article', { name: 'Listen card' })
+    act(() => fake.finish('blocked'))
+    expect(await within(card).findByText(/paused autoplay/)).toBeInTheDocument()
+  })
+})
+
+describe('hidden page', () => {
+  afterEach(() => {
+    Reflect.deleteProperty(document, 'visibilityState')
+  })
+
+  it('a card that appears while the page is hidden autoplays only once it is visible', async () => {
+    Object.defineProperty(document, 'visibilityState', { value: 'hidden', configurable: true })
+    const { fake } = await setup()
+    await screen.findByRole('article', { name: 'Listen card' })
+    expect(fake.play).not.toHaveBeenCalled()
+    Object.defineProperty(document, 'visibilityState', { value: 'visible', configurable: true })
+    act(() => {
+      document.dispatchEvent(new Event('visibilitychange'))
+    })
+    expect(fake.play).toHaveBeenCalledWith('w4f60', 'word', { slow: false })
   })
 })
 
@@ -394,5 +586,18 @@ describe('start and caught-up states', () => {
     await screen.findByRole('article', { name: 'Listen card' })
     act(() => unmount())
     expect((fake.player as unknown as { stop: ReturnType<typeof vi.fn> }).stop).toHaveBeenCalled()
+  })
+})
+
+describe('card menu focus', () => {
+  it('opens a dialog from the menu and returns focus to "Card options" when it closes', async () => {
+    const { user } = await setup()
+    await screen.findByRole('article', { name: 'Listen card' })
+    const btn = screen.getByRole('button', { name: 'Card options' })
+    await user.click(btn)
+    await user.click(screen.getByRole('menuitem', { name: /Flag this card/ }))
+    await user.click(await screen.findByRole('button', { name: 'Cancel' }))
+    expect(screen.queryByRole('dialog')).toBeNull()
+    expect(btn).toHaveFocus()
   })
 })

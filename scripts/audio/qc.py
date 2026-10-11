@@ -286,34 +286,50 @@ def char_readings(ch: str) -> set[tuple[str, int]]:
     return out
 
 
-def align_cost(expected: list[tuple[str, int]], heard: list[set[tuple[str, int]]]) -> tuple[float, int, int]:
+def taiwan_accent_form(syl: str) -> str:
+    """Fold the Taiwan Mandarin mergers whisper (trained mostly on mainland speech) hears as different
+    syllables: retroflex zh/ch/sh -> z/c/s and the final -ng after i/e (jīn/jīng, fēn/fēng)."""
+    for a, b in (("zh", "z"), ("ch", "c"), ("sh", "s")):
+        if syl.startswith(a):
+            syl = b + syl[2:]
+            break
+    if syl.endswith("ing") or syl.endswith("eng"):
+        syl = syl[:-1]
+    return syl
+
+
+def align_cost(expected: list[tuple[str, int]], heard: list[set[tuple[str, int]]]) -> tuple[float, int, int, int]:
     """Edit distance between expected syllables and heard candidate sets.
 
-    substitution: 0 if exact (tone 5 on either side is a wildcard), 0.5 if same syllable but
-    different tone, 1 otherwise. Returns (cost, n_tone_errors, n_syllable_errors) along the best path.
+    substitution: 0 if exact (tone 5 on either side is a wildcard), 0.25 if equal only modulo a Taiwan
+    accent merger (taiwan_accent_form) with the right tone, 0.5 if same syllable but different tone,
+    1 otherwise. Returns (cost, n_tone_errors, n_syllable_errors, n_accent_diffs) along the best path.
     """
     n, m = len(expected), len(heard)
     INF = 1e9
-    D = [[(INF, 0, 0)] * (m + 1) for _ in range(n + 1)]
-    D[0][0] = (0.0, 0, 0)
+    D = [[(INF, 0, 0, 0)] * (m + 1) for _ in range(n + 1)]
+    D[0][0] = (0.0, 0, 0, 0)
     for i in range(n + 1):
         for j in range(m + 1):
-            c, te, se = D[i][j]
+            c, te, se, ae = D[i][j]
             if c >= INF:
                 continue
             if i < n and D[i + 1][j][0] > c + 1:
-                D[i + 1][j] = (c + 1, te, se + 1)
+                D[i + 1][j] = (c + 1, te, se + 1, ae)
             if j < m and D[i][j + 1][0] > c + 1:
-                D[i][j + 1] = (c + 1, te, se + 1)
+                D[i][j + 1] = (c + 1, te, se + 1, ae)
             if i < n and j < m:
                 syl, tone = expected[i]
                 cands = heard[j]
+                tw = taiwan_accent_form(syl)
                 if any(s == syl and (t == tone or t == 5 or tone == 5) for s, t in cands):
-                    sub = (c, te, se)
-                elif any(s == syl for s, _ in cands):
-                    sub = (c + 0.5, te + 1, se)
+                    sub = (c, te, se, ae)
+                elif any(taiwan_accent_form(s) == tw and (t == tone or t == 5 or tone == 5) for s, t in cands):
+                    sub = (c + 0.25, te, se, ae + 1)
+                elif any(taiwan_accent_form(s) == tw for s, _ in cands):
+                    sub = (c + 0.5, te + 1, se, ae)
                 else:
-                    sub = (c + 1, te, se + 1)
+                    sub = (c + 1, te, se + 1, ae)
                 if D[i + 1][j + 1][0] > sub[0]:
                     D[i + 1][j + 1] = sub
     return D[n][m]
@@ -333,6 +349,95 @@ def edit_distance(a: list, b: list) -> int:
             cur[j] = min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (x != y))
         prev = cur
     return prev[-1]
+
+
+def toneless_sets(s: str) -> list[set[str]]:
+    """Per character of a normalized transcript: every toneless dictionary reading. Comparing these sets
+    (instead of pypinyin's single context reading) means a homophone or a polyphone that pypinyin reads
+    the mainland way (长 zhǎng in 很长) is not counted as an error."""
+    out = []
+    for ch in s:
+        if C.hanzi_count(ch):
+            out.append({syl for syl, _ in char_readings(ch)})
+        elif ch.isalpha():
+            out.append({ch})
+    return out
+
+
+def set_edit_distance(heard: list[set[str]], expected: list[str]) -> int:
+    prev = list(range(len(expected) + 1))
+    for i, xs in enumerate(heard, 1):
+        cur = [i] + [0] * len(expected)
+        for j, y in enumerate(expected, 1):
+            cur[j] = min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (y not in xs))
+        prev = cur
+    return prev[-1]
+
+
+_ZH_DIGITS = "零一二三四五六七八九"
+
+
+def zh_int(n: int, liang: bool = False) -> str:
+    """Spoken reading of a non-negative integer < 10^8 (300 -> 三百, 2000 -> 二千 / 兩千, 15 -> 十五)."""
+    if n == 0:
+        return "零"
+
+    def below_10k(v: int, leading: bool) -> str:
+        out, zero, started = "", False, False
+        for unit, name in ((1000, "千"), (100, "百"), (10, "十"), (1, "")):
+            d = v // unit % 10
+            if d == 0:
+                zero = zero or started
+                continue
+            if zero:
+                out += "零"
+                zero = False
+            if d == 2 and liang and unit in (1000, 100):
+                ch = "兩"
+            elif d == 1 and unit == 10 and not started and leading:
+                ch = ""  # 十五, not 一十五
+            else:
+                ch = _ZH_DIGITS[d]
+            out += ch + name
+            started = True
+        return out
+
+    if n < 10000:
+        return below_10k(n, True)
+    hi, lo = divmod(n, 10000)
+    s = ("兩" if liang and hi == 2 else below_10k(hi, True)) + "萬"
+    if lo:
+        s += ("零" if lo < 1000 else "") + below_10k(lo, False)
+    return s
+
+
+def digit_variants(s: str) -> list[str]:
+    """Whisper writes numbers as Arabic digits ("这本书300块"). Return the transcript with digit runs
+    spelled out in each plausible spoken form: digit by digit (一 for "1", phone numbers, years),
+    as a number with 二, and as a number with 兩 before 百/千/萬. Callers keep the best-scoring one."""
+    import re
+
+    if not re.search(r"\d", s):
+        return [s]
+    pat = re.compile(r"\d+(?:\.\d+)?")
+
+    def spell(mode: str):
+        def f(m: re.Match) -> str:
+            txt = m.group(0)
+            whole, _, frac = txt.partition(".")
+            if mode == "digits" or (len(whole) > 1 and whole[0] == "0") or len(whole) > 8:
+                head = whole.translate(_DIGITS)
+            else:
+                head = zh_int(int(whole), liang=(mode == "liang"))
+            return head + ("點" + frac.translate(_DIGITS) if frac else "")
+        return pat.sub(f, s)
+
+    out: list[str] = []
+    for mode in ("digits", "number", "liang"):
+        v = spell(mode)
+        if v not in out:
+            out.append(v)
+    return out
 
 
 _HALLUCINATIONS = ("字幕", "订阅", "訂閱", "点赞", "點贊", "谢谢观看", "謝謝觀看", "感谢收看", "感謝收看", "明镜", "明鏡")
@@ -423,11 +528,21 @@ class ASR:
 
 _DIGITS = str.maketrans("0123456789", "〇一二三四五六七八九")
 
-ASR_RANK = {"match": 6, "primed_match": 5, "tone_mismatch": 4, "partial": 3, "empty": 2, "unclear": 2, "mismatch": 0}
+ASR_RANK = {"match": 6, "primed_match": 5, "accent_match": 5, "tone_mismatch": 4, "partial": 3, "empty": 2, "unclear": 2, "mismatch": 0}
 
 
 def compare_word(transcript: str, text: str, pinyin_numbered: str) -> dict[str, Any]:
-    t = C.normalize_zh(transcript.translate(_DIGITS))
+    best: dict[str, Any] | None = None
+    for variant in digit_variants(transcript):
+        r = _compare_word(variant, text, pinyin_numbered)
+        r["transcript"] = transcript
+        if best is None or (ASR_RANK[r["status"]], -r.get("cost", 0)) > (ASR_RANK[best["status"]], -best.get("cost", 0)):
+            best = r
+    return best
+
+
+def _compare_word(transcript: str, text: str, pinyin_numbered: str) -> dict[str, Any]:
+    t = C.normalize_zh(transcript)
     e = C.normalize_zh(text)
     out: dict[str, Any] = {"transcript": transcript}
     if not t:
@@ -440,10 +555,12 @@ def compare_word(transcript: str, text: str, pinyin_numbered: str) -> dict[str, 
         # Whisper sometimes writes an isolated syllable in Latin letters ("E", "Sin"): no evidence either way.
         return {**out, "status": "unclear", "detail": "no Chinese characters in transcript"}
     heard = [char_readings(ch) for ch in hanzi]
-    cost, tone_err, syl_err = align_cost(expected, heard)
-    out.update({"cost": cost, "tone_errors": tone_err, "syllable_errors": syl_err})
+    cost, tone_err, syl_err, accent = align_cost(expected, heard)
+    out.update({"cost": cost, "tone_errors": tone_err, "syllable_errors": syl_err, "accent_diffs": accent})
     if cost == 0:
         return {**out, "status": "match", "detail": "homophone"}
+    if syl_err == 0 and tone_err == 0:
+        return {**out, "status": "accent_match", "detail": "equal modulo Taiwan zh/z, ch/c, sh/s, in/ing, en/eng"}
     if syl_err == 0:
         return {**out, "status": "tone_mismatch", "detail": f"{tone_err} syllable(s) heard with a different tone"}
     if e in t and len(t) - len(e) <= 2:
@@ -525,15 +642,19 @@ def split_pinyin(pinyin_text: str, n: int) -> list[str] | None:
 
 
 def compare_sentence(transcript: str, text: str, pinyin: str | None = None) -> dict[str, Any]:
-    t = C.normalize_zh(transcript)
     e = C.normalize_zh(text)
     out: dict[str, Any] = {"transcript": transcript}
-    if not t:
+    if not C.normalize_zh(transcript):
         return {**out, "status": "empty", "error_rate": 1.0}
-    cer = edit_distance(list(t), list(e)) / max(1, len(e))
     pe = (split_pinyin(pinyin, C.hanzi_count(text)) if pinyin else None) or toneless(e)
-    pt = toneless(t)
-    per = edit_distance(pt, pe) / max(1, len(pe))
+    best = None
+    for variant in digit_variants(transcript):  # "300" -> 三百 etc.; keep the closest reading
+        t = C.normalize_zh(variant)
+        cer = edit_distance(list(t), list(e)) / max(1, len(e))
+        per = set_edit_distance(toneless_sets(t), pe) / max(1, len(pe))
+        if best is None or min(cer, per) < min(best[0], best[1]):
+            best = (cer, per)
+    cer, per = best
     rate = round(min(cer, per), 3)
     out.update({"cer": round(cer, 3), "pinyin_er": round(per, 3), "error_rate": rate})
     if rate == 0:
@@ -607,13 +728,13 @@ class QC:
             verdict = "fail"
         elif a == "match":
             verdict = "suspect" if p == "mismatch" else "pass"
-        elif a == "primed_match":
+        elif a in ("primed_match", "accent_match"):
             verdict = "pass" if p in ("ok", "unknown") else "suspect"
         elif a == "tone_mismatch":
             verdict = "fail" if p in ("mismatch", "weak") else "suspect"
         else:  # partial / empty / unclear
             verdict = "fail" if p == "mismatch" else "suspect"
-        asr_score = {"match": 1.0, "primed_match": 0.8, "tone_mismatch": 0.4, "partial": 0.4, "empty": 0.3,
+        asr_score = {"match": 1.0, "primed_match": 0.8, "accent_match": 0.8, "tone_mismatch": 0.4, "partial": 0.4, "empty": 0.3,
                      "unclear": 0.3}.get(a, 0.0)
         pscore = pitch["score"] if pitch.get("score") is not None else 0.5
         score = round(0.6 * asr_score + 0.4 * pscore - (0.5 if dur_bad else 0), 3)
@@ -680,9 +801,13 @@ def main():
         counts: dict[str, int] = {}
         for w in words:
             for kind, sub in (("word", "w"), ("sentence", "s")):
-                p = ad / sub / f"{w['id']}.mp3"
-                if not p.exists():
+                # Installed clips are content-versioned: "<id>-<hash8>.mp3" (see generate.py).
+                import re
+                pat = re.compile(rf"{re.escape(w['id'])}(-[0-9a-f]{{8}})?\.mp3")
+                found = [q for q in (ad / sub).glob(f"{w['id']}*.mp3") if pat.fullmatch(q.name)]
+                if not found:
                     continue
+                p = max(found, key=lambda q: q.stat().st_mtime)
                 x = C.decode_audio(p, sr=C.PCM_RATE)
                 if kind == "word":
                     rep = qc.check_word(x, C.PCM_RATE, w["trad"], w["pinyinNumbered"], w.get("spokenAs"))

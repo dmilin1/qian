@@ -70,15 +70,26 @@ describe('searchWords: pinyin', () => {
     expect(find('ni3hao3')).toEqual(['你好'])
     expect(find('ni3 hao')).toEqual(['你好'])
     expect(find('ni4')).toEqual([])
-    expect(find('shi1')).toEqual(['師'])
-    expect(find('shi2')).toEqual(['十'])
-    expect(find('shi5')).toEqual(['認識'])
-    expect(find('shi0')).toEqual(['認識'])
+    // 認識 is rèn shi (neutral), so any typed tone also finds it, ranked after exact-tone matches.
+    expect(find('shi1')).toEqual(['師', '認識'])
+    expect(find('shi2')).toEqual(['十', '認識'])
+    // A typed neutral tone matches any tone, exact-tone and whole-word matches first.
+    expect(find('shi5')).toEqual(['是', '師', '十', '認識'])
+    expect(find('shi0')).toEqual(['是', '師', '十', '認識'])
+  })
+
+  it('lets a neutral tone match the full tone many Taiwanese say', () => {
+    expect(find('ren4shi4')).toEqual(['認識']) // data: rèn shi
+    expect(find('dong1xi1')).toEqual(['東西']) // data: dōng xi
+    expect(find('peng2you5')).toEqual(['朋友']) // data: péng yǒu
+    // Full tones never match each other.
+    expect(find('ni4')).toEqual([])
+    expect(find('ren3shi4')).toEqual([])
   })
 
   it('respects tone marks', () => {
     expect(find('nǐ hǎo')).toEqual(['你好'])
-    expect(find('shì')).toEqual(['是'])
+    expect(find('shì')).toEqual(['是', '認識'])
     expect(find('hǎo')).toEqual(['好', '你好'])
   })
 
@@ -154,5 +165,32 @@ describe('searchWords: characters and rank', () => {
   it('returns everything in rank order for an empty query', () => {
     expect(find('')).toEqual(WORDS.map((w) => w.trad))
     expect(find('   ')).toEqual(WORDS.map((w) => w.trad))
+  })
+})
+
+describe('searchWords: ranking', () => {
+  const MORE = [
+    makeWord(33, { id: 'w60f3', trad: '想', simp: '想', pinyin: 'xiǎng', pinyinNumbered: 'xiang3', tones: [3], gloss: 'to think; to want' }),
+    makeWord(54, { id: 'w73fe-5728', trad: '現在', simp: '现在', pinyin: 'xiàn zài', pinyinNumbered: 'xian4 zai4', tones: [4, 4], gloss: 'now' }),
+    makeWord(60, { id: 'w5abd', trad: '媽', simp: '妈', pinyin: 'mā', pinyinNumbered: 'ma1', tones: [1], gloss: 'mom' }),
+    makeWord(61, { id: 'w5abd-5abd', trad: '媽媽', simp: '妈妈', pinyin: 'mā ma', pinyinNumbered: 'ma1 ma5', tones: [1, 5], gloss: 'mother' }),
+    makeWord(70, { id: 'w8b1d-8b1d', trad: '謝謝', simp: '谢谢', pinyin: 'xiè xie', pinyinNumbered: 'xie4 xie5', tones: [4, 5], gloss: 'thanks' }),
+    makeWord(198, { id: 'w76f8-4fe1', trad: '相信', simp: '相信', pinyin: 'xiāng xìn', pinyinNumbered: 'xiang1 xin4', tones: [1, 4], gloss: 'to believe' }),
+    makeWord(250, { id: 'w5148', trad: '先', simp: '先', pinyin: 'xiān', pinyinNumbered: 'xian1', tones: [1], gloss: 'first' }),
+    makeWord(580, { id: 'w73fe-5834', trad: '現場', simp: '现场', pinyin: 'xiàn chǎng', pinyinNumbered: 'xian4 chang3', tones: [4, 3], gloss: 'scene; on the spot' }),
+  ]
+  const idx = buildSearchIndex(MORE)
+  const find2 = (q: string) => searchWords(idx, q).map((w) => w.trad)
+
+  it('ranks whole-syllable matches above ones that stop inside a syllable', () => {
+    // "xian" is a whole syllable of 現在/現場 but only the start of xiǎng/xiāng.
+    expect(find2('xian')).toEqual(['先', '現在', '現場', '想', '相信'])
+  })
+
+  it('ranks exact-tone matches above neutral-tone-lenient ones', () => {
+    expect(find2('xie4xie4')).toEqual(['謝謝'])
+    expect(find2('ma1')).toEqual(['媽', '媽媽'])
+    expect(find2('ma1ma5')).toEqual(['媽媽'])
+    expect(find2('ma1ma1')).toEqual(['媽媽'])
   })
 })

@@ -18,7 +18,7 @@
     "trad": "看到",
     "pinyin": "kàn dào",
     "gloss": "to see",
-    "hint": "most common word for \"saw\"",
+    "hint": "most common word for 'saw'",
     "pos": "verb",
     "note": "看 is 'to look, watch'; 看到 adds the result, 'actually saw'. 沒看到 'didn't see'. Taiwan often says 有看到 'did see'.",
     "example": {
@@ -88,7 +88,7 @@
     "trad": "家",
     "pinyin": "jiā",
     "gloss": "home; family",
-    "hint": "one syllable",
+    "hint": "home itself; also counts shops",
     "pos": "noun",
     "note": "Also a measure word for shops, restaurants and companies: 一家店 (yī jiā diàn, a shop). An old reading, gū, is not used in everyday speech.",
     "example": {
@@ -102,7 +102,7 @@
     "trad": "開",
     "pinyin": "kāi",
     "gloss": "to open; to drive; to turn on",
-    "hint": "one syllable",
+    "hint": "all-purpose: open, drive, switch on",
     "pos": "verb",
     "note": "Covers many things: 開門 (open the door), 開車 (drive a car), 開燈 (turn on the light), 開會 (have a meeting).",
     "example": {
@@ -416,12 +416,12 @@
     "trad": "起",
     "pinyin": "qǐ",
     "gloss": "to rise; to get up",
-    "hint": "one syllable",
+    "hint": "rise; mostly in compounds like 'get out of bed'",
     "pos": "verb",
     "note": "Rarely used alone; mostly in 起床 (get out of bed), 一起 (together), 對不起 (sorry), 從今天起 (starting today) and 買不起 (can't afford).",
     "example": {
       "trad": "我每天六點起床。",
-      "pinyin": "Wǒ měitiān liù diǎn qǐchuáng.",
+      "pinyin": "Wǒ měi tiān liù diǎn qǐchuáng.",
       "english": "I get up at six every day."
     }
   },
@@ -484,7 +484,7 @@
     "trad": "回",
     "pinyin": "huí",
     "gloss": "to return; to go back",
-    "hint": "one syllable",
+    "hint": "go back; also 'reply' (to a message)",
     "pos": "verb",
     "note": "Also 'to reply': 回訊息 (reply to a message). As a measure word it counts occurrences (兩回事, two different things), though 次 is more common for 'times'.",
     "example": {
@@ -556,7 +556,7 @@
     "note": "這 (this) + 種 (kind, type). Goes before a noun: 這種人 (this kind of person). Often pronounced zhèi zhǒng in speech.",
     "example": {
       "trad": "我不喜歡這種天氣。",
-      "pinyin": "Wǒ bù xǐhuān zhèzhǒng tiānqì.",
+      "pinyin": "Wǒ bù xǐhuān zhè zhǒng tiānqì.",
       "english": "I don't like this kind of weather."
     }
   },

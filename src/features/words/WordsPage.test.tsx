@@ -86,6 +86,27 @@ describe('<WordsPage>', () => {
     expect(rows()).toHaveLength(1)
   })
 
+  it('sorts by due date, keeping the sort in the URL (?s=)', async () => {
+    const { store, router } = await renderPage()
+    await act(() => store.markKnown('w4f60')) // 你: known, due in about a week
+    await act(() => store.grade(cardKey('w662f', 'listen'), 'good')) // 是: learning, due in 10 min
+    const sort = screen.getByRole('combobox', { name: 'Sort words' })
+    expect(sort).toHaveValue('rank')
+    await userEvent.selectOptions(sort, 'due')
+    expect(router.state.location.search).toBe('?s=due')
+    // Due soonest first; the unseen word (我) goes last.
+    expect(rowText().map((t) => t.match(/nǐ|wǒ|shì/)?.[0])).toEqual(['shì', 'nǐ', 'wǒ'])
+    expect(screen.getByRole('status')).toHaveTextContent('3 words')
+    await userEvent.selectOptions(sort, 'rank')
+    expect(router.state.location.search).toBe('')
+    expect(rowText().map((t) => t.match(/nǐ|wǒ|shì/)?.[0])).toEqual(['nǐ', 'wǒ', 'shì'])
+  })
+
+  it('restores the sort from the URL', async () => {
+    await renderPage('/words?s=recent')
+    expect(screen.getByRole('combobox', { name: 'Sort words' })).toHaveValue('recent')
+  })
+
   it('filters by status, with counts', async () => {
     const { store } = await renderPage()
     await act(() => store.grade(cardKey('w6211', 'listen'), 'good')) // 我: learning
@@ -108,12 +129,31 @@ describe('<WordsPage>', () => {
     expect(rows()[0]).toHaveTextContent('Suspended')
 
     await userEvent.click(screen.getByRole('radio', { name: /Unseen/ }))
-    expect(screen.getByText('No matching words')).toBeInTheDocument()
+    expect(screen.getByText('No unseen words')).toBeInTheDocument()
+    expect(screen.queryByText('No matching words')).not.toBeInTheDocument()
 
     await act(() => store.flag('w6211', 'audio', 'muffled'))
     await userEvent.click(screen.getByRole('radio', { name: /Flagged/ }))
     expect(rowText()).toEqual([expect.stringContaining('flagged (1)')])
     expect(rows()[0]).toHaveTextContent(/Listen\s*·?\s*:?\s*learning/)
+  })
+
+  it('explains an empty filter instead of showing search tips', async () => {
+    const { router } = await renderPage('/words?f=flagged')
+    expect(screen.getByText('No open flags')).toBeInTheDocument()
+    expect(screen.queryByText(/Try English/)).not.toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: 'Clear search' })).not.toBeInTheDocument()
+    await userEvent.click(screen.getByRole('button', { name: 'Show all words' }))
+    expect(rows()).toHaveLength(3)
+    expect(router.state.location.search).toBe('')
+  })
+
+  it('keeps the search tips when a typed search finds nothing under a filter', async () => {
+    await renderPage('/words?q=zzz&f=known')
+    expect(screen.getByText('No matching words')).toBeInTheDocument()
+    expect(screen.getByText(/Try English/)).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Clear search' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Show all words' })).toBeInTheDocument()
   })
 
   it('filter chips are a keyboard-navigable radio group', async () => {

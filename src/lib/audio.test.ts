@@ -67,6 +67,7 @@ function fakeSpeech(voices: SpeechSynthesisVoice[]) {
 const manifest = createManifest(FIXTURE_MANIFEST)
 const textFor = (id: string, kind: 'word' | 'example') => (kind === 'word' ? `字:${id}` : `例:${id}`)
 const lastAudio = () => FakeAudio.instances[0]
+const flush = () => new Promise((r) => setTimeout(r, 0))
 
 describe('pickZhVoice', () => {
   it('prefers known Taiwan voices, then zh-TW, then zh-*', () => {
@@ -153,9 +154,59 @@ describe('AudioPlayer', () => {
     expect(await p.play('w4f60', 'word')).toBe('blocked')
     expect(p.unlocked).toBe(false)
     FakeAudio.behavior = 'ok'
+    // A pointerdown is not an activation gesture on iOS: it must not count.
     target.dispatchEvent(new Event('pointerdown'))
+    await flush()
+    expect(p.unlocked).toBe(false)
+    target.dispatchEvent(new Event('click'))
+    // Unlocked only once the silent priming clip actually plays.
+    expect(p.unlocked).toBe(false)
+    await flush()
     expect(p.unlocked).toBe(true)
     expect(seen).toEqual([true])
+    expect(lastAudio().plays.at(-1)).toMatch(/^data:audio\/wav;base64,/)
+  })
+
+  it('keeps listening for a gesture when the priming play is refused', async () => {
+    FakeAudio.behavior = 'notAllowed'
+    const target = new EventTarget()
+    const p = make(undefined, target)
+    target.dispatchEvent(new Event('touchend'))
+    await flush()
+    expect(p.unlocked).toBe(false)
+    FakeAudio.behavior = 'ok'
+    target.dispatchEvent(new Event('keydown'))
+    await flush()
+    expect(p.unlocked).toBe(true)
+    // Once unlocked, further gestures do not prime again.
+    const plays = lastAudio().plays.length
+    target.dispatchEvent(new Event('click'))
+    expect(lastAudio().plays.length).toBe(plays)
+  })
+
+  it('unlock({ force: true }) primes again inside the calling gesture', async () => {
+    const speech = fakeSpeech([voice('Meijia', 'zh-TW')])
+    const p = make(speech)
+    p.unlock()
+    await flush()
+    expect(p.unlocked).toBe(true)
+    p.unlock()
+    expect(lastAudio().plays.length).toBe(1)
+    p.unlock({ force: true })
+    expect(lastAudio().plays.length).toBe(2)
+    // The speech engine is primed with a silent, non-empty zh-TW utterance.
+    expect(speech.spoken[0]).toMatchObject({ text: ' ', lang: 'zh-TW', volume: 0 })
+  })
+
+  it('the silent priming clip is a valid WAV with samples', () => {
+    const p = make()
+    p.unlock()
+    const src = lastAudio().plays[0]
+    const bytes = Uint8Array.from(atob(src.split(',')[1]), (c) => c.charCodeAt(0))
+    const view = new DataView(bytes.buffer)
+    expect(String.fromCharCode(...bytes.slice(36, 40))).toBe('data')
+    expect(view.getUint32(40, true)).toBeGreaterThan(0)
+    expect(bytes.length).toBe(44 + view.getUint32(40, true))
   })
 
   it('returns failed when there is neither a clip nor speech synthesis', async () => {
@@ -163,12 +214,13 @@ describe('AudioPlayer', () => {
     expect(await p.play('missing', 'word')).toBe('failed')
   })
 
-  it('preloads upcoming clips (bounded)', () => {
-    const p = make()
+  it('preloads upcoming clips with fetch (deduplicated), not with media elements', () => {
+    const fetch = vi.fn(() => Promise.resolve(new Response('')))
+    const p = new AudioPlayer({ manifest, textFor, baseUrl: '/qian/', createAudio: () => new FakeAudio() as unknown as HTMLAudioElement, speech: null, gestureTarget: null, fetch })
     p.preload(['w4f60', 'w6211', 'missing'])
-    const srcs = FakeAudio.instances.map((a) => a.src)
-    expect(srcs).toEqual(['/qian/audio/w/w4f60.mp3', '/qian/audio/s/w4f60.mp3', '/qian/audio/w/w6211.mp3'])
+    expect(fetch.mock.calls.map((c) => (c as unknown[])[0])).toEqual(['/qian/audio/w/w4f60.mp3', '/qian/audio/s/w4f60.mp3', '/qian/audio/w/w6211.mp3'])
+    expect(FakeAudio.instances.length).toBe(0)
     p.preload(['w4f60'])
-    expect(FakeAudio.instances.length).toBe(3)
+    expect(fetch).toHaveBeenCalledTimes(3)
   })
 })

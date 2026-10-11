@@ -2,7 +2,7 @@
 import { buildDerived, withEvent, type Derived } from '../derive'
 import { cardKey, makeKnown, makeReview, type AppEvent, type CardKey } from '../events'
 import { DAY_MS, getFsrs, retrievability } from '../fsrs'
-import { DEFAULT_SCHEDULER_SETTINGS, mulberry32, selectNext, unstableWordCount, type SchedulerSettings } from '../scheduler'
+import { DEFAULT_SCHEDULER_SETTINGS, mulberry32, RECENT_WINDOW, selectNext, unstableWordCount, type SchedulerSettings } from '../scheduler'
 
 export interface DayStats {
   day: number
@@ -57,7 +57,15 @@ export function simulate(o: SimOptions) {
       }
       if (!s.pick) {
         st.caughtUp++
-        if (!o.practiceAhead) break
+        if (!o.practiceAhead) {
+          // The caught-up screen counts down to a pending learning step; a learner waits for a short one.
+          const next = s.info.nextLearningDueAt
+          if (next !== null && next - now <= 20 * 60_000) {
+            now = Math.max(now + 1, next)
+            continue
+          }
+          break
+        }
         s = selectNext({ derived: d, wordOrder: order, settings, now, recent, rng, practiceAhead: true })
         if (!s.pick) {
           now += 60_000
@@ -87,7 +95,7 @@ export function simulate(o: SimOptions) {
       }
       d = withEvent(d, e)
       recent.push(e.kind === 'known' ? cardKey(p.wordId, 'say') : p.key)
-      if (recent.length > 3) recent.shift()
+      if (recent.length > RECENT_WINDOW) recent.shift()
       st.reviews++
       const u = unstableWordCount(d, settings.stableDays)
       st.maxUnstable = Math.max(st.maxUnstable, u)

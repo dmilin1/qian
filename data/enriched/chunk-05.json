@@ -32,7 +32,7 @@
     "trad": "錯",
     "pinyin": "cuò",
     "gloss": "wrong; mistake; fault",
-    "hint": "one syllable",
+    "hint": "everyday 'wrong'; also 'my fault'",
     "pos": "adj",
     "note": "After a verb it means 'wrongly': 說錯 (say it wrong), 打錯了 (wrong number). 不錯 means 'pretty good'. MOE also lists a literary reading cù.",
     "example": {
@@ -210,7 +210,7 @@
     "trad": "或",
     "pinyin": "huò",
     "gloss": "or",
-    "hint": "one syllable, in statements",
+    "hint": "a bit formal 'or', in statements",
     "pos": "conj",
     "note": "Short for 或者 / 或是, used in statements. In questions ('A or B?') use 還是 hái shì instead.",
     "example": {
@@ -263,7 +263,7 @@
     "trad": "進",
     "pinyin": "jìn",
     "gloss": "to enter; to go in",
-    "hint": "one syllable",
+    "hint": "enter, no direction ('please come in')",
     "pos": "verb",
     "note": "Often paired with direction words: 進來 'come in', 進去 'go in'. 請進 is 'please come in'.",
     "example": {
@@ -318,7 +318,7 @@
     "trad": "很多",
     "pinyin": "hěn duō",
     "gloss": "a lot of; many",
-    "hint": "two syllables; 'very many', before a noun",
+    "hint": "'lots of', before a noun",
     "pos": "phrase",
     "note": "很 + 多. This is the normal way to say 'many' before a noun (很多人 'lots of people'); 多 alone rarely goes before a noun.",
     "example": {
@@ -487,7 +487,7 @@
     "note": "第 + number makes ordinals: 第二 dì èr 'second'. 一 keeps its first tone here.",
     "example": {
       "trad": "這是我第一次來台灣。",
-      "pinyin": "Zhè shì wǒ dìyī cì lái Táiwān.",
+      "pinyin": "Zhè shì wǒ dì-yī cì lái Táiwān.",
       "english": "This is my first time in Taiwan."
     }
   },

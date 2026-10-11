@@ -2,7 +2,18 @@ import { describe, expect, it } from 'vitest'
 import { buildDerived, getCard } from '../../lib/derive'
 import { makeFlag, makeKnown, makeReview, makeSuspend, type AppEvent } from '../../lib/events'
 import { makeWords } from '../../lib/__fixtures__/words'
-import { filterCounts, listSummary, matchesFilter, wordInfo, wordInfoMap, type WordFilter } from './filters'
+import {
+  filterCounts,
+  isWordSort,
+  listSummary,
+  matchesFilter,
+  sortWords,
+  wordInfo,
+  wordInfoMap,
+  wordSortKeys,
+  type WordFilter,
+  type WordSort,
+} from './filters'
 
 const DAY = 86_400_000
 const T0 = Date.UTC(2026, 0, 1, 9)
@@ -81,6 +92,40 @@ describe('filters', () => {
 
   it('summarises the list: introduced includes suspended words that were graded', () => {
     expect(listSummary(infos.values())).toEqual({ total: 8, introduced: 4, learning: 1, young: 1, mature: 1 })
+  })
+
+  it('sorts by due, weakest recall, lapses and recency; unseen words last, rank breaks ties', () => {
+    const later = T0 + 30 * DAY
+    const d = buildDerived([
+      makeReview({ wordId: 'wt2', dir: 'listen', grade: 'good', ts: T0, deviceId: dev }), // learning, due in 10 min
+      makeKnown({ wordId: 'wt3', ts: T0, deviceId: dev }),
+      makeKnown({ wordId: 'wt4', ts: T0, deviceId: dev }),
+      makeKnown({ wordId: 'wt5', ts: T0, deviceId: dev }),
+      makeReview({ wordId: 'wt5', dir: 'listen', grade: 'again', ts: T0 + 20 * DAY, deviceId: dev }), // a lapse
+    ])
+    const keys = (id: string) => wordSortKeys(d, id, later)
+    const ids = (s: WordSort) => sortWords(words, s, keys).map((w) => w.id)
+    const unseen = ['wt1', 'wt6', 'wt7', 'wt8']
+    expect(sortWords(words, 'rank', keys)).toBe(words)
+    expect(keys('wt1')).toBeNull()
+    for (const s of ['due', 'weakest', 'lapses', 'recent'] as const) {
+      const out = ids(s)
+      expect(out).toHaveLength(words.length)
+      expect(out.slice(-4)).toEqual(unseen) // rank order among the unseen
+    }
+    expect(ids('due')[0]).toBe('wt2')
+    const dues = ids('due').slice(0, 4).map((id) => keys(id)!.due!)
+    expect(dues).toEqual([...dues].sort((a, b) => a - b))
+    const recalls = ids('weakest').slice(0, 4).map((id) => keys(id)!.recall)
+    expect(recalls).toEqual([...recalls].sort((a, b) => a - b))
+    expect(ids('lapses').slice(0, 4)).toEqual(['wt5', 'wt2', 'wt3', 'wt4']) // ties keep rank order
+    expect(ids('recent')[0]).toBe('wt5')
+  })
+
+  it('isWordSort guards the ?s= param', () => {
+    expect(isWordSort('due')).toBe(true)
+    expect(isWordSort('nope')).toBe(false)
+    expect(isWordSort(null)).toBe(false)
   })
 
   it('updates when a suspended word is unsuspended', () => {

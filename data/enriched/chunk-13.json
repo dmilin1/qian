@@ -6,10 +6,10 @@
     "gloss": "to mention; to carry (in hand)",
     "hint": "raise a topic; lift by a handle",
     "pos": "verb",
-    "note": "提到 \"to mention\", 提醒 \"to remind\". In Taiwan 提防 \"to be on guard against\" is also tí fáng (the mainland says dī fang).",
+    "note": "提到 'to mention', 提醒 'to remind'. In Taiwan 提防 'to be on guard against' is also tí fáng (the mainland says dī fang).",
     "example": {
       "trad": "他沒跟我提過這件事。",
-      "pinyin": "Tā méi gēn wǒ tí guò zhè jiàn shì.",
+      "pinyin": "Tā méi gēn wǒ tíguò zhè jiàn shì.",
       "english": "He never mentioned this to me."
     }
   },
@@ -31,7 +31,7 @@
     "pinyin": "jié hūn",
     "gloss": "to get married",
     "pos": "verb",
-    "note": "\"To marry someone\" is 跟某人結婚 (gēn … jié hūn); 結婚 does not take a direct object.",
+    "note": "'To marry someone' is 跟某人結婚 (gēn … jié hūn); 結婚 does not take a direct object.",
     "example": {
       "trad": "他們明年要結婚了。",
       "pinyin": "Tāmen míngnián yào jiéhūn le.",
@@ -45,7 +45,7 @@
     "gloss": "happy; joyful",
     "hint": "as in greetings and wishes",
     "pos": "adj",
-    "note": "Mostly in wishes: 生日快樂, 新年快樂. For everyday \"I'm happy\" Taiwanese usually say 開心 or 高興.",
+    "note": "Mostly in wishes: 生日快樂, 新年快樂. For everyday 'I'm happy' Taiwanese usually say 開心 or 高興.",
     "example": {
       "trad": "祝你生日快樂！",
       "pinyin": "Zhù nǐ shēngrì kuàilè!",
@@ -85,7 +85,7 @@
     "gloss": "strong; capable",
     "hint": "powerful; very good at something",
     "pos": "adj",
-    "note": "Polyphone: qiǎng in 勉強 (miǎn qiǎng) \"reluctantly; to force\", and jiàng in 倔強 (jué jiàng) \"stubborn\".",
+    "note": "Polyphone: qiǎng in 勉強 (miǎn qiǎng) 'reluctantly; to force', and jiàng in 倔強 (jué jiàng) 'stubborn'.",
     "example": {
       "trad": "他的能力很強。",
       "pinyin": "Tā de nénglì hěn qiáng.",
@@ -99,7 +99,7 @@
     "gloss": "to turn; to transfer",
     "hint": "change direction; switch",
     "pos": "verb",
-    "note": "Polyphone: zhuàn means \"to spin around\" (轉圈 zhuàn quān). zhuǎn: 右轉 \"turn right\", 轉車 \"change trains\", 轉帳 \"transfer money\".",
+    "note": "Polyphone: zhuàn means 'to spin around' (轉圈 zhuàn quān). zhuǎn: 右轉 'turn right', 轉車 'change trains', 轉帳 'transfer money'.",
     "example": {
       "trad": "你在前面右轉。",
       "pinyin": "Nǐ zài qiánmiàn yòuzhuǎn.",
@@ -113,7 +113,7 @@
     "gloss": "again (from the start); anew",
     "hint": "redo from scratch",
     "pos": "adv",
-    "note": "重 is chóng here (\"again\"), not zhòng \"heavy\". Unlike 再 (zài), it means starting over.",
+    "note": "重 is chóng here ('again'), not zhòng 'heavy'. Unlike 再 (zài), it means starting over.",
     "example": {
       "trad": "我們重新開始吧。",
       "pinyin": "Wǒmen chóngxīn kāishǐ ba.",
@@ -127,7 +127,7 @@
     "gloss": "to look up; to check; to investigate",
     "hint": "search for information",
     "pos": "verb",
-    "note": "Read zhā only as a surname. 查一下 \"look it up\".",
+    "note": "Read zhā only as a surname. 查一下 'look it up'.",
     "example": {
       "trad": "我上網查一下。",
       "pinyin": "Wǒ shàngwǎng chá yīxià.",
@@ -141,7 +141,7 @@
     "gloss": "(distance) from; away from",
     "hint": "how far from",
     "pos": "prep",
-    "note": "For distance: A 離 B 很近/很遠 \"A is close to/far from B\". Starting point \"from\" is 從 (cóng). Also in 離開 \"to leave\".",
+    "note": "For distance: A 離 B 很近/很遠 'A is close to/far from B'. Starting point 'from' is 從 (cóng). Also in 離開 'to leave'.",
     "example": {
       "trad": "我家離這裡很近。",
       "pinyin": "Wǒ jiā lí zhèlǐ hěn jìn.",
@@ -155,7 +155,7 @@
     "gloss": "toward; in the direction of",
     "hint": "direction of movement, e.g. go forward",
     "pos": "prep",
-    "note": "Used before a direction: 往前走 \"go forward\", 往左轉 \"turn left\". 向 (xiàng) is similar but more formal, and also used toward people.",
+    "note": "Used before a direction: 往前走 'go forward', 往左轉 'turn left'. 向 (xiàng) is similar but more formal, and also used toward people.",
     "example": {
       "trad": "一直往前走就到了。",
       "pinyin": "Yīzhí wǎng qián zǒu jiù dào le.",
@@ -180,9 +180,9 @@
     "trad": "房子",
     "pinyin": "fáng zi",
     "gloss": "house; apartment",
-    "hint": "the building, not \"home\"",
+    "hint": "the building, not 'home'",
     "pos": "noun",
-    "note": "The physical dwelling; \"home\" in the family sense is 家 (jiā).",
+    "note": "The physical dwelling; 'home' in the family sense is 家 (jiā).",
     "example": {
       "trad": "他們買了新房子。",
       "pinyin": "Tāmen mǎi le xīn fángzi.",
@@ -210,7 +210,7 @@
     "gloss": "just now; a moment ago",
     "hint": "doubled; the everyday Taiwan word",
     "pos": "adv",
-    "note": "Taiwan's usual word for \"just now\"; the mainland often says 剛才 (gāng cái). Taiwan keeps both tones: gāng gāng.",
+    "note": "Taiwan's usual word for 'just now'; the mainland often says 剛才 (gāng cái). Taiwan keeps both tones: gāng gāng.",
     "example": {
       "trad": "他剛剛打電話給你。",
       "pinyin": "Tā gānggāng dǎ diànhuà gěi nǐ.",
@@ -224,7 +224,7 @@
     "gloss": "finally; at last",
     "hint": "after a long wait",
     "pos": "adv",
-    "note": "Expresses relief after waiting. \"Finally\" meaning \"lastly\" in a list is 最後 (zuì hòu).",
+    "note": "Expresses relief after waiting. 'Finally' meaning 'lastly' in a list is 最後 (zuì hòu).",
     "example": {
       "trad": "你終於來了！",
       "pinyin": "Nǐ zhōngyú lái le!",
@@ -237,7 +237,7 @@
     "pinyin": "fāng miàn",
     "gloss": "aspect; side; area",
     "pos": "noun",
-    "note": "一方面…另一方面… means \"on one hand… on the other hand…\".",
+    "note": "一方面…另一方面… means 'on one hand… on the other hand…'.",
     "example": {
       "trad": "這方面我不太懂。",
       "pinyin": "Zhè fāngmiàn wǒ bù tài dǒng.",
@@ -251,7 +251,7 @@
     "gloss": "body; health",
     "hint": "physical body, also one's health",
     "pos": "noun",
-    "note": "Often means health: 身體好嗎？ \"How's your health?\"",
+    "note": "Often means health: 身體好嗎？ 'How's your health?'",
     "example": {
       "trad": "你爸爸身體還好嗎？",
       "pinyin": "Nǐ bàba shēntǐ hái hǎo ma?",
@@ -265,7 +265,7 @@
     "gloss": "baby; darling; treasure",
     "hint": "term of endearment",
     "pos": "noun",
-    "note": "Said to children or a partner, like \"sweetie\". A newborn baby is 嬰兒 (yīng ér) or 小寶寶.",
+    "note": "Said to children or a partner, like 'sweetie'. A newborn baby is 嬰兒 (yīng ér) or 小寶寶.",
     "example": {
       "trad": "寶貝，過來吃飯了！",
       "pinyin": "Bǎobèi, guòlai chīfàn le!",
@@ -277,9 +277,9 @@
     "trad": "害怕",
     "pinyin": "hài pà",
     "gloss": "to be scared; afraid",
-    "hint": "feeling fear, two syllables",
+    "hint": "feel scared; no object needed",
     "pos": "verb",
-    "note": "Close to 怕 (pà), which is shorter and more casual and also means \"to worry that…\".",
+    "note": "Close to 怕 (pà), which is shorter and more casual and also means 'to worry that…'.",
     "example": {
       "trad": "別害怕，我在這裡。",
       "pinyin": "Bié hàipà, wǒ zài zhèlǐ.",
@@ -306,7 +306,7 @@
     "gloss": "quite; pretty (very)",
     "hint": "fairly, casual",
     "pos": "adv",
-    "note": "Taiwan colloquial, often with 的: 蠻好的 \"pretty good\". The mainland says 挺 (tǐng). Many Taiwanese say mǎn here (written 滿).",
+    "note": "Taiwan colloquial, often with 的: 蠻好的 'pretty good'. The mainland says 挺 (tǐng). Many Taiwanese say mǎn here (written 滿).",
     "example": {
       "trad": "這家店蠻好吃的。",
       "pinyin": "Zhè jiā diàn mán hǎochī de.",
@@ -320,7 +320,7 @@
     "gloss": "energy; vigor; spirit",
     "hint": "feeling lively and awake",
     "pos": "noun",
-    "note": "有精神 \"full of energy\", 沒精神 \"listless\"; 精神病 is \"mental illness\". The mainland reads the \"lively\" sense jīng shen; Taiwan says jīng shén for both.",
+    "note": "有精神 'full of energy', 沒精神 'listless'; 精神病 is 'mental illness'. The mainland reads the 'lively' sense jīng shen; Taiwan says jīng shén for both.",
     "example": {
       "trad": "你今天看起來很有精神。",
       "pinyin": "Nǐ jīntiān kàn qǐlái hěn yǒu jīngshén.",
@@ -334,7 +334,7 @@
     "gloss": "heavy; serious",
     "hint": "weight",
     "pos": "adj",
-    "note": "Polyphone: chóng means \"again\" or \"layer\" (重新 chóng xīn \"anew\", 重複 \"to repeat\").",
+    "note": "Polyphone: chóng means 'again' or 'layer' (重新 chóng xīn 'anew', 重複 'to repeat').",
     "example": {
       "trad": "這個箱子好重喔！",
       "pinyin": "Zhège xiāngzi hǎo zhòng o!",
@@ -361,7 +361,7 @@
     "gloss": "to bring; to bring about",
     "hint": "bring here; bring about (a result)",
     "pos": "verb",
-    "note": "Often split around the object: 帶朋友來 \"bring a friend\".",
+    "note": "Often split around the object: 帶朋友來 'bring a friend'.",
     "example": {
       "trad": "他帶來了一個好消息。",
       "pinyin": "Tā dàilái le yī ge hǎo xiāoxí.",
@@ -375,7 +375,7 @@
     "gloss": "future",
     "hint": "the time to come, in general",
     "pos": "noun",
-    "note": "Close to 將來 (jiāng lái); 將來 is more about one's own plans (\"when I grow up\"), 未來 about the future in general.",
+    "note": "Close to 將來 (jiāng lái); 將來 is more about one's own plans ('when I grow up'), 未來 about the future in general.",
     "example": {
       "trad": "未來的事，誰知道呢？",
       "pinyin": "Wèilái de shì, shéi zhīdào ne?",
@@ -389,7 +389,7 @@
     "gloss": "incident; event",
     "hint": "a notable incident",
     "pos": "noun",
-    "note": "A notable or newsworthy incident; an everyday \"matter, thing\" is 事情 (shì qíng).",
+    "note": "A notable or newsworthy incident; an everyday 'matter, thing' is 事情 (shì qíng).",
     "example": {
       "trad": "這個事件上新聞了。",
       "pinyin": "Zhège shìjiàn shàng xīnwén le.",
@@ -677,7 +677,7 @@
     "note": "Also 'face' in the social sense: 丟臉 diū liǎn 'to lose face, embarrassing'.",
     "example": {
       "trad": "我先去洗臉。",
-      "pinyin": "Wǒ xiān qù xǐ liǎn.",
+      "pinyin": "Wǒ xiān qù xǐliǎn.",
       "english": "I'll go wash my face first."
     }
   }

@@ -28,20 +28,24 @@ function isTextField(el: Element | null): boolean {
   return false
 }
 
+const INTERACTIVE = 'button, a[href], input, select, textarea, summary, [role="button"], [role="menuitem"], [role="radio"], [role="switch"]'
+
+/**
+ * How the user last moved focus. Chromium switches a mouse-focused button to `:focus-visible` as
+ * soon as a key is pressed, so `:focus-visible` cannot tell "clicked Undo, then pressed Space" from
+ * "tabbed to Undo, then pressed Space". So we track it: a pointer press means pointer, Tab means keyboard.
+ */
+type Modality = 'keyboard' | 'pointer'
+
 /**
  * Whether Space/Enter on this element should keep its native meaning (activate the focused
- * control). A button that was focused by a mouse click (no :focus-visible) does not count, so
- * clicking replay and then pressing Space still reveals the card.
+ * control). Only a control reached with the keyboard counts: after clicking Undo or Replay with
+ * the mouse, Space still reveals the card instead of undoing or replaying again.
  */
-function wantsNativeActivation(el: Element | null): boolean {
+function wantsNativeActivation(el: Element | null, modality: Modality): boolean {
   if (!el || el === document.body) return false
-  const interactive = el.closest('button, a[href], input, select, textarea, summary, [role="button"], [role="menuitem"], [role="radio"], [role="switch"]')
-  if (!interactive) return false
-  try {
-    return interactive.matches(':focus-visible')
-  } catch {
-    return true
-  }
+  if (!el.closest(INTERACTIVE)) return false
+  return modality === 'keyboard'
 }
 
 export function useStudyHotkeys({ enabled, handlers }: { enabled: boolean; handlers: StudyHotkeyHandlers }) {
@@ -49,6 +53,23 @@ export function useStudyHotkeys({ enabled, handlers }: { enabled: boolean; handl
   useEffect(() => {
     ref.current = handlers
   })
+
+  // Input modality, tracked even while the shortcuts are disabled (e.g. a menu opened by mouse).
+  const modality = useRef<Modality>('keyboard')
+  useEffect(() => {
+    const onPointer = () => {
+      modality.current = 'pointer'
+    }
+    const onKeyNav = (e: KeyboardEvent) => {
+      if (e.key === 'Tab') modality.current = 'keyboard'
+    }
+    window.addEventListener('pointerdown', onPointer, true)
+    window.addEventListener('keydown', onKeyNav, true)
+    return () => {
+      window.removeEventListener('pointerdown', onPointer, true)
+      window.removeEventListener('keydown', onKeyNav, true)
+    }
+  }, [])
 
   useEffect(() => {
     if (!enabled) return
@@ -60,7 +81,7 @@ export function useStudyHotkeys({ enabled, handlers }: { enabled: boolean; handl
       const h = ref.current
       const key = e.key
       if (key === ' ' || key === 'Spacebar' || key === 'Enter') {
-        if (wantsNativeActivation(e.target as Element)) return
+        if (wantsNativeActivation(e.target as Element, modality.current)) return
         e.preventDefault()
         if (!e.repeat) h.primary()
         return

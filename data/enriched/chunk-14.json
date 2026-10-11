@@ -17,7 +17,7 @@
     "trad": "忘",
     "pinyin": "wàng",
     "gloss": "to forget",
-    "hint": "one syllable",
+    "hint": "one syllable; as in 'I forgot!'",
     "pos": "verb",
     "note": "Usually said with 了: 我忘了 'I forgot'. Means the same as 忘記 wàng jì. The literary reading wáng is not used in speech.",
     "example": {
@@ -48,7 +48,7 @@
     "note": "Usually followed by 都 dōu: 每天都… 'every day (without fail)…'.",
     "example": {
       "trad": "我每天都喝咖啡。",
-      "pinyin": "Wǒ měitiān dōu hē kāfēi.",
+      "pinyin": "Wǒ měi tiān dōu hē kāfēi.",
       "english": "I drink coffee every day."
     }
   },
@@ -168,7 +168,7 @@
     "trad": "受到",
     "pinyin": "shòu dào",
     "gloss": "to be affected by; to receive",
-    "hint": "two syllables, before abstract nouns",
+    "hint": "undergo; before abstract nouns (influence)",
     "pos": "verb",
     "note": "Means you undergo or experience something, usually followed by an abstract noun: 受到影響 'be affected', 受到歡迎 'be welcomed', 受到批評 'be criticized'. Don't confuse it with 收到 shōu dào 'to receive (a package or message)'.",
     "example": {
@@ -235,7 +235,7 @@
     "trad": "直到",
     "pinyin": "zhí dào",
     "gloss": "until",
-    "hint": "all the way until, two syllables",
+    "hint": "all the way until (a time)",
     "pos": "prep",
     "note": "Often paired with 才 cái: 直到昨天才… 'not until yesterday did…'. Don't confuse it with 知道 zhī dào 'to know', which differs only in the first tone.",
     "example": {
@@ -506,7 +506,7 @@
     "trad": "打開",
     "pinyin": "dǎ kāi",
     "gloss": "to open; to turn on",
-    "hint": "two-syllable form, not plain kāi",
+    "hint": "open up (a box, an app); not plain kāi",
     "pos": "verb",
     "note": "Works for doors, boxes, bottles, and switching on devices (打開電視 dǎ kāi diàn shì). Plain 開 kāi is also used for the same things.",
     "example": {
@@ -534,7 +534,7 @@
     "trad": "學習",
     "pinyin": "xué xí",
     "gloss": "to learn; to study",
-    "hint": "two syllables, more formal",
+    "hint": "more formal; studying as an activity",
     "pos": "verb",
     "note": "A bit more formal or general than plain 學 xué. In casual speech people say 學中文 xué zhōng wén more than 學習中文. MOE also lists xué xi, but Taiwan speech uses xué xí.",
     "example": {
@@ -620,7 +620,7 @@
     "note": "Also a noun for sports or exercise, and for a social or political movement. MOE also lists yùn dong, but Taiwan speech normally uses yùn dòng.",
     "example": {
       "trad": "你每天都運動嗎？",
-      "pinyin": "Nǐ měitiān dōu yùndòng ma?",
+      "pinyin": "Nǐ měi tiān dōu yùndòng ma?",
       "english": "Do you exercise every day?"
     }
   },

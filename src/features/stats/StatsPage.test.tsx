@@ -1,7 +1,8 @@
-import { render, screen, within } from '@testing-library/react'
+import { act, render, screen, waitFor, within } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import { createMemoryRouter } from 'react-router'
 import { RouterProvider } from 'react-router/dom'
-import { describe, expect, it } from 'vitest'
+import { afterEach, describe, expect, it, vi } from 'vitest'
 import { AppProvider } from '../../components'
 import { makeFakePlayer } from '../../components/test-utils'
 import { FIXTURE_WORDS } from '../../lib/__fixtures__/words'
@@ -15,13 +16,13 @@ import { NOW, seededEvents } from './testData'
 
 const words = createWordIndex(FIXTURE_WORDS)
 
-async function renderStats(events: AppEvent[] = []) {
+async function renderStats(events: AppEvent[] = [], opts: { liveClock?: boolean } = {}) {
   const store = createAppStore({ inMemory: true, storage: null, storageManager: null, words, now: () => NOW })
   await store.init()
   if (events.length) await store.importData(serializeExport(buildExport(events, DEFAULT_SETTINGS, 'test-device', NOW)), 'replace')
   const router = createMemoryRouter(
     [
-      { path: '/stats', element: <StatsPage words={words} now={NOW} /> },
+      { path: '/stats', element: <StatsPage words={words} now={opts.liveClock ? undefined : NOW} /> },
       { path: '/words/:id', element: <p>word detail</p> },
       { path: '/words', element: <p>word list</p> },
       { path: '/', element: <p>study</p> },
@@ -36,7 +37,29 @@ async function renderStats(events: AppEvent[] = []) {
   return { store, router }
 }
 
+afterEach(() => {
+  vi.useRealTimers()
+})
+
 describe('<StatsPage>', () => {
+  it('rolls over to the new day when the app is resumed', async () => {
+    vi.useFakeTimers({ toFake: ['Date', 'setInterval', 'clearInterval'] })
+    vi.setSystemTime(NOW)
+    await renderStats(seededEvents(), { liveClock: true })
+    const overview = screen.getByRole('region', { name: 'Overview' })
+    const tile = (label: string) => within(overview).getByText(label).closest('div')!
+    expect(tile('Reviews today')).toHaveTextContent('2')
+    expect(tile('Streak')).toHaveTextContent('including today')
+
+    // The installed app sits on Stats overnight and is brought back to the foreground.
+    vi.setSystemTime(NOW + 24 * 60 * 60 * 1000)
+    act(() => {
+      document.dispatchEvent(new Event('visibilitychange'))
+    })
+    expect(tile('Reviews today')).toHaveTextContent(/^Reviews today0/)
+    expect(tile('Streak')).toHaveTextContent('study today to keep it')
+  })
+
   it('shows an empty state for a brand-new user', async () => {
     await renderStats()
     expect(screen.getByRole('heading', { name: 'Stats' })).toBeInTheDocument()
@@ -89,5 +112,40 @@ describe('<StatsPage>', () => {
     review.click()
     await screen.findByText('word list')
     expect(router.state.location.search).toBe('?f=flagged')
+  })
+
+  it('exports open flags as a CSV list', async () => {
+    const blobs: Blob[] = []
+    const names: string[] = []
+    Object.defineProperty(URL, 'createObjectURL', { value: vi.fn((b: Blob) => (blobs.push(b), 'blob:x')), configurable: true, writable: true })
+    Object.defineProperty(URL, 'revokeObjectURL', { value: vi.fn(), configurable: true, writable: true })
+    const click = vi.spyOn(HTMLAnchorElement.prototype, 'click').mockImplementation(function (this: HTMLAnchorElement) {
+      names.push(this.download)
+    })
+    try {
+      await renderStats(seededEvents())
+      const flags = screen.getByRole('region', { name: 'Flagged cards' })
+      await userEvent.click(within(flags).getByRole('button', { name: /export flags/i }))
+      await waitFor(() => expect(blobs).toHaveLength(1))
+      expect(names[0]).toMatch(/^qian-flags-\d{4}-\d{2}-\d{2}\.csv$/)
+      expect(blobs[0].type).toBe('text/csv')
+      const text = await new Promise<string>((res) => {
+        const r = new FileReader()
+        r.onload = () => res(String(r.result))
+        r.readAsText(blobs[0])
+      })
+      const lines = text.trim().split('\n')
+      expect(lines[0]).toBe('wordId,trad,pinyin,gloss,reason,note,flaggedAt,resolved')
+      expect(lines).toHaveLength(2)
+      expect(lines[1]).toMatch(/^w662f,是,shì,/)
+    } finally {
+      click.mockRestore()
+    }
+  })
+
+  it('offers no flag export without open flags', async () => {
+    await renderStats(seededEvents().filter((e) => e.kind !== 'flag'))
+    const flags = screen.getByRole('region', { name: 'Flagged cards' })
+    expect(within(flags).queryByRole('button', { name: /export flags/i })).toBeNull()
   })
 })

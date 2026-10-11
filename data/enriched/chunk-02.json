@@ -30,7 +30,7 @@
     "trad": "但",
     "pinyin": "dàn",
     "gloss": "but",
-    "hint": "one syllable",
+    "hint": "slightly formal 'but'; one syllable",
     "pos": "conj",
     "note": "Short, slightly more formal form of 但是. In everyday speech 但是 or 可是 kě shì is more common.",
     "example": {
@@ -162,7 +162,7 @@
     "trad": "多",
     "pinyin": "duō",
     "gloss": "many; much; a lot",
-    "hint": "one syllable",
+    "hint": "'there are many'; also 'more'",
     "pos": "adj",
     "note": "Also 'how' in questions: 多大 'how old/big', 多久 'how long'; and 'more than' after numbers: 二十多 'twenty-something'. For the 'how' sense MOE gives duó, but most speakers say duō.",
     "example": {
@@ -208,7 +208,7 @@
     "note": "A somewhat formal connector. In speech it mostly appears in set patterns: 不是…而是… 'not … but rather …', 而且 'moreover', 而已 'that's all'.",
     "example": {
       "trad": "問題不是錢，而是時間。",
-      "pinyin": "Wèntí bùshì qián, érshì shíjiān.",
+      "pinyin": "Wèntí bù shì qián, érshì shíjiān.",
       "english": "The problem isn't money, it's time."
     }
   },
@@ -271,7 +271,7 @@
     "trad": "下",
     "pinyin": "xià",
     "gloss": "down; below; next; to get off",
-    "hint": "one syllable",
+    "hint": "'next' (next month); 'get off' (a bus)",
     "pos": "verb",
     "note": "Opposite of 上: 下車 'get off (a vehicle)', 下雨 'to rain', 下班 'get off work', 下次 'next time'. After a verb it means 'down' (坐下 'sit down'); 一下 makes a request softer.",
     "example": {
@@ -567,7 +567,7 @@
     "trad": "出",
     "pinyin": "chū",
     "gloss": "to go out; to come out; out",
-    "hint": "one syllable",
+    "hint": "plain 'out' (leave the house); no direction",
     "pos": "verb",
     "note": "Often in compounds and after verbs: 出門 'leave the house', 出去 'go out', 拿出來 'take out'.",
     "example": {
@@ -581,7 +581,7 @@
     "trad": "後",
     "pinyin": "hòu",
     "gloss": "after; behind; back",
-    "hint": "one syllable",
+    "hint": "one syllable, after a time or event; also 'back'",
     "pos": "noun",
     "note": "Mostly in set words: 以後 'after; later', 後面 'behind', 最後 'finally'. On its own it follows an event: 下班後 'after work'.",
     "example": {

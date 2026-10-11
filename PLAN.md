@@ -1,5 +1,7 @@
 # qian — build plan
 
+> **Some of this plan was changed by later decisions; see [`DECISIONS.md`](DECISIONS.md).** In short: one voice (ElevenLabs "Anna Su"), not two alternated voices, and no voice setting (lines on audio and Settings below); working set default 30 words with stable = 5 days (not "about 12"), plus a review-backlog gate. The original text is kept as written.
+
 A flashcard SPA for learning the 1000 most common Mandarin words by **ear**. Built for one learner who speaks conversational Mandarin (learned from a Taiwanese speaker), cannot read, and does not want to learn to read.
 
 ## Priorities (in order)

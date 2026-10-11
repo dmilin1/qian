@@ -179,6 +179,10 @@ def test_real_clips(fx):
     ("拉雞", "垃圾", "le4 se4", "mismatch"),  # mainland reading lā jī
     ("認識你", "認識", "ren4 shi4", "partial"),
     ("勒", "了", "le5", "match"),             # neutral tone is a tone wildcard
+    ("静", "進", "jin4", "accent_match"),     # Taiwan in/ing merger
+    ("讚", "站", "zhan4", "accent_match"),    # Taiwan zh -> z
+    ("酱", "講", "jiang3", "tone_mismatch"),  # accent folding never hides a tone error
+    ("100", "一百", "yi1 bai3", "match"),     # digit runs read as numbers
 ])
 def test_compare_word(heard, text, pn, status):
     assert qc.compare_word(heard, text, pn)["status"] == status
@@ -269,6 +273,26 @@ def test_clip_hash_changes_with_text_and_settings():
     assert G.build_clips([w], args)[0].hash() != c1[0].hash()
 
 
+def test_clip_paths_are_content_versioned_and_superseded_files_removed(tmp_path):
+    import generate as G
+
+    clip = G.Clip(key="w/w6211", word_id="w6211", kind="word", text="我", tts_text="我")
+    a, b = clip.rel_path(b"old bytes"), clip.rel_path(b"new bytes")
+    assert a.startswith("audio/w/w6211-") and a.endswith(".mp3") and a != b
+    assert a == clip.rel_path(b"old bytes")
+    folder = tmp_path / "w"
+    folder.mkdir()
+    for name in ["w6211.mp3", a.rsplit("/", 1)[1], b.rsplit("/", 1)[1], "w6211-5011-0123abcd.mp3", "w6211-5011.mp3"]:
+        (folder / name).write_bytes(b"x")
+    removed = G.remove_superseded(folder, "w6211", b.rsplit("/", 1)[1])
+    assert sorted(p.name for p in removed) == sorted(["w6211.mp3", a.rsplit("/", 1)[1]])
+    # Another word whose id starts with this one ("w6211-5011") is left alone.
+    assert sorted(p.name for p in folder.iterdir()) == sorted([b.rsplit("/", 1)[1], "w6211-5011-0123abcd.mp3", "w6211-5011.mp3"])
+    assert G.installed_file(tmp_path, {"path": b}) == folder / b.rsplit("/", 1)[1]
+    assert G.installed_file(tmp_path, {"path": a}) is None
+    assert G.installed_file(tmp_path, None) is None
+
+
 def test_split_pinyin_taiwan_readings():
     assert qc.split_pinyin("Nǐ zhīdào tā zhù nǎlǐ ma?", 8) == ["ni", "zhi", "dao", "ta", "zhu", "na", "li", "ma"]
     assert qc.split_pinyin("Xī'ān hěn yuǎn.", 4) == ["xi", "an", "hen", "yuan"]
@@ -297,3 +321,17 @@ def test_full_qc_with_whisper_on_real_clips():
     fx = by_name["垃圾eleven_multilingual_v2"]  # mainland reading lājī
     rep = checker.check_word(C.decode_audio(HERE / "fixtures" / fx["file"], sr=SR), SR, fx["text"], fx["pinyin"])
     assert rep["verdict"] != "pass"
+
+
+def test_zh_int():
+    assert [qc.zh_int(n) for n in (10, 15, 105, 110, 300, 2000)] == ["十", "十五", "一百零五", "一百一十", "三百", "二千"]
+    assert qc.zh_int(2000, liang=True) == "兩千"
+    assert qc.zh_int(12345) == "一萬二千三百四十五"
+
+
+def test_compare_sentence_numbers_and_polyphones():
+    # whisper writes numbers as digits
+    assert qc.compare_sentence("这本书300块", "這本書三百塊。", "Zhè běn shū sānbǎi kuài.")["status"] == "match"
+    assert qc.compare_sentence("这件衣服2000块", "這件衣服兩千塊。", "Zhè jiàn yīfú liǎngqiān kuài.")["status"] == "match"
+    # 她/他 homophone and 長 cháng (pypinyin alone would read 很长 as hěn zhǎng)
+    assert qc.compare_sentence("他的头发很长", "她的頭髮很長。", "Tā de tóufǎ hěn cháng.")["status"] == "match"

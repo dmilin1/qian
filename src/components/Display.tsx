@@ -55,10 +55,15 @@ export function EmptyState({ icon = 'sparkle', title, children, action, classNam
 
 // ----- Kbd -----
 
-/** Keyboard shortcut hint; hidden on touch devices (shown only with a fine, hover-capable pointer). */
+/**
+ * Keyboard shortcut hint; hidden on touch devices (shown only with a fine, hover-capable pointer).
+ * aria-hidden so the key isn't read as part of a button's name ("Show answer Space"); put
+ * `aria-keyshortcuts` on the owning control to expose the shortcut to assistive tech.
+ */
 export function Kbd({ children, className }: { children: ReactNode; className?: string }) {
   return (
     <kbd
+      aria-hidden
       className={cx(
         'kbd-hint min-w-[1.5em] items-center justify-center rounded-md border border-current/25 px-1.5 font-sans text-[0.75em] leading-[1.6] font-medium opacity-70',
         className,

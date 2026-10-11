@@ -1,6 +1,6 @@
 // Hardest words (most lapses) and flagged cards.
 import { Link } from 'react-router'
-import { AudioButton, buttonClasses, Hanzi, Icon, Pinyin } from '../../components'
+import { AudioButton, Button, buttonClasses, Hanzi, Icon, Pinyin } from '../../components'
 import { plural, type HardWord } from './statsModel'
 import { Section } from './parts'
 
@@ -54,7 +54,7 @@ export function HardestSection({ words }: { words: HardWord[] }) {
   )
 }
 
-export function FlaggedSection({ open, words }: { open: number; words: number }) {
+export function FlaggedSection({ open, words, onExport }: { open: number; words: number; onExport?: () => void }) {
   return (
     <Section
       id="stats-flags"
@@ -72,6 +72,15 @@ export function FlaggedSection({ open, words }: { open: number; words: number })
           </Link>
         ) : null
       }
-    />
+    >
+      {open && onExport ? (
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+          <Button size="sm" variant="secondary" icon="download" onClick={onExport}>
+            Export flags (CSV)
+          </Button>
+          <span className="text-sm text-muted">A list to send to whoever fixes the word data.</span>
+        </div>
+      ) : null}
+    </Section>
   )
 }

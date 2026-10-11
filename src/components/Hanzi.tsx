@@ -32,7 +32,7 @@ export function Hanzi({ word, text, size = 'md', force, showSimp, muted = true, 
     <span className={cx('hanzi font-hanzi tracking-wide', muted ? 'text-muted' : 'text-ink', SIZES[size], className)}>
       <span lang="zh-TW">{trad}</span>
       {simp ? (
-        <span lang="zh-CN" className="ml-2 text-[0.75em] text-faint">
+        <span lang="zh-CN" className="ml-2 text-[0.75em] text-muted">
           <span className="sr-only">simplified: </span>
           {simp}
         </span>

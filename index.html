@@ -28,6 +28,13 @@
         var root = document.documentElement
         if (dark) root.classList.add('dark')
         root.style.colorScheme = dark ? 'dark' : 'light'
+        // Browser chrome / status bar: match the resolved theme, not only the OS (THEME_COLORS in theme.ts).
+        var c = dark ? '#141312' : '#f6f1e7'
+        var ms = document.querySelectorAll('meta[name="theme-color"]')
+        for (var i = 0; i < ms.length; i++) {
+          ms[i].removeAttribute('media')
+          ms[i].setAttribute('content', c)
+        }
       })()
     </script>
   </head>

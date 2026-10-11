@@ -1,0 +1,945 @@
+[
+ {
+  "key": "w/w4e5f",
+  "id": "w4e5f",
+  "rank": 21,
+  "kind": "word",
+  "text": "也",
+  "expectedPinyin": "yě",
+  "verdict": "suspect",
+  "transcript": "耶!",
+  "reasons": [
+   "ASR tone_mismatch: heard '耶! / primed '耶!''"
+  ],
+  "model": "eleven_v4",
+  "attempts": 6,
+  "path": "audio/w/w4e5f-f2ca3d4a.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "low falling 3rd tone (Taiwan half-third); whisper's 耶 is a tone guess, pitch ok"
+  }
+ },
+ {
+  "key": "w/w4ec0-9ebc",
+  "id": "w4ec0-9ebc",
+  "rank": 22,
+  "kind": "word",
+  "text": "什麼",
+  "expectedPinyin": "shén me",
+  "verdict": "suspect",
+  "transcript": "什么?",
+  "reasons": [
+   "syllable 1 contour looks like tone 3, expected 2 (score 0.01)"
+  ],
+  "model": "eleven_v4",
+  "attempts": 19,
+  "path": "audio/w/w4ec0-9ebc-8fb38bb6.mp3",
+  "review": {
+   "status": "listen",
+   "reason": "rank 22. ASR exact on all 19 attempts (4 models), but 什 never rises; probably normal fast speech, but this is the most frequent flagged word"
+  }
+ },
+ {
+  "key": "w/w500b",
+  "id": "w500b",
+  "rank": 27,
+  "kind": "word",
+  "text": "個",
+  "expectedPinyin": "gè",
+  "verdict": "suspect",
+  "transcript": "哥",
+  "reasons": [
+   "ASR tone_mismatch: heard '哥 / primed '歌''"
+  ],
+  "model": "eleven_v4",
+  "attempts": 6,
+  "path": "audio/w/w500b-c6ef439b.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "clear fall (tone 4); whisper's 哥 is a tone guess on a short syllable"
+  }
+ },
+ {
+  "key": "w/w9084",
+  "id": "w9084",
+  "rank": 32,
+  "kind": "word",
+  "text": "還",
+  "expectedPinyin": "hái",
+  "verdict": "suspect",
+  "transcript": "嗨",
+  "reasons": [
+   "ASR tone_mismatch: heard '嗨 / primed '嗨''"
+  ],
+  "model": "eleven_v4",
+  "attempts": 6,
+  "path": "audio/w/w9084-0e2e5cae.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "clear rise (tone 2); whisper writes 嗨 for isolated hai (also in the bake-off)"
+  }
+ },
+ {
+  "key": "w/w6c92",
+  "id": "w6c92",
+  "rank": 40,
+  "kind": "word",
+  "text": "沒",
+  "expectedPinyin": "méi",
+  "verdict": "suspect",
+  "transcript": "美",
+  "reasons": [
+   "ASR tone_mismatch: heard '美 / primed '美''"
+  ],
+  "model": "eleven_v4",
+  "attempts": 3,
+  "path": "audio/w/w6c92-8948b5f5.mp3",
+  "review": {
+   "status": "listen",
+   "reason": "rank 40. Whisper hears 美 měi on every attempt; the pitch does rise from low (Taiwan tone 2); confirm it is not měi. TTS text is the homophone 梅"
+  }
+ },
+ {
+  "key": "w/w7d66",
+  "id": "w7d66",
+  "rank": 42,
+  "kind": "word",
+  "text": "給",
+  "expectedPinyin": "gěi",
+  "verdict": "suspect",
+  "transcript": "GAY",
+  "reasons": [
+   "ASR unclear: heard 'GAY / primed 'gay''"
+  ],
+  "model": "eleven_flash_v2_5",
+  "attempts": 6,
+  "path": "audio/w/w7d66-fe9c2b4f.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "whisper writes English 'Gay' for gěi; low falling contour fits tone 3"
+  }
+ },
+ {
+  "key": "w/w53ea",
+  "id": "w53ea",
+  "rank": 68,
+  "kind": "word",
+  "text": "只",
+  "expectedPinyin": "zhǐ",
+  "verdict": "suspect",
+  "transcript": "智",
+  "reasons": [
+   "ASR tone_mismatch: heard '智 / primed '智''"
+  ],
+  "model": "eleven_v4",
+  "attempts": 6,
+  "path": "audio/w/w53ea-d616e4fb.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "low falling contour fits tone 3; 智 is the right syllable"
+  }
+ },
+ {
+  "key": "w/w5f8c",
+  "id": "w5f8c",
+  "rank": 94,
+  "kind": "word",
+  "text": "後",
+  "expectedPinyin": "hòu",
+  "verdict": "suspect",
+  "transcript": "吼",
+  "reasons": [
+   "ASR tone_mismatch: heard '吼 / primed '吼''"
+  ],
+  "model": "eleven_v4",
+  "attempts": 6,
+  "path": "audio/w/w5f8c-986c8fdf.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "clear fall from high (tone 4); 吼 is the right syllable"
+  }
+ },
+ {
+  "key": "w/w70ba-4ec0-9ebc",
+  "id": "w70ba-4ec0-9ebc",
+  "rank": 97,
+  "kind": "word",
+  "text": "為什麼",
+  "expectedPinyin": "wèi shén me",
+  "verdict": "suspect",
+  "transcript": "為什麼?",
+  "reasons": [
+   "syllable 2 contour looks like tone 3, expected 2 (score 0.06)"
+  ],
+  "model": "eleven_flash_v2_5",
+  "attempts": 19,
+  "path": "audio/w/w70ba-4ec0-9ebc-e2e6bcbd.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "ASR exact on all 19 attempts (4 models); every model gives the short unstressed 什 the same flat contour, so the pitch rule is too strict for it"
+  }
+ },
+ {
+  "key": "w/w4e26",
+  "id": "w4e26",
+  "rank": 107,
+  "kind": "word",
+  "text": "並",
+  "expectedPinyin": "bìng",
+  "verdict": "suspect",
+  "transcript": "Bing",
+  "reasons": [
+   "ASR tone_mismatch: heard 'Bing / primed '冰''"
+  ],
+  "model": "eleven_flash_v2_5",
+  "attempts": 6,
+  "path": "audio/w/w4e26-92b7d488.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "clear fall (tone 4); 'Bing'/冰 is the right syllable"
+  }
+ },
+ {
+  "key": "w/w624d",
+  "id": "w624d",
+  "rank": 108,
+  "kind": "word",
+  "text": "才",
+  "expectedPinyin": "cái",
+  "verdict": "suspect",
+  "transcript": "彩",
+  "reasons": [
+   "ASR tone_mismatch: heard '彩 / primed '彩''"
+  ],
+  "model": "eleven_v4",
+  "attempts": 6,
+  "path": "audio/w/w624d-8470b5de.mp3",
+  "review": {
+   "status": "listen",
+   "reason": "whisper hears 彩 cǎi; the rise starts very low; pitch QC cannot tell tone 2 from tone 3"
+  }
+ },
+ {
+  "key": "w/w4e0d-597d-610f-601d",
+  "id": "w4e0d-597d-610f-601d",
+  "rank": 115,
+  "kind": "word",
+  "text": "不好意思",
+  "expectedPinyin": "bù hǎo yì si",
+  "verdict": "suspect",
+  "transcript": "不好意思",
+  "reasons": [
+   "syllable 3 contour looks like tone 3, expected 4 (score 0.07)"
+  ],
+  "model": "eleven_v4",
+  "attempts": 6,
+  "path": "audio/w/w4e0d-597d-610f-601d-71501b06.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "ASR exact on all 6 attempts; the flagged 意 is an 80 ms reduced syllable, too short for the pitch rule"
+  }
+ },
+ {
+  "key": "w/w6b7b",
+  "id": "w6b7b",
+  "rank": 124,
+  "kind": "word",
+  "text": "死",
+  "expectedPinyin": "sǐ",
+  "verdict": "suspect",
+  "transcript": "是",
+  "reasons": [
+   "ASR tone_mismatch: heard '是 / primed '是''"
+  ],
+  "model": "eleven_v4",
+  "attempts": 6,
+  "path": "audio/w/w6b7b-59212f50.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "low contour fits tone 3; 是 is si/shi (Taiwan s/sh)"
+  }
+ },
+ {
+  "key": "w/w627e",
+  "id": "w627e",
+  "rank": 129,
+  "kind": "word",
+  "text": "找",
+  "expectedPinyin": "zhǎo",
+  "verdict": "suspect",
+  "transcript": "Ciao!",
+  "reasons": [
+   "ASR unclear: heard 'Ciao! / primed 'Ciao''"
+  ],
+  "model": "eleven_flash_v2_5",
+  "attempts": 6,
+  "path": "audio/w/w627e-e82ea033.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "whisper writes Italian 'Ciao' for zhǎo; low fall fits tone 3"
+  }
+ },
+ {
+  "key": "w/w5594",
+  "id": "w5594",
+  "rank": 132,
+  "kind": "word",
+  "text": "喔",
+  "expectedPinyin": "ō",
+  "verdict": "suspect",
+  "transcript": "噢",
+  "reasons": [
+   "syllable 1 contour looks like tone 4, expected 1 (score 0.00)"
+  ],
+  "model": "eleven_v4",
+  "attempts": 19,
+  "path": "audio/w/w5594-681acd44.mp3",
+  "review": {
+   "status": "listen",
+   "reason": "every attempt falls (ò); the data says ō. Taiwan colloquial 喔 is often ò; check which reading the app should teach"
+  }
+ },
+ {
+  "key": "w/w5730",
+  "id": "w5730",
+  "rank": 136,
+  "kind": "word",
+  "text": "地",
+  "expectedPinyin": "dì",
+  "verdict": "suspect",
+  "transcript": "滴",
+  "reasons": [
+   "ASR tone_mismatch: heard '滴 / primed 'D''"
+  ],
+  "model": "eleven_v4",
+  "attempts": 6,
+  "path": "audio/w/w5730-c86577a4.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "clear fall from high (tone 4); 'D'/滴 is the right syllable"
+  }
+ },
+ {
+  "key": "w/w65b0",
+  "id": "w65b0",
+  "rank": 138,
+  "kind": "word",
+  "text": "新",
+  "expectedPinyin": "xīn",
+  "verdict": "suspect",
+  "transcript": "Sing",
+  "reasons": [
+   "ASR unclear: heard 'Sing / primed 'Sing''"
+  ],
+  "model": "eleven_flash_v2_5",
+  "attempts": 6,
+  "path": "audio/w/w65b0-6e436b4b.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "high level (tone 1); 'Sing' is xīn heard with Taiwan in/ing merger"
+  }
+ },
+ {
+  "key": "w/w6bd4",
+  "id": "w6bd4",
+  "rank": 159,
+  "kind": "word",
+  "text": "比",
+  "expectedPinyin": "bǐ",
+  "verdict": "suspect",
+  "transcript": "B",
+  "reasons": [
+   "ASR unclear: heard 'B / primed 'B''"
+  ],
+  "model": "eleven_v4",
+  "attempts": 6,
+  "path": "audio/w/w6bd4-9b6b2e14.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "whisper writes 'B' for bǐ; low fall fits tone 3"
+  }
+ },
+ {
+  "key": "w/w7a2e",
+  "id": "w7a2e",
+  "rank": 241,
+  "kind": "word",
+  "text": "種",
+  "expectedPinyin": "zhǒng",
+  "verdict": "suspect",
+  "transcript": "中",
+  "reasons": [
+   "ASR tone_mismatch: heard '中 / primed '中''"
+  ],
+  "model": "eleven_v4",
+  "attempts": 6,
+  "path": "audio/w/w7a2e-801f8e29.mp3",
+  "review": {
+   "status": "listen",
+   "reason": "whisper hears 中 zhōng; the contour starts high (15.7 st) and only dips through creak; could be zhōng/zhòng"
+  }
+ },
+ {
+  "key": "w/w7531",
+  "id": "w7531",
+  "rank": 248,
+  "kind": "word",
+  "text": "由",
+  "expectedPinyin": "yóu",
+  "verdict": "suspect",
+  "transcript": "有",
+  "reasons": [
+   "ASR tone_mismatch: heard '有 / primed '有''"
+  ],
+  "model": "eleven_v4",
+  "attempts": 6,
+  "path": "audio/w/w7531-fd27e059.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "strong rise of 7 semitones (tone 2); 有 is a tone guess"
+  }
+ },
+ {
+  "key": "w/w5e7e",
+  "id": "w5e7e",
+  "rank": 266,
+  "kind": "word",
+  "text": "幾",
+  "expectedPinyin": "jǐ",
+  "verdict": "suspect",
+  "transcript": "雞",
+  "reasons": [
+   "ASR tone_mismatch: heard '雞 / primed '雞''"
+  ],
+  "model": "eleven_v4",
+  "attempts": 6,
+  "path": "audio/w/w5e7e-a77fb561.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "full dip-rise (tone 3); 雞 is a tone guess"
+  }
+ },
+ {
+  "key": "w/w7b2c",
+  "id": "w7b2c",
+  "rank": 267,
+  "kind": "word",
+  "text": "第",
+  "expectedPinyin": "dì",
+  "verdict": "suspect",
+  "transcript": "D",
+  "reasons": [
+   "ASR tone_mismatch: heard 'D / primed '滴''"
+  ],
+  "model": "eleven_v4",
+  "attempts": 6,
+  "path": "audio/w/w7b2c-39b0dbe5.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "clear fall (tone 4); 'D'/滴 is the right syllable"
+  }
+ },
+ {
+  "key": "w/w842c",
+  "id": "w842c",
+  "rank": 324,
+  "kind": "word",
+  "text": "萬",
+  "expectedPinyin": "wàn",
+  "verdict": "fail",
+  "transcript": "1",
+  "reasons": [
+   "ASR mismatch: heard '1 / primed '1''"
+  ],
+  "model": "eleven_v3",
+  "attempts": 8,
+  "path": "audio/w/w842c-372a43ec.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "whisper hears wàn as English 'one' and writes '1' on every attempt from 3 models; fall fits tone 4"
+  }
+ },
+ {
+  "key": "w/w767e",
+  "id": "w767e",
+  "rank": 325,
+  "kind": "word",
+  "text": "百",
+  "expectedPinyin": "bǎi",
+  "verdict": "suspect",
+  "transcript": "拜!",
+  "reasons": [
+   "ASR tone_mismatch: heard '拜! / primed '拜!''"
+  ],
+  "model": "eleven_v4",
+  "attempts": 6,
+  "path": "audio/w/w767e-aaaef2b0.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "low fall = Taiwan half-third; 拜 is the right syllable"
+  }
+ },
+ {
+  "key": "w/w53d7",
+  "id": "w53d7",
+  "rank": 342,
+  "kind": "word",
+  "text": "受",
+  "expectedPinyin": "shòu",
+  "verdict": "suspect",
+  "transcript": "手",
+  "reasons": [
+   "ASR tone_mismatch: heard '手 / primed '手''"
+  ],
+  "model": "eleven_v4",
+  "attempts": 6,
+  "path": "audio/w/w53d7-2ce45089.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "clear fall from high (tone 4); 手 is a tone guess"
+  }
+ },
+ {
+  "key": "w/w5176-4e2d",
+  "id": "w5176-4e2d",
+  "rank": 371,
+  "kind": "word",
+  "text": "其中",
+  "expectedPinyin": "qí zhōng",
+  "verdict": "suspect",
+  "transcript": "其中",
+  "reasons": [
+   "syllable 1 contour looks like tone 1, expected 2 (score 0.12)"
+  ],
+  "model": "eleven_v4",
+  "attempts": 14,
+  "path": "audio/w/w5176-4e2d-922a0d46.mp3",
+  "review": {
+   "status": "listen",
+   "reason": "ASR exact; 其 is short and flat (it should rise); low priority"
+  }
+ },
+ {
+  "key": "w/w4f7f",
+  "id": "w4f7f",
+  "rank": 375,
+  "kind": "word",
+  "text": "使",
+  "expectedPinyin": "shǐ",
+  "verdict": "suspect",
+  "transcript": "是",
+  "reasons": [
+   "ASR tone_mismatch: heard '是 / primed '是''"
+  ],
+  "model": "eleven_v4",
+  "attempts": 6,
+  "path": "audio/w/w4f7f-3f8a9e8a.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "low fall (tone 3); 是 is the right syllable"
+  }
+ },
+ {
+  "key": "w/w8b1b",
+  "id": "w8b1b",
+  "rank": 423,
+  "kind": "word",
+  "text": "講",
+  "expectedPinyin": "jiǎng",
+  "verdict": "suspect",
+  "transcript": "醬",
+  "reasons": [
+   "ASR tone_mismatch: heard '醬 / primed '醬''",
+   "extra voiced segment(s) [150] ms"
+  ],
+  "model": "eleven_v4",
+  "attempts": 6,
+  "path": "audio/w/w8b1b-9ea57cd5.mp3",
+  "review": {
+   "status": "listen",
+   "reason": "whisper hears 醬 jiàng; the fall does not reach the usual tone-3 low, and there is a 150 ms extra voiced segment"
+  }
+ },
+ {
+  "key": "w/w5920",
+  "id": "w5920",
+  "rank": 458,
+  "kind": "word",
+  "text": "夠",
+  "expectedPinyin": "gòu",
+  "verdict": "suspect",
+  "transcript": "Go!",
+  "reasons": [
+   "ASR unclear: heard 'Go! / primed 'Go''"
+  ],
+  "model": "eleven_v4",
+  "attempts": 6,
+  "path": "audio/w/w5920-95383762.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "whisper writes English 'Go'; clear fall (tone 4)"
+  }
+ },
+ {
+  "key": "w/w6307",
+  "id": "w6307",
+  "rank": 472,
+  "kind": "word",
+  "text": "指",
+  "expectedPinyin": "zhǐ",
+  "verdict": "suspect",
+  "transcript": "致",
+  "reasons": [
+   "ASR tone_mismatch: heard '致 / primed '智''"
+  ],
+  "model": "eleven_v4",
+  "attempts": 6,
+  "path": "audio/w/w6307-46ab3028.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "low fall (tone 3); 致/智 is the right syllable"
+  }
+ },
+ {
+  "key": "w/w5916",
+  "id": "w5916",
+  "rank": 521,
+  "kind": "word",
+  "text": "外",
+  "expectedPinyin": "wài",
+  "verdict": "suspect",
+  "transcript": "Y",
+  "reasons": [
+   "ASR unclear: heard 'Y / primed 'Y''"
+  ],
+  "model": "eleven_flash_v2_5",
+  "attempts": 6,
+  "path": "audio/w/w5916-6bad6878.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "whisper writes English 'Y' (why) for wài; clear fall (tone 4)"
+  }
+ },
+ {
+  "key": "w/w9060",
+  "id": "w9060",
+  "rank": 531,
+  "kind": "word",
+  "text": "遠",
+  "expectedPinyin": "yuǎn",
+  "verdict": "suspect",
+  "transcript": "愿",
+  "reasons": [
+   "ASR tone_mismatch: heard '愿 / primed '怨''",
+   "extra voiced segment(s) [150] ms"
+  ],
+  "model": "eleven_v4",
+  "attempts": 6,
+  "path": "audio/w/w9060-c1b68a94.mp3",
+  "review": {
+   "status": "listen",
+   "reason": "whisper hears 愿 yuàn; low fall is plausible for tone 3, but there is a 150 ms extra voiced segment"
+  }
+ },
+ {
+  "key": "w/w6c92-4ec0-9ebc",
+  "id": "w6c92-4ec0-9ebc",
+  "rank": 565,
+  "kind": "word",
+  "text": "沒什麼",
+  "expectedPinyin": "méi shén me",
+  "verdict": "suspect",
+  "transcript": "沒什麼",
+  "reasons": [
+   "syllable 2 contour looks like tone 1, expected 2 (score 0.00)"
+  ],
+  "model": "eleven_v3",
+  "attempts": 19,
+  "path": "audio/w/w6c92-4ec0-9ebc-0d161e79.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "ASR exact on all attempts; 什 in 沒什麼 is a 110 ms unstressed syllable, too short for the pitch rule"
+  }
+ },
+ {
+  "key": "s/w7559",
+  "id": "w7559",
+  "rank": 577,
+  "kind": "sentence",
+  "text": "幫我留一個位子。",
+  "expectedPinyin": "Bāng wǒ liú yī ge wèizi.",
+  "verdict": "suspect",
+  "transcript": "幫我留一個位置",
+  "reasons": [
+   "ASR suspect: heard '幫我留一個位置' (error rate 0.143)"
+  ],
+  "model": "eleven_v4",
+  "attempts": 3,
+  "path": "audio/s/w7559-05e7ce45.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "whisper's language model writes the more common 位置 for wèizi; all 3 attempts identical"
+  }
+ },
+ {
+  "key": "w/w6562",
+  "id": "w6562",
+  "rank": 581,
+  "kind": "word",
+  "text": "敢",
+  "expectedPinyin": "gǎn",
+  "verdict": "suspect",
+  "transcript": "干",
+  "reasons": [
+   "ASR tone_mismatch: heard '干 / primed '干''"
+  ],
+  "model": "eleven_v4",
+  "attempts": 6,
+  "path": "audio/w/w6562-a36027d4.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "low fall (tone 3); 干 is the right syllable"
+  }
+ },
+ {
+  "key": "w/w63d0",
+  "id": "w63d0",
+  "rank": 601,
+  "kind": "word",
+  "text": "提",
+  "expectedPinyin": "tí",
+  "verdict": "suspect",
+  "transcript": "P",
+  "reasons": [
+   "ASR unclear: heard 'P / primed '啤''"
+  ],
+  "model": "eleven_v4",
+  "attempts": 6,
+  "path": "audio/w/w63d0-768bdfab.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "whisper writes 'T'/'P'; clear rise (tone 2)"
+  }
+ },
+ {
+  "key": "w/w5f80",
+  "id": "w5f80",
+  "rank": 612,
+  "kind": "word",
+  "text": "往",
+  "expectedPinyin": "wǎng",
+  "verdict": "suspect",
+  "transcript": "王",
+  "reasons": [
+   "ASR tone_mismatch: heard '王 / primed '王''"
+  ],
+  "model": "eleven_v4",
+  "attempts": 6,
+  "path": "audio/w/w5f80-a2ceb06a.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "dip-rise to 6 semitones (tone 3); 王 is a tone guess"
+  }
+ },
+ {
+  "key": "w/w883b",
+  "id": "w883b",
+  "rank": 623,
+  "kind": "word",
+  "text": "蠻",
+  "expectedPinyin": "mán",
+  "verdict": "suspect",
+  "transcript": "滿",
+  "reasons": [
+   "ASR tone_mismatch: heard '滿 / primed '滿''"
+  ],
+  "model": "eleven_v4",
+  "attempts": 6,
+  "path": "audio/w/w883b-a837cea5.mp3",
+  "review": {
+   "status": "listen",
+   "reason": "whisper hears 滿 mǎn; the rise starts low; pitch QC cannot tell tone 2 from tone 3"
+  }
+ },
+ {
+  "key": "w/w7a81-7136",
+  "id": "w7a81-7136",
+  "rank": 669,
+  "kind": "word",
+  "text": "突然",
+  "expectedPinyin": "tú rán",
+  "verdict": "suspect",
+  "transcript": "突然",
+  "reasons": [
+   "syllable 1 contour looks like tone 4, expected 2 (score 0.00)",
+   "syllable 2 contour looks like tone 3, expected 2 (score 0.10)"
+  ],
+  "model": "eleven_v4",
+  "attempts": 3,
+  "path": "audio/w/w7a81-7136-f6f526c0.mp3",
+  "review": {
+   "status": "listen",
+   "reason": "the first syllable falls in all 19 attempts (5 models): tù? Probably a segmentation artifact from the voiced r- of 然, but it is unconfirmed"
+  }
+ },
+ {
+  "key": "w/w6d17",
+  "id": "w6d17",
+  "rank": 698,
+  "kind": "word",
+  "text": "洗",
+  "expectedPinyin": "xǐ",
+  "verdict": "suspect",
+  "transcript": "C",
+  "reasons": [
+   "ASR unclear: heard 'C / primed 'C''"
+  ],
+  "model": "eleven_v4",
+  "attempts": 6,
+  "path": "audio/w/w6d17-dd1bb26c.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "whisper writes 'C' for xǐ; low fall (tone 3)"
+  }
+ },
+ {
+  "key": "w/w4e8b-5be6-4e0a",
+  "id": "w4e8b-5be6-4e0a",
+  "rank": 751,
+  "kind": "word",
+  "text": "事實上",
+  "expectedPinyin": "shì shí shàng",
+  "verdict": "suspect",
+  "transcript": "事實上",
+  "reasons": [
+   "syllable 2 contour looks like tone 1, expected 2 (score 0.06)"
+  ],
+  "model": "eleven_v3",
+  "attempts": 19,
+  "path": "audio/w/w4e8b-5be6-4e0a-add3136d.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "ASR exact on all attempts; 實 is a 90 ms middle syllable, too short for the pitch rule"
+  }
+ },
+ {
+  "key": "w/w897f",
+  "id": "w897f",
+  "rank": 811,
+  "kind": "word",
+  "text": "西",
+  "expectedPinyin": "xī",
+  "verdict": "suspect",
+  "transcript": "是!",
+  "reasons": [
+   "ASR unclear: heard '是! / primed 'C''"
+  ],
+  "model": "eleven_flash_v2_5",
+  "attempts": 19,
+  "path": "audio/w/w897f-70188696.mp3",
+  "review": {
+   "status": "listen",
+   "reason": "only the eleven_flash_v2_5 fallback gave a level tone; the v4 attempts fell. Whisper writes 'C'/是"
+  }
+ },
+ {
+  "key": "w/w5dee-4e0d-591a",
+  "id": "w5dee-4e0d-591a",
+  "rank": 876,
+  "kind": "word",
+  "text": "差不多",
+  "expectedPinyin": "chà bu duō",
+  "verdict": "suspect",
+  "transcript": "差不多",
+  "reasons": [
+   "syllable 1 contour looks like tone 1, expected 4 (score 0.14)"
+  ],
+  "model": "eleven_v4",
+  "attempts": 14,
+  "path": "audio/w/w5dee-4e0d-591a-b0f1b264.mp3",
+  "review": {
+   "status": "listen",
+   "reason": "ASR exact; 差 is nearly flat (it should fall); low priority"
+  }
+ },
+ {
+  "key": "w/w8d85",
+  "id": "w8d85",
+  "rank": 884,
+  "kind": "word",
+  "text": "超",
+  "expectedPinyin": "chāo",
+  "verdict": "suspect",
+  "transcript": "Ciao",
+  "reasons": [
+   "ASR unclear: heard 'Ciao / primed 'Ciao''"
+  ],
+  "model": "eleven_v3",
+  "attempts": 19,
+  "path": "audio/w/w8d85-b7f833e9.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "whisper writes 'Ciao' (= chao) on every attempt; high level contour on this (eleven_v3) clip"
+  }
+ },
+ {
+  "key": "w/w9192",
+  "id": "w9192",
+  "rank": 909,
+  "kind": "word",
+  "text": "醒",
+  "expectedPinyin": "xǐng",
+  "verdict": "suspect",
+  "transcript": "SIM",
+  "reasons": [
+   "ASR tone_mismatch: heard 'SIM / primed '心''"
+  ],
+  "model": "eleven_v4",
+  "attempts": 6,
+  "path": "audio/w/w9192-a4d0eb5e.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "whisper writes 'Sing'/'SIM'; low fall (tone 3)"
+  }
+ },
+ {
+  "key": "w/w547d",
+  "id": "w547d",
+  "rank": 923,
+  "kind": "word",
+  "text": "命",
+  "expectedPinyin": "mìng",
+  "verdict": "suspect",
+  "transcript": "明",
+  "reasons": [
+   "ASR tone_mismatch: heard '明 / primed '明''"
+  ],
+  "model": "eleven_flash_v2_5",
+  "attempts": 6,
+  "path": "audio/w/w547d-a23833b8.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "clear fall (tone 4); 明 is a tone guess"
+  }
+ },
+ {
+  "key": "w/w5dee",
+  "id": "w5dee",
+  "rank": 930,
+  "kind": "word",
+  "text": "差",
+  "expectedPinyin": "chà",
+  "verdict": "suspect",
+  "transcript": "茶",
+  "reasons": [
+   "ASR tone_mismatch: heard '茶 / primed '茶''"
+  ],
+  "model": "eleven_v4",
+  "attempts": 6,
+  "path": "audio/w/w5dee-d97f970f.mp3",
+  "review": {
+   "status": "ok",
+   "reason": "clear fall (tone 4); 茶 is a tone guess"
+  }
+ }
+]

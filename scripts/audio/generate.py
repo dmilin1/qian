@@ -6,9 +6,11 @@
   python scripts/audio/generate.py --only w4f60,w662f --force
 
 For each Word in src/data/words.json (rank order, most common first):
-  word clip    -> public/audio/w/<id>.mp3   (text: Word.trad)
-  example clip -> public/audio/s/<id>.mp3   (text: Word.example.trad)
-then writes src/data/audio-manifest.json (AudioManifest; paths like "audio/w/<id>.mp3").
+  word clip    -> public/audio/w/<id>-<hash8>.mp3   (text: Word.trad)
+  example clip -> public/audio/s/<id>-<hash8>.mp3   (text: Word.example.trad)
+then writes src/data/audio-manifest.json (AudioManifest; paths like "audio/w/<id>-<hash8>.mp3").
+<hash8> is the first 8 hex chars of sha1(mp3 bytes): the app's service worker caches audio forever
+by URL, so a regenerated clip must get a new URL. Superseded <id>-*.mp3 files are deleted.
 
 Resumable/idempotent: scripts/audio/state.json records, per clip, the hash of (text, model chain,
 voice settings, voice), every attempt's seed/model/cost/QC result, and the chosen attempt. A clip is
@@ -27,6 +29,8 @@ run, and --reserve credits are always left on the account.
 from __future__ import annotations
 
 import argparse
+import hashlib
+import re
 import shutil
 import sys
 import threading
@@ -54,6 +58,7 @@ DEFAULT_MANIFEST = C.ROOT / "src" / "data" / "audio-manifest.json"
 DEFAULT_OUT = C.ROOT / "public" / "audio"
 DEFAULT_STATE = C.AUDIO_DIR / "state.json"
 DEFAULT_FLAGS = C.AUDIO_DIR / "flags.json"
+DEFAULT_REVIEWS = C.AUDIO_DIR / "reviews.json"
 DEFAULT_CACHE = C.AUDIO_DIR / "cache"
 OVERRIDES = C.AUDIO_DIR / "overrides.json"
 
@@ -76,15 +81,48 @@ class Clip:
     settings: dict[str, Any] = field(default_factory=dict)
 
     @property
-    def rel_path(self) -> str:
-        sub = "w" if self.kind == "word" else "s"
-        return f"audio/{sub}/{self.word_id}.mp3"
+    def sub(self) -> str:
+        return "w" if self.kind == "word" else "s"
+
+    def rel_path(self, mp3: bytes) -> str:
+        """Content-versioned path ("audio/w/<id>-<hash8>.mp3"): new bytes always get a new URL."""
+        return f"audio/{self.sub}/{self.word_id}-{mp3_digest(mp3)}.mp3"
 
     def hash(self) -> str:
         return C.sha1({
             "text": self.tts_text, "models": self.models, "settings": self.settings, "voice": C.VOICE_ID,
             "fmt": [C.PCM_FORMAT, C.MP3_BITRATE], "v": PIPELINE_VERSION,
         })
+
+
+def mp3_digest(mp3: bytes) -> str:
+    return hashlib.sha1(mp3).hexdigest()[:8]
+
+
+def clip_file_re(word_id: str) -> re.Pattern[str]:
+    """Matches this word's clip files: "<id>-<hash8>.mp3" or the legacy unversioned "<id>.mp3".
+    Anchored so "w6211" never matches "w6211-5011-<hash8>.mp3" (word ids can contain "-")."""
+    return re.compile(rf"{re.escape(word_id)}(-[0-9a-f]{{8}})?\.mp3")
+
+
+def remove_superseded(folder: Path, word_id: str, keep: str) -> list[Path]:
+    """Delete this word's other clip versions in `folder` (all but `keep`). Returns what was removed."""
+    pat = clip_file_re(word_id)
+    removed = []
+    for p in folder.glob(f"{word_id}*.mp3"):
+        if p.name != keep and pat.fullmatch(p.name):
+            p.unlink(missing_ok=True)
+            removed.append(p)
+    return removed
+
+
+def installed_file(out_dir: Path, rec: dict | None) -> Path | None:
+    """The installed mp3 a state record points to, if it still exists."""
+    path = (rec or {}).get("path")
+    if not path:
+        return None
+    f = out_dir / path.split("/", 1)[1]
+    return f if f.exists() else None
 
 
 def build_clips(words: list[dict], args) -> list[Clip]:
@@ -253,9 +291,9 @@ class Runner:
     # ---------------- planning ----------------
     def needs_work(self, clip: Clip) -> bool:
         rec = self.state["clips"].get(clip.key)
-        if self.args.force or rec is None:
+        if self.args.force or rec is None or self.args.extra:
             return True
-        if rec.get("hash") != clip.hash() or not (self.out_dir / clip.rel_path.split("/", 1)[1]).exists():
+        if rec.get("hash") != clip.hash() or installed_file(self.out_dir, rec) is None:
             return True
         if rec.get("verdict") == "pass":
             return False
@@ -296,6 +334,12 @@ class Runner:
             attempts: list[dict] = list(prev.get("attempts", [])) if same else []
         n_prev = len(attempts)
         max_total = n_prev + 1 + args.max_retries if (same and args.retry_flagged) else 1 + args.max_retries
+        if args.extra:
+            # Targeted extra attempts (--extra MODEL:SEED,...) appended to an up-to-date clip's attempts.
+            if not same:
+                print(f"  [{clip.key}] --extra skipped: clip is not up to date (run without --extra first)")
+                return
+            max_total = n_prev + len(args.extra)
         best: dict | None = None
         for a in attempts:
             if a.get("cache") and (self.cache_dir / a["cache"]).exists() and (best is None or self._better(a, best)):
@@ -305,6 +349,9 @@ class Runner:
             # The last allowed attempt switches to the fallback model (if any).
             model = clip.models[-1] if (len(clip.models) > 1 and idx == max_total - 1 and idx > 0) else clip.models[0]
             seed = C.stable_seed(clip.key, idx)
+            if args.extra:
+                model, xseed = args.extra[idx - n_prev]
+                seed = seed if xseed is None else xseed
             settings = dict(clip.settings)
             if model != clip.models[0]:
                 settings = C.voice_settings(clip.kind, model, settings.get("speed"))
@@ -371,17 +418,19 @@ class Runner:
             return
         # Install the best attempt.
         src = self.cache_dir / best["cache"]
-        dst = self.out_dir / clip.rel_path.split("/", 1)[1]
+        rel_path = clip.rel_path(src.read_bytes())
+        dst = self.out_dir / rel_path.split("/", 1)[1]
         dst.parent.mkdir(parents=True, exist_ok=True)
         tmp = dst.with_suffix(".mp3.tmp")
         shutil.copyfile(src, tmp)
         tmp.replace(dst)
+        remove_superseded(dst.parent, clip.word_id, dst.name)
         done = len(attempts) >= max_total or best["verdict"] in ("pass", "unchecked") \
             or best["verdict"] not in args.regen_on
         rec = {
             "key": clip.key, "id": clip.word_id, "kind": clip.kind, "rank": clip.rank, "text": clip.text,
             "ttsText": clip.tts_text, "pinyin": clip.pinyin or None, "hash": clip.hash(),
-            "textHash": C.sha1(clip.text), "path": clip.rel_path, "best": best["i"], "model": best["model"],
+            "textHash": C.sha1(clip.text), "path": rel_path, "best": best["i"], "model": best["model"],
             "seed": best["seed"], "verdict": best["verdict"], "score": best["score"],
             "reasons": best["reasons"], "transcript": best["transcript"], "done": done, "attempts": attempts,
         }
@@ -402,23 +451,30 @@ class Runner:
         args = self.args
         entries: dict[str, dict[str, str]] = {}
         flags = []
+        # Manual review notes for flagged clips: {key: {status, reason, path}}. A note only applies while
+        # the installed file is the one that was reviewed (a regenerated clip needs a fresh review).
+        reviews = C.load_json(Path(args.reviews), {})
         for w in sorted(words, key=lambda w: w["rank"]):
             e: dict[str, str] = {}
             for kind, sub, text in (("word", "w", w["trad"]), ("example", "s", (w.get("example") or {}).get("trad"))):
                 rec = self.state["clips"].get(f"{sub}/{w['id']}")
                 if not rec or not text or rec.get("textHash") != C.sha1(text):
                     continue  # missing or stale (text changed since generation): app falls back to TTS
-                if not (self.out_dir / sub / f"{w['id']}.mp3").exists():
+                if installed_file(self.out_dir, rec) is None:
                     continue
                 e[kind] = rec["path"]
                 if rec.get("verdict") not in ("pass", "unchecked"):
-                    flags.append({
+                    flag = {
                         "key": rec["key"], "id": w["id"], "rank": w["rank"], "kind": rec["kind"], "text": text,
                         "expectedPinyin": w["pinyin"] if kind == "word" else w["example"].get("pinyin"),
                         "verdict": rec["verdict"], "transcript": rec.get("transcript"),
                         "reasons": rec.get("reasons", []), "model": rec.get("model"),
                         "attempts": len(rec.get("attempts", [])), "path": rec["path"],
-                    })
+                    }
+                    rv = reviews.get(rec["key"])
+                    if rv and rv.get("path") == rec["path"]:
+                        flag["review"] = {"status": rv.get("status"), "reason": rv.get("reason")}
+                    flags.append(flag)
             if e:
                 entries[w["id"]] = e
         manifest = {"voiceId": C.VOICE_ID, "model": args.model,
@@ -440,6 +496,8 @@ def main():
     ap.add_argument("--manifest", default=str(DEFAULT_MANIFEST))
     ap.add_argument("--state", default=str(DEFAULT_STATE))
     ap.add_argument("--flags", default=str(DEFAULT_FLAGS))
+    ap.add_argument("--reviews", default=str(DEFAULT_REVIEWS),
+                    help="JSON {clipKey: {status, reason, path}}: review notes copied into flags.json")
     ap.add_argument("--cache-dir", default=str(DEFAULT_CACHE), help="raw FLAC + mp3 of every attempt (gitignored)")
     ap.add_argument("--overrides", default=str(OVERRIDES),
                     help="JSON {wordId: {wordText?, exampleText?}}: alternative TTS input text (e.g. homophones for polyphones)")
@@ -454,6 +512,9 @@ def main():
     ap.add_argument("--sentence-speed", type=float, default=0.95)
     ap.add_argument("--force", action="store_true", help="regenerate even if up to date")
     ap.add_argument("--retry-flagged", action="store_true", help="give non-passing clips more attempts")
+    ap.add_argument("--extra", default="",
+                    help="MODEL[:SEED],... one extra attempt per spec for each selected clip (use with --only); "
+                         "the best attempt overall is kept, the clip hash is unchanged")
     ap.add_argument("--dry-run", action="store_true", help="print the plan and credit cost; no API calls")
     ap.add_argument("--max-credits", type=float, default=15000, help="hard cap on credits spent by this run")
     ap.add_argument("--reserve", type=float, default=2000, help="credits always left on the account")
@@ -467,6 +528,10 @@ def main():
     ap.add_argument("--manifest-only", action="store_true", help="just rebuild manifest + flags from state")
     args = ap.parse_args()
     args.regen_on = set(v.strip() for v in args.regen_on.split(",") if v.strip())
+    args.extra = [(m, int(sd) if sd else None) for m, _, sd in
+                  (spec.strip().partition(":") for spec in args.extra.split(",") if spec.strip())]
+    if args.extra and not args.only:
+        raise SystemExit("--extra needs --only")
 
     words = C.load_json(Path(args.words), [])
     if not words:

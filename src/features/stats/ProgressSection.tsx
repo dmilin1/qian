@@ -73,7 +73,7 @@ export function ProgressSection({ progress, totalWords }: { progress: ProgressCo
                 <span className="flex items-center gap-2">
                   <Swatch color={seg.color} />
                   <span className="text-ink">{seg.label}</span>
-                  <span className="hidden truncate text-faint min-[400px]:inline">{seg.help}</span>
+                  <span className="hidden truncate text-muted min-[400px]:inline">{seg.help}</span>
                 </span>
               </th>
               <td className="py-1.5 text-right text-ink">{l[seg.key].toLocaleString('en-US')}</td>

@@ -146,6 +146,32 @@ export async function downloadClips(urls: readonly string[], opts: DownloadOptio
   return { ...p, status: 'complete' }
 }
 
+/**
+ * Delete cached clips that the current manifest no longer references. Clip URLs are
+ * content-versioned ("audio/w/<id>-<hash8>.mp3", see scripts/audio/generate.py), so a regenerated
+ * clip has a new URL and its old copy would otherwise sit in the never-expiring 'qian-audio' cache
+ * forever. Only keys under /audio/ are touched. Resolves with the number of entries removed.
+ */
+export async function pruneAudioCache(
+  validUrls: readonly string[],
+  cs: CacheStorage | undefined | null = globalThis.caches,
+): Promise<number> {
+  if (!cacheStorageAvailable(cs)) return 0
+  try {
+    if (!(await cs.has(AUDIO_CACHE))) return 0
+    const cache = await cs.open(AUDIO_CACHE)
+    const keep = new Set(validUrls.map(absolute))
+    let n = 0
+    for (const req of await cache.keys()) {
+      if (keep.has(req.url) || !new URL(req.url).pathname.includes('/audio/')) continue
+      if (await cache.delete(req)) n++
+    }
+    return n
+  } catch {
+    return 0
+  }
+}
+
 /** Remove the offline audio cache entirely. */
 export async function clearAudioCache(cs: CacheStorage | undefined | null = globalThis.caches): Promise<boolean> {
   if (!cacheStorageAvailable(cs)) return false
