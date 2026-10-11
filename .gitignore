@@ -1,0 +1,14 @@
+node_modules
+dist
+dev-dist
+*.local
+.env*
+.venv
+__pycache__
+*.pyc
+data/cache
+test-results
+playwright-report
+blob-report
+.DS_Store
+*.log

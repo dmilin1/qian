@@ -1,0 +1,205 @@
+[
+ {
+  "id": "w7684",
+  "rank": 1,
+  "trad": "的",
+  "simp": "的",
+  "pinyin": "de",
+  "pinyinNumbered": "de5",
+  "tones": [
+   5
+  ],
+  "gloss": "'s; of (possessive)",
+  "pos": "particle",
+  "note": "Marks possession or links a description to a noun: 我的 = my/mine.",
+  "example": {
+   "trad": "這是我的書。",
+   "simp": "这是我的书。",
+   "pinyin": "Zhè shì wǒ de shū.",
+   "english": "This is my book."
+  }
+ },
+ {
+  "id": "w6211",
+  "rank": 2,
+  "trad": "我",
+  "simp": "我",
+  "pinyin": "wǒ",
+  "pinyinNumbered": "wo3",
+  "tones": [
+   3
+  ],
+  "gloss": "I; me",
+  "pos": "pron",
+  "example": {
+   "trad": "我很好。",
+   "simp": "我很好。",
+   "pinyin": "Wǒ hěn hǎo.",
+   "english": "I'm fine."
+  }
+ },
+ {
+  "id": "w4f60",
+  "rank": 3,
+  "trad": "你",
+  "simp": "你",
+  "pinyin": "nǐ",
+  "pinyinNumbered": "ni3",
+  "tones": [
+   3
+  ],
+  "gloss": "you",
+  "pos": "pron",
+  "example": {
+   "trad": "你要去哪裡？",
+   "simp": "你要去哪里？",
+   "pinyin": "Nǐ yào qù nǎlǐ?",
+   "english": "Where are you going?"
+  }
+ },
+ {
+  "id": "w662f",
+  "rank": 4,
+  "trad": "是",
+  "simp": "是",
+  "pinyin": "shì",
+  "pinyinNumbered": "shi4",
+  "tones": [
+   4
+  ],
+  "gloss": "to be",
+  "pos": "verb",
+  "example": {
+   "trad": "他是我的朋友。",
+   "simp": "他是我的朋友。",
+   "pinyin": "Tā shì wǒ de péngyǒu.",
+   "english": "He is my friend."
+  }
+ },
+ {
+  "id": "w4e86",
+  "rank": 5,
+  "trad": "了",
+  "simp": "了",
+  "pinyin": "le",
+  "pinyinNumbered": "le5",
+  "tones": [
+   5
+  ],
+  "gloss": "(completed action / change of state)",
+  "pos": "particle",
+  "note": "After a verb it marks a completed action; at the end of a sentence it marks a change of state: 我餓了 = I'm hungry now.",
+  "example": {
+   "trad": "我吃飽了。",
+   "simp": "我吃饱了。",
+   "pinyin": "Wǒ chī bǎo le.",
+   "english": "I'm full."
+  }
+ },
+ {
+  "id": "w4e0d",
+  "rank": 6,
+  "trad": "不",
+  "simp": "不",
+  "pinyin": "bù",
+  "pinyinNumbered": "bu4",
+  "tones": [
+   4
+  ],
+  "gloss": "not; no",
+  "pos": "adv",
+  "note": "Changes to bú before a 4th tone: 不要 bú yào.",
+  "example": {
+   "trad": "我不知道。",
+   "simp": "我不知道。",
+   "pinyin": "Wǒ bù zhīdào.",
+   "english": "I don't know."
+  }
+ },
+ {
+  "id": "w77e5-9053",
+  "rank": 7,
+  "trad": "知道",
+  "simp": "知道",
+  "pinyin": "zhī dào",
+  "pinyinNumbered": "zhi1 dao4",
+  "tones": [
+   1,
+   4
+  ],
+  "gloss": "to know",
+  "hint": "a fact",
+  "pos": "verb",
+  "note": "Know a fact or piece of information. For knowing a person, use 認識.",
+  "example": {
+   "trad": "你知道他住哪裡嗎？",
+   "simp": "你知道他住哪里吗？",
+   "pinyin": "Nǐ zhīdào tā zhù nǎlǐ ma?",
+   "english": "Do you know where he lives?"
+  }
+ },
+ {
+  "id": "w8a8d-8b58",
+  "rank": 8,
+  "trad": "認識",
+  "simp": "认识",
+  "pinyin": "rèn shì",
+  "pinyinNumbered": "ren4 shi4",
+  "tones": [
+   4,
+   4
+  ],
+  "gloss": "to know",
+  "hint": "a person",
+  "pos": "verb",
+  "note": "Know a person, be acquainted with. Also 'to recognize'.",
+  "example": {
+   "trad": "很高興認識你。",
+   "simp": "很高兴认识你。",
+   "pinyin": "Hěn gāoxìng rènshì nǐ.",
+   "english": "Nice to meet you."
+  }
+ },
+ {
+  "id": "w4f60-597d",
+  "rank": 9,
+  "trad": "你好",
+  "simp": "你好",
+  "pinyin": "nǐ hǎo",
+  "pinyinNumbered": "ni3 hao3",
+  "tones": [
+   3,
+   3
+  ],
+  "spokenAs": "ní hǎo",
+  "gloss": "hello",
+  "pos": "phrase",
+  "example": {
+   "trad": "你好，我叫小明。",
+   "simp": "你好，我叫小明。",
+   "pinyin": "Nǐ hǎo, wǒ jiào Xiǎomíng.",
+   "english": "Hello, my name is Xiaoming."
+  }
+ },
+ {
+  "id": "w5783-573e",
+  "rank": 10,
+  "trad": "垃圾",
+  "simp": "垃圾",
+  "pinyin": "lè sè",
+  "pinyinNumbered": "le4 se4",
+  "tones": [
+   4,
+   4
+  ],
+  "gloss": "trash; garbage",
+  "pos": "noun",
+  "note": "Taiwan pronunciation is lèsè; mainland says lājī.",
+  "example": {
+   "trad": "垃圾要拿出去丟。",
+   "simp": "垃圾要拿出去丢。",
+   "pinyin": "Lèsè yào ná chūqù diū.",
+   "english": "The trash needs to be taken out."
+  }
+ }
+]
