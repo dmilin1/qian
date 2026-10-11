@@ -1,111 +1,314 @@
+@import 'tailwindcss';
+
+/* Class-based dark mode: <html class="dark"> is set by ThemeSync (and the pre-paint script in
+   index.html) from settings.theme, resolving "system" via prefers-color-scheme. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ------------------------------------------------------------------------------------------
+   Design tokens. Every color is a CSS variable so both themes share one set of utilities.
+   Contrast (WCAG): ink/muted, accent text, danger, success and all tone colors are >= 4.5:1
+   on --paper and --card in both themes. --faint is for decorative/secondary hints only.
+   ------------------------------------------------------------------------------------------ */
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  --paper: #f6f1e7; /* warm off-white page */
+  --card: #fffcf6; /* raised surface */
+  --sunken: #eee7d9; /* wells, hovers, tracks */
+  --line: #e2d9c9; /* hairlines */
+  --line-strong: #cfc4b1;
+  --ink: #1d1a16; /* deep ink text */
+  --muted: #6a6157;
+  --faint: #7d7367;
+  --accent: #b8361e; /* cinnabar seal red (text/icons) */
+  --accent-solid: #b8361e; /* filled buttons */
+  --accent-solid-hover: #9e2d18;
+  --accent-ink: #ffffff; /* text on accent-solid */
+  --accent-soft: #f6e2da; /* tinted backgrounds */
+  --danger: #a32a1a;
+  --danger-soft: #f8e1dc;
+  --success: #286b40;
+  --success-soft: #dcefe1;
+  --focus: #b8361e;
+  --shadow-color: 40 30 15;
+  --backdrop: rgb(29 26 22 / 0.42);
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  /* Pinyin tone colors (Pleco convention). */
+  --tone-1: #c4271f; /* high level: red */
+  --tone-2: #19733a; /* rising: green */
+  --tone-3: #1f5fc2; /* dipping: blue */
+  --tone-4: #8a3fb8; /* falling: purple */
+  --tone-5: #655f58; /* neutral: gray */
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --content-max: 34rem;
+  --tabbar-h: 4rem;
 
-  @media (max-width: 1024px) {
-    font-size: 16px;
+  color-scheme: light;
+}
+
+:root.dark {
+  --paper: #141312; /* deep ink / charcoal */
+  --card: #1e1c1a;
+  --sunken: #282522;
+  --line: #312d29;
+  --line-strong: #453f39;
+  --ink: #ede7dc; /* soft off-white */
+  --muted: #a89f92;
+  --faint: #8a8276;
+  --accent: #e2684d;
+  --accent-solid: #c9452b;
+  --accent-solid-hover: #d65639;
+  --accent-ink: #ffffff;
+  --accent-soft: #3a211b;
+  --danger: #f0806a;
+  --danger-soft: #3b1f1a;
+  --success: #6cc58c;
+  --success-soft: #1b3324;
+  --focus: #e2684d;
+  --shadow-color: 0 0 0;
+  --backdrop: rgb(0 0 0 / 0.6);
+
+  --tone-1: #ff7a70;
+  --tone-2: #5ccf84;
+  --tone-3: #74a9ff;
+  --tone-4: #cf95f2;
+  --tone-5: #a9a39b;
+
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-card: var(--card);
+  --color-sunken: var(--sunken);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-accent: var(--accent);
+  --color-accent-solid: var(--accent-solid);
+  --color-accent-solid-hover: var(--accent-solid-hover);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-tone-1: var(--tone-1);
+  --color-tone-2: var(--tone-2);
+  --color-tone-3: var(--tone-3);
+  --color-tone-4: var(--tone-4);
+  --color-tone-5: var(--tone-5);
+  --container-content: var(--content-max);
+  --shadow-card: 0 1px 2px rgb(var(--shadow-color) / 0.06), 0 6px 24px -8px rgb(var(--shadow-color) / 0.14);
+  --shadow-pop: 0 2px 6px rgb(var(--shadow-color) / 0.1), 0 18px 48px -12px rgb(var(--shadow-color) / 0.3);
+}
+
+@theme {
+  --font-sans:
+    system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', Arial, sans-serif;
+  /* Pinyin: a clear sans with good diacritic coverage (tone marks incl. ǎ ǚ). */
+  --font-pinyin:
+    system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', Arial, sans-serif;
+  /* Traditional-form CJK fonts first so glyphs follow Taiwan standard shapes. */
+  --font-hanzi:
+    'PingFang TC', 'Noto Sans TC', 'Source Han Sans TC', 'Microsoft JhengHei', 'Heiti TC',
+    'Noto Sans CJK TC', sans-serif;
+
+  --animate-fade-in: fade-in 200ms ease-out both;
+  --animate-rise-in: rise-in 260ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  --animate-flip-in: flip-in 320ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  --animate-pulse-ring: pulse-ring 1.2s ease-out infinite;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes rise-in {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  /* Subtle "card turn": a small tilt, not a full 180deg flip. */
+  @keyframes flip-in {
+    from {
+      opacity: 0;
+      transform: perspective(900px) rotateX(-8deg) translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @keyframes pulse-ring {
+    from {
+      box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 45%, transparent);
+    }
+    to {
+      box-shadow: 0 0 0 14px color-mix(in srgb, var(--accent) 0%, transparent);
+    }
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+@layer base {
+  html {
+    background: var(--paper);
+    color: var(--ink);
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
   }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
+  body {
+    min-height: 100dvh;
+    font-family: var(--font-sans);
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.5;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-}
-
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
-}
-
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
+  #root {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+  }
+  button,
+  [role='button'],
+  a,
+  input,
+  select,
+  label {
+    touch-action: manipulation;
+  }
+  :focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+  }
+  ::selection {
+    background: var(--accent-soft);
+  }
+  [lang|='zh'] {
+    font-family: var(--font-hanzi);
+  }
+  [lang='zh-Latn-pinyin'] {
+    font-family: var(--font-pinyin);
   }
 }
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
+
+/* ----- Pinyin tone colors (only when the .tone-colors wrapper is present) ----- */
+.tone-colors .tone-1 {
+  color: var(--tone-1);
+}
+.tone-colors .tone-2 {
+  color: var(--tone-2);
+}
+.tone-colors .tone-3 {
+  color: var(--tone-3);
+}
+.tone-colors .tone-4 {
+  color: var(--tone-4);
+}
+.tone-colors .tone-5 {
+  color: var(--tone-5);
+}
+
+/* ----- Keyboard hints: only on devices with a fine pointer that can hover (desktops). ----- */
+.kbd-hint {
+  display: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .kbd-hint {
+    display: inline-flex;
   }
 }
-p {
-  margin: 0;
+
+/* ----- Range slider ----- */
+.qian-range {
+  --fill: 50%;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 2.75rem; /* touch target; the track is drawn smaller */
+  background: transparent;
+  cursor: pointer;
+}
+.qian-range:focus-visible {
+  outline: none;
+}
+.qian-range::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(to right, var(--accent-solid) var(--fill), var(--sunken) var(--fill));
+}
+.qian-range::-moz-range-track {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--sunken);
+}
+.qian-range::-moz-range-progress {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--accent-solid);
+}
+.qian-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.375rem;
+  height: 1.375rem;
+  margin-top: calc(3px - 0.6875rem);
+  border-radius: 999px;
+  background: var(--card);
+  border: 2px solid var(--accent-solid);
+  box-shadow: 0 1px 3px rgb(var(--shadow-color) / 0.25);
+}
+.qian-range::-moz-range-thumb {
+  width: 1.375rem;
+  height: 1.375rem;
+  border-radius: 999px;
+  background: var(--card);
+  border: 2px solid var(--accent-solid);
+  box-shadow: 0 1px 3px rgb(var(--shadow-color) / 0.25);
+}
+.qian-range:focus-visible::-webkit-slider-thumb {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+.qian-range:focus-visible::-moz-range-thumb {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
 }
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
+/* ----- Dialog ----- */
+dialog.qian-dialog::backdrop {
+  background: var(--backdrop);
+}
+@media (prefers-reduced-motion: no-preference) {
+  dialog.qian-dialog[open] {
+    animation: rise-in 220ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+  dialog.qian-dialog[open]::backdrop {
+    animation: fade-in 200ms ease-out both;
+  }
 }
 
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+/* ----- Reduced motion: no animations or transitions anywhere. ----- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

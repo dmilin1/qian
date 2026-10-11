@@ -1,0 +1,674 @@
+[
+  {
+    "rank": 51,
+    "trad": "啊",
+    "pinyin": "a",
+    "gloss": "(exclamation / softening particle)",
+    "pos": "particle",
+    "note": "Ends a sentence to add feeling or soften it: 好啊 'sure!', 是啊 'yeah'. Its sound blends with the word before: after -a/-e/-i/-o/-ü it sounds like ya (呀), after -u/-ao/-ou like wa (哇), so 好啊 is heard as hǎo wa, and after -n like na (哪); said alone, ā or á means 'ah!' or 'huh?'.",
+    "example": {
+      "trad": "好啊，我們一起去！",
+      "pinyin": "Hǎo a, wǒmen yīqǐ qù!",
+      "english": "Sure, let's go together!"
+    }
+  },
+  {
+    "rank": 52,
+    "trad": "得",
+    "pinyin": "de",
+    "gloss": "(links a verb to how / how well)",
+    "pos": "particle",
+    "note": "Goes after a verb or adjective to say how or how well: 說得很好 'speaks well', 聽得懂 'can understand (by listening)'. Other readings: dé 'to get' (得到 dé dào) and děi 'must' (我得走了 wǒ děi zǒu le). Sounds the same as 的 and 地.",
+    "example": {
+      "trad": "你中文說得很好。",
+      "pinyin": "Nǐ Zhōngwén shuō de hěn hǎo.",
+      "english": "Your Chinese is really good."
+    }
+  },
+  {
+    "rank": 53,
+    "trad": "但",
+    "pinyin": "dàn",
+    "gloss": "but",
+    "hint": "one syllable",
+    "pos": "conj",
+    "note": "Short, slightly more formal form of 但是. In everyday speech 但是 or 可是 kě shì is more common.",
+    "example": {
+      "trad": "我想去，但沒有時間。",
+      "pinyin": "Wǒ xiǎng qù, dàn méiyǒu shíjiān.",
+      "english": "I want to go, but I don't have time."
+    }
+  },
+  {
+    "rank": 54,
+    "trad": "現在",
+    "pinyin": "xiàn zài",
+    "gloss": "now; right now",
+    "pos": "noun",
+    "example": {
+      "trad": "你現在在哪裡？",
+      "pinyin": "Nǐ xiànzài zài nǎlǐ?",
+      "english": "Where are you right now?"
+    }
+  },
+  {
+    "rank": 55,
+    "trad": "怎麼",
+    "pinyin": "zěn me",
+    "gloss": "how; how come",
+    "hint": "how (to do); how come (surprised)",
+    "pos": "adv",
+    "note": "Before a verb it asks how to do something: 怎麼用？ 'how do you use it?'. Before a situation it asks 'how come', often surprised: 你怎麼來了？ 'how come you're here?'.",
+    "example": {
+      "trad": "這個怎麼用？",
+      "pinyin": "Zhège zěnme yòng?",
+      "english": "How do you use this?"
+    }
+  },
+  {
+    "rank": 56,
+    "trad": "中",
+    "pinyin": "zhōng",
+    "gloss": "middle; in; in progress",
+    "hint": "one syllable, not 'inside'; after a verb: in progress",
+    "pos": "noun",
+    "note": "After a verb it can mean 'in progress', common on Taiwan signs and in speech: 營業中 'open', 考慮中 'thinking it over'. Other reading zhòng 'to hit; to win', as in 中獎 zhòng jiǎng 'win a prize'.",
+    "example": {
+      "trad": "我還在考慮中。",
+      "pinyin": "Wǒ hái zài kǎolǜ zhōng.",
+      "english": "I'm still thinking it over."
+    }
+  },
+  {
+    "rank": 57,
+    "trad": "你們",
+    "pinyin": "nǐ men",
+    "gloss": "you (plural); you guys",
+    "pos": "pron",
+    "example": {
+      "trad": "你們要去哪裡？",
+      "pinyin": "Nǐmen yào qù nǎlǐ?",
+      "english": "Where are you guys going?"
+    }
+  },
+  {
+    "rank": 58,
+    "trad": "年",
+    "pinyin": "nián",
+    "gloss": "year",
+    "pos": "noun",
+    "note": "Counted directly, with no measure word: 三年 sān nián 'three years'. 今年 'this year', 明年 'next year', 去年 'last year'.",
+    "example": {
+      "trad": "我在台灣住了三年。",
+      "pinyin": "Wǒ zài Táiwān zhù le sān nián.",
+      "english": "I lived in Taiwan for three years."
+    }
+  },
+  {
+    "rank": 59,
+    "trad": "自己",
+    "pinyin": "zì jǐ",
+    "gloss": "oneself; by oneself; one's own",
+    "pos": "pron",
+    "example": {
+      "trad": "我自己來就好。",
+      "pinyin": "Wǒ zìjǐ lái jiù hǎo.",
+      "english": "It's fine, I'll do it myself."
+    }
+  },
+  {
+    "rank": 60,
+    "trad": "事",
+    "pinyin": "shì",
+    "gloss": "matter; thing (to do); business",
+    "hint": "one syllable; an affair, not an object",
+    "pos": "noun",
+    "note": "Very common in 沒事 méi shì 'it's nothing / I'm fine' and 有事 yǒu shì 'I'm busy / something's up'. A physical thing is 東西. Taiwan does not use the mainland erhua 事兒.",
+    "example": {
+      "trad": "沒事，你別擔心。",
+      "pinyin": "Méishì, nǐ bié dānxīn.",
+      "english": "It's nothing, don't worry."
+    }
+  },
+  {
+    "rank": 61,
+    "trad": "如果",
+    "pinyin": "rú guǒ",
+    "gloss": "if",
+    "pos": "conj",
+    "note": "Often paired with 就 jiù in the second half: 如果下雨，我就不去 'if it rains, I won't go'.",
+    "example": {
+      "trad": "如果你累了，就早點睡。",
+      "pinyin": "Rúguǒ nǐ lèi le, jiù zǎo diǎn shuì.",
+      "english": "If you're tired, go to bed early."
+    }
+  },
+  {
+    "rank": 62,
+    "trad": "裡",
+    "pinyin": "lǐ",
+    "gloss": "in; inside",
+    "hint": "one syllable, after a place or thing",
+    "pos": "noun",
+    "note": "Goes after a noun to mean 'in': 家裡 jiā lǐ 'at home', 包包裡 'in the bag'. Standing alone, 'inside' is 裡面 lǐ miàn.",
+    "example": {
+      "trad": "我的手機在包包裡。",
+      "pinyin": "Wǒ de shǒujī zài bāobāo lǐ.",
+      "english": "My phone is in my bag."
+    }
+  },
+  {
+    "rank": 63,
+    "trad": "多",
+    "pinyin": "duō",
+    "gloss": "many; much; a lot",
+    "hint": "one syllable",
+    "pos": "adj",
+    "note": "Also 'how' in questions: 多大 'how old/big', 多久 'how long'; and 'more than' after numbers: 二十多 'twenty-something'. For the 'how' sense MOE gives duó, but most speakers say duō.",
+    "example": {
+      "trad": "今天人好多喔！",
+      "pinyin": "Jīntiān rén hǎo duō o!",
+      "english": "There are so many people today!"
+    }
+  },
+  {
+    "rank": 64,
+    "trad": "因為",
+    "pinyin": "yīn wèi",
+    "gloss": "because",
+    "pos": "conj",
+    "note": "Often paired with 所以 suǒ yǐ 'so': 因為下雨，所以我沒去 'because it rained, I didn't go'.",
+    "example": {
+      "trad": "因為下雨，我們沒出去。",
+      "pinyin": "Yīnwèi xiàyǔ, wǒmen méi chūqù.",
+      "english": "We didn't go out because it rained."
+    }
+  },
+  {
+    "rank": 65,
+    "trad": "從",
+    "pinyin": "cóng",
+    "gloss": "from",
+    "hint": "a starting point",
+    "pos": "prep",
+    "note": "Marks where or when something starts: 從台北來 'come from Taipei', 從明天開始 'starting tomorrow'. Often paired with 到: 從早到晚 'from morning to night'. MOE also lists rare literary readings (zòng, cōng, zōng).",
+    "example": {
+      "trad": "我是從台北來的。",
+      "pinyin": "Wǒ shì cóng Táiběi lái de.",
+      "english": "I'm from Taipei."
+    }
+  },
+  {
+    "rank": 66,
+    "trad": "而",
+    "pinyin": "ér",
+    "gloss": "and yet; but rather; whereas",
+    "hint": "formal connector",
+    "pos": "conj",
+    "note": "A somewhat formal connector. In speech it mostly appears in set patterns: 不是…而是… 'not … but rather …', 而且 'moreover', 而已 'that's all'.",
+    "example": {
+      "trad": "問題不是錢，而是時間。",
+      "pinyin": "Wèntí bùshì qián, érshì shíjiān.",
+      "english": "The problem isn't money, it's time."
+    }
+  },
+  {
+    "rank": 67,
+    "trad": "這樣",
+    "pinyin": "zhè yàng",
+    "gloss": "like this; this way",
+    "hint": "manner or situation",
+    "pos": "pron",
+    "note": "Describes a way or a situation: 這樣做 'do it this way', 是這樣 'it's like this'. Before an adjective ('this big'), 這麼 is more usual. Taiwan speakers often say zhèi yàng.",
+    "example": {
+      "trad": "不要這樣啦！",
+      "pinyin": "Bùyào zhèyàng la!",
+      "english": "Don't be like that!"
+    }
+  },
+  {
+    "rank": 68,
+    "trad": "只",
+    "pinyin": "zhǐ",
+    "gloss": "only; just",
+    "hint": "one syllable, before a verb",
+    "pos": "adv",
+    "note": "Goes before the verb: 我只要一個 'I only want one'. 只有 'only (have)' and 只是 'just; merely' are common. Other reading zhī is the measure word for animals, written 隻 in Traditional.",
+    "example": {
+      "trad": "我只喝一杯。",
+      "pinyin": "Wǒ zhǐ hē yī bēi.",
+      "english": "I'll just have one glass."
+    }
+  },
+  {
+    "rank": 69,
+    "trad": "隻",
+    "pinyin": "zhī",
+    "gloss": "(measure word for animals)",
+    "pos": "measure",
+    "note": "Counts animals (一隻狗 'a dog', 兩隻貓 'two cats') and one of a pair (一隻手 'one hand'). Different tone from 只 zhǐ 'only'.",
+    "example": {
+      "trad": "我家有兩隻貓。",
+      "pinyin": "Wǒ jiā yǒu liǎng zhī māo.",
+      "english": "We have two cats at home."
+    }
+  },
+  {
+    "rank": 70,
+    "trad": "大",
+    "pinyin": "dà",
+    "gloss": "big; large; older",
+    "pos": "adj",
+    "note": "Also 'older' for age: 他比我大兩歲 'he's two years older than me'. Other reading dài only in 大夫 dài fu 'doctor' (old-fashioned).",
+    "example": {
+      "trad": "你家好大喔！",
+      "pinyin": "Nǐ jiā hǎo dà o!",
+      "english": "Your place is so big!"
+    }
+  },
+  {
+    "rank": 71,
+    "trad": "下",
+    "pinyin": "xià",
+    "gloss": "down; below; next; to get off",
+    "hint": "one syllable",
+    "pos": "verb",
+    "note": "Opposite of 上: 下車 'get off (a vehicle)', 下雨 'to rain', 下班 'get off work', 下次 'next time'. After a verb it means 'down' (坐下 'sit down'); 一下 makes a request softer.",
+    "example": {
+      "trad": "我在下一站下車。",
+      "pinyin": "Wǒ zài xià yī zhàn xiàchē.",
+      "english": "I'm getting off at the next stop."
+    }
+  },
+  {
+    "rank": 72,
+    "trad": "用",
+    "pinyin": "yòng",
+    "gloss": "to use; with (a tool)",
+    "pos": "verb",
+    "note": "Also means 'with/using': 用手吃 'eat with your hands'. 不用 bù yòng means 'no need'.",
+    "example": {
+      "trad": "你會用筷子嗎？",
+      "pinyin": "Nǐ huì yòng kuàizi ma?",
+      "english": "Can you use chopsticks?"
+    }
+  },
+  {
+    "rank": 73,
+    "trad": "已經",
+    "pinyin": "yǐ jīng",
+    "gloss": "already",
+    "pos": "adv",
+    "note": "Usually comes with 了 le at the end: 他已經走了 'he's already left'.",
+    "example": {
+      "trad": "他已經走了。",
+      "pinyin": "Tā yǐjīng zǒu le.",
+      "english": "He's already left."
+    }
+  },
+  {
+    "rank": 74,
+    "trad": "等",
+    "pinyin": "děng",
+    "gloss": "to wait (for)",
+    "pos": "verb",
+    "note": "等一下 means 'wait a moment' or 'in a moment'. 等…再… means 'once …, then …': 等你到了再說 'we'll talk when you get here'. In writing it can also mean 'etc.'",
+    "example": {
+      "trad": "等我一下，我馬上來！",
+      "pinyin": "Děng wǒ yīxià, wǒ mǎshàng lái!",
+      "english": "Wait a second, I'll be right there!"
+    }
+  },
+  {
+    "rank": 75,
+    "trad": "呢",
+    "pinyin": "ne",
+    "gloss": "(what about…? / softens a question)",
+    "pos": "particle",
+    "note": "Asks 'what about …?' (你呢？ 'and you?'), softens a question (怎麼辦呢？ 'what should we do?'), or marks an ongoing state (他在睡覺呢 'he's sleeping'). Other reading ní only in 呢絨 'wool fabric'.",
+    "example": {
+      "trad": "我很好，你呢？",
+      "pinyin": "Wǒ hěn hǎo, nǐ ne?",
+      "english": "I'm good, and you?"
+    }
+  },
+  {
+    "rank": 76,
+    "trad": "點",
+    "pinyin": "diǎn",
+    "gloss": "o'clock; a bit; to order (food)",
+    "hint": "one syllable; 'a bit' after an adjective",
+    "pos": "measure",
+    "note": "Tells the time: 三點 'three o'clock', 幾點？ 'what time?'. 一點 means 'a little'. As a verb it means 'to order' (點菜) or 'to light' (點火). Taiwan says 一點, not mainland erhua 一點兒.",
+    "example": {
+      "trad": "現在幾點了？",
+      "pinyin": "Xiànzài jǐ diǎn le?",
+      "english": "What time is it now?"
+    }
+  },
+  {
+    "rank": 77,
+    "trad": "這裡",
+    "pinyin": "zhè lǐ",
+    "gloss": "here",
+    "hint": "this place, not 'this side'",
+    "pos": "pron",
+    "note": "Taiwan says 這裡 or 這邊 zhè biān for 'here', not the mainland erhua 這兒 zhèr.",
+    "example": {
+      "trad": "這裡有人坐嗎？",
+      "pinyin": "Zhèlǐ yǒu rén zuò ma?",
+      "english": "Is anyone sitting here?"
+    }
+  },
+  {
+    "rank": 78,
+    "trad": "最",
+    "pinyin": "zuì",
+    "gloss": "most; the most …; -est",
+    "pos": "adv",
+    "note": "Goes before an adjective or verb: 最好 'best', 最喜歡 'like the most', 最近 'lately'.",
+    "example": {
+      "trad": "我最喜歡吃芒果。",
+      "pinyin": "Wǒ zuì xǐhuān chī mángguǒ.",
+      "english": "I like mangoes the best."
+    }
+  },
+  {
+    "rank": 79,
+    "trad": "再",
+    "pinyin": "zài",
+    "gloss": "again; then (afterwards)",
+    "hint": "not yet happened",
+    "pos": "adv",
+    "note": "'Again' for something that hasn't happened yet (再說一次 'say it again'); 又 yòu is for a repeat that already happened. Also 'then, after that': 吃完再走 'eat first, then go'. Same sound as 在 zài 'at'.",
+    "example": {
+      "trad": "請再說一次。",
+      "pinyin": "Qǐng zài shuō yī cì.",
+      "english": "Please say it again."
+    }
+  },
+  {
+    "rank": 80,
+    "trad": "真",
+    "pinyin": "zhēn",
+    "gloss": "really; so; real",
+    "hint": "literally 'true'; one syllable, before an adjective",
+    "pos": "adv",
+    "note": "Before an adjective it means 'really, so': 真好 'so nice', 真可愛 'so cute'. On its own, 'really?' is 真的 zhēn de.",
+    "example": {
+      "trad": "今天天氣真好！",
+      "pinyin": "Jīntiān tiānqì zhēn hǎo!",
+      "english": "The weather is really nice today!"
+    }
+  },
+  {
+    "rank": 81,
+    "trad": "可能",
+    "pinyin": "kě néng",
+    "gloss": "maybe; possible; possibly",
+    "hint": "the most common 'maybe'; also 'possible'",
+    "pos": "adv",
+    "example": {
+      "trad": "他可能不來了。",
+      "pinyin": "Tā kěnéng bù lái le.",
+      "english": "He might not come."
+    }
+  },
+  {
+    "rank": 82,
+    "trad": "跟",
+    "pinyin": "gēn",
+    "gloss": "with; and; to follow",
+    "hint": "everyday spoken; also 'to follow'",
+    "pos": "prep",
+    "note": "Very common in Taiwan for 'with/and' (instead of 和): 我跟你去 'I'll go with you'. Also 'to' after talking verbs (跟他說 'tell him') and the verb 'to follow'.",
+    "example": {
+      "trad": "我跟你一起去。",
+      "pinyin": "Wǒ gēn nǐ yīqǐ qù.",
+      "english": "I'll go with you."
+    }
+  },
+  {
+    "rank": 83,
+    "trad": "可",
+    "pinyin": "kě",
+    "gloss": "can; may; (emphasis)",
+    "hint": "one syllable; mostly in set phrases",
+    "pos": "aux",
+    "note": "Mostly heard inside 可以 'can', 可是 'but', 可能 and 可愛, and in the question 可不可以 'can I?' (a shortened 可以不可以). Before a verb it can add emphasis (你可要小心喔 'you'd better be careful'); other reading kè only in 可汗 'khan'.",
+    "example": {
+      "trad": "我可不可以坐這裡？",
+      "pinyin": "Wǒ kě bù kěyǐ zuò zhèlǐ?",
+      "english": "Can I sit here?"
+    }
+  },
+  {
+    "rank": 84,
+    "trad": "問題",
+    "pinyin": "wèn tí",
+    "gloss": "question; problem",
+    "pos": "noun",
+    "note": "沒問題 méi wèn tí 'no problem' is a very common reply.",
+    "example": {
+      "trad": "我可以問你一個問題嗎？",
+      "pinyin": "Wǒ kěyǐ wèn nǐ yī ge wèntí ma?",
+      "english": "Can I ask you a question?"
+    }
+  },
+  {
+    "rank": 85,
+    "trad": "又",
+    "pinyin": "yòu",
+    "gloss": "again; both … and",
+    "hint": "already happened",
+    "pos": "adv",
+    "note": "'Again' for a repeat that already happened: 他又遲到了 'he's late again' (for the future use 再 zài). 又…又… means 'both … and …': 又便宜又好吃 'cheap and tasty'.",
+    "example": {
+      "trad": "你又遲到了！",
+      "pinyin": "Nǐ yòu chídào le!",
+      "english": "You're late again!"
+    }
+  },
+  {
+    "rank": 86,
+    "trad": "時候",
+    "pinyin": "shí hòu",
+    "gloss": "time; moment; when …",
+    "hint": "a point in time",
+    "pos": "noun",
+    "note": "Mostly in …的時候 'when …' (我小的時候 'when I was little') and 什麼時候 'when?'. Time as an amount is 時間. Taiwan says shí hòu; the mainland usually says shí hou.",
+    "example": {
+      "trad": "你什麼時候回來？",
+      "pinyin": "Nǐ shénme shíhòu huílai?",
+      "english": "When are you coming back?"
+    }
+  },
+  {
+    "rank": 87,
+    "trad": "誰",
+    "pinyin": "shéi",
+    "gloss": "who",
+    "pos": "pron",
+    "note": "Spoken shéi; shuí is the formal reading pronunciation, also heard in songs.",
+    "example": {
+      "trad": "你在跟誰講電話？",
+      "pinyin": "Nǐ zài gēn shéi jiǎng diànhuà?",
+      "english": "Who are you on the phone with?"
+    }
+  },
+  {
+    "rank": 88,
+    "trad": "但是",
+    "pinyin": "dàn shì",
+    "gloss": "but; however",
+    "hint": "two syllables, the firmer 'but'; not kě shì",
+    "pos": "conj",
+    "note": "Standard 'but'; 可是 kě shì is softer and very common in speech. MOE lists a neutral-tone dàn shi, but Taiwanese speakers usually say dàn shì.",
+    "example": {
+      "trad": "我很想去，但是我太累了。",
+      "pinyin": "Wǒ hěn xiǎng qù, dànshì wǒ tài lèi le.",
+      "english": "I really want to go, but I'm too tired."
+    }
+  },
+  {
+    "rank": 89,
+    "trad": "需要",
+    "pinyin": "xū yào",
+    "gloss": "to need; to require",
+    "pos": "verb",
+    "example": {
+      "trad": "你需要幫忙嗎？",
+      "pinyin": "Nǐ xūyào bāngmáng ma?",
+      "english": "Do you need help?"
+    }
+  },
+  {
+    "rank": 90,
+    "trad": "這些",
+    "pinyin": "zhè xiē",
+    "gloss": "these",
+    "pos": "pron",
+    "note": "Taiwan speakers often say zhèi xiē.",
+    "example": {
+      "trad": "這些是你的嗎？",
+      "pinyin": "Zhèxiē shì nǐ de ma?",
+      "english": "Are these yours?"
+    }
+  },
+  {
+    "rank": 91,
+    "trad": "快",
+    "pinyin": "kuài",
+    "gloss": "fast; quick; soon",
+    "pos": "adj",
+    "note": "快…了 means 'almost, about to': 快到了 'almost there'. 快一點 'hurry up'.",
+    "example": {
+      "trad": "快一點，我們要遲到了！",
+      "pinyin": "Kuài yīdiǎn, wǒmen yào chídào le!",
+      "english": "Hurry up, we're going to be late!"
+    }
+  },
+  {
+    "rank": 92,
+    "trad": "走",
+    "pinyin": "zǒu",
+    "gloss": "to walk; to leave",
+    "hint": "on foot, or to leave",
+    "pos": "verb",
+    "note": "In speech it often means 'to leave': 他走了 'he left', 我們走吧 'let's go'. Going to a place is usually 去 qù.",
+    "example": {
+      "trad": "時間不早了，我們走吧。",
+      "pinyin": "Shíjiān bù zǎo le, wǒmen zǒu ba.",
+      "english": "It's getting late, let's go."
+    }
+  },
+  {
+    "rank": 93,
+    "trad": "出",
+    "pinyin": "chū",
+    "gloss": "to go out; to come out; out",
+    "hint": "one syllable",
+    "pos": "verb",
+    "note": "Often in compounds and after verbs: 出門 'leave the house', 出去 'go out', 拿出來 'take out'.",
+    "example": {
+      "trad": "我現在要出門了。",
+      "pinyin": "Wǒ xiànzài yào chūmén le.",
+      "english": "I'm heading out now."
+    }
+  },
+  {
+    "rank": 94,
+    "trad": "後",
+    "pinyin": "hòu",
+    "gloss": "after; behind; back",
+    "hint": "one syllable",
+    "pos": "noun",
+    "note": "Mostly in set words: 以後 'after; later', 後面 'behind', 最後 'finally'. On its own it follows an event: 下班後 'after work'.",
+    "example": {
+      "trad": "下班後我們去吃飯。",
+      "pinyin": "Xiàbān hòu wǒmen qù chīfàn.",
+      "english": "Let's go eat after work."
+    }
+  },
+  {
+    "rank": 95,
+    "trad": "太",
+    "pinyin": "tài",
+    "gloss": "too; so (… !)",
+    "hint": "too much; or 'so …!' with le at the end",
+    "pos": "adv",
+    "note": "太…了 means 'too …' or, for good things, 'so …!': 太好了 'great!'. 不太 means 'not very': 不太好 'not so good'.",
+    "example": {
+      "trad": "這個太貴了！",
+      "pinyin": "Zhège tài guì le!",
+      "english": "This is too expensive!"
+    }
+  },
+  {
+    "rank": 96,
+    "trad": "更",
+    "pinyin": "gèng",
+    "gloss": "even more; more",
+    "hint": "one syllable; 'even more', before an adjective",
+    "pos": "adv",
+    "note": "Goes before an adjective or verb: 更好 'even better'. Other reading gēng means 'to change', as in 更新 gēng xīn 'to update'.",
+    "example": {
+      "trad": "今天比昨天更冷。",
+      "pinyin": "Jīntiān bǐ zuótiān gèng lěng.",
+      "english": "Today is even colder than yesterday."
+    }
+  },
+  {
+    "rank": 97,
+    "trad": "為什麼",
+    "pinyin": "wèi shén me",
+    "gloss": "why",
+    "pos": "adv",
+    "note": "Here 為 is wèi 'for'; in 因為 it is also wèi, but in 成為 'to become' and 以為 'to think (wrongly)' it is wéi.",
+    "example": {
+      "trad": "你為什麼不吃？",
+      "pinyin": "Nǐ wèishénme bù chī?",
+      "english": "Why aren't you eating?"
+    }
+  },
+  {
+    "rank": 98,
+    "trad": "覺得",
+    "pinyin": "jué de",
+    "gloss": "to feel; to think",
+    "hint": "an opinion or feeling",
+    "pos": "verb",
+    "note": "The everyday way to give an opinion, softer than 認為 rèn wéi. 覺 is read jiào in 睡覺 shuì jiào 'to sleep'.",
+    "example": {
+      "trad": "你覺得怎麼樣？",
+      "pinyin": "Nǐ juéde zěnmeyàng?",
+      "english": "What do you think?"
+    }
+  },
+  {
+    "rank": 99,
+    "trad": "聽",
+    "pinyin": "tīng",
+    "gloss": "to listen (to); to hear",
+    "hint": "to listen",
+    "pos": "verb",
+    "note": "聽到 or 聽見 means 'to hear (something)'; 聽得懂 means 'can understand by listening'. MOE also lists a rare literary reading tìng 'to allow'.",
+    "example": {
+      "trad": "你有沒有在聽？",
+      "pinyin": "Nǐ yǒu méiyǒu zài tīng?",
+      "english": "Are you even listening?"
+    }
+  },
+  {
+    "rank": 100,
+    "trad": "開始",
+    "pinyin": "kāi shǐ",
+    "gloss": "to begin; to start",
+    "pos": "verb",
+    "example": {
+      "trad": "電影快開始了。",
+      "pinyin": "Diànyǐng kuài kāishǐ le.",
+      "english": "The movie's about to start."
+    }
+  }
+]

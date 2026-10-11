@@ -1,0 +1,677 @@
+[
+  {
+    "rank": 401,
+    "trad": "清楚",
+    "pinyin": "qīng chǔ",
+    "gloss": "clear; to know clearly",
+    "hint": "clear, distinct",
+    "pos": "adj",
+    "note": "Taiwan keeps the full third tone on 楚 (mainland qīng chu). 我不清楚 'I'm not sure'.",
+    "example": {
+      "trad": "你說清楚一點。",
+      "pinyin": "Nǐ shuō qīngchǔ yīdiǎn.",
+      "english": "Say it more clearly."
+    }
+  },
+  {
+    "rank": 402,
+    "trad": "能夠",
+    "pinyin": "néng gòu",
+    "gloss": "to be able to; can",
+    "hint": "two syllables; capable of, formal",
+    "pos": "aux",
+    "note": "Same meaning as 能 néng, a little more formal or emphatic.",
+    "example": {
+      "trad": "我希望能夠幫上忙。",
+      "pinyin": "Wǒ xīwàng nénggòu bāng shàng máng.",
+      "english": "I hope I can help."
+    }
+  },
+  {
+    "rank": 403,
+    "trad": "間",
+    "pinyin": "jiān",
+    "gloss": "(measure word for rooms, shops)",
+    "pos": "measure",
+    "note": "Counts rooms and buildings: 一間房間, 這間店. Also means 'between' (之間). Other reading jiàn, as in 間接 jiàn jiē 'indirect'.",
+    "example": {
+      "trad": "這間餐廳很好吃。",
+      "pinyin": "Zhè jiān cāntīng hěn hǎochī.",
+      "english": "This restaurant is really good."
+    }
+  },
+  {
+    "rank": 404,
+    "trad": "求",
+    "pinyin": "qiú",
+    "gloss": "to beg; to plead; to seek",
+    "hint": "beg, plead",
+    "pos": "verb",
+    "note": "Also in 求婚 qiú hūn 'to propose marriage' and 要求 yāo qiú 'to demand'.",
+    "example": {
+      "trad": "我求你，不要走。",
+      "pinyin": "Wǒ qiú nǐ, bùyào zǒu.",
+      "english": "I'm begging you, don't go."
+    }
+  },
+  {
+    "rank": 405,
+    "trad": "表現",
+    "pinyin": "biǎo xiàn",
+    "gloss": "to perform (well/badly); performance",
+    "hint": "how well someone does",
+    "pos": "verb",
+    "note": "Means how someone does or behaves (表現很好 'did well'), not a stage show (表演 biǎo yǎn).",
+    "example": {
+      "trad": "他今天表現得很好。",
+      "pinyin": "Tā jīntiān biǎoxiàn de hěn hǎo.",
+      "english": "He did really well today."
+    }
+  },
+  {
+    "rank": 406,
+    "trad": "全",
+    "pinyin": "quán",
+    "gloss": "whole; entire; all",
+    "hint": "one syllable, before a noun (the whole family)",
+    "pos": "adj",
+    "note": "Before nouns: 全家 quán jiā 'the whole family', 全世界 'the whole world'. As an adverb: 全都 quán dōu 'all of it'.",
+    "example": {
+      "trad": "全家人都來了。",
+      "pinyin": "Quánjiā rén dōu lái le.",
+      "english": "The whole family came."
+    }
+  },
+  {
+    "rank": 407,
+    "trad": "門",
+    "pinyin": "mén",
+    "gloss": "door; gate",
+    "pos": "noun",
+    "note": "出門 chū mén 'to go out'. Also a measure word for school subjects: 一門課 yī mén kè.",
+    "example": {
+      "trad": "請把門關上。",
+      "pinyin": "Qǐng bǎ mén guānshàng.",
+      "english": "Please close the door."
+    }
+  },
+  {
+    "rank": 408,
+    "trad": "消息",
+    "pinyin": "xiāo xí",
+    "gloss": "news; word (from someone)",
+    "hint": "news one hears, not TV news",
+    "pos": "noun",
+    "note": "Taiwan reads 息 as xí (mainland xiāo xi). 好消息 hǎo xiāo xí 'good news'.",
+    "example": {
+      "trad": "我有一個好消息！",
+      "pinyin": "Wǒ yǒu yī ge hǎo xiāoxí!",
+      "english": "I've got good news!"
+    }
+  },
+  {
+    "rank": 409,
+    "trad": "女兒",
+    "pinyin": "nǚ ér",
+    "gloss": "daughter",
+    "pos": "noun",
+    "note": "兒 here is a full syllable ér, not erhua.",
+    "example": {
+      "trad": "我女兒今年上小學。",
+      "pinyin": "Wǒ nǚ'ér jīnnián shàng xiǎoxué.",
+      "english": "My daughter starts elementary school this year."
+    }
+  },
+  {
+    "rank": 410,
+    "trad": "老公",
+    "pinyin": "lǎo gōng",
+    "gloss": "husband",
+    "hint": "casual, everyday",
+    "pos": "noun",
+    "note": "The casual, affectionate word, also used to address him. 丈夫 is formal and 先生 is polite. With a light second syllable (lǎo gong) it is an old word for a eunuch.",
+    "example": {
+      "trad": "我老公很會煮飯。",
+      "pinyin": "Wǒ lǎogōng hěn huì zhǔfàn.",
+      "english": "My husband is a great cook."
+    }
+  },
+  {
+    "rank": 411,
+    "trad": "方式",
+    "pinyin": "fāng shì",
+    "gloss": "way; manner; mode",
+    "hint": "manner or style (e.g. way of paying)",
+    "pos": "noun",
+    "note": "生活方式 shēng huó fāng shì 'lifestyle'. Compare 方法 fāng fǎ 'method' and 辦法 bàn fǎ 'solution'.",
+    "example": {
+      "trad": "每個人的生活方式不一樣。",
+      "pinyin": "Měi ge rén de shēnghuó fāngshì bù yīyàng.",
+      "english": "Everyone lives differently."
+    }
+  },
+  {
+    "rank": 412,
+    "trad": "注意",
+    "pinyin": "zhù yì",
+    "gloss": "to pay attention; to watch out",
+    "hint": "pay attention to",
+    "pos": "verb",
+    "example": {
+      "trad": "過馬路要注意車子。",
+      "pinyin": "Guò mǎlù yào zhùyì chēzi.",
+      "english": "Watch out for cars when crossing the street."
+    }
+  },
+  {
+    "rank": 413,
+    "trad": "對不起",
+    "pinyin": "duì bu qǐ",
+    "gloss": "sorry; I apologize",
+    "hint": "apology for a real wrong",
+    "pos": "phrase",
+    "note": "A real apology. For small things (bumping someone, asking a favor) Taiwanese usually say 不好意思 bù hǎo yì si.",
+    "example": {
+      "trad": "對不起，我遲到了。",
+      "pinyin": "Duìbuqǐ, wǒ chídào le.",
+      "english": "Sorry I'm late."
+    }
+  },
+  {
+    "rank": 414,
+    "trad": "願意",
+    "pinyin": "yuàn yì",
+    "gloss": "to be willing to",
+    "pos": "verb",
+    "example": {
+      "trad": "你願意嫁給我嗎？",
+      "pinyin": "Nǐ yuànyì jià gěi wǒ ma?",
+      "english": "Will you marry me?"
+    }
+  },
+  {
+    "rank": 415,
+    "trad": "完成",
+    "pinyin": "wán chéng",
+    "gloss": "to complete; to finish",
+    "hint": "finish a task",
+    "pos": "verb",
+    "example": {
+      "trad": "我今天一定要完成這個報告。",
+      "pinyin": "Wǒ jīntiān yīdìng yào wánchéng zhège bàogào.",
+      "english": "I have to finish this report today."
+    }
+  },
+  {
+    "rank": 416,
+    "trad": "棒",
+    "pinyin": "bàng",
+    "gloss": "great; awesome",
+    "hint": "praise, 'awesome!'",
+    "pos": "adj",
+    "note": "As praise: 好棒！ hǎo bàng 'awesome!' Literally 'stick, club', as in 棒球 bàng qiú 'baseball'.",
+    "example": {
+      "trad": "你做得好棒！",
+      "pinyin": "Nǐ zuò de hǎo bàng!",
+      "english": "You did great!"
+    }
+  },
+  {
+    "rank": 417,
+    "trad": "調查",
+    "pinyin": "diào chá",
+    "gloss": "to investigate; investigation; survey",
+    "pos": "verb",
+    "note": "調 here is diào; its other reading tiáo means 'to adjust', as in 調整 tiáo zhěng.",
+    "example": {
+      "trad": "警察正在調查這件事。",
+      "pinyin": "Jǐngchá zhèngzài diàochá zhè jiàn shì.",
+      "english": "The police are investigating this."
+    }
+  },
+  {
+    "rank": 418,
+    "trad": "行動",
+    "pinyin": "xíng dòng",
+    "gloss": "action; to take action",
+    "hint": "taking action, not a body movement",
+    "pos": "noun",
+    "note": "行 here is xíng; it is háng in 銀行 yín háng (bank). In Taiwan 行動 also means mobile: 行動電源 xíng dòng diàn yuán (power bank).",
+    "example": {
+      "trad": "我們馬上開始行動。",
+      "pinyin": "Wǒmen mǎshàng kāishǐ xíngdòng.",
+      "english": "Let's take action right away."
+    }
+  },
+  {
+    "rank": 419,
+    "trad": "水",
+    "pinyin": "shuǐ",
+    "gloss": "water",
+    "pos": "noun",
+    "example": {
+      "trad": "我想喝一杯水。",
+      "pinyin": "Wǒ xiǎng hē yī bēi shuǐ.",
+      "english": "I'd like a glass of water."
+    }
+  },
+  {
+    "rank": 420,
+    "trad": "整個",
+    "pinyin": "zhěng ge",
+    "gloss": "whole; entire",
+    "hint": "two syllables; the whole (day, person)",
+    "pos": "adj",
+    "note": "MOE gives a neutral-tone 個 (zhěng ge); zhěng gè is also commonly heard. Also used as an adverb: 我整個傻眼 (I was totally stunned).",
+    "example": {
+      "trad": "我整個下午都在睡覺。",
+      "pinyin": "Wǒ zhěngge xiàwǔ dōu zài shuìjiào.",
+      "english": "I slept the whole afternoon."
+    }
+  },
+  {
+    "rank": 421,
+    "trad": "晚上",
+    "pinyin": "wǎn shang",
+    "gloss": "evening; night",
+    "hint": "time of day",
+    "pos": "noun",
+    "note": "MOE gives wǎn shang; many Taiwanese speakers say wǎn shàng with a full tone.",
+    "example": {
+      "trad": "晚上要不要一起吃飯？",
+      "pinyin": "Wǎnshang yào bù yào yīqǐ chīfàn?",
+      "english": "Want to have dinner together tonight?"
+    }
+  },
+  {
+    "rank": 422,
+    "trad": "花",
+    "pinyin": "huā",
+    "gloss": "flower; to spend (money, time)",
+    "pos": "noun",
+    "note": "As a verb it means to spend: 花錢 huā qián (spend money), 花時間 huā shí jiān (spend time). Counted with 朵 duǒ.",
+    "example": {
+      "trad": "這朵花好漂亮！",
+      "pinyin": "Zhè duǒ huā hǎo piàoliang!",
+      "english": "This flower is so pretty!"
+    }
+  },
+  {
+    "rank": 423,
+    "trad": "講",
+    "pinyin": "jiǎng",
+    "gloss": "to say; to speak; to tell",
+    "hint": "Taiwan's casual 'say', not shuō",
+    "pos": "verb",
+    "note": "Very common in Taiwan speech, often used where the mainland says 說: 講中文 (speak Chinese), 講電話 (talk on the phone).",
+    "example": {
+      "trad": "你講慢一點好不好？",
+      "pinyin": "Nǐ jiǎng màn yīdiǎn hǎo bù hǎo?",
+      "english": "Could you speak a little slower?"
+    }
+  },
+  {
+    "rank": 424,
+    "trad": "總是",
+    "pinyin": "zǒng shì",
+    "gloss": "always",
+    "hint": "habitually, every time",
+    "pos": "adv",
+    "example": {
+      "trad": "他總是遲到。",
+      "pinyin": "Tā zǒngshì chídào.",
+      "english": "He's always late."
+    }
+  },
+  {
+    "rank": 425,
+    "trad": "隊",
+    "pinyin": "duì",
+    "gloss": "team; line (of people)",
+    "hint": "sports team; group",
+    "pos": "noun",
+    "note": "Common in 排隊 pái duì (to wait in line) and 球隊 qiú duì (sports team).",
+    "example": {
+      "trad": "我們隊贏了！",
+      "pinyin": "Wǒmen duì yíng le!",
+      "english": "Our team won!"
+    }
+  },
+  {
+    "rank": 426,
+    "trad": "總統",
+    "pinyin": "zǒng tǒng",
+    "gloss": "president (of a country)",
+    "pos": "noun",
+    "example": {
+      "trad": "總統今天在電視上講話。",
+      "pinyin": "Zǒngtǒng jīntiān zài diànshì shàng jiǎnghuà.",
+      "english": "The president spoke on TV today."
+    }
+  },
+  {
+    "rank": 427,
+    "trad": "解決",
+    "pinyin": "jiě jué",
+    "gloss": "to solve; to resolve",
+    "hint": "a problem",
+    "pos": "verb",
+    "example": {
+      "trad": "這個問題很難解決。",
+      "pinyin": "Zhège wèntí hěn nán jiějué.",
+      "english": "This problem is hard to solve."
+    }
+  },
+  {
+    "rank": 428,
+    "trad": "大學",
+    "pinyin": "dà xué",
+    "gloss": "university; college",
+    "pos": "noun",
+    "note": "上大學 / 念大學 = to go to college. MOE also lists tài xué, meaning the ancient imperial academy (太學); not used in speech.",
+    "example": {
+      "trad": "她明年要上大學。",
+      "pinyin": "Tā míngnián yào shàng dàxué.",
+      "english": "She's starting university next year."
+    }
+  },
+  {
+    "rank": 429,
+    "trad": "生日",
+    "pinyin": "shēng rì",
+    "gloss": "birthday",
+    "pos": "noun",
+    "note": "生日快樂 shēng rì kuài lè 'happy birthday'. 過生日 guò shēng rì 'to celebrate a birthday'.",
+    "example": {
+      "trad": "今天是我老婆的生日。",
+      "pinyin": "Jīntiān shì wǒ lǎopo de shēngrì.",
+      "english": "Today is my wife's birthday."
+    }
+  },
+  {
+    "rank": 430,
+    "trad": "拉",
+    "pinyin": "lā",
+    "gloss": "to pull",
+    "hint": "opposite of push",
+    "pos": "verb",
+    "note": "Also 拉肚子 lā dù zi (to have diarrhea). Door signs in Taiwan say 推 (push) and 拉 (pull).",
+    "example": {
+      "trad": "這個門要用拉的。",
+      "pinyin": "Zhège mén yào yòng lā de.",
+      "english": "You have to pull this door."
+    }
+  },
+  {
+    "rank": 431,
+    "trad": "對於",
+    "pinyin": "duì yú",
+    "gloss": "regarding; with regard to",
+    "hint": "attitude toward something",
+    "pos": "prep",
+    "note": "Introduces the topic you have an attitude or opinion about, often at the start of a sentence. A bit formal; close to 關於 guān yú (about).",
+    "example": {
+      "trad": "對於這件事，我沒有意見。",
+      "pinyin": "Duìyú zhè jiàn shì, wǒ méiyǒu yìjiàn.",
+      "english": "I have no opinion on this matter."
+    }
+  },
+  {
+    "rank": 432,
+    "trad": "使用",
+    "pinyin": "shǐ yòng",
+    "gloss": "to use",
+    "hint": "formal",
+    "pos": "verb",
+    "note": "More formal than 用 yòng; common on signs and instructions.",
+    "example": {
+      "trad": "這裡不能使用手機。",
+      "pinyin": "Zhèlǐ bù néng shǐyòng shǒujī.",
+      "english": "You can't use your phone here."
+    }
+  },
+  {
+    "rank": 433,
+    "trad": "明天",
+    "pinyin": "míng tiān",
+    "gloss": "tomorrow",
+    "pos": "noun",
+    "example": {
+      "trad": "明天會下雨嗎？",
+      "pinyin": "Míngtiān huì xiàyǔ ma?",
+      "english": "Will it rain tomorrow?"
+    }
+  },
+  {
+    "rank": 434,
+    "trad": "努力",
+    "pinyin": "nǔ lì",
+    "gloss": "hard-working; to try hard",
+    "hint": "make an effort",
+    "pos": "adj",
+    "note": "Also a verb: 我會努力 (I'll do my best). 加油 is the cheer for it.",
+    "example": {
+      "trad": "他工作很努力。",
+      "pinyin": "Tā gōngzuò hěn nǔlì.",
+      "english": "He works very hard."
+    }
+  },
+  {
+    "rank": 435,
+    "trad": "漂亮",
+    "pinyin": "piào liang",
+    "gloss": "pretty; beautiful",
+    "hint": "everyday compliment; also 'nicely done', not měi",
+    "pos": "adj",
+    "note": "MOE gives a neutral-tone 亮 (piào liang); in Taiwan you will often hear piào liàng. Also means well done: 做得漂亮 (nicely done).",
+    "example": {
+      "trad": "你今天好漂亮！",
+      "pinyin": "Nǐ jīntiān hǎo piàoliang!",
+      "english": "You look so pretty today!"
+    }
+  },
+  {
+    "rank": 436,
+    "trad": "系統",
+    "pinyin": "xì tǒng",
+    "gloss": "system",
+    "pos": "noun",
+    "example": {
+      "trad": "公司的系統壞掉了。",
+      "pinyin": "Gōngsī de xìtǒng huàidiào le.",
+      "english": "The company's system is down."
+    }
+  },
+  {
+    "rank": 437,
+    "trad": "學",
+    "pinyin": "xué",
+    "gloss": "to learn; to study",
+    "hint": "everyday one-syllable word",
+    "pos": "verb",
+    "note": "The everyday word for learning something: 學中文 (learn Chinese), 學開車 (learn to drive). For studying at school Taiwan often says 念書 niàn shū.",
+    "example": {
+      "trad": "我想學開車。",
+      "pinyin": "Wǒ xiǎng xué kāichē.",
+      "english": "I want to learn to drive."
+    }
+  },
+  {
+    "rank": 438,
+    "trad": "歡迎",
+    "pinyin": "huān yíng",
+    "gloss": "welcome; to welcome",
+    "pos": "verb",
+    "note": "Shops greet you with 歡迎光臨 huān yíng guāng lín (welcome in).",
+    "example": {
+      "trad": "歡迎來我家玩！",
+      "pinyin": "Huānyíng lái wǒ jiā wán!",
+      "english": "You're welcome to come over to my place!"
+    }
+  },
+  {
+    "rank": 439,
+    "trad": "唯一",
+    "pinyin": "wéi yī",
+    "gloss": "only; sole",
+    "hint": "the one and only",
+    "pos": "adj",
+    "note": "Used before a noun with 的: 唯一的辦法 (the only way). Different from 只 zhǐ (only, as an adverb).",
+    "example": {
+      "trad": "他是我唯一的朋友。",
+      "pinyin": "Tā shì wǒ wéiyī de péngyǒu.",
+      "english": "He's my only friend."
+    }
+  },
+  {
+    "rank": 440,
+    "trad": "抓",
+    "pinyin": "zhuā",
+    "gloss": "to grab; to catch; to scratch",
+    "hint": "seize with the hand; arrest",
+    "pos": "verb",
+    "note": "抓到 = caught; 抓癢 zhuā yǎng = scratch an itch. MOE also lists a literary reading zhāo, which is not used in speech.",
+    "example": {
+      "trad": "警察抓到小偷了。",
+      "pinyin": "Jǐngchá zhuādào xiǎotōu le.",
+      "english": "The police caught the thief."
+    }
+  },
+  {
+    "rank": 441,
+    "trad": "保證",
+    "pinyin": "bǎo zhèng",
+    "gloss": "to guarantee; to promise",
+    "hint": "assure it will happen, not just agree",
+    "pos": "verb",
+    "example": {
+      "trad": "我保證不會再遲到。",
+      "pinyin": "Wǒ bǎozhèng bù huì zài chídào.",
+      "english": "I promise I won't be late again."
+    }
+  },
+  {
+    "rank": 442,
+    "trad": "說話",
+    "pinyin": "shuō huà",
+    "gloss": "to talk; to speak",
+    "hint": "talk (no object)",
+    "pos": "verb",
+    "note": "Verb + object (說 + 話), so it takes no object: say 跟他說話 (talk to him), not 說話他.",
+    "example": {
+      "trad": "你在跟誰說話？",
+      "pinyin": "Nǐ zài gēn shéi shuōhuà?",
+      "english": "Who are you talking to?"
+    }
+  },
+  {
+    "rank": 443,
+    "trad": "動",
+    "pinyin": "dòng",
+    "gloss": "to move",
+    "hint": "change position",
+    "pos": "verb",
+    "note": "Also after verbs to mean able to move something: 走不動 (too tired to walk), 拿不動 (too heavy to carry). Moving house is 搬家.",
+    "example": {
+      "trad": "你不要動，我幫你拍照。",
+      "pinyin": "Nǐ bù yào dòng, wǒ bāng nǐ pāizhào.",
+      "english": "Don't move, I'll take your picture."
+    }
+  },
+  {
+    "rank": 444,
+    "trad": "管",
+    "pinyin": "guǎn",
+    "gloss": "to manage; to mind; to care about",
+    "hint": "be in charge of; meddle",
+    "pos": "verb",
+    "note": "別管我 (leave me alone); 不管 bù guǎn (no matter). As a noun it means tube or pipe: 水管 shuǐ guǎn.",
+    "example": {
+      "trad": "我的事不用你管。",
+      "pinyin": "Wǒ de shì bù yòng nǐ guǎn.",
+      "english": "My business is none of your concern."
+    }
+  },
+  {
+    "rank": 445,
+    "trad": "同時",
+    "pinyin": "tóng shí",
+    "gloss": "at the same time",
+    "hint": "simultaneously",
+    "pos": "adv",
+    "note": "Also links clauses: 同時 (meanwhile; also). Different from 一起 (together, in company).",
+    "example": {
+      "trad": "他們兩個同時笑了。",
+      "pinyin": "Tāmen liǎng ge tóngshí xiào le.",
+      "english": "They both laughed at the same time."
+    }
+  },
+  {
+    "rank": 446,
+    "trad": "確實",
+    "pinyin": "què shí",
+    "gloss": "indeed; truly",
+    "hint": "confirming a fact; also 'reliable'",
+    "pos": "adv",
+    "note": "Also an adjective: 確實的消息 (reliable news).",
+    "example": {
+      "trad": "他確實很努力。",
+      "pinyin": "Tā quèshí hěn nǔlì.",
+      "english": "He really does work hard."
+    }
+  },
+  {
+    "rank": 447,
+    "trad": "槍",
+    "pinyin": "qiāng",
+    "gloss": "gun",
+    "pos": "noun",
+    "note": "Counted with 把 bǎ: 一把槍. MOE also lists a rare reading chēng (an old star name).",
+    "example": {
+      "trad": "他手上拿著一把槍。",
+      "pinyin": "Tā shǒu shàng názhe yī bǎ qiāng.",
+      "english": "He's holding a gun in his hand."
+    }
+  },
+  {
+    "rank": 448,
+    "trad": "下雨",
+    "pinyin": "xià yǔ",
+    "gloss": "to rain",
+    "pos": "verb",
+    "note": "Literally 'fall + rain'. 下雨了 xià yǔ le 'it's started raining'. Rain itself is 雨 yǔ: 雨很大 yǔ hěn dà 'it's pouring'. An umbrella is 雨傘 yǔ sǎn or just 傘 sǎn.",
+    "example": {
+      "trad": "下雨了，快進來！",
+      "pinyin": "Xiàyǔ le, kuài jìnlái!",
+      "english": "It's raining, come inside!"
+    }
+  },
+  {
+    "rank": 449,
+    "trad": "見到",
+    "pinyin": "jiàn dào",
+    "gloss": "to see; to meet",
+    "hint": "get to see a person",
+    "pos": "verb",
+    "note": "Mostly for seeing people; for seeing things 看到 kàn dào is more usual.",
+    "example": {
+      "trad": "很高興見到你！",
+      "pinyin": "Hěn gāoxìng jiàndào nǐ!",
+      "english": "Nice to see you!"
+    }
+  },
+  {
+    "rank": 450,
+    "trad": "活動",
+    "pinyin": "huó dòng",
+    "gloss": "activity; event",
+    "hint": "an organized event",
+    "pos": "noun",
+    "note": "Also a verb: to move around, exercise (活動一下). In Taiwan shops say 有活動 for a sale or promotion.",
+    "example": {
+      "trad": "這個週末有什麼活動？",
+      "pinyin": "Zhège zhōumò yǒu shénme huódòng?",
+      "english": "What's going on this weekend?"
+    }
+  }
+]

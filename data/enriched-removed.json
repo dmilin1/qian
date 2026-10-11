@@ -1,0 +1,533 @@
+{
+  "組織": {
+    "trad": "組織",
+    "pinyin": "zǔ zhī",
+    "gloss": "organization; to organize",
+    "pos": "noun",
+    "example": {
+      "trad": "他在一個國際組織工作。",
+      "pinyin": "Tā zài yī ge guójì zǔzhī gōngzuò.",
+      "english": "He works for an international organization."
+    }
+  },
+  "發展": {
+    "trad": "發展",
+    "pinyin": "fā zhǎn",
+    "gloss": "to develop; development",
+    "pos": "verb",
+    "example": {
+      "trad": "這個城市發展得很快。",
+      "pinyin": "Zhège chéngshì fāzhǎn de hěn kuài.",
+      "english": "This city is developing quickly."
+    }
+  },
+  "包括": {
+    "trad": "包括",
+    "pinyin": "bāo kuò",
+    "gloss": "to include; including",
+    "pos": "verb",
+    "note": "MOE reads this word bāo kuò, but many Taiwanese say bāo guā (MOE's main reading of 括 alone is guā, as in 括號 guā hào 'brackets').",
+    "example": {
+      "trad": "房租包括水電嗎？",
+      "pinyin": "Fángzū bāokuò shuǐdiàn ma?",
+      "english": "Does the rent include utilities?"
+    }
+  },
+  "技術": {
+    "trad": "技術",
+    "pinyin": "jì shù",
+    "gloss": "skill; technique; technology",
+    "hint": "know-how; technical skill",
+    "pos": "noun",
+    "note": "Means skill or technique as well as technology; \"tech\" as an industry is usually 科技 (kē jì).",
+    "example": {
+      "trad": "他開車的技術很好。",
+      "pinyin": "Tā kāichē de jìshù hěn hǎo.",
+      "english": "He's a really good driver."
+    }
+  },
+  "地區": {
+    "trad": "地區",
+    "pinyin": "dì qū",
+    "gloss": "region; area",
+    "hint": "a geographic area",
+    "pos": "noun",
+    "note": "A larger, somewhat formal word for an area; for 'a place' in everyday talk use 地方.",
+    "example": {
+      "trad": "這個地區常常下雨。",
+      "pinyin": "Zhège dìqū chángcháng xiàyǔ.",
+      "english": "It often rains in this area."
+    }
+  },
+  "人民": {
+    "trad": "人民",
+    "pinyin": "rén mín",
+    "gloss": "the people",
+    "hint": "citizens of a country",
+    "pos": "noun",
+    "note": "Formal or political; heard mainly in news and speeches. In Taiwan, everyday talk uses 大家 or 民眾 (mín zhòng) instead.",
+    "example": {
+      "trad": "政府應該照顧人民。",
+      "pinyin": "Zhèngfǔ yīnggāi zhàogù rénmín.",
+      "english": "The government should take care of the people."
+    }
+  },
+  "政治": {
+    "trad": "政治",
+    "pinyin": "zhèng zhì",
+    "gloss": "politics",
+    "pos": "noun",
+    "example": {
+      "trad": "我不想談政治。",
+      "pinyin": "Wǒ bù xiǎng tán zhèngzhì.",
+      "english": "I don't want to talk about politics."
+    }
+  },
+  "武器": {
+    "trad": "武器",
+    "pinyin": "wǔ qì",
+    "gloss": "weapon",
+    "pos": "noun",
+    "example": {
+      "trad": "警察找到了武器。",
+      "pinyin": "Jǐngchá zhǎodào le wǔqì.",
+      "english": "The police found the weapon."
+    }
+  },
+  "造成": {
+    "trad": "造成",
+    "pinyin": "zào chéng",
+    "gloss": "to cause; to result in",
+    "hint": "usually a bad result",
+    "pos": "verb",
+    "note": "Usually with negative results: 造成問題 'cause problems', 造成麻煩 'cause trouble'.",
+    "example": {
+      "trad": "大雨造成很多問題。",
+      "pinyin": "Dàyǔ zàochéng hěn duō wèntí.",
+      "english": "The heavy rain caused a lot of problems."
+    }
+  },
+  "國際": {
+    "trad": "國際",
+    "pinyin": "guó jì",
+    "gloss": "international",
+    "pos": "adj",
+    "example": {
+      "trad": "這是國際電話。",
+      "pinyin": "Zhè shì guójì diànhuà.",
+      "english": "This is an international call."
+    }
+  },
+  "由於": {
+    "trad": "由於",
+    "pinyin": "yóu yú",
+    "gloss": "due to; because of",
+    "hint": "formal, not yīn wèi",
+    "pos": "conj",
+    "note": "Formal and mostly written. In speech people usually say 因為 yīn wèi.",
+    "example": {
+      "trad": "由於下大雨，比賽取消了。",
+      "pinyin": "Yóuyú xià dàyǔ, bǐsài qǔxiāo le.",
+      "english": "Because of the heavy rain, the game was canceled."
+    }
+  },
+  "參與": {
+    "trad": "參與",
+    "pinyin": "cān yù",
+    "gloss": "to take part in; to be involved",
+    "hint": "more formal than cān jiā",
+    "pos": "verb",
+    "note": "與 is yù here; it is yǔ when it means 'and, with'. For joining an event, everyday speech uses 參加 cān jiā.",
+    "example": {
+      "trad": "他沒有參與這件事。",
+      "pinyin": "Tā méiyǒu cānyù zhè jiàn shì.",
+      "english": "He wasn't involved in this."
+    }
+  },
+  "建立": {
+    "trad": "建立",
+    "pinyin": "jiàn lì",
+    "gloss": "to establish; to build up",
+    "hint": "a relationship or system, not a building",
+    "pos": "verb",
+    "example": {
+      "trad": "他們建立了很好的關係。",
+      "pinyin": "Tāmen jiànlì le hěn hǎo de guānxì.",
+      "english": "They built a really good relationship."
+    }
+  },
+  "全國": {
+    "trad": "全國",
+    "pinyin": "quán guó",
+    "gloss": "the whole country; nationwide",
+    "pos": "noun",
+    "example": {
+      "trad": "這件事全國都知道了。",
+      "pinyin": "Zhè jiàn shì quánguó dōu zhīdào le.",
+      "english": "The whole country knows about this now."
+    }
+  },
+  "項目": {
+    "trad": "項目",
+    "pinyin": "xiàng mù",
+    "gloss": "item; event (in sports)",
+    "hint": "an entry on a list",
+    "pos": "noun",
+    "note": "In Taiwan it means an item or category, or a sports event. A work 'project' is usually 專案 zhuān àn or 計畫 jì huà in Taiwan; the mainland uses 項目 for that.",
+    "example": {
+      "trad": "這次比賽有很多項目。",
+      "pinyin": "Zhè cì bǐsài yǒu hěn duō xiàngmù.",
+      "english": "This competition has a lot of events."
+    }
+  },
+  "交易": {
+    "trad": "交易",
+    "pinyin": "jiāo yì",
+    "gloss": "deal; trade; transaction",
+    "hint": "a business deal",
+    "pos": "noun",
+    "note": "Also a verb, 'to trade'. Common in 做交易 zuò jiāo yì 'to make a deal' and 網路交易 wǎng lù jiāo yì 'online transactions'.",
+    "example": {
+      "trad": "我們來做個交易。",
+      "pinyin": "Wǒmen lái zuò ge jiāoyì.",
+      "english": "Let's make a deal."
+    }
+  },
+  "成員": {
+    "trad": "成員",
+    "pinyin": "chéng yuán",
+    "gloss": "member",
+    "hint": "of a group or team",
+    "pos": "noun",
+    "example": {
+      "trad": "他是樂團的成員。",
+      "pinyin": "Tā shì yuètuán de chéngyuán.",
+      "english": "He's a member of the band."
+    }
+  },
+  "過程": {
+    "trad": "過程",
+    "pinyin": "guò chéng",
+    "gloss": "process; course (of events)",
+    "pos": "noun",
+    "example": {
+      "trad": "結果不重要，過程才重要。",
+      "pinyin": "Jiéguǒ bù zhòngyào, guòchéng cái zhòngyào.",
+      "english": "The result doesn't matter; the process is what matters."
+    }
+  },
+  "內容": {
+    "trad": "內容",
+    "pinyin": "nèi róng",
+    "gloss": "content; contents",
+    "pos": "noun",
+    "example": {
+      "trad": "這本書的內容很有趣。",
+      "pinyin": "Zhè běn shū de nèiróng hěn yǒuqù.",
+      "english": "This book's content is really interesting."
+    }
+  },
+  "攻擊": {
+    "trad": "攻擊",
+    "pinyin": "gōng jí",
+    "gloss": "to attack; attack",
+    "pos": "verb",
+    "note": "Taiwan (MOE) reads 擊 as jí; the mainland says gōng jī. Used for physical and verbal attacks.",
+    "example": {
+      "trad": "不要攻擊別人。",
+      "pinyin": "Bùyào gōngjí biérén.",
+      "english": "Don't attack other people."
+    }
+  },
+  "犯罪": {
+    "trad": "犯罪",
+    "pinyin": "fàn zuì",
+    "gloss": "to commit a crime; crime",
+    "pos": "verb",
+    "example": {
+      "trad": "偷東西是犯罪。",
+      "pinyin": "Tōu dōngxi shì fànzuì.",
+      "english": "Stealing is a crime."
+    }
+  },
+  "權利": {
+    "trad": "權利",
+    "pinyin": "quán lì",
+    "gloss": "right (entitlement)",
+    "pos": "noun",
+    "note": "Sounds exactly like 權力 quán lì 'power, authority'; context tells them apart.",
+    "example": {
+      "trad": "你有權利說不。",
+      "pinyin": "Nǐ yǒu quánlì shuō bù.",
+      "english": "You have the right to say no."
+    }
+  },
+  "經濟": {
+    "trad": "經濟",
+    "pinyin": "jīng jì",
+    "gloss": "economy; economic",
+    "pos": "noun",
+    "example": {
+      "trad": "最近經濟不太好。",
+      "pinyin": "Zuìjìn jīngjì bù tài hǎo.",
+      "english": "The economy hasn't been great lately."
+    }
+  },
+  "威脅": {
+    "trad": "威脅",
+    "pinyin": "wēi xié",
+    "gloss": "to threaten; threat",
+    "pos": "verb",
+    "note": "Also a noun meaning 'a threat'. MOE and mainland readings agree: wēi xié.",
+    "example": {
+      "trad": "你在威脅我嗎？",
+      "pinyin": "Nǐ zài wēixié wǒ ma?",
+      "english": "Are you threatening me?"
+    }
+  },
+  "女性": {
+    "trad": "女性",
+    "pinyin": "nǚ xìng",
+    "gloss": "woman; female",
+    "hint": "formal, women in general",
+    "pos": "noun",
+    "note": "A formal or written word (news, surveys, products). In conversation Taiwanese say 女生 nǚ shēng.",
+    "example": {
+      "trad": "這家店有很多女性客人。",
+      "pinyin": "Zhè jiā diàn yǒu hěn duō nǚxìng kèrén.",
+      "english": "This shop has a lot of female customers."
+    }
+  },
+  "專業": {
+    "trad": "專業",
+    "pinyin": "zhuān yè",
+    "gloss": "professional; expertise",
+    "pos": "adj",
+    "note": "Also a noun for one's field of expertise. On the mainland it also means a college major; in Taiwan a major is usually 科系 kē xì or 主修 zhǔ xiū.",
+    "example": {
+      "trad": "他做事很專業。",
+      "pinyin": "Tā zuòshì hěn zhuānyè.",
+      "english": "He's very professional."
+    }
+  },
+  "人物": {
+    "trad": "人物",
+    "pinyin": "rén wù",
+    "gloss": "figure; character",
+    "hint": "notable person, or in a story",
+    "pos": "noun",
+    "example": {
+      "trad": "他是很重要的人物。",
+      "pinyin": "Tā shì hěn zhòngyào de rénwù.",
+      "english": "He's a very important figure."
+    }
+  },
+  "顯示": {
+    "trad": "顯示",
+    "pinyin": "xiǎn shì",
+    "gloss": "to show; to display",
+    "hint": "a screen or data shows",
+    "pos": "verb",
+    "note": "For what a screen, test or study shows: 研究顯示 'research shows'. Showing something to someone is 給…看 gěi … kàn.",
+    "example": {
+      "trad": "手機顯示沒有訊號。",
+      "pinyin": "Shǒujī xiǎnshì méiyǒu xùnhào.",
+      "english": "The phone says there's no signal."
+    }
+  },
+  "提出": {
+    "trad": "提出",
+    "pinyin": "tí chū",
+    "gloss": "to raise; to put forward",
+    "hint": "an idea, question or request",
+    "pos": "verb",
+    "example": {
+      "trad": "他提出了一個好問題。",
+      "pinyin": "Tā tíchū le yī ge hǎo wèntí.",
+      "english": "He raised a good question."
+    }
+  },
+  "教育": {
+    "trad": "教育",
+    "pinyin": "jiào yù",
+    "gloss": "education; to educate",
+    "pos": "noun",
+    "note": "教 is jiào here (teaching as a field); as the everyday verb 'to teach' it is jiāo: 教我 'teach me'.",
+    "example": {
+      "trad": "台灣的父母很重視教育。",
+      "pinyin": "Táiwān de fùmǔ hěn zhòngshì jiàoyù.",
+      "english": "Parents in Taiwan care a lot about education."
+    }
+  },
+  "時代": {
+    "trad": "時代",
+    "pinyin": "shí dài",
+    "gloss": "era; times",
+    "pos": "noun",
+    "example": {
+      "trad": "時代不一樣了。",
+      "pinyin": "Shídài bù yīyàng le.",
+      "english": "Times have changed."
+    }
+  },
+  "破壞": {
+    "trad": "破壞",
+    "pinyin": "pò huài",
+    "gloss": "to destroy; to ruin; to damage",
+    "hint": "wreck or spoil something",
+    "pos": "verb",
+    "note": "Also used for ruining a mood, plan or relationship, not only physical things.",
+    "example": {
+      "trad": "不要破壞氣氛啦。",
+      "pinyin": "Bùyào pòhuài qìfēn la.",
+      "english": "Don't ruin the mood."
+    }
+  },
+  "產生": {
+    "trad": "產生",
+    "pinyin": "chǎn shēng",
+    "gloss": "to produce; to give rise to",
+    "hint": "bring about (slightly formal)",
+    "pos": "verb",
+    "note": "Slightly formal. Often with abstract things: 產生問題 chǎn shēng wèn tí 'cause problems', 產生興趣 chǎn shēng xìng qù 'become interested'.",
+    "example": {
+      "trad": "這樣會產生問題。",
+      "pinyin": "Zhèyàng huì chǎnshēng wèntí.",
+      "english": "This will cause problems."
+    }
+  },
+  "環境": {
+    "trad": "環境",
+    "pinyin": "huán jìng",
+    "gloss": "environment; surroundings",
+    "pos": "noun",
+    "example": {
+      "trad": "這裡的環境很好。",
+      "pinyin": "Zhèlǐ de huánjìng hěn hǎo.",
+      "english": "The surroundings here are nice."
+    }
+  },
+  "命令": {
+    "trad": "命令",
+    "pinyin": "mìng lìng",
+    "gloss": "order; command; to order",
+    "hint": "an instruction to obey",
+    "pos": "noun",
+    "note": "Also a verb: 命令我 mìng lìng wǒ 'order me around'. Ordering food is 點 diǎn, not 命令.",
+    "example": {
+      "trad": "你沒有資格命令我。",
+      "pinyin": "Nǐ méiyǒu zīgé mìnglìng wǒ.",
+      "english": "You have no right to order me around."
+    }
+  },
+  "作品": {
+    "trad": "作品",
+    "pinyin": "zuò pǐn",
+    "gloss": "work (of art); piece",
+    "pos": "noun",
+    "example": {
+      "trad": "這是他最新的作品。",
+      "pinyin": "Zhè shì tā zuì xīn de zuòpǐn.",
+      "english": "This is his latest work."
+    }
+  },
+  "價值": {
+    "trad": "價值",
+    "pinyin": "jià zhí",
+    "gloss": "value; worth",
+    "hint": "worth, not price",
+    "pos": "noun",
+    "note": "The price of something is 價錢 jià qián. 很有價值 hěn yǒu jià zhí means 'very valuable'.",
+    "example": {
+      "trad": "這本書很有價值。",
+      "pinyin": "Zhè běn shū hěn yǒu jiàzhí.",
+      "english": "This book is very valuable."
+    }
+  },
+  "以來": {
+    "trad": "以來",
+    "pinyin": "yǐ lái",
+    "gloss": "since (a time)",
+    "hint": "goes after the time phrase",
+    "pos": "noun",
+    "note": "Comes after a time or event, often with 從 cóng: 從畢業以來 cóng bì yè yǐ lái 'since graduating'. 一直以來 yī zhí yǐ lái means 'all along'.",
+    "example": {
+      "trad": "從畢業以來，我們就沒見過面了。",
+      "pinyin": "Cóng bìyè yǐlái, wǒmen jiù méi jiànguò miàn le.",
+      "english": "We haven't seen each other since graduation."
+    }
+  },
+  "基本": {
+    "trad": "基本",
+    "pinyin": "jī běn",
+    "gloss": "basic; fundamental",
+    "pos": "adj",
+    "note": "基本上 jī běn shàng 'basically' is very common in speech.",
+    "example": {
+      "trad": "我只會說基本的英文。",
+      "pinyin": "Wǒ zhǐ huì shuō jīběn de Yīngwén.",
+      "english": "I can only speak basic English."
+    }
+  },
+  "條件": {
+    "trad": "條件",
+    "pinyin": "tiáo jiàn",
+    "gloss": "condition; terms; qualifications",
+    "hint": "a requirement, not a situation",
+    "pos": "noun",
+    "note": "Also someone's assets or qualifications: 他條件很好 'he's a good catch / well qualified'.",
+    "example": {
+      "trad": "我有一個條件。",
+      "pinyin": "Wǒ yǒu yī ge tiáojiàn.",
+      "english": "I have one condition."
+    }
+  },
+  "管理": {
+    "trad": "管理",
+    "pinyin": "guǎn lǐ",
+    "gloss": "to manage; management",
+    "hint": "formal, two syllables; management",
+    "pos": "verb",
+    "note": "More formal than 管 guǎn. Spoken guán lǐ (tone sandhi).",
+    "example": {
+      "trad": "他在管理一家餐廳。",
+      "pinyin": "Tā zài guǎnlǐ yī jiā cāntīng.",
+      "english": "He manages a restaurant."
+    }
+  },
+  "傳統": {
+    "trad": "傳統",
+    "pinyin": "chuán tǒng",
+    "gloss": "tradition; traditional",
+    "pos": "noun",
+    "example": {
+      "trad": "這是我們家的傳統。",
+      "pinyin": "Zhè shì wǒmen jiā de chuántǒng.",
+      "english": "This is our family tradition."
+    }
+  },
+  "某": {
+    "trad": "某",
+    "pinyin": "mǒu",
+    "gloss": "a certain; some",
+    "hint": "a certain unnamed one",
+    "pos": "pron",
+    "note": "Used before a noun or measure word: 某人 'someone', 某天 'one day', 某些 'certain ones'. A little formal.",
+    "example": {
+      "trad": "我在某個地方看過他。",
+      "pinyin": "Wǒ zài mǒu ge dìfāng kànguò tā.",
+      "english": "I've seen him somewhere before."
+    }
+  },
+  "文化": {
+    "trad": "文化",
+    "pinyin": "wén huà",
+    "gloss": "culture",
+    "pos": "noun",
+    "example": {
+      "trad": "我很喜歡台灣的文化。",
+      "pinyin": "Wǒ hěn xǐhuān Táiwān de wénhuà.",
+      "english": "I really like Taiwanese culture."
+    }
+  }
+}

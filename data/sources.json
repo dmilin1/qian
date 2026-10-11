@@ -1,0 +1,42 @@
+{
+  "generatedBy": "scripts/data/build_candidates.py",
+  "params": {
+    "top": 1400,
+    "poolSubtlex": 12000,
+    "poolWordfreq": 12000,
+    "blendWeightSubtlex": 0.6,
+    "zipfFloor": 1.0,
+    "skewThreshold": 1.0
+  },
+  "packages": {
+    "opencc": "1.4.2",
+    "wordfreq": "3.1.1",
+    "jieba": "0.42.1"
+  },
+  "sources": {
+    "subtlex": {
+      "url": "https://www.ugent.be/pp/experimentele-psychologie/en/research/documents/subtlexch/subtlexch131210.zip",
+      "file": "data/cache/subtlex/subtlexch131210.zip",
+      "sha256": "dc8e0ae4a386e18f2dff18878657ea190377e56e7a0e56fdbd605f9d30250310",
+      "retrieved": "2026-10-11"
+    },
+    "cedict": {
+      "url": "https://www.mdbg.net/chinese/export/cedict/cedict_1_0_ts_utf-8_mdbg.txt.gz",
+      "file": "data/cache/cedict/cedict_1_0_ts_utf-8_mdbg.txt.gz",
+      "sha256": "cf0bf5c8ff94316799bc82755dbe0627658d7167244060d8e4ce8d5928a6b9f5",
+      "retrieved": "2026-10-11"
+    },
+    "moedict": {
+      "url": "https://raw.githubusercontent.com/g0v/moedict-data/main/dict-revised.json.xz",
+      "file": "data/cache/moedict/dict-revised.json.xz",
+      "sha256": "5cc4ec0efd7e549621edf9b46d261989230c1729d9dc2c8e2056f4b21c8a93da",
+      "retrieved": "2026-10-11"
+    },
+    "opencc_stchars": {
+      "url": "https://raw.githubusercontent.com/BYVoid/OpenCC/master/data/dictionary/STCharacters.txt",
+      "file": "data/cache/opencc/STCharacters.txt",
+      "sha256": "a0ca1601c70648cf48b33c3c6210ccbecc5c7eead4b4c3daf76587ba2c03582b",
+      "retrieved": "2026-10-11"
+    }
+  }
+}

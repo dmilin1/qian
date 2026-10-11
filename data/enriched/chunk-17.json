@@ -1,0 +1,673 @@
+[
+  {
+    "rank": 801,
+    "trad": "男朋友",
+    "pinyin": "nán péng yǒu",
+    "gloss": "boyfriend",
+    "pos": "noun",
+    "note": "Often shortened to 男友 nán yǒu. 男生 nán shēng is 'a guy' in general.",
+    "example": {
+      "trad": "她有男朋友了。",
+      "pinyin": "Tā yǒu nánpéngyǒu le.",
+      "english": "She has a boyfriend now."
+    }
+  },
+  {
+    "rank": 802,
+    "trad": "輛",
+    "pinyin": "liàng",
+    "gloss": "(measure word for vehicles)",
+    "hint": "vehicles only; more formal than tái",
+    "pos": "measure",
+    "note": "Counts cars, buses, bikes and scooters: 一輛車 yī liàng chē. In Taiwan speech 台 tái is also very common for vehicles (一台車).",
+    "example": {
+      "trad": "我家有兩輛車。",
+      "pinyin": "Wǒ jiā yǒu liǎng liàng chē.",
+      "english": "My family has two cars."
+    }
+  },
+  {
+    "rank": 803,
+    "trad": "超過",
+    "pinyin": "chāo guò",
+    "gloss": "to exceed; more than",
+    "hint": "go beyond an amount",
+    "pos": "verb",
+    "note": "Used for amounts, times and limits, and also for overtaking: 超過前面的車 'pass the car in front'.",
+    "example": {
+      "trad": "已經超過十二點了。",
+      "pinyin": "Yǐjīng chāoguò shí'èr diǎn le.",
+      "english": "It's already past twelve."
+    }
+  },
+  {
+    "rank": 804,
+    "trad": "訓練",
+    "pinyin": "xùn liàn",
+    "gloss": "to train; training",
+    "pos": "verb",
+    "example": {
+      "trad": "他每天都去訓練。",
+      "pinyin": "Tā měitiān dōu qù xùnliàn.",
+      "english": "He goes to training every day."
+    }
+  },
+  {
+    "rank": 805,
+    "trad": "口",
+    "pinyin": "kǒu",
+    "gloss": "a bite; mouth; opening",
+    "hint": "a mouthful, or an opening",
+    "pos": "measure",
+    "note": "As a measure word it counts bites or mouthfuls (吃一口 chī yī kǒu 'take a bite') and family members (一家四口 yī jiā sì kǒu 'a family of four'). For the body part people usually say 嘴 zuǐ or 嘴巴; 口 also appears in 門口 mén kǒu 'doorway' and 出口 chū kǒu 'exit'.",
+    "example": {
+      "trad": "你吃一口看看。",
+      "pinyin": "Nǐ chī yī kǒu kànkan.",
+      "english": "Have a bite and see."
+    }
+  },
+  {
+    "rank": 806,
+    "trad": "光",
+    "pinyin": "guāng",
+    "gloss": "light; used up; only",
+    "hint": "brightness, not weight",
+    "pos": "noun",
+    "note": "After a verb it means 'all gone': 錢花光了 qián huā guāng le 'the money's all spent'. Before a verb it means 'just / only': 光說不做 'all talk, no action'.",
+    "example": {
+      "trad": "房間裡一點光都沒有。",
+      "pinyin": "Fángjiān lǐ yīdiǎn guāng dōu méiyǒu.",
+      "english": "There's no light at all in the room."
+    }
+  },
+  {
+    "rank": 807,
+    "trad": "完美",
+    "pinyin": "wán měi",
+    "gloss": "perfect",
+    "pos": "adj",
+    "example": {
+      "trad": "沒有人是完美的。",
+      "pinyin": "Méiyǒu rén shì wánměi de.",
+      "english": "Nobody is perfect."
+    }
+  },
+  {
+    "rank": 808,
+    "trad": "女朋友",
+    "pinyin": "nǚ péng yǒu",
+    "gloss": "girlfriend",
+    "pos": "noun",
+    "note": "Often shortened to 女友 nǚ yǒu. 女生 nǚ shēng is 'a girl, a woman' in general.",
+    "example": {
+      "trad": "你有女朋友嗎？",
+      "pinyin": "Nǐ yǒu nǚpéngyǒu ma?",
+      "english": "Do you have a girlfriend?"
+    }
+  },
+  {
+    "rank": 809,
+    "trad": "自然",
+    "pinyin": "zì rán",
+    "gloss": "natural; naturally; nature",
+    "hint": "by itself, as things go",
+    "pos": "adj",
+    "note": "大自然 dà zì rán is 'nature' (the outdoors). MOE also lists zì ran for 'relaxed, unforced' (表情很自然), but Taiwanese generally say zì rán.",
+    "example": {
+      "trad": "時間久了自然就好了。",
+      "pinyin": "Shíjiān jiǔ le zìrán jiù hǎo le.",
+      "english": "Give it time and it'll get better on its own."
+    }
+  },
+  {
+    "rank": 810,
+    "trad": "理由",
+    "pinyin": "lǐ yóu",
+    "gloss": "reason; excuse",
+    "hint": "a justification you give",
+    "pos": "noun",
+    "note": "The reason someone gives for doing something. 原因 yuán yīn is the cause of why something happened.",
+    "example": {
+      "trad": "這不是理由。",
+      "pinyin": "Zhè bùshì lǐyóu.",
+      "english": "That's no excuse."
+    }
+  },
+  {
+    "rank": 811,
+    "trad": "西",
+    "pinyin": "xī",
+    "gloss": "west",
+    "pos": "noun",
+    "note": "Usually heard in words: 西邊 xī biān 'the west side', 西方 xī fāng 'the West'. Not the same word as 東西 dōng xi 'thing'.",
+    "example": {
+      "trad": "太陽從西邊下山。",
+      "pinyin": "Tàiyáng cóng xībiān xiàshān.",
+      "english": "The sun sets in the west."
+    }
+  },
+  {
+    "rank": 812,
+    "trad": "包",
+    "pinyin": "bāo",
+    "gloss": "to wrap; bag; pack",
+    "hint": "wrap up; also a handbag or a pack",
+    "pos": "verb",
+    "note": "Also a measure word for packs: 一包衛生紙 'a pack of tissues'. For a bag, Taiwanese usually say 包包 bāo bāo (handbag) or 背包 bēi bāo (backpack), and 打包 dǎ bāo means to box up leftovers to take home.",
+    "example": {
+      "trad": "可以幫我包起來嗎？",
+      "pinyin": "Kěyǐ bāng wǒ bāo qǐlái ma?",
+      "english": "Could you wrap it up for me?"
+    }
+  },
+  {
+    "rank": 813,
+    "trad": "假",
+    "pinyin": "jiǎ",
+    "gloss": "fake; false",
+    "pos": "adj",
+    "note": "Read jià in 放假 fàng jià 'to have time off' and 請假 qǐng jià 'to ask for leave'. 真的假的？ zhēn de jiǎ de 'Seriously?' is very common in Taiwan.",
+    "example": {
+      "trad": "這個包包是假的。",
+      "pinyin": "Zhège bāobāo shì jiǎ de.",
+      "english": "This handbag is fake."
+    }
+  },
+  {
+    "rank": 814,
+    "trad": "似乎",
+    "pinyin": "sì hū",
+    "gloss": "it seems; seemingly",
+    "hint": "more formal",
+    "pos": "adv",
+    "note": "A more formal way of saying 好像 hǎo xiàng, which is what people usually say in conversation.",
+    "example": {
+      "trad": "他似乎不太高興。",
+      "pinyin": "Tā sìhū bù tài gāoxìng.",
+      "english": "He doesn't seem very happy."
+    }
+  },
+  {
+    "rank": 815,
+    "trad": "簡直",
+    "pinyin": "jiǎn zhí",
+    "gloss": "simply; totally (emphatic)",
+    "hint": "exaggerating, 'just too...'",
+    "pos": "adv",
+    "note": "Adds emphasis, often with exaggeration: 簡直太好了 'just too good', 簡直不敢相信 'simply can't believe it'.",
+    "example": {
+      "trad": "這簡直太誇張了！",
+      "pinyin": "Zhè jiǎnzhí tài kuāzhāng le!",
+      "english": "This is just ridiculous!"
+    }
+  },
+  {
+    "rank": 816,
+    "trad": "魚",
+    "pinyin": "yú",
+    "gloss": "fish",
+    "pos": "noun",
+    "note": "Counted with 條 tiáo: 一條魚 yī tiáo yú. Fish is eaten at Lunar New Year because 魚 sounds like 餘 yú 'surplus' (年年有餘).",
+    "example": {
+      "trad": "我很喜歡吃魚。",
+      "pinyin": "Wǒ hěn xǐhuān chī yú.",
+      "english": "I love eating fish."
+    }
+  },
+  {
+    "rank": 817,
+    "trad": "卡",
+    "pinyin": "kǎ",
+    "gloss": "card; to be stuck",
+    "pos": "noun",
+    "note": "Also 'stuck' or 'laggy': 卡住了 'it's stuck', 電腦很卡 'the computer is laggy'. MOE gives qiǎ for 'wedged / stuck', but Taiwanese usually say kǎ.",
+    "example": {
+      "trad": "我可以刷卡嗎？",
+      "pinyin": "Wǒ kěyǐ shuākǎ ma?",
+      "english": "Can I pay by card?"
+    }
+  },
+  {
+    "rank": 818,
+    "trad": "瘋",
+    "pinyin": "fēng",
+    "gloss": "crazy; mad",
+    "hint": "out of your mind",
+    "pos": "adj",
+    "note": "Most often 瘋了 fēng le 'gone crazy'. 瘋狂 fēng kuáng is more 'wild, frenzied'.",
+    "example": {
+      "trad": "你瘋了嗎？",
+      "pinyin": "Nǐ fēng le ma?",
+      "english": "Are you crazy?"
+    }
+  },
+  {
+    "rank": 819,
+    "trad": "照顧",
+    "pinyin": "zhào gù",
+    "gloss": "to take care of; to look after",
+    "hint": "look after someone",
+    "pos": "verb",
+    "note": "MOE lists both zhào gù and the lighter zhào gu; Taiwanese normally say zhào gù. 謝謝你的照顧 'thanks for looking after me' is a common polite phrase.",
+    "example": {
+      "trad": "她在家照顧小孩。",
+      "pinyin": "Tā zài jiā zhàogù xiǎohái.",
+      "english": "She stays home looking after the kids."
+    }
+  },
+  {
+    "rank": 820,
+    "trad": "身邊",
+    "pinyin": "shēn biān",
+    "gloss": "by one's side; around (someone)",
+    "hint": "beside a person",
+    "pos": "noun",
+    "example": {
+      "trad": "我會一直在你身邊。",
+      "pinyin": "Wǒ huì yīzhí zài nǐ shēnbiān.",
+      "english": "I'll always be by your side."
+    }
+  },
+  {
+    "rank": 821,
+    "trad": "記",
+    "pinyin": "jì",
+    "gloss": "to remember; to note down",
+    "hint": "memorize or write down",
+    "pos": "verb",
+    "note": "Common in 記住 jì zhù 'to memorize' and 記下來 jì xià lái 'to write down'. 'To remember' in the sense of still having it in memory is usually 記得 jì de.",
+    "example": {
+      "trad": "我記不住他的名字。",
+      "pinyin": "Wǒ jìbuzhù tā de míngzi.",
+      "english": "I can't remember his name."
+    }
+  },
+  {
+    "rank": 822,
+    "trad": "各位",
+    "pinyin": "gè wèi",
+    "gloss": "everyone (polite address)",
+    "hint": "polite, addressing a group",
+    "pos": "pron",
+    "note": "Used to address an audience or a group directly, like 'ladies and gentlemen'. In everyday speech 大家 dà jiā is more common.",
+    "example": {
+      "trad": "各位，請安靜一下。",
+      "pinyin": "Gèwèi, qǐng ānjìng yīxià.",
+      "english": "Everyone, please be quiet for a moment."
+    }
+  },
+  {
+    "rank": 823,
+    "trad": "肉",
+    "pinyin": "ròu",
+    "gloss": "meat",
+    "pos": "noun",
+    "note": "In Taiwan, plain 肉 usually means pork; other meats are named: 牛肉 niú ròu 'beef', 雞肉 jī ròu 'chicken'. Many Taiwanese avoid beef for traditional or religious reasons.",
+    "example": {
+      "trad": "我不吃牛肉。",
+      "pinyin": "Wǒ bù chī niúròu.",
+      "english": "I don't eat beef."
+    }
+  },
+  {
+    "rank": 824,
+    "trad": "位置",
+    "pinyin": "wèi zhì",
+    "gloss": "position; location; seat",
+    "hint": "the spot where something is",
+    "pos": "noun",
+    "note": "Taiwan (MOE) keeps the full tone wèi zhì; the mainland often says wèi zhi. For a seat, Taiwanese also say 位子 wèi zi.",
+    "example": {
+      "trad": "你可以傳位置給我嗎？",
+      "pinyin": "Nǐ kěyǐ chuán wèizhì gěi wǒ ma?",
+      "english": "Can you send me your location?"
+    }
+  },
+  {
+    "rank": 825,
+    "trad": "顯然",
+    "pinyin": "xiǎn rán",
+    "gloss": "obviously; evidently",
+    "hint": "it's clear that",
+    "pos": "adv",
+    "note": "An adverb that goes before the verb. Compare 明顯 míng xiǎn 'obvious', which describes something.",
+    "example": {
+      "trad": "他顯然不想去。",
+      "pinyin": "Tā xiǎnrán bù xiǎng qù.",
+      "english": "He obviously doesn't want to go."
+    }
+  },
+  {
+    "rank": 826,
+    "trad": "只能",
+    "pinyin": "zhǐ néng",
+    "gloss": "can only; have no choice but",
+    "pos": "aux",
+    "note": "只 'only' + 能 'can'. Goes before a verb to say it's the only option left.",
+    "example": {
+      "trad": "沒車了，我們只能走路。",
+      "pinyin": "Méi chē le, wǒmen zhǐnéng zǒulù.",
+      "english": "There are no more buses, so we can only walk."
+    }
+  },
+  {
+    "rank": 827,
+    "trad": "汽車",
+    "pinyin": "qì chē",
+    "gloss": "car; automobile",
+    "hint": "motor car, formal word",
+    "pos": "noun",
+    "note": "In daily Taiwan speech people just say 車 chē. A scooter is 機車 jī chē.",
+    "example": {
+      "trad": "他在汽車公司上班。",
+      "pinyin": "Tā zài qìchē gōngsī shàngbān.",
+      "english": "He works at a car company."
+    }
+  },
+  {
+    "rank": 828,
+    "trad": "無論",
+    "pinyin": "wú lùn",
+    "gloss": "no matter (what/how)",
+    "hint": "more formal",
+    "pos": "conj",
+    "note": "Usually followed by 都 dōu later in the sentence: 無論如何都要去 'have to go no matter what'. 不管 bù guǎn means the same and is more casual.",
+    "example": {
+      "trad": "無論如何，我都會去。",
+      "pinyin": "Wúlùn rúhé, wǒ dōu huì qù.",
+      "english": "No matter what, I'll go."
+    }
+  },
+  {
+    "rank": 829,
+    "trad": "畫",
+    "pinyin": "huà",
+    "gloss": "to draw; to paint; painting",
+    "hint": "art, with a pen or brush",
+    "pos": "verb",
+    "note": "Also a noun, 'a painting': 一幅畫 yī fú huà. 畫畫 huà huà means 'to draw pictures'.",
+    "example": {
+      "trad": "她很會畫畫。",
+      "pinyin": "Tā hěn huì huàhuà.",
+      "english": "She's really good at drawing."
+    }
+  },
+  {
+    "rank": 830,
+    "trad": "責任",
+    "pinyin": "zé rèn",
+    "gloss": "responsibility; duty",
+    "pos": "noun",
+    "example": {
+      "trad": "這是我的責任。",
+      "pinyin": "Zhè shì wǒ de zérèn.",
+      "english": "This is my responsibility."
+    }
+  },
+  {
+    "rank": 831,
+    "trad": "相當",
+    "pinyin": "xiāng dāng",
+    "gloss": "quite; fairly; considerably",
+    "hint": "a bit formal",
+    "pos": "adv",
+    "note": "A slightly formal 'quite / rather'; casual speech uses 很 hěn or 蠻 mán. 相當於 xiāng dāng yú means 'equivalent to'.",
+    "example": {
+      "trad": "這家餐廳相當不錯。",
+      "pinyin": "Zhè jiā cāntīng xiāngdāng bùcuò.",
+      "english": "This restaurant is quite good."
+    }
+  },
+  {
+    "rank": 832,
+    "trad": "茶",
+    "pinyin": "chá",
+    "gloss": "tea",
+    "pos": "noun",
+    "note": "喝茶 hē chá 'drink tea'. Taiwan is famous for oolong 烏龍茶 wū lóng chá and bubble tea 珍珠奶茶 zhēn zhū nǎi chá.",
+    "example": {
+      "trad": "要不要喝杯茶？",
+      "pinyin": "Yào bù yào hē bēi chá?",
+      "english": "Would you like a cup of tea?"
+    }
+  },
+  {
+    "rank": 833,
+    "trad": "動物",
+    "pinyin": "dòng wù",
+    "gloss": "animal",
+    "pos": "noun",
+    "example": {
+      "trad": "你喜歡什麼動物？",
+      "pinyin": "Nǐ xǐhuān shénme dòngwù?",
+      "english": "What animals do you like?"
+    }
+  },
+  {
+    "rank": 834,
+    "trad": "床",
+    "pinyin": "chuáng",
+    "gloss": "bed",
+    "pos": "noun",
+    "note": "Counted with 張 zhāng: 一張床. 起床 qǐ chuáng means 'to get up'.",
+    "example": {
+      "trad": "我要上床睡覺了。",
+      "pinyin": "Wǒ yào shàng chuáng shuìjiào le.",
+      "english": "I'm going to bed now."
+    }
+  },
+  {
+    "rank": 835,
+    "trad": "一會",
+    "pinyin": "yī huǐ",
+    "gloss": "a little while; a moment",
+    "hint": "a short stretch of time",
+    "pos": "noun",
+    "note": "Taiwan (MOE) reads it yī huǐ; the mainland says yí huìr (一會兒). Taiwanese more often use 一下 yī xià for 'a moment'.",
+    "example": {
+      "trad": "過一會就好了。",
+      "pinyin": "Guò yīhuǐ jiù hǎo le.",
+      "english": "It'll be fine in a little while."
+    }
+  },
+  {
+    "rank": 836,
+    "trad": "儘管",
+    "pinyin": "jǐn guǎn",
+    "gloss": "even though; feel free to",
+    "hint": "despite, more formal",
+    "pos": "conj",
+    "note": "Two uses: 'even though' (more formal than 雖然 suī rán), and before a verb 'feel free to': 有問題儘管問 'feel free to ask'.",
+    "example": {
+      "trad": "儘管很累，他還是來了。",
+      "pinyin": "Jǐnguǎn hěn lèi, tā háishì lái le.",
+      "english": "Even though he was tired, he still came."
+    }
+  },
+  {
+    "rank": 837,
+    "trad": "來到",
+    "pinyin": "lái dào",
+    "gloss": "to arrive at; to come to",
+    "hint": "come to a place",
+    "pos": "verb",
+    "note": "Not in the MOE dictionary as a word; it's simply 來 'come' + 到 'arrive', read lái dào.",
+    "example": {
+      "trad": "歡迎來到台灣！",
+      "pinyin": "Huānyíng láidào Táiwān!",
+      "english": "Welcome to Taiwan!"
+    }
+  },
+  {
+    "rank": 838,
+    "trad": "反應",
+    "pinyin": "fǎn yìng",
+    "gloss": "reaction; to react",
+    "pos": "noun",
+    "note": "Sounds the same as 反映 fǎn yìng 'to reflect; to report (a problem)', which Taiwanese use a lot, e.g. 跟老闆反映 'bring it up with the boss'.",
+    "example": {
+      "trad": "他的反應很快。",
+      "pinyin": "Tā de fǎnyìng hěn kuài.",
+      "english": "He reacts really quickly."
+    }
+  },
+  {
+    "rank": 839,
+    "trad": "字",
+    "pinyin": "zì",
+    "gloss": "character; written word",
+    "hint": "a single written character",
+    "pos": "noun",
+    "note": "One written Chinese character, often loosely 'word'. Also 'handwriting': 你的字很漂亮. A word as a unit of meaning is 詞 cí.",
+    "example": {
+      "trad": "這個字怎麼唸？",
+      "pinyin": "Zhège zì zěnme niàn?",
+      "english": "How do you say this character?"
+    }
+  },
+  {
+    "rank": 840,
+    "trad": "水果",
+    "pinyin": "shuǐ guǒ",
+    "gloss": "fruit",
+    "pos": "noun",
+    "note": "Taiwan fruit words: 芒果 máng guǒ 'mango', 鳳梨 fèng lí 'pineapple' (mainland 菠蘿), 西瓜 xī guā 'watermelon'.",
+    "example": {
+      "trad": "多吃一點水果。",
+      "pinyin": "Duō chī yīdiǎn shuǐguǒ.",
+      "english": "Eat more fruit."
+    }
+  },
+  {
+    "rank": 841,
+    "trad": "血",
+    "pinyin": "xiě",
+    "gloss": "blood",
+    "pos": "noun",
+    "note": "Taiwan standard (MOE) reading is xiě, as in 流血 liú xiě 'to bleed'. The other reading xuè is the literary one, and the mainland standard in most compounds.",
+    "example": {
+      "trad": "你流血了！",
+      "pinyin": "Nǐ liúxiě le!",
+      "english": "You're bleeding!"
+    }
+  },
+  {
+    "rank": 842,
+    "trad": "金",
+    "pinyin": "jīn",
+    "gloss": "gold; golden",
+    "pos": "noun",
+    "note": "Also in 現金 xiàn jīn 'cash' and 金色 jīn sè 'gold color'. A common surname too.",
+    "example": {
+      "trad": "這條項鍊是金的。",
+      "pinyin": "Zhè tiáo xiàngliàn shì jīn de.",
+      "english": "This necklace is gold."
+    }
+  },
+  {
+    "rank": 843,
+    "trad": "遇到",
+    "pinyin": "yù dào",
+    "gloss": "to run into; to encounter",
+    "hint": "by chance; also problems",
+    "pos": "verb",
+    "note": "For people you bump into and for problems or situations: 遇到問題 'run into a problem'. To arrange to meet someone is 見面. 碰到 pèng dào means the same and is just as common in Taiwan.",
+    "example": {
+      "trad": "我在路上遇到老師。",
+      "pinyin": "Wǒ zài lùshàng yùdào lǎoshī.",
+      "english": "I ran into my teacher on the way."
+    }
+  },
+  {
+    "rank": 844,
+    "trad": "哥哥",
+    "pinyin": "gē ge",
+    "gloss": "older brother",
+    "pos": "noun",
+    "note": "Often shortened to 哥 gē, which is also used to address an older guy. Younger brother is 弟弟 dì di.",
+    "example": {
+      "trad": "我哥哥比我大三歲。",
+      "pinyin": "Wǒ gēge bǐ wǒ dà sān suì.",
+      "english": "My brother is three years older than me."
+    }
+  },
+  {
+    "rank": 845,
+    "trad": "阻止",
+    "pinyin": "zǔ zhǐ",
+    "gloss": "to stop; to prevent",
+    "hint": "keep someone from doing it",
+    "pos": "verb",
+    "note": "For stopping someone else or preventing something. To stop doing something yourself is 停 tíng or 停止 tíng zhǐ.",
+    "example": {
+      "trad": "沒有人能阻止他。",
+      "pinyin": "Méiyǒu rén néng zǔzhǐ tā.",
+      "english": "Nobody can stop him."
+    }
+  },
+  {
+    "rank": 846,
+    "trad": "面對",
+    "pinyin": "miàn duì",
+    "gloss": "to face; to confront",
+    "hint": "deal with a problem",
+    "pos": "verb",
+    "example": {
+      "trad": "我們一起面對。",
+      "pinyin": "Wǒmen yīqǐ miànduì.",
+      "english": "We'll face it together."
+    }
+  },
+  {
+    "rank": 847,
+    "trad": "店",
+    "pinyin": "diàn",
+    "gloss": "shop; store",
+    "pos": "noun",
+    "note": "Counted with 家 jiā: 這家店 'this shop'. Common in compounds: 書店 'bookstore', 飯店 'hotel'.",
+    "example": {
+      "trad": "這家店很有名。",
+      "pinyin": "Zhè jiā diàn hěn yǒumíng.",
+      "english": "This shop is famous."
+    }
+  },
+  {
+    "rank": 848,
+    "trad": "拒絕",
+    "pinyin": "jù jué",
+    "gloss": "to refuse; to turn down",
+    "pos": "verb",
+    "example": {
+      "trad": "她拒絕了我。",
+      "pinyin": "Tā jùjuéle wǒ.",
+      "english": "She turned me down."
+    }
+  },
+  {
+    "rank": 849,
+    "trad": "幫忙",
+    "pinyin": "bāng máng",
+    "gloss": "to help out; a favor",
+    "hint": "lend a hand; not before a person",
+    "pos": "verb",
+    "note": "Often stands alone (需要幫忙嗎？) or goes before a verb (幫忙拿一下 'help carry this'), and splits around other words: 幫我一個忙 'do me a favor'. To help a person directly, use 幫: 幫我.",
+    "example": {
+      "trad": "需要幫忙嗎？",
+      "pinyin": "Xūyào bāngmáng ma?",
+      "english": "Do you need help?"
+    }
+  },
+  {
+    "rank": 850,
+    "trad": "恭喜",
+    "pinyin": "gōng xǐ",
+    "gloss": "congratulations",
+    "pos": "phrase",
+    "note": "恭喜！ alone, or 恭喜你 gōng xǐ nǐ 'congratulations (to you)'. The Lunar New Year greeting is 恭喜發財 gōng xǐ fā cái.",
+    "example": {
+      "trad": "恭喜你找到新工作！",
+      "pinyin": "Gōngxǐ nǐ zhǎodào xīn gōngzuò!",
+      "english": "Congratulations on the new job!"
+    }
+  }
+]

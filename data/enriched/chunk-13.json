@@ -1,0 +1,684 @@
+[
+  {
+    "rank": 601,
+    "trad": "提",
+    "pinyin": "tí",
+    "gloss": "to mention; to carry (in hand)",
+    "hint": "raise a topic; lift by a handle",
+    "pos": "verb",
+    "note": "提到 \"to mention\", 提醒 \"to remind\". In Taiwan 提防 \"to be on guard against\" is also tí fáng (the mainland says dī fang).",
+    "example": {
+      "trad": "他沒跟我提過這件事。",
+      "pinyin": "Tā méi gēn wǒ tí guò zhè jiàn shì.",
+      "english": "He never mentioned this to me."
+    }
+  },
+  {
+    "rank": 602,
+    "trad": "辦公室",
+    "pinyin": "bàn gōng shì",
+    "gloss": "office",
+    "pos": "noun",
+    "example": {
+      "trad": "我在辦公室等你。",
+      "pinyin": "Wǒ zài bàngōngshì děng nǐ.",
+      "english": "I'll wait for you at the office."
+    }
+  },
+  {
+    "rank": 603,
+    "trad": "結婚",
+    "pinyin": "jié hūn",
+    "gloss": "to get married",
+    "pos": "verb",
+    "note": "\"To marry someone\" is 跟某人結婚 (gēn … jié hūn); 結婚 does not take a direct object.",
+    "example": {
+      "trad": "他們明年要結婚了。",
+      "pinyin": "Tāmen míngnián yào jiéhūn le.",
+      "english": "They're getting married next year."
+    }
+  },
+  {
+    "rank": 604,
+    "trad": "快樂",
+    "pinyin": "kuài lè",
+    "gloss": "happy; joyful",
+    "hint": "as in greetings and wishes",
+    "pos": "adj",
+    "note": "Mostly in wishes: 生日快樂, 新年快樂. For everyday \"I'm happy\" Taiwanese usually say 開心 or 高興.",
+    "example": {
+      "trad": "祝你生日快樂！",
+      "pinyin": "Zhù nǐ shēngrì kuàilè!",
+      "english": "Happy birthday!"
+    }
+  },
+  {
+    "rank": 605,
+    "trad": "上班",
+    "pinyin": "shàng bān",
+    "gloss": "to go to work; to be at work",
+    "hint": "the workday, at the office or job",
+    "pos": "verb",
+    "note": "下班 xià bān is 'to get off work'. 上班族 shàng bān zú means 'office workers'.",
+    "example": {
+      "trad": "你明天要上班嗎？",
+      "pinyin": "Nǐ míngtiān yào shàngbān ma?",
+      "english": "Do you have to work tomorrow?"
+    }
+  },
+  {
+    "rank": 606,
+    "trad": "戰爭",
+    "pinyin": "zhàn zhēng",
+    "gloss": "war",
+    "pos": "noun",
+    "example": {
+      "trad": "沒有人喜歡戰爭。",
+      "pinyin": "Méiyǒu rén xǐhuān zhànzhēng.",
+      "english": "Nobody likes war."
+    }
+  },
+  {
+    "rank": 607,
+    "trad": "強",
+    "pinyin": "qiáng",
+    "gloss": "strong; capable",
+    "hint": "powerful; very good at something",
+    "pos": "adj",
+    "note": "Polyphone: qiǎng in 勉強 (miǎn qiǎng) \"reluctantly; to force\", and jiàng in 倔強 (jué jiàng) \"stubborn\".",
+    "example": {
+      "trad": "他的能力很強。",
+      "pinyin": "Tā de nénglì hěn qiáng.",
+      "english": "He's very capable."
+    }
+  },
+  {
+    "rank": 608,
+    "trad": "轉",
+    "pinyin": "zhuǎn",
+    "gloss": "to turn; to transfer",
+    "hint": "change direction; switch",
+    "pos": "verb",
+    "note": "Polyphone: zhuàn means \"to spin around\" (轉圈 zhuàn quān). zhuǎn: 右轉 \"turn right\", 轉車 \"change trains\", 轉帳 \"transfer money\".",
+    "example": {
+      "trad": "你在前面右轉。",
+      "pinyin": "Nǐ zài qiánmiàn yòuzhuǎn.",
+      "english": "Turn right up ahead."
+    }
+  },
+  {
+    "rank": 609,
+    "trad": "重新",
+    "pinyin": "chóng xīn",
+    "gloss": "again (from the start); anew",
+    "hint": "redo from scratch",
+    "pos": "adv",
+    "note": "重 is chóng here (\"again\"), not zhòng \"heavy\". Unlike 再 (zài), it means starting over.",
+    "example": {
+      "trad": "我們重新開始吧。",
+      "pinyin": "Wǒmen chóngxīn kāishǐ ba.",
+      "english": "Let's start over."
+    }
+  },
+  {
+    "rank": 610,
+    "trad": "查",
+    "pinyin": "chá",
+    "gloss": "to look up; to check; to investigate",
+    "hint": "search for information",
+    "pos": "verb",
+    "note": "Read zhā only as a surname. 查一下 \"look it up\".",
+    "example": {
+      "trad": "我上網查一下。",
+      "pinyin": "Wǒ shàngwǎng chá yīxià.",
+      "english": "I'll look it up online."
+    }
+  },
+  {
+    "rank": 611,
+    "trad": "離",
+    "pinyin": "lí",
+    "gloss": "(distance) from; away from",
+    "hint": "how far from",
+    "pos": "prep",
+    "note": "For distance: A 離 B 很近/很遠 \"A is close to/far from B\". Starting point \"from\" is 從 (cóng). Also in 離開 \"to leave\".",
+    "example": {
+      "trad": "我家離這裡很近。",
+      "pinyin": "Wǒ jiā lí zhèlǐ hěn jìn.",
+      "english": "My home is close to here."
+    }
+  },
+  {
+    "rank": 612,
+    "trad": "往",
+    "pinyin": "wǎng",
+    "gloss": "toward; in the direction of",
+    "hint": "direction of movement, e.g. go forward",
+    "pos": "prep",
+    "note": "Used before a direction: 往前走 \"go forward\", 往左轉 \"turn left\". 向 (xiàng) is similar but more formal, and also used toward people.",
+    "example": {
+      "trad": "一直往前走就到了。",
+      "pinyin": "Yīzhí wǎng qián zǒu jiù dào le.",
+      "english": "Just go straight ahead and you're there."
+    }
+  },
+  {
+    "rank": 613,
+    "trad": "建議",
+    "pinyin": "jiàn yì",
+    "gloss": "to suggest; suggestion",
+    "hint": "recommend what to do",
+    "pos": "verb",
+    "example": {
+      "trad": "你有什麼建議嗎？",
+      "pinyin": "Nǐ yǒu shénme jiànyì ma?",
+      "english": "Do you have any suggestions?"
+    }
+  },
+  {
+    "rank": 614,
+    "trad": "房子",
+    "pinyin": "fáng zi",
+    "gloss": "house; apartment",
+    "hint": "the building, not \"home\"",
+    "pos": "noun",
+    "note": "The physical dwelling; \"home\" in the family sense is 家 (jiā).",
+    "example": {
+      "trad": "他們買了新房子。",
+      "pinyin": "Tāmen mǎi le xīn fángzi.",
+      "english": "They bought a new house."
+    }
+  },
+  {
+    "rank": 615,
+    "trad": "洗澡",
+    "pinyin": "xǐ zǎo",
+    "gloss": "to shower; to bathe",
+    "hint": "wash your whole body",
+    "pos": "verb",
+    "note": "Covers both a shower and a bath. 洗 xǐ alone is 'to wash' (洗手 xǐ shǒu 'wash your hands').",
+    "example": {
+      "trad": "我先去洗澡。",
+      "pinyin": "Wǒ xiān qù xǐzǎo.",
+      "english": "I'm going to take a shower first."
+    }
+  },
+  {
+    "rank": 616,
+    "trad": "剛剛",
+    "pinyin": "gāng gāng",
+    "gloss": "just now; a moment ago",
+    "hint": "doubled; the everyday Taiwan word",
+    "pos": "adv",
+    "note": "Taiwan's usual word for \"just now\"; the mainland often says 剛才 (gāng cái). Taiwan keeps both tones: gāng gāng.",
+    "example": {
+      "trad": "他剛剛打電話給你。",
+      "pinyin": "Tā gānggāng dǎ diànhuà gěi nǐ.",
+      "english": "He called you just now."
+    }
+  },
+  {
+    "rank": 617,
+    "trad": "終於",
+    "pinyin": "zhōng yú",
+    "gloss": "finally; at last",
+    "hint": "after a long wait",
+    "pos": "adv",
+    "note": "Expresses relief after waiting. \"Finally\" meaning \"lastly\" in a list is 最後 (zuì hòu).",
+    "example": {
+      "trad": "你終於來了！",
+      "pinyin": "Nǐ zhōngyú lái le!",
+      "english": "You're finally here!"
+    }
+  },
+  {
+    "rank": 618,
+    "trad": "方面",
+    "pinyin": "fāng miàn",
+    "gloss": "aspect; side; area",
+    "pos": "noun",
+    "note": "一方面…另一方面… means \"on one hand… on the other hand…\".",
+    "example": {
+      "trad": "這方面我不太懂。",
+      "pinyin": "Zhè fāngmiàn wǒ bù tài dǒng.",
+      "english": "I don't know much about that area."
+    }
+  },
+  {
+    "rank": 619,
+    "trad": "身體",
+    "pinyin": "shēn tǐ",
+    "gloss": "body; health",
+    "hint": "physical body, also one's health",
+    "pos": "noun",
+    "note": "Often means health: 身體好嗎？ \"How's your health?\"",
+    "example": {
+      "trad": "你爸爸身體還好嗎？",
+      "pinyin": "Nǐ bàba shēntǐ hái hǎo ma?",
+      "english": "Is your dad in good health?"
+    }
+  },
+  {
+    "rank": 620,
+    "trad": "寶貝",
+    "pinyin": "bǎo bèi",
+    "gloss": "baby; darling; treasure",
+    "hint": "term of endearment",
+    "pos": "noun",
+    "note": "Said to children or a partner, like \"sweetie\". A newborn baby is 嬰兒 (yīng ér) or 小寶寶.",
+    "example": {
+      "trad": "寶貝，過來吃飯了！",
+      "pinyin": "Bǎobèi, guòlai chīfàn le!",
+      "english": "Sweetie, come eat!"
+    }
+  },
+  {
+    "rank": 621,
+    "trad": "害怕",
+    "pinyin": "hài pà",
+    "gloss": "to be scared; afraid",
+    "hint": "feeling fear, two syllables",
+    "pos": "verb",
+    "note": "Close to 怕 (pà), which is shorter and more casual and also means \"to worry that…\".",
+    "example": {
+      "trad": "別害怕，我在這裡。",
+      "pinyin": "Bié hàipà, wǒ zài zhèlǐ.",
+      "english": "Don't be scared, I'm here."
+    }
+  },
+  {
+    "rank": 622,
+    "trad": "老師",
+    "pinyin": "lǎo shī",
+    "gloss": "teacher",
+    "pos": "noun",
+    "note": "Also a polite title for teachers and some professionals: 王老師.",
+    "example": {
+      "trad": "她是我們的英文老師。",
+      "pinyin": "Tā shì wǒmen de Yīngwén lǎoshī.",
+      "english": "She's our English teacher."
+    }
+  },
+  {
+    "rank": 623,
+    "trad": "蠻",
+    "pinyin": "mán",
+    "gloss": "quite; pretty (very)",
+    "hint": "fairly, casual",
+    "pos": "adv",
+    "note": "Taiwan colloquial, often with 的: 蠻好的 \"pretty good\". The mainland says 挺 (tǐng). Many Taiwanese say mǎn here (written 滿).",
+    "example": {
+      "trad": "這家店蠻好吃的。",
+      "pinyin": "Zhè jiā diàn mán hǎochī de.",
+      "english": "The food at this place is pretty good."
+    }
+  },
+  {
+    "rank": 624,
+    "trad": "精神",
+    "pinyin": "jīng shén",
+    "gloss": "energy; vigor; spirit",
+    "hint": "feeling lively and awake",
+    "pos": "noun",
+    "note": "有精神 \"full of energy\", 沒精神 \"listless\"; 精神病 is \"mental illness\". The mainland reads the \"lively\" sense jīng shen; Taiwan says jīng shén for both.",
+    "example": {
+      "trad": "你今天看起來很有精神。",
+      "pinyin": "Nǐ jīntiān kàn qǐlái hěn yǒu jīngshén.",
+      "english": "You look full of energy today."
+    }
+  },
+  {
+    "rank": 625,
+    "trad": "重",
+    "pinyin": "zhòng",
+    "gloss": "heavy; serious",
+    "hint": "weight",
+    "pos": "adj",
+    "note": "Polyphone: chóng means \"again\" or \"layer\" (重新 chóng xīn \"anew\", 重複 \"to repeat\").",
+    "example": {
+      "trad": "這個箱子好重喔！",
+      "pinyin": "Zhège xiāngzi hǎo zhòng o!",
+      "english": "This box is so heavy!"
+    }
+  },
+  {
+    "rank": 626,
+    "trad": "弟弟",
+    "pinyin": "dì di",
+    "gloss": "younger brother",
+    "pos": "noun",
+    "note": "The second syllable is light.",
+    "example": {
+      "trad": "我弟弟在讀大學。",
+      "pinyin": "Wǒ dìdi zài dú dàxué.",
+      "english": "My younger brother is in college."
+    }
+  },
+  {
+    "rank": 627,
+    "trad": "帶來",
+    "pinyin": "dài lái",
+    "gloss": "to bring; to bring about",
+    "hint": "bring here; bring about (a result)",
+    "pos": "verb",
+    "note": "Often split around the object: 帶朋友來 \"bring a friend\".",
+    "example": {
+      "trad": "他帶來了一個好消息。",
+      "pinyin": "Tā dàilái le yī ge hǎo xiāoxí.",
+      "english": "He brought some good news."
+    }
+  },
+  {
+    "rank": 628,
+    "trad": "未來",
+    "pinyin": "wèi lái",
+    "gloss": "future",
+    "hint": "the time to come, in general",
+    "pos": "noun",
+    "note": "Close to 將來 (jiāng lái); 將來 is more about one's own plans (\"when I grow up\"), 未來 about the future in general.",
+    "example": {
+      "trad": "未來的事，誰知道呢？",
+      "pinyin": "Wèilái de shì, shéi zhīdào ne?",
+      "english": "Who knows what the future holds?"
+    }
+  },
+  {
+    "rank": 629,
+    "trad": "事件",
+    "pinyin": "shì jiàn",
+    "gloss": "incident; event",
+    "hint": "a notable incident",
+    "pos": "noun",
+    "note": "A notable or newsworthy incident; an everyday \"matter, thing\" is 事情 (shì qíng).",
+    "example": {
+      "trad": "這個事件上新聞了。",
+      "pinyin": "Zhège shìjiàn shàng xīnwén le.",
+      "english": "The incident made the news."
+    }
+  },
+  {
+    "rank": 630,
+    "trad": "越",
+    "pinyin": "yuè",
+    "gloss": "(the more... the more)",
+    "pos": "adv",
+    "note": "Used in pairs: 越A越B 'the more A, the more B' (越吃越胖 yuè chī yuè pàng); 越來越 yuè lái yuè 'more and more'. On its own it can also mean 'to cross over' (越過).",
+    "example": {
+      "trad": "雨越下越大了。",
+      "pinyin": "Yǔ yuè xià yuè dà le.",
+      "english": "The rain is getting heavier and heavier."
+    }
+  },
+  {
+    "rank": 631,
+    "trad": "黑",
+    "pinyin": "hēi",
+    "gloss": "black; dark",
+    "pos": "adj",
+    "note": "天黑了 tiān hēi le means 'it's gotten dark (night is falling)'. As a color word it is usually 黑色 hēi sè. MOE also lists a literary reading hè, not used in speech.",
+    "example": {
+      "trad": "天黑了，我們回家吧。",
+      "pinyin": "Tiān hēi le, wǒmen huíjiā ba.",
+      "english": "It's dark now, let's go home."
+    }
+  },
+  {
+    "rank": 632,
+    "trad": "另外",
+    "pinyin": "lìng wài",
+    "gloss": "in addition; another",
+    "hint": "two syllables; besides, also",
+    "pos": "conj",
+    "note": "At the start of a sentence it means 'also, besides'. Before a number + measure word it means 'the other / another': 另外一杯 lìng wài yī bēi 'another cup'.",
+    "example": {
+      "trad": "另外，我還要一杯茶。",
+      "pinyin": "Lìngwài, wǒ hái yào yī bēi chá.",
+      "english": "Also, I'd like a cup of tea."
+    }
+  },
+  {
+    "rank": 633,
+    "trad": "嚴重",
+    "pinyin": "yán zhòng",
+    "gloss": "serious; severe",
+    "hint": "a bad situation, not earnest",
+    "pos": "adj",
+    "note": "For a bad situation, illness or problem. 'Serious' meaning earnest or hard-working is 認真 rèn zhēn.",
+    "example": {
+      "trad": "他的病很嚴重。",
+      "pinyin": "Tā de bìng hěn yánzhòng.",
+      "english": "His illness is very serious."
+    }
+  },
+  {
+    "rank": 634,
+    "trad": "開心",
+    "pinyin": "kāi xīn",
+    "gloss": "happy; having fun",
+    "hint": "having a good time",
+    "pos": "adj",
+    "note": "The most common everyday word for feeling happy or having fun. 高興 is 'glad, pleased'; 快樂 is used mostly in wishes like 生日快樂.",
+    "example": {
+      "trad": "今天玩得很開心。",
+      "pinyin": "Jīntiān wán de hěn kāixīn.",
+      "english": "We had a lot of fun today."
+    }
+  },
+  {
+    "rank": 635,
+    "trad": "妹妹",
+    "pinyin": "mèi mei",
+    "gloss": "younger sister",
+    "pos": "noun",
+    "note": "The second syllable is light. Also used affectionately for a little girl.",
+    "example": {
+      "trad": "我妹妹在台北工作。",
+      "pinyin": "Wǒ mèimei zài Táiběi gōngzuò.",
+      "english": "My younger sister works in Taipei."
+    }
+  },
+  {
+    "rank": 636,
+    "trad": "人員",
+    "pinyin": "rén yuán",
+    "gloss": "staff; personnel",
+    "pos": "noun",
+    "note": "Mostly used in compounds: 工作人員 gōng zuò rén yuán 'staff', 服務人員 'service staff'.",
+    "example": {
+      "trad": "有問題可以問工作人員。",
+      "pinyin": "Yǒu wèntí kěyǐ wèn gōngzuò rényuán.",
+      "english": "If you have a question, you can ask the staff."
+    }
+  },
+  {
+    "rank": 637,
+    "trad": "死亡",
+    "pinyin": "sǐ wáng",
+    "gloss": "death; to die",
+    "hint": "formal, news",
+    "pos": "noun",
+    "note": "Formal word used in news and official reports. In conversation, 'to die' is just 死 sǐ.",
+    "example": {
+      "trad": "這次車禍沒有人死亡。",
+      "pinyin": "Zhè cì chēhuò méiyǒu rén sǐwáng.",
+      "english": "No one died in this car accident."
+    }
+  },
+  {
+    "rank": 638,
+    "trad": "這次",
+    "pinyin": "zhè cì",
+    "gloss": "this time",
+    "pos": "phrase",
+    "note": "這 'this' + 次 'time, occurrence'. Likewise 上次 'last time', 下次 'next time'. Casual speech also says zhèi cì (MOE lists zhèi as a variant of 這).",
+    "example": {
+      "trad": "這次我請客。",
+      "pinyin": "Zhè cì wǒ qǐngkè.",
+      "english": "This time it's my treat."
+    }
+  },
+  {
+    "rank": 639,
+    "trad": "檢查",
+    "pinyin": "jiǎn chá",
+    "gloss": "to check; to examine",
+    "hint": "inspect; medical checkup",
+    "pos": "verb",
+    "note": "Also a noun, 'checkup / inspection'. 查 alone means 'to look up'.",
+    "example": {
+      "trad": "你要去醫院檢查一下。",
+      "pinyin": "Nǐ yào qù yīyuàn jiǎnchá yīxià.",
+      "english": "You should go get checked at the hospital."
+    }
+  },
+  {
+    "rank": 640,
+    "trad": "加入",
+    "pinyin": "jiā rù",
+    "gloss": "to join; to add in",
+    "hint": "become a member",
+    "pos": "verb",
+    "note": "Join a group, team or club. For taking part in an event, use 參加 cān jiā. It can also mean 'to add' an ingredient.",
+    "example": {
+      "trad": "你要不要加入我們？",
+      "pinyin": "Nǐ yào bù yào jiārù wǒmen?",
+      "english": "Do you want to join us?"
+    }
+  },
+  {
+    "rank": 641,
+    "trad": "一般",
+    "pinyin": "yī bān",
+    "gloss": "ordinary; so-so; general",
+    "hint": "average, not special",
+    "pos": "adj",
+    "note": "很一般 'pretty average, nothing special'; 一般人 'ordinary people'; 一般來說 'generally speaking'. For 'usually' Taiwanese tend to say 通常 or 平常. Spoken yì bān (一 changes tone before a 1st tone).",
+    "example": {
+      "trad": "這家店的東西很一般。",
+      "pinyin": "Zhè jiā diàn de dōngxi hěn yībān.",
+      "english": "This shop's stuff is pretty average."
+    }
+  },
+  {
+    "rank": 642,
+    "trad": "教",
+    "pinyin": "jiāo",
+    "gloss": "to teach",
+    "pos": "verb",
+    "note": "Polyphone: jiāo is the verb 'to teach'; jiào in compounds like 教室 jiào shì 'classroom', 教育 'education' and 宗教 'religion'.",
+    "example": {
+      "trad": "你可以教我嗎？",
+      "pinyin": "Nǐ kěyǐ jiāo wǒ ma?",
+      "english": "Can you teach me?"
+    }
+  },
+  {
+    "rank": 643,
+    "trad": "停",
+    "pinyin": "tíng",
+    "gloss": "to stop; to park",
+    "hint": "halt; park a car",
+    "pos": "verb",
+    "note": "Something stops (雨停了 'the rain stopped') or you park a vehicle: 停車 tíng chē. Telling someone 'stop it!' is usually 不要 or 別.",
+    "example": {
+      "trad": "雨停了，我們走吧。",
+      "pinyin": "Yǔ tíng le, wǒmen zǒu ba.",
+      "english": "The rain has stopped, let's go."
+    }
+  },
+  {
+    "rank": 644,
+    "trad": "資料",
+    "pinyin": "zī liào",
+    "gloss": "information; data; documents",
+    "hint": "data, files",
+    "pos": "noun",
+    "note": "Material or data you look up or hand in, such as documents or files. News or updates are 消息 xiāo xí; 資訊 is 'information' in a broader sense.",
+    "example": {
+      "trad": "我在網路上找資料。",
+      "pinyin": "Wǒ zài wǎnglù shàng zhǎo zīliào.",
+      "english": "I'm looking up information online."
+    }
+  },
+  {
+    "rank": 645,
+    "trad": "回到",
+    "pinyin": "huí dào",
+    "gloss": "to get back to",
+    "hint": "followed by a place",
+    "pos": "verb",
+    "note": "回 'return' + 到 'arrive'; always followed by a place or state: 回到家 'get home'. Compare 回來 'come back' and 回去 'go back'.",
+    "example": {
+      "trad": "我十點才回到家。",
+      "pinyin": "Wǒ shí diǎn cái huídào jiā.",
+      "english": "I didn't get home until ten."
+    }
+  },
+  {
+    "rank": 646,
+    "trad": "耶",
+    "pinyin": "yē",
+    "gloss": "(particle: surprise / enthusiasm)",
+    "pos": "particle",
+    "note": "Very Taiwanese. Ends a sentence to show surprise or excitement: 好好吃耶 'wow, this is so good!'. Said with a high level tone (yē), sometimes lighter in fast speech; the other reading yé is a classical question particle.",
+    "example": {
+      "trad": "這個蛋糕好好吃耶！",
+      "pinyin": "Zhège dàngāo hǎo hǎochī yē!",
+      "english": "Wow, this cake is so good!"
+    }
+  },
+  {
+    "rank": 647,
+    "trad": "父母",
+    "pinyin": "fù mǔ",
+    "gloss": "parents",
+    "pos": "noun",
+    "note": "Slightly formal; in casual talk Taiwanese often say 爸媽 bà mā 'mom and dad'.",
+    "example": {
+      "trad": "我父母住在南部。",
+      "pinyin": "Wǒ fùmǔ zhù zài nánbù.",
+      "english": "My parents live in the south."
+    }
+  },
+  {
+    "rank": 648,
+    "trad": "全部",
+    "pinyin": "quán bù",
+    "gloss": "all; the whole lot",
+    "hint": "all of it; can stand alone",
+    "pos": "adv",
+    "note": "Can stand alone ('all of it') or come before a noun with 的: 全部的人 'everyone'. Compare 所有 'all (the)' and 都 'all, both'.",
+    "example": {
+      "trad": "我全部吃完了。",
+      "pinyin": "Wǒ quánbù chīwán le.",
+      "english": "I ate all of it."
+    }
+  },
+  {
+    "rank": 649,
+    "trad": "樣子",
+    "pinyin": "yàng zi",
+    "gloss": "look; appearance; way",
+    "hint": "how something looks",
+    "pos": "noun",
+    "note": "…的樣子 at the end of a sentence means 'seems / looks like…': 很累的樣子 'looks tired'.",
+    "example": {
+      "trad": "你好像很累的樣子。",
+      "pinyin": "Nǐ hǎoxiàng hěn lèi de yàngzi.",
+      "english": "You look tired."
+    }
+  },
+  {
+    "rank": 650,
+    "trad": "臉",
+    "pinyin": "liǎn",
+    "gloss": "face",
+    "pos": "noun",
+    "note": "Also 'face' in the social sense: 丟臉 diū liǎn 'to lose face, embarrassing'.",
+    "example": {
+      "trad": "我先去洗臉。",
+      "pinyin": "Wǒ xiān qù xǐ liǎn.",
+      "english": "I'll go wash my face first."
+    }
+  }
+]

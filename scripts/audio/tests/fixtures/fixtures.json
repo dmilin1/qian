@@ -1,0 +1,121 @@
+[
+ {
+  "file": "v4_662f.mp3",
+  "text": "是",
+  "pinyin": "shi4",
+  "label": "ok",
+  "model": "eleven_v4"
+ },
+ {
+  "file": "v4_53bb.mp3",
+  "text": "去",
+  "pinyin": "qu4",
+  "label": "ok",
+  "model": "eleven_v4"
+ },
+ {
+  "file": "v4_6703.mp3",
+  "text": "會",
+  "pinyin": "hui4",
+  "label": "ok",
+  "model": "eleven_v4"
+ },
+ {
+  "file": "v4_4f86.mp3",
+  "text": "來",
+  "pinyin": "lai2",
+  "label": "ok",
+  "model": "eleven_v4"
+ },
+ {
+  "file": "v4_884c.mp3",
+  "text": "行",
+  "pinyin": "xing2",
+  "label": "ok",
+  "model": "eleven_v4"
+ },
+ {
+  "file": "v4_9577.mp3",
+  "text": "長",
+  "pinyin": "chang2",
+  "label": "ok",
+  "model": "eleven_v4"
+ },
+ {
+  "file": "v4_597d.mp3",
+  "text": "好",
+  "pinyin": "hao3",
+  "label": "ok",
+  "model": "eleven_v4"
+ },
+ {
+  "file": "v4_4f60-597d.mp3",
+  "text": "你好",
+  "pinyin": "ni3 hao3",
+  "label": "ok",
+  "model": "eleven_v4"
+ },
+ {
+  "file": "v4_8a8d-8b58.mp3",
+  "text": "認識",
+  "pinyin": "ren4 shi4",
+  "label": "ok",
+  "model": "eleven_v4"
+ },
+ {
+  "file": "v4_670b-53cb.mp3",
+  "text": "朋友",
+  "pinyin": "peng2 you3",
+  "label": "ok",
+  "model": "eleven_v4"
+ },
+ {
+  "file": "v4_6771-897f.mp3",
+  "text": "東西",
+  "pinyin": "dong1 xi5",
+  "label": "ok",
+  "model": "eleven_v4"
+ },
+ {
+  "file": "flash_4ed6.mp3",
+  "text": "他",
+  "pinyin": "ta1",
+  "label": "ok",
+  "model": "eleven_flash_v2_5"
+ },
+ {
+  "file": "flash_90fd.mp3",
+  "text": "都",
+  "pinyin": "dou1",
+  "label": "ok",
+  "model": "eleven_flash_v2_5"
+ },
+ {
+  "file": "v4_60f3.mp3",
+  "text": "想",
+  "pinyin": "xiang3",
+  "label": "ok",
+  "model": "eleven_v4"
+ },
+ {
+  "file": "ml2_5783-573e.mp3",
+  "text": "垃圾",
+  "pinyin": "le4 se4",
+  "label": "bad",
+  "model": "eleven_multilingual_v2"
+ },
+ {
+  "file": "flash_5783-573e.mp3",
+  "text": "垃圾",
+  "pinyin": "le4 se4",
+  "label": "bad",
+  "model": "eleven_flash_v2_5"
+ },
+ {
+  "file": "v4_4ed6.mp3",
+  "text": "他",
+  "pinyin": "ta1",
+  "label": "bad",
+  "model": "eleven_v4"
+ }
+]

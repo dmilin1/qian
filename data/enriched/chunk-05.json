@@ -1,0 +1,685 @@
+[
+  {
+    "rank": 201,
+    "trad": "正",
+    "pinyin": "zhèng",
+    "gloss": "just (doing); straight; right",
+    "hint": "one syllable; right then, just about to",
+    "pos": "adv",
+    "note": "As an adverb it marks an action in progress or about to happen: 我正要出門 (I'm just about to go out). Also 'straight, upright, correct'. Read zhēng in 正月 (first lunar month).",
+    "example": {
+      "trad": "我正要打給你。",
+      "pinyin": "Wǒ zhèng yào dǎ gěi nǐ.",
+      "english": "I was just about to call you."
+    }
+  },
+  {
+    "rank": 202,
+    "trad": "那裡",
+    "pinyin": "nà lǐ",
+    "gloss": "there",
+    "hint": "that place",
+    "pos": "pron",
+    "note": "Taiwan says 那裡 or 那邊 where the mainland often says 那兒, and keeps a full tone on lǐ. MOE also lists an old reading nǎ lǐ meaning 'where' (now written 哪裡).",
+    "example": {
+      "trad": "我的手機在那裡。",
+      "pinyin": "Wǒ de shǒujī zài nàlǐ.",
+      "english": "My phone is over there."
+    }
+  },
+  {
+    "rank": 203,
+    "trad": "錯",
+    "pinyin": "cuò",
+    "gloss": "wrong; mistake; fault",
+    "hint": "one syllable",
+    "pos": "adj",
+    "note": "After a verb it means 'wrongly': 說錯 (say it wrong), 打錯了 (wrong number). 不錯 means 'pretty good'. MOE also lists a literary reading cù.",
+    "example": {
+      "trad": "對不起，是我的錯。",
+      "pinyin": "Duìbuqǐ, shì wǒ de cuò.",
+      "english": "Sorry, it's my fault."
+    }
+  },
+  {
+    "rank": 204,
+    "trad": "大家",
+    "pinyin": "dà jiā",
+    "gloss": "everyone",
+    "hint": "all of us / you all, as a group",
+    "pos": "pron",
+    "note": "Everyone in the group being talked to or about: 大家好 (hi everyone). The rare reading dà gū is an old word for mother-in-law.",
+    "example": {
+      "trad": "大家都到了嗎？",
+      "pinyin": "Dàjiā dōu dào le ma?",
+      "english": "Is everyone here?"
+    }
+  },
+  {
+    "rank": 205,
+    "trad": "殺",
+    "pinyin": "shā",
+    "gloss": "to kill",
+    "pos": "verb",
+    "note": "In Taiwan, 殺價 (shā jià) is the everyday word for haggling over a price.",
+    "example": {
+      "trad": "我不敢殺魚。",
+      "pinyin": "Wǒ bù gǎn shā yú.",
+      "english": "I can't bring myself to kill a fish."
+    }
+  },
+  {
+    "rank": 206,
+    "trad": "感覺",
+    "pinyin": "gǎn jué",
+    "gloss": "to feel; feeling",
+    "hint": "a sensation or impression",
+    "pos": "verb",
+    "note": "Close to 覺得 jué de 'to think/feel'; 感覺 leans more toward physical or gut feelings and also works as a noun.",
+    "example": {
+      "trad": "我感覺有點冷。",
+      "pinyin": "Wǒ gǎnjué yǒudiǎn lěng.",
+      "english": "I feel a little cold."
+    }
+  },
+  {
+    "rank": 207,
+    "trad": "成為",
+    "pinyin": "chéng wéi",
+    "gloss": "to become",
+    "hint": "become (a role or status), a bit formal",
+    "pos": "verb",
+    "note": "A bit more formal than 變成 biàn chéng. For jobs, everyday speech uses 當 dāng (當老師 'be a teacher'). 為 here is wéi, not wèi.",
+    "example": {
+      "trad": "我們後來成為好朋友。",
+      "pinyin": "Wǒmen hòulái chéngwéi hǎo péngyǒu.",
+      "english": "We later became good friends."
+    }
+  },
+  {
+    "rank": 208,
+    "trad": "號",
+    "pinyin": "hào",
+    "gloss": "number; day of the month",
+    "hint": "in a series; dates",
+    "pos": "noun",
+    "note": "Used for dates (五月三號 'May 3rd'), room or bus numbers, and sizes. Other reading háo 'to howl' is rare.",
+    "example": {
+      "trad": "今天幾號？",
+      "pinyin": "Jīntiān jǐ hào?",
+      "english": "What's the date today?"
+    }
+  },
+  {
+    "rank": 209,
+    "trad": "任何",
+    "pinyin": "rèn hé",
+    "gloss": "any",
+    "hint": "any at all, before a noun",
+    "pos": "pron",
+    "note": "Comes before a noun and is usually followed by 都 or 也: 任何人都可以 'anyone can'.",
+    "example": {
+      "trad": "你有任何問題都可以問我。",
+      "pinyin": "Nǐ yǒu rènhé wèntí dōu kěyǐ wèn wǒ.",
+      "english": "If you have any questions, you can ask me."
+    }
+  },
+  {
+    "rank": 210,
+    "trad": "幫",
+    "pinyin": "bāng",
+    "gloss": "to help; to do for someone",
+    "hint": "everyday; do something for someone",
+    "pos": "verb",
+    "note": "幫 takes the person right after it and often means 'do something for': 幫我拿 'get it for me'. Compare 幫忙 bāng máng 'to help out' (no object) and 幫助 bāng zhù (more formal).",
+    "example": {
+      "trad": "你可以幫我一下嗎？",
+      "pinyin": "Nǐ kěyǐ bāng wǒ yīxià ma?",
+      "english": "Can you help me for a second?"
+    }
+  },
+  {
+    "rank": 211,
+    "trad": "最後",
+    "pinyin": "zuì hòu",
+    "gloss": "last; in the end",
+    "hint": "last in a sequence; eventually",
+    "pos": "adv",
+    "note": "Also 'the last': 最後一個 'the last one'. Not the relieved 'finally, at last', which is 終於 zhōng yú.",
+    "example": {
+      "trad": "最後他還是來了。",
+      "pinyin": "Zuìhòu tā háishì lái le.",
+      "english": "In the end he came after all."
+    }
+  },
+  {
+    "rank": 212,
+    "trad": "長",
+    "pinyin": "cháng",
+    "gloss": "long",
+    "hint": "in length",
+    "pos": "adj",
+    "note": "Polyphone: zhǎng means 'to grow' or 'chief', as in 長大 zhǎng dà 'grow up' and 長得很漂亮 zhǎng de 'looks pretty'. For a long time, use 久 jiǔ.",
+    "example": {
+      "trad": "她的頭髮很長。",
+      "pinyin": "Tā de tóufǎ hěn cháng.",
+      "english": "Her hair is very long."
+    }
+  },
+  {
+    "rank": 213,
+    "trad": "計畫",
+    "pinyin": "jì huà",
+    "gloss": "plan; to plan",
+    "hint": "a plan; verb use is formal",
+    "pos": "noun",
+    "note": "Taiwan's standard spelling is 計畫; mainland China writes 計劃 (计划). The pronunciation is the same.",
+    "example": {
+      "trad": "你週末有什麼計畫？",
+      "pinyin": "Nǐ zhōumò yǒu shénme jìhuà?",
+      "english": "Do you have any plans for the weekend?"
+    }
+  },
+  {
+    "rank": 214,
+    "trad": "情況",
+    "pinyin": "qíng kuàng",
+    "gloss": "situation; circumstances",
+    "pos": "noun",
+    "example": {
+      "trad": "現在情況怎麼樣？",
+      "pinyin": "Xiànzài qíngkuàng zěnmeyàng?",
+      "english": "How's the situation now?"
+    }
+  },
+  {
+    "rank": 215,
+    "trad": "累",
+    "pinyin": "lèi",
+    "gloss": "tired",
+    "pos": "adj",
+    "note": "Other readings: lěi 'to accumulate' (累積 lěi jī) and léi in 累贅 léi zhuì 'a burden'.",
+    "example": {
+      "trad": "我今天好累。",
+      "pinyin": "Wǒ jīntiān hǎo lèi.",
+      "english": "I'm so tired today."
+    }
+  },
+  {
+    "rank": 216,
+    "trad": "或",
+    "pinyin": "huò",
+    "gloss": "or",
+    "hint": "one syllable, in statements",
+    "pos": "conj",
+    "note": "Short for 或者 / 或是, used in statements. In questions ('A or B?') use 還是 hái shì instead.",
+    "example": {
+      "trad": "喝茶或咖啡都可以。",
+      "pinyin": "Hē chá huò kāfēi dōu kěyǐ.",
+      "english": "Tea or coffee, either is fine."
+    }
+  },
+  {
+    "rank": 217,
+    "trad": "買",
+    "pinyin": "mǎi",
+    "gloss": "to buy",
+    "pos": "verb",
+    "note": "Differs from 賣 mài 'to sell' only by tone: 3rd tone buys, 4th tone sells.",
+    "example": {
+      "trad": "我想買新的手機。",
+      "pinyin": "Wǒ xiǎng mǎi xīn de shǒujī.",
+      "english": "I want to buy a new phone."
+    }
+  },
+  {
+    "rank": 218,
+    "trad": "不能",
+    "pinyin": "bù néng",
+    "gloss": "cannot; must not",
+    "hint": "unable or not allowed",
+    "pos": "aux",
+    "note": "不能 means unable or not permitted; 不會 means don't know how or won't; 不可以 is mostly 'not allowed'.",
+    "example": {
+      "trad": "這裡不能抽菸。",
+      "pinyin": "Zhèlǐ bù néng chōuyān.",
+      "english": "You can't smoke here."
+    }
+  },
+  {
+    "rank": 219,
+    "trad": "國家",
+    "pinyin": "guó jiā",
+    "gloss": "country; nation",
+    "pos": "noun",
+    "example": {
+      "trad": "你去過哪些國家？",
+      "pinyin": "Nǐ qùguò nǎxiē guójiā?",
+      "english": "Which countries have you been to?"
+    }
+  },
+  {
+    "rank": 220,
+    "trad": "進",
+    "pinyin": "jìn",
+    "gloss": "to enter; to go in",
+    "hint": "one syllable",
+    "pos": "verb",
+    "note": "Often paired with direction words: 進來 'come in', 進去 'go in'. 請進 is 'please come in'.",
+    "example": {
+      "trad": "請進，請坐。",
+      "pinyin": "Qǐng jìn, qǐng zuò.",
+      "english": "Come in, have a seat."
+    }
+  },
+  {
+    "rank": 221,
+    "trad": "您",
+    "pinyin": "nín",
+    "gloss": "you (polite)",
+    "hint": "polite",
+    "pos": "pron",
+    "note": "The polite 'you' for elders, customers and strangers. Taiwan uses it less in casual talk than Beijing does; it is common in shops and service settings.",
+    "example": {
+      "trad": "請問您貴姓？",
+      "pinyin": "Qǐngwèn nín guìxìng?",
+      "english": "May I ask your last name?"
+    }
+  },
+  {
+    "rank": 222,
+    "trad": "媽媽",
+    "pinyin": "mā ma",
+    "gloss": "mom; mother",
+    "hint": "everyday word",
+    "pos": "noun",
+    "note": "The short form 媽 (我媽 'my mom') is counted here. 母親 mǔ qīn is the formal word.",
+    "example": {
+      "trad": "我媽媽很會做菜。",
+      "pinyin": "Wǒ māma hěn huì zuò cài.",
+      "english": "My mom is a great cook."
+    }
+  },
+  {
+    "rank": 223,
+    "trad": "重要",
+    "pinyin": "zhòng yào",
+    "gloss": "important",
+    "pos": "adj",
+    "note": "重 is zhòng here ('heavy, important'); it is chóng in 重新 chóng xīn 'again'.",
+    "example": {
+      "trad": "這件事很重要。",
+      "pinyin": "Zhè jiàn shì hěn zhòngyào.",
+      "english": "This matter is very important."
+    }
+  },
+  {
+    "rank": 224,
+    "trad": "很多",
+    "pinyin": "hěn duō",
+    "gloss": "a lot of; many",
+    "hint": "two syllables; 'very many', before a noun",
+    "pos": "phrase",
+    "note": "很 + 多. This is the normal way to say 'many' before a noun (很多人 'lots of people'); 多 alone rarely goes before a noun.",
+    "example": {
+      "trad": "我有很多朋友。",
+      "pinyin": "Wǒ yǒu hěn duō péngyǒu.",
+      "english": "I have a lot of friends."
+    }
+  },
+  {
+    "rank": 225,
+    "trad": "車",
+    "pinyin": "chē",
+    "gloss": "car; vehicle",
+    "hint": "any vehicle",
+    "pos": "noun",
+    "note": "Common in 開車 'to drive' and 坐車 'to ride (in a vehicle)'. Other reading jū (the chariot piece in Chinese chess) is rare.",
+    "example": {
+      "trad": "我們開車去吧。",
+      "pinyin": "Wǒmen kāichē qù ba.",
+      "english": "Let's drive there."
+    }
+  },
+  {
+    "rank": 226,
+    "trad": "電話",
+    "pinyin": "diàn huà",
+    "gloss": "phone; phone call",
+    "pos": "noun",
+    "note": "打電話 means 'to make a phone call'.",
+    "example": {
+      "trad": "等一下打電話給我。",
+      "pinyin": "Děng yīxià dǎ diànhuà gěi wǒ.",
+      "english": "Give me a call in a bit."
+    }
+  },
+  {
+    "rank": 227,
+    "trad": "明白",
+    "pinyin": "míng bai",
+    "gloss": "to understand; clear",
+    "hint": "see clearly; it's clear to me",
+    "pos": "verb",
+    "note": "MOE gives a neutral second syllable, but many Taiwanese say míng bái with a full tone. In casual Taiwan speech, 懂 dǒng is also very common.",
+    "example": {
+      "trad": "我明白你的意思。",
+      "pinyin": "Wǒ míngbai nǐ de yìsi.",
+      "english": "I understand what you mean."
+    }
+  },
+  {
+    "rank": 228,
+    "trad": "住",
+    "pinyin": "zhù",
+    "gloss": "to live (somewhere); to stay",
+    "hint": "reside",
+    "pos": "verb",
+    "note": "After another verb it means 'firmly, in place': 記住 'remember', 抓住 'grab hold of'.",
+    "example": {
+      "trad": "你住在哪裡？",
+      "pinyin": "Nǐ zhù zài nǎlǐ?",
+      "english": "Where do you live?"
+    }
+  },
+  {
+    "rank": 229,
+    "trad": "繼續",
+    "pinyin": "jì xù",
+    "gloss": "to continue; to keep on",
+    "pos": "verb",
+    "example": {
+      "trad": "我們明天再繼續吧。",
+      "pinyin": "Wǒmen míngtiān zài jìxù ba.",
+      "english": "Let's continue tomorrow."
+    }
+  },
+  {
+    "rank": 230,
+    "trad": "如何",
+    "pinyin": "rú hé",
+    "gloss": "how; how about",
+    "hint": "formal-sounding",
+    "pos": "pron",
+    "note": "More formal than 怎麼 / 怎麼樣, but common in speech in 你覺得如何？ 'what do you think?'.",
+    "example": {
+      "trad": "你覺得這樣如何？",
+      "pinyin": "Nǐ juéde zhèyàng rúhé?",
+      "english": "What do you think of doing it this way?"
+    }
+  },
+  {
+    "rank": 231,
+    "trad": "也許",
+    "pinyin": "yě xǔ",
+    "gloss": "perhaps; maybe",
+    "hint": "soft guess; adverb only, not formal",
+    "pos": "adv",
+    "note": "Close to 可能 kě néng, which is more common in everyday Taiwan speech.",
+    "example": {
+      "trad": "也許他今天不來了。",
+      "pinyin": "Yěxǔ tā jīntiān bù lái le.",
+      "english": "Maybe he's not coming today."
+    }
+  },
+  {
+    "rank": 232,
+    "trad": "離開",
+    "pinyin": "lí kāi",
+    "gloss": "to leave; to depart",
+    "hint": "a place or person",
+    "pos": "verb",
+    "note": "Takes the place or person left as an object (離開台灣). 走 zǒu is the casual 'to leave, go'.",
+    "example": {
+      "trad": "他已經離開了。",
+      "pinyin": "Tā yǐjīng líkāi le.",
+      "english": "He has already left."
+    }
+  },
+  {
+    "rank": 233,
+    "trad": "寫",
+    "pinyin": "xiě",
+    "gloss": "to write",
+    "pos": "verb",
+    "note": "Other reading xiè appears only in a few literary words.",
+    "example": {
+      "trad": "你的名字怎麼寫？",
+      "pinyin": "Nǐ de míngzi zěnme xiě?",
+      "english": "How do you write your name?"
+    }
+  },
+  {
+    "rank": 234,
+    "trad": "怎麼樣",
+    "pinyin": "zěn me yàng",
+    "gloss": "how is it?; how about it?",
+    "hint": "three syllables, the full everyday form",
+    "pos": "pron",
+    "note": "Asks for an opinion or condition: 最近怎麼樣？ 'how have you been?'. 不怎麼樣 means 'not great'.",
+    "example": {
+      "trad": "最近怎麼樣？",
+      "pinyin": "Zuìjìn zěnmeyàng?",
+      "english": "How have you been lately?"
+    }
+  },
+  {
+    "rank": 235,
+    "trad": "還好",
+    "pinyin": "hái hǎo",
+    "gloss": "it's OK; so-so; luckily",
+    "hint": "a so-so answer; also 'fortunately'",
+    "pos": "phrase",
+    "note": "A very common Taiwan answer to 'how was it?': 還好 'it was OK' (often meaning 'nothing special'). At the start of a sentence it means 'luckily, good thing': 還好你來了 hái hǎo nǐ lái le 'good thing you came'. 還 is hái here, not huán.",
+    "example": {
+      "trad": "還好你有帶傘。",
+      "pinyin": "Háihǎo nǐ yǒu dài sǎn.",
+      "english": "Good thing you brought an umbrella."
+    }
+  },
+  {
+    "rank": 236,
+    "trad": "第一",
+    "pinyin": "dì yī",
+    "gloss": "first; number one",
+    "hint": "in order or rank",
+    "pos": "num",
+    "note": "第 + number makes ordinals: 第二 dì èr 'second'. 一 keeps its first tone here.",
+    "example": {
+      "trad": "這是我第一次來台灣。",
+      "pinyin": "Zhè shì wǒ dìyī cì lái Táiwān.",
+      "english": "This is my first time in Taiwan."
+    }
+  },
+  {
+    "rank": 237,
+    "trad": "找到",
+    "pinyin": "zhǎo dào",
+    "gloss": "to find",
+    "hint": "succeed in finding",
+    "pos": "verb",
+    "note": "找 alone means 'to look for'; 到 adds success. 找不到 means 'can't find'.",
+    "example": {
+      "trad": "我找到我的手機了。",
+      "pinyin": "Wǒ zhǎodào wǒ de shǒujī le.",
+      "english": "I found my phone."
+    }
+  },
+  {
+    "rank": 238,
+    "trad": "老",
+    "pinyin": "lǎo",
+    "gloss": "old; long-standing",
+    "hint": "people; long-standing",
+    "pos": "adj",
+    "note": "For aged people and long-standing things (老朋友); old objects are 舊 jiù. Also a familiar prefix (老王, 老公) and, in speech, 'always': 他老是遲到 'he's always late'.",
+    "example": {
+      "trad": "我們是老朋友了。",
+      "pinyin": "Wǒmen shì lǎo péngyǒu le.",
+      "english": "We're old friends."
+    }
+  },
+  {
+    "rank": 239,
+    "trad": "位",
+    "pinyin": "wèi",
+    "gloss": "(polite measure word for people)",
+    "pos": "measure",
+    "note": "Counts people politely: 這位先生 'this gentleman', 幾位？ 'how many in your party?'. Also 'seat, place' in 位子 wèi zi.",
+    "example": {
+      "trad": "這位是我太太。",
+      "pinyin": "Zhè wèi shì wǒ tàitai.",
+      "english": "This is my wife."
+    }
+  },
+  {
+    "rank": 240,
+    "trad": "決定",
+    "pinyin": "jué dìng",
+    "gloss": "to decide; decision",
+    "pos": "verb",
+    "example": {
+      "trad": "你決定了嗎？",
+      "pinyin": "Nǐ juédìng le ma?",
+      "english": "Have you decided?"
+    }
+  },
+  {
+    "rank": 241,
+    "trad": "種",
+    "pinyin": "zhǒng",
+    "gloss": "kind; type",
+    "hint": "everyday 'kind of'",
+    "pos": "measure",
+    "note": "Measure word for kinds of things: 這種 'this kind', 哪種 'which kind'. Other reading zhòng means 'to plant' (種花 'plant flowers').",
+    "example": {
+      "trad": "我不喜歡這種天氣。",
+      "pinyin": "Wǒ bù xǐhuān zhè zhǒng tiānqì.",
+      "english": "I don't like this kind of weather."
+    }
+  },
+  {
+    "rank": 242,
+    "trad": "過去",
+    "pinyin": "guò qù",
+    "gloss": "to go over (there); the past",
+    "hint": "away from the speaker",
+    "pos": "verb",
+    "note": "After another verb it shows direction away from the speaker and is said lightly as guò qu: 走過去 'walk over'. Compare 過來 'come over'.",
+    "example": {
+      "trad": "你先過去，我等一下就來。",
+      "pinyin": "Nǐ xiān guòqù, wǒ děng yīxià jiù lái.",
+      "english": "You go over first, I'll be there in a bit."
+    }
+  },
+  {
+    "rank": 243,
+    "trad": "成",
+    "pinyin": "chéng",
+    "gloss": "to become; into (after a verb)",
+    "hint": "one syllable; after a verb: turn X into Y",
+    "pos": "verb",
+    "note": "Usually follows another verb: 變成 'turn into', 換成 'change to', 切成 'cut into'. Alone, 成了 means 'became'.",
+    "example": {
+      "trad": "幫我把蘋果切成兩半。",
+      "pinyin": "Bāng wǒ bǎ píngguǒ qiēchéng liǎng bàn.",
+      "english": "Cut the apple in half for me."
+    }
+  },
+  {
+    "rank": 244,
+    "trad": "回來",
+    "pinyin": "huí lai",
+    "gloss": "to come back",
+    "hint": "toward the speaker",
+    "pos": "verb",
+    "note": "MOE marks the second syllable neutral; many Taiwanese say huí lái. After a verb it means 'back here': 拿回來 'bring back'. Compare 回去 'go back'.",
+    "example": {
+      "trad": "你幾點回來？",
+      "pinyin": "Nǐ jǐ diǎn huílai?",
+      "english": "What time are you coming back?"
+    }
+  },
+  {
+    "rank": 245,
+    "trad": "歲",
+    "pinyin": "suì",
+    "gloss": "years old",
+    "pos": "measure",
+    "note": "Counts a person's age: 你幾歲？ 'how old are you?' (to a child or peer). For elders, ask 您多大年紀？",
+    "example": {
+      "trad": "我女兒今年五歲。",
+      "pinyin": "Wǒ nǚ'ér jīnnián wǔ suì.",
+      "english": "My daughter is five this year."
+    }
+  },
+  {
+    "rank": 246,
+    "trad": "些",
+    "pinyin": "xiē",
+    "gloss": "some (plural measure word)",
+    "hint": "only after this, that, one",
+    "pos": "measure",
+    "note": "An indefinite plural measure word: 這些 'these', 那些 'those', 一些 'some', 有些 'some (of them)'. A literary particle reading suò exists but is very rare.",
+    "example": {
+      "trad": "這些是你的嗎？",
+      "pinyin": "Zhèxiē shì nǐ de ma?",
+      "english": "Are these yours?"
+    }
+  },
+  {
+    "rank": 247,
+    "trad": "關係",
+    "pinyin": "guān xì",
+    "gloss": "relationship; connection",
+    "pos": "noun",
+    "note": "Taiwan (MOE) says guān xì with a full fourth tone; mainland usually guān xi. 沒關係 'it's OK, never mind' is extremely common.",
+    "example": {
+      "trad": "他們的關係很好。",
+      "pinyin": "Tāmen de guānxì hěn hǎo.",
+      "english": "They have a good relationship."
+    }
+  },
+  {
+    "rank": 248,
+    "trad": "由",
+    "pinyin": "yóu",
+    "gloss": "by (someone); from",
+    "hint": "who is responsible",
+    "pos": "prep",
+    "note": "Marks who does or decides something: 由你決定 'it's up to you'. Somewhat formal; casual 'from' is usually 從.",
+    "example": {
+      "trad": "這件事由你決定。",
+      "pinyin": "Zhè jiàn shì yóu nǐ juédìng.",
+      "english": "It's up to you to decide."
+    }
+  },
+  {
+    "rank": 249,
+    "trad": "之前",
+    "pinyin": "zhī qián",
+    "gloss": "before; previously",
+    "hint": "before a point in time; earlier",
+    "pos": "noun",
+    "note": "Goes after the event: 吃飯之前 'before eating'. Alone it means 'previously'. Close to 以前, which leans more toward 'in the old days'.",
+    "example": {
+      "trad": "吃飯之前要洗手。",
+      "pinyin": "Chīfàn zhīqián yào xǐshǒu.",
+      "english": "Wash your hands before eating."
+    }
+  },
+  {
+    "rank": 250,
+    "trad": "先",
+    "pinyin": "xiān",
+    "gloss": "first; beforehand",
+    "hint": "do before others",
+    "pos": "adv",
+    "note": "Goes before the verb: 你先走 'you go first'. Pattern 先…再… 'first…then…'.",
+    "example": {
+      "trad": "你先吃，不用等我。",
+      "pinyin": "Nǐ xiān chī, bùyòng děng wǒ.",
+      "english": "Go ahead and eat, don't wait for me."
+    }
+  }
+]

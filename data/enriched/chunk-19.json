@@ -1,0 +1,685 @@
+[
+  {
+    "rank": 901,
+    "trad": "痛苦",
+    "pinyin": "tòng kǔ",
+    "gloss": "painful; suffering",
+    "hint": "emotional or lasting pain",
+    "pos": "adj",
+    "note": "Usually deeper or longer suffering than 痛 tòng 'to hurt; to ache'. Also a noun: 'suffering'.",
+    "example": {
+      "trad": "分手真的很痛苦。",
+      "pinyin": "Fēnshǒu zhēnde hěn tòngkǔ.",
+      "english": "Breaking up is really painful."
+    }
+  },
+  {
+    "rank": 902,
+    "trad": "做到",
+    "pinyin": "zuò dào",
+    "gloss": "to achieve; to manage (to do)",
+    "hint": "succeed in doing",
+    "pos": "verb",
+    "note": "Often in the forms 做得到 zuò de dào 'can do it' and 做不到 zuò bu dào 'can't do it'.",
+    "example": {
+      "trad": "我做到了！",
+      "pinyin": "Wǒ zuòdào le!",
+      "english": "I did it!"
+    }
+  },
+  {
+    "rank": 903,
+    "trad": "騙",
+    "pinyin": "piàn",
+    "gloss": "to lie to; to cheat; to trick",
+    "hint": "deceive someone",
+    "pos": "verb",
+    "note": "騙人！ piàn rén on its own means 'You're lying! / No way!'. 騙子 piàn zi is a liar or con artist.",
+    "example": {
+      "trad": "我沒有騙你啦。",
+      "pinyin": "Wǒ méiyǒu piàn nǐ la.",
+      "english": "I'm not lying to you."
+    }
+  },
+  {
+    "rank": 904,
+    "trad": "太太",
+    "pinyin": "tài tai",
+    "gloss": "wife; Mrs.",
+    "hint": "polite everyday word; also a title",
+    "pos": "noun",
+    "note": "我太太 wǒ tài tai 'my wife' is the polite everyday word in Taiwan; 老婆 lǎo po is more intimate and casual. After a surname it means 'Mrs.': 王太太 'Mrs. Wang'.",
+    "example": {
+      "trad": "王太太是我們的鄰居。",
+      "pinyin": "Wáng tàitai shì wǒmen de línjū.",
+      "english": "Mrs. Wang is our neighbor."
+    }
+  },
+  {
+    "rank": 905,
+    "trad": "而是",
+    "pinyin": "ér shì",
+    "gloss": "but rather",
+    "hint": "not this, but that",
+    "pos": "conj",
+    "note": "Used in the pattern 不是 A，而是 B (bù shì A, ér shì B) 'not A, but (rather) B'. It corrects the first part instead of contrasting like 但是 dàn shì.",
+    "example": {
+      "trad": "不是我不想去，而是沒時間。",
+      "pinyin": "Bùshì wǒ bù xiǎng qù, érshì méi shíjiān.",
+      "english": "It's not that I don't want to go, it's that I don't have time."
+    }
+  },
+  {
+    "rank": 906,
+    "trad": "傷",
+    "pinyin": "shāng",
+    "gloss": "injury; wound",
+    "hint": "a physical injury",
+    "pos": "noun",
+    "note": "受傷 shòu shāng is 'to get hurt'. 傷心 shāng xīn is 'sad; heartbroken'. For 'it hurts / it aches', say 痛 tòng.",
+    "example": {
+      "trad": "他的傷還沒好。",
+      "pinyin": "Tā de shāng hái méi hǎo.",
+      "english": "His injury hasn't healed yet."
+    }
+  },
+  {
+    "rank": 907,
+    "trad": "尋找",
+    "pinyin": "xún zhǎo",
+    "gloss": "to look for; to seek",
+    "hint": "formal; everyday is zhǎo",
+    "pos": "verb",
+    "note": "A more formal or literary version of 找 zhǎo. Common in songs, news and abstract things like dreams or answers.",
+    "example": {
+      "trad": "他還在尋找自己的夢想。",
+      "pinyin": "Tā hái zài xúnzhǎo zìjǐ de mèngxiǎng.",
+      "english": "He's still searching for his dream."
+    }
+  },
+  {
+    "rank": 908,
+    "trad": "網站",
+    "pinyin": "wǎng zhàn",
+    "gloss": "website",
+    "pos": "noun",
+    "example": {
+      "trad": "這個網站很好用。",
+      "pinyin": "Zhège wǎngzhàn hěn hǎoyòng.",
+      "english": "This website is easy to use."
+    }
+  },
+  {
+    "rank": 909,
+    "trad": "醒",
+    "pinyin": "xǐng",
+    "gloss": "to wake up; awake",
+    "hint": "stop sleeping",
+    "pos": "verb",
+    "note": "醒了 xǐng le 'woke up; is awake'. 叫醒 jiào xǐng 'to wake someone up'. Getting out of bed is 起床 qǐ chuáng.",
+    "example": {
+      "trad": "你醒了嗎？",
+      "pinyin": "Nǐ xǐng le ma?",
+      "english": "Are you awake?"
+    }
+  },
+  {
+    "rank": 910,
+    "trad": "哪個",
+    "pinyin": "nǎ ge",
+    "gloss": "which (one)",
+    "hint": "which one, on its own",
+    "pos": "pron",
+    "note": "In speech it is often něi ge, and 哪一個 nǎ yī ge is also common. 個 is light here, like 這個 zhè ge.",
+    "example": {
+      "trad": "你比較喜歡哪個？",
+      "pinyin": "Nǐ bǐjiào xǐhuān nǎge?",
+      "english": "Which one do you like better?"
+    }
+  },
+  {
+    "rank": 911,
+    "trad": "市場",
+    "pinyin": "shì cháng",
+    "gloss": "market",
+    "pos": "noun",
+    "note": "MOE reads 場 as cháng here; many Taiwanese say shì chǎng, as the mainland does. 菜市場 cài shì cháng is the traditional wet market.",
+    "example": {
+      "trad": "我媽每天去市場買菜。",
+      "pinyin": "Wǒ mā měitiān qù shìcháng mǎi cài.",
+      "english": "My mom goes to the market every day to buy groceries."
+    }
+  },
+  {
+    "rank": 912,
+    "trad": "丟",
+    "pinyin": "diū",
+    "gloss": "to throw (away); to lose (an item)",
+    "hint": "toss, or misplace",
+    "pos": "verb",
+    "note": "丟垃圾 diū lè sè means 'throw away trash'; taking the trash out to the garbage truck is 倒垃圾 dào lè sè. 丟臉 diū liǎn means 'embarrassing; lose face'. Losing a game is 輸 shū.",
+    "example": {
+      "trad": "我的手機丟了。",
+      "pinyin": "Wǒ de shǒujī diū le.",
+      "english": "I lost my phone."
+    }
+  },
+  {
+    "rank": 913,
+    "trad": "交",
+    "pinyin": "jiāo",
+    "gloss": "to hand in; to make (friends)",
+    "pos": "verb",
+    "note": "Common phrases: 交作業 jiāo zuò yè 'hand in homework', 交朋友 jiāo péng yǒu 'make friends', 交女朋友 jiāo nǚ péng yǒu 'get a girlfriend', 交給 jiāo gěi 'hand over to'.",
+    "example": {
+      "trad": "作業明天要交。",
+      "pinyin": "Zuòyè míngtiān yào jiāo.",
+      "english": "The homework is due tomorrow."
+    }
+  },
+  {
+    "rank": 914,
+    "trad": "享受",
+    "pinyin": "xiǎng shòu",
+    "gloss": "to enjoy",
+    "hint": "savor an experience",
+    "pos": "verb",
+    "note": "Stronger than 喜歡 'to like': it means really savoring something. Also a noun, 'enjoyment'.",
+    "example": {
+      "trad": "我很享受現在的生活。",
+      "pinyin": "Wǒ hěn xiǎngshòu xiànzài de shēnghuó.",
+      "english": "I really enjoy my life now."
+    }
+  },
+  {
+    "rank": 915,
+    "trad": "各",
+    "pinyin": "gè",
+    "gloss": "each; various",
+    "hint": "each of several, separately",
+    "pos": "pron",
+    "note": "More formal than 每 měi except in set phrases: 各位 gè wèi 'everyone (polite address)', 各種 gè zhǒng 'all kinds of', 各付各的 gè fù gè de 'each pays their own'.",
+    "example": {
+      "trad": "我們各付各的。",
+      "pinyin": "Wǒmen gè fù gè de.",
+      "english": "Let's each pay for ourselves."
+    }
+  },
+  {
+    "rank": 916,
+    "trad": "盡",
+    "pinyin": "jìn",
+    "gloss": "to do one's utmost; to use up",
+    "hint": "give it all you've got",
+    "pos": "verb",
+    "note": "Mostly heard in 盡力 jìn lì 'do one's best' and 盡量 jìn liàng 'as much as possible' (also written 儘量 jǐn liàng, a reading many Taiwanese use).",
+    "example": {
+      "trad": "我會盡力的。",
+      "pinyin": "Wǒ huì jìnlì de.",
+      "english": "I'll do my best."
+    }
+  },
+  {
+    "rank": 917,
+    "trad": "省",
+    "pinyin": "shěng",
+    "gloss": "to save (money, time); province",
+    "hint": "by spending less",
+    "pos": "verb",
+    "note": "Polyphone: read xǐng it means to reflect on oneself, as in 反省 fǎn xǐng. Putting money in the bank is 存 cún.",
+    "example": {
+      "trad": "這樣可以省很多錢。",
+      "pinyin": "Zhèyàng kěyǐ shěng hěn duō qián.",
+      "english": "This way you can save a lot of money."
+    }
+  },
+  {
+    "rank": 918,
+    "trad": "男孩",
+    "pinyin": "nán hái",
+    "gloss": "boy",
+    "hint": "a young boy",
+    "pos": "noun",
+    "note": "In everyday Taiwan speech, 男生 nán shēng is the usual word for a boy or guy, and 男孩子 nán hái zi is also common.",
+    "example": {
+      "trad": "那個小男孩跑得好快。",
+      "pinyin": "Nàge xiǎo nánhái pǎo de hǎo kuài.",
+      "english": "That little boy runs so fast."
+    }
+  },
+  {
+    "rank": 919,
+    "trad": "搬",
+    "pinyin": "bān",
+    "gloss": "to move (house); to carry (something heavy)",
+    "hint": "relocate, or lift and move",
+    "pos": "verb",
+    "note": "搬家 bān jiā 'to move house'. 搬東西 bān dōng xi 'to carry things'. 搬到台北 'move to Taipei'.",
+    "example": {
+      "trad": "我們下個月要搬家。",
+      "pinyin": "Wǒmen xià ge yuè yào bānjiā.",
+      "english": "We're moving next month."
+    }
+  },
+  {
+    "rank": 920,
+    "trad": "替",
+    "pinyin": "tì",
+    "gloss": "for; on behalf of; to replace",
+    "hint": "in someone's place",
+    "pos": "prep",
+    "note": "As a preposition it works like 幫 bāng or 為 wèi: 替我謝謝他 tì wǒ xiè xie tā 'thank him for me'. As a verb it means to take someone's place.",
+    "example": {
+      "trad": "我替你高興。",
+      "pinyin": "Wǒ tì nǐ gāoxìng.",
+      "english": "I'm happy for you."
+    }
+  },
+  {
+    "rank": 921,
+    "trad": "圖",
+    "pinyin": "tú",
+    "gloss": "picture; diagram; map",
+    "hint": "an image or chart",
+    "pos": "noun",
+    "note": "Counted with 張: 一張圖. 地圖 dì tú is a map. Online, 圖 is any image.",
+    "example": {
+      "trad": "你看這張圖。",
+      "pinyin": "Nǐ kàn zhè zhāng tú.",
+      "english": "Look at this picture."
+    }
+  },
+  {
+    "rank": 922,
+    "trad": "適合",
+    "pinyin": "shì hé",
+    "gloss": "to suit; suitable",
+    "hint": "be a good fit for",
+    "pos": "verb",
+    "note": "Takes an object: 適合你 shì hé nǐ 'suits you'. The adjective 合適 hé shì 'suitable' means much the same: 很合適 hěn hé shì.",
+    "example": {
+      "trad": "這件衣服很適合你。",
+      "pinyin": "Zhè jiàn yīfu hěn shìhé nǐ.",
+      "english": "This top really suits you."
+    }
+  },
+  {
+    "rank": 923,
+    "trad": "命",
+    "pinyin": "mìng",
+    "gloss": "life; fate",
+    "hint": "a life to save or lose",
+    "pos": "noun",
+    "note": "Also in 要命 yào mìng 'terribly; deadly', 算命 suàn mìng 'fortune-telling' and 拼命 pīn mìng 'with all one's might'. Compare 生命 shēng mìng (being alive) and 生活 shēng huó (daily life).",
+    "example": {
+      "trad": "他救了我一命。",
+      "pinyin": "Tā jiùle wǒ yī mìng.",
+      "english": "He saved my life."
+    }
+  },
+  {
+    "rank": 924,
+    "trad": "消失",
+    "pinyin": "xiāo shī",
+    "gloss": "to disappear; to vanish",
+    "pos": "verb",
+    "example": {
+      "trad": "他突然消失了。",
+      "pinyin": "Tā túrán xiāoshī le.",
+      "english": "He suddenly disappeared."
+    }
+  },
+  {
+    "rank": 925,
+    "trad": "開車",
+    "pinyin": "kāi chē",
+    "gloss": "to drive (a car)",
+    "hint": "behind the wheel",
+    "pos": "verb",
+    "note": "開 kāi alone also covers driving: 開快一點 'drive faster'. Riding a scooter or bike is 騎 qí.",
+    "example": {
+      "trad": "開車要小心。",
+      "pinyin": "Kāichē yào xiǎoxīn.",
+      "english": "Drive carefully."
+    }
+  },
+  {
+    "rank": 926,
+    "trad": "通知",
+    "pinyin": "tōng zhī",
+    "gloss": "to notify; notice",
+    "hint": "let someone know (news)",
+    "pos": "verb",
+    "note": "Also a noun: a notice or notification (手機通知 shǒu jī tōng zhī 'phone notification').",
+    "example": {
+      "trad": "有消息我再通知你。",
+      "pinyin": "Yǒu xiāoxí wǒ zài tōngzhī nǐ.",
+      "english": "I'll let you know when there's news."
+    }
+  },
+  {
+    "rank": 927,
+    "trad": "照",
+    "pinyin": "zhào",
+    "gloss": "to shine on; to photograph; according to",
+    "hint": "light, mirrors, photos",
+    "pos": "verb",
+    "note": "照鏡子 zhào jìng zi 'look in the mirror', 拍照 pāi zhào 'take photos', 照你說的做 zhào nǐ shuō de zuò 'do as you say'. Also in 照顧 zhào gù 'take care of'.",
+    "example": {
+      "trad": "她一直在照鏡子。",
+      "pinyin": "Tā yīzhí zài zhào jìngzi.",
+      "english": "She keeps looking in the mirror."
+    }
+  },
+  {
+    "rank": 928,
+    "trad": "人生",
+    "pinyin": "rén shēng",
+    "gloss": "life (one's time on earth)",
+    "hint": "the journey of life",
+    "pos": "noun",
+    "note": "Compare 生活 shēng huó (daily life) and 生命 shēng mìng (being alive).",
+    "example": {
+      "trad": "這就是人生。",
+      "pinyin": "Zhè jiù shì rénshēng.",
+      "english": "That's life."
+    }
+  },
+  {
+    "rank": 929,
+    "trad": "拜託",
+    "pinyin": "bài tuō",
+    "gloss": "please (I beg you); to ask a favor",
+    "hint": "begging a favor",
+    "pos": "verb",
+    "note": "Very common in Taiwan. On its own, 拜託！ bài tuō can also mean 'Oh, come on!' (disbelief or annoyance).",
+    "example": {
+      "trad": "拜託你幫我一下。",
+      "pinyin": "Bàituō nǐ bāng wǒ yīxià.",
+      "english": "Please help me out."
+    }
+  },
+  {
+    "rank": 930,
+    "trad": "差",
+    "pinyin": "chà",
+    "gloss": "poor; bad; to be short of",
+    "hint": "below standard",
+    "pos": "adj",
+    "note": "Also 'short of': 還差一個人 hái chà yī ge rén 'still one person short'; 差不多 chà bu duō 'about the same'. Other readings: chā in 差別 chā bié 'difference', chāi in 出差 chū chāi 'business trip'.",
+    "example": {
+      "trad": "這家餐廳的服務很差。",
+      "pinyin": "Zhè jiā cāntīng de fúwù hěn chà.",
+      "english": "The service at this restaurant is bad."
+    }
+  },
+  {
+    "rank": 931,
+    "trad": "好喝",
+    "pinyin": "hǎo hē",
+    "gloss": "tasty (of drinks)",
+    "hint": "for something you drink",
+    "pos": "adj",
+    "note": "The drink version of 好吃 hǎo chī. 不好喝 bù hǎo hē 'doesn't taste good'.",
+    "example": {
+      "trad": "這杯珍珠奶茶好好喝！",
+      "pinyin": "Zhè bēi zhēnzhū nǎichá hǎo hǎohē!",
+      "english": "This bubble tea is so good!"
+    }
+  },
+  {
+    "rank": 932,
+    "trad": "廣告",
+    "pinyin": "guǎng gào",
+    "gloss": "advertisement; commercial",
+    "pos": "noun",
+    "example": {
+      "trad": "這個廣告好好笑。",
+      "pinyin": "Zhège guǎnggào hǎo hǎoxiào.",
+      "english": "This commercial is so funny."
+    }
+  },
+  {
+    "rank": 933,
+    "trad": "今年",
+    "pinyin": "jīn nián",
+    "gloss": "this year",
+    "pos": "noun",
+    "example": {
+      "trad": "你今年幾歲？",
+      "pinyin": "Nǐ jīnnián jǐ suì?",
+      "english": "How old are you this year?"
+    }
+  },
+  {
+    "rank": 934,
+    "trad": "睡覺",
+    "pinyin": "shuì jiào",
+    "gloss": "to sleep; to go to bed",
+    "hint": "go to bed, two syllables",
+    "pos": "verb",
+    "note": "覺 is jiào here ('a sleep'); in 覺得 jué de it is jué. It splits apart: 睡午覺 shuì wǔ jiào 'take a nap'.",
+    "example": {
+      "trad": "我要去睡覺了。",
+      "pinyin": "Wǒ yào qù shuìjiào le.",
+      "english": "I'm going to bed."
+    }
+  },
+  {
+    "rank": 935,
+    "trad": "藏",
+    "pinyin": "cáng",
+    "gloss": "to hide; to keep hidden",
+    "hint": "put something out of sight",
+    "pos": "verb",
+    "note": "Polyphone: read zàng for a storehouse or Tibet (西藏 Xī zàng). To hide yourself, people usually say 躲 duǒ.",
+    "example": {
+      "trad": "你把錢藏在哪裡？",
+      "pinyin": "Nǐ bǎ qián cáng zài nǎlǐ?",
+      "english": "Where did you hide the money?"
+    }
+  },
+  {
+    "rank": 936,
+    "trad": "不對",
+    "pinyin": "bù duì",
+    "gloss": "not right; wrong",
+    "hint": "not correct; also 'wait, no'",
+    "pos": "adj",
+    "note": "Literally 'not right' (bù + duì). Also used to correct yourself mid-sentence: 不對，是明天 'no wait, it's tomorrow'. Spoken bú duì (tone sandhi).",
+    "example": {
+      "trad": "你說得不對。",
+      "pinyin": "Nǐ shuō de bùduì.",
+      "english": "What you said isn't right."
+    }
+  },
+  {
+    "rank": 937,
+    "trad": "紅",
+    "pinyin": "hóng",
+    "gloss": "red; popular",
+    "pos": "adj",
+    "note": "Also means 'popular, famous': 他現在很紅 'he's really popular now'. MOE also lists a rare literary reading gōng (needlework).",
+    "example": {
+      "trad": "她的臉紅了。",
+      "pinyin": "Tā de liǎn hóng le.",
+      "english": "Her face turned red."
+    }
+  },
+  {
+    "rank": 938,
+    "trad": "樓",
+    "pinyin": "lóu",
+    "gloss": "floor (level); building",
+    "hint": "a storey of a building",
+    "pos": "noun",
+    "note": "三樓 sān lóu is 'third floor'; 樓上 'upstairs', 樓下 'downstairs', 大樓 'building'. 一樓 is the ground floor (US-style counting).",
+    "example": {
+      "trad": "我住在五樓。",
+      "pinyin": "Wǒ zhù zài wǔ lóu.",
+      "english": "I live on the fifth floor."
+    }
+  },
+  {
+    "rank": 939,
+    "trad": "有時",
+    "pinyin": "yǒu shí",
+    "gloss": "sometimes",
+    "pos": "adv",
+    "note": "Short form of 有時候 yǒu shí hòu, which is more common in casual speech.",
+    "example": {
+      "trad": "我有時會自己煮飯。",
+      "pinyin": "Wǒ yǒushí huì zìjǐ zhǔfàn.",
+      "english": "Sometimes I cook for myself."
+    }
+  },
+  {
+    "rank": 940,
+    "trad": "十分",
+    "pinyin": "shí fēn",
+    "gloss": "very; extremely",
+    "hint": "formal; literally 'ten parts'",
+    "pos": "adv",
+    "note": "Literally 'ten parts out of ten'. Sounds more formal than 很 hěn or 非常 fēi cháng. Don't confuse with 十分鐘 'ten minutes'.",
+    "example": {
+      "trad": "這件事十分重要。",
+      "pinyin": "Zhè jiàn shì shífēn zhòngyào.",
+      "english": "This matter is extremely important."
+    }
+  },
+  {
+    "rank": 941,
+    "trad": "星期",
+    "pinyin": "xīng qí",
+    "gloss": "week",
+    "pos": "noun",
+    "note": "Taiwan says xīng qí; the mainland says xīng qī. Days: 星期一 'Monday' ... 星期天/星期日 'Sunday'. 禮拜 lǐ bài is a common casual alternative in Taiwan.",
+    "example": {
+      "trad": "我下星期要去台北。",
+      "pinyin": "Wǒ xià xīngqí yào qù Táiběi.",
+      "english": "I'm going to Taipei next week."
+    }
+  },
+  {
+    "rank": 942,
+    "trad": "收",
+    "pinyin": "shōu",
+    "gloss": "to receive; to collect; to put away",
+    "hint": "one syllable; take in, or put away",
+    "pos": "verb",
+    "note": "Common uses: 收錢 'take payment', 收好 'put away safely', 收衣服 'bring in the laundry'. 收到 shōu dào means 'to have received' (mail, a message).",
+    "example": {
+      "trad": "老闆不收我的錢。",
+      "pinyin": "Lǎobǎn bù shōu wǒ de qián.",
+      "english": "The owner won't take my money."
+    }
+  },
+  {
+    "rank": 943,
+    "trad": "休息",
+    "pinyin": "xiū xí",
+    "gloss": "to rest; to take a break",
+    "pos": "verb",
+    "note": "Taiwan (MOE) says xiū xí with a full second tone; the mainland says xiū xi.",
+    "example": {
+      "trad": "你累了就休息一下。",
+      "pinyin": "Nǐ lèi le jiù xiūxí yīxià.",
+      "english": "If you're tired, take a rest."
+    }
+  },
+  {
+    "rank": 944,
+    "trad": "亂",
+    "pinyin": "luàn",
+    "gloss": "messy; chaotic; randomly",
+    "pos": "adj",
+    "note": "Before a verb it means 'carelessly, at random': 不要亂說 'don't talk nonsense', 亂丟 'throw anywhere'.",
+    "example": {
+      "trad": "你的房間好亂！",
+      "pinyin": "Nǐ de fángjiān hǎo luàn!",
+      "english": "Your room is so messy!"
+    }
+  },
+  {
+    "rank": 945,
+    "trad": "昨晚",
+    "pinyin": "zuó wǎn",
+    "gloss": "last night",
+    "pos": "noun",
+    "note": "Short for 昨天晚上 zuó tiān wǎn shang, which is more common in casual speech.",
+    "example": {
+      "trad": "我昨晚沒睡好。",
+      "pinyin": "Wǒ zuówǎn méi shuì hǎo.",
+      "english": "I didn't sleep well last night."
+    }
+  },
+  {
+    "rank": 946,
+    "trad": "類",
+    "pinyin": "lèi",
+    "gloss": "category; class; kind",
+    "hint": "a category; more formal than zhǒng",
+    "pos": "noun",
+    "note": "Often used like a measure word: 這類電影 'this kind of movie'. In compounds: 人類 'humankind', 分類 'to sort'. 種 zhǒng is the everyday 'kind'.",
+    "example": {
+      "trad": "我不喜歡這類電影。",
+      "pinyin": "Wǒ bù xǐhuān zhè lèi diànyǐng.",
+      "english": "I don't like this kind of movie."
+    }
+  },
+  {
+    "rank": 947,
+    "trad": "偷",
+    "pinyin": "tōu",
+    "gloss": "to steal",
+    "pos": "verb",
+    "note": "Also 'secretly': 偷看 'to peek', 偷偷 tōu tōu 'sneakily'. 小偷 xiǎo tōu is 'thief'.",
+    "example": {
+      "trad": "我的腳踏車被偷了。",
+      "pinyin": "Wǒ de jiǎotàchē bèi tōu le.",
+      "english": "My bike got stolen."
+    }
+  },
+  {
+    "rank": 948,
+    "trad": "邀請",
+    "pinyin": "yāo qǐng",
+    "gloss": "to invite; invitation",
+    "hint": "formal invite",
+    "pos": "verb",
+    "note": "Somewhat formal. Casually people say 請 qǐng or 約 yuē ('ask out, make plans with').",
+    "example": {
+      "trad": "他邀請我參加婚禮。",
+      "pinyin": "Tā yāoqǐng wǒ cānjiā hūnlǐ.",
+      "english": "He invited me to the wedding."
+    }
+  },
+  {
+    "rank": 949,
+    "trad": "感受",
+    "pinyin": "gǎn shòu",
+    "gloss": "(one's) feelings; to experience",
+    "hint": "inner feelings about something; not gǎn jué",
+    "pos": "noun",
+    "note": "As a noun: one's feelings about something. As a verb: to feel or experience (感受一下 'get a feel for it'). 感覺 gǎn jué is the more everyday 'feeling'.",
+    "example": {
+      "trad": "我懂你的感受。",
+      "pinyin": "Wǒ dǒng nǐ de gǎnshòu.",
+      "english": "I understand how you feel."
+    }
+  },
+  {
+    "rank": 950,
+    "trad": "日子",
+    "pinyin": "rì zi",
+    "gloss": "days; life; date",
+    "hint": "days of one's life; a set date",
+    "pos": "noun",
+    "note": "過日子 guò rì zi 'to get by, live one's life'; 好日子 'a lucky day (for an event)'. MOE also lists rì zǐ with a full tone.",
+    "example": {
+      "trad": "最近日子不好過。",
+      "pinyin": "Zuìjìn rìzi bù hǎo guò.",
+      "english": "Life has been tough lately."
+    }
+  }
+]

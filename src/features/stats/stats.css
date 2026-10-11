@@ -1,0 +1,47 @@
+/* Chart palette for the Stats page (loaded with the lazy stats chunk).
+   Validated with the dataviz palette checker against --card (#fffcf6 light / #1e1c1a dark):
+   - Listen/Say (categorical): blue/orange, both modes pass band, chroma, CVD (dE >= 24) and 3:1.
+   - Jade ordinal ramp (learning -> young -> mature): monotone L, single hue, light end >= 2:1.
+   Jade is used for "your progress/activity", so it never competes with the cinnabar accent or
+   with the pinyin tone colors. Text never wears these colors (labels stay in ink/muted). */
+.qian-stats {
+  --viz-listen: #2a78d6;
+  --viz-say: #eb6834;
+
+  --viz-learning: #60bfa4;
+  --viz-young: #269b7e;
+  --viz-mature: #00755d;
+  --viz-bar: #269b7e;
+
+  --viz-heat-0: var(--sunken);
+  --viz-heat-1: #a9decc;
+  --viz-heat-2: #60bfa4;
+  --viz-heat-3: #269b7e;
+  --viz-heat-4: #00755d;
+
+  --viz-grid: var(--line);
+  --viz-axis: var(--line-strong);
+  --viz-track: var(--sunken);
+}
+
+:root.dark .qian-stats {
+  --viz-listen: #3987e5;
+  --viz-say: #d95926;
+
+  /* On dark, "more" reads lighter. */
+  --viz-learning: #0c7e65;
+  --viz-young: #33a587;
+  --viz-mature: #6ac9ad;
+  --viz-bar: #33a587;
+
+  --viz-heat-1: #045b48;
+  --viz-heat-2: #0c7e65;
+  --viz-heat-3: #33a587;
+  --viz-heat-4: #6ac9ad;
+}
+
+/* Recharts' default focus outline on the SVG wrapper is replaced by the app's focus ring. */
+.qian-stats .recharts-wrapper:focus,
+.qian-stats .recharts-surface:focus {
+  outline: none;
+}

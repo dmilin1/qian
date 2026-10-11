@@ -1,0 +1,182 @@
+// The content of a study card: front (question) and the revealed answer, for both directions.
+import type { ReactNode } from 'react'
+import type { Word } from '../../data/types'
+import type { PlayResult } from '../../lib/audio'
+import type { StudyCard } from '../../lib/store'
+import { AudioButton, Hanzi, Icon, Kbd, Pinyin, cx, useSettings } from '../../components'
+
+interface FaceProps {
+  card: StudyCard
+  revealed: boolean
+  /** Autoplay or a tap was refused by the browser: show a "tap to play" hint. */
+  blocked: boolean
+  onPlayResult: (r: PlayResult) => void
+}
+
+/** Word replay + slow replay. */
+function ReplayRow({ word, size, primary, onPlayResult }: { word: Word; size: 'lg' | 'hero'; primary?: boolean; onPlayResult: (r: PlayResult) => void }) {
+  return (
+    <div className="flex items-center justify-center gap-3">
+      <span className="relative inline-flex">
+        <AudioButton wordId={word.id} size={size} emphasis={primary ? 'primary' : 'quiet'} label="Replay word" onResult={onPlayResult} />
+        <Kbd className="absolute -right-1 -bottom-1 bg-card text-muted">R</Kbd>
+      </span>
+      <span className="relative inline-flex">
+        <AudioButton wordId={word.id} slow size="md" label="Replay slowly" onResult={onPlayResult}>
+          Slow
+        </AudioButton>
+        <Kbd className="absolute -right-1 -bottom-1 bg-card text-muted">S</Kbd>
+      </span>
+    </div>
+  )
+}
+
+function BlockedHint({ show }: { show: boolean }) {
+  if (!show) return null
+  return (
+    <p role="status" className="text-sm text-muted">
+      Your browser paused autoplay. Tap play to hear it.
+    </p>
+  )
+}
+
+function Gloss({ word, size }: { word: Word; size: 'lg' | 'xl' }) {
+  return (
+    <div className="flex flex-col items-center gap-1">
+      <p className={cx('font-semibold tracking-tight text-ink text-balance', size === 'xl' ? 'text-3xl' : 'text-2xl')}>{word.gloss}</p>
+      {word.hint ? <p className="text-lg text-muted">({word.hint})</p> : null}
+    </div>
+  )
+}
+
+function PosChip({ pos }: { pos: string }) {
+  if (!pos) return null
+  return <span className="rounded-full border border-line px-2.5 py-0.5 text-xs font-medium tracking-wide text-muted uppercase">{pos}</span>
+}
+
+function SpokenAs({ word }: { word: Word }) {
+  if (!word.spokenAs) return null
+  return (
+    <p className="flex items-baseline justify-center gap-2 text-sm text-muted">
+      <span>spoken:</span>
+      <Pinyin text={word.spokenAs} size="md" />
+    </p>
+  )
+}
+
+function Note({ word }: { word: Word }) {
+  if (!word.note) return null
+  return (
+    <p className="flex gap-2 rounded-xl bg-sunken px-4 py-3 text-left text-sm text-ink">
+      <Icon name="info" size={16} className="mt-0.5 text-muted" />
+      <span>{word.note}</span>
+    </p>
+  )
+}
+
+function Example({ word }: { word: Word }) {
+  const ex = word.example
+  if (!ex?.pinyin) return null
+  return (
+    <figure className="flex items-start gap-3 rounded-xl border border-line px-3.5 py-3 text-left">
+      <span className="relative mt-0.5 inline-flex">
+        <AudioButton wordId={word.id} kind="example" size="sm" label="Play example sentence" />
+        <Kbd className="absolute -right-1.5 -bottom-1.5 bg-card text-muted">E</Kbd>
+      </span>
+      <div className="flex min-w-0 flex-col gap-0.5">
+        <Pinyin text={ex.pinyin} size="md" as="p" />
+        <Hanzi text={ex.trad} size="sm" />
+        <figcaption className="text-sm text-muted">{ex.english}</figcaption>
+      </div>
+    </figure>
+  )
+}
+
+/** Pinyin (hero, tone colored) and characters (small, muted). */
+function WordForm({ word }: { word: Word }) {
+  return (
+    <div className="flex flex-col items-center gap-1.5">
+      <Pinyin word={word} size="hero" as="p" />
+      <Hanzi word={word} size="lg" />
+    </div>
+  )
+}
+
+function Section({ children, className }: { children: ReactNode; className?: string }) {
+  return <div className={cx('flex flex-col items-center gap-4 text-center', className)}>{children}</div>
+}
+
+/** Divider + answer block, faded in. */
+function Answer({ children }: { children: ReactNode }) {
+  return (
+    <section aria-label="Answer" className="flex flex-col gap-4 motion-safe:animate-rise-in">
+      <hr className="mx-auto my-1 w-16 border-line-strong" />
+      {children}
+    </section>
+  )
+}
+
+export function ListenFace({ card, revealed, blocked, onPlayResult }: FaceProps) {
+  const { listenFront } = useSettings()
+  const audioOnly = listenFront === 'audioOnly'
+  const w = card.word
+  return (
+    <>
+      <Section className="min-h-[12rem] justify-center">
+        {audioOnly ? (
+          <>
+            <ReplayRow word={w} size="hero" primary onPlayResult={onPlayResult} />
+            {revealed ? <WordForm word={w} /> : <p className="text-lg text-muted">What does this mean?</p>}
+          </>
+        ) : (
+          <>
+            <WordForm word={w} />
+            <ReplayRow word={w} size="lg" onPlayResult={onPlayResult} />
+          </>
+        )}
+        <BlockedHint show={blocked} />
+      </Section>
+      {revealed ? (
+        <Answer>
+          <Section className="gap-3">
+            <Gloss word={w} size="lg" />
+            <PosChip pos={w.pos} />
+            <SpokenAs word={w} />
+          </Section>
+          <Note word={w} />
+          <Example word={w} />
+        </Answer>
+      ) : null}
+    </>
+  )
+}
+
+export function SayFace({ card, revealed, blocked, onPlayResult }: FaceProps) {
+  const w = card.word
+  return (
+    <>
+      <Section className="min-h-[12rem] justify-center gap-3">
+        <Gloss word={w} size="xl" />
+        <PosChip pos={w.pos} />
+        {revealed ? null : (
+          <p className="mt-2 flex items-center gap-2 text-muted">
+            <Icon name="volume" size={18} />
+            Say it out loud
+          </p>
+        )}
+      </Section>
+      {revealed ? (
+        <Answer>
+          <Section>
+            <WordForm word={w} />
+            <ReplayRow word={w} size="lg" onPlayResult={onPlayResult} />
+            <BlockedHint show={blocked} />
+            <SpokenAs word={w} />
+          </Section>
+          <Note word={w} />
+          <Example word={w} />
+        </Answer>
+      ) : null}
+    </>
+  )
+}

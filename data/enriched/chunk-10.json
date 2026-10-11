@@ -1,0 +1,667 @@
+[
+  {
+    "rank": 451,
+    "trad": "支持",
+    "pinyin": "zhī chí",
+    "gloss": "to support; support",
+    "hint": "back someone up",
+    "pos": "verb",
+    "example": {
+      "trad": "不管怎樣，我都支持你。",
+      "pinyin": "Bùguǎn zěnyàng, wǒ dōu zhīchí nǐ.",
+      "english": "No matter what, I support you."
+    }
+  },
+  {
+    "rank": 452,
+    "trad": "出去",
+    "pinyin": "chū qù",
+    "gloss": "to go out",
+    "hint": "away from the speaker",
+    "pos": "verb",
+    "note": "Movement out and away from the speaker; 出來 chū lái is out toward the speaker. Also follows verbs: 走出去 (walk out).",
+    "example": {
+      "trad": "我們出去吃飯吧！",
+      "pinyin": "Wǒmen chūqù chīfàn ba!",
+      "english": "Let's go out to eat!"
+    }
+  },
+  {
+    "rank": 453,
+    "trad": "回家",
+    "pinyin": "huí jiā",
+    "gloss": "to go home",
+    "pos": "verb",
+    "example": {
+      "trad": "你幾點回家？",
+      "pinyin": "Nǐ jǐ diǎn huíjiā?",
+      "english": "What time are you coming home?"
+    }
+  },
+  {
+    "rank": 454,
+    "trad": "同",
+    "pinyin": "tóng",
+    "gloss": "same; together",
+    "hint": "the same (one), as in same day",
+    "pos": "adj",
+    "note": "Mostly in set forms: 同一個 (the same one), 不同 (different), 同學 (classmate). Other reading tòng, only in 胡同 (alley).",
+    "example": {
+      "trad": "我們是同一天生日。",
+      "pinyin": "Wǒmen shì tóng yī tiān shēngrì.",
+      "english": "We have the same birthday."
+    }
+  },
+  {
+    "rank": 455,
+    "trad": "控制",
+    "pinyin": "kòng zhì",
+    "gloss": "to control",
+    "pos": "verb",
+    "example": {
+      "trad": "我最近在控制飲食。",
+      "pinyin": "Wǒ zuìjìn zài kòngzhì yǐnshí.",
+      "english": "I've been watching my diet lately."
+    }
+  },
+  {
+    "rank": 456,
+    "trad": "弄",
+    "pinyin": "nòng",
+    "gloss": "to do; to make; to mess with",
+    "hint": "vague: handle, fiddle with",
+    "pos": "verb",
+    "note": "A catch-all verb: 弄壞 (to break), 弄好 (to get it done), 弄丟 (to lose). MOE's other reading is lòng (lane), as in 巷弄 and addresses, but most Taiwanese say nòng when reading an address.",
+    "example": {
+      "trad": "你把我的手機弄壞了！",
+      "pinyin": "Nǐ bǎ wǒ de shǒujī nònghuài le!",
+      "english": "You broke my phone!"
+    }
+  },
+  {
+    "rank": 457,
+    "trad": "母親",
+    "pinyin": "mǔ qīn",
+    "gloss": "mother",
+    "hint": "formal",
+    "pos": "noun",
+    "note": "Formal or written; in everyday speech people say 媽媽 mā ma. 母親節 = Mother's Day.",
+    "example": {
+      "trad": "母親節快到了。",
+      "pinyin": "Mǔqīnjié kuài dào le.",
+      "english": "Mother's Day is coming soon."
+    }
+  },
+  {
+    "rank": 458,
+    "trad": "夠",
+    "pinyin": "gòu",
+    "gloss": "enough",
+    "hint": "one syllable, everyday",
+    "pos": "adj",
+    "note": "夠了！ (That's enough!) 不夠 (not enough). Before an adjective it can mean really: 夠辣 (plenty spicy).",
+    "example": {
+      "trad": "我們的錢夠不夠？",
+      "pinyin": "Wǒmen de qián gòu bù gòu?",
+      "english": "Do we have enough money?"
+    }
+  },
+  {
+    "rank": 459,
+    "trad": "接",
+    "pinyin": "jiē",
+    "gloss": "to pick up (a person); to answer",
+    "hint": "meet a person; take a call",
+    "pos": "verb",
+    "note": "接電話 (answer the phone), 接人 (pick someone up), 接球 (catch a ball).",
+    "example": {
+      "trad": "我下班去接你。",
+      "pinyin": "Wǒ xiàbān qù jiē nǐ.",
+      "english": "I'll pick you up after work."
+    }
+  },
+  {
+    "rank": 460,
+    "trad": "任務",
+    "pinyin": "rèn wù",
+    "gloss": "task; mission",
+    "hint": "assigned mission",
+    "pos": "noun",
+    "note": "Taiwan (MOE) says rèn wù with a full tone; mainland often rèn wu.",
+    "example": {
+      "trad": "老闆給我一個新任務。",
+      "pinyin": "Lǎobǎn gěi wǒ yī ge xīn rènwù.",
+      "english": "The boss gave me a new task."
+    }
+  },
+  {
+    "rank": 461,
+    "trad": "拍",
+    "pinyin": "pāi",
+    "gloss": "to take (a photo); to pat; to clap",
+    "hint": "photo; tap with the palm",
+    "pos": "verb",
+    "note": "拍照 (take photos), 拍手 (clap), 拍電影 (shoot a film). MOE lists rare other readings (pā, bó, pò) not used in speech.",
+    "example": {
+      "trad": "可以幫我們拍一張照嗎？",
+      "pinyin": "Kěyǐ bāng wǒmen pāi yī zhāng zhào ma?",
+      "english": "Could you take a picture of us?"
+    }
+  },
+  {
+    "rank": 462,
+    "trad": "代表",
+    "pinyin": "dài biǎo",
+    "gloss": "to represent; to mean; representative",
+    "pos": "verb",
+    "example": {
+      "trad": "這代表什麼意思？",
+      "pinyin": "Zhè dàibiǎo shénme yìsi?",
+      "english": "What does this mean?"
+    }
+  },
+  {
+    "rank": 463,
+    "trad": "感謝",
+    "pinyin": "gǎn xiè",
+    "gloss": "to thank; grateful",
+    "hint": "heartfelt or formal thanks",
+    "pos": "verb",
+    "example": {
+      "trad": "真的很感謝你的幫忙。",
+      "pinyin": "Zhēn de hěn gǎnxiè nǐ de bāngmáng.",
+      "english": "Thank you so much for your help."
+    }
+  },
+  {
+    "rank": 464,
+    "trad": "賣",
+    "pinyin": "mài",
+    "gloss": "to sell",
+    "pos": "verb",
+    "note": "Listen for the tone: 賣 mài (4th, sell) vs 買 mǎi (3rd, buy). Taiwan says 有賣 for 'sells/has': 有賣咖啡嗎？",
+    "example": {
+      "trad": "這家店有賣咖啡嗎？",
+      "pinyin": "Zhè jiā diàn yǒu mài kāfēi ma?",
+      "english": "Does this shop sell coffee?"
+    }
+  },
+  {
+    "rank": 465,
+    "trad": "有關",
+    "pinyin": "yǒu guān",
+    "gloss": "related to; to have to do with",
+    "pos": "verb",
+    "note": "Pattern: A 跟 B 有關 (A has to do with B). In casual speech 有關係 is common.",
+    "example": {
+      "trad": "這件事跟他有關。",
+      "pinyin": "Zhè jiàn shì gēn tā yǒuguān.",
+      "english": "This has something to do with him."
+    }
+  },
+  {
+    "rank": 466,
+    "trad": "解釋",
+    "pinyin": "jiě shì",
+    "gloss": "to explain; explanation",
+    "hint": "explain why; give reasons",
+    "pos": "verb",
+    "example": {
+      "trad": "你聽我解釋！",
+      "pinyin": "Nǐ tīng wǒ jiěshì!",
+      "english": "Let me explain!"
+    }
+  },
+  {
+    "rank": 467,
+    "trad": "舒服",
+    "pinyin": "shū fu",
+    "gloss": "comfortable; feeling well",
+    "pos": "adj",
+    "note": "不舒服 means 'feeling unwell'. MOE gives a light second syllable; many Taiwanese say shū fú.",
+    "example": {
+      "trad": "這張床好舒服。",
+      "pinyin": "Zhè zhāng chuáng hǎo shūfu.",
+      "english": "This bed is so comfortable."
+    }
+  },
+  {
+    "rank": 468,
+    "trad": "兄弟",
+    "pinyin": "xiōng dì",
+    "gloss": "brothers; bro",
+    "pos": "noun",
+    "note": "Also used between male friends (bro). MOE also has xiōng di, meaning younger brother. Siblings in general: 兄弟姊妹 (also written 兄弟姐妹).",
+    "example": {
+      "trad": "他們兩個是兄弟。",
+      "pinyin": "Tāmen liǎng ge shì xiōngdì.",
+      "english": "The two of them are brothers."
+    }
+  },
+  {
+    "rank": 469,
+    "trad": "影響",
+    "pinyin": "yǐng xiǎng",
+    "gloss": "to affect; influence",
+    "pos": "verb",
+    "example": {
+      "trad": "天氣會影響我的心情。",
+      "pinyin": "Tiānqì huì yǐngxiǎng wǒ de xīnqíng.",
+      "english": "The weather affects my mood."
+    }
+  },
+  {
+    "rank": 470,
+    "trad": "研究",
+    "pinyin": "yán jiù",
+    "gloss": "to research; research",
+    "pos": "verb",
+    "note": "Taiwan (MOE) says yán jiù; mainland says yán jiū.",
+    "example": {
+      "trad": "他在大學做研究。",
+      "pinyin": "Tā zài dàxué zuò yánjiù.",
+      "english": "He does research at a university."
+    }
+  },
+  {
+    "rank": 471,
+    "trad": "提供",
+    "pinyin": "tí gōng",
+    "gloss": "to provide; to offer",
+    "hint": "supply a service or thing",
+    "pos": "verb",
+    "example": {
+      "trad": "這家飯店有提供早餐嗎？",
+      "pinyin": "Zhè jiā fàndiàn yǒu tígōng zǎocān ma?",
+      "english": "Does this hotel provide breakfast?"
+    }
+  },
+  {
+    "rank": 472,
+    "trad": "指",
+    "pinyin": "zhǐ",
+    "gloss": "to point at; to mean; finger",
+    "hint": "refer to",
+    "pos": "verb",
+    "note": "你是指… nǐ shì zhǐ… means \"do you mean…?\". As a noun it means finger, usually 手指 shǒu zhǐ.",
+    "example": {
+      "trad": "你是指這個嗎？",
+      "pinyin": "Nǐ shì zhǐ zhège ma?",
+      "english": "Do you mean this one?"
+    }
+  },
+  {
+    "rank": 473,
+    "trad": "自由",
+    "pinyin": "zì yóu",
+    "gloss": "freedom; free",
+    "hint": "liberty, not free of charge",
+    "pos": "noun",
+    "note": "Free of charge is 免費 miǎn fèi, not 自由.",
+    "example": {
+      "trad": "你可以自由選擇。",
+      "pinyin": "Nǐ kěyǐ zìyóu xuǎnzé.",
+      "english": "You're free to choose."
+    }
+  },
+  {
+    "rank": 474,
+    "trad": "今晚",
+    "pinyin": "jīn wǎn",
+    "gloss": "tonight",
+    "pos": "noun",
+    "note": "Short form of 今天晚上 jīn tiān wǎn shang, which is just as common in speech.",
+    "example": {
+      "trad": "今晚要不要一起吃飯？",
+      "pinyin": "Jīnwǎn yào bù yào yīqǐ chīfàn?",
+      "english": "Do you want to have dinner together tonight?"
+    }
+  },
+  {
+    "rank": 475,
+    "trad": "證明",
+    "pinyin": "zhèng míng",
+    "gloss": "to prove; proof; certificate",
+    "pos": "verb",
+    "example": {
+      "trad": "你要怎麼證明？",
+      "pinyin": "Nǐ yào zěnme zhèngmíng?",
+      "english": "How are you going to prove it?"
+    }
+  },
+  {
+    "rank": 476,
+    "trad": "直接",
+    "pinyin": "zhí jiē",
+    "gloss": "directly; direct",
+    "hint": "straight, without detours",
+    "pos": "adv",
+    "example": {
+      "trad": "下班以後我直接回家。",
+      "pinyin": "Xiàbān yǐhòu wǒ zhíjiē huí jiā.",
+      "english": "After work I go straight home."
+    }
+  },
+  {
+    "rank": 477,
+    "trad": "家庭",
+    "pinyin": "jiā tíng",
+    "gloss": "family; household",
+    "hint": "family as a unit",
+    "pos": "noun",
+    "note": "家 jiā is the everyday word for home/family; 家人 jiā rén means family members.",
+    "example": {
+      "trad": "他很重視家庭。",
+      "pinyin": "Tā hěn zhòngshì jiātíng.",
+      "english": "He really values his family."
+    }
+  },
+  {
+    "rank": 478,
+    "trad": "考慮",
+    "pinyin": "kǎo lǜ",
+    "gloss": "to consider; to think over",
+    "hint": "weigh a decision",
+    "pos": "verb",
+    "example": {
+      "trad": "我再考慮一下。",
+      "pinyin": "Wǒ zài kǎolǜ yīxià.",
+      "english": "Let me think it over a bit more."
+    }
+  },
+  {
+    "rank": 479,
+    "trad": "信",
+    "pinyin": "xìn",
+    "gloss": "letter (mail); to believe",
+    "hint": "mail; believe (short form)",
+    "pos": "noun",
+    "note": "Letters are counted with 封 fēng. As a verb it is short for 相信: 我不信 wǒ bù xìn \"I don't believe it\". MOE also lists a literary reading shēn, not used in speech.",
+    "example": {
+      "trad": "我收到你的信了。",
+      "pinyin": "Wǒ shōudào nǐ de xìn le.",
+      "english": "I got your letter."
+    }
+  },
+  {
+    "rank": 480,
+    "trad": "派",
+    "pinyin": "pài",
+    "gloss": "to send (someone); to assign",
+    "hint": "dispatch a person",
+    "pos": "verb",
+    "note": "送 sòng sends things; 派 sends people on a task. Also a noun: faction, school of thought, and \"pie\" (蘋果派 píng guǒ pài).",
+    "example": {
+      "trad": "公司派他去日本。",
+      "pinyin": "Gōngsī pài tā qù Rìběn.",
+      "english": "The company sent him to Japan."
+    }
+  },
+  {
+    "rank": 481,
+    "trad": "生",
+    "pinyin": "shēng",
+    "gloss": "to give birth; raw",
+    "hint": "have a baby; uncooked",
+    "pos": "verb",
+    "note": "Many uses: 生小孩 have a baby, 生病 get sick, 生氣 get angry, 生的 raw/uncooked.",
+    "example": {
+      "trad": "她下個月要生了。",
+      "pinyin": "Tā xià ge yuè yào shēng le.",
+      "english": "She's due next month."
+    }
+  },
+  {
+    "rank": 482,
+    "trad": "四",
+    "pinyin": "sì",
+    "gloss": "four",
+    "pos": "num",
+    "note": "Sounds like 死 sǐ \"death\", so four is considered unlucky. Listen for the tone: 四 sì vs 十 shí (ten), which can sound alike in Taiwan accents.",
+    "example": {
+      "trad": "我們家有四個人。",
+      "pinyin": "Wǒmen jiā yǒu sì ge rén.",
+      "english": "There are four people in our family."
+    }
+  },
+  {
+    "rank": 483,
+    "trad": "份",
+    "pinyin": "fèn",
+    "gloss": "(measure: portion, copy, job)",
+    "pos": "measure",
+    "note": "Counts portions of food (一份早餐), copies of documents or newspapers, jobs (一份工作) and gifts (一份禮物). The archaic reading bīn is not used.",
+    "example": {
+      "trad": "這份工作很累。",
+      "pinyin": "Zhè fèn gōngzuò hěn lèi.",
+      "english": "This job is exhausting."
+    }
+  },
+  {
+    "rank": 484,
+    "trad": "笑",
+    "pinyin": "xiào",
+    "gloss": "to laugh; to smile; to laugh at",
+    "pos": "verb",
+    "example": {
+      "trad": "你在笑什麼？",
+      "pinyin": "Nǐ zài xiào shénme?",
+      "english": "What are you laughing at?"
+    }
+  },
+  {
+    "rank": 485,
+    "trad": "晚安",
+    "pinyin": "wǎn ān",
+    "gloss": "good night",
+    "pos": "phrase",
+    "note": "Said when parting at night or going to bed, not as an evening greeting.",
+    "example": {
+      "trad": "晚安，早點睡！",
+      "pinyin": "Wǎn'ān, zǎo diǎn shuì!",
+      "english": "Good night, don't stay up too late!"
+    }
+  },
+  {
+    "rank": 486,
+    "trad": "中心",
+    "pinyin": "zhōng xīn",
+    "gloss": "center; hub",
+    "hint": "central place or facility",
+    "pos": "noun",
+    "note": "Used for places: 市中心 downtown, 購物中心 shopping mall. The plain middle of something is 中間 zhōng jiān.",
+    "example": {
+      "trad": "我住在市中心。",
+      "pinyin": "Wǒ zhù zài shìzhōngxīn.",
+      "english": "I live downtown."
+    }
+  },
+  {
+    "rank": 487,
+    "trad": "城市",
+    "pinyin": "chéng shì",
+    "gloss": "city",
+    "pos": "noun",
+    "example": {
+      "trad": "台北是一個大城市。",
+      "pinyin": "Táiběi shì yī ge dà chéngshì.",
+      "english": "Taipei is a big city."
+    }
+  },
+  {
+    "rank": 488,
+    "trad": "看來",
+    "pinyin": "kàn lái",
+    "gloss": "it seems; looks like",
+    "hint": "judging from what you see",
+    "pos": "adv",
+    "note": "Often starts a sentence to draw a conclusion: 看來… \"it looks like…\". Similar to 好像 hǎo xiàng.",
+    "example": {
+      "trad": "看來要下雨了。",
+      "pinyin": "Kànlái yào xià yǔ le.",
+      "english": "Looks like it's going to rain."
+    }
+  },
+  {
+    "rank": 489,
+    "trad": "學生",
+    "pinyin": "xué shēng",
+    "gloss": "student",
+    "pos": "noun",
+    "note": "Taiwan keeps the full tone on 生 (xué shēng); the mainland says xué sheng.",
+    "example": {
+      "trad": "他還是學生。",
+      "pinyin": "Tā hái shì xuéshēng.",
+      "english": "He's still a student."
+    }
+  },
+  {
+    "rank": 490,
+    "trad": "道",
+    "pinyin": "dào",
+    "gloss": "(measure: dishes, questions); way",
+    "pos": "measure",
+    "note": "Counts dishes of food (一道菜), questions (一道題), doors and walls. Also \"road; way\" in compounds like 道路 and 味道 wèi dào (flavor).",
+    "example": {
+      "trad": "這道菜很好吃。",
+      "pinyin": "Zhè dào cài hěn hǎochī.",
+      "english": "This dish is delicious."
+    }
+  },
+  {
+    "rank": 491,
+    "trad": "選",
+    "pinyin": "xuǎn",
+    "gloss": "to choose; to pick; to elect",
+    "hint": "choose among options; also elections",
+    "pos": "verb",
+    "note": "Everyday short form of 選擇 xuǎn zé. Also \"to elect\": 選總統 elect a president. 挑 tiāo is similar but means picking out carefully.",
+    "example": {
+      "trad": "你要選哪一個？",
+      "pinyin": "Nǐ yào xuǎn nǎ yī ge?",
+      "english": "Which one do you want to pick?"
+    }
+  },
+  {
+    "rank": 492,
+    "trad": "或許",
+    "pinyin": "huò xǔ",
+    "gloss": "perhaps; maybe",
+    "hint": "a bit formal; not yě xǔ",
+    "pos": "adv",
+    "note": "Slightly more formal than 也許 yě xǔ and 可能 kě néng, which are more common in conversation.",
+    "example": {
+      "trad": "或許他已經走了。",
+      "pinyin": "Huòxǔ tā yǐjīng zǒu le.",
+      "english": "Maybe he's already left."
+    }
+  },
+  {
+    "rank": 493,
+    "trad": "資訊",
+    "pinyin": "zī xùn",
+    "gloss": "information; IT",
+    "hint": "info, esp. online or media",
+    "pos": "noun",
+    "note": "Taiwan word; the mainland says 信息 xìn xī. Also means IT, as in 資訊業 the IT industry. 資料 zī liào is data or materials (documents, files).",
+    "example": {
+      "trad": "網路上有很多資訊。",
+      "pinyin": "Wǎnglù shàng yǒu hěn duō zīxùn.",
+      "english": "There's a lot of information online."
+    }
+  },
+  {
+    "rank": 494,
+    "trad": "二",
+    "pinyin": "èr",
+    "gloss": "two",
+    "hint": "the number, in counting",
+    "pos": "num",
+    "note": "Used in counting, phone numbers, floors and ordinals (第二, 二十). Before a measure word use 兩 liǎng instead: 兩個人.",
+    "example": {
+      "trad": "我住在二樓。",
+      "pinyin": "Wǒ zhù zài èr lóu.",
+      "english": "I live on the second floor."
+    }
+  },
+  {
+    "rank": 495,
+    "trad": "變成",
+    "pinyin": "biàn chéng",
+    "gloss": "to turn into; to become",
+    "hint": "two syllables; turn into something else",
+    "pos": "verb",
+    "note": "Stresses a change from one state to another; 成為 chéng wéi is more formal.",
+    "example": {
+      "trad": "我們變成好朋友了。",
+      "pinyin": "Wǒmen biànchéng hǎo péngyǒu le.",
+      "english": "We became good friends."
+    }
+  },
+  {
+    "rank": 496,
+    "trad": "醫院",
+    "pinyin": "yī yuàn",
+    "gloss": "hospital",
+    "pos": "noun",
+    "note": "A small doctor's office or clinic is 診所 zhěn suǒ.",
+    "example": {
+      "trad": "我明天要去醫院。",
+      "pinyin": "Wǒ míngtiān yào qù yīyuàn.",
+      "english": "I'm going to the hospital tomorrow."
+    }
+  },
+  {
+    "rank": 497,
+    "trad": "除了",
+    "pinyin": "chú le",
+    "gloss": "except; besides",
+    "pos": "prep",
+    "note": "Often 除了…以外. With 都 it excludes (除了我，大家都去了 everyone but me); with 也/還 it adds (除了中文，他還會日文 besides Chinese he also speaks Japanese).",
+    "example": {
+      "trad": "除了我，大家都去了。",
+      "pinyin": "Chúle wǒ, dàjiā dōu qù le.",
+      "english": "Everyone went except me."
+    }
+  },
+  {
+    "rank": 498,
+    "trad": "至少",
+    "pinyin": "zhì shǎo",
+    "gloss": "at least",
+    "pos": "adv",
+    "example": {
+      "trad": "至少要等半個小時。",
+      "pinyin": "Zhìshǎo yào děng bàn ge xiǎoshí.",
+      "english": "You have to wait at least half an hour."
+    }
+  },
+  {
+    "rank": 499,
+    "trad": "感到",
+    "pinyin": "gǎn dào",
+    "gloss": "to feel",
+    "hint": "an emotion, a bit formal",
+    "pos": "verb",
+    "note": "More formal than 覺得 jué de; usually followed by a feeling, e.g. 感到很高興.",
+    "example": {
+      "trad": "大家都感到很意外。",
+      "pinyin": "Dàjiā dōu gǎndào hěn yìwài.",
+      "english": "Everyone was really surprised."
+    }
+  },
+  {
+    "rank": 500,
+    "trad": "塊",
+    "pinyin": "kuài",
+    "gloss": "dollar (spoken); (measure: pieces)",
+    "hint": "spoken money unit; chunk",
+    "pos": "measure",
+    "note": "In speech, 塊 is the word for dollars (一百塊 = NT$100; 元 yuán is the written form). Also counts pieces and chunks: 一塊蛋糕 a piece of cake.",
+    "example": {
+      "trad": "一杯咖啡五十塊。",
+      "pinyin": "Yī bēi kāfēi wǔshí kuài.",
+      "english": "A cup of coffee is fifty dollars."
+    }
+  }
+]

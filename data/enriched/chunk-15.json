@@ -1,0 +1,684 @@
+[
+  {
+    "rank": 701,
+    "trad": "別的",
+    "pinyin": "bié de",
+    "gloss": "other; anything else",
+    "hint": "something else (casual)",
+    "pos": "pron",
+    "note": "Used before a noun (別的東西 bié de dōng xi 'other things') or on its own (還要別的嗎？ 'anything else?'). 'Other people' is usually 別人 bié rén; 其他 qí tā is a bit more formal.",
+    "example": {
+      "trad": "你還要別的嗎？",
+      "pinyin": "Nǐ hái yào biéde ma?",
+      "english": "Do you want anything else?"
+    }
+  },
+  {
+    "rank": 702,
+    "trad": "試",
+    "pinyin": "shì",
+    "gloss": "to try; to test",
+    "hint": "try something out",
+    "pos": "verb",
+    "note": "Usually comes as 試試看 shì shi kàn or 試一下 shì yī xià ('give it a try'), or 試穿 shì chuān 'try on clothes'.",
+    "example": {
+      "trad": "你可以試試看。",
+      "pinyin": "Nǐ kěyǐ shìshi kàn.",
+      "english": "You can give it a try."
+    }
+  },
+  {
+    "rank": 703,
+    "trad": "屬於",
+    "pinyin": "shǔ yú",
+    "gloss": "to belong to; to fall under",
+    "pos": "verb",
+    "note": "Used for categories, scope or responsibility. For simple ownership people say 是他的 shì tā de 'it's his'.",
+    "example": {
+      "trad": "這不屬於我的工作範圍。",
+      "pinyin": "Zhè bù shǔyú wǒ de gōngzuò fànwéi.",
+      "english": "This isn't part of my job."
+    }
+  },
+  {
+    "rank": 704,
+    "trad": "房間",
+    "pinyin": "fáng jiān",
+    "gloss": "room; bedroom",
+    "hint": "a room in a home",
+    "pos": "noun",
+    "note": "In everyday Taiwan speech 房間 usually means a bedroom: 回房間 'go to my room'.",
+    "example": {
+      "trad": "我的房間很小。",
+      "pinyin": "Wǒ de fángjiān hěn xiǎo.",
+      "english": "My room is small."
+    }
+  },
+  {
+    "rank": 705,
+    "trad": "上面",
+    "pinyin": "shàng miàn",
+    "gloss": "on top; above",
+    "hint": "position, on the top side",
+    "pos": "noun",
+    "note": "A location word, used after a noun: 桌子上面 'on the table'. MOE lists shàng mian with a neutral tone, but Taiwanese usually say shàng miàn.",
+    "example": {
+      "trad": "手機在桌子上面。",
+      "pinyin": "Shǒujī zài zhuōzi shàngmiàn.",
+      "english": "The phone is on the table."
+    }
+  },
+  {
+    "rank": 706,
+    "trad": "丈夫",
+    "pinyin": "zhàng fū",
+    "gloss": "husband",
+    "hint": "formal word",
+    "pos": "noun",
+    "note": "Formal or written. In everyday Taiwan speech 老公 lǎo gōng is far more common. Taiwan (MOE) says zhàng fū; the mainland says zhàng fu.",
+    "example": {
+      "trad": "她丈夫是老師。",
+      "pinyin": "Tā zhàngfū shì lǎoshī.",
+      "english": "Her husband is a teacher."
+    }
+  },
+  {
+    "rank": 707,
+    "trad": "力量",
+    "pinyin": "lì liang",
+    "gloss": "strength; power",
+    "hint": "inner or collective power, not lì qi",
+    "pos": "noun",
+    "note": "MOE gives lì liang; many Taiwanese say lì liàng. Physical strength (as in having no energy left) is usually 力氣 lì qi.",
+    "example": {
+      "trad": "你的話給了我很多力量。",
+      "pinyin": "Nǐ de huà gěi le wǒ hěn duō lìliang.",
+      "english": "Your words gave me a lot of strength."
+    }
+  },
+  {
+    "rank": 708,
+    "trad": "而已",
+    "pinyin": "ér yǐ",
+    "gloss": "that's all; just",
+    "hint": "at the end of a sentence",
+    "pos": "particle",
+    "note": "Goes at the end of a sentence to play something down, often together with 只是 or 只有: 只是開玩笑而已 'just joking, that's all'.",
+    "example": {
+      "trad": "我只是問問而已。",
+      "pinyin": "Wǒ zhǐshì wènwen éryǐ.",
+      "english": "I'm just asking, that's all."
+    }
+  },
+  {
+    "rank": 709,
+    "trad": "借",
+    "pinyin": "jiè",
+    "gloss": "to borrow; to lend",
+    "hint": "both directions, depending on word order",
+    "pos": "verb",
+    "note": "跟…借 gēn … jiè 'borrow from…': 我跟他借錢 'I borrowed money from him'. 借…給 or 借 + person means 'lend': 借我 'lend me'. To give it back is 還 huán.",
+    "example": {
+      "trad": "可以借我一枝筆嗎？",
+      "pinyin": "Kěyǐ jiè wǒ yī zhī bǐ ma?",
+      "english": "Could you lend me a pen?"
+    }
+  },
+  {
+    "rank": 710,
+    "trad": "猜",
+    "pinyin": "cāi",
+    "gloss": "to guess",
+    "pos": "verb",
+    "note": "Often said as 猜猜看 cāi cai kàn 'take a guess'.",
+    "example": {
+      "trad": "猜猜看我幾歲？",
+      "pinyin": "Cāicai kàn wǒ jǐ suì?",
+      "english": "Guess how old I am!"
+    }
+  },
+  {
+    "rank": 711,
+    "trad": "集",
+    "pinyin": "jí",
+    "gloss": "episode (of a show)",
+    "pos": "measure",
+    "note": "Measure word for episodes of TV shows and series: 這部連續劇有二十集 zhè bù lián xù jù yǒu èr shí jí 'this series has twenty episodes'. Also means 'to gather', mostly inside words like 集合 jí hé.",
+    "example": {
+      "trad": "我昨天看了三集。",
+      "pinyin": "Wǒ zuótiān kàn le sān jí.",
+      "english": "I watched three episodes yesterday."
+    }
+  },
+  {
+    "rank": 712,
+    "trad": "喂",
+    "pinyin": "wèi",
+    "gloss": "hello (on the phone); hey",
+    "hint": "answering the phone",
+    "pos": "interj",
+    "note": "Used to answer the phone or to call out to someone. MOE gives wèi; mainland dictionaries give wéi for the phone greeting, and in real speech it often comes out rising. As a verb, wèi means 'to feed' (喂奶 wèi nǎi).",
+    "example": {
+      "trad": "喂？請問你找誰？",
+      "pinyin": "Wèi? Qǐngwèn nǐ zhǎo shéi?",
+      "english": "Hello? Who would you like to speak to?"
+    }
+  },
+  {
+    "rank": 713,
+    "trad": "有的",
+    "pinyin": "yǒu de",
+    "gloss": "some (of them)",
+    "hint": "contrasting 'some …, others …'",
+    "pos": "pron",
+    "note": "Picks out part of a group, often in pairs: 有的人…，有的人… 'some people ..., others ...'.",
+    "example": {
+      "trad": "有的人喜歡，有的人不喜歡。",
+      "pinyin": "Yǒude rén xǐhuān, yǒude rén bù xǐhuān.",
+      "english": "Some people like it, some don't."
+    }
+  },
+  {
+    "rank": 714,
+    "trad": "討論",
+    "pinyin": "tǎo lùn",
+    "gloss": "to discuss",
+    "hint": "talk it over together",
+    "pos": "verb",
+    "example": {
+      "trad": "我們等一下再討論。",
+      "pinyin": "Wǒmen děng yīxià zài tǎolùn.",
+      "english": "Let's talk about it later."
+    }
+  },
+  {
+    "rank": 715,
+    "trad": "面",
+    "pinyin": "miàn",
+    "gloss": "side; surface",
+    "hint": "a flat side or surface",
+    "pos": "noun",
+    "note": "Mostly heard inside words: 前面 qián miàn, 見面 jiàn miàn 'to meet'; a person's face is 臉 liǎn. Also a measure word for flat things (一面鏡子 yī miàn jìng zi 'a mirror'). 'Noodles' (麵) sounds the same.",
+    "example": {
+      "trad": "這一面比較乾淨。",
+      "pinyin": "Zhè yī miàn bǐjiào gānjìng.",
+      "english": "This side is cleaner."
+    }
+  },
+  {
+    "rank": 716,
+    "trad": "麵",
+    "pinyin": "miàn",
+    "gloss": "noodles",
+    "pos": "noun",
+    "note": "Sounds the same as 面 'side / surface'. Common in Taiwan food: 牛肉麵 niú ròu miàn 'beef noodle soup', 炒麵 chǎo miàn 'fried noodles'.",
+    "example": {
+      "trad": "我想吃牛肉麵。",
+      "pinyin": "Wǒ xiǎng chī niúròumiàn.",
+      "english": "I want to eat beef noodle soup."
+    }
+  },
+  {
+    "rank": 717,
+    "trad": "本來",
+    "pinyin": "běn lái",
+    "gloss": "originally; at first",
+    "hint": "before things changed",
+    "pos": "adv",
+    "note": "Implies that the plan or situation later changed: 我本來要去，可是… 'I was going to go, but ...'.",
+    "example": {
+      "trad": "我本來想去，後來太累了。",
+      "pinyin": "Wǒ běnlái xiǎng qù, hòulái tài lèi le.",
+      "english": "I wanted to go at first, but then I got too tired."
+    }
+  },
+  {
+    "rank": 718,
+    "trad": "承認",
+    "pinyin": "chéng rèn",
+    "gloss": "to admit",
+    "pos": "verb",
+    "example": {
+      "trad": "他不承認是他做的。",
+      "pinyin": "Tā bù chéngrèn shì tā zuò de.",
+      "english": "He won't admit he did it."
+    }
+  },
+  {
+    "rank": 719,
+    "trad": "明顯",
+    "pinyin": "míng xiǎn",
+    "gloss": "obvious; noticeable",
+    "pos": "adj",
+    "example": {
+      "trad": "他很明顯不高興。",
+      "pinyin": "Tā hěn míngxiǎn bù gāoxìng.",
+      "english": "He's obviously unhappy."
+    }
+  },
+  {
+    "rank": 720,
+    "trad": "慢",
+    "pinyin": "màn",
+    "gloss": "slow; slowly",
+    "hint": "opposite of fast",
+    "pos": "adj",
+    "note": "慢一點 màn yī diǎn 'a bit slower'. 慢慢來 màn màn lái 'take your time'. 慢走 màn zǒu 'take care' is said to a guest who is leaving.",
+    "example": {
+      "trad": "慢慢來，不用急。",
+      "pinyin": "Mànmàn lái, bùyòng jí.",
+      "english": "Take your time, there's no rush."
+    }
+  },
+  {
+    "rank": 721,
+    "trad": "表示",
+    "pinyin": "biǎo shì",
+    "gloss": "to express; to indicate",
+    "hint": "show a view, or signify",
+    "pos": "verb",
+    "note": "Used both for people stating something and for things that indicate or mean something: 這表示… 'this means ...'.",
+    "example": {
+      "trad": "他沒回答，表示他不同意。",
+      "pinyin": "Tā méi huídá, biǎoshì tā bù tóngyì.",
+      "english": "He didn't answer, which means he disagrees."
+    }
+  },
+  {
+    "rank": 722,
+    "trad": "想到",
+    "pinyin": "xiǎng dào",
+    "gloss": "to think of; to expect",
+    "hint": "come to mind",
+    "pos": "verb",
+    "note": "沒想到 méi xiǎng dào means 'didn't expect' or 'surprisingly'.",
+    "example": {
+      "trad": "我沒想到你會來。",
+      "pinyin": "Wǒ méi xiǎngdào nǐ huì lái.",
+      "english": "I didn't expect you to come."
+    }
+  },
+  {
+    "rank": 723,
+    "trad": "會議",
+    "pinyin": "huì yì",
+    "gloss": "meeting; conference",
+    "hint": "formal noun",
+    "pos": "noun",
+    "note": "The noun. 'To have a meeting' is usually 開會 kāi huì.",
+    "example": {
+      "trad": "會議幾點開始？",
+      "pinyin": "Huìyì jǐ diǎn kāishǐ?",
+      "english": "What time does the meeting start?"
+    }
+  },
+  {
+    "rank": 724,
+    "trad": "歌",
+    "pinyin": "gē",
+    "gloss": "song",
+    "pos": "noun",
+    "note": "Counted with 首 shǒu: 一首歌. 'To sing' is 唱歌 chàng gē.",
+    "example": {
+      "trad": "這首歌很好聽。",
+      "pinyin": "Zhè shǒu gē hěn hǎotīng.",
+      "english": "This song sounds great."
+    }
+  },
+  {
+    "rank": 725,
+    "trad": "小心",
+    "pinyin": "xiǎo xīn",
+    "gloss": "to be careful; watch out",
+    "pos": "verb",
+    "example": {
+      "trad": "小心，地上很滑！",
+      "pinyin": "Xiǎoxīn, dìshang hěn huá!",
+      "english": "Careful, the floor is slippery!"
+    }
+  },
+  {
+    "rank": 726,
+    "trad": "杯",
+    "pinyin": "bēi",
+    "gloss": "cup; glass (of)",
+    "hint": "measure word for drinks",
+    "pos": "measure",
+    "note": "Measure word for drinks: 一杯水 yī bēi shuǐ 'a glass of water', 兩杯咖啡. The cup itself is 杯子 bēi zi.",
+    "example": {
+      "trad": "我要一杯熱茶。",
+      "pinyin": "Wǒ yào yī bēi rè chá.",
+      "english": "I'd like a cup of hot tea."
+    }
+  },
+  {
+    "rank": 727,
+    "trad": "酒",
+    "pinyin": "jiǔ",
+    "gloss": "alcohol; liquor",
+    "hint": "any alcoholic drink",
+    "pos": "noun",
+    "note": "The general word for alcoholic drinks. Specific kinds: 啤酒 pí jiǔ 'beer', 紅酒 hóng jiǔ 'red wine'. 喝酒 hē jiǔ means 'to drink (alcohol)'.",
+    "example": {
+      "trad": "他晚上喝了很多酒。",
+      "pinyin": "Tā wǎnshang hē le hěn duō jiǔ.",
+      "english": "He drank a lot this evening."
+    }
+  },
+  {
+    "rank": 728,
+    "trad": "緊張",
+    "pinyin": "jǐn zhāng",
+    "gloss": "nervous; tense",
+    "pos": "adj",
+    "example": {
+      "trad": "考試前我很緊張。",
+      "pinyin": "Kǎoshì qián wǒ hěn jǐnzhāng.",
+      "english": "I get nervous before exams."
+    }
+  },
+  {
+    "rank": 729,
+    "trad": "痛",
+    "pinyin": "tòng",
+    "gloss": "to hurt; to ache; painful",
+    "hint": "physical pain, one syllable",
+    "pos": "adj",
+    "note": "Body part + 痛: 頭痛 tóu tòng 'headache', 肚子痛 dù zi tòng 'stomachache'. 好痛！ hǎo tòng 'ouch!'. 痛苦 tòng kǔ is deeper, longer suffering.",
+    "example": {
+      "trad": "你哪裡痛？",
+      "pinyin": "Nǐ nǎlǐ tòng?",
+      "english": "Where does it hurt?"
+    }
+  },
+  {
+    "rank": 730,
+    "trad": "家裡",
+    "pinyin": "jiā lǐ",
+    "gloss": "at home; in the family",
+    "hint": "inside the home",
+    "pos": "noun",
+    "note": "Also means 'my family': 家裡有四個人. MOE lists jiā li with a neutral tone, but Taiwanese usually say jiā lǐ.",
+    "example": {
+      "trad": "我今天在家裡休息。",
+      "pinyin": "Wǒ jīntiān zài jiālǐ xiūxí.",
+      "english": "I'm resting at home today."
+    }
+  },
+  {
+    "rank": 731,
+    "trad": "同樣",
+    "pinyin": "tóng yàng",
+    "gloss": "the same; equally",
+    "hint": "more formal than yī yàng",
+    "pos": "adj",
+    "note": "Often before a noun with 的: 同樣的問題 'the same problem'. In casual speech 一樣 yī yàng is more common.",
+    "example": {
+      "trad": "我也有同樣的問題。",
+      "pinyin": "Wǒ yě yǒu tóngyàng de wèntí.",
+      "english": "I have the same problem."
+    }
+  },
+  {
+    "rank": 732,
+    "trad": "神",
+    "pinyin": "shén",
+    "gloss": "god; deity",
+    "hint": "a divine being",
+    "pos": "noun",
+    "note": "The Christian God is usually 上帝 shàng dì. Also used in slang: 好神 hǎo shén or 太神了 'amazing / uncanny'.",
+    "example": {
+      "trad": "你相信有神嗎？",
+      "pinyin": "Nǐ xiāngxìn yǒu shén ma?",
+      "english": "Do you believe gods exist?"
+    }
+  },
+  {
+    "rank": 733,
+    "trad": "早上",
+    "pinyin": "zǎo shang",
+    "gloss": "morning",
+    "hint": "everyday word, not shàng wǔ",
+    "pos": "noun",
+    "note": "The everyday word for morning; 上午 shàng wǔ is more formal, like \"a.m.\" in schedules. MOE gives zǎo shang; many Taiwanese say zǎo shàng.",
+    "example": {
+      "trad": "我每天早上七點起床。",
+      "pinyin": "Wǒ měitiān zǎoshang qī diǎn qǐchuáng.",
+      "english": "I get up at seven every morning."
+    }
+  },
+  {
+    "rank": 734,
+    "trad": "即使",
+    "pinyin": "jí shǐ",
+    "gloss": "even if",
+    "hint": "more formal than jiù suàn",
+    "pos": "conj",
+    "note": "Usually paired with 也 yě in the second clause: 即使下雨，我也要去 'even if it rains, I'll still go'. 就算 jiù suàn is the more casual equivalent.",
+    "example": {
+      "trad": "即使很累，他也去上班。",
+      "pinyin": "Jíshǐ hěn lèi, tā yě qù shàngbān.",
+      "english": "Even when he's tired, he still goes to work."
+    }
+  },
+  {
+    "rank": 735,
+    "trad": "後來",
+    "pinyin": "hòu lái",
+    "gloss": "afterwards; later on",
+    "hint": "what happened next, in the past",
+    "pos": "adv",
+    "note": "Only for past events ('and then later ...'). For the future, use 以後 yǐ hòu or 等一下 děng yī xià.",
+    "example": {
+      "trad": "後來他們結婚了。",
+      "pinyin": "Hòulái tāmen jiéhūn le.",
+      "english": "Later on they got married."
+    }
+  },
+  {
+    "rank": 736,
+    "trad": "回答",
+    "pinyin": "huí dá",
+    "gloss": "to answer; answer",
+    "hint": "reply to a question",
+    "pos": "verb",
+    "note": "For answering a question. Replying to a message is usually 回 huí (回訊息 'reply to a message').",
+    "example": {
+      "trad": "他沒有回答我的問題。",
+      "pinyin": "Tā méiyǒu huídá wǒ de wèntí.",
+      "english": "He didn't answer my question."
+    }
+  },
+  {
+    "rank": 737,
+    "trad": "意見",
+    "pinyin": "yì jiàn",
+    "gloss": "opinion; suggestion",
+    "hint": "your view; also a complaint",
+    "pos": "noun",
+    "note": "有意見 yǒu yì jiàn can also mean 'to have an objection or complaint', so 你有什麼意見？ can sound like 'Got a problem with that?'",
+    "example": {
+      "trad": "我想聽聽你的意見。",
+      "pinyin": "Wǒ xiǎng tīngting nǐ de yìjiàn.",
+      "english": "I'd like to hear your opinion."
+    }
+  },
+  {
+    "rank": 738,
+    "trad": "關心",
+    "pinyin": "guān xīn",
+    "gloss": "to care about; to be concerned",
+    "hint": "look out for someone's wellbeing",
+    "pos": "verb",
+    "example": {
+      "trad": "媽媽很關心你。",
+      "pinyin": "Māma hěn guānxīn nǐ.",
+      "english": "Mom really cares about you."
+    }
+  },
+  {
+    "rank": 739,
+    "trad": "留下",
+    "pinyin": "liú xià",
+    "gloss": "to leave behind; to stay behind",
+    "hint": "remain, or leave something there",
+    "pos": "verb",
+    "note": "MOE lists liú xia with a light 下, but the full tone is common in Taiwan speech. 留下來 liú xià lái means 'to stay (on)'.",
+    "example": {
+      "trad": "他留下一封信就走了。",
+      "pinyin": "Tā liúxià yī fēng xìn jiù zǒu le.",
+      "english": "He left a letter and went away."
+    }
+  },
+  {
+    "rank": 740,
+    "trad": "厲害",
+    "pinyin": "lì hài",
+    "gloss": "amazing; impressive; severe",
+    "hint": "impressed by someone's skill",
+    "pos": "adj",
+    "note": "Praise for skill: 你好厲害 nǐ hǎo lì hài 'you're amazing!'. Also 'severe, intense': 痛得很厲害 tòng de hěn lì hài 'it hurts badly'. MOE gives full tones (lì hài); the mainland says lì hai.",
+    "example": {
+      "trad": "你好厲害喔！",
+      "pinyin": "Nǐ hǎo lìhài o!",
+      "english": "Wow, you're amazing!"
+    }
+  },
+  {
+    "rank": 741,
+    "trad": "經常",
+    "pinyin": "jīng cháng",
+    "gloss": "often; frequently",
+    "hint": "a bit more formal than cháng cháng",
+    "pos": "adv",
+    "note": "Everyday speech often uses 常常 cháng cháng or just 常 cháng.",
+    "example": {
+      "trad": "他經常加班。",
+      "pinyin": "Tā jīngcháng jiābān.",
+      "english": "He often works overtime."
+    }
+  },
+  {
+    "rank": 742,
+    "trad": "不用",
+    "pinyin": "bù yòng",
+    "gloss": "no need to; don't have to",
+    "hint": "no need, not a command",
+    "pos": "adv",
+    "note": "Spoken bú yòng (不 becomes bú before a 4th tone). Also a polite reply: 不用了 'no thanks', 不用謝 bù yòng xiè 'no need to thank me'.",
+    "example": {
+      "trad": "你不用等我。",
+      "pinyin": "Nǐ bùyòng děng wǒ.",
+      "english": "You don't need to wait for me."
+    }
+  },
+  {
+    "rank": 743,
+    "trad": "不好",
+    "pinyin": "bù hǎo",
+    "gloss": "not good; bad",
+    "hint": "mild, just not good",
+    "pos": "adj",
+    "note": "Before a verb it can mean 'hard to': 不好找 'hard to find'. 不好意思 bù hǎo yì si means 'sorry / excuse me'.",
+    "example": {
+      "trad": "今天天氣不好。",
+      "pinyin": "Jīntiān tiānqì bù hǎo.",
+      "english": "The weather isn't good today."
+    }
+  },
+  {
+    "rank": 744,
+    "trad": "裝",
+    "pinyin": "zhuāng",
+    "gloss": "to pretend; to pack in; to install",
+    "hint": "fake it, or put something in",
+    "pos": "verb",
+    "note": "Covers 'pretend' (別裝了 bié zhuāng le 'stop pretending'), 'put into a container' (裝水) and 'install' (裝冷氣 'install an air conditioner').",
+    "example": {
+      "trad": "別裝了，我知道是你。",
+      "pinyin": "Bié zhuāng le, wǒ zhīdào shì nǐ.",
+      "english": "Stop pretending, I know it was you."
+    }
+  },
+  {
+    "rank": 745,
+    "trad": "首先",
+    "pinyin": "shǒu xiān",
+    "gloss": "first of all; firstly",
+    "hint": "to open a list of points",
+    "pos": "adv",
+    "note": "Starts a sequence of points, often followed by 然後 or 再來. Compare 先 xiān 'do first, beforehand'.",
+    "example": {
+      "trad": "首先，你要有耐心。",
+      "pinyin": "Shǒuxiān, nǐ yào yǒu nàixīn.",
+      "english": "First of all, you need to be patient."
+    }
+  },
+  {
+    "rank": 746,
+    "trad": "年輕",
+    "pinyin": "nián qīng",
+    "gloss": "young",
+    "hint": "of people, youthful",
+    "pos": "adj",
+    "note": "年輕人 nián qīng rén means 'young people'.",
+    "example": {
+      "trad": "你看起來好年輕！",
+      "pinyin": "Nǐ kàn qǐlái hǎo niánqīng!",
+      "english": "You look so young!"
+    }
+  },
+  {
+    "rank": 747,
+    "trad": "原來",
+    "pinyin": "yuán lái",
+    "gloss": "so (it turns out); originally",
+    "hint": "suddenly realizing something",
+    "pos": "adv",
+    "note": "Most often used when you realize something: 原來如此 yuán lái rú cǐ 'I see'. Also 'original, former': 原來的地方 'the original place'.",
+    "example": {
+      "trad": "原來是你！",
+      "pinyin": "Yuánlái shì nǐ!",
+      "english": "Oh, so it's you!"
+    }
+  },
+  {
+    "rank": 748,
+    "trad": "反對",
+    "pinyin": "fǎn duì",
+    "gloss": "to oppose; to be against",
+    "pos": "verb",
+    "example": {
+      "trad": "我爸媽反對我們結婚。",
+      "pinyin": "Wǒ bàmā fǎnduì wǒmen jiéhūn.",
+      "english": "My parents are against us getting married."
+    }
+  },
+  {
+    "rank": 749,
+    "trad": "不行",
+    "pinyin": "bù xíng",
+    "gloss": "no way; not OK; not allowed",
+    "hint": "refusing permission",
+    "pos": "phrase",
+    "note": "The opposite of 行 xíng 'OK'. Also 'no good at' (我數學不行 'I'm bad at math') and, after an adjective, 'extremely' (累得不行 'exhausted').",
+    "example": {
+      "trad": "不行，太晚了。",
+      "pinyin": "Bùxíng, tài wǎn le.",
+      "english": "No, it's too late."
+    }
+  },
+  {
+    "rank": 750,
+    "trad": "乾淨",
+    "pinyin": "gān jìng",
+    "gloss": "clean",
+    "pos": "adj",
+    "note": "The opposite is 髒 zāng 'dirty'. 乾 here is gān 'dry', not qián. MOE gives full tones (gān jìng); the mainland says gān jing.",
+    "example": {
+      "trad": "我把房間打掃乾淨了。",
+      "pinyin": "Wǒ bǎ fángjiān dǎsǎo gānjìng le.",
+      "english": "I cleaned up the room."
+    }
+  }
+]

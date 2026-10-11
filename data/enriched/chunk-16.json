@@ -1,0 +1,672 @@
+[
+  {
+    "rank": 751,
+    "trad": "事實上",
+    "pinyin": "shì shí shàng",
+    "gloss": "in fact; as a matter of fact",
+    "hint": "formal; the facts are, contrary to belief",
+    "pos": "adv",
+    "note": "Fairly formal. Everyday speech usually says 其實 qí shí 'actually'. Compare 實際上 shí jì shàng 'in reality'.",
+    "example": {
+      "trad": "事實上，他早就知道了。",
+      "pinyin": "Shìshíshàng, tā zǎo jiù zhīdào le.",
+      "english": "In fact, he knew long ago."
+    }
+  },
+  {
+    "rank": 752,
+    "trad": "收到",
+    "pinyin": "shōu dào",
+    "gloss": "to receive; to get",
+    "hint": "mail, a message or a gift",
+    "pos": "verb",
+    "note": "In messages, 收到 alone means 'got it / received'.",
+    "example": {
+      "trad": "你收到我的訊息了嗎？",
+      "pinyin": "Nǐ shōudào wǒ de xùnxí le ma?",
+      "english": "Did you get my message?"
+    }
+  },
+  {
+    "rank": 753,
+    "trad": "討厭",
+    "pinyin": "tǎo yàn",
+    "gloss": "to dislike; to hate; annoying",
+    "hint": "dislike, milder than real hatred",
+    "pos": "verb",
+    "note": "Also used playfully: 你好討厭喔！ 'You're so annoying!' (teasing).",
+    "example": {
+      "trad": "我討厭下雨天。",
+      "pinyin": "Wǒ tǎoyàn xiàyǔtiān.",
+      "english": "I hate rainy days."
+    }
+  },
+  {
+    "rank": 754,
+    "trad": "夢",
+    "pinyin": "mèng",
+    "gloss": "dream",
+    "pos": "noun",
+    "note": "'To have a dream' is 做夢 zuò mèng; 夢到 mèng dào means 'to dream about'.",
+    "example": {
+      "trad": "我昨天晚上做了一個很奇怪的夢。",
+      "pinyin": "Wǒ zuótiān wǎnshang zuò le yī ge hěn qíguài de mèng.",
+      "english": "I had a strange dream last night."
+    }
+  },
+  {
+    "rank": 755,
+    "trad": "奇怪",
+    "pinyin": "qí guài",
+    "gloss": "strange; weird",
+    "hint": "odd, puzzling",
+    "pos": "adj",
+    "example": {
+      "trad": "好奇怪，他怎麼還沒來？",
+      "pinyin": "Hǎo qíguài, tā zěnme hái méi lái?",
+      "english": "That's weird, why isn't he here yet?"
+    }
+  },
+  {
+    "rank": 756,
+    "trad": "有趣",
+    "pinyin": "yǒu qù",
+    "gloss": "interesting; amusing",
+    "hint": "interesting or amusing, not 'fun to do'",
+    "pos": "adj",
+    "note": "Common in everyday Taiwan speech (好有趣). For activities that are fun, Taiwanese usually say 好玩 hǎo wán; 有意思 yǒu yì si sounds more mainland.",
+    "example": {
+      "trad": "這本書很有趣。",
+      "pinyin": "Zhè běn shū hěn yǒuqù.",
+      "english": "This book is really interesting."
+    }
+  },
+  {
+    "rank": 757,
+    "trad": "怕",
+    "pinyin": "pà",
+    "gloss": "to be afraid of; to fear",
+    "hint": "short everyday word, takes an object",
+    "pos": "verb",
+    "note": "Also 'to worry that': 我怕來不及 'I'm afraid we won't make it'. Compare 害怕 hài pà 'scared'.",
+    "example": {
+      "trad": "我很怕狗。",
+      "pinyin": "Wǒ hěn pà gǒu.",
+      "english": "I'm really afraid of dogs."
+    }
+  },
+  {
+    "rank": 758,
+    "trad": "組",
+    "pinyin": "zǔ",
+    "gloss": "group; set",
+    "hint": "a small group or a set",
+    "pos": "noun",
+    "note": "Also a measure word for sets and groups: 一組 yī zǔ 'one set / one group'. As a verb it means 'to form': 組隊 zǔ duì 'form a team'.",
+    "example": {
+      "trad": "我們分成兩組吧。",
+      "pinyin": "Wǒmen fēnchéng liǎng zǔ ba.",
+      "english": "Let's split into two groups."
+    }
+  },
+  {
+    "rank": 759,
+    "trad": "經過",
+    "pinyin": "jīng guò",
+    "gloss": "to pass by; to go through",
+    "hint": "go past a place",
+    "pos": "verb",
+    "note": "As a noun it means 'what happened, the course of events': 事情的經過.",
+    "example": {
+      "trad": "我每天都經過這家店。",
+      "pinyin": "Wǒ měi tiān dōu jīngguò zhè jiā diàn.",
+      "english": "I pass this shop every day."
+    }
+  },
+  {
+    "rank": 760,
+    "trad": "好看",
+    "pinyin": "hǎo kàn",
+    "gloss": "good-looking; nice; good (to watch or read)",
+    "hint": "looks good; also a good show or book",
+    "pos": "adj",
+    "note": "For people and things: 你穿這樣很好看 'you look good in that'. For movies and books: 這部電影很好看 zhè bù diàn yǐng hěn hǎo kàn 'this movie is good'. The opposite is 難看 nán kàn 'ugly'.",
+    "example": {
+      "trad": "你穿這樣很好看。",
+      "pinyin": "Nǐ chuān zhèyàng hěn hǎokàn.",
+      "english": "You look good in that."
+    }
+  },
+  {
+    "rank": 761,
+    "trad": "最終",
+    "pinyin": "zuì zhōng",
+    "gloss": "in the end; final; ultimately",
+    "hint": "more formal than zuì hòu",
+    "pos": "adv",
+    "note": "Formal-sounding. In everyday speech 最後 zuì hòu is more common.",
+    "example": {
+      "trad": "他最終還是放棄了。",
+      "pinyin": "Tā zuìzhōng háishì fàngqì le.",
+      "english": "In the end he still gave up."
+    }
+  },
+  {
+    "rank": 762,
+    "trad": "昨天",
+    "pinyin": "zuó tiān",
+    "gloss": "yesterday",
+    "pos": "noun",
+    "example": {
+      "trad": "我昨天很忙。",
+      "pinyin": "Wǒ zuótiān hěn máng.",
+      "english": "I was busy yesterday."
+    }
+  },
+  {
+    "rank": 763,
+    "trad": "幾乎",
+    "pinyin": "jī hū",
+    "gloss": "almost; nearly",
+    "pos": "adv",
+    "note": "MOE reads 幾 as jī here; in 'how many' it is jǐ. Some speakers say jǐ hū.",
+    "example": {
+      "trad": "我幾乎每天都喝咖啡。",
+      "pinyin": "Wǒ jīhū měi tiān dōu hē kāfēi.",
+      "english": "I drink coffee almost every day."
+    }
+  },
+  {
+    "rank": 764,
+    "trad": "大概",
+    "pinyin": "dà gài",
+    "gloss": "probably; about; roughly",
+    "hint": "probably, or a rough number",
+    "pos": "adv",
+    "note": "With numbers it means 'about': 大概十分鐘 'about ten minutes'. As a noun, 'the general idea'.",
+    "example": {
+      "trad": "他大概不會來了。",
+      "pinyin": "Tā dàgài bù huì lái le.",
+      "english": "He probably isn't coming."
+    }
+  },
+  {
+    "rank": 765,
+    "trad": "想法",
+    "pinyin": "xiǎng fǎ",
+    "gloss": "idea; way of thinking",
+    "hint": "what someone thinks",
+    "pos": "noun",
+    "example": {
+      "trad": "你有什麼想法？",
+      "pinyin": "Nǐ yǒu shénme xiǎngfǎ?",
+      "english": "What do you think?"
+    }
+  },
+  {
+    "rank": 766,
+    "trad": "可愛",
+    "pinyin": "kě ài",
+    "gloss": "cute; adorable",
+    "pos": "adj",
+    "example": {
+      "trad": "你的狗好可愛！",
+      "pinyin": "Nǐ de gǒu hǎo kě'ài!",
+      "english": "Your dog is so cute!"
+    }
+  },
+  {
+    "rank": 767,
+    "trad": "意識",
+    "pinyin": "yì shì",
+    "gloss": "consciousness; awareness",
+    "hint": "being aware; to realize (+ dào)",
+    "pos": "noun",
+    "note": "Taiwan (MOE) reads 識 as shì here; the mainland says yì shí. 意識到 yì shì dào means 'to realize'.",
+    "example": {
+      "trad": "他突然意識到自己錯了。",
+      "pinyin": "Tā túrán yìshì dào zìjǐ cuò le.",
+      "english": "He suddenly realized he was wrong."
+    }
+  },
+  {
+    "rank": 768,
+    "trad": "附近",
+    "pinyin": "fù jìn",
+    "gloss": "nearby; the area around",
+    "pos": "noun",
+    "example": {
+      "trad": "這附近有便利商店嗎？",
+      "pinyin": "Zhè fùjìn yǒu biànlì shāngdiàn ma?",
+      "english": "Is there a convenience store around here?"
+    }
+  },
+  {
+    "rank": 769,
+    "trad": "安排",
+    "pinyin": "ān pái",
+    "gloss": "to arrange; arrangement",
+    "hint": "plan out, organize",
+    "pos": "verb",
+    "example": {
+      "trad": "我來安排時間。",
+      "pinyin": "Wǒ lái ānpái shíjiān.",
+      "english": "I'll arrange a time."
+    }
+  },
+  {
+    "rank": 770,
+    "trad": "好玩",
+    "pinyin": "hǎo wán",
+    "gloss": "fun",
+    "hint": "enjoyable to do or visit",
+    "pos": "adj",
+    "note": "好玩嗎？ hǎo wán ma 'was it fun?'. 有趣 yǒu qù is 'interesting'. MOE also lists hào wán 'fond of play', which is rare.",
+    "example": {
+      "trad": "台北好玩嗎？",
+      "pinyin": "Táiběi hǎowán ma?",
+      "english": "Is Taipei fun?"
+    }
+  },
+  {
+    "rank": 771,
+    "trad": "必要",
+    "pinyin": "bì yào",
+    "gloss": "necessary; need",
+    "hint": "as in 'there's no need', not 'must'",
+    "pos": "adj",
+    "note": "Very common as 沒必要 méi bì yào 'there's no need'. Compare 必須 bì xū 'must'.",
+    "example": {
+      "trad": "沒必要這樣吧。",
+      "pinyin": "Méi bìyào zhèyàng ba.",
+      "english": "There's no need to go that far."
+    }
+  },
+  {
+    "rank": 772,
+    "trad": "興趣",
+    "pinyin": "xìng qù",
+    "gloss": "interest; hobby",
+    "hint": "something you like doing",
+    "pos": "noun",
+    "note": "興 is xìng here (mood, interest). The other reading xīng means 'to rise, prosper', as in 興奮 xīng fèn 'excited'.",
+    "example": {
+      "trad": "我對音樂很有興趣。",
+      "pinyin": "Wǒ duì yīnyuè hěn yǒu xìngqù.",
+      "english": "I'm really interested in music."
+    }
+  },
+  {
+    "rank": 773,
+    "trad": "電腦",
+    "pinyin": "diàn nǎo",
+    "gloss": "computer",
+    "pos": "noun",
+    "example": {
+      "trad": "我的電腦壞了。",
+      "pinyin": "Wǒ de diànnǎo huài le.",
+      "english": "My computer is broken."
+    }
+  },
+  {
+    "rank": 774,
+    "trad": "正確",
+    "pinyin": "zhèng què",
+    "gloss": "correct; right",
+    "hint": "accurate, more formal than duì",
+    "pos": "adj",
+    "note": "In casual speech people usually just say 對 duì 'right'.",
+    "example": {
+      "trad": "這樣做是正確的。",
+      "pinyin": "Zhèyàng zuò shì zhèngquè de.",
+      "english": "Doing it this way is right."
+    }
+  },
+  {
+    "rank": 775,
+    "trad": "唱",
+    "pinyin": "chàng",
+    "gloss": "to sing",
+    "pos": "verb",
+    "note": "'To sing (songs)' is usually 唱歌 chàng gē.",
+    "example": {
+      "trad": "她很會唱歌。",
+      "pinyin": "Tā hěn huì chànggē.",
+      "english": "She sings really well."
+    }
+  },
+  {
+    "rank": 776,
+    "trad": "介紹",
+    "pinyin": "jiè shào",
+    "gloss": "to introduce; introduction",
+    "pos": "verb",
+    "example": {
+      "trad": "我來介紹一下。",
+      "pinyin": "Wǒ lái jièshào yīxià.",
+      "english": "Let me do the introductions."
+    }
+  },
+  {
+    "rank": 777,
+    "trad": "治療",
+    "pinyin": "zhì liáo",
+    "gloss": "to treat (medically); treatment",
+    "hint": "an illness or injury",
+    "pos": "verb",
+    "example": {
+      "trad": "他還在醫院治療。",
+      "pinyin": "Tā hái zài yīyuàn zhìliáo.",
+      "english": "He's still being treated in the hospital."
+    }
+  },
+  {
+    "rank": 778,
+    "trad": "實際上",
+    "pinyin": "shí jì shàng",
+    "gloss": "in practice; in reality",
+    "hint": "formal; as opposed to in theory",
+    "pos": "adv",
+    "note": "Fairly formal. Everyday speech usually says 其實 qí shí 'actually'. Compare 事實上 shì shí shàng 'in fact'.",
+    "example": {
+      "trad": "實際上，事情沒那麼簡單。",
+      "pinyin": "Shíjìshàng, shìqíng méi nàme jiǎndān.",
+      "english": "In reality, it's not that simple."
+    }
+  },
+  {
+    "rank": 779,
+    "trad": "記者",
+    "pinyin": "jì zhě",
+    "gloss": "reporter; journalist",
+    "pos": "noun",
+    "example": {
+      "trad": "外面有很多記者。",
+      "pinyin": "Wàimiàn yǒu hěn duō jìzhě.",
+      "english": "There are a lot of reporters outside."
+    }
+  },
+  {
+    "rank": 780,
+    "trad": "前面",
+    "pinyin": "qián miàn",
+    "gloss": "in front; ahead",
+    "hint": "location, the front side; up ahead",
+    "pos": "noun",
+    "note": "'In front (of)' and 'up ahead': 在前面 zài qián miàn. The opposite is 後面 hòu miàn 'behind'. Taiwan (MOE) keeps the full tone on 面.",
+    "example": {
+      "trad": "便利商店就在前面。",
+      "pinyin": "Biànlì shāngdiàn jiù zài qiánmiàn.",
+      "english": "The convenience store is just up ahead."
+    }
+  },
+  {
+    "rank": 781,
+    "trad": "監獄",
+    "pinyin": "jiān yù",
+    "gloss": "prison; jail",
+    "pos": "noun",
+    "note": "Casually, 'to be in jail' is 坐牢 zuò láo or 被關 bèi guān 'locked up'.",
+    "example": {
+      "trad": "他在監獄裡待了三年。",
+      "pinyin": "Tā zài jiānyù lǐ dāi le sān nián.",
+      "english": "He spent three years in prison."
+    }
+  },
+  {
+    "rank": 782,
+    "trad": "的確",
+    "pinyin": "dí què",
+    "gloss": "indeed; really",
+    "hint": "agreeing: 'it's true that…'; not què shí",
+    "pos": "adv",
+    "note": "的 is dí here, not the particle de; in 目的 mù dì 'purpose' it is dì.",
+    "example": {
+      "trad": "這家店的確很好吃。",
+      "pinyin": "Zhè jiā diàn díquè hěn hǎochī.",
+      "english": "This place really is good."
+    }
+  },
+  {
+    "rank": 783,
+    "trad": "那種",
+    "pinyin": "nà zhǒng",
+    "gloss": "that kind (of)",
+    "pos": "pron",
+    "note": "種 zhǒng means 'kind, type'; as 'to plant' it is zhòng. Casually 那 is often said nèi: nèi zhǒng.",
+    "example": {
+      "trad": "我不喜歡那種人。",
+      "pinyin": "Wǒ bù xǐhuān nà zhǒng rén.",
+      "english": "I don't like that kind of person."
+    }
+  },
+  {
+    "rank": 784,
+    "trad": "實在",
+    "pinyin": "shí zài",
+    "gloss": "really; truly; honest",
+    "hint": "stressing 'it's just too much'",
+    "pos": "adv",
+    "note": "MOE also lists shí zai with a light tone. As an adjective it means honest, down-to-earth: 他人很實在.",
+    "example": {
+      "trad": "我實在太累了。",
+      "pinyin": "Wǒ shízài tài lèi le.",
+      "english": "I'm really way too tired."
+    }
+  },
+  {
+    "rank": 785,
+    "trad": "瘋狂",
+    "pinyin": "fēng kuáng",
+    "gloss": "crazy; wild; frenzied",
+    "hint": "wild, over the top",
+    "pos": "adj",
+    "example": {
+      "trad": "這個想法太瘋狂了！",
+      "pinyin": "Zhège xiǎngfǎ tài fēngkuáng le!",
+      "english": "That idea is too crazy!"
+    }
+  },
+  {
+    "rank": 786,
+    "trad": "旁邊",
+    "pinyin": "páng biān",
+    "gloss": "beside; next to",
+    "hint": "right by the side of something",
+    "pos": "noun",
+    "note": "Goes after the thing: 我家旁邊 wǒ jiā páng biān 'next to my place'. 坐我旁邊 'sit next to me'.",
+    "example": {
+      "trad": "你坐我旁邊。",
+      "pinyin": "Nǐ zuò wǒ pángbiān.",
+      "english": "Sit next to me."
+    }
+  },
+  {
+    "rank": 787,
+    "trad": "片",
+    "pinyin": "piàn",
+    "gloss": "slice; piece; (measure: flat things)",
+    "hint": "slices, leaves; thin flat pieces",
+    "pos": "measure",
+    "note": "Counts thin, flat things: 一片麵包 'a slice of bread', 一片葉子 'a leaf'. Also means 'film' in 影片. MOE also lists piān, used in a few colloquial words but rare in Taiwan.",
+    "example": {
+      "trad": "我吃了兩片麵包。",
+      "pinyin": "Wǒ chī le liǎng piàn miànbāo.",
+      "english": "I ate two slices of bread."
+    }
+  },
+  {
+    "rank": 788,
+    "trad": "首",
+    "pinyin": "shǒu",
+    "gloss": "(measure word for songs, poems)",
+    "pos": "measure",
+    "note": "Counts songs and poems: 一首歌 yī shǒu gē 'a song'. It also means 'head / first' in words like 首先 shǒu xiān 'first of all'.",
+    "example": {
+      "trad": "這首歌很好聽。",
+      "pinyin": "Zhè shǒu gē hěn hǎotīng.",
+      "english": "This song sounds great."
+    }
+  },
+  {
+    "rank": 789,
+    "trad": "否則",
+    "pinyin": "fǒu zé",
+    "gloss": "otherwise; or else",
+    "hint": "a bit formal",
+    "pos": "conj",
+    "note": "Introduces what happens if the first part isn't done. In casual speech Taiwanese usually say 不然 bù rán instead.",
+    "example": {
+      "trad": "要穿外套，否則會感冒。",
+      "pinyin": "Yào chuān wàitào, fǒuzé huì gǎnmào.",
+      "english": "Wear a jacket, or else you'll catch a cold."
+    }
+  },
+  {
+    "rank": 790,
+    "trad": "仍然",
+    "pinyin": "réng rán",
+    "gloss": "still; as before",
+    "hint": "formal, unchanged",
+    "pos": "adv",
+    "note": "A more formal word for 'still'. In everyday speech people usually say 還 hái or 還是 hái shì.",
+    "example": {
+      "trad": "他仍然在等你。",
+      "pinyin": "Tā réngrán zài děng nǐ.",
+      "english": "He's still waiting for you."
+    }
+  },
+  {
+    "rank": 791,
+    "trad": "六",
+    "pinyin": "liù",
+    "gloss": "six",
+    "pos": "num",
+    "note": "MOE also lists a reading lù, used only in a few place names; for the number it is always liù.",
+    "example": {
+      "trad": "我六點下班。",
+      "pinyin": "Wǒ liù diǎn xiàbān.",
+      "english": "I get off work at six."
+    }
+  },
+  {
+    "rank": 792,
+    "trad": "七",
+    "pinyin": "qī",
+    "gloss": "seven",
+    "pos": "num",
+    "note": "Some older speakers say qí before a 4th tone (七次), but most Taiwanese keep qī.",
+    "example": {
+      "trad": "一個星期有七天。",
+      "pinyin": "Yī ge xīngqí yǒu qī tiān.",
+      "english": "A week has seven days."
+    }
+  },
+  {
+    "rank": 793,
+    "trad": "八",
+    "pinyin": "bā",
+    "gloss": "eight",
+    "pos": "num",
+    "note": "A lucky number (from a Cantonese pun with 發 'to prosper'; in Mandarin bā and fā don't sound alike). In chat, 88 means 'bye-bye'.",
+    "example": {
+      "trad": "我每天早上八點起床。",
+      "pinyin": "Wǒ měitiān zǎoshang bā diǎn qǐchuáng.",
+      "english": "I get up at eight every morning."
+    }
+  },
+  {
+    "rank": 794,
+    "trad": "九",
+    "pinyin": "jiǔ",
+    "gloss": "nine",
+    "pos": "num",
+    "note": "Sounds like 久 jiǔ 'long-lasting', so it is a lucky number for love and long life.",
+    "example": {
+      "trad": "我九點下班。",
+      "pinyin": "Wǒ jiǔ diǎn xiàbān.",
+      "english": "I get off work at nine."
+    }
+  },
+  {
+    "rank": 795,
+    "trad": "十",
+    "pinyin": "shí",
+    "gloss": "ten",
+    "pos": "num",
+    "note": "Builds the numbers up to 99: 十一 shí yī (11), 二十 èr shí (20). Listen for the tone: shí (ten) and sì (four) can sound alike in Taiwan accents.",
+    "example": {
+      "trad": "我等了十分鐘。",
+      "pinyin": "Wǒ děng le shí fēnzhōng.",
+      "english": "I waited ten minutes."
+    }
+  },
+  {
+    "rank": 796,
+    "trad": "零",
+    "pinyin": "líng",
+    "gloss": "zero",
+    "pos": "num",
+    "note": "Fills gaps inside numbers: 一百零五 (105). Also means small or scattered: 零錢 líng qián 'small change'. MOE lists a rare historical reading lián.",
+    "example": {
+      "trad": "總共一百零五塊。",
+      "pinyin": "Zǒnggòng yī bǎi líng wǔ kuài.",
+      "english": "That's a hundred and five dollars in total."
+    }
+  },
+  {
+    "rank": 797,
+    "trad": "真實",
+    "pinyin": "zhēn shí",
+    "gloss": "real; true (to life)",
+    "hint": "true to reality, not made up",
+    "pos": "adj",
+    "note": "Describes something that actually happened or is not fake: 真實的故事 'a true story'. Compare 真的 zhēn de 'really' and 真正 zhēn zhèng 'genuine'.",
+    "example": {
+      "trad": "這個故事是真實的。",
+      "pinyin": "Zhège gùshi shì zhēnshí de.",
+      "english": "This story is true."
+    }
+  },
+  {
+    "rank": 798,
+    "trad": "近",
+    "pinyin": "jìn",
+    "gloss": "near; close",
+    "hint": "not far",
+    "pos": "adj",
+    "note": "Usually with 離 lí: 離這裡很近 'close to here'. The opposite is 遠 yuǎn. 附近 fù jìn means 'nearby / the area around'.",
+    "example": {
+      "trad": "我家離公司很近。",
+      "pinyin": "Wǒ jiā lí gōngsī hěn jìn.",
+      "english": "My home is close to the office."
+    }
+  },
+  {
+    "rank": 799,
+    "trad": "後面",
+    "pinyin": "hòu miàn",
+    "gloss": "behind; at the back; later",
+    "hint": "location, the back side",
+    "pos": "noun",
+    "note": "Taiwan (MOE) keeps the full tone hòu miàn; the mainland often says hòu mian. The opposite is 前面 qián miàn 'in front'.",
+    "example": {
+      "trad": "他坐在我後面。",
+      "pinyin": "Tā zuò zài wǒ hòumiàn.",
+      "english": "He's sitting behind me."
+    }
+  },
+  {
+    "rank": 800,
+    "trad": "想像",
+    "pinyin": "xiǎng xiàng",
+    "gloss": "to imagine; imagination",
+    "pos": "verb",
+    "note": "Taiwan writes 想像; the mainland usually writes 想象. Same pronunciation.",
+    "example": {
+      "trad": "很難想像他會這樣。",
+      "pinyin": "Hěn nán xiǎngxiàng tā huì zhèyàng.",
+      "english": "It's hard to imagine he'd act like this."
+    }
+  }
+]
