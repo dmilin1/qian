@@ -53,8 +53,9 @@ describe('<AppShell>', () => {
     const nav = screen.getAllByRole('navigation', { name: 'Main' })[1]
     expect(within(nav).getByRole('link', { name: 'Words' })).toHaveAttribute('aria-current', 'page')
     await userEvent.click(within(nav).getByRole('link', { name: 'Stats' }))
-    expect(await screen.findByRole('heading', { name: 'Stats' })).toBeInTheDocument()
-  })
+    // The first, cold import of the lazy Stats chunk (recharts) can take seconds when every worker is busy.
+    expect(await screen.findByRole('heading', { name: 'Stats' }, { timeout: 15_000 })).toBeInTheDocument()
+  }, 20_000)
 
   it("lets a page's usePageTitle override the section title on first render", async () => {
     await renderApp('/words/w4f60')

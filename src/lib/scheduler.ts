@@ -1,5 +1,5 @@
 // Next-card selection and new-word introduction. Pure functions over Derived state.
-import { applyGrade, DAY_MS, getFsrs, isLearningState, newCard, retrievability, State, type Card } from './fsrs'
+import { applyGrade, DAY_MS, getFsrs, isLearningState, newCard, retrievability, State, studyDayStart, type Card } from './fsrs'
 import { getCard, isSuspended, type CardState, type Derived } from './derive'
 import { cardKey, parseCardKey, siblingKey, type CardKey, type Dir, type GradeName } from './events'
 
@@ -123,10 +123,15 @@ export function dueReviewCount(d: Derived, now: number): number {
   return n
 }
 
-/** Candidate new cards in priority order: eligible say cards (by rank), then the next unseen word's listen card. */
-export function newCandidates(d: Derived, wordOrder: readonly string[]): CardKey[] {
+/**
+ * Candidate new cards in priority order: eligible say cards (by rank), then the next unseen word's listen card.
+ * A say card is eligible once the listen card has graduated (Review or Relearning) and was last reviewed on an
+ * earlier study day (like Anki's sibling burying), so the first Say recall is not from short-term memory.
+ */
+export function newCandidates(d: Derived, wordOrder: readonly string[], now: number): CardKey[] {
   const out: CardKey[] = []
   let nextListen: CardKey | null = null
+  const today = studyDayStart(now, d.dayOffsetMs)
   for (const id of wordOrder) {
     if (isSuspended(d, id)) continue
     const listen = getCard(d, id, 'listen')
@@ -135,7 +140,11 @@ export function newCandidates(d: Derived, wordOrder: readonly string[]): CardKey
       if (!nextListen) nextListen = cardKey(id, 'listen')
       continue
     }
-    if (!getCard(d, id, 'say') && (listen.card.state === State.Review || listen.card.state === State.Relearning)) {
+    if (
+      !getCard(d, id, 'say') &&
+      (listen.card.state === State.Review || listen.card.state === State.Relearning) &&
+      (listen.card.last_review?.getTime() ?? Infinity) < today
+    ) {
       out.push(cardKey(id, 'say'))
     }
   }
@@ -233,7 +242,7 @@ export function selectNext(input: SelectInput): Selection {
   const full = unstable.size >= settings.workingSetCap
   if (reviews.length > settings.backlogLimit) gateBlockedBy = full ? 'workingSet' : 'backlog'
   else {
-    let keys = newCandidates(d, wordOrder)
+    let keys = newCandidates(d, wordOrder, now)
     if (full) keys = keys.filter((k) => {
       const p = parseCardKey(k)
       return p.dir === 'say' && unstable.has(p.wordId)

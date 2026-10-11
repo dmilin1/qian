@@ -63,3 +63,52 @@ test('stats page renders every section with data', async ({ page }) => {
   await expect(rows).toHaveCount(1)
   await expect(rows.first()).toContainText(WORDS[3].gloss)
 })
+
+/** The flags CSV: a header row, then one row per open flag. */
+function expectFlagsCsv(csv: string) {
+  const lines = csv.trim().split('\n')
+  expect(lines[0]).toBe('wordId,trad,pinyin,gloss,reason,note,flaggedAt,resolved')
+  expect(lines).toHaveLength(2)
+  const w = WORDS[3]
+  expect(lines[1].startsWith(`${w.id},${w.trad},${w.pinyin},`), lines[1]).toBe(true)
+  expect(lines[1]).toMatch(/,audio,clipped at the end,\d{4}-\d\d-\d\dT[\d:.]+Z,no$/)
+}
+
+test('flagged cards export as CSV (download)', async ({ page }) => {
+  // Desktop browsers without file sharing get a download.
+  await page.addInitScript(() => {
+    delete (Navigator.prototype as { canShare?: unknown }).canShare
+    delete (Navigator.prototype as { share?: unknown }).share
+  })
+  await importBackup(page, backupJson(seededHistory(30)))
+  await page.goto('./#/stats')
+  const [download] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: 'Export flags (CSV)' }).click()])
+  expect(download.suggestedFilename()).toMatch(/^qian-flags-\d{4}-\d{2}-\d{2}\.csv$/)
+  expectFlagsCsv(await readFile(await download.path(), 'utf8'))
+})
+
+test('flagged cards export as CSV (share sheet on phones)', async ({ page }) => {
+  await page.addInitScript(() => {
+    const shared: { name: string; type: string; text: string }[] = []
+    ;(window as unknown as { __shared: typeof shared }).__shared = shared
+    Object.defineProperty(Navigator.prototype, 'canShare', { configurable: true, value: (d?: { files?: File[] }) => !!d?.files?.length })
+    Object.defineProperty(Navigator.prototype, 'share', {
+      configurable: true,
+      value: async (d: { files: File[] }) => {
+        for (const f of d.files) shared.push({ name: f.name, type: f.type, text: await f.text() })
+      },
+    })
+  })
+  await importBackup(page, backupJson(seededHistory(30)))
+  await page.goto('./#/stats')
+  let downloaded = false
+  page.on('download', () => (downloaded = true))
+  await page.getByRole('button', { name: 'Export flags (CSV)' }).click()
+  const sharedFiles = () => page.evaluate(() => (window as unknown as { __shared: { name: string; type: string; text: string }[] }).__shared)
+  await expect.poll(sharedFiles).toHaveLength(1)
+  const [file] = await sharedFiles()
+  expect(file.name).toMatch(/^qian-flags-\d{4}-\d{2}-\d{2}\.csv$/)
+  expect(file.type).toBe('text/csv')
+  expectFlagsCsv(file.text)
+  expect(downloaded).toBe(false)
+})

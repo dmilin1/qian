@@ -52,23 +52,36 @@ describe('introduction', () => {
 
   it('introduces strictly in rank order, skipping suspended words', () => {
     const d = buildDerived([makeSuspend({ wordId: 'wt1', suspended: true, ts: T0, deviceId: dev })])
-    expect(newCandidates(d, order)).toEqual(['wt2:listen'])
+    expect(newCandidates(d, order, T0)).toEqual(['wt2:listen'])
   })
 
-  it('say card becomes eligible only after listen leaves learning', () => {
+  it('say card becomes eligible only after listen leaves learning, on a later study day', () => {
     let d = buildDerived([rev('wt1', 'listen', 'good', T0)])
-    expect(newCandidates(d, order)).toEqual(['wt2:listen'])
+    expect(newCandidates(d, order, T0 + DAY_MS)).toEqual(['wt2:listen'])
     d = withEvent(d, rev('wt1', 'listen', 'good', T0 + 10 * MIN))
     expect(getCard(d, 'wt1', 'listen')!.card.state).toBe(State.Review)
-    expect(newCandidates(d, order)).toEqual(['wt1:say', 'wt2:listen'])
+    // Graduated, but the Say card waits for the next study day so it is not answered from short-term memory.
+    expect(newCandidates(d, order, T0 + 11 * MIN)).toEqual(['wt2:listen'])
+    expect(newCandidates(d, order, T0 + DAY_MS)).toEqual(['wt1:say', 'wt2:listen'])
+  })
+
+  it('the study day for Say cards starts at the day offset (local 4am)', () => {
+    const off = 4 * 3600_000 // 4am in UTC
+    const day1 = Date.UTC(2026, 0, 6)
+    // Easy on a new listen card graduates it straight to Review.
+    const d = buildDerived([rev('wt1', 'listen', 'easy', T0)], 0.9, off)
+    expect(getCard(d, 'wt1', 'listen')!.card.state).toBe(State.Review)
+    expect(newCandidates(d, order, T0 + 10_000)).toEqual(['wt2:listen'])
+    expect(newCandidates(d, order, day1 + 3 * 3600_000)).toEqual(['wt2:listen']) // 03:00 next morning: same study day
+    expect(newCandidates(d, order, day1 + off)).toEqual(['wt1:say', 'wt2:listen'])
   })
 
   it('say card of a new pick does not offer "I already know this"', () => {
     const d = buildDerived(graduate('wt1', T0))
-    const s = sel(d, T0 + 11 * MIN, { recent: ['wt1:listen'], settings: { ...S, workingSetCap: 100 } })
+    const s = sel(d, T0 + DAY_MS, { recent: ['wt1:listen'], settings: { ...S, workingSetCap: 100 } })
     // wt1:say is the sibling of the last shown card, so wt2:listen is preferred.
     expect(s.pick?.key).toBe('wt2:listen')
-    const s2 = sel(d, T0 + 11 * MIN, { recent: ['wt9:listen'] })
+    const s2 = sel(d, T0 + DAY_MS, { recent: ['wt9:listen'] })
     expect(s2.pick).toMatchObject({ key: 'wt1:say', isNew: true, canMarkKnown: false })
   })
 
@@ -92,7 +105,7 @@ describe('introduction', () => {
     const evs = ['wt1', 'wt2', 'wt3'].flatMap((w, i) => graduate(w, T0 + i))
     const d = buildDerived(evs)
     const cap3 = { ...S, workingSetCap: 3 }
-    const now = T0 + 11 * MIN
+    const now = T0 + DAY_MS
     expect(unstableWordCount(d, S.stableDays)).toBe(3)
     const s = sel(d, now, { settings: cap3, recent: ['wt9:listen'] })
     expect(s.pick).toMatchObject({ key: 'wt1:say', source: 'new', isNew: true, canMarkKnown: false })

@@ -1,4 +1,5 @@
 // Shown when no card is due: what's next, and "Keep practicing" (practice-ahead).
+import type { ReactNode } from 'react'
 import type { QueueInfo } from '../../lib/scheduler'
 import { Button, Icon, Kbd, useNow } from '../../components'
 import { ProgressTiles } from './Progress'
@@ -11,9 +12,11 @@ interface Props {
   /** Whether practice-ahead has anything to show (graduated, non-suspended cards exist). */
   canPractice: boolean
   onPractice: () => void
+  /** Banner shown right under the heading (the study nudge), so it is above the fold on short phones. */
+  nudge?: ReactNode
 }
 
-export function CaughtUp({ queue, progress, canPractice, onPractice }: Props) {
+export function CaughtUp({ queue, progress, canPractice, onPractice, nudge }: Props) {
   const now = useNow(15_000)
   const nextAt = Math.min(queue.nextLearningDueAt ?? Infinity, queue.nextReviewDueAt ?? Infinity)
   const next = Number.isFinite(nextAt) ? formatWhen(nextAt, now) : null
@@ -39,6 +42,7 @@ export function CaughtUp({ queue, progress, canPractice, onPractice }: Props) {
           </p>
         ) : null}
       </div>
+      {nudge}
       <ProgressTiles p={progress} />
       <div className="flex w-full flex-col items-center gap-2">
         {!canPractice ? (

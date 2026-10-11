@@ -25,12 +25,19 @@ export interface SimOptions {
   practiceAhead: boolean
   newRecallP?: number
   knownP?: number
+  /** Word ids in rank order (default: 1000 synthetic ids `wt1`…). */
+  wordOrder?: readonly string[]
+  /** Midnight of day 0; sessions start at 08:00 after it (default: 2026-01-05 UTC). */
+  start?: number
 }
 
 const T0 = Date.UTC(2026, 0, 5, 0, 0, 0)
-const order = Array.from({ length: 1000 }, (_, i) => `wt${i + 1}`)
+const ORDER = Array.from({ length: 1000 }, (_, i) => `wt${i + 1}`)
 
 export function simulate(o: SimOptions) {
+  const order = o.wordOrder ?? ORDER
+  const start = o.start ?? T0
+  const events: AppEvent[] = []
   const settings = o.settings ?? DEFAULT_SCHEDULER_SETTINGS
   const rng = mulberry32(o.seed)
   const learner = mulberry32(o.seed * 7919 + 1)
@@ -46,7 +53,7 @@ export function simulate(o: SimOptions) {
     const st: DayStats = { day, reviews: 0, newWords: 0, newSay: 0, caughtUp: 0, maxUnstable: 0, dueAtStart: 0, accuracy: 0 }
     days.push(st)
     if (o.offDays?.has(day)) continue
-    let now = T0 + day * DAY_MS + 8 * 3600_000 // 08:00
+    let now = start + day * DAY_MS + 8 * 3600_000 // 08:00
     let correct = 0
     let first = true
     while (st.reviews < o.reviewsPerDay) {
@@ -94,8 +101,11 @@ export function simulate(o: SimOptions) {
         else st.newSay++
       }
       d = withEvent(d, e)
-      recent.push(e.kind === 'known' ? cardKey(p.wordId, 'say') : p.key)
-      if (recent.length > RECENT_WINDOW) recent.shift()
+      events.push(e)
+      // Same rule as the store's recentKeys: a known event counts as both cards.
+      if (e.kind === 'known') recent.push(cardKey(p.wordId, 'listen'), cardKey(p.wordId, 'say'))
+      else recent.push(p.key)
+      while (recent.length > RECENT_WINDOW) recent.shift()
       st.reviews++
       const u = unstableWordCount(d, settings.stableDays)
       st.maxUnstable = Math.max(st.maxUnstable, u)
@@ -105,7 +115,7 @@ export function simulate(o: SimOptions) {
     st.accuracy = st.reviews ? correct / st.reviews : 0
   }
   const introduced = new Set([...d.cards.values()].map((c) => c.wordId)).size
-  return { days, violations, maxUnstableEver, introduced, derived: d }
+  return { days, violations, maxUnstableEver, introduced, derived: d, events }
 }
 
 export function summarize(label: string, r: ReturnType<typeof simulate>) {

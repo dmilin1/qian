@@ -1,6 +1,6 @@
-import { useEffect, useId, useRef, useState, type ChangeEvent, type ReactNode } from 'react'
+import { useEffect, useId, useMemo, useRef, useState, type ChangeEvent, type ReactNode } from 'react'
 import { Banner, Button, Icon, Modal, cx, useSelector, useStore } from '../../components'
-import { downloadText, ImportError, parseImport, type ImportMode } from '../../lib/exportImport'
+import { ImportError, parseImport, type ImportMode } from '../../lib/exportImport'
 import type { ImportSummary } from '../../lib/store'
 import { formatBytes } from './audioCache'
 import { backupOverdue, canShareFiles, daysSince, saveBackup } from './backup'
@@ -16,6 +16,30 @@ const fmtDate = (t: number) => {
 
 const ago = (days: number) => (days === 0 ? 'today' : days === 1 ? 'yesterday' : `${days} days ago`)
 const plural = (n: number, one: string, many = `${one}s`) => `${n.toLocaleString()} ${n === 1 ? one : many}`
+
+/**
+ * The safety export offered before Replace and Reset. Goes through the same saveBackup as the Export row, so iOS
+ * gets the share sheet (blob downloads are unreliable in an installed PWA) and the user sees whether it was saved.
+ */
+function useExportFirst() {
+  const store = useStore()
+  const [status, setStatus] = useState<string | null>(null)
+  const run = async () => {
+    setStatus(null)
+    try {
+      const filename = await saveBackup(store, canShareFiles() ? 'share' : 'download')
+      setStatus(filename ? `Saved ${filename}` : 'Not saved.')
+    } catch (e) {
+      setStatus(`Export failed: ${(e as Error)?.message ?? e}`)
+    }
+  }
+  const line = status ? (
+    <p role="status" className="text-sm text-muted">
+      {status}
+    </p>
+  ) : null
+  return { run, line, clear: () => setStatus(null) }
+}
 
 // ----- Export -----
 
@@ -90,6 +114,8 @@ interface PendingImport {
   exportedAt: string
   events: number
   skipped: number
+  /** Ids of the backup's events, to count which of this device's entries Replace would delete. */
+  fileIds: ReadonlySet<string>
 }
 
 interface ImportOutcome extends ImportSummary {
@@ -148,7 +174,9 @@ function ImportRow() {
   const [error, setError] = useState<string | null>(null)
   const [outcome, setOutcome] = useState<ImportOutcome | null>(null)
   const [acknowledged, setAcknowledged] = useState(false)
-  const localCount = useSelector((s) => s.events.length)
+  const localEvents = useSelector((s) => s.events)
+  const localCount = localEvents.length
+  const exportFirst = useExportFirst()
   const radioName = useId()
   const ackId = useId()
 
@@ -163,12 +191,14 @@ function ImportRow() {
       const parsed = parseImport(text)
       setMode('merge')
       setAcknowledged(false)
+      exportFirst.clear()
       setPending({
         name: file.name,
         text,
         exportedAt: parsed.file.exportedAt,
         events: parsed.file.events.length,
         skipped: parsed.skipped,
+        fileIds: new Set(parsed.file.events.map((ev) => ev.id)),
       })
     } catch (err) {
       setError(err instanceof ImportError ? err.message : `Could not read this file (${(err as Error)?.message ?? err}).`)
@@ -192,14 +222,14 @@ function ImportRow() {
   }
 
   const exported = pending ? Date.parse(pending.exportedAt) : NaN
-  // Replace with a smaller backup throws away reviews: warn, and require a deliberate tick before the danger button.
-  const losing = pending && mode === 'replace' ? Math.max(0, localCount - pending.events) : 0
+  // Replace deletes every entry on this device that the backup does not contain. Event ids are unique per device,
+  // so compare ids, not counts: a larger backup from another device can still lack this device's recent reviews.
+  // Counted against the live log, so answers given while the dialog is open are included.
+  const losing = useMemo(
+    () => (pending && mode === 'replace' ? localEvents.reduce((n, e) => n + (pending.fileIds.has(e.id) ? 0 : 1), 0) : 0),
+    [localEvents, pending, mode],
+  )
   const blocked = losing > 0 && !acknowledged
-
-  const exportFirst = async () => {
-    const { filename, text } = await store.exportData()
-    downloadText(filename, text)
-  }
 
   return (
     <Row py="loose" className="flex flex-col gap-3">
@@ -275,13 +305,16 @@ function ImportRow() {
         {losing > 0 && pending ? (
           <div className="mt-3 flex flex-col gap-3">
             <Banner tone="warning">
-              This backup has fewer entries than this device ({pending.events.toLocaleString()} vs {localCount.toLocaleString()}).
-              Replacing will permanently lose {plural(losing, 'review')}.
+              {plural(losing, 'entry', 'entries')} on this device {losing === 1 ? 'is' : 'are'} not in this backup. Replacing will
+              permanently delete {losing === 1 ? 'it' : 'them'}.
             </Banner>
-            <div>
-              <Button variant="secondary" icon="download" onClick={() => void exportFirst()} disabled={busy}>
-                Export this device first
-              </Button>
+            <div className="flex flex-col gap-2">
+              <div>
+                <Button variant="secondary" icon="download" onClick={() => void exportFirst.run()} disabled={busy}>
+                  Export this device first
+                </Button>
+              </div>
+              {exportFirst.line}
             </div>
             <label htmlFor={ackId} className="flex cursor-pointer items-center gap-3 text-ink">
               <input
@@ -401,6 +434,8 @@ function ResetRow() {
   const [keepSettings, setKeepSettings] = useState(false)
   const [busy, setBusy] = useState(false)
   const [done, setDone] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const exportFirst = useExportFirst()
   const inputId = useId()
   const matches = typed.trim().toUpperCase() === RESET_WORD
 
@@ -408,24 +443,24 @@ function ResetRow() {
     if (busy) return
     setStep(0)
     setTyped('')
+    exportFirst.clear()
   }
 
   const doReset = async () => {
     if (!matches) return
     setBusy(true)
+    setError(null)
     try {
       await store.resetAll(keepSettings)
       setDone(true)
+    } catch (err) {
+      setError((err as Error)?.message ?? String(err))
     } finally {
       setBusy(false)
       setStep(0)
       setTyped('')
+      exportFirst.clear()
     }
-  }
-
-  const exportFirst = async () => {
-    const { filename, text } = await store.exportData()
-    downloadText(filename, text)
   }
 
   return (
@@ -434,6 +469,7 @@ function ResetRow() {
       <div>
         <Button variant="danger" icon="trash" onClick={() => {
             setDone(false)
+            setError(null)
             setStep(1)
           }}>
           Reset all data…
@@ -442,6 +478,11 @@ function ResetRow() {
       {done ? (
         <Banner tone="success" onDismiss={() => setDone(false)}>
           All progress on this device was deleted.
+        </Banner>
+      ) : null}
+      {error ? (
+        <Banner tone="warning" onDismiss={() => setError(null)}>
+          {error}
         </Banner>
       ) : null}
 
@@ -455,7 +496,7 @@ function ResetRow() {
             <Button variant="ghost" onClick={close}>
               Cancel
             </Button>
-            <Button variant="secondary" icon="download" onClick={() => void exportFirst()}>
+            <Button variant="secondary" icon="download" onClick={() => void exportFirst.run()}>
               Export first
             </Button>
             <Button variant="danger" onClick={() => setStep(2)}>
@@ -473,6 +514,7 @@ function ResetRow() {
           />
           Keep my settings
         </label>
+        {exportFirst.line ? <div className="mt-3">{exportFirst.line}</div> : null}
       </Modal>
 
       <Modal

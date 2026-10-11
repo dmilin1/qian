@@ -65,6 +65,11 @@ export function defaultDayOffsetMs(date = new Date()): number {
   return (DAY_ROLLOVER_HOUR * 60 + date.getTimezoneOffset()) * 60_000
 }
 
+/** Start (ms) of the study day containing `ts`, for the same day boundary as applyGrade with this `dayOffsetMs`. */
+export function studyDayStart(ts: number, dayOffsetMs = 0): number {
+  return Math.floor((ts - dayOffsetMs) / DAY_MS) * DAY_MS + dayOffsetMs
+}
+
 const shiftDate = (d: Date | undefined, ms: number) => (d ? new Date(d.getTime() + ms) : d)
 const shiftCard = (c: Card, ms: number): Card =>
   ms ? { ...c, due: shiftDate(c.due, ms)!, last_review: shiftDate(c.last_review, ms) } : c

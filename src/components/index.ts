@@ -24,6 +24,8 @@ export {
 } from './hooks'
 export { Icon, type IconName } from './Icon'
 export { ConfirmDialog, Modal, type ModalProps } from './Modal'
+export { NoteText } from './NoteText'
+export { annotateNote, buildNoteDictionary, lookupPinyin, type NoteDictionary, type NoteSegment } from './noteAnnotate'
 export { Pinyin, type PinyinProps } from './Pinyin'
 export { segmentPinyin, splitSyllables, toneOf, type PinyinSegment } from './pinyinText'
 export { playClip, stopPlayback, useIsPlaying, useNowPlaying, type NowPlaying } from './playback'

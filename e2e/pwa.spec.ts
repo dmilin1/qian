@@ -1,4 +1,4 @@
-import { expect, test } from './fixtures'
+import { clipUrl, expect, listenCard, mediaEvents, spokenText, test, WORDS } from './fixtures'
 
 test.describe('PWA', () => {
   test.use({ serviceWorkers: 'allow' })
@@ -56,6 +56,37 @@ test.describe('PWA', () => {
     await page.goto('./#/words')
     await expect(page.getByRole('heading', { name: 'Words', level: 1 })).toBeVisible()
     await context.setOffline(false)
+  })
+
+  test.describe('recorded audio offline', () => {
+    test.use({ audioStub: 'speech' })
+
+    test('a clip heard on the first visit plays again offline after a reload', async ({ page, context, baseURL }) => {
+      const url = clipUrl(baseURL!, WORDS[0].id)
+      await page.goto('./')
+      await expect(page.getByRole('heading', { name: 'Ready to listen?' })).toBeVisible()
+      // Wait until the service worker controls the page, so the clip goes through its audio route.
+      await page.evaluate(
+        () => navigator.serviceWorker.controller ?? new Promise((r) => navigator.serviceWorker.addEventListener('controllerchange', r, { once: true })),
+      )
+      await page.getByRole('button', { name: /Start studying/ }).click()
+      await expect(listenCard(page)).toContainText(WORDS[0].trad)
+      await expect.poll(() => mediaEvents(page, url), { timeout: 15_000 }).toContain('ended')
+
+      // The <audio> range request was turned into a full fetch and stored as a complete 200.
+      const cachedStatus = () =>
+        page.evaluate(async (u) => (await (await caches.open('qian-audio')).match(u))?.status ?? null, url)
+      await expect.poll(cachedStatus).toBe(200)
+
+      await context.setOffline(true)
+      await page.reload()
+      await page.getByRole('button', { name: /Start studying/ }).click()
+      await expect(listenCard(page)).toContainText(WORDS[0].trad)
+      await expect.poll(() => mediaEvents(page, url), { timeout: 15_000 }).toContain('ended')
+      expect(await mediaEvents(page, url)).not.toContain('error')
+      expect(await spokenText(page)).toEqual([])
+      await context.setOffline(false)
+    })
   })
 
   test('audio is runtime-cached (CacheFirst) into the qian-audio cache', async ({ request }) => {

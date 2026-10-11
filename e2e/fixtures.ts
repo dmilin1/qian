@@ -3,9 +3,12 @@
 // - Audio is stubbed in the page (before any app code runs): HTMLMediaElement.prototype.play and
 //   window.speechSynthesis record what was played and "end" quickly, so tests can assert that
 //   audio was attempted without depending on codecs, voices or autoplay policies.
+//   `test.use({ audioStub: 'speech' })` keeps the real <audio> playback (still logged, with its
+//   events) and only stubs speechSynthesis, for tests of the recorded clips themselves.
 // - Every test fails if the page logged a console error or threw an uncaught exception.
 import { readFileSync } from 'node:fs'
 import { expect, test as base, type Page } from '@playwright/test'
+import { simulate } from '../src/lib/__fixtures__/simulate.ts'
 
 export { expect }
 
@@ -14,18 +17,34 @@ export interface AudioLog {
   media: string[]
   /** text of every speechSynthesis.speak() call (includes the empty unlock utterance). */
   speech: string[]
+  /** Real playback only (audioStub 'speech'): media events per src, in order. */
+  events: { type: string; src: string }[]
 }
 
-function installAudioStub() {
-  const log = { media: [] as string[], speech: [] as string[] }
-  ;(window as unknown as { __qianAudio: typeof log }).__qianAudio = log
+function installAudioStub(opts: { media: boolean }) {
+  const log: AudioLog = { media: [], speech: [], events: [] }
+  ;(window as unknown as { __qianAudio: AudioLog }).__qianAudio = log
 
-  HTMLMediaElement.prototype.play = function (this: HTMLMediaElement) {
-    log.media.push(this.currentSrc || this.src)
-    setTimeout(() => this.dispatchEvent(new Event('ended')), 40)
-    return Promise.resolve()
+  if (opts.media) {
+    HTMLMediaElement.prototype.play = function (this: HTMLMediaElement) {
+      log.media.push(this.src || this.currentSrc)
+      setTimeout(() => this.dispatchEvent(new Event('ended')), 40)
+      return Promise.resolve()
+    }
+    HTMLMediaElement.prototype.pause = function () {}
+  } else {
+    const realPlay = HTMLMediaElement.prototype.play
+    const watched = new WeakSet<HTMLMediaElement>()
+    HTMLMediaElement.prototype.play = function (this: HTMLMediaElement) {
+      log.media.push(this.src || this.currentSrc)
+      if (!watched.has(this)) {
+        watched.add(this)
+        for (const type of ['playing', 'ended', 'error'])
+          this.addEventListener(type, () => log.events.push({ type, src: this.currentSrc || this.src }))
+      }
+      return realPlay.call(this)
+    }
   }
-  HTMLMediaElement.prototype.pause = function () {}
 
   if (typeof window.SpeechSynthesisUtterance === 'undefined') {
     class Utterance extends EventTarget {
@@ -67,15 +86,16 @@ function installAudioStub() {
   Object.defineProperty(window, 'speechSynthesis', { value: fakeSynth, configurable: true })
 }
 
-export const test = base.extend<{ consoleErrors: string[] }>({
+export const test = base.extend<{ consoleErrors: string[]; audioStub: 'all' | 'speech' }>({
+  audioStub: ['all', { option: true }],
   consoleErrors: [
-    async ({ page }, use) => {
+    async ({ page, audioStub }, use) => {
       const errors: string[] = []
       page.on('console', (msg) => {
         if (msg.type() === 'error') errors.push(`console.error: ${msg.text()}`)
       })
       page.on('pageerror', (err) => errors.push(`pageerror: ${err.message}`))
-      await page.addInitScript(installAudioStub)
+      await page.addInitScript(installAudioStub, { media: audioStub === 'all' })
       await use(errors)
       expect(errors, 'no console errors or uncaught exceptions').toEqual([])
     },
@@ -103,8 +123,29 @@ export function wordByTrad(trad: string): WordLite {
 
 // ---------- audio ----------
 
+export const MANIFEST: { entries: Record<string, { word?: string; example?: string }> } = JSON.parse(
+  readFileSync(new URL('../src/data/audio-manifest.json', import.meta.url), 'utf8'),
+)
+
+/** Absolute URL of a word's recorded clip, resolved against the app base (e.g. /qian/). */
+export function clipUrl(baseURL: string, wordId: string, kind: 'word' | 'example' = 'word'): string {
+  const path = MANIFEST.entries[wordId]?.[kind]
+  if (!path) throw new Error(`no ${kind} clip for ${wordId} in audio-manifest.json`)
+  return new URL(path, baseURL).toString()
+}
+
 export async function audioLog(page: Page): Promise<AudioLog> {
   return page.evaluate(() => (window as unknown as { __qianAudio: AudioLog }).__qianAudio)
+}
+
+/** What the speechSynthesis fallback spoke (not the blank unlock utterance). */
+export async function spokenText(page: Page): Promise<string[]> {
+  return (await audioLog(page)).speech.filter((t) => t.trim() !== '')
+}
+
+/** Media event types seen for one src (real playback only). */
+export async function mediaEvents(page: Page, src: string): Promise<string[]> {
+  return (await audioLog(page)).events.filter((e) => e.src === src).map((e) => e.type)
 }
 
 /** Audio for real content (not the silent unlock clip or the empty unlock utterance). */
@@ -146,6 +187,7 @@ export interface SeedEvent {
   suspended?: boolean
   reason?: string
   note?: string
+  resolved?: boolean
 }
 
 export function backupJson(events: SeedEvent[]): string {
@@ -185,6 +227,36 @@ export function seededHistory(n = 30, now = Date.now()): SeedEvent[] {
   // One open flag, for the flagged-cards card.
   events.push({ id: 'e2e-flag-1', kind: 'flag', wordId: WORDS[3].id, reason: 'audio', note: 'clipped at the end', ts: now - 2 * DAY, deviceId: 'e2e-seed' })
   return events
+}
+
+/**
+ * About ten weeks of realistic history (for screenshots), produced by the app's own scheduler: the
+ * scheduler-test learner (`src/lib/__fixtures__/simulate.ts`, recall probability = FSRS R) studies
+ * once a day until the app says caught up, on the real word list, skipping one day in ten plus a
+ * 3-day break. The last session was about a day ago, so reviews are due now. On top: two open flags, one resolved
+ * flag and one suspended word.
+ */
+export function realisticHistory(now = Date.now(), days = 70): SeedEvent[] {
+  // The sessions start 8 h after `start` each day; the last one began 26 h ago, whatever the time
+  // of day, so its 1-day reviews and its unfinished learning steps are due now.
+  const start = now - days * DAY - 10 * 60 * MIN
+  const offDays = new Set([days - 30, days - 29, days - 28])
+  for (let d = 0; d < days; d++) if ((d * 7919 + 13) % 10 === 0) offDays.add(d)
+  const sim = simulate({ days, reviewsPerDay: 150, offDays, seed: 1000, practiceAhead: false, wordOrder: WORDS.map((w) => w.id), start })
+  const events: SeedEvent[] = sim.events
+    .filter((e) => e.ts < now)
+    .map((e, i) => ({ ...e, id: `e2e-h-${i + 1}`, deviceId: 'e2e-history', elapsedMs: e.kind === 'review' ? 3000 + ((i * 3571) % 11_000) : undefined }))
+
+  let n = 0
+  const add = (e: Omit<SeedEvent, 'id' | 'deviceId'>) => events.push({ ...e, id: `e2e-h-extra-${++n}`, deviceId: 'e2e-history' })
+  add({ kind: 'flag', wordId: WORDS[4].id, reason: 'audio', note: 'The end of the clip sounds cut off', ts: now - 3 * DAY })
+  add({ kind: 'flag', wordId: WORDS[11].id, reason: 'example', ts: now - 2 * DAY })
+  add({ kind: 'flag', wordId: WORDS[7].id, reason: 'pinyin', note: 'Tone sounds like 2nd, not 3rd', ts: now - 20 * DAY })
+  add({ kind: 'flag', wordId: WORDS[7].id, reason: 'pinyin', resolved: true, ts: now - 19 * DAY })
+  const suspended = WORDS[40].id
+  const suspendAt = now - 2 * DAY
+  add({ kind: 'suspend', wordId: suspended, suspended: true, ts: suspendAt })
+  return events.filter((e) => !(e.wordId === suspended && e.kind !== 'suspend' && e.ts > suspendAt))
 }
 
 /** Import a backup through Settings (merge), and wait for the summary. */

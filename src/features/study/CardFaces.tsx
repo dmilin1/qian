@@ -3,7 +3,7 @@ import { useEffect, useRef, type ReactNode } from 'react'
 import type { Word } from '../../data/types'
 import type { PlayResult } from '../../lib/audio'
 import type { StudyCard } from '../../lib/store'
-import { AudioButton, Hanzi, Icon, Kbd, Pinyin, cx, useSettings } from '../../components'
+import { AudioButton, Hanzi, Icon, Kbd, NoteText, Pinyin, cx, useSettings } from '../../components'
 
 /** blocked = the browser refused autoplay (needs a tap); failed = neither a clip nor TTS could play. */
 export type AudioIssue = 'blocked' | 'failed' | null
@@ -82,8 +82,10 @@ function Note({ word }: { word: Word }) {
   if (!word.note) return null
   return (
     <p className="flex gap-2 rounded-xl bg-sunken px-4 py-3 text-left text-sm text-ink">
-      <Icon name="info" size={16} className="mt-0.5 text-muted" />
-      <span>{word.note}</span>
+      <Icon name="info" size={16} className="mt-0.5 shrink-0 text-muted" />
+      <span>
+        <NoteText note={word.note} />
+      </span>
     </p>
   )
 }
@@ -92,7 +94,7 @@ function Example({ word }: { word: Word }) {
   const ex = word.example
   if (!ex?.pinyin) return null
   return (
-    <figure className="flex items-start gap-3 rounded-xl border border-line px-3.5 py-3 text-left">
+    <figure data-answer-example className="flex items-start gap-3 rounded-xl border border-line px-3.5 py-3 text-left">
       <span className="relative mt-0.5 inline-flex">
         <AudioButton wordId={word.id} kind="example" size="sm" label="Play example sentence" />
         <Kbd className="absolute -right-1.5 -bottom-1.5 bg-card text-muted">E</Kbd>
@@ -129,21 +131,14 @@ function Front({ revealed, children, className }: { revealed: boolean; children:
 }
 
 /**
- * First block of the answer. On mount (reveal) it scrolls itself into view above the sticky action
- * bar, so on short screens the meaning is not hidden behind the grade buttons. The scroll margins
- * match the bar's height: tab bar + bar on phones (taller when the prompt row shows at 700px+).
+ * First block of the answer (meaning on Listen, word and replay on Say). Its scroll margins match the sticky
+ * action bar's height (tab bar + bar on phones, taller when the prompt row shows at 700px+); the reveal scroll in
+ * Answer reads them, so the answer is never left behind the grade buttons.
  */
 function AnswerLead({ children, className }: { children: ReactNode; className?: string }) {
-  const ref = useRef<HTMLDivElement>(null)
-  useEffect(() => {
-    const el = ref.current
-    if (!el || typeof el.scrollIntoView !== 'function') return
-    const reduce = typeof window.matchMedia === 'function' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    el.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: reduce ? 'auto' : 'smooth' })
-  }, [])
   return (
     <div
-      ref={ref}
+      data-answer-lead
       className={cx(
         'flex flex-col items-center gap-4 text-center',
         'scroll-mt-4 scroll-mb-[calc(var(--tabbar-h)+env(safe-area-inset-bottom)+7.5rem)] [@media(min-height:700px)]:scroll-mb-[calc(var(--tabbar-h)+env(safe-area-inset-bottom)+11rem)] sm:scroll-mt-20 sm:scroll-mb-40!',
@@ -155,10 +150,33 @@ function AnswerLead({ children, className }: { children: ReactNode; className?: 
   )
 }
 
+/**
+ * On reveal, scroll just enough to show the answer's first block and, when it fits, the example sentence below it
+ * (its audio is the most useful thing after the meaning), without pushing the first block's top out of view.
+ */
+function revealScroll(section: HTMLElement | null) {
+  const lead = section?.querySelector<HTMLElement>('[data-answer-lead]')
+  if (!lead || typeof window.scrollBy !== 'function') return
+  const example = section!.querySelector<HTMLElement>('[data-answer-example]')
+  const style = getComputedStyle(lead)
+  const marginTop = parseFloat(style.scrollMarginTop) || 0
+  const visibleBottom = window.innerHeight - (parseFloat(style.scrollMarginBottom) || 0)
+  const top = lead.getBoundingClientRect().top
+  const bottom = (example ?? lead).getBoundingClientRect().bottom
+  let delta = 0
+  if (top < marginTop) delta = top - marginTop
+  else if (bottom > visibleBottom) delta = Math.min(bottom - visibleBottom, top - marginTop)
+  if (Math.abs(delta) < 1) return
+  const reduce = typeof window.matchMedia === 'function' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  window.scrollBy({ top: delta, behavior: reduce ? 'auto' : 'smooth' })
+}
+
 /** Divider + answer block, faded in. */
 function Answer({ children }: { children: ReactNode }) {
+  const ref = useRef<HTMLElement>(null)
+  useEffect(() => revealScroll(ref.current), [])
   return (
-    <section aria-label="Answer" className="flex flex-col gap-4 motion-safe:animate-rise-in">
+    <section ref={ref} aria-label="Answer" className="flex flex-col gap-4 motion-safe:animate-rise-in">
       <hr className="mx-auto my-1 w-16 border-line-strong" />
       {children}
     </section>
@@ -193,8 +211,9 @@ export function ListenFace({ card, revealed, audioIssue, onPlayResult }: FacePro
             <PosChip pos={w.pos} />
             <SpokenAs word={w} />
           </AnswerLead>
-          <Note word={w} />
+          {/* Example first: its audio is what a learner by ear wants next; the note is reference text. */}
           <Example word={w} />
+          <Note word={w} />
         </Answer>
       ) : null}
     </>
@@ -223,8 +242,9 @@ export function SayFace({ card, revealed, audioIssue, onPlayResult }: FaceProps)
             <AudioHint issue={audioIssue} />
             <SpokenAs word={w} />
           </AnswerLead>
-          <Note word={w} />
+          {/* Example first: its audio is what a learner by ear wants next; the note is reference text. */}
           <Example word={w} />
+          <Note word={w} />
         </Answer>
       ) : null}
     </>

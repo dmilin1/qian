@@ -14,6 +14,7 @@ import {
   FlagDialog,
   Hanzi,
   Icon,
+  NoteText,
   Pinyin,
   useNow,
   usePageTitle,
@@ -152,7 +153,9 @@ function WordDetail({ word, words }: { word: Word; words: WordIndex }) {
             <span className="text-ink/80">Hint on the Say card:</span> {word.hint}
           </p>
         ) : null}
-        {word.note ? <p className="mt-3 rounded-xl bg-sunken px-4 py-3 text-[0.9375rem] leading-relaxed text-ink">{word.note}</p> : null}
+        {word.note ? <p className="mt-3 rounded-xl bg-sunken px-4 py-3 text-[0.9375rem] leading-relaxed text-ink">
+            <NoteText note={word.note} force />
+          </p> : null}
       </Section>
 
       {/* ----- example ----- */}

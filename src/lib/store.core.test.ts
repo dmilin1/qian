@@ -14,6 +14,7 @@ vi.mock('./db', async (importOriginal) => {
   const orig = await importOriginal<typeof import('./db')>()
   return {
     ...orig,
+    openQianDb: vi.fn(orig.openQianDb),
     putEvents: vi.fn(orig.putEvents),
     replaceEvents: vi.fn(orig.replaceEvents),
     clearAll: vi.fn(orig.clearAll),
@@ -41,6 +42,7 @@ let n = 0
 const stores: AppStore[] = []
 afterEach(() => {
   for (const s of stores.splice(0)) s.dispose()
+  vi.mocked(db.openQianDb).mockReset().mockImplementation(realDb.openQianDb)
   vi.mocked(db.putEvents).mockReset().mockImplementation(realDb.putEvents)
   vi.mocked(db.replaceEvents).mockReset().mockImplementation(realDb.replaceEvents)
   vi.mocked(db.clearAll).mockReset().mockImplementation(realDb.clearAll)
@@ -212,7 +214,8 @@ describe('failed writes', () => {
     vi.mocked(db.clearAll).mockRejectedValueOnce(new Error('AbortError'))
     await expect(store.resetAll()).rejects.toThrow(/nothing was changed/)
     expect(store.getSnapshot().events.length).toBe(1)
-    expect(store.getSnapshot().error).toMatch(/Could not save progress/)
+    // The caller (Settings) shows the thrown message; no misleading "could not save progress" banner.
+    expect(store.getSnapshot().error).toBeNull()
   })
 
   it('in memory (no IndexedDB), import and reset still succeed', async () => {
@@ -222,5 +225,61 @@ describe('failed writes', () => {
     expect(sum.added).toBe(1)
     await store.resetAll()
     expect(store.getSnapshot().events.length).toBe(0)
+  })
+})
+
+describe('final review fixes', () => {
+  it('concurrent init() calls (StrictMode) open one database', async () => {
+    const { store } = setup()
+    vi.mocked(db.openQianDb).mockClear()
+    await Promise.all([store.init(), store.init()])
+    expect(db.openQianDb).toHaveBeenCalledTimes(1)
+    expect(store.getSnapshot().ready).toBe(true)
+  })
+
+  it('settings that could not be saved are not reverted when the page comes back', async () => {
+    const storage = memoryStorage()
+    const { store } = setup({ storage })
+    await store.init()
+    storage.setItem = () => {
+      throw new Error('QuotaExceededError')
+    }
+    store.updateSettings({ listenFront: 'audioOnly' })
+    expect(store.getSnapshot().error).toMatch(/Settings could not be saved/)
+    window.dispatchEvent(new Event('focus'))
+    await new Promise((r) => setTimeout(r, 50))
+    expect(store.getSnapshot().settings.listenFront).toBe('audioOnly')
+  })
+
+  it('answers whose write failed are written on resume, and the error clears', async () => {
+    const { store, clock, opts } = setup()
+    await store.init()
+    vi.mocked(db.putEvents).mockRejectedValue(new Error('UnknownError'))
+    for (let i = 0; i < 3; i++) {
+      await store.grade(store.getSnapshot().current!.key, 'good')
+      clock.t += 5000
+    }
+    expect(store.getSnapshot().error).toMatch(/Could not save progress/)
+    vi.mocked(db.putEvents).mockImplementation(realDb.putEvents)
+    document.dispatchEvent(new Event('visibilitychange'))
+    await vi.waitFor(() => expect(store.getSnapshot().error).toBeNull())
+    store.dispose()
+    const reloaded = reopen(opts)
+    await reloaded.init()
+    expect(reloaded.getSnapshot().events.length).toBe(3)
+  })
+
+  it('reopens a lost database connection and saves the answer', async () => {
+    const { store, opts } = setup()
+    await store.init()
+    const conn = await vi.mocked(db.openQianDb).mock.results[0].value
+    conn.close() // like iOS dropping the connection while the app was in the background
+    await store.grade('wt1:listen', 'good')
+    expect(db.openQianDb).toHaveBeenCalledTimes(2)
+    expect(store.getSnapshot().error).toBeNull()
+    store.dispose()
+    const reloaded = reopen(opts)
+    await reloaded.init()
+    expect(reloaded.getSnapshot().events.map((e) => e.wordId)).toEqual(['wt1'])
   })
 })

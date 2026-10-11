@@ -47,7 +47,12 @@ export const MIGRATIONS: Record<number, (db: Db, tx: UpgradeTx) => void> = {
 
 export async function openQianDb(
   name = DB_NAME,
-  opts: { version?: number; migrations?: typeof MIGRATIONS } = {},
+  opts: {
+    version?: number
+    migrations?: typeof MIGRATIONS
+    /** Called when this connection closes on its own (lost connection, or closed for another tab's upgrade). */
+    onClose?: () => void
+  } = {},
 ): Promise<Db> {
   const version = opts.version ?? DB_VERSION
   const migrations = opts.migrations ?? MIGRATIONS
@@ -58,6 +63,11 @@ export async function openQianDb(
     blocking() {
       // Another tab wants a newer version: let it upgrade.
       db.close()
+      opts.onClose?.()
+    },
+    terminated() {
+      // The browser closed the connection abnormally (e.g. iOS "Connection to Indexed Database server lost").
+      opts.onClose?.()
     },
   })
   const tx = db.transaction('meta', 'readwrite')

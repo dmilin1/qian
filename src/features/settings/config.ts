@@ -1,6 +1,6 @@
 // Non-component helpers shared by the settings sections.
 import { SETTING_RANGES } from '../../lib/settings'
-import { getWords } from '../../lib/words'
+import { getWords, type WordIndex } from '../../lib/words'
 
 /**
  * UI ranges. Narrower than the validator's SETTING_RANGES (which accept anything sane from an
@@ -15,7 +15,6 @@ export const UI_RANGES = {
 } as const
 
 /** A word to demo audio with: 你好 if present, else the most frequent word. */
-export function sampleWord() {
-  const w = getWords()
+export function sampleWord(w: WordIndex = getWords()) {
   return w.list.find((x) => x.trad === '你好') ?? w.list[0]
 }

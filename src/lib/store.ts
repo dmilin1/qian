@@ -160,6 +160,15 @@ export function createAppStore(opts: StoreOptions = {}) {
   /** Events undone in memory whose IndexedDB delete is still in flight. */
   const deleting = new Set<string>()
   let channel: BroadcastChannel | null = null
+  /** The connection closed on its own (lost, or closed for another tab's upgrade): reopen before the next write. */
+  let dbClosed = false
+  /** Shared by overlapping init() calls (StrictMode runs the effect twice), so only one database and channel open. */
+  let initPromise: Promise<void> | null = null
+  /**
+   * Settings as this tab last read or wrote them in storage. resync() adopts stored settings only when they differ
+   * from this, i.e. another tab changed them; settings that failed to save stay in memory instead of being reverted.
+   */
+  let storedSettingsJson = JSON.stringify(initialSettings)
 
   let snap: AppSnapshot = {
     ready: false,
@@ -182,7 +191,11 @@ export function createAppStore(opts: StoreOptions = {}) {
     for (const l of listeners) l()
   }
 
-  const persistSettings = (s: Settings) => (storage === undefined ? saveSettings(s) : saveSettings(s, storage))
+  function persistSettings(s: Settings): boolean {
+    const ok = storage === undefined ? saveSettings(s) : saveSettings(s, storage)
+    if (ok) storedSettingsJson = JSON.stringify(s)
+    return ok
+  }
 
   // ----- selection -----
 
@@ -302,7 +315,9 @@ export function createAppStore(opts: StoreOptions = {}) {
   let detachResume: (() => void) | null = null
   function onResume() {
     if (snap.ready && !snap.current && (typeof document === 'undefined' || document.visibilityState !== 'hidden')) refresh()
-    void resync()
+    // A resumed iOS PWA may have lost its IndexedDB connection: write any unsaved answers (reconnecting if
+    // needed) before reloading the log.
+    void flushUnsaved().then(() => resync())
   }
   function attachResume() {
     if (detachResume || typeof window === 'undefined' || typeof document === 'undefined') return
@@ -327,9 +342,81 @@ export function createAppStore(opts: StoreOptions = {}) {
       await fn()
       return true
     } catch (err) {
-      if (report) set({ error: `Could not save progress: ${(err as Error)?.message ?? err}` })
+      if (report) set({ error: `${SAVE_FAILED} ${(err as Error)?.message ?? err}` })
       return false
     }
+  }
+
+  async function openDb(): Promise<db.Db> {
+    let handle: db.Db | null = null
+    handle = await db.openQianDb(opts.dbName, {
+      onClose: () => {
+        if (database === handle) dbClosed = true
+      },
+    })
+    return handle
+  }
+
+  /** Open a fresh connection in place of a closed or broken one. Keeps the old handle if that fails too. */
+  async function reopenDb(): Promise<boolean> {
+    try {
+      const handle = await openDb()
+      try {
+        database?.close()
+      } catch {
+        // already closed
+      }
+      database = handle
+      dbClosed = false
+      return true
+    } catch {
+      return false
+    }
+  }
+
+  async function writeUnsaved(): Promise<boolean> {
+    if (!database) {
+      // In memory (or storage unavailable at startup, which init reported): nothing to write.
+      unsaved.clear()
+      return true
+    }
+    const batch = [...unsaved.values()]
+    if (!batch.length) return true
+    if (dbClosed) await reopenDb()
+    let error: unknown = null
+    const put = async () => {
+      try {
+        await db.putEvents(database!, batch)
+        return true
+      } catch (err) {
+        error = err
+        return false
+      }
+    }
+    // A failed write may be a lost connection (iOS after backgrounding): reconnect once and retry.
+    const ok = (await put()) || ((await reopenDb()) && (await put()))
+    if (!ok) {
+      set({ error: `${SAVE_FAILED} ${(error as Error)?.message ?? error}` })
+      return false
+    }
+    for (const e of batch) {
+      if (unsaved.get(e.id) === e) unsaved.delete(e.id)
+      // Undone (or reset) while it was being written: take it back out of the database.
+      else if (!unsaved.has(e.id) && !snap.derived.eventsByWord.get(e.wordId)?.some((x) => x.id === e.id))
+        await db.deleteEvent(database, e.id).catch(() => undefined)
+    }
+    if (snap.error?.startsWith(SAVE_FAILED)) set({ error: null })
+    announce()
+    return true
+  }
+
+  // Writes run one after another, and each writes every event still unsaved, so an answer whose write failed is
+  // retried by the next answer and on resume.
+  let writes: Promise<unknown> = Promise.resolve()
+  function flushUnsaved(): Promise<boolean> {
+    const p = writes.then(writeUnsaved, writeUnsaved)
+    writes = p.catch(() => undefined)
+    return p
   }
 
   async function addEvent(e: AppEvent, forcedCurrent?: StudyCard | null): Promise<void> {
@@ -337,10 +424,7 @@ export function createAppStore(opts: StoreOptions = {}) {
     const events = insertSorted(snap.events, e)
     unsaved.set(e.id, e)
     publish({ derived, events }, {}, forcedCurrent)
-    if (await save(() => db.putEvents(database!, [e]))) {
-      unsaved.delete(e.id)
-      announce()
-    }
+    await flushUnsaved()
   }
 
   // ----- other tabs / windows -----
@@ -369,12 +453,23 @@ export function createAppStore(opts: StoreOptions = {}) {
     try {
       loaded = await db.loadEvents(database)
     } catch {
-      return false
+      // Possibly a lost connection: reconnect once.
+      if (!(await reopenDb())) return false
+      try {
+        loaded = await db.loadEvents(database!)
+      } catch {
+        return false
+      }
     }
     const byId = new Map<string, AppEvent>()
     for (const e of loaded) if (!deleting.has(e.id)) byId.set(e.id, e)
     for (const e of unsaved.values()) byId.set(e.id, e)
-    const settings = readSettings()
+    // Adopt stored settings only when another tab changed them since this tab last read or wrote them. Comparing
+    // with memory instead would silently revert settings that failed to save here.
+    const stored = readSettings()
+    const storedJson = JSON.stringify(stored)
+    const settings = storedJson !== storedSettingsJson ? stored : snap.settings
+    storedSettingsJson = storedJson
     // Events missing from the database were undone, replaced or reset in another tab.
     const removed = snap.events.some((e) => !byId.has(e.id))
     const eventsChanged = removed || byId.size !== snap.events.length
@@ -416,6 +511,55 @@ export function createAppStore(opts: StoreOptions = {}) {
     set({ lastExportAt: t })
   }
 
+  async function initOnce(): Promise<void> {
+    if (snap.ready) return
+    let events: AppEvent[] = []
+    let deviceId = ''
+    let lastExportAt: number | null = null
+    let error: string | null = null
+    if (!opts.inMemory) {
+      try {
+        database = await openDb()
+        events = (await db.loadEvents(database)).sort(compareEvents)
+        deviceId = await db.getOrCreateDeviceId(database)
+        lastExportAt = (await db.getMeta(database, 'lastExportAt')) ?? null
+        if (opts.dayOffsetMs === undefined) {
+          // Keep the day boundary fixed per device (DST, travel), so replay stays deterministic.
+          const stored = await db.getMeta(database, 'dayOffsetMs')
+          if (typeof stored === 'number' && Number.isFinite(stored)) dayOffsetMs = stored
+          else await db.setMeta(database, 'dayOffsetMs', dayOffsetMs)
+        }
+      } catch (err) {
+        database = null
+        error = `Storage is unavailable; progress will not be saved. (${(err as Error)?.message ?? err})`
+      }
+    }
+    if (!deviceId) deviceId = uuid()
+    let persistence: PersistStatus = 'unsupported'
+    try {
+      if (storageManager && typeof storageManager.persisted === 'function')
+        persistence = (await storageManager.persisted()) ? 'granted' : 'unknown'
+    } catch {
+      persistence = 'unknown'
+    }
+    // Only this device's own events: another device's clock may be ahead.
+    lastStamp = 0
+    for (const e of events) if (e.deviceId === deviceId && e.ts > lastStamp) lastStamp = e.ts
+    lastStamp = Math.min(lastStamp, now())
+    snap = { ...snap, ready: true, deviceId }
+    attachResume()
+    if (database && typeof BroadcastChannel === 'function') {
+      try {
+        channel?.close()
+        channel = new BroadcastChannel(`qian:${opts.dbName ?? db.DB_NAME}`)
+        channel.onmessage = () => void resync()
+      } catch {
+        channel = null
+      }
+    }
+    publish({ derived: buildDerived(events, snap.settings.requestRetention, dayOffsetMs), events }, { error, lastExportAt, persistence })
+  }
+
   return {
     subscribe(listener: () => void): () => void {
       listeners.add(listener)
@@ -425,53 +569,12 @@ export function createAppStore(opts: StoreOptions = {}) {
       return snap
     },
 
-    /** Open IndexedDB, load the log, derive state, pick the first card. Safe to call twice. */
-    async init(): Promise<void> {
-      if (snap.ready) return
-      let events: AppEvent[] = []
-      let deviceId = ''
-      let lastExportAt: number | null = null
-      let error: string | null = null
-      if (!opts.inMemory) {
-        try {
-          database = await db.openQianDb(opts.dbName)
-          events = (await db.loadEvents(database)).sort(compareEvents)
-          deviceId = await db.getOrCreateDeviceId(database)
-          lastExportAt = (await db.getMeta(database, 'lastExportAt')) ?? null
-          if (opts.dayOffsetMs === undefined) {
-            // Keep the day boundary fixed per device (DST, travel), so replay stays deterministic.
-            const stored = await db.getMeta(database, 'dayOffsetMs')
-            if (typeof stored === 'number' && Number.isFinite(stored)) dayOffsetMs = stored
-            else await db.setMeta(database, 'dayOffsetMs', dayOffsetMs)
-          }
-        } catch (err) {
-          database = null
-          error = `Storage is unavailable; progress will not be saved. (${(err as Error)?.message ?? err})`
-        }
-      }
-      if (!deviceId) deviceId = uuid()
-      let persistence: PersistStatus = 'unsupported'
-      try {
-        if (storageManager && typeof storageManager.persisted === 'function')
-          persistence = (await storageManager.persisted()) ? 'granted' : 'unknown'
-      } catch {
-        persistence = 'unknown'
-      }
-      // Only this device's own events: another device's clock may be ahead.
-      lastStamp = 0
-      for (const e of events) if (e.deviceId === deviceId && e.ts > lastStamp) lastStamp = e.ts
-      lastStamp = Math.min(lastStamp, now())
-      snap = { ...snap, ready: true, deviceId }
-      attachResume()
-      if (database && typeof BroadcastChannel === 'function') {
-        try {
-          channel = new BroadcastChannel(`qian:${opts.dbName ?? db.DB_NAME}`)
-          channel.onmessage = () => void resync()
-        } catch {
-          channel = null
-        }
-      }
-      publish({ derived: buildDerived(events, snap.settings.requestRetention, dayOffsetMs), events }, { error, lastExportAt, persistence })
+    /**
+     * Open IndexedDB, load the log, derive state, pick the first card. Safe to call more than once: concurrent
+     * calls (React StrictMode runs effects twice in dev) share one initialization.
+     */
+    init(): Promise<void> {
+      return (initPromise ??= initOnce())
     },
 
     /** Grade a card. Advances to the next card. */
@@ -534,7 +637,7 @@ export function createAppStore(opts: StoreOptions = {}) {
       const derived = rebuild ? buildDerived(snap.events, settings.requestRetention, dayOffsetMs) : snap.derived
       const cur = snap.current
       const current = cur && rebuild ? { ...cur, previews: previewIntervals(derived, cur.key, now()) } : cur
-      publish({ derived, events: snap.events, settings }, ok ? {} : { error: 'Settings could not be saved in this browser.' }, current)
+      publish({ derived, events: snap.events, settings }, ok ? {} : { error: SETTINGS_SAVE_FAILED }, current)
       if (ok) announce()
     },
 
@@ -591,6 +694,7 @@ export function createAppStore(opts: StoreOptions = {}) {
       let added: number
       let duplicates: number
       let settings = snap.settings
+      let settingsSaved = true
       if (mode === 'replace') {
         events = mergeEvents([], parsed.events).events
         added = events.length
@@ -598,7 +702,7 @@ export function createAppStore(opts: StoreOptions = {}) {
         settings = parsed.settings
         if (!(await save(() => db.replaceEvents(database!, events), false))) throw new Error(IMPORT_SAVE_FAILED)
         // Only after the log is saved, so a failed import never leaves the backup's settings with the old log.
-        persistSettings(settings)
+        settingsSaved = persistSettings(settings)
         undoable = []
         unsaved.clear()
       } else {
@@ -609,19 +713,20 @@ export function createAppStore(opts: StoreOptions = {}) {
         // Re-merge onto the current log: answers given while the file was being saved are kept.
         events = mergeEvents(snap.events, m.added).events
       }
-      publish({ derived: buildDerived(events, settings.requestRetention, dayOffsetMs), events, settings })
+      publish({ derived: buildDerived(events, settings.requestRetention, dayOffsetMs), events, settings }, settingsSaved ? {} : { error: SETTINGS_SAVE_FAILED })
       announce()
       return { mode, added, duplicates, skipped, total: events.length }
     },
 
     /** Delete all progress. Settings are reset too unless keepSettings. Throws (nothing changed) if the browser could not erase it. */
     async resetAll(keepSettings = false): Promise<void> {
-      if (!(await save(() => db.clearAll(database!)))) throw new Error('Could not erase progress in this browser; nothing was changed.')
+      // The caller shows this error (not the generic "could not save progress" banner, which would be misleading).
+      if (!(await save(() => db.clearAll(database!), false))) throw new Error('Could not erase progress in this browser; nothing was changed.')
       const settings = keepSettings ? snap.settings : { ...DEFAULT_SETTINGS }
-      if (!keepSettings) persistSettings(settings)
+      const settingsSaved = keepSettings || persistSettings(settings)
       undoable = []
       unsaved.clear()
-      publish({ derived: emptyDerived(settings.requestRetention, dayOffsetMs), events: [], settings, practiceAhead: false }, { lastExportAt: null })
+      publish({ derived: emptyDerived(settings.requestRetention, dayOffsetMs), events: [], settings, practiceAhead: false }, { lastExportAt: null, ...(settingsSaved ? {} : { error: SETTINGS_SAVE_FAILED }) })
       announce()
     },
 
@@ -637,11 +742,15 @@ export function createAppStore(opts: StoreOptions = {}) {
       listeners.clear()
       database?.close()
       database = null
+      initPromise = null
     },
   }
 }
 
 const IMPORT_SAVE_FAILED = 'The backup could not be saved in this browser; nothing was changed.'
+/** Prefix of the generic write-failure banner; cleared again once the unsaved answers are written. */
+const SAVE_FAILED = 'Could not save progress:'
+const SETTINGS_SAVE_FAILED = 'Settings could not be saved in this browser.'
 
 let appStore: AppStore | null = null
 

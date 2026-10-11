@@ -288,8 +288,13 @@ export default function StudyPage() {
     return (
       <div className="flex flex-1 flex-col">
         <div className="flex justify-end">{undoButton}</div>
-        <CaughtUp queue={snap.queue} progress={progress} canPractice={canPractice} onPractice={practice} />
-        <StudyNudge className="mb-4" />
+        <CaughtUp
+          queue={snap.queue}
+          progress={progress}
+          canPractice={canPractice}
+          onPractice={practice}
+          nudge={<StudyNudge className="w-full text-left" />}
+        />
         {toastEl}
       </div>
     )

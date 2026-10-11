@@ -2,10 +2,12 @@ import { act, fireEvent, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { makeTestStore, renderWithApp } from '../../components/test-utils'
-import { FIXTURE_WORDS } from '../../lib/__fixtures__/words'
+import { FIXTURE_MANIFEST, FIXTURE_WORDS } from '../../lib/__fixtures__/words'
+import type { PlayResult } from '../../lib/audio'
 import { parseImport } from '../../lib/exportImport'
 import { createManifest, createWordIndex } from '../../lib/words'
 import { AboutSection } from './AboutSection'
+import { AudioSection } from './AudioSection'
 import { __setDeferredPrompt, type BeforeInstallPromptEvent } from './install'
 import SettingsPage from './SettingsPage'
 
@@ -34,12 +36,11 @@ async function readBlob(b: Blob): Promise<string> {
   })
 }
 
-/** A real backup made by another (in-memory) device with one graded card. */
-async function makeBackup(): Promise<string> {
+/** A real backup made by another (in-memory) device with `grades` graded cards (default one). */
+async function makeBackup(grades = 1): Promise<string> {
   const other = makeTestStore()
   await other.init()
-  const cur = other.getSnapshot().current!
-  await other.grade(cur.key, 'good')
+  for (let i = 0; i < grades; i++) await other.grade(other.getSnapshot().current!.key, 'good')
   const { text } = await other.exportData()
   other.dispose()
   return text
@@ -110,12 +111,11 @@ describe('SettingsPage', () => {
   })
 
   it('test playback plays a word', async () => {
+    // The result message depends on the manifest; see "Settings: audio" for that, with explicit manifests.
     const { fake } = await renderPage()
     const user = userEvent.setup()
     await user.click(screen.getByRole('button', { name: /test playback/i }))
     expect(fake.play).toHaveBeenCalledWith(expect.any(String), 'word', { slow: false })
-    act(() => fake.finish('tts'))
-    expect(await screen.findByText(/browser's built-in voice/i)).toBeInTheDocument()
   })
 
   it('lists keyboard shortcuts', async () => {
@@ -254,7 +254,8 @@ describe('Settings: import', () => {
     expect(within(dialog).queryByRole('checkbox')).not.toBeInTheDocument()
 
     await user.click(within(dialog).getByRole('radio', { name: /replace/i }))
-    expect(within(dialog).getByText(/permanently lose 2 reviews/)).toBeInTheDocument()
+    // Counted by id: none of this device's 3 entries is in the other device's backup.
+    expect(within(dialog).getByText(/3 entries on this device are not in this backup/)).toBeInTheDocument()
     expect(within(dialog).getByRole('button', { name: 'Export this device first' })).toBeInTheDocument()
     const replace = within(dialog).getByRole('button', { name: 'Replace my data' })
     expect(replace).toBeDisabled()
@@ -266,6 +267,48 @@ describe('Settings: import', () => {
     await user.click(replace)
     expect(spy).toHaveBeenCalledWith(backup, 'replace')
     expect(await screen.findByTestId('import-summary')).toHaveTextContent(/Replaced/)
+  })
+
+  it("replacing with a LARGER backup from another device still warns about this device's entries", async () => {
+    const backup = await makeBackup(3) // 3 entries, none of them from this device
+    const { store } = await renderPage()
+    await act(() => store.grade(store.getSnapshot().current!.key, 'good'))
+    await act(() => store.grade(store.getSnapshot().current!.key, 'good'))
+    const user = userEvent.setup()
+    await user.upload(screen.getByTestId('import-file'), new File([backup], 'b.json', { type: 'application/json' }))
+    const dialog = await screen.findByRole('dialog', { name: 'Import backup' })
+    expect(within(dialog).getByTestId('import-counts')).toHaveTextContent('This device: 2 entries · Backup: 3 entries')
+    await user.click(within(dialog).getByRole('radio', { name: /replace/i }))
+    expect(within(dialog).getByText(/2 entries on this device are not in this backup/)).toBeInTheDocument()
+    expect(within(dialog).getByRole('button', { name: 'Replace my data' })).toBeDisabled()
+    expect(within(dialog).getByRole('checkbox', { name: /I understand/ })).toBeInTheDocument()
+  })
+
+  it('replacing with a backup that contains everything on this device needs no tick', async () => {
+    const { store } = await renderPage()
+    await act(() => store.grade(store.getSnapshot().current!.key, 'good'))
+    const { text } = await store.exportData({ record: false })
+    const user = userEvent.setup()
+    await user.upload(screen.getByTestId('import-file'), new File([text], 'b.json', { type: 'application/json' }))
+    const dialog = await screen.findByRole('dialog', { name: 'Import backup' })
+    await user.click(within(dialog).getByRole('radio', { name: /replace/i }))
+    expect(within(dialog).queryByRole('checkbox')).not.toBeInTheDocument()
+    expect(within(dialog).getByRole('button', { name: 'Replace my data' })).toBeEnabled()
+  })
+
+  it('"Export this device first" saves a backup and says so', async () => {
+    const downloads = captureDownloads()
+    const backup = await makeBackup()
+    const { store } = await renderPage()
+    await act(() => store.grade(store.getSnapshot().current!.key, 'good'))
+    const user = userEvent.setup()
+    await user.upload(screen.getByTestId('import-file'), new File([backup], 'b.json', { type: 'application/json' }))
+    const dialog = await screen.findByRole('dialog', { name: 'Import backup' })
+    await user.click(within(dialog).getByRole('radio', { name: /replace/i }))
+    await user.click(within(dialog).getByRole('button', { name: 'Export this device first' }))
+    expect(await within(dialog).findByText(/^Saved qian-backup-/)).toBeInTheDocument()
+    expect(downloads.names).toHaveLength(1)
+    expect(store.getSnapshot().lastExportAt).not.toBeNull()
   })
 
   it('rejects a file that is not a qian backup', async () => {
@@ -308,6 +351,21 @@ describe('Settings: reset', () => {
     expect(await screen.findByText(/All progress on this device was deleted/)).toBeInTheDocument()
   })
 
+  it('shows why a reset failed', async () => {
+    const { store } = await renderPage()
+    await act(() => store.grade(store.getSnapshot().current!.key, 'good'))
+    vi.spyOn(store, 'resetAll').mockRejectedValue(new Error('Could not erase progress in this browser; nothing was changed.'))
+    const user = userEvent.setup()
+    await user.click(screen.getByRole('button', { name: /reset all data/i }))
+    await user.click(within(await screen.findByRole('dialog', { name: 'Reset all data?' })).getByRole('button', { name: 'Continue' }))
+    const dialog = await screen.findByRole('dialog', { name: 'Are you sure?' })
+    await user.type(within(dialog).getByRole('textbox', { name: 'Confirmation' }), 'RESET')
+    await user.click(within(dialog).getByRole('button', { name: /delete everything/i }))
+    expect(await screen.findByText(/Could not erase progress in this browser; nothing was changed/)).toBeInTheDocument()
+    expect(screen.queryByText(/All progress on this device was deleted/)).not.toBeInTheDocument()
+    expect(store.getSnapshot().events).toHaveLength(1)
+  })
+
   it('cancelling does not reset', async () => {
     const { store } = await renderPage()
     const reset = vi.spyOn(store, 'resetAll')
@@ -329,6 +387,51 @@ describe('Settings: audio test sample', () => {
     expect(row.querySelector('[lang="zh-Latn-pinyin"].tone-colors')).not.toBeNull()
     act(() => r.store.updateSettings({ showCharacters: true }))
     expect(row.querySelector('[lang="zh-TW"]')).not.toBeNull()
+  })
+})
+
+describe('Settings: audio', () => {
+  // Explicit words and manifests, so these tests never depend on the real audio-manifest.json.
+  const words = createWordIndex(FIXTURE_WORDS)
+  const sample = FIXTURE_WORDS[0] // no 你好 in the fixtures, so the top-ranked word
+  const withClips = createManifest(FIXTURE_MANIFEST) // 2 of 3 words recorded, including the sample
+  const noClips = createManifest({ ...FIXTURE_MANIFEST, entries: {} })
+
+  async function playSample(manifest: ReturnType<typeof createManifest>, result: PlayResult) {
+    const r = renderWithApp(<AudioSection words={words} manifest={manifest} />)
+    await userEvent.setup().click(screen.getByRole('button', { name: /test playback/i }))
+    expect(r.fake.play).toHaveBeenCalledWith(sample.id, 'word', { slow: false })
+    act(() => r.fake.finish(result))
+    return r
+  }
+
+  it('without recordings, names the browser voice', async () => {
+    await playSample(noClips, 'tts')
+    expect(screen.getByText(/No recordings in this version yet/)).toBeInTheDocument()
+    expect(await screen.findByText("Played with your browser's built-in voice.")).toBeInTheDocument()
+    expect(screen.getByText('There are no recorded clips to download yet.')).toBeInTheDocument()
+  })
+
+  it('with a recording, reports the clip', async () => {
+    await playSample(withClips, 'clip')
+    expect(screen.getByText(/High-quality recordings/)).toHaveTextContent('for 2 of 3 words')
+    expect(await screen.findByText('Played a recorded clip. Audio is working.')).toBeInTheDocument()
+  })
+
+  it('with a recording that fell back to speech, says the clip did not load', async () => {
+    await playSample(withClips, 'tts')
+    expect(await screen.findByText(/The recorded clip couldn't load/)).toBeInTheDocument()
+  })
+
+  it('says about how much the offline download is before it starts', async () => {
+    vi.stubGlobal('caches', { open: vi.fn(), has: vi.fn(async () => false) })
+    try {
+      renderWithApp(<AudioSection words={words} manifest={withClips} />)
+      // 3 clips at the measured average of about 8 KB each.
+      expect(await screen.findByText('0 of 3 clips saved offline (about 23 KB to download).')).toBeInTheDocument()
+    } finally {
+      vi.unstubAllGlobals()
+    }
   })
 })
 

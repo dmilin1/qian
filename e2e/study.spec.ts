@@ -94,9 +94,9 @@ test.describe('study session', () => {
   })
 
   test('a Say card appears once the Listen card has graduated', async ({ page }) => {
-    // Seed: the first word's Listen card graduated (two Good answers) a few minutes ago.
-    const now = Date.now()
-    await importBackup(page, backupJson([review(first.id, 'listen', 'good', now - 20 * 60_000), review(first.id, 'listen', 'good', now - 8 * 60_000)]))
+    // Seed: the first word's Listen card graduated (two Good answers) on an earlier study day.
+    const ago = Date.now() - 30 * 3600_000
+    await importBackup(page, backupJson([review(first.id, 'listen', 'good', ago - 12 * 60_000), review(first.id, 'listen', 'good', ago)]))
 
     await startStudying(page)
     for (let i = 0; i < 12 && !(await sayCard(page).isVisible()); i++) {
@@ -116,6 +116,36 @@ test.describe('study session', () => {
     await expect(card.locator('.pinyin').first()).toBeVisible()
     await expect(card).toContainText(first.trad)
     await expect.poll(async () => (await contentAudio(page)).length).toBeGreaterThan(before)
+  })
+
+  test('a Say card follows on the next study day once the learning steps have passed (page.clock)', async ({ page }) => {
+    await page.clock.install()
+    await startStudying(page)
+    await expect(listenCard(page)).toContainText(first.trad)
+    await revealAndGrade(page, 'Good') // first word: the 10-minute learning step
+    await expect(listenCard(page)).toContainText(second.trad)
+
+    // Ten minutes later the first word's step is due, and it comes back before any new word.
+    await page.clock.fastForward('10:30')
+    await revealAndGrade(page, 'Good')
+    await expect(listenCard(page)).toContainText(first.trad)
+    await expect(listenCard(page).getByText('New', { exact: true })).toHaveCount(0)
+    await revealAndGrade(page, 'Good') // graduates
+
+    // Its Say card waits for the next study day, so it is not answered from short-term memory.
+    for (let i = 0; i < 4; i++) {
+      await expect(anyCard(page)).toBeVisible()
+      await expect(sayCard(page)).toHaveCount(0)
+      await revealAndGrade(page, 'Good')
+    }
+    await page.clock.fastForward('24:00:00')
+
+    for (let i = 0; i < 12 && !(await sayCard(page).isVisible()); i++) {
+      await revealAndGrade(page, 'Good')
+      await expect(anyCard(page)).toBeVisible()
+    }
+    await expect(sayCard(page)).toContainText(first.gloss)
+    await expect(sayCard(page).getByText('New', { exact: true })).toBeVisible()
   })
 
   test('progress persists across a reload (IndexedDB)', async ({ page }) => {
@@ -158,5 +188,26 @@ test.describe('keyboard shortcuts', () => {
     await page.keyboard.press('k')
     await expect(page.getByText(/Marked .* as known/)).toBeVisible()
     await expect(listenCard(page)).toContainText(second.trad)
+  })
+
+  test('after clicking Undo, Space reveals the restored card instead of undoing again', async ({ page }) => {
+    await startStudying(page)
+    await revealAndGrade(page, 'Good')
+    await expect(listenCard(page)).toContainText(second.trad)
+    await revealAndGrade(page, 'Good')
+    await expect(listenCard(page)).toContainText(third.trad)
+
+    const undo = page.getByRole('button', { name: 'Undo last answer' })
+    await undo.click() // mouse focus stays on Undo, which can still undo the first answer
+    await expect(listenCard(page)).toContainText(second.trad)
+    await expect(undo).toBeEnabled()
+
+    await page.keyboard.press('Space')
+    await expect(listenCard(page).getByRole('region', { name: 'Answer' })).toContainText(second.gloss)
+    await expect(listenCard(page)).toContainText(second.trad)
+    await expect(gradeButton(page, 'Good')).toBeVisible()
+    // The first answer was not undone.
+    await expect(undo).toBeEnabled()
+    expect(await introducedCount(page)).toBe(1)
   })
 })

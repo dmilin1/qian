@@ -37,6 +37,18 @@ function advance(store: AppStore, until: (c: NonNullable<ReturnType<AppStore['ge
   throw new Error('card not reached')
 }
 
+/**
+ * Reach a Say card: graduate the first Listen card (Easy), then move the clock to the next study day, since a
+ * word's Say card starts only on a later day than its Listen card's last review.
+ */
+function toSayCard(store: AppStore) {
+  const c = store.getSnapshot().current!
+  void store.grade(c.key, 'easy', 1000)
+  vi.useFakeTimers({ toFake: ['Date'], now: Date.now() + 24 * 60 * 60 * 1000 })
+  store.next()
+  return advance(store, (x) => x.dir === 'say')
+}
+
 const grades = () => screen.queryByRole('group', { name: 'Grade' })
 
 /** Grade buttons ignore taps for a moment after reveal (double-tap guard); wait it out. */
@@ -47,6 +59,9 @@ async function clickGrade(user: ReturnType<typeof userEvent.setup>, name: RegExp
 
 beforeEach(() => {
   studySession.reset()
+})
+afterEach(() => {
+  vi.useRealTimers()
 })
 
 describe('Listen card', () => {
@@ -98,7 +113,8 @@ describe('Listen card', () => {
     })
     await screen.findByRole('article', { name: 'Listen card' })
     await user.click(screen.getByRole('button', { name: /Show answer/ }))
-    expect(screen.getByText('Polite form is 您.')).toBeInTheDocument()
+    // The note gets pinyin after its characters, looked up in the word list.
+    expect(screen.getByRole('region', { name: 'Answer' })).toHaveTextContent('Polite form is 您 nín.')
     expect(screen.getByText('spoken:')).toBeInTheDocument()
     expect(screen.getByText('ní')).toBeInTheDocument()
     Object.assign(store.getSnapshot().current!.word, { note: undefined, spokenAs: undefined })
@@ -129,7 +145,7 @@ describe('Listen card', () => {
 
 describe('Say card', () => {
   const toSay = (s: AppStore) => {
-    advance(s, (c) => c.dir === 'say')
+    toSayCard(s)
   }
 
   it('front: English gloss + prompt, no pinyin, no audio, no known button', async () => {
@@ -344,7 +360,7 @@ describe('keyboard shortcuts', () => {
   it('S/R do not give away a Say card before reveal', async () => {
     const { user, fake } = await setup({
       prepare: (s) => {
-        advance(s, (c) => c.dir === 'say')
+        toSayCard(s)
       },
     })
     await screen.findByRole('article', { name: 'Say card' })
@@ -415,10 +431,12 @@ describe('toast', () => {
 
 describe('scrolling', () => {
   const originalScrollTo = window.scrollTo
-  const originalScrollIntoView = Element.prototype.scrollIntoView
+  const originalScrollBy = window.scrollBy
+  const originalInnerHeight = window.innerHeight
   afterEach(() => {
     window.scrollTo = originalScrollTo
-    Element.prototype.scrollIntoView = originalScrollIntoView
+    window.scrollBy = originalScrollBy
+    Object.defineProperty(window, 'innerHeight', { value: originalInnerHeight, configurable: true })
     Reflect.deleteProperty(window, 'scrollY')
   })
 
@@ -433,18 +451,48 @@ describe('scrolling', () => {
     expect(window.scrollTo).toHaveBeenCalledWith({ top: 0, left: 0, behavior: 'instant' })
   })
 
-  it('revealing scrolls the start of the answer into view', async () => {
+  it('revealing scrolls the meaning and then the example into view, keeping the meaning on screen', async () => {
     const { user } = await setup()
-    const spy = vi.fn()
-    Element.prototype.scrollIntoView = spy
     await screen.findByRole('article', { name: 'Listen card' })
-    expect(spy).not.toHaveBeenCalled()
-    await user.keyboard(' ')
-    expect(spy).toHaveBeenCalledOnce()
-    expect(spy.mock.calls[0][0]).toMatchObject({ block: 'nearest' })
-    // The scrolled element is the answer's first block (the meaning), not the whole answer.
-    expect(spy.mock.contexts[0]).toContainElement(screen.getByText('you'))
-    expect(spy.mock.contexts[0]).not.toContainElement(screen.getByText('example 1'))
+    const scrollBy = vi.fn()
+    window.scrollBy = scrollBy as unknown as typeof window.scrollBy
+    Object.defineProperty(window, 'innerHeight', { value: 600, configurable: true })
+    // Answer layout below the fold: meaning block at 400–500px, example sentence at 520–700px.
+    const rect = vi.spyOn(Element.prototype, 'getBoundingClientRect').mockImplementation(function (this: Element) {
+      if (this.hasAttribute('data-answer-lead')) return { top: 400, bottom: 500 } as DOMRect
+      if (this.hasAttribute('data-answer-example')) return { top: 520, bottom: 700 } as DOMRect
+      return { top: 0, bottom: 0 } as DOMRect
+    })
+    try {
+      await user.keyboard(' ')
+      expect(scrollBy).toHaveBeenCalledOnce()
+      expect(scrollBy.mock.calls[0][0]).toMatchObject({ top: 100 })
+      // The example comes before the note.
+      const example = screen.getByText('example 1')
+      const answer = screen.getByRole('region', { name: 'Answer' })
+      expect(answer.querySelector('[data-answer-example]')).toContainElement(example)
+    } finally {
+      rect.mockRestore()
+    }
+  })
+
+  it('a long example never pushes the meaning off the top', async () => {
+    const { user } = await setup()
+    await screen.findByRole('article', { name: 'Listen card' })
+    const scrollBy = vi.fn()
+    window.scrollBy = scrollBy as unknown as typeof window.scrollBy
+    Object.defineProperty(window, 'innerHeight', { value: 600, configurable: true })
+    const rect = vi.spyOn(Element.prototype, 'getBoundingClientRect').mockImplementation(function (this: Element) {
+      if (this.hasAttribute('data-answer-lead')) return { top: 450, bottom: 560 } as DOMRect
+      if (this.hasAttribute('data-answer-example')) return { top: 580, bottom: 1400 } as DOMRect
+      return { top: 0, bottom: 0 } as DOMRect
+    })
+    try {
+      await user.keyboard(' ')
+      expect(scrollBy.mock.calls[0][0]).toMatchObject({ top: 450 })
+    } finally {
+      rect.mockRestore()
+    }
   })
 })
 
@@ -568,6 +616,20 @@ describe('start and caught-up states', () => {
     expect(store.getSnapshot().practiceAhead).toBe(true)
     const card = await screen.findByRole('article')
     expect(within(card).getByText('Practice ahead')).toBeInTheDocument()
+  })
+
+  it('caught up: the reminder banner sits under the heading, above the tiles and Keep practicing', async () => {
+    localStorage.clear() // no snoozed reminders
+    await setup({
+      prepare: async (s) => {
+        for (let i = 0; i < 3; i++) await s.markKnown(s.getSnapshot().current!.wordId)
+      },
+    })
+    const heading = await screen.findByRole('heading', { name: 'All caught up' })
+    const nudge = screen.getByText('Back up your progress.')
+    const practice = screen.getByRole('button', { name: /Keep practicing/ })
+    expect(heading.compareDocumentPosition(nudge) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy()
+    expect(nudge.compareDocumentPosition(practice) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy()
   })
 
   it('caught up with nothing to practice ahead', async () => {

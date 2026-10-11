@@ -16,6 +16,12 @@ import {
 import { Row, RowLabel, Section } from './Section'
 import { sampleWord } from './config'
 
+/**
+ * Average size of one clip, for the size shown before a download starts (the manifest has no byte sizes).
+ * Measured: 2000 clips = 16.05 MB, about 8 KB each (docs/app-notes.md, "Release check").
+ */
+const AVG_CLIP_BYTES = 8_000
+
 /** Name of the zh voice speechSynthesis would use as the fallback ('' = none found, null = unknown yet). */
 function useFallbackVoice(): string | null {
   const [name, setName] = useState<string | null>(() => {
@@ -159,7 +165,7 @@ function OfflineAudio({ urls }: { urls: string[] }) {
             <Icon name="check" size={16} /> All {urls.length} clips are saved offline.
           </span>
         ) : (
-          `${cached} of ${urls.length} clips saved offline.`
+          `${cached} of ${urls.length} clips saved offline (about ${formatBytes(Math.max(0, urls.length - cached) * AVG_CLIP_BYTES)} to download).`
         )}
       </p>
 
@@ -212,7 +218,7 @@ export function AudioSection({ words = getWords(), manifest = getManifest() }: {
   const urls = useMemo(() => manifestClipUrls(words, manifest), [words, manifest])
   const total = words.order.length
   const voice = useFallbackVoice()
-  const sample = words.list.find((x) => x.trad === '你好') ?? sampleWord()
+  const sample = sampleWord(words)
   const [msg, setMsg] = useState<ReturnType<typeof resultMessage>>(null)
   const sampleHasClip = !!(sample && manifest.path(sample.id, 'word'))
 

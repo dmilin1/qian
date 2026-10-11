@@ -215,6 +215,11 @@ describe('app store', () => {
     expect(store.getSnapshot().current?.key).toBe('wt1:listen')
     await store.grade('wt1:listen', 'good') // graduates
     s = store.getSnapshot()
+    // Its Say card waits for the next study day, so it is not answered from short-term memory.
+    expect(s.current).toBeNull()
+    clock.t += 24 * 60 * MIN
+    store.next()
+    s = store.getSnapshot()
     // The working set (cap 1) is full, but wt1 is already in it, so its say card may start.
     expect(s.current).toMatchObject({ key: 'wt1:say', isNew: true })
     await store.grade('wt1:say', 'good')
