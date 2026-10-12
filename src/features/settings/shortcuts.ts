@@ -11,7 +11,8 @@ export const STUDY_SHORTCUTS: readonly Shortcut[] = [
   { keys: ['3'], action: 'Easy' },
   { keys: ['R'], action: 'Replay the audio' },
   { keys: ['S'], action: 'Replay slowly' },
-  { keys: ['E'], action: 'Play the example sentence' },
+  { keys: ['E'], action: 'Play the example sentence (a hint on Listen cards)' },
   { keys: ['K'], action: 'I already know this (new words)' },
+  { keys: ['N'], action: 'Add or edit your note' },
   { keys: ['Z'], action: 'Undo the last grade' },
 ]

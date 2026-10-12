@@ -177,7 +177,7 @@ export async function revealAndGrade(page: Page, grade: 'Again' | 'Good' | 'Easy
 
 export interface SeedEvent {
   id: string
-  kind: 'review' | 'known' | 'suspend' | 'flag'
+  kind: 'review' | 'known' | 'suspend' | 'flag' | 'note'
   wordId: string
   ts: number
   deviceId: string
@@ -188,6 +188,7 @@ export interface SeedEvent {
   reason?: string
   note?: string
   resolved?: boolean
+  text?: string
 }
 
 export function backupJson(events: SeedEvent[]): string {

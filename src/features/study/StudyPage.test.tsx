@@ -143,6 +143,66 @@ describe('Listen card', () => {
   })
 })
 
+describe('sentence hint', () => {
+  it('a Listen card front offers the example sentence as audio only, until reveal', async () => {
+    const { user, fake } = await setup()
+    const card = await screen.findByRole('article', { name: 'Listen card' })
+    fake.play.mockClear()
+    await user.click(within(card).getByRole('button', { name: /Hear it in a sentence/ }))
+    expect(fake.play).toHaveBeenLastCalledWith('w4f60', 'example', { slow: false })
+    // Audio only: the sentence text and the meaning stay hidden.
+    expect(within(card).queryByText('example 1')).toBeNull()
+    expect(within(card).queryByText('you')).toBeNull()
+    await user.click(screen.getByRole('button', { name: /Show answer/ }))
+    expect(within(card).queryByRole('button', { name: /Hear it in a sentence/ })).toBeNull()
+  })
+
+  it('a Say card front has no sentence hint (it would give the answer away)', async () => {
+    await setup({ prepare: (s) => void toSayCard(s) })
+    const card = await screen.findByRole('article', { name: 'Say card' })
+    expect(within(card).queryByRole('button', { name: /Hear it in a sentence/ })).toBeNull()
+  })
+})
+
+describe('your note', () => {
+  it('adds a note from the Listen answer; it is saved and shown', async () => {
+    const { user, store } = await setup()
+    const card = await screen.findByRole('article', { name: 'Listen card' })
+    await user.click(screen.getByRole('button', { name: /Show answer/ }))
+    await user.click(within(card).getByRole('button', { name: 'Add your note' }))
+    await user.type(screen.getByRole('textbox', { name: 'Your note' }), '  my own meaning  ')
+    await user.click(screen.getByRole('button', { name: 'Save' }))
+    await waitFor(() => expect(store.getSnapshot().derived.words.get('w4f60')?.note).toBe('my own meaning'))
+    expect(within(card).getByText('my own meaning')).toBeInTheDocument()
+    // The card stays revealed (saving a note does not re-pick the card).
+    expect(grades()).not.toBeNull()
+  })
+
+  it('is not shown on a Listen front (it would give the meaning away)', async () => {
+    await setup({ prepare: (s) => s.setNote('w4f60', 'secret meaning') })
+    const card = await screen.findByRole('article', { name: 'Listen card' })
+    expect(within(card).queryByText('secret meaning')).toBeNull()
+  })
+
+  it('shows next to the English on a Say front, and can be edited and removed', async () => {
+    const { user, store } = await setup({
+      prepare: async (s) => {
+        const c = toSayCard(s)
+        await s.setNote(c.wordId, 'my mnemonic')
+      },
+    })
+    const cur = store.getSnapshot().current!
+    const card = await screen.findByRole('article', { name: 'Say card' })
+    expect(within(card).getByText('my mnemonic')).toBeInTheDocument()
+    await user.click(within(card).getByRole('button', { name: 'Edit your note' }))
+    const box = screen.getByRole('textbox', { name: 'Your note' })
+    expect(box).toHaveValue('my mnemonic')
+    await user.click(screen.getByRole('button', { name: 'Remove' }))
+    await waitFor(() => expect(store.getSnapshot().derived.words.get(cur.wordId)?.note).toBeUndefined())
+    expect(within(card).queryByText('my mnemonic')).toBeNull()
+  })
+})
+
 describe('Say card', () => {
   const toSay = (s: AppStore) => {
     toSayCard(s)
@@ -310,10 +370,10 @@ describe('keyboard shortcuts', () => {
     // Grades do nothing while hidden.
     await user.keyboard('2')
     expect(gradeSpy).not.toHaveBeenCalled()
-    // E (example) does nothing before reveal.
+    // E plays the example sentence as a hint, even before reveal, on a Listen card.
     fake.play.mockClear()
     await user.keyboard('e')
-    expect(fake.play).not.toHaveBeenCalled()
+    expect(fake.play).toHaveBeenLastCalledWith('w4f60', 'example', { slow: false })
 
     await user.keyboard('r')
     expect(fake.play).toHaveBeenLastCalledWith('w4f60', 'word', { slow: false })
@@ -357,7 +417,7 @@ describe('keyboard shortcuts', () => {
     expect(spy).toHaveBeenCalledWith(next.wordId)
   })
 
-  it('S/R do not give away a Say card before reveal', async () => {
+  it('S/R/E do not give away a Say card before reveal', async () => {
     const { user, fake } = await setup({
       prepare: (s) => {
         toSayCard(s)
@@ -366,7 +426,19 @@ describe('keyboard shortcuts', () => {
     await screen.findByRole('article', { name: 'Say card' })
     await user.keyboard('r')
     await user.keyboard('s')
+    await user.keyboard('e')
     expect(fake.play).not.toHaveBeenCalled()
+  })
+
+  it('N opens the note editor without typing an "n" into it', async () => {
+    const { user, store } = await setup()
+    await screen.findByRole('article', { name: 'Listen card' })
+    await user.keyboard('n')
+    const box = await screen.findByRole('textbox', { name: 'Your note' })
+    expect(box).toHaveValue('')
+    const spy = vi.spyOn(store, 'grade')
+    await user.type(box, 'z 1 2')
+    expect(spy).not.toHaveBeenCalled()
   })
 
   it('ignores shortcuts while typing in the flag dialog', async () => {

@@ -1,9 +1,10 @@
 // Word detail: big pinyin + audio (normal and slow), characters, meaning, example sentence,
-// per-direction FSRS card stats, the full review history, suspend/unsuspend and flags.
+// the learner's own note, per-direction FSRS card stats, the full review history, suspend/unsuspend and flags.
 import { useMemo, useState, type ReactNode } from 'react'
 import { Link, useLocation, useNavigate, useParams } from 'react-router'
 import type { Word } from '../../data/types'
 import {
+  AddUserNoteButton,
   AudioButton,
   Banner,
   Button,
@@ -20,6 +21,8 @@ import {
   usePageTitle,
   useSelector,
   useStore,
+  UserNoteDialog,
+  UserNoteView,
 } from '../../components'
 import { cardStateName, getCard, isSuspended, type CardState, type Derived, type FlagRecord } from '../../lib/derive'
 import type { AppEvent, Dir, FlagReason } from '../../lib/events'
@@ -105,6 +108,8 @@ function WordDetail({ word, words }: { word: Word; words: WordIndex }) {
   const flags = derived.words.get(word.id)?.flags ?? NO_FLAGS
   const openByReason = useMemo(() => groupOpenFlags(flags), [flags])
   const [flagOpen, setFlagOpen] = useState(false)
+  const [noteOpen, setNoteOpen] = useState(false)
+  const userNote = derived.words.get(word.id)?.note
   const [notice, setNotice] = useState<string | null>(null)
 
   const listen = getCard(derived, word.id, 'listen')
@@ -156,6 +161,18 @@ function WordDetail({ word, words }: { word: Word; words: WordIndex }) {
         {word.note ? <p className="mt-3 rounded-xl bg-sunken px-4 py-3 text-[0.9375rem] leading-relaxed text-ink">
             <NoteText note={word.note} force />
           </p> : null}
+      </Section>
+
+      {/* ----- the learner's own note ----- */}
+      <Section title="Your note">
+        {userNote ? (
+          <UserNoteView note={userNote} onEdit={() => setNoteOpen(true)} />
+        ) : (
+          <div className="flex flex-col items-start gap-1">
+            <p className="text-sm text-muted">Your own meaning or a way to remember it. It shows next to the English on this word’s cards.</p>
+            <AddUserNoteButton onClick={() => setNoteOpen(true)} className="-ml-3" />
+          </div>
+        )}
       </Section>
 
       {/* ----- example ----- */}
@@ -250,6 +267,16 @@ function WordDetail({ word, words }: { word: Word; words: WordIndex }) {
 
       <Neighbors word={word} words={words} />
 
+      <UserNoteDialog
+        open={noteOpen}
+        wordLabel={`${word.pinyin} “${word.gloss}”`}
+        note={userNote ?? ''}
+        onClose={() => setNoteOpen(false)}
+        onSave={(text) => {
+          setNoteOpen(false)
+          void store.setNote(word.id, text)
+        }}
+      />
       <FlagDialog
         open={flagOpen}
         wordLabel={`${word.pinyin} “${word.gloss}”`}
@@ -450,6 +477,10 @@ function HistoryItem({ event: e, last }: { event: AppEvent; last: boolean }) {
       dot = e.resolved ? 'bg-success' : 'bg-danger'
       title = `${e.resolved ? 'Resolved flag' : 'Flagged'}: ${FLAG_REASON_SHORT[e.reason]}`
       if (e.note) detail = `“${e.note}”`
+      break
+    case 'note':
+      title = e.text ? 'Your note' : 'Removed your note'
+      if (e.text) detail = `“${e.text}”`
       break
   }
   return (

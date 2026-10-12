@@ -1,6 +1,7 @@
 import {
   anyCard,
   backupJson,
+  clipUrl,
   contentAudio,
   expect,
   gradeButton,
@@ -147,6 +148,34 @@ test.describe('study session', () => {
     }
     await expect(sayCard(page)).toContainText(first.gloss)
     await expect(sayCard(page).getByText('New', { exact: true })).toBeVisible()
+  })
+
+  test('"In a sentence" plays the recorded example sentence on a Listen front, without showing it', async ({ page, baseURL }) => {
+    await startStudying(page)
+    const card = listenCard(page)
+    await expect(card).toContainText(first.trad)
+    await card.getByRole('button', { name: /Hear it in a sentence/ }).click()
+    await expect.poll(() => contentAudio(page)).toContain(clipUrl(baseURL!, first.id, 'example'))
+    await expect(card).not.toContainText(first.gloss)
+    await page.getByRole('button', { name: /Show answer/ }).click()
+    await expect(card.getByRole('button', { name: /Hear it in a sentence/ })).toHaveCount(0)
+  })
+
+  test('your note: add it on the answer, see it on the word page, kept after a reload', async ({ page }) => {
+    await startStudying(page)
+    const card = listenCard(page)
+    await page.getByRole('button', { name: /Show answer/ }).click()
+    await card.getByRole('button', { name: 'Add your note' }).click()
+    await page.getByRole('textbox', { name: 'Your note' }).fill('possessive negative action')
+    await page.getByRole('button', { name: 'Save' }).click()
+    await expect(card).toContainText('possessive negative action')
+
+    await page.reload()
+    await page.goto(`./#/words/${first.id}`)
+    await expect(page.getByRole('main')).toContainText('possessive negative action')
+    // Your notes are searchable on the Words page.
+    await page.goto('./#/words?q=negative%20action')
+    await expect(page.getByRole('main')).toContainText(first.gloss)
   })
 
   test('progress persists across a reload (IndexedDB)', async ({ page }) => {

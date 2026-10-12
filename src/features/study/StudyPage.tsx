@@ -11,6 +11,7 @@ import {
   Kbd,
   SealMark,
   Spinner,
+  UserNoteDialog,
   cx,
   playClip,
   stopPlayback,
@@ -55,6 +56,7 @@ export default function StudyPage() {
   const [revealedId, setRevealedId] = useState<string | null>(null)
   const [audioIssueState, setAudioIssueState] = useState<{ id: string; kind: Exclude<AudioIssue, null> } | null>(null)
   const [overlayOpen, setOverlayOpen] = useState(false)
+  const [noteOpen, setNoteOpen] = useState(false)
   const [toast, setToast] = useState<Toast | null>(null)
   const shownAtRef = useRef(0)
 
@@ -207,6 +209,16 @@ export default function StudyPage() {
     setToast({ text: `Suspended “${w.gloss}”. Unsuspend it from the Words tab.`, undo: () => void store.setSuspended(w.id, false) })
   }
 
+  const userNote = current ? snap.derived.words.get(current.wordId)?.note : undefined
+  const editNote = () => {
+    if (current) setNoteOpen(true)
+  }
+  const saveNote = (text: string) => {
+    setNoteOpen(false)
+    if (!current) return
+    void store.setNote(current.wordId, text)
+  }
+
   const practice = () => {
     start()
     store.setPracticeAhead(true)
@@ -214,7 +226,7 @@ export default function StudyPage() {
 
   const canHear = !!current && (current.dir === 'listen' || revealed)
   useStudyHotkeys({
-    enabled: !overlayOpen,
+    enabled: !overlayOpen && !noteOpen,
     handlers: {
       primary: () => {
         if (!started && current) start()
@@ -226,8 +238,10 @@ export default function StudyPage() {
       grade: (g) => grade(g),
       replay: () => canHear && play('word'),
       slow: () => canHear && play('word', true),
-      example: () => revealed && play('example'),
+      // On a Listen card the sentence is a hint before reveal; on a Say card it would give the answer away.
+      example: () => canHear && play('example'),
       known: () => markKnown(),
+      note: () => editNote(),
       undo: () => undo(),
     },
   })
@@ -348,11 +362,18 @@ export default function StudyPage() {
           {sourceLabel ? <span className="ml-auto text-xs">{sourceLabel}</span> : null}
         </header>
         {current.dir === 'listen' ? (
-          <ListenFace card={current} revealed={revealed} audioIssue={audioIssue} onPlayResult={onPlayResult} />
+          <ListenFace card={current} revealed={revealed} audioIssue={audioIssue} onPlayResult={onPlayResult} userNote={userNote} onEditNote={editNote} />
         ) : (
-          <SayFace card={current} revealed={revealed} audioIssue={audioIssue} onPlayResult={onPlayResult} />
+          <SayFace card={current} revealed={revealed} audioIssue={audioIssue} onPlayResult={onPlayResult} userNote={userNote} onEditNote={editNote} />
         )}
       </Card>
+      <UserNoteDialog
+        open={noteOpen}
+        wordLabel={`${current.word.pinyin} “${current.word.gloss}”`}
+        note={userNote ?? ''}
+        onClose={() => setNoteOpen(false)}
+        onSave={saveNote}
+      />
 
       <ActionBar card={current} revealed={revealed} onReveal={reveal} onGrade={grade} onKnown={markKnown} />
       {toastEl}

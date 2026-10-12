@@ -1,5 +1,5 @@
 // Event-sourced log: the single source of truth for all learning progress.
-// Card states, suspensions and flags are all derived by replaying these events in (ts, id) order.
+// Card states, suspensions, flags and the learner's own notes are all derived by replaying these events in (ts, id) order.
 
 export type Dir = 'listen' | 'say'
 export const DIRS: readonly Dir[] = ['listen', 'say']
@@ -48,7 +48,16 @@ export interface FlagEvent extends EventBase {
   resolved?: boolean
 }
 
-export type AppEvent = ReviewEvent | KnownEvent | SuspendEvent | FlagEvent
+/** The learner's own note on a word (a mnemonic or their own meaning). The latest one wins; empty text clears it. */
+export interface NoteEvent extends EventBase {
+  kind: 'note'
+  text: string
+}
+
+/** Longest personal note, in characters. */
+export const USER_NOTE_MAX = 500
+
+export type AppEvent = ReviewEvent | KnownEvent | SuspendEvent | FlagEvent | NoteEvent
 export type GradingEvent = ReviewEvent | KnownEvent
 
 export function cardKey(wordId: string, dir: Dir): CardKey {
@@ -123,6 +132,10 @@ export function makeFlag(p: Common & { reason: FlagReason; note?: string; resolv
   return e
 }
 
+export function makeNote(p: Common & { text: string }): NoteEvent {
+  return { id: p.id ?? uuid(), kind: 'note', wordId: p.wordId, text: p.text.trim().slice(0, USER_NOTE_MAX), ts: p.ts, deviceId: p.deviceId }
+}
+
 // ---------- validation (used for import and for reading IndexedDB defensively) ----------
 
 const isStr = (v: unknown): v is string => typeof v === 'string' && v.length > 0
@@ -155,6 +168,9 @@ export function sanitizeEvent(v: unknown): AppEvent | null {
       if (v.resolved === true) e.resolved = true
       return e
     }
+    case 'note':
+      if (typeof v.text !== 'string') return null
+      return { ...base, kind, text: v.text.trim().slice(0, USER_NOTE_MAX) }
     default:
       return null
   }

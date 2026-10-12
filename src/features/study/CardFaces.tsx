@@ -3,7 +3,7 @@ import { useEffect, useRef, type ReactNode } from 'react'
 import type { Word } from '../../data/types'
 import type { PlayResult } from '../../lib/audio'
 import type { StudyCard } from '../../lib/store'
-import { AudioButton, Hanzi, Icon, Kbd, NoteText, Pinyin, cx, useSettings } from '../../components'
+import { AddUserNoteButton, AudioButton, Hanzi, Icon, Kbd, NoteText, Pinyin, UserNoteView, cx, useSettings } from '../../components'
 
 /** blocked = the browser refused autoplay (needs a tap); failed = neither a clip nor TTS could play. */
 export type AudioIssue = 'blocked' | 'failed' | null
@@ -14,6 +14,10 @@ interface FaceProps {
   /** Why the last play of this card's audio did not work, if it did not. */
   audioIssue: AudioIssue
   onPlayResult: (r: PlayResult) => void
+  /** The learner's own note on this word, if any. */
+  userNote?: string
+  /** Opens the note editor. */
+  onEditNote: () => void
 }
 
 /** Word replay + slow replay. */
@@ -108,6 +112,34 @@ function Example({ word }: { word: Word }) {
   )
 }
 
+/**
+ * Plays the example sentence before reveal, as a hint: the word heard in context, where it can sound a little
+ * different than on its own. Audio only, so it gives nothing away on a Listen card.
+ */
+function SentenceHint({ word }: { word: Word }) {
+  if (!word.example?.pinyin) return null
+  return (
+    <span className="relative inline-flex">
+      <AudioButton wordId={word.id} kind="example" size="md" label="Hear it in a sentence">
+        In a sentence
+      </AudioButton>
+      <Kbd className="absolute -right-1 -bottom-1 bg-card text-muted">E</Kbd>
+    </span>
+  )
+}
+
+/** The learner's own note, or (when `addable`) a button to add one. */
+function YourNote({ note, addable, onEdit }: { note?: string; addable?: boolean; onEdit: () => void }) {
+  if (note) return <UserNoteView note={note} onEdit={onEdit} />
+  if (!addable) return null
+  return (
+    <span className="relative inline-flex">
+      <AddUserNoteButton onClick={onEdit} />
+      <Kbd className="absolute -right-1 -bottom-1 bg-card text-muted">N</Kbd>
+    </span>
+  )
+}
+
 /** Pinyin (hero, tone colored) and characters (small, muted). */
 function WordForm({ word }: { word: Word }) {
   return (
@@ -183,7 +215,7 @@ function Answer({ children }: { children: ReactNode }) {
   )
 }
 
-export function ListenFace({ card, revealed, audioIssue, onPlayResult }: FaceProps) {
+export function ListenFace({ card, revealed, audioIssue, onPlayResult, userNote, onEditNote }: FaceProps) {
   const { listenFront } = useSettings()
   const audioOnly = listenFront === 'audioOnly'
   const w = card.word
@@ -202,6 +234,7 @@ export function ListenFace({ card, revealed, audioIssue, onPlayResult }: FacePro
             <ReplayRow word={w} size="lg" onPlayResult={onPlayResult} />
           </>
         )}
+        {revealed ? null : <SentenceHint word={w} />}
         <AudioHint issue={audioIssue} />
       </Front>
       {revealed ? (
@@ -210,6 +243,7 @@ export function ListenFace({ card, revealed, audioIssue, onPlayResult }: FacePro
             <Gloss word={w} size="lg" />
             <PosChip pos={w.pos} />
             <SpokenAs word={w} />
+            <YourNote note={userNote} addable onEdit={onEditNote} />
           </AnswerLead>
           {/* Example first: its audio is what a learner by ear wants next; the note is reference text. */}
           <Example word={w} />
@@ -220,13 +254,14 @@ export function ListenFace({ card, revealed, audioIssue, onPlayResult }: FacePro
   )
 }
 
-export function SayFace({ card, revealed, audioIssue, onPlayResult }: FaceProps) {
+export function SayFace({ card, revealed, audioIssue, onPlayResult, userNote, onEditNote }: FaceProps) {
   const w = card.word
   return (
     <>
       <Front revealed={revealed} className="gap-3">
         <Gloss word={w} size="xl" />
         <PosChip pos={w.pos} />
+        <YourNote note={userNote} onEdit={onEditNote} />
         {revealed ? null : (
           <p className="mt-2 flex items-center gap-2 text-muted">
             <Icon name="volume" size={18} />
@@ -245,6 +280,11 @@ export function SayFace({ card, revealed, audioIssue, onPlayResult }: FaceProps)
           {/* Example first: its audio is what a learner by ear wants next; the note is reference text. */}
           <Example word={w} />
           <Note word={w} />
+          {userNote ? null : (
+            <div className="flex justify-center">
+              <YourNote addable onEdit={onEditNote} />
+            </div>
+          )}
         </Answer>
       ) : null}
     </>

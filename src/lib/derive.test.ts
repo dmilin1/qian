@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { buildDerived, getCard, isSuspended, openFlags, allFlags, withEvent, withoutEvent, type Derived } from './derive'
-import { cardKey, makeFlag, makeKnown, makeReview, makeSuspend, parseCardKey, sanitizeEvent, siblingKey, type AppEvent, type GradeName } from './events'
+import { buildDerived, getCard, isSuspended, openFlags, allFlags, userNote, withEvent, withoutEvent, type Derived } from './derive'
+import { cardKey, makeFlag, makeKnown, makeNote, makeReview, makeSuspend, parseCardKey, sanitizeEvent, siblingKey, USER_NOTE_MAX, type AppEvent, type GradeName } from './events'
 import { DAY_MS, State } from './fsrs'
 import { mulberry32 } from './scheduler'
 
@@ -105,6 +105,34 @@ describe('replay', () => {
     expect(allFlags(d).find((f) => f.reason === 'audio')).toMatchObject({ resolved: true, resolvedAt: T0 + 2 })
     d = withEvent(d, makeSuspend({ wordId: 'w1', suspended: false, ts: T0 + 3, deviceId: dev }))
     expect(isSuspended(d, 'w1')).toBe(false)
+  })
+
+  it('your note: the latest wins (also when merged out of order), empty text clears it, cards are untouched', () => {
+    const n1 = makeNote({ wordId: 'w1', text: 'first', ts: T0, deviceId: dev })
+    const n2 = makeNote({ wordId: 'w1', text: '  possessive negative action ', ts: T0 + 5, deviceId: 'dev-b' })
+    const r = makeReview({ wordId: 'w1', dir: 'listen', grade: 'good', ts: T0 + 1, deviceId: dev })
+    const withNotes = buildDerived([n2, r, n1])
+    expect(userNote(withNotes, 'w1')).toBe('possessive negative action')
+    expect(getCard(withNotes, 'w1', 'listen')).toEqual(getCard(buildDerived([r]), 'w1', 'listen'))
+    // Incremental, out of order: the older note arriving later does not win.
+    let d = withEvent(buildDerived([r, n2]), n1)
+    expect(userNote(d, 'w1')).toBe('possessive negative action')
+    d = withEvent(d, makeNote({ wordId: 'w1', text: '', ts: T0 + 9, deviceId: dev }))
+    expect(userNote(d, 'w1')).toBeUndefined()
+    expect(d.words.has('w1')).toBe(false)
+  })
+
+  it('makeNote and sanitizeEvent trim and cap note text', () => {
+    expect(makeNote({ wordId: 'w1', text: ` ${'x'.repeat(USER_NOTE_MAX + 50)} `, ts: T0, deviceId: dev }).text).toHaveLength(USER_NOTE_MAX)
+    expect(sanitizeEvent({ id: 'n1', kind: 'note', wordId: 'w1', ts: T0, deviceId: dev, text: ' hi ', extra: 1 })).toEqual({
+      id: 'n1',
+      kind: 'note',
+      wordId: 'w1',
+      ts: T0,
+      deviceId: dev,
+      text: 'hi',
+    })
+    expect(sanitizeEvent({ id: 'n1', kind: 'note', wordId: 'w1', ts: T0, deviceId: dev })).toBeNull()
   })
 
   it('is deterministic: same log twice, shuffled log, and fuzz all give identical states', () => {

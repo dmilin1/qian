@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { makeWord } from '../../lib/__fixtures__/words'
-import { buildSearchIndex, normalizePinyinQuery, pinyinKey, searchWords } from './search'
+import { buildSearchIndex, normalizePinyinQuery, pinyinKey, searchWords, withNoteMatches } from './search'
 
 const WORDS = [
   makeWord(1, { id: 'w662f', trad: '是', simp: '是', pinyin: 'shì', pinyinNumbered: 'shi4', tones: [4], gloss: 'to be; yes' }),
@@ -192,5 +192,28 @@ describe('searchWords: ranking', () => {
     expect(find2('ma1')).toEqual(['媽', '媽媽'])
     expect(find2('ma1ma5')).toEqual(['媽媽'])
     expect(find2('ma1ma1')).toEqual(['媽媽'])
+  })
+})
+
+describe('withNoteMatches', () => {
+  const notes: Record<string, string> = { w4f60: 'Possessive negative action', w5403: 'eat: chī like "chew"' }
+  const noteOf = (id: string) => notes[id]
+
+  it('adds words whose own note contains the query, after the regular matches, in rank order', () => {
+    const index = buildSearchIndex(WORDS)
+    const found = withNoteMatches(searchWords(index, 'negative'), WORDS, noteOf, 'negative')
+    expect(found.map((w) => w.id)).toEqual(['w4f60'])
+    const both = withNoteMatches(searchWords(index, 'chew'), WORDS, noteOf, 'CHEW')
+    expect(both.map((w) => w.id)).toEqual(['w5403'])
+  })
+
+  it('does not duplicate regular matches and ignores 1-character queries', () => {
+    const index = buildSearchIndex(WORDS)
+    const regular = searchWords(index, 'you')
+    expect(withNoteMatches(regular, WORDS, () => 'you know', 'you').map((w) => w.id)).toEqual([
+      ...regular.map((w) => w.id),
+      ...WORDS.filter((w) => !regular.includes(w)).map((w) => w.id),
+    ])
+    expect(withNoteMatches([], WORDS, noteOf, 'a')).toEqual([])
   })
 })

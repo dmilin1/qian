@@ -149,6 +149,30 @@ describe('app store', () => {
     expect(store.getSnapshot().derived.words.get('wt1')?.suspended).toBeFalsy()
   })
 
+  it('your note: saved, kept on the current card, skipped when unchanged, not undoable, carried by export/import', async () => {
+    const a = setup()
+    await a.store.init()
+    await a.store.grade('wt1:listen', 'good')
+    const current = a.store.getSnapshot().current
+    await a.store.setNote('wt1', ' my mnemonic ')
+    let s = a.store.getSnapshot()
+    expect(s.derived.words.get('wt1')?.note).toBe('my mnemonic')
+    expect(s.current).toBe(current) // the card on screen is kept
+    await a.store.setNote('wt1', 'my mnemonic')
+    expect(a.store.getSnapshot().events.length).toBe(2) // unchanged: no new event
+    // Undo means "undo the last answer", never a note.
+    expect((await a.store.undo())?.kind).toBe('review')
+    s = a.store.getSnapshot()
+    expect(s.derived.words.get('wt1')?.note).toBe('my mnemonic')
+
+    const b = setup()
+    await b.store.init()
+    await b.store.importData((await a.store.exportData()).text)
+    expect(b.store.getSnapshot().derived.words.get('wt1')?.note).toBe('my mnemonic')
+    await b.store.setNote('wt1', '')
+    expect(b.store.getSnapshot().derived.words.get('wt1')).toBeUndefined()
+  })
+
   it('updateSettings validates, persists and rebuilds on retention change', async () => {
     const { store, opts } = setup()
     await store.init()

@@ -22,7 +22,7 @@ import {
   type WordInfo,
   type WordSort,
 } from './filters'
-import { buildSearchIndex, searchWords } from './search'
+import { buildSearchIndex, searchWords, withNoteMatches } from './search'
 import { DirStatusChip, SuspendedChip, UnseenChip } from './StatusChip'
 import { useWindowedRange } from './useWindowedRange'
 
@@ -57,7 +57,11 @@ export default function WordsPage({ words = getWords() }: WordsPageProps) {
   const counts = useMemo(() => filterCounts(infos.values()), [infos])
   const summary = useMemo(() => listSummary(infos.values()), [infos])
   const index = useMemo(() => buildSearchIndex(words.list), [words])
-  const searched = useMemo(() => searchWords(index, deferredQuery), [index, deferredQuery])
+  // Your own notes are searchable too (e.g. a mnemonic you remember better than the gloss).
+  const searched = useMemo(
+    () => withNoteMatches(searchWords(index, deferredQuery), words.list, (id) => derived.words.get(id)?.note, deferredQuery),
+    [index, deferredQuery, words, derived],
+  )
   const filtered = useMemo(
     () => (filter === 'all' ? searched : searched.filter((w) => matchesFilter(infos.get(w.id) ?? UNSEEN_INFO, filter))),
     [searched, filter, infos],

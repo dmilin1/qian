@@ -1,7 +1,8 @@
 // Keyboard shortcuts for the study screen:
 //   Space / Enter  reveal (or start / keep practicing; replay once revealed)
 //   1 2 3          Again / Good / Easy
-//   R  replay   S  slow replay   E  example   K  "I already know this"   Z  undo
+//   R  replay   S  slow replay   E  example sentence (a hint before reveal on Listen cards)
+//   K  "I already know this"   N  your note   Z  undo
 import { useEffect, useRef } from 'react'
 import type { GradeName } from '../../lib/events'
 
@@ -12,6 +13,7 @@ export interface StudyHotkeyHandlers {
   slow: () => void
   example: () => void
   known: () => void
+  note: () => void
   undo: () => void
 }
 
@@ -104,6 +106,9 @@ export function useStudyHotkeys({ enabled, handlers }: { enabled: boolean; handl
           break
         case 'k':
           h.known()
+          break
+        case 'n':
+          h.note()
           break
         case 'z':
           h.undo()

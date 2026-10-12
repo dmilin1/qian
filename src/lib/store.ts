@@ -9,6 +9,7 @@ import {
   compareEvents,
   makeFlag,
   makeKnown,
+  makeNote,
   makeReview,
   makeSuspend,
   parseCardKey,
@@ -623,6 +624,18 @@ export function createAppStore(opts: StoreOptions = {}) {
 
     flag(wordId: string, reason: FlagReason, note?: string): Promise<void> {
       return addEvent(makeFlag({ wordId, reason, note, ts: stamp(), deviceId: snap.deviceId }), snap.current)
+    },
+
+    /** Set (or with empty text, clear) the learner's own note on a word. No-op when unchanged. */
+    setNote(wordId: string, text: string): Promise<void> {
+      // The latest note wins on replay, so an edit must sort after the note it replaces, even one imported
+      // from a device whose clock ran ahead.
+      let lastNoteTs = -Infinity
+      for (const x of snap.derived.eventsByWord.get(wordId) ?? []) if (x.kind === 'note') lastNoteTs = Math.max(lastNoteTs, x.ts)
+      const ts = (lastStamp = Math.max(stamp(), lastNoteTs + 1))
+      const e = makeNote({ wordId, text, ts, deviceId: snap.deviceId })
+      if (e.text === (snap.derived.words.get(wordId)?.note ?? '')) return Promise.resolve()
+      return addEvent(e, snap.current)
     },
 
     /** Resolve all open flags of this word with this reason. */

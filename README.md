@@ -24,6 +24,8 @@ More screenshots of every page, on phone and desktop in light and dark, are in [
   - **Say** (EN→中): an English prompt with a disambiguating hint. You say the word out loud, then reveal the pinyin and hear it.
 - **Audio first.** One Taiwan Mandarin voice (ElevenLabs "Anna Su") for every word and example sentence, with replay and slow (0.7×, pitch kept) buttons. If a clip is missing, the browser's own zh-TW voice reads it instead.
 - **Grading:** Again / Good / Easy, plus **"I already know this"** the first time a word appears. Undo, suspend a word, or flag a card (bad audio, wrong pinyin, unclear meaning…). Open flags can be exported as a CSV from *Stats → Flagged cards*.
+- **Your own notes.** Add your own meaning or a way to remember a word (N, or *Add your note* on the answer or the word page). It shows next to the English: on the Listen answer and on the Say card's prompt. Words search also matches your notes.
+- **Hear it in a sentence.** A Listen card's front has an *In a sentence* button (E) that plays the example sentence as a hint, audio only, since a word can sound a little different in context. Say cards don't offer it before reveal, because it would give the answer away.
 - **Notes for grammar words and polyphones.** Characters quoted in a note get their pinyin added when shown, so notes work without reading.
 - **No daily quota.** New words arrive as the words you are learning become stable (see below). The session is endless. When nothing is at risk, you can keep practicing ahead.
 - **Words:** all 1000 words, searchable by English, characters, rank (`#40`) or pinyin with or without tones (`ni hao`, `ni3hao3`, `nǐ hǎo`), with filters, sorting (due soonest, weakest, most forgotten…) and per-word history.
@@ -38,8 +40,9 @@ More screenshots of every page, on phone and desktop in light and dark, are in [
 | Space / Enter | Show the answer, or replay once it is shown |
 | 1 / 2 / 3 | Again / Good / Easy |
 | R, S | Replay, replay slowly |
-| E | Play the example sentence |
+| E | Play the example sentence (a hint before reveal on Listen cards) |
 | K | I already know this (new words) |
+| N | Add or edit your note |
 | Z | Undo the last answer |
 
 ## How the scheduler works
@@ -52,7 +55,7 @@ More screenshots of every page, on phone and desktop in light and dark, are in [
 - "I already know this" grades both cards Easy, so the word comes back for a check in about a week.
 - Target retention (default 90%), the working-set size and the other knobs are in Settings.
 
-**Data model.** The source of truth is an append-only event log (reviews, "known", suspend, flag), stored in IndexedDB. Card states are derived by replaying the log through FSRS, so they can always be rebuilt. Settings live in `localStorage`.
+**Data model.** The source of truth is an append-only event log (reviews, "known", suspend, flag, your notes), stored in IndexedDB. Card states are derived by replaying the log through FSRS, so they can always be rebuilt. Settings live in `localStorage`.
 
 ## Local development
 

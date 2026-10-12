@@ -104,10 +104,11 @@ Full rationale: [`docs/app-notes.md`](docs/app-notes.md), "Judgment calls" (firs
 
 ## 5. Your data
 
-- **Event-sourced.** The source of truth is an append-only log in IndexedDB of `review`, `known`, `suspend` and `flag` events (`{id, kind, wordId, ts, deviceId, …}`). Card states are rebuilt by replaying the log. Settings are stored in `localStorage` (`qian.settings`).
+- **Event-sourced.** The source of truth is an append-only log in IndexedDB of `review`, `known`, `suspend`, `flag` and `note` events (`{id, kind, wordId, ts, deviceId, …}`). Card states are rebuilt by replaying the log. Settings are stored in `localStorage` (`qian.settings`).
 - **Backup file**: `qian-backup-YYYY-MM-DD.json` = `{app: "qian", schemaVersion, exportedAt, deviceId, settings, events}`.
   - **Merge** (the default) takes the union of both logs by event id. Repeating it is safe, and it is how two devices sync.
   - **Replace** adopts the file's log and settings, with an id-based warning about what would be lost.
+- **Your notes** (added 2026-10-12) are `note` events: the latest one per word wins on replay, and empty text clears it. They merge between devices like everything else. An edit is stamped after the word's newest note, so it wins even over a note imported from a device whose clock ran ahead. The backup schema version stays 1, because the change only adds an event kind; an older build would skip note events on import instead of failing. Undo never removes a note.
 - **Flags** can be exported as a CSV from *Stats → Flagged cards → Export flags (CSV)*. They are also included in the backup.
 - The app asks for persistent storage. iPhone users are nudged to install it to the home screen (Safari deletes site data after 7 days) and to back up regularly.
 

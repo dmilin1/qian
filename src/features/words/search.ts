@@ -284,3 +284,15 @@ export function searchWords(index: readonly SearchEntry[], query: string): Word[
   hits.sort((a, b) => a.tier - b.tier || a.word.rank - b.word.rank)
   return hits.map((h) => h.word)
 }
+
+/**
+ * Adds words whose own note (the learner's) contains the query, case-insensitively, after the regular
+ * matches and in rank order. Queries shorter than 2 characters match no notes.
+ */
+export function withNoteMatches(results: readonly Word[], all: readonly Word[], noteOf: (wordId: string) => string | undefined, query: string): Word[] {
+  const q = query.normalize('NFC').trim().toLowerCase()
+  if ([...q].length < 2) return [...results]
+  const seen = new Set(results.map((w) => w.id))
+  const extra = all.filter((w) => !seen.has(w.id) && !!noteOf(w.id)?.toLowerCase().includes(q))
+  return [...results, ...extra.sort((a, b) => a.rank - b.rank)]
+}

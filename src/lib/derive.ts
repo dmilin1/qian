@@ -38,6 +38,8 @@ export interface FlagRecord {
 export interface WordMeta {
   readonly suspended: boolean
   readonly flags: readonly FlagRecord[]
+  /** The learner's own note (latest note event); absent when none or cleared. */
+  readonly note?: string
 }
 
 export interface Derived {
@@ -46,7 +48,7 @@ export interface Derived {
   readonly dayOffsetMs: number
   /** Only cards that have been graded at least once (introduced). Missing = New. */
   readonly cards: ReadonlyMap<CardKey, CardState>
-  /** Only words that have suspend/flag events. */
+  /** Only words that are suspended, have flags, or have a note of the learner's own. */
   readonly words: ReadonlyMap<string, WordMeta>
   /** Events per word, sorted by (ts, id). */
   readonly eventsByWord: ReadonlyMap<string, readonly AppEvent[]>
@@ -98,6 +100,10 @@ function step(f: Sched, w: WordReplay, e: AppEvent): WordReplay {
       const rec: FlagRecord = { id: e.id, wordId: e.wordId, reason: e.reason, ts: e.ts, resolved: false, ...(e.note ? { note: e.note } : {}) }
       return { ...w, meta: { ...w.meta, flags: [...w.meta.flags, rec] } }
     }
+    case 'note': {
+      const { note: _old, ...rest } = w.meta
+      return { ...w, meta: e.text ? { ...rest, note: e.text } : rest }
+    }
   }
 }
 
@@ -122,7 +128,7 @@ function writeWord(cards: Map<CardKey, CardState>, words: Map<string, WordMeta>,
     if (c) cards.set(k, c)
     else cards.delete(k)
   }
-  if (w.meta.suspended || w.meta.flags.length) words.set(wordId, w.meta)
+  if (w.meta.suspended || w.meta.flags.length || w.meta.note) words.set(wordId, w.meta)
   else words.delete(wordId)
 }
 
@@ -210,6 +216,11 @@ export function cardStateName(c: CardState | undefined): 'new' | 'learning' | 'r
       return 'relearning'
   }
   return 'new'
+}
+
+/** The learner's own note on a word, if any. */
+export function userNote(d: Derived, wordId: string): string | undefined {
+  return d.words.get(wordId)?.note
 }
 
 export function openFlags(d: Derived): FlagRecord[] {
